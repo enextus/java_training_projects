@@ -5,6 +5,5 @@ public class Main {
         GcdSolver gcdSolver = new GcdSolver();
 
         System.out.println(gcdSolver.getGcd(214748364, 666));
-
     }
 }
