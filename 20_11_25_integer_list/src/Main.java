@@ -22,13 +22,10 @@ public class Main {
         System.out.println(listTwo.get(1));
 
         System.out.println("listTwo.size(): " + listTwo.size());
-        System.out.println(Arrays.toString(listTwo.getSource()));
         listTwo.set(1, 10);
-        System.out.println(Arrays.toString(listTwo.getSource()));
         System.out.println("listTwo.size(): " + listTwo.size());
 
         listTwo.set(1, 66);
-        System.out.println(Arrays.toString(listTwo.getSource()));
         System.out.println("listTwo.size(): " + listTwo.size());
     }
 }
