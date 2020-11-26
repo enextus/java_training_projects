@@ -53,7 +53,6 @@ public class ArrayIntegerList implements IntegerList {
 
     @Override
     public int removeById(int index) {
-        // guard clause
         if (source == null || index < 0 || index >= size)
             return -911;
 
