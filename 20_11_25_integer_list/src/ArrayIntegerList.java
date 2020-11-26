@@ -63,12 +63,6 @@ public class ArrayIntegerList implements IntegerList {
 
     @Override
     public int removeById(int index) {
-/*        System.out.println(" ___   removeById   ______");
-        System.out.println("source: " + Arrays.toString(source));
-        System.out.println("source.length: " + source.length);
-        System.out.println("size: " + size);
-        System.out.println("________  ________");*/
-
         // guard clause
         if (source == null || index < 0 || index >= size)
             return -911;
@@ -79,31 +73,11 @@ public class ArrayIntegerList implements IntegerList {
         for (int i = 0; i < index; i++)
             newSource[i] = source[i];
 
-/*        // first part of result arr
-        System.out.println("source: " + Arrays.toString(source));
-        System.out.println("index to remove: " + index);
-        System.out.println("removedValue: " + removedValue);
-        System.out.println("newSource I: " + Arrays.toString(newSource));
-        System.out.println("newSource.length: " + newSource.length);
-        System.out.println("________ first part of result arr ________");*/
-
         for (int i = index; i < source.length - 1; i++)
             newSource[i] = source[i + 1];
 
-/*        // second part of result arr
-        System.out.println("source: " + Arrays.toString(source));
-        System.out.println("newSource I: " + Arrays.toString(newSource));
-        System.out.println("newSource.length: " + newSource.length);
-        System.out.println("________ second part of result arr ________");*/
-
         source = newSource;
         size--;
-
-/*        // second part of result arr
-        System.out.println("source: " + Arrays.toString(source));
-        System.out.println("size: " + size);
-        System.out.println("removedValue: " + removedValue);
-        System.out.println("________ second part of result arr ________");*/
         return removedValue;
     }
 
