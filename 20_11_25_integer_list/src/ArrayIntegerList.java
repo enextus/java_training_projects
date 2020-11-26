@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class ArrayIntegerList implements IntegerList {
 
     private static final int INITIAL_CAPACITY = 16;
