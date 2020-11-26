@@ -7,16 +7,10 @@ class ArrayIntegerListTest {
 
     ArrayIntegerList list = new ArrayIntegerList();
 
-    /**
-     *
-     */
     @Test
     void addLast() {
     }
 
-    /**
-     *
-     */
     @Test
     void testGet_() {
         assertThrows(IndexOutOfBoundsException.class, () -> {
@@ -24,30 +18,18 @@ class ArrayIntegerListTest {
         });
     }
 
-    /**
-     *
-     */
     @Test
     void set() {
     }
 
-    /**
-     *
-     */
     @Test
     void removeById() {
     }
 
-    /**
-     *
-     */
     @Test
     void size() {
     }
 
-    /**
-     *
-     */
     @Test
     void clear() {
     }
