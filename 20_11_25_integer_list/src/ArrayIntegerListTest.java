@@ -22,7 +22,10 @@ class ArrayIntegerListTest {
     }
 
     @Test
-    void set() {
+    void testSet_() {
+        assertThrows(IndexOutOfBoundsException.class, () -> {
+            list.set(0, 1);
+        });
     }
 
     @Test
