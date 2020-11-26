@@ -19,6 +19,14 @@ class ArrayIntegerListTest {
         assertThrows(IndexOutOfBoundsException.class, () -> {
             list.get(1);
         });
+
+        assertThrows(IndexOutOfBoundsException.class, () -> {
+            list.get(100);
+        });
+
+        assertThrows(IndexOutOfBoundsException.class, () -> {
+            list.get(-1);
+        });
     }
 
     @Test
