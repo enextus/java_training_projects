@@ -29,7 +29,7 @@ public class Main {
         System.out.print(listTwo.get(3) + ", ");
         System.out.println();
 
-        System.out.println("remotedValue = " + listTwo.removeById(-1));
+        System.out.println("remotedValue = " + listTwo.removeById(2));
         System.out.println("6 -> size(): " + listTwo.size());
         System.out.println();
     }
