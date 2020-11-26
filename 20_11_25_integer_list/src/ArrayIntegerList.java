@@ -44,6 +44,7 @@ public class ArrayIntegerList implements IntegerList {
 
     @Override
     public void set(int index, int value) {
+        // guard clause
         if (index >= size || index < 0)
             throw new IndexOutOfBoundsException();
 
