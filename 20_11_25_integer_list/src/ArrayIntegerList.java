@@ -47,18 +47,7 @@ public class ArrayIntegerList implements IntegerList {
         if (index >= size || index < 0)
             throw new IndexOutOfBoundsException();
 
-        int[] newSource = new int[source.length + 1];
-
-        for (int i = 0; i < index; i++)
-            newSource[i] = source[i];
-
-        newSource[index] = value;
-
-        for (int i = index + 1; i <= source.length; i++)
-            newSource[i] = source[i - 1];
-
-        source = newSource;
-        size++;
+        source[index] = value;
     }
 
     @Override
