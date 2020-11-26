@@ -1,5 +1,8 @@
 import java.util.Arrays;
 
+/**
+ * class ArrayIntegerList implementation
+ */
 public class ArrayIntegerList implements IntegerList {
     //class variables
     public static final int INITIAL_CAPACITY = 16;
