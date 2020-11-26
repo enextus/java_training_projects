@@ -66,13 +66,13 @@ public class ArrayIntegerList implements IntegerList {
 
         int[] newSource = new int[source.length - 1];
 
-        for (int i = 0; i < index; i++) {
+        for (int i = 0; i < index; i++)
             newSource[i] = source[i];
-        }
 
-        for (int i = index; i < source.length - 1; i++) {
+
+        for (int i = index; i < source.length - 1; i++)
             newSource[i] = source[i + 1];
-        }
+
         source = newSource;
         size--;
         return removedValue;
