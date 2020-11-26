@@ -41,16 +41,26 @@ public class ArrayIntegerList implements IntegerList {
 
     @Override
     public int removeById(int index) {
+
         return 0;
     }
 
     @Override
     public int size() {
+        final int size = source.length;
         return size;
     }
 
     @Override
     public void clear() {
+        final int arrLen = source.length;
+        int count = 0;
+        final int length = source.length;
+        while (arrLen - count > length) {
+            System.arraycopy(source, 0, source, count, length);
+            count += length;
+        }
+        System.arraycopy(source, 0, source, count, arrLen - count);
 
     }
 }
