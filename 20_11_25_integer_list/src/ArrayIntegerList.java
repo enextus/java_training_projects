@@ -47,7 +47,17 @@ public class ArrayIntegerList implements IntegerList {
 
     @Override
     public int size() {
-        final int size = source.length;
+
+        int count = 0;
+        final int length = source.length;
+
+        while (count > length) {
+
+
+            count++;
+        }
+
+
         return size;
     }
 
