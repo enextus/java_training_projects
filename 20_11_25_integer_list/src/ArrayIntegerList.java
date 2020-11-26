@@ -98,7 +98,21 @@ public class ArrayIntegerList implements IntegerList {
 
         source = newSource;
         size--;
+
+        // second part of result arr
+        System.out.println("source: " + Arrays.toString(source));
+        System.out.println("size: " + size);
+        System.out.println("removedValue: " + removedValue);
+        System.out.println("________ second part of result arr ________");
         return removedValue;
+    }
+
+    @Override
+    public String toString() {
+        return "ArrayIntegerList{" +
+                "size=" + size +
+                ", source=" + Arrays.toString(source) +
+                '}';
     }
 
     @Override

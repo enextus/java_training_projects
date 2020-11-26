@@ -30,7 +30,9 @@ public class Main {
         System.out.println();
 
         System.out.println("remotedValue = " + listTwo.removeById(2));
+        System.out.println("remotedValue = " + listTwo.removeById(0));
         System.out.println("6 -> size(): " + listTwo.size());
+        System.out.println("" + listTwo.toString());
         System.out.println();
     }
 }
