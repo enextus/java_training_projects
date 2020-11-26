@@ -62,7 +62,7 @@ public class ArrayIntegerList implements IntegerList {
             return 0;
         }
 
-        int remotedValue = source[index];
+        int removedValue = source[index];
 
         int[] newSource = new int[source.length - 1];
 
@@ -75,7 +75,7 @@ public class ArrayIntegerList implements IntegerList {
         }
         source = newSource;
         size--;
-        return remotedValue;
+        return removedValue;
     }
 
     @Override
