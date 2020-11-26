@@ -51,13 +51,9 @@ public class ArrayIntegerList implements IntegerList {
 
     @Override
     public void clear() {
-        final int arrLen = source.length;
-        int count = 0;
-        final int length = source.length;
-        while (arrLen - count > length) {
-            System.arraycopy(source, 0, source, count, length);
-            count += length;
-        }
-        System.arraycopy(source, 0, source, count, arrLen - count);
+        for (int i = 0; i < size; i++)
+            source[i] = 0;
+
+        size = 0;
     }
 }

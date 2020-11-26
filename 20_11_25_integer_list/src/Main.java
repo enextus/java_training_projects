@@ -15,7 +15,7 @@ public class Main {
 
         IntegerList listTwo = new ArrayIntegerList();
         System.out.println("listTwo.size(): " + listTwo.size());
-        
+
         listTwo.addLast(100);
         listTwo.addLast(100);
         listTwo.addLast(100);
@@ -28,8 +28,14 @@ public class Main {
 
         listTwo.clear();
 
-        listTwo.size();
+        System.out.println("listTwo.size(): " + listTwo.size());
+        // System.out.println(listTwo.get(0));
 
-        System.out.println(listTwo.get(0));
+        listTwo.addLast(25);
+        listTwo.addLast(100);
+
+        System.out.println("listTwo.size(): " + listTwo.size());
+
+
     }
 }
