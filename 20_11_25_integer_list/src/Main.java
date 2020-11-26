@@ -18,8 +18,6 @@ public class Main {
 
         listTwo.addLast(25);
         listTwo.addLast(100);
-        System.out.println(listTwo.get(0));
-        System.out.println(listTwo.get(1));
 
         System.out.println("1 listTwo.size(): " + listTwo.size());
         listTwo.set(1, 10);
@@ -27,5 +25,8 @@ public class Main {
 
         listTwo.set(1, 66);
         System.out.println("3 listTwo.size(): " + listTwo.size());
+
+        listTwo.set(3, 566);
+        System.out.println("4 listTwo.size(): " + listTwo.size());
     }
 }
