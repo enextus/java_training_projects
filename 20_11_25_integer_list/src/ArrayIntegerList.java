@@ -55,7 +55,6 @@ public class ArrayIntegerList implements IntegerList {
         for (int i = index + 1; i <= source.length; i++)
             newSource[i] = source[i - 1];
 
-
         source = newSource;
         size++;
     }
