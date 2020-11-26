@@ -47,20 +47,15 @@ public class ArrayIntegerList implements IntegerList {
 
         int[] newSource = new int[source.length + 1];
 
-        System.out.println("1 -> " + Arrays.toString(newSource));
-
-        for (int i = 0; i < index; i++) {
+        for (int i = 0; i < index; i++)
             newSource[i] = source[i];
-        }
-        System.out.println("2 -> " + Arrays.toString(newSource));
 
         newSource[index] = value;
 
-        for (int i = index + 1; i <= source.length; i++) {
+        for (int i = index + 1; i <= source.length; i++)
             newSource[i] = source[i - 1];
-        }
 
-        System.out.println("3 -> " + Arrays.toString(newSource));
+
         source = newSource;
         size++;
     }
