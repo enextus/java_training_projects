@@ -58,15 +58,10 @@ public class ArrayIntegerList implements IntegerList {
             return -911;
 
         int removedValue = source[index];
-        int[] newSource = new int[source.length - 1];
 
-        for (int i = 0; i < index; i++)
-            newSource[i] = source[i];
+        int numElements = source.length - (index + 1);
+        System.arraycopy(source, index + 1, source, index, numElements);
 
-        for (int i = index; i < source.length - 1; i++)
-            newSource[i] = source[i + 1];
-
-        source = newSource;
         size--;
         return removedValue;
     }
