@@ -5,36 +5,29 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-/*        List<Integer> list = new ArrayList<>();
 
-        System.out.println("list.size(): " + list.size());
-        if (list.size() != 0) System.out.println("list.get(0): " + list.get(0));
-        else System.out.println("null");
-
-        System.out.println("After try");*/
-
-        ArrayIntegerList listTwo = new ArrayIntegerList();
+        IntegerList listTwo = new ArrayIntegerList();
         System.out.println("0 listTwo.size(): " + listTwo.size());
 
         listTwo.addLast(25);
         listTwo.addLast(100);
 
-        System.out.println("11 -> listTwo.size(): " + listTwo.size());
+        System.out.println("1 -> size(): " + listTwo.size());
         listTwo.set(1, 10);
-        System.out.println("22 -> listTwo.size(): " + listTwo.size());
+        System.out.println("2 -> size(): " + listTwo.size());
 
         listTwo.set(1, 66);
-        System.out.println("33 -> listTwo.size(): " + listTwo.size());
+        System.out.println("3 -> size(): " + listTwo.size());
 
         listTwo.set(3, 566);
-        System.out.println("44 -> listTwo.size(): " + listTwo.size());
+        System.out.println("4 -> size(): " + listTwo.size());
         listTwo.set(3, 78);
-        System.out.println("55 -> listTwo.size(): " + listTwo.size());
+        System.out.println("5 -> size(): " + listTwo.size());
 
         System.out.println(listTwo.get(2));
         System.out.println(listTwo.get(3));
         System.out.println("remotedValue = " + listTwo.removeById(2));
-        System.out.println("66 -> listTwo.size(): " + listTwo.size());
+        System.out.println("6 -> size(): " + listTwo.size());
         System.out.println(listTwo.get(2));
     }
 }

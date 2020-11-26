@@ -58,7 +58,7 @@ public class ArrayIntegerList implements IntegerList {
     @Override
     public int removeById(int index) {
 
-        if (source == null || index < 0 || index >= source.length) {
+        if (source == null || index < 0 || index >= size) {
             return 0;
         }
 
