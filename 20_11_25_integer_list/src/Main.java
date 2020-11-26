@@ -10,6 +10,7 @@ public class Main {
         listTwo.addLast(25);
         listTwo.addLast(70);
         listTwo.addLast(200);
+        listTwo.addLast(666);
 
         System.out.println("-> listTwo.size(): " + listTwo.size());
         System.out.println("-> ArrayIntegerList.INITIAL_CAPACITY: " + ArrayIntegerList.INITIAL_CAPACITY);
@@ -27,6 +28,9 @@ public class Main {
         System.out.print(listTwo.get(1) + ", ");
         System.out.print(listTwo.get(2) + ", ");
         System.out.print(listTwo.get(3) + ", ");
+        System.out.println();
+
+        System.out.println("6 -> size(): " + listTwo.size());
         System.out.println();
 
         System.out.println("remotedValue = " + listTwo.removeById(2));

@@ -21,6 +21,7 @@ public class ArrayIntegerList implements IntegerList {
         int newCapacity = source.length * 2;
         int[] newSource = new int[newCapacity];
         System.arraycopy(source, 0, newSource, 0, source.length);
+
         source = newSource;
     }
 
@@ -31,6 +32,7 @@ public class ArrayIntegerList implements IntegerList {
 
 //        source[size++] = element;
         source[size] = element;
+
         size++;
     }
 
@@ -44,7 +46,6 @@ public class ArrayIntegerList implements IntegerList {
 
     @Override
     public void set(int index, int value) {
-        // guard clause
         if (index >= size || index < 0)
             throw new IndexOutOfBoundsException();
 
@@ -57,11 +58,11 @@ public class ArrayIntegerList implements IntegerList {
             return -911;
 
         int removedValue = source[index];
-
         int numElements = source.length - (index + 1);
         System.arraycopy(source, index + 1, source, index, numElements);
 
         size--;
+
         return removedValue;
     }
 
