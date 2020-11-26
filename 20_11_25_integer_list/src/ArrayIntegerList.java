@@ -11,7 +11,9 @@ public class ArrayIntegerList implements IntegerList {
     // instance variables
     int[] source;
 
-    // constructor
+    /**
+     *
+     */
     public ArrayIntegerList() {
         // init instance array with initial capacity of INITIAL_CAPACITY
         source = new int[INITIAL_CAPACITY];
@@ -19,7 +21,9 @@ public class ArrayIntegerList implements IntegerList {
         size = 0;
     }
 
-    // implementation of interface methods a...z
+    /**
+     * Method increase the length of array up to 100 percent
+     */
     private void increaseCapacity() {
         int newCapacity = source.length * 2;
         int[] newSource = new int[newCapacity];
@@ -28,6 +32,10 @@ public class ArrayIntegerList implements IntegerList {
         source = newSource;
     }
 
+    /**
+     * Method adds an element at the end of array and increase the length of it
+     * @param element - to add
+     */
     @Override
     public void addLast(int element) {
         if (size == source.length)
