@@ -28,13 +28,13 @@ public class Main {
 
         listTwo.set(3, 566);
         System.out.println("44 -> listTwo.size(): " + listTwo.size());
-        listTwo.set(3, 566);
-        System.out.println("44 -> listTwo.size(): " + listTwo.size());
-        listTwo.set(3, 566);
-        System.out.println("44 -> listTwo.size(): " + listTwo.size());
-        listTwo.set(3, 566);
-        System.out.println("44 -> listTwo.size(): " + listTwo.size());
-        listTwo.set(3, 566);
-        System.out.println("44 -> listTwo.size(): " + listTwo.size());
+        listTwo.set(3, 78);
+        System.out.println("55 -> listTwo.size(): " + listTwo.size());
+
+        System.out.println(listTwo.get(2));
+        System.out.println(listTwo.get(3));
+        System.out.println("remotedValue = " + listTwo.removeById(2));
+        System.out.println("66 -> listTwo.size(): " + listTwo.size());
+        System.out.println(listTwo.get(2));
     }
 }

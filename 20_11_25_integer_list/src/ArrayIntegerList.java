@@ -57,7 +57,25 @@ public class ArrayIntegerList implements IntegerList {
 
     @Override
     public int removeById(int index) {
-        return 0;
+
+        if (source == null || index < 0 || index >= source.length) {
+            return 0;
+        }
+
+        int remotedValue = source[index];
+
+        int[] newSource = new int[source.length - 1];
+
+        for (int i = 0; i < index; i++) {
+            newSource[i] = source[i];
+        }
+
+        for (int i = index; i < source.length - 1; i++) {
+            newSource[i] = source[i + 1];
+        }
+        source = newSource;
+        size--;
+        return remotedValue;
     }
 
     @Override
