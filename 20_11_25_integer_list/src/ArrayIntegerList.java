@@ -82,12 +82,19 @@ public class ArrayIntegerList implements IntegerList {
         // first part of result arr
         System.out.println("source: " + Arrays.toString(source));
         System.out.println("index to remove: " + index);
-        System.out.println("newSource: " + Arrays.toString(newSource));
+        System.out.println("removedValue: " + removedValue);
+        System.out.println("newSource I: " + Arrays.toString(newSource));
         System.out.println("newSource.length: " + newSource.length);
         System.out.println("________ first part of result arr ________");
 
         for (int i = index; i < source.length - 1; i++)
             newSource[i] = source[i + 1];
+
+        // second part of result arr
+        System.out.println("source: " + Arrays.toString(source));
+        System.out.println("newSource I: " + Arrays.toString(newSource));
+        System.out.println("newSource.length: " + newSource.length);
+        System.out.println("________ second part of result arr ________");
 
         source = newSource;
         size--;
