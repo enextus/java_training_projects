@@ -107,13 +107,6 @@ public class ArrayIntegerList implements IntegerList {
         return removedValue;
     }
 
-    @Override
-    public String toString() {
-        return "ArrayIntegerList{" +
-                "size=" + size +
-                ", source=" + Arrays.toString(source) +
-                '}';
-    }
 
     @Override
     public int size() {
@@ -126,5 +119,13 @@ public class ArrayIntegerList implements IntegerList {
             source[i] = 0;
 
         size = 0;
+    }
+    
+    @Override
+    public String toString() {
+        return "ArrayIntegerList{" +
+                "size=" + size +
+                ", source=" + Arrays.toString(source) +
+                '}';
     }
 }
