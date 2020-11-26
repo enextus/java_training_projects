@@ -1,7 +1,6 @@
 import java.util.Arrays;
 
 public class ArrayIntegerList implements IntegerList {
-
     //class variables
     public static final int INITIAL_CAPACITY = 16;
     private int size;
@@ -13,12 +12,12 @@ public class ArrayIntegerList implements IntegerList {
     public ArrayIntegerList() {
         // init instance array with initial capacity of INITIAL_CAPACITY
         source = new int[INITIAL_CAPACITY];
-        // init size
+        // init class variable size with zero value
         size = 0;
     }
 
     // implementation of interface methods a...z
-    void increaseCapacity() {
+    private void increaseCapacity() {
         int newCapacity = source.length * 2;
         int[] newSource = new int[newCapacity];
         System.arraycopy(source, 0, newSource, 0, source.length);
@@ -37,6 +36,9 @@ public class ArrayIntegerList implements IntegerList {
 
     @Override
     public int get(int index) {
+        if (source == null)
+            return -911;
+
         if (index >= size || index < 0)
             throw new IndexOutOfBoundsException();
 
@@ -107,7 +109,6 @@ public class ArrayIntegerList implements IntegerList {
         return removedValue;
     }
 
-
     @Override
     public int size() {
         return size;
@@ -120,7 +121,7 @@ public class ArrayIntegerList implements IntegerList {
 
         size = 0;
     }
-    
+
     @Override
     public String toString() {
         return "ArrayIntegerList{" +
