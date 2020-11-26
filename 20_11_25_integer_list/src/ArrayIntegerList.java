@@ -8,11 +8,11 @@ public class ArrayIntegerList implements IntegerList {
     public static final int INITIAL_CAPACITY = 16;
     private int size;
 
-    // instance variables
+    // instance variable
     int[] source;
 
     /**
-     *
+     * Constructor.
      */
     public ArrayIntegerList() {
         // init instance array with initial capacity of INITIAL_CAPACITY
@@ -73,6 +73,11 @@ public class ArrayIntegerList implements IntegerList {
         source[index] = value;
     }
 
+    /**
+     * Method removes element with index.
+     * @param index the index of the element to remove
+     * @return value of removed element
+     */
     @Override
     public int removeById(int index) {
         if (source == null || index < 0 || index >= size)
@@ -88,11 +93,18 @@ public class ArrayIntegerList implements IntegerList {
         return removedValue;
     }
 
+    /**
+     * Method returns value of size. Like a getter.
+     * @return size
+     */
     @Override
     public int size() {
         return size;
     }
 
+    /**
+     * Method clears the elements from source.
+     */
     @Override
     public void clear() {
         for (int i = 0; i < size; i++)
