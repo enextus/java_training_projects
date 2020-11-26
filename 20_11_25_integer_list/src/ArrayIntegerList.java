@@ -22,7 +22,7 @@ public class ArrayIntegerList implements IntegerList {
     }
 
     /**
-     * Method increase the length of array up to 100 percent.
+     * Method doubles the length of source.
      */
     private void increaseCapacity() {
         int newCapacity = source.length * 2;
