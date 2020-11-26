@@ -8,6 +8,17 @@ class ArrayIntegerListTest {
 
     @Test
     void addLast() {
+        assertThrows(IndexOutOfBoundsException.class, () -> {
+            list.addLast(1);
+        });
+
+        assertThrows(IndexOutOfBoundsException.class, () -> {
+            list.addLast(-1);
+        });
+
+        assertThrows(IndexOutOfBoundsException.class, () -> {
+            list.addLast(1000);
+        });
     }
 
     @Test

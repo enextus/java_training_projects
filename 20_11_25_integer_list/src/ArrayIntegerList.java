@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 /**
- * class ArrayIntegerList implementation
+ * class ArrayIntegerList one of possibles implementation
  */
 public class ArrayIntegerList implements IntegerList {
     //class variables
