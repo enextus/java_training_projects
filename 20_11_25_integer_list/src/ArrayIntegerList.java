@@ -69,7 +69,6 @@ public class ArrayIntegerList implements IntegerList {
         for (int i = 0; i < index; i++)
             newSource[i] = source[i];
 
-
         for (int i = index; i < source.length - 1; i++)
             newSource[i] = source[i + 1];
 
