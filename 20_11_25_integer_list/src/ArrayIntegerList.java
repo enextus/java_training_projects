@@ -7,14 +7,12 @@ public class ArrayIntegerList implements IntegerList {
     private int size;
     int[] source;
 
-    public int[] getSource() {
-        return source;
-    }
-
+    //
     public ArrayIntegerList() {
         source = new int[INITIAL_CAPACITY];
     }
 
+    //
     @Override
     public void addLast(int element) {
         if (size == source.length)
