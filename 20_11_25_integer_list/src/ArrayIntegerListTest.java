@@ -7,17 +7,9 @@ class ArrayIntegerListTest {
     ArrayIntegerList list = new ArrayIntegerList();
 
     @Test
-    void addLast() {
+    void testAddLast_() {
         assertThrows(IndexOutOfBoundsException.class, () -> {
             list.addLast(1);
-        });
-
-        assertThrows(IndexOutOfBoundsException.class, () -> {
-            list.addLast(-1);
-        });
-
-        assertThrows(IndexOutOfBoundsException.class, () -> {
-            list.addLast(1000);
         });
     }
 
@@ -60,14 +52,14 @@ class ArrayIntegerListTest {
     }
 
     @Test
-    void removeById() {
+    void testRemoveById_() {
     }
 
     @Test
-    void size() {
+    void testSize_() {
     }
 
     @Test
-    void clear() {
+    void testClear_() {
     }
 }
