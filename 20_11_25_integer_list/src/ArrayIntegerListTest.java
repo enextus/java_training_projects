@@ -26,6 +26,18 @@ class ArrayIntegerListTest {
         assertThrows(IndexOutOfBoundsException.class, () -> {
             list.set(0, 1);
         });
+
+        assertThrows(IndexOutOfBoundsException.class, () -> {
+            list.set(0, -4);
+        });
+
+        assertThrows(IndexOutOfBoundsException.class, () -> {
+            list.set(1, 1);
+        });
+
+        assertThrows(IndexOutOfBoundsException.class, () -> {
+            list.set(1, -4);
+        });
     }
 
     @Test
