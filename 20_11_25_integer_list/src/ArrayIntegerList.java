@@ -7,6 +7,10 @@ public class ArrayIntegerList implements IntegerList {
     private int size;
     int[] source;
 
+    public int[] getSource() {
+        return source;
+    }
+
     public ArrayIntegerList() {
         source = new int[INITIAL_CAPACITY];
     }
@@ -41,15 +45,23 @@ public class ArrayIntegerList implements IntegerList {
         if (index >= size || index < 0)
             throw new IndexOutOfBoundsException();
 
+
         int[] newSource = new int[source.length + 1];
 
-        System.arraycopy(source, 0, newSource, 0, index);
+        System.out.println("1 -> " + Arrays.toString(newSource));
+
+        for (int i = 0; i < index; i++) {
+            newSource[i] = source[i];
+        }
+        System.out.println("2 -> " + Arrays.toString(newSource));
 
         newSource[index] = value;
 
-        if (source.length + 1 - index + 1 >= 0)
-            System.arraycopy(source, index + 1 - 1, newSource, index + 1, source.length + 1 - index + 1);
+        for (int i = index + 1; i <= source.length; i++) {
+            newSource[i] = source[i - 1];
+        }
 
+        System.out.println("3 -> " + Arrays.toString(newSource));
         source = newSource;
         size++;
     }

@@ -14,18 +14,18 @@ public class Main {
         System.out.println("After try");*/
 
         ArrayIntegerList listTwo = new ArrayIntegerList();
-        System.out.println("listTwo.size(): " + listTwo.size());
+        System.out.println("0 listTwo.size(): " + listTwo.size());
 
         listTwo.addLast(25);
         listTwo.addLast(100);
         System.out.println(listTwo.get(0));
         System.out.println(listTwo.get(1));
 
-        System.out.println("listTwo.size(): " + listTwo.size());
+        System.out.println("1 listTwo.size(): " + listTwo.size());
         listTwo.set(1, 10);
-        System.out.println("listTwo.size(): " + listTwo.size());
+        System.out.println("2 listTwo.size(): " + listTwo.size());
 
         listTwo.set(1, 66);
-        System.out.println("listTwo.size(): " + listTwo.size());
+        System.out.println("3 listTwo.size(): " + listTwo.size());
     }
 }
