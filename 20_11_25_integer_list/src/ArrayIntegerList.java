@@ -1,16 +1,30 @@
+import java.util.Arrays;
+
 public class ArrayIntegerList implements IntegerList {
 
-    private static final int INITIAL_CAPACITY = 16;
-
+    //class variables
+    public static final int INITIAL_CAPACITY = 16;
     private int size;
+
+    // instance variables
     int[] source;
 
-    //
+    // constructor
     public ArrayIntegerList() {
+        // init instance array with initial capacity of INITIAL_CAPACITY
         source = new int[INITIAL_CAPACITY];
+        // init size
+        size = 0;
     }
 
-    //
+    // implementation of interface methods a...z
+    void increaseCapacity() {
+        int newCapacity = source.length * 2;
+        int[] newSource = new int[newCapacity];
+        System.arraycopy(source, 0, newSource, 0, source.length);
+        source = newSource;
+    }
+
     @Override
     public void addLast(int element) {
         if (size == source.length)
@@ -19,13 +33,6 @@ public class ArrayIntegerList implements IntegerList {
 //        source[size++] = element;
         source[size] = element;
         size++;
-    }
-
-    void increaseCapacity() {
-        int newCapacity = source.length * 2;
-        int[] newSource = new int[newCapacity];
-        System.arraycopy(source, 0, newSource, 0, source.length);
-        source = newSource;
     }
 
     @Override
@@ -57,12 +64,16 @@ public class ArrayIntegerList implements IntegerList {
 
     @Override
     public int removeById(int index) {
-        if (source == null || index < 0 || index >= size) {
-            return 0;
-        }
+
+        System.out.println("source: " + Arrays.toString(source));
+        System.out.println("source.length: " + source.length);
+        System.out.println("size: " + size);
+
+        // guard clause
+        if (source == null || index < 0 || index >= size)
+            return -911;
 
         int removedValue = source[index];
-
         int[] newSource = new int[source.length - 1];
 
         for (int i = 0; i < index; i++)
