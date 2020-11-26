@@ -22,7 +22,7 @@ public class ArrayIntegerList implements IntegerList {
     }
 
     /**
-     * Method increase the length of array up to 100 percent
+     * Method increase the length of array up to 100 percent.
      */
     private void increaseCapacity() {
         int newCapacity = source.length * 2;
@@ -33,7 +33,7 @@ public class ArrayIntegerList implements IntegerList {
     }
 
     /**
-     * Method adds an element at the end of array and increase the length of it
+     * Method adds an element at the end of array and increase the length of it.
      * @param element - to add
      */
     @Override
@@ -47,6 +47,11 @@ public class ArrayIntegerList implements IntegerList {
         size++;
     }
 
+    /**
+     * Method returns the element at the index.
+     * @param index - index of the element to return. It must be in the range between 0 and (size-1).
+     * @return element
+     */
     @Override
     public int get(int index) {
         if (index >= size || index < 0)
@@ -55,6 +60,11 @@ public class ArrayIntegerList implements IntegerList {
         return source[index];
     }
 
+    /**
+     * Method sets new value of element with index.
+     * @param index the place to set
+     * @param value the value to set
+     */
     @Override
     public void set(int index, int value) {
         if (index >= size || index < 0)
