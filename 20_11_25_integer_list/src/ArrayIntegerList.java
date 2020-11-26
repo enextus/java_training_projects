@@ -34,6 +34,7 @@ public class ArrayIntegerList implements IntegerList {
 
     /**
      * Method adds an element at the end of array and increase the length of it.
+     *
      * @param element - to add
      */
     @Override
@@ -48,9 +49,10 @@ public class ArrayIntegerList implements IntegerList {
     }
 
     /**
-     * Method returns the element at the index.
+     * The method returns the value of the element at its index.
+     *
      * @param index - index of the element to return. It must be in the range between 0 and (size-1).
-     * @return element
+     * @return value of the element at its index
      */
     @Override
     public int get(int index) {
@@ -62,6 +64,7 @@ public class ArrayIntegerList implements IntegerList {
 
     /**
      * Method sets new value of element with index.
+     *
      * @param index the place to set
      * @param value the value to set
      */
@@ -75,6 +78,7 @@ public class ArrayIntegerList implements IntegerList {
 
     /**
      * Method removes element with index.
+     *
      * @param index the index of the element to remove
      * @return value of removed element
      */
@@ -95,7 +99,8 @@ public class ArrayIntegerList implements IntegerList {
 
     /**
      * Method returns value of size. Like a getter.
-     * @return size
+     *
+     * @return value of size
      */
     @Override
     public int size() {
