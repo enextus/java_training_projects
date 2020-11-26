@@ -41,23 +41,11 @@ public class ArrayIntegerList implements IntegerList {
 
     @Override
     public int removeById(int index) {
-
         return 0;
     }
 
     @Override
     public int size() {
-
-        int count = 0;
-        final int length = source.length;
-
-        while (count > length) {
-
-
-            count++;
-        }
-
-
         return size;
     }
 
@@ -71,6 +59,5 @@ public class ArrayIntegerList implements IntegerList {
             count += length;
         }
         System.arraycopy(source, 0, source, count, arrLen - count);
-
     }
 }
