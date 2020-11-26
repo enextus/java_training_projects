@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Main {
@@ -12,30 +13,22 @@ public class Main {
 
         System.out.println("After try");*/
 
-
-        IntegerList listTwo = new ArrayIntegerList();
+        ArrayIntegerList listTwo = new ArrayIntegerList();
         System.out.println("listTwo.size(): " + listTwo.size());
-
-        listTwo.addLast(100);
-        listTwo.addLast(100);
-        listTwo.addLast(100);
-
-        System.out.println("listTwo.size(): " + listTwo.size());
-
-        System.out.println(listTwo.get(0));
-        System.out.println(listTwo.get(1));
-        System.out.println(listTwo.get(2));
-
-        listTwo.clear();
-
-        System.out.println("listTwo.size(): " + listTwo.size());
-        // System.out.println(listTwo.get(0));
 
         listTwo.addLast(25);
         listTwo.addLast(100);
+        System.out.println(listTwo.get(0));
+        System.out.println(listTwo.get(1));
 
         System.out.println("listTwo.size(): " + listTwo.size());
+        System.out.println(Arrays.toString(listTwo.getSource()));
+        listTwo.set(1, 10);
+        System.out.println(Arrays.toString(listTwo.getSource()));
+        System.out.println("listTwo.size(): " + listTwo.size());
 
-
+        listTwo.set(1, 66);
+        System.out.println(Arrays.toString(listTwo.getSource()));
+        System.out.println("listTwo.size(): " + listTwo.size());
     }
 }
