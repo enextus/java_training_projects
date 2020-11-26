@@ -19,14 +19,22 @@ public class Main {
         listTwo.addLast(25);
         listTwo.addLast(100);
 
-        System.out.println("1 listTwo.size(): " + listTwo.size());
+        System.out.println("11 -> listTwo.size(): " + listTwo.size());
         listTwo.set(1, 10);
-        System.out.println("2 listTwo.size(): " + listTwo.size());
+        System.out.println("22 -> listTwo.size(): " + listTwo.size());
 
         listTwo.set(1, 66);
-        System.out.println("3 listTwo.size(): " + listTwo.size());
+        System.out.println("33 -> listTwo.size(): " + listTwo.size());
 
         listTwo.set(3, 566);
-        System.out.println("4 listTwo.size(): " + listTwo.size());
+        System.out.println("44 -> listTwo.size(): " + listTwo.size());
+        listTwo.set(3, 566);
+        System.out.println("44 -> listTwo.size(): " + listTwo.size());
+        listTwo.set(3, 566);
+        System.out.println("44 -> listTwo.size(): " + listTwo.size());
+        listTwo.set(3, 566);
+        System.out.println("44 -> listTwo.size(): " + listTwo.size());
+        listTwo.set(3, 566);
+        System.out.println("44 -> listTwo.size(): " + listTwo.size());
     }
 }

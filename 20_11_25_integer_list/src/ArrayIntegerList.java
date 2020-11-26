@@ -45,7 +45,6 @@ public class ArrayIntegerList implements IntegerList {
         if (index >= size || index < 0)
             throw new IndexOutOfBoundsException();
 
-
         int[] newSource = new int[source.length + 1];
 
         System.out.println("1 -> " + Arrays.toString(newSource));
