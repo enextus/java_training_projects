@@ -58,6 +58,7 @@ public class ArrayIntegerList implements IntegerList {
             return -911;
 
         int removedValue = source[index];
+
         int numElements = source.length - (index + 1);
         System.arraycopy(source, index + 1, source, index, numElements);
 
