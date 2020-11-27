@@ -12,7 +12,7 @@ public class ArrayIntegerList implements IntegerList {
     int[] source;
 
     /**
-     * Constructor.
+     * Class constructor.
      */
     public ArrayIntegerList() {
         // init instance array with initial capacity of INITIAL_CAPACITY
