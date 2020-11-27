@@ -50,6 +50,8 @@ class ArrayIntegerListTest {
 
     @Test
     void testRemoveById_() {
+        assertEquals(-911, list.removeById(0));
+        assertEquals(-911, list.removeById(-1));
     }
 
     @Test
