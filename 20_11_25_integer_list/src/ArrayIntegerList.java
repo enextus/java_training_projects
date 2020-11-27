@@ -4,11 +4,11 @@ import java.util.Arrays;
  * class ArrayIntegerList one of possibles implementation
  */
 public class ArrayIntegerList implements IntegerList {
-    //class variables
+    //class variable
     public static final int INITIAL_CAPACITY = 16;
-    private int size;
 
-    // instance variable
+    // instance variables
+    private int size;
     int[] source;
 
     /**
@@ -112,7 +112,7 @@ public class ArrayIntegerList implements IntegerList {
      */
     @Override
     public void clear() {
-        for (int i = 0; i < size; i++)
+        for (int i = 0; i < source.length; i++)
             source[i] = 0;
 
         size = 0;
