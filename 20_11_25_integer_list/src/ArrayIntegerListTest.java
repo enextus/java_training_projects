@@ -64,5 +64,11 @@ class ArrayIntegerListTest {
 
     @Test
     void testClear_() {
+        assertThrows(IndexOutOfBoundsException.class, () -> {
+            list.clear();
+            list.get(0);
+            list.get(-1);
+            list.get(110);
+        });
     }
 }
