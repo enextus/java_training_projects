@@ -56,6 +56,9 @@ class ArrayIntegerListTest {
 
     @Test
     void testSize_() {
+        assertThrows(IndexOutOfBoundsException.class, () -> {
+            list.set(0, 10);
+        });
     }
 
     @Test
