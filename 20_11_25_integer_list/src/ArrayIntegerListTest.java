@@ -7,6 +7,20 @@ class ArrayIntegerListTest {
     IntegerList list = new ArrayIntegerList();
 
     @Test
+    void testSize_() {
+        assertThrows(IndexOutOfBoundsException.class, () -> {
+            list.set(0, 10);
+            assertEquals(1, list.size());
+        });
+    }
+
+
+
+
+
+
+
+    @Test
     void testAddLast_() {
         list.clear();
         list.addLast(-1);
@@ -57,13 +71,6 @@ class ArrayIntegerListTest {
         assertEquals(-911, list.removeById(-1));
     }
 
-    @Test
-    void testSize_() {
-        assertThrows(IndexOutOfBoundsException.class, () -> {
-            list.set(0, 10);
-            assertEquals(1, list.size());
-        });
-    }
 
     @Test
     void testClear_() {
