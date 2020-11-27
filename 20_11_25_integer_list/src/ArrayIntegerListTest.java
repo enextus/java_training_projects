@@ -8,6 +8,9 @@ class ArrayIntegerListTest {
 
     @Test
     void testAddLast_() {
+        list.clear();
+        list.addLast(-1);
+        assertEquals(-1, list.get(0));
     }
 
     @Test
