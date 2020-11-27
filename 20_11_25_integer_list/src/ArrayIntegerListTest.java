@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ArrayIntegerListTest {
 
-    ArrayIntegerList list = new ArrayIntegerList();
+    IntegerList list = new ArrayIntegerList();
 
     @Test
     void testAddLast_() {
