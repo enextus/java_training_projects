@@ -38,5 +38,19 @@ public class Main {
         System.out.println("6 -> size(): " + listTwo.size());
         System.out.println("" + listTwo.toString());
         System.out.println();
+
+/*        int x = 10;
+        int y = 500;
+
+        System.out.println("x: " + x);
+        System.out.println("y: " + y);
+        System.out.println();
+
+        x = x ^ y;
+        y = x ^ y;
+        x = x ^ y;
+
+        System.out.println("x: " + x);
+        System.out.println("y: " + y);*/
     }
 }
