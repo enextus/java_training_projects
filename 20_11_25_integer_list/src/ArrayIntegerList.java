@@ -21,7 +21,7 @@ public class ArrayIntegerList implements IntegerList {
         size = 0;
     }
 
-    /**
+    /*
      * Method doubles the length of source.
      */
     private void increaseCapacity() {
