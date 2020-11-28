@@ -5,6 +5,10 @@ import java.util.Objects;
  * class ArrayIntegerList one of possibles implementation
  */
 public class ArrayIntegerList implements IntegerList {
+    public int[] getSource() {
+        return source;
+    }
+
     //class variable
     public static final int INITIAL_CAPACITY = 16;
 
@@ -85,7 +89,7 @@ public class ArrayIntegerList implements IntegerList {
      */
     @Override
     public int removeById(int index) {
-        if (source == null || index < 0 || index >= size)
+        if (index < 0 || index >= size)
             return -911;
 
         int removedValue = source[index];
