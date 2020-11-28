@@ -92,14 +92,14 @@ public class ArrayIntegerList implements IntegerList {
         if (index < 0 || index >= size)
             return -911;
 
-        int removedValue = source[index];
+        int valueRemovedElem = source[index];
 
         int numElements = source.length - (index + 1);
         System.arraycopy(source, index + 1, source, index, numElements);
 
         size--;
 
-        return removedValue;
+        return valueRemovedElem;
     }
 
     /**
