@@ -14,12 +14,6 @@ class ArrayIntegerListTestNaive {
         });
     }
 
-
-
-
-
-
-
     @Test
     void testAddLast_() {
         list.clear();

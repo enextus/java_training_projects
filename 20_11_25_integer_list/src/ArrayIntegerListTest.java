@@ -15,7 +15,16 @@ class ArrayIntegerListTest {
     public void testGet_emptyList_throwsIOOBE() {
         assertThrows(IndexOutOfBoundsException.class, () -> list.get(0));
         assertThrows(IndexOutOfBoundsException.class, () -> list.get(10));
+        assertThrows(IndexOutOfBoundsException.class, () -> list.get(100));
+
         assertThrows(IndexOutOfBoundsException.class, () -> list.get(-10));
+        assertThrows(IndexOutOfBoundsException.class, () -> list.get(-100));
+
+        assertThrows(IndexOutOfBoundsException.class, () -> list.get(15));
+        assertThrows(IndexOutOfBoundsException.class, () -> list.get(16));
+
+        assertThrows(IndexOutOfBoundsException.class, () -> list.get(31));
+        assertThrows(IndexOutOfBoundsException.class, () -> list.get(32));
     }
 
     @Test
