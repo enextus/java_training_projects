@@ -29,9 +29,13 @@ class ArrayIntegerListTest {
 
     @Test
     public void testRemoveById_emptyList_throwsIOOBE() {
-        assertThrows(IndexOutOfBoundsException.class, () -> list.removeById(0));
+        assertEquals(-911, list.removeById(0));
+        assertEquals(-911, list.removeById(10));
+        assertEquals(-911, list.removeById(-10));
+
+/*        assertThrows(IndexOutOfBoundsException.class, () -> list.removeById(0));
         assertThrows(IndexOutOfBoundsException.class, () -> list.removeById(10));
-        assertThrows(IndexOutOfBoundsException.class, () -> list.removeById(-10));
+        assertThrows(IndexOutOfBoundsException.class, () -> list.removeById(-10));*/
     }
 
     @Test

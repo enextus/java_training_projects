@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-/**
+/*
  * class ArrayIntegerList one of possibles implementation
  */
 public class ArrayIntegerList implements IntegerList {
@@ -9,9 +9,9 @@ public class ArrayIntegerList implements IntegerList {
 
     // instance variables
     private int size;
-    int[] source;
+    int[] source; // package protected
 
-    /**
+    /*
      * Class constructor.
      */
     public ArrayIntegerList() {
