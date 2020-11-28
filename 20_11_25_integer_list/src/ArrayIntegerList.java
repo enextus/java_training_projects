@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Objects;
 
 /*
  * class ArrayIntegerList one of possibles implementation
@@ -116,6 +117,22 @@ public class ArrayIntegerList implements IntegerList {
             source[i] = 0;
 
         size = 0;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ArrayIntegerList that = (ArrayIntegerList) o;
+        return size == that.size &&
+                Arrays.equals(source, that.source);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(size);
+        result = 31 * result + Arrays.hashCode(source);
+        return result;
     }
 
     @Override

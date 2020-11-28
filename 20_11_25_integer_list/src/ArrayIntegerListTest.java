@@ -33,6 +33,14 @@ class ArrayIntegerListTest {
         assertEquals(-911, list.removeById(10));
         assertEquals(-911, list.removeById(-10));
 
+        System.out.println(list.toString());
+        System.out.println(list.size());
+        System.out.println(list.hashCode());
+        System.out.println(list.getClass());
+        System.out.println(list);
+
+        System.out.println("\n");
+
 /*        assertThrows(IndexOutOfBoundsException.class, () -> list.removeById(0));
         assertThrows(IndexOutOfBoundsException.class, () -> list.removeById(10));
         assertThrows(IndexOutOfBoundsException.class, () -> list.removeById(-10));*/
