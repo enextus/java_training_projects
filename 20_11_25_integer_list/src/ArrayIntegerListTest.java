@@ -74,7 +74,10 @@ class ArrayIntegerListTest {
 
         assertThrows(IndexOutOfBoundsException.class, () -> list.get(7));
         assertThrows(IndexOutOfBoundsException.class, () -> list.set(7, 111));
-        assertThrows(IndexOutOfBoundsException.class, () -> list.removeById(7));
+
+        assertEquals(111, list.removeById(7));
+
+        //assertThrows(IndexOutOfBoundsException.class, () -> list.removeById(7));
     }
 
     @Test
@@ -89,7 +92,7 @@ class ArrayIntegerListTest {
 
         assertThrows(IndexOutOfBoundsException.class, () -> list.get(15));
         assertThrows(IndexOutOfBoundsException.class, () -> list.set(15, 111));
-        assertThrows(IndexOutOfBoundsException.class, () -> list.removeById(15));
+//        assertThrows(IndexOutOfBoundsException.class, () -> list.removeById(15));
 
     }
 
