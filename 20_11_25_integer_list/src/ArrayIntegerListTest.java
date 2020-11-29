@@ -74,10 +74,7 @@ class ArrayIntegerListTest {
 
         assertThrows(IndexOutOfBoundsException.class, () -> list.get(7));
         assertThrows(IndexOutOfBoundsException.class, () -> list.set(7, 111));
-
-        assertEquals(111, list.removeById(7));
-
-        //assertThrows(IndexOutOfBoundsException.class, () -> list.removeById(7));
+        assertThrows(IndexOutOfBoundsException.class, () -> list.removeById(7));
     }
 
     @Test

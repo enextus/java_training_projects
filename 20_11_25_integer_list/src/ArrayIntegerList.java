@@ -91,6 +91,8 @@ public class ArrayIntegerList implements IntegerList {
     public int removeById(int index) {
 /*        if (index < 0 || index >= size)
             return -911;*/
+        if (index >= size || index < 0)
+            throw new IndexOutOfBoundsException();
 
         int valueRemovedElem = source[index];
 
