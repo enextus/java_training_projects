@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        
+
         LoanConsumer loanConsumer1 = new LoanConsumer("Mark", 18, 25000);
         LoanConsumer loanConsumer2 = new LoanConsumer("Petr", 50, 30000);
 
@@ -13,5 +13,6 @@ public class Main {
         System.out.println(loanIssuer2.toIssue(loanConsumer1));
         System.out.println(loanIssuer2.toIssue(loanConsumer2));
 
+        System.out.println(loanIssuer2.printMsg(loanIssuer2.toIssue(loanConsumer2), loanConsumer2));
     }
 }

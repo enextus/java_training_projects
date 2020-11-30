@@ -28,4 +28,8 @@ public class LoanIssuer {
 
         return false;
     }
+
+    public String printMsg(boolean status, LoanConsumer other) {
+        return "Bank employee " + this.name + " issues a loan to " + other.getName() + ".";
+    }
 }
