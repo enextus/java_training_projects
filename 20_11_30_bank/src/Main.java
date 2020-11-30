@@ -9,5 +9,10 @@ public class Main {
 
 
         loanIssuer1.toIssue(loanConsumer1);
+        loanIssuer1.toIssue(loanConsumer2);
+
+        loanIssuer2.toIssue(loanConsumer1);
+        loanIssuer2.toIssue(loanConsumer2);
+
     }
 }
