@@ -17,7 +17,6 @@ public class LoanIssuer {
      */
     public boolean toIssue(LoanConsumer other) {
         final int AGELOWERCORNER = 18;
-        final int AGEMIDDLECORNER = 50;
         final int AGEUPPERCORNER = 70;
         final int ANNUALMINIMUM = 20000;
 
