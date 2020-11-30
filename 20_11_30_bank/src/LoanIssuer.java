@@ -20,10 +20,10 @@ public class LoanIssuer {
      * @return
      */
     public boolean toIssue(LoanConsumer other) {
-        final int ANNUALMINIMUM = 20000;
         final int AGELOWERCORNER = 18;
         final int AGEMIDDLECORNER = 50;
         final int AGEUPPERCORNER = 70;
+        final int ANNUALMINIMUM = 20000;
 
         if ((other.getAge() < AGELOWERCORNER) || (other.getAnnualIncome() < ANNUALMINIMUM))
             return false;
