@@ -16,13 +16,26 @@ public class Main {
         System.out.println(loanIssuer1.printMsg(loanIssuer1.toIssue(loanConsumer1), loanConsumer1));
         System.out.println(loanIssuer1.printMsg(loanIssuer1.toIssue(loanConsumer2), loanConsumer2));
         System.out.println(loanIssuer1.printMsg(loanIssuer1.toIssue(loanConsumer3), loanConsumer3));
+        System.out.println(loanIssuer1.printMsg(loanIssuer1.toIssue(loanConsumer4), loanConsumer4));
+        System.out.println(loanIssuer1.printMsg(loanIssuer1.toIssue(loanConsumer5), loanConsumer5));
 
         System.out.println(loanIssuer2.printMsg(loanIssuer2.toIssue(loanConsumer1), loanConsumer1));
         System.out.println(loanIssuer2.printMsg(loanIssuer2.toIssue(loanConsumer2), loanConsumer2));
         System.out.println(loanIssuer2.printMsg(loanIssuer2.toIssue(loanConsumer3), loanConsumer3));
+        System.out.println(loanIssuer2.printMsg(loanIssuer2.toIssue(loanConsumer4), loanConsumer4));
+        System.out.println(loanIssuer2.printMsg(loanIssuer2.toIssue(loanConsumer5), loanConsumer5));
 
         System.out.println(loanIssuer3.printMsg(loanIssuer3.toIssue(loanConsumer1), loanConsumer1));
         System.out.println(loanIssuer3.printMsg(loanIssuer3.toIssue(loanConsumer2), loanConsumer2));
         System.out.println(loanIssuer3.printMsg(loanIssuer3.toIssue(loanConsumer3), loanConsumer3));
+        System.out.println(loanIssuer3.printMsg(loanIssuer3.toIssue(loanConsumer4), loanConsumer4));
+        System.out.println(loanIssuer3.printMsg(loanIssuer3.toIssue(loanConsumer5), loanConsumer5));
+
+        System.out.println(loanIssuer4.printMsg(loanIssuer4.toIssue(loanConsumer1), loanConsumer1));
+        System.out.println(loanIssuer4.printMsg(loanIssuer4.toIssue(loanConsumer2), loanConsumer2));
+        System.out.println(loanIssuer4.printMsg(loanIssuer4.toIssue(loanConsumer3), loanConsumer3));
+        System.out.println(loanIssuer4.printMsg(loanIssuer4.toIssue(loanConsumer4), loanConsumer4));
+        System.out.println(loanIssuer4.printMsg(loanIssuer4.toIssue(loanConsumer5), loanConsumer5));
+
     }
 }
