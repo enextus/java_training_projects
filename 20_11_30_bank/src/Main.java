@@ -65,10 +65,7 @@ public class Main {
         Bank employee Max allowed a loan to Petr.
         Bank employee Max declined a loan to Mario.
         Bank employee Max declined a loan to Gerhard.
-        Bank employee Max allowed a loan to Axel.
-
-
-        Process finished with exit code 0*/
+        Bank employee Max allowed a loan to Axel.*/
 
     }
 }
