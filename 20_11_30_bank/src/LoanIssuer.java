@@ -1,7 +1,7 @@
 public class LoanIssuer {
-    private String name;
-    private boolean isLazy;
-    private boolean isKind;
+    private final String name;
+    private final boolean isLazy;
+    private final boolean isKind;
 
     public LoanIssuer(String name, boolean isLazy, boolean isKind) {
         this.name = name;

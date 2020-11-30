@@ -1,7 +1,7 @@
 public class LoanConsumer {
-    private String name;
-    private int age;
-    private int annualIncome;
+    private final String name;
+    private final int age;
+    private final int annualIncome;
 
     public String getName() {
         return name;
