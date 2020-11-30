@@ -3,6 +3,14 @@ public class LoanConsumer {
     private int age;
     private int annualIncome;
 
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
     public int getAnnualIncome() {
         return annualIncome;
     }

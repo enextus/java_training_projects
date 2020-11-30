@@ -9,26 +9,31 @@ public class LoanIssuer {
         this.isKind = isKind;
     }
 
-    public String getName() {
+/*    public String getName() {
         return name;
     }
 
     public boolean isLazy() {
         return isLazy;
-    }
+    }*/
 
     public boolean isKind() {
         return isKind;
     }
 
-    /**
-     * Method accept an object of LoanConsumer and returned boolean.
-     *
-     * @param loanConsumer1
-     * @return
-     */
-    public boolean toIssue(LoanConsumer loanConsumer1) {
-//      bla bla bla
+    public boolean toIssue(LoanConsumer other) {
+        if ((other.getAge() < 18) || (other.getAnnualIncome() < 20000))
+            return false;
+
+        if (this.isLazy)
+            return true;
+
+        if (this.isKind && (other.getAge() < 70))
+            return true;
+
+        if (this.isLazy && this.isKind() && (other.getAge() < 50))
+            return true;
+
         return false;
     }
 }
