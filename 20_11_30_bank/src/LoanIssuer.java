@@ -14,7 +14,8 @@ public class LoanIssuer {
     }
 
     /**
-     * Method receive an object of class Consumer and returned a boolean.
+     * Method receive an object of class LoanConsumer and returned a boolean.
+     *
      * @param other
      * @return
      */
