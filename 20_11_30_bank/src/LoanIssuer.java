@@ -21,7 +21,7 @@ public class LoanIssuer {
         return isKind;
     }
 
-    public boolean toIssue() {
+    public boolean toIssue(LoanConsumer loanConsumer1) {
 
         return false;
     }
