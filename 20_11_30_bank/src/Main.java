@@ -16,5 +16,7 @@ public class Main {
 
         System.out.println(loanIssuer2.printMsg(loanIssuer2.toIssue(loanConsumer1), loanConsumer1));
         System.out.println(loanIssuer2.printMsg(loanIssuer2.toIssue(loanConsumer2), loanConsumer2));
+
+        System.out.println(loanIssuer3.printMsg(loanIssuer3.toIssue(loanConsumer1), loanConsumer1));
     }
 }
