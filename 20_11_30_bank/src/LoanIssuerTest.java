@@ -14,7 +14,7 @@ class LoanIssuerTest {
 
     @Test
     void testToIssue_ageLowerAs18AndLowerAs20000_false() {
-        for (int i = -1; i < 17; i++) {
+        for (int i = -1; i < 18; i++) {
             for (int j = -1; j < 20000; j++) {
                 LoanIssuer loanIssuer = new LoanIssuer("a", false, false);
                 assertFalse(loanIssuer.toIssue(new LoanConsumer("b", i, j)));
@@ -24,7 +24,7 @@ class LoanIssuerTest {
 
     @Test
     void testToIssue_ageUpperAs17AndLowerAs20000_false() {
-        for (int i = 18; i < 19; i++) {
+        for (int i = 18; i < 20; i++) {
             for (int j = -1; j < 20000; j++) {
                 LoanIssuer loanIssuer = new LoanIssuer("a", false, false);
                 assertFalse(loanIssuer.toIssue(new LoanConsumer("b", i, j)));
@@ -34,8 +34,8 @@ class LoanIssuerTest {
 
     @Test
     void testToIssue_ageUpperAs17AndUpperAs19999_isLazyTrueAndKindFalse_true() {
-        for (int i = 18; i < 19; i++) {
-            for (int j = 20000; j < 20001; j++) {
+        for (int i = 18; i < 20; i++) {
+            for (int j = 20000; j < 20002; j++) {
                 LoanIssuer loanIssuer = new LoanIssuer("a", true, false);
                 assertTrue(loanIssuer.toIssue(new LoanConsumer("b", i, j)));
             }
@@ -44,8 +44,8 @@ class LoanIssuerTest {
 
     @Test
     void testToIssue_ageUpperAs17AndUpperAs19999_isLazyTrueAndKindTrue_true() {
-        for (int i = 18; i < 19; i++) {
-            for (int j = 20000; j < 20001; j++) {
+        for (int i = 18; i < 20; i++) {
+            for (int j = 20000; j < 20002; j++) {
                 LoanIssuer loanIssuer = new LoanIssuer("a", true, true);
                 assertTrue(loanIssuer.toIssue(new LoanConsumer("b", i, j)));
             }
