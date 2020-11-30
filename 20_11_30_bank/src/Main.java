@@ -7,12 +7,11 @@ public class Main {
         LoanIssuer loanIssuer1 = new LoanIssuer("Anton", false, false);
         LoanIssuer loanIssuer2 = new LoanIssuer("Stephan", true, false);
 
-        System.out.println(loanIssuer1.toIssue(loanConsumer1));
-        System.out.println(loanIssuer1.toIssue(loanConsumer2));
 
-        System.out.println(loanIssuer2.toIssue(loanConsumer1));
-        System.out.println(loanIssuer2.toIssue(loanConsumer2));
+        System.out.println(loanIssuer1.printMsg(loanIssuer1.toIssue(loanConsumer1), loanConsumer1));
+        System.out.println(loanIssuer1.printMsg(loanIssuer1.toIssue(loanConsumer2), loanConsumer2));
 
+        System.out.println(loanIssuer2.printMsg(loanIssuer2.toIssue(loanConsumer1), loanConsumer1));
         System.out.println(loanIssuer2.printMsg(loanIssuer2.toIssue(loanConsumer2), loanConsumer2));
     }
 }

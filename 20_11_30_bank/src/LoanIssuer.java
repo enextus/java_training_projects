@@ -30,6 +30,8 @@ public class LoanIssuer {
     }
 
     public String printMsg(boolean status, LoanConsumer other) {
-        return "Bank employee " + this.name + " issues a loan to " + other.getName() + ".";
+        if (status) return "Bank employee " + this.name + " allowed a loan to " + other.getName() + ".";
+
+        return "Bank employee " + this.name + " declined a loan to " + other.getName() + ".";
     }
 }
