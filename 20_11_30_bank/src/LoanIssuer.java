@@ -13,6 +13,10 @@ public class LoanIssuer {
         return isKind;
     }
 
+    public boolean isLazy() {
+        return isLazy;
+    }
+
     /**
      * Method receive an object of class LoanConsumer and returned a boolean.
      *
@@ -28,10 +32,10 @@ public class LoanIssuer {
         if ((other.getAge() < AGELOWERCORNER) || (other.getAnnualIncome() < ANNUALMINIMUM))
             return false;
 
-        if (this.isLazy)
+        if (this.isLazy())
             return true;
 
-        if (this.isKind && (other.getAge() < AGEUPPERCORNER))
+        if (this.isKind() && (other.getAge() < AGEUPPERCORNER))
             return true;
 
         if (this.isKind() && (other.getAge() < AGEMIDDLECORNER))

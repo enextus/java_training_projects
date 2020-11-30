@@ -78,4 +78,12 @@ class LoanIssuerTest {
             assertTrue(loanIssuer.toIssue(new LoanConsumer("b", i, 20001)));
         }
     }
+
+/*    @Test
+    void testToIssue_ageLowerAs70And_isLazyFalseAndKindTrue_true() {
+        for (int i = 69; i > 17; i--) {
+            LoanIssuer loanIssuer = new LoanIssuer("a", false, true);
+            assertTrue(loanIssuer.toIssue(new LoanConsumer("b", i, 20001)));
+        }
+    }*/
 }
