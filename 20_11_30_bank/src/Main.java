@@ -13,11 +13,14 @@ public class Main {
 
         System.out.println(loanIssuer1.printMsg(loanIssuer1.toIssue(loanConsumer1), loanConsumer1));
         System.out.println(loanIssuer1.printMsg(loanIssuer1.toIssue(loanConsumer2), loanConsumer2));
+        System.out.println(loanIssuer1.printMsg(loanIssuer1.toIssue(loanConsumer3), loanConsumer3));
 
         System.out.println(loanIssuer2.printMsg(loanIssuer2.toIssue(loanConsumer1), loanConsumer1));
         System.out.println(loanIssuer2.printMsg(loanIssuer2.toIssue(loanConsumer2), loanConsumer2));
+        System.out.println(loanIssuer2.printMsg(loanIssuer2.toIssue(loanConsumer3), loanConsumer3));
 
         System.out.println(loanIssuer3.printMsg(loanIssuer3.toIssue(loanConsumer1), loanConsumer1));
         System.out.println(loanIssuer3.printMsg(loanIssuer3.toIssue(loanConsumer2), loanConsumer2));
+        System.out.println(loanIssuer3.printMsg(loanIssuer3.toIssue(loanConsumer3), loanConsumer3));
     }
 }
