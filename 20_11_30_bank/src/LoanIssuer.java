@@ -27,7 +27,7 @@ public class LoanIssuer {
         if (this.isLazy)
             return true;
 
-        if (this.isKind && (other.getAge() < AGEMIDDLECORNER))
+        if (this.isKind && (other.getAge() < AGEUPPERCORNER))
             return true;
 
         return false;
