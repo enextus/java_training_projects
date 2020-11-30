@@ -19,7 +19,7 @@ class LoanIssuerTest {
     void testToIssue_ageLowerAs18_false() {
         for (int i = -1; i < 17; i++) {
             LoanIssuer loanIssuer = new LoanIssuer("a", false, false);
-            assertEquals(false, loanIssuer.toIssue(new LoanConsumer("b", i, 21000)));
+            assertFalse(loanIssuer.toIssue(new LoanConsumer("b", i, 21000)));
         }
     }
 
@@ -28,7 +28,7 @@ class LoanIssuerTest {
         for (int i = -1; i < 17; i++) {
             for (int j = -1; j < 20000; j++) {
                 LoanIssuer loanIssuer = new LoanIssuer("a", false, false);
-                assertEquals(false, loanIssuer.toIssue(new LoanConsumer("b", i, j)));
+                assertFalse(loanIssuer.toIssue(new LoanConsumer("b", i, j)));
             }
         }
     }
@@ -38,7 +38,7 @@ class LoanIssuerTest {
         for (int i = 18; i < 19; i++) {
             for (int j = -1; j < 20000; j++) {
                 LoanIssuer loanIssuer = new LoanIssuer("a", false, false);
-                assertEquals(false, loanIssuer.toIssue(new LoanConsumer("b", i, j)));
+                assertFalse(loanIssuer.toIssue(new LoanConsumer("b", i, j)));
             }
         }
     }
@@ -48,7 +48,7 @@ class LoanIssuerTest {
         for (int i = 18; i < 19; i++) {
             for (int j = 20000; j < 20001; j++) {
                 LoanIssuer loanIssuer = new LoanIssuer("a", true, false);
-                assertEquals(true, loanIssuer.toIssue(new LoanConsumer("b", i, j)));
+                assertTrue(loanIssuer.toIssue(new LoanConsumer("b", i, j)));
             }
         }
     }
@@ -58,7 +58,7 @@ class LoanIssuerTest {
         for (int i = 18; i < 19; i++) {
             for (int j = 20000; j < 20001; j++) {
                 LoanIssuer loanIssuer = new LoanIssuer("a", true, true);
-                assertEquals(true, loanIssuer.toIssue(new LoanConsumer("b", i, j)));
+                assertTrue(loanIssuer.toIssue(new LoanConsumer("b", i, j)));
             }
         }
     }
