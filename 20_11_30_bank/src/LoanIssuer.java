@@ -23,7 +23,7 @@ public class LoanIssuer {
         if (this.isKind && (other.getAge() < 70))
             return true;
 
-        if (this.isLazy && this.isKind() && (other.getAge() < 50))
+        if (this.isKind() && (other.getAge() < 50))
             return true;
 
         return false;
