@@ -13,6 +13,11 @@ public class LoanIssuer {
         return isKind;
     }
 
+    /**
+     * Method receive an object of class Consumer and returned a boolean.
+     * @param other
+     * @return
+     */
     public boolean toIssue(LoanConsumer other) {
         if ((other.getAge() < 18) || (other.getAnnualIncome() < 20000))
             return false;
