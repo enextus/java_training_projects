@@ -7,7 +7,6 @@ public class Main {
         LoanConsumer loanConsumer4 = new LoanConsumer("Gerhard", 17, 200000);
         LoanConsumer loanConsumer5 = new LoanConsumer("Axel", 80, 200000);
 
-
         LoanIssuer loanIssuer1 = new LoanIssuer("Anton", false, false);
         LoanIssuer loanIssuer2 = new LoanIssuer("Stephan", true, false);
         LoanIssuer loanIssuer3 = new LoanIssuer("Alex", false, true);
@@ -36,6 +35,5 @@ public class Main {
         System.out.println(loanIssuer4.printMsg(loanIssuer4.toIssue(loanConsumer3), loanConsumer3));
         System.out.println(loanIssuer4.printMsg(loanIssuer4.toIssue(loanConsumer4), loanConsumer4));
         System.out.println(loanIssuer4.printMsg(loanIssuer4.toIssue(loanConsumer5), loanConsumer5));
-
     }
 }
