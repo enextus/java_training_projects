@@ -10,7 +10,6 @@ public class Main {
         LoanIssuer loanIssuer3 = new LoanIssuer("Alex", false, true);
         LoanIssuer loanIssuer4 = new LoanIssuer("Max", true, true);
 
-
         System.out.println(loanIssuer1.printMsg(loanIssuer1.toIssue(loanConsumer1), loanConsumer1));
         System.out.println(loanIssuer1.printMsg(loanIssuer1.toIssue(loanConsumer2), loanConsumer2));
         System.out.println(loanIssuer1.printMsg(loanIssuer1.toIssue(loanConsumer3), loanConsumer3));
