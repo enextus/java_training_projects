@@ -21,8 +21,14 @@ public class LoanIssuer {
         return isKind;
     }
 
+    /**
+     * Method accept an object of LoanConsumer and returned boolean.
+     *
+     * @param loanConsumer1
+     * @return
+     */
     public boolean toIssue(LoanConsumer loanConsumer1) {
-
+//      bla bla bla
         return false;
     }
 }
