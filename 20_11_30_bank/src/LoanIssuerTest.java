@@ -43,4 +43,23 @@ class LoanIssuerTest {
         }
     }
 
+    @Test
+    void testToIssue_ageUpperAs17AndUpperAs19999_isLazyTrueAndKindFalse_true() {
+        for (int i = 18; i < 19; i++) {
+            for (int j = 20000; j < 20001; j++) {
+                LoanIssuer loanIssuer = new LoanIssuer("a", true, false);
+                assertEquals(true, loanIssuer.toIssue(new LoanConsumer("b", i, j)));
+            }
+        }
+    }
+
+    @Test
+    void testToIssue_ageUpperAs17AndUpperAs19999_isLazyTrueAndKindTrue_true() {
+        for (int i = 18; i < 19; i++) {
+            for (int j = 20000; j < 20001; j++) {
+                LoanIssuer loanIssuer = new LoanIssuer("a", true, true);
+                assertEquals(true, loanIssuer.toIssue(new LoanConsumer("b", i, j)));
+            }
+        }
+    }
 }
