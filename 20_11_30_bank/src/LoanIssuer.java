@@ -9,14 +9,6 @@ public class LoanIssuer {
         this.isKind = isKind;
     }
 
-/*    public String getName() {
-        return name;
-    }
-
-    public boolean isLazy() {
-        return isLazy;
-    }*/
-
     public boolean isKind() {
         return isKind;
     }
