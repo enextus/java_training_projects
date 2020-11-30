@@ -42,5 +42,33 @@ public class Main {
         System.out.println(loanIssuer4.printMsg(loanIssuer4.toIssue(loanConsumer4), loanConsumer4));
         System.out.println(loanIssuer4.printMsg(loanIssuer4.toIssue(loanConsumer5), loanConsumer5));
         System.out.println();
+
+/*        Bank employee Anton declined a loan to Mark.
+        Bank employee Anton declined a loan to Petr.
+        Bank employee Anton declined a loan to Mario.
+        Bank employee Anton declined a loan to Gerhard.
+        Bank employee Anton declined a loan to Axel.
+
+        Bank employee Stephan allowed a loan to Mark.
+        Bank employee Stephan allowed a loan to Petr.
+        Bank employee Stephan declined a loan to Mario.
+        Bank employee Stephan declined a loan to Gerhard.
+        Bank employee Stephan allowed a loan to Axel.
+
+        Bank employee Alex allowed a loan to Mark.
+        Bank employee Alex allowed a loan to Petr.
+        Bank employee Alex declined a loan to Mario.
+        Bank employee Alex declined a loan to Gerhard.
+        Bank employee Alex declined a loan to Axel.
+
+        Bank employee Max allowed a loan to Mark.
+        Bank employee Max allowed a loan to Petr.
+        Bank employee Max declined a loan to Mario.
+        Bank employee Max declined a loan to Gerhard.
+        Bank employee Max allowed a loan to Axel.
+
+
+        Process finished with exit code 0*/
+
     }
 }
