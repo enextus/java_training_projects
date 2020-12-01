@@ -17,6 +17,7 @@ public class LoanIssuer {
      */
     public boolean toIssue(LoanConsumer other) {
         final int AGELOWERCORNER = 18;
+        final int AGEMIDDLECORNER = 50;
         final int AGEUPPERCORNER = 70;
         final int ANNUALMINIMUM = 20000;
 
@@ -24,6 +25,9 @@ public class LoanIssuer {
             return false;
 
         if (this.isLazy)
+            return true;
+
+        if (other.getAge() < AGEMIDDLECORNER)
             return true;
 
         if (this.isKind && (other.getAge() < AGEUPPERCORNER))
