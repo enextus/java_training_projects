@@ -4,7 +4,8 @@ public class Line extends Shape {
 
     private int length;
 
-    public Line(char symbol) {
+
+    public Line(char symbol, int length) {
         super(symbol);
         this.length = length;
     }
