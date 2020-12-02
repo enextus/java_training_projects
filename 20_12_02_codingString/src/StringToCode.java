@@ -37,6 +37,9 @@ public class StringToCode {
     }
 
     private void resultBuilder(char charName, int lengthOfSeries) {
+
+        System.out.println("lengthOfSeries: " + lengthOfSeries);
+
         if (lengthOfSeries == 1) result += "" + charName;
         else result += "" + charName + lengthOfSeries;
     }

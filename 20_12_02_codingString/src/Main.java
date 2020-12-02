@@ -3,7 +3,7 @@ public class Main {
 //        StringToCode stringToCode = new StringToCode("aaabbcdddd");
 //        System.out.println(stringToCode.stringCoding());
 
-        StringToCode stringToCodeTwo = new StringToCode("ab");
+        StringToCode stringToCodeTwo = new StringToCode("abbbc");
         System.out.println(stringToCodeTwo.stringCoding());
 
         /*
