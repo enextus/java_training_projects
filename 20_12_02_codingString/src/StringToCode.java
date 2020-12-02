@@ -8,7 +8,7 @@ public class StringToCode {
     }
 
     /**
-     * Method returned coded variable inputString; Code it's as this rule: it will be counted the length of series
+     * Method returned coded variable inputString; inputString has min length of two characters; Code it's as this rule: it will be counted the length of series
      * of similar characters and after initial character will placed a count number of each series length.
      *
      * @return result
