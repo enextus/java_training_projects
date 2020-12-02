@@ -4,11 +4,11 @@ public class StringToCode {
 
     public StringToCode(String inputString) {
         this.inputString = inputString;
+        this.result ="";
     }
 
-    public String codeString() {
+    public String stringCoding() {
 
-        String result = "";
         int count = 1;
 
         System.out.println(inputString.length());
