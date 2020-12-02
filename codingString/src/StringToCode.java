@@ -1,13 +1,9 @@
 public class StringToCode {
-    String stringToCode;
-    String result;
+    private String inputString;
+    private String result;
 
-    public StringToCode(String stringToCode) {
-        this.stringToCode = stringToCode;
-    }
-
-    public String getStringToCode() {
-        return stringToCode;
+    public StringToCode(String inputString) {
+        this.inputString = inputString;
     }
 
     public String codeString() {
@@ -15,13 +11,13 @@ public class StringToCode {
         String result = "";
         int count = 1;
 
-        System.out.println(stringToCode.length());
+        System.out.println(inputString.length());
 
-        for (int i = 0; i < stringToCode.length() - 1; i++) {
+        for (int i = 0; i < inputString.length() - 1; i++) {
 
-            System.out.print("char[i]: " + stringToCode.charAt(i) + ",  ");
+            System.out.print("char[i]: " + inputString.charAt(i) + ",  ");
 
-            if ((i > 0) && (stringToCode.charAt(i - 1) == stringToCode.charAt(i))) {
+            if ((i > 0) && (inputString.charAt(i - 1) == inputString.charAt(i))) {
 
                 count++;
                 System.out.println("count: " + count);
@@ -29,21 +25,17 @@ public class StringToCode {
             } else {
                 System.out.println("count -> " + count);
 
-                addToResult(stringToCode.charAt(i), count);
+                resultBuilder(inputString.charAt(i), count);
                 count = 1;
             }
 
-            System.out.println("i: " + i + ", count: " + count + ", 36. result: " + getResult());
+            System.out.println("i: " + i + ", count: " + count + ", 36. result: " + result);
         }
 
-        return getResult();
-    }
-
-    public String getResult() {
         return result;
     }
 
-    private void addToResult(char a, int b) {
+    private void resultBuilder(char a, int b) {
         if (b == 1) {
             result += "" + a;
         } else {
