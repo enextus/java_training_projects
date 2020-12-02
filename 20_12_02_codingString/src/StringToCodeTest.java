@@ -6,5 +6,7 @@ class StringToCodeTest {
 
     @Test
     void stringCoding() {
+        StringToCode stringToCode = new StringToCode("aaabbcdddd");
+        assertEquals("a3b2cd4", stringToCode.stringCoding());
     }
 }
