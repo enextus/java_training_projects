@@ -9,6 +9,10 @@ public class Line extends Shape {
         this.length = length;
     }
 
+    public int getLength() {
+        return length;
+    }
+
     @Override
     public void draw() {
 
