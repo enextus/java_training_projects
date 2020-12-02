@@ -5,9 +5,15 @@ import static org.junit.jupiter.api.Assertions.*;
 class StringToCodeTest {
 
     @Test
-    void test_Coded_String_a_Result_a() {
+    void test_Coded_String_aa_Result_a2() {
         StringToCode stringToCode = new StringToCode("aa");
         assertEquals("a2", stringToCode.stringCoding());
+    }
+
+    @Test
+    void test_Coded_String_ab_Result_ab() {
+        StringToCode stringToCode = new StringToCode("vvbcc");
+        assertEquals("v2bc2", stringToCode.stringCoding());
     }
 
     @Test
