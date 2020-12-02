@@ -7,6 +7,12 @@ public class StringToCode {
         this.result = "";
     }
 
+    /**
+     * Method returned coded variable inputString; Code it's as this rule: it will be counted the length of series
+     * of similar characters and after initial character will placed a count number of each series length.
+     *
+     * @return result
+     */
     public String stringCoding() {
         int count = 1;
 
