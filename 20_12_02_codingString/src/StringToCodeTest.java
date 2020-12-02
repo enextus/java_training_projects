@@ -17,6 +17,12 @@ class StringToCodeTest {
     }
 
     @Test
+    void test_Coded_String_aaa_Result_a3() {
+        StringToCode stringToCode = new StringToCode("aaa");
+        assertEquals("a3", stringToCode.stringCoding());
+    }
+
+    @Test
     void test_Coded_String_aaabbcdddd_Result_a3b2cd4() {
         StringToCode stringToCode = new StringToCode("aaabbcdddd");
         assertEquals("a3b2cd4", stringToCode.stringCoding());
