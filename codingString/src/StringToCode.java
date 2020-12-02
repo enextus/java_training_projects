@@ -34,17 +34,7 @@ public class StringToCode {
     }
 
     private void resultBuilder(char charName, int lengthOfSeries) {
-/*        System.out.println();
-        System.out.println("->   resultBuilder was raised");
-        System.out.println();*/
-
-        if (lengthOfSeries == 1) {
-            result += "" + charName;
-        } else {
-            result += "" + charName + lengthOfSeries;
-        }
-
-/*        System.out.println("result now: " + result);
-        System.out.println();*/
+        if (lengthOfSeries == 1) result += "" + charName;
+        else result += "" + charName + lengthOfSeries;
     }
 }
