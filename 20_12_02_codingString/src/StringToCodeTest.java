@@ -6,8 +6,8 @@ class StringToCodeTest {
 
     @Test
     void test_Coded_String_a_Result_a() {
-        StringToCode stringToCode = new StringToCode("a");
-        assertEquals("a", stringToCode.stringCoding());
+        StringToCode stringToCode = new StringToCode("aa");
+        assertEquals("a2", stringToCode.stringCoding());
     }
 
     @Test
