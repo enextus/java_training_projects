@@ -4,44 +4,48 @@ public class StringToCode {
 
     public StringToCode(String inputString) {
         this.inputString = inputString;
-        this.result ="";
+        this.result = "";
     }
 
     public String stringCoding() {
 
         int count = 1;
 
-        System.out.println(inputString.length());
+        for (int i = 1; i < inputString.length(); i++) {
 
-        for (int i = 0; i < inputString.length() - 1; i++) {
-
-            System.out.print("char[i]: " + inputString.charAt(i) + ",  ");
-
-            if ((i > 0) && (inputString.charAt(i - 1) == inputString.charAt(i))) {
-
+            if (inputString.charAt(i - 1) == inputString.charAt(i)) {
+                System.out.println("IF char[" + i + "]: " + inputString.charAt(i));
                 count++;
-                System.out.println("count: " + count);
+                System.out.println("count by match: " + count);
+                System.out.println();
+
+                if (i == inputString.length() - 1) resultBuilder(inputString.charAt(i - 1), count);
 
             } else {
-                System.out.println("count -> " + count);
+                System.out.println("ELSE char[" + i + "]: " + inputString.charAt(i));
+                System.out.println("count before resultBuilder: " + count);
 
-                resultBuilder(inputString.charAt(i), count);
+                resultBuilder(inputString.charAt(i - 1), count);
                 count = 1;
             }
-
-            System.out.println("i: " + i + ", count: " + count + ", 36. result: " + result);
         }
+
 
         return result;
     }
 
-    private void resultBuilder(char a, int b) {
-        if (b == 1) {
-            result += "" + a;
+    private void resultBuilder(char charName, int lengthOfSeries) {
+        System.out.println();
+        System.out.println("->   resultBuilder was raised");
+        System.out.println();
+
+        if (lengthOfSeries == 1) {
+            result += "" + charName;
         } else {
-            result += "" + a + b;
+            result += "" + charName + lengthOfSeries;
         }
 
-        System.out.println(result);
+        System.out.println("result now: " + result);
+        System.out.println();
     }
 }
