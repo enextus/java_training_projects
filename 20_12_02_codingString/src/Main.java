@@ -5,5 +5,13 @@ public class Main {
 
         StringToCode stringToCodeTwo = new StringToCode("ddfffolllklllpp");
         System.out.println(stringToCodeTwo.stringCoding());
+
+        /*
+        aaabbcdddd
+        ddfffolllklllpp
+
+        a3b2cd4
+        d2f3ol3kl3p2
+        */
     }
 }
