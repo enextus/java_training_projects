@@ -20,12 +20,27 @@ public class StringToCode {
             if (inputString.charAt(i - 1) == inputString.charAt(i)) {
                 count++;
 
-                if (i == inputString.length() - 1) resultBuilder(inputString.charAt(i - 1), count);
+                if (i == inputString.length() - 1) {
+
+                    //System.out.println("1. i: " + i + ", char: " + inputString.charAt(i));
+
+                    resultBuilder(inputString.charAt(i - 1), count);
+                }
             } else {
+
+                //System.out.println("2. i: " + i + ", char: " + inputString.charAt(i));
+
                 resultBuilder(inputString.charAt(i - 1), count);
+
+                if (i == inputString.length() - 1) {
+
+                    resultBuilder(inputString.charAt(i), count);
+                }
+
                 count = 1;
             }
         }
+
         return result;
     }
 

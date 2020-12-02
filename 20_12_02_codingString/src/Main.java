@@ -1,9 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        StringToCode stringToCode = new StringToCode("aaabbcdddd");
-        System.out.println(stringToCode.stringCoding());
+//        StringToCode stringToCode = new StringToCode("aaabbcdddd");
+//        System.out.println(stringToCode.stringCoding());
 
-        StringToCode stringToCodeTwo = new StringToCode("ddfffolllklllpp");
+        StringToCode stringToCodeTwo = new StringToCode("ab");
         System.out.println(stringToCodeTwo.stringCoding());
 
         /*

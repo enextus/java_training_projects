@@ -12,8 +12,8 @@ class StringToCodeTest {
 
     @Test
     void test_Coded_String_ab_Result_ab() {
-        StringToCode stringToCode = new StringToCode("vvbcc");
-        assertEquals("v2bc2", stringToCode.stringCoding());
+        StringToCode stringToCode = new StringToCode("ab");
+        assertEquals("ab", stringToCode.stringCoding());
     }
 
     @Test
