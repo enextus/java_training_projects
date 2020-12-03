@@ -1,6 +1,6 @@
 public class Picture extends Shape {
 
-    private Shape[] shapes;
+    private final Shape[] shapes;
 
     public Picture(char symbol, Shape[] shapes) {
         super(symbol);
