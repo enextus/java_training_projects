@@ -8,7 +8,9 @@ public class Main {
 
         Picture picture1 = new Picture('=', shapes);
 
-        line1.draw();
-        rectangle1.draw();
+        //line1.draw();
+        //rectangle1.draw();
+
+        picture1.draw();
     }
 }
