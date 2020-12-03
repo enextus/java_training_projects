@@ -10,6 +10,8 @@ public class Main {
         // line1.draw();
         // rectangle1.draw();
 
+        picture1.drawBorder();
         picture1.draw();
+        picture1.drawBorder();
     }
 }
