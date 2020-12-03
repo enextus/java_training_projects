@@ -10,9 +10,8 @@ public class Picture extends Shape {
     }
 
     void drawBorder() {
-        for (int i = 1; i < this.borderLength; i++) {
+        for (int i = 1; i < this.borderLength; i++)
             System.out.print(this.symbol);
-        }
         System.out.println();
     }
 
