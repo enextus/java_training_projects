@@ -5,43 +5,43 @@ import static org.junit.jupiter.api.Assertions.*;
 class StringToCodeTest {
 
     @Test
-    void test_String_aa_Result_a2() {
+    void test_Input_aa_Result_a2() {
         StringToCode stringToCode = new StringToCode("aa");
         assertEquals("a2", stringToCode.stringCoding());
     }
 
     @Test
-    void test_String_ab_Result_ab() {
+    void test_Input_ab_Result_ab() {
         StringToCode stringToCode = new StringToCode("ab");
         assertEquals("ab", stringToCode.stringCoding());
     }
 
     @Test
-    void test_String_aaa_Result_a3() {
+    void test_Input_aaa_Result_a3() {
         StringToCode stringToCode = new StringToCode("aaa");
         assertEquals("a3", stringToCode.stringCoding());
     }
 
     @Test
-    void test_String_abb_Result_ab2() {
+    void test_Input_abb_Result_ab2() {
         StringToCode stringToCode = new StringToCode("abb");
         assertEquals("ab2", stringToCode.stringCoding());
     }
 
     @Test
-    void test_String_abc_Result_abc() {
+    void test_Input_abc_Result_abc() {
         StringToCode stringToCode = new StringToCode("abc");
         assertEquals("abc", stringToCode.stringCoding());
     }
 
     @Test
-    void test_String_abbbc_Result_ab3c() {
+    void test_Input_abbbc_Result_ab3c() {
         StringToCode stringToCode = new StringToCode("abbbc");
         assertEquals("ab3c", stringToCode.stringCoding());
     }
 
     @Test
-    void test_String_aaabbcdddd_Result_a3b2cd4() {
+    void test_Input_aaabbcdddd_Result_a3b2cd4() {
         StringToCode stringToCode = new StringToCode("aaabbcdddd");
         assertEquals("a3b2cd4", stringToCode.stringCoding());
     }
