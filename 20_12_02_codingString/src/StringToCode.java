@@ -25,11 +25,10 @@ public class StringToCode {
 
             } else {
                 resultBuilder(inputString.charAt(i - 1), count);
+                count = 1;
 
                 if (i == inputString.length() - 1)
                     resultBuilder(inputString.charAt(i), count);
-
-                count = 1;
             }
         }
 
