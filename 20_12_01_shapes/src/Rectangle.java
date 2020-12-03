@@ -9,14 +9,6 @@ public class Rectangle extends Shape {
         this.height = height;
     }
 
-/*    public int getWidth() {
-        return width;
-    }
-
-    public int getHeight() {
-        return height;
-    }*/
-
     @Override
     public void draw() {
         for (int i = 0; i < this.width; i++) {
