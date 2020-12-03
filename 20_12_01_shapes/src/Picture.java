@@ -9,7 +9,7 @@ public class Picture extends Shape {
 
     @Override
     public void draw() {
-        for (Shape elem : shapes)
+        for (Shape elem : this.shapes)
             elem.draw();
     }
 }

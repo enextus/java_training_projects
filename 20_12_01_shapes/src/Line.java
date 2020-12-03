@@ -9,14 +9,16 @@ public class Line extends Shape {
         this.length = length;
     }
 
+/*
     public int getLength() {
         return length;
     }
+*/
 
     @Override
     public void draw() {
-        for (int i = 0; i < length; i++)
-            System.out.print(symbol);
+        for (int i = 0; i < this.length; i++)
+            System.out.print(this.getSymbol());
         System.out.println();
     }
 }

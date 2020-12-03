@@ -9,19 +9,19 @@ public class Rectangle extends Shape {
         this.height = height;
     }
 
-    public int getWidth() {
+/*    public int getWidth() {
         return width;
     }
 
     public int getHeight() {
         return height;
-    }
+    }*/
 
     @Override
     public void draw() {
-        for (int i = 0; i < width; i++) {
-            for (int j = 0; j < height; j++) {
-                System.out.print(symbol);
+        for (int i = 0; i < this.width; i++) {
+            for (int j = 0; j < this.height; j++) {
+                System.out.print(this.getSymbol());
             }
             System.out.println();
         }
