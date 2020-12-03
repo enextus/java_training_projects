@@ -9,6 +9,6 @@ public class Main {
 
         Picture picture1 =      new Picture('=', shapes);
 
-        System.out.println(picture1);
+        line1.draw();
     }
 }

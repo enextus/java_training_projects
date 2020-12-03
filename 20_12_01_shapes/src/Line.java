@@ -16,6 +16,7 @@ public class Line extends Shape {
 
     @Override
     public void draw() {
-
+        for (int i = 0; i < length; i++)
+            System.out.print(symbol);
     }
 }
