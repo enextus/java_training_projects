@@ -23,6 +23,7 @@ public class Rectangle extends Shape {
             for (int j = 0; j < height; j++) {
                 System.out.print(symbol);
             }
+            System.out.println();
         }
     }
 }
