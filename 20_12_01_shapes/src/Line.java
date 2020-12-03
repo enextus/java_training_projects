@@ -2,7 +2,7 @@
 
 public class Line extends Shape {
 
-    private int length;
+    private final int length;
 
 
     public Line(char symbol, int length) {

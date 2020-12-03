@@ -8,5 +8,7 @@ public class Main {
         Shape[] shapes =        new Shape[]{line1, rectangle1};
 
         Picture picture1 =      new Picture('=', shapes);
+
+        System.out.println(picture1);
     }
 }
