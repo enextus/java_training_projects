@@ -5,6 +5,12 @@ import static org.junit.jupiter.api.Assertions.*;
 class StringToCodeTest {
 
     @Test
+    public void test_givenWhenInstanceIsCorrect_thenReturnTrue() {
+        StringToCode stringToCode = new StringToCode("abcdefghklmnoprstquxyz");
+        assertTrue(stringToCode instanceof StringToCode);
+    }
+
+    @Test
     void test_Input_aa_Result_a2() {
         StringToCode stringToCode = new StringToCode("aa");
         assertEquals("a2", stringToCode.stringCoding());
