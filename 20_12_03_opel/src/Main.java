@@ -13,21 +13,26 @@ public class Main {
 
     private static Auto switchAuto(Auto auto) {
 
-
-        auto.hashCode();
-
-        auto.getClass();
-
-        // (object) instanceof (type)
+        System.out.println("1. " + auto.hashCode());
 
 
+        auto = new Auto("Mazda", "red");
+
+
+        System.out.println("2. " + auto.hashCode());
+
+
+        System.out.println();
         System.out.println(auto.toString());
 
 
         auto.color = "Green";
+        System.out.println(auto.color);
 
-        //auto = new Auto("Mazda", "red");
         auto.color = "purple";
+        System.out.println(auto.color);
+
+
         return auto;
     }
 }
