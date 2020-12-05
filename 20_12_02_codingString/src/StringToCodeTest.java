@@ -6,14 +6,22 @@ class StringToCodeTest {
 
     @Test
     public void test_givenWhenInstanceIsCorrect_thenReturnTrue() {
-        StringToCode stringToCode = new StringToCode("abcdefghklmnoprstquxyz");
-        assertTrue(stringToCode instanceof StringToCode);
-    }
 
-    @Test
-    void test_Input_abcdefghklmnoprstquxyz_Result_abcdefghklmnoprstquxyz() {
-        StringToCode stringToCode = new StringToCode("abcdefghklmnoprstquxyz");
-        assertEquals("abcdefghklmnoprstquxyz", stringToCode.stringCoding());
+        String alphabet = "";
+
+        for (char character = 'a'; character <= 'z'; character++) {
+            alphabet += character;
+
+            if (alphabet.length() <= 1)
+                continue;
+
+            StringToCode stringToCode = new StringToCode(alphabet);
+            assertEquals(alphabet, stringToCode.stringCoding());
+        }
+
+        StringToCode stringToCode = new StringToCode("abcdefghijklmnopqrstuvwxyz");
+        assertTrue(stringToCode instanceof StringToCode);
+
     }
 
     @Test

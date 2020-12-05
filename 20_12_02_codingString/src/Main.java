@@ -5,6 +5,12 @@ public class Main {
 
         StringToCode stringToCodeTwo = new StringToCode("abbbc");
         System.out.println(stringToCodeTwo.stringCoding());
+        String alphabet = "";
+        for (char character = 'a'; character <= 'z'; character++) {
+            alphabet += character;
+            System.out.print(character);
+            System.out.print(alphabet);
+        }
 
         /*
         aaabbcdddd
