@@ -15,4 +15,19 @@ public class Line extends Shape {
             System.out.print(this.getSymbol());
         System.out.println();
     }
+
+    /*@Override
+    public void draw() {
+        StringBuilder builder = new StringBuilder();
+
+        for (int i = 0; i < length; i++) {
+            builder.append(symbol).append(" ");
+        }
+
+        System.out.println(builder);
+    }*/
+
+
+
+
 }
