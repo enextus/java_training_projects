@@ -12,9 +12,8 @@ public class Rectangle extends Shape {
     @Override
     public void draw() {
         for (int i = 0; i < this.width; i++) {
-            for (int j = 0; j < this.height; j++) {
+            for (int j = 0; j < this.height; j++)
                 System.out.print(this.getSymbol());
-            }
             System.out.println();
         }
     }
