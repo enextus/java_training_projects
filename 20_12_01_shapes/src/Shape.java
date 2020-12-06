@@ -9,6 +9,6 @@ public abstract class Shape {
     public abstract void draw();
 
     public char getSymbol() {
-        return symbol;
+        return this.symbol;
     }
 }

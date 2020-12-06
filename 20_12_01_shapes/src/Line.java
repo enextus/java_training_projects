@@ -26,8 +26,4 @@ public class Line extends Shape {
 
         System.out.println(builder);
     }*/
-
-
-
-
 }

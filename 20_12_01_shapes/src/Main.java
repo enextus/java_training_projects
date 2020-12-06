@@ -27,14 +27,12 @@ public class Main {
         System.out.print(getLineNumber() + " ");
         System.out.println(line1.getSymbol());
         System.out.println();
-        //rectangle1.draw();
 
-/*        picture1.drawBorder();
+        rectangle1.draw();
+        System.out.println(rectangle1.getSymbol());
+
         picture1.draw();
-        picture1.drawBorder();
-
-        picture2.drawBorder();
+        System.out.println();
         picture2.draw();
-        picture2.drawBorder();*/
     }
 }
