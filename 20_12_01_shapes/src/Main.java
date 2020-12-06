@@ -9,9 +9,7 @@ public class Main {
         return Thread.currentThread().getStackTrace()[2].getLineNumber();
     }
 
-
     public static void main(String[] args) {
-
 
         Line line1 = new Line('-', 15);
         Rectangle rectangle1 = new Rectangle('*', 9, 7);
