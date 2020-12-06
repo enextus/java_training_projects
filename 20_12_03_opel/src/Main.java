@@ -16,7 +16,12 @@ public class Main {
 
         boolean b = new String("2") == new String("2");
         System.out.println(b);
-        System.out.println(  ((Integer) 21 * 2)   );
+        System.out.println(  );
+
+        Integer v= ((Integer) 21 * 2);
+
+        System.out.println("v.hashCode() " +
+                "" +v.hashCode());
 
     }
 
