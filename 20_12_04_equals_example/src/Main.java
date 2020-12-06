@@ -3,6 +3,14 @@ import java.util.List;
 import java.util.Objects;
 
 public class Main {
+    /**
+     * Get the current line number.
+     *
+     * @return int - Current line number.
+     */
+    public static int getLineNumber() {
+        return Thread.currentThread().getStackTrace()[2].getLineNumber();
+    }
 
     public static void main(String[] args) {
         List<Auto> autos = createAutos();
