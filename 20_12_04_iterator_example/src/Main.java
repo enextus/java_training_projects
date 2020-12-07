@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Iterator;
 
 public class Main {
@@ -6,17 +7,21 @@ public class Main {
         int[] array = {10, -8, 0, 15};
 
         Iterator<Integer> simpleArrayIterator = new SimpleArrayIterator(array);
-        Iterator<Integer> revArrayIterator = new RevArrayIterator(array);
+        Iterator<Integer> backwardArrayIterator = new BackwardArrayIterator(array);
+        Iterator<Integer> increasingArrayIterator = new IncreasingArrayIterator(array);
 
-        while (simpleArrayIterator.hasNext()) {
-            int current = simpleArrayIterator.next();
-            System.out.println("current: " + current);
+        iterate(simpleArrayIterator);
+        iterate(backwardArrayIterator);
+        iterate(increasingArrayIterator);
+
+        System.out.println(Arrays.toString(array));
+    }
+
+    static void iterate(Iterator<Integer> iterator) {
+        while (iterator.hasNext()) {
+            int current = iterator.next();
+            System.out.print(current + " ");
         }
-
-        while (revArrayIterator.hasNext()) {
-            int current = simpleArrayIterator.next();
-            System.out.println("current: " + current);
-        }
-
+        System.out.println();
     }
 }
