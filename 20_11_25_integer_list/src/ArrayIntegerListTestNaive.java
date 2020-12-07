@@ -61,10 +61,12 @@ class ArrayIntegerListTestNaive {
 
     @Test
     void testRemoveById_() {
-        assertEquals(-911, list.removeById(0));
-        assertEquals(-911, list.removeById(-1));
+        list.addLast(100);
+        assertEquals(100, list.removeById(0));
+        assertThrows(IndexOutOfBoundsException.class, () -> {
+            list.removeById(-1);
+        });
     }
-
 
     @Test
     void testClear_() {

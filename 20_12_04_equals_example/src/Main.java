@@ -13,7 +13,13 @@ public class Main {
     }
 
     public static void main(String[] args) {
+
         List<Auto> autos = createAutos();
+
+        System.out.print(getLineNumber() + ": ");
+        System.out.println(autos.hashCode());
+        System.out.println(autos.isEmpty());
+        System.out.println(getLineNumber() + ": " + autos.size());
 
         Auto opel = new Auto("Opel", "grey");
         autos.remove(opel);
@@ -23,12 +29,22 @@ public class Main {
         }
     }
 
+    @Override
+    public String toString() {
+
+        return "Main{}" + getLineNumber() + ": ";
+    }
+
     private static List<Auto> createAutos() {
         List<Auto> result = new ArrayList<>();
         Auto opel = new Auto("Opel", "grey");
         Auto mazda = new Auto("Mazda", "red");
+        Auto bmw = new Auto("bmw", "bmwred");
+        Auto audi = new Auto("audi", "raudied");
         result.add(opel);
         result.add(mazda);
+        result.add(bmw);
+        result.add(audi);
         return result;
     }
 }
@@ -36,6 +52,7 @@ public class Main {
 class Auto {
     String brand;
     String color;
+    String wheels;
 
     public Auto(String brand, String color) {
         this.brand = brand;
@@ -58,12 +75,11 @@ class Auto {
         if (this == o) return true;
         if (!(o instanceof Auto)) return false;
         Auto auto = (Auto) o;
-        return Objects.equals(brand, auto.brand) &&
-                Objects.equals(color, auto.color);
+        return Objects.equals(brand, auto.brand) && Objects.equals(color, auto.color) && Objects.equals(wheels, auto.wheels);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(brand, color);
+        return Objects.hash(brand, color, wheels);
     }
 }
