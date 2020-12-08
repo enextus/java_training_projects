@@ -2,22 +2,23 @@ import java.util.Iterator;
 
 public class SimpleArrayIterator implements Iterator<Integer> {
 
-    private final int[] arrayToIterate;
     private int currentIndex = 0;
+    private final int[] source;
 
-    SimpleArrayIterator(int[] arrayToIterate) {
-        this.arrayToIterate = arrayToIterate;
+    public SimpleArrayIterator(int[] source) {
+        this.source = source;
     }
 
-
+    @Override
     public boolean hasNext() {
-        return currentIndex < arrayToIterate.length;
+        return currentIndex < source.length;
     }
 
+    @Override
     public Integer next() {
-        int res = arrayToIterate[currentIndex];
+        int res = source[currentIndex];
         currentIndex++;
         return res;
-//        return arrayToIterate[currentIndex++];
+//        return source[currentIndex++];
     }
 }

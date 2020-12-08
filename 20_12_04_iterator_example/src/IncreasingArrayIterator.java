@@ -3,8 +3,8 @@ import java.util.Iterator;
 
 public class IncreasingArrayIterator implements Iterator<Integer> {
 
-    private int[] source;
     private int currentIndex;
+    private final int[] source;
 
     public IncreasingArrayIterator(int[] arrayToIterate) {
         this.source = Arrays.copyOf(arrayToIterate, arrayToIterate.length);
@@ -21,4 +21,3 @@ public class IncreasingArrayIterator implements Iterator<Integer> {
         return source[currentIndex++];
     }
 }
-
