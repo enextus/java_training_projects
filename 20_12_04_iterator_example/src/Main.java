@@ -3,15 +3,6 @@ import java.util.Iterator;
 
 public class Main {
 
-    /**
-     * Get the current line number.
-     *
-     * @return int - Current line number.
-     */
-    static int getLineNumber() {
-        return Thread.currentThread().getStackTrace()[2].getLineNumber();
-    }
-
     public static void main(String[] args) {
 
         int[] array = {10, -8, 0, 15};
@@ -38,4 +29,14 @@ public class Main {
         System.out.println(
                 "]");
     }
+
+    /**
+     * Get the current line number.
+     *
+     * @return int - Current line number.
+     */
+    static int getLineNumber() {
+        return Thread.currentThread().getStackTrace()[2].getLineNumber();
+    }
+
 }
