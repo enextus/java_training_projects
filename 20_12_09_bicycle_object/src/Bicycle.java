@@ -1,4 +1,12 @@
 public class Bicycle {
+    @Override
+    public String toString() {
+        return "Bicycle{" +
+                "cadence=" + cadence +
+                ", gear=" + gear +
+                ", speed=" + speed +
+                '}';
+    }
 
     // the Bicycle class has three fields
     public int cadence;
@@ -25,8 +33,33 @@ public class Bicycle {
         speed -= decrement;
     }
 
-    public void speedUp(int increment) {
+    private void speedUp(int increment) {
         speed += increment;
     }
 
+    public static class PrivateMemberNested{
+
+
+        int intTest = 23;
+
+        public PrivateMemberNested(int intTest) {
+            this.intTest = intTest;
+        }
+
+        public int getIntTest() {
+
+            return intTest;
+        }
+
+        public void setIntTest(int intTest) {
+            this.intTest = intTest;
+        }
+
+        @Override
+        public String toString() {
+            return "PrivateMemberNested{" +
+                    "intTest=" + intTest +
+                    '}';
+        }
+    }
 }
