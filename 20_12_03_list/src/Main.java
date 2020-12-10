@@ -7,12 +7,23 @@ public class Main {
 
         OurArrayList<String> strings = new OurArrayList<>();
 
+        OurArrayList<Integer> integers = new OurArrayList<>();
+
         // down casting
 //        ArrayList anotherStrings = (ArrayList) strings;
 
         strings.addLast("Vasya");
         strings.addLast("Petya");
         strings.addLast("Alisa");
+
+        System.out.println(integers.size());
+        integers.addLast(112);
+        integers.addLast(456);
+        integers.addLast(989);
+        integers.addLast(9389);
+
+        System.out.println(integers.size());
+
 
         // non static nested class
         // every instance of ForwardIterator is dependant on an instance of OurArrayList,
