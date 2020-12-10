@@ -137,7 +137,7 @@ public class OurArrayList<Type> implements OurList<Type> {
         }
     }
 
-    private static class BackwardIterator<O> implements Iterator<O> {
+    static class BackwardIterator<O> implements Iterator<O> {
         int currentIndex;
         O[] source;
 

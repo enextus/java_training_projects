@@ -24,7 +24,11 @@ public class Main {
         System.out.println();
 
 
+        String[] arr = new String[0];
+
         // Outer3.Nested3 nestedObj = new Outer3.Nested3(); // экземпляр класса внутренний
+        // OurArrayList<String>.BackwardIterator<O> nestedObj = new OurArrayList<String>.BackwardIterator<O>(); // экземпляр класса внутренний
+        // OurArrayList<Type>.BackwardIterator<O> privateMemberNested = new OurArrayList<Type>.BackwardIterator<>(arr, 5);
 
         // static nested class
         iterator = strings.backwardIterator();
