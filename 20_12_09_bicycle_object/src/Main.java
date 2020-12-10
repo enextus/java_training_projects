@@ -23,11 +23,11 @@ public class Main {
         System.out.println(mountainBikeOne.seatHeight);
 
         Bicycle bicycle = new Bicycle(10, 22, 6);
-
         System.out.println(bicycle.toString());
 
         Bicycle.PrivateMemberNested privateMemberNested = new Bicycle.PrivateMemberNested(6);
         System.out.println(bicycle.toString());
+
         System.out.println(privateMemberNested.toString());
         System.out.println(privateMemberNested.getIntTest());
         privateMemberNested.setIntTest(22);

@@ -1,4 +1,38 @@
 public class Bicycle {
+
+
+    // the Bicycle class has three fields
+    public int cadence;
+    public int gear;
+    public int speed;
+
+    private static int iPrivVar;
+
+    // the Bicycle class has one constructor
+    public Bicycle(int startCadence, int startSpeed, int startGear) {
+        this.gear = startGear;
+        this.cadence = startCadence;
+        this.speed = startSpeed;
+        this.iPrivVar = 1;
+    }
+
+    // the Bicycle class has four methods
+    public void setCadence(int newValue) {
+        this.cadence = newValue;
+    }
+
+    public void setGear(int newValue) {
+        this.gear = newValue;
+    }
+
+    public void applyBrake(int decrement) {
+        this.speed -= decrement;
+    }
+
+    private void speedUp(int increment) {
+        this.speed += increment;
+    }
+
     @Override
     public String toString() {
         return "Bicycle{" +
@@ -8,37 +42,13 @@ public class Bicycle {
                 '}';
     }
 
-    // the Bicycle class has three fields
-    public int cadence;
-    public int gear;
-    public int speed;
-
-    // the Bicycle class has one constructor
-    public Bicycle(int startCadence, int startSpeed, int startGear) {
-        gear = startGear;
-        cadence = startCadence;
-        speed = startSpeed;
+    class B {
+        void setPrivateOfA(int var) {
+            Bicycle.iPrivVar = var;
+        }
     }
 
-    // the Bicycle class has four methods
-    public void setCadence(int newValue) {
-        cadence = newValue;
-    }
-
-    public void setGear(int newValue) {
-        gear = newValue;
-    }
-
-    public void applyBrake(int decrement) {
-        speed -= decrement;
-    }
-
-    private void speedUp(int increment) {
-        speed += increment;
-    }
-
-    public static class PrivateMemberNested{
-
+    public static class PrivateMemberNested {
 
         int intTest = 23;
 
@@ -48,7 +58,7 @@ public class Bicycle {
 
         public int getIntTest() {
 
-            return intTest;
+            return this.intTest;
         }
 
         public void setIntTest(int intTest) {
