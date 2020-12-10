@@ -8,7 +8,8 @@ public class OurArrayList<Type> implements OurList<Type> {
     private Object[] source;
 
     public OurArrayList() {
-        source = new Object[INITIAL_CAPACITY];
+        this.source = new Object[INITIAL_CAPACITY];
+        this.size = 0;
     }
 
     @Override
