@@ -2,15 +2,22 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class Main {
+    /**
+     * Get the current line number.
+     *
+     * @return int - Current line number.
+     */
+    public static int getLineNumber() {
+        return Thread.currentThread().getStackTrace()[2].getLineNumber();
+    }
 
     public static void main(String[] args) {
 
         OurArrayList<String> strings = new OurArrayList<>();
-
         OurArrayList<Integer> integers = new OurArrayList<>();
 
         // down casting
-//        ArrayList anotherStrings = (ArrayList) strings;
+        // ArrayList anotherStrings = (ArrayList) strings;
 
         strings.addLast("Vasya");
         strings.addLast("Petya");
@@ -19,10 +26,11 @@ public class Main {
         System.out.println(integers.size());
         integers.addLast(112);
         integers.addLast(456);
-        integers.addLast(989);
-        integers.addLast(9389);
+        integers.addLast(null);
+        integers.addLast(null);
+        integers.addLast(19389);
 
-        System.out.println(integers.size());
+        System.out.println(getLineNumber() + ", " + integers.size());
         System.out.println(integers.get(0));
         System.out.println(integers.get(1));
         integers.set(0, 343);
@@ -30,10 +38,12 @@ public class Main {
         System.out.println(integers.size());
         System.out.println(integers.get(0));
         System.out.println(integers.get(1));
+        System.out.println(getLineNumber() + ", " + integers.get(3));
         System.out.println();
+
         System.out.println(integers.remove(456));
 
-        System.out.println(integers.size());
+        System.out.println(getLineNumber() + ", " + integers.size());
         System.out.println(integers.get(0));
         System.out.println(integers.get(1));
         System.out.println();
