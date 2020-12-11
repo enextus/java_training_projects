@@ -23,7 +23,28 @@ public class Main {
         integers.addLast(9389);
 
         System.out.println(integers.size());
+        System.out.println(integers.get(0));
+        System.out.println(integers.get(1));
+        integers.set(0, 343);
 
+        System.out.println(integers.size());
+        System.out.println(integers.get(0));
+        System.out.println(integers.get(1));
+        System.out.println();
+        System.out.println(integers.remove(456));
+
+        System.out.println(integers.size());
+        System.out.println(integers.get(0));
+        System.out.println(integers.get(1));
+        System.out.println();
+        System.out.println(integers.contains(989));
+        System.out.println(integers.contains(345345));
+
+
+        System.out.println(integers.size());
+        System.out.println(integers.get(0));
+        System.out.println(integers.get(1));
+        System.out.println();
 
         // non static nested class
         // every instance of ForwardIterator is dependant on an instance of OurArrayList,
