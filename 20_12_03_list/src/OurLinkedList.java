@@ -1,13 +1,33 @@
 import java.util.Iterator;
 
-public class OurLinkedList  implements OurList{
-    @Override
-    public void addLast(Object element) {
+public class OurLinkedList<T> implements OurList<T> {
 
+    Node<T> first;
+    Node<T> last;
+    int size;
+
+    public boolean isEmpty() {
+        return size == 0;
     }
 
     @Override
-    public Object get(int index) {
+    public void addLast(T item) {
+        if (item == null)
+            throw new NullPointerException("The first argument for addLast() is null.");
+
+        if (!isEmpty()) {
+            Node prev = last;
+            last = new Node(item, null);
+            prev.next = last;
+        } else {
+            last = new Node(item, null);
+            first = last;
+        }
+        size++;
+    }
+
+    @Override
+    public T get(int index) {
         return null;
     }
 
@@ -17,13 +37,18 @@ public class OurLinkedList  implements OurList{
     }
 
     @Override
-    public Object removeById(int index) {
+    public T removeById(int index) {
         return null;
     }
 
+    /**
+     * It returns the number of elements of the list.
+     *
+     * @return size
+     */
     @Override
     public int size() {
-        return 0;
+        return size;
     }
 
     @Override
@@ -49,5 +74,22 @@ public class OurLinkedList  implements OurList{
     @Override
     public Iterator backwardIterator() {
         return null;
+    }
+
+    private static class Node<T> {
+
+        public Node<T> next;
+        public Node<T> prev;
+
+        public T data;
+
+        public Node() {
+        }
+
+        public Node(Node<T> next, Node<T> prev, T element) {
+            this.next = next;
+            this.prev = prev;
+            data = element;
+        }
     }
 }
