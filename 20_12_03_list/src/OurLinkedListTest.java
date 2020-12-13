@@ -37,4 +37,19 @@ class OurLinkedListTest {
         ourLinkedList.add(3);
         assertEquals(3, ourLinkedList.size());
     }
+
+    @Test
+    void test_sizeOfLinkedList_after_17_adds_size_17() {
+        OurLinkedList<Integer> ourLinkedList = new OurLinkedList<Integer>();
+        for (int i = 0; i < 17; i++) {
+            ourLinkedList.addLast(i);
+        }
+
+        assertEquals(17, ourLinkedList.size());
+    }
+
+    @Test
+    void test_remove_from_empty_list() {
+
+    }
 }

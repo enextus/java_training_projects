@@ -51,11 +51,11 @@ public class OurLinkedList<T> implements OurList<T> {
      * Removes the first occurrence of the specified element from this list, if it is present.
      * If this list does not contain the element, it is unchanged.
      *
-     * @param item
+     * @param element
      * @return result
      */
     @Override
-    public boolean remove(T item) {
+    public boolean remove(T element) {
         if (isEmpty())
             throw new IllegalStateException("Can't remove() from and empty list.");
 
@@ -64,7 +64,7 @@ public class OurLinkedList<T> implements OurList<T> {
         Node curr = first;
 
         while (curr.next != null || curr == last) {
-            if (curr.data.equals(item)) {
+            if (curr.data.equals(element)) {
                 // remove the last remaining element
                 if (size == 1) {
                     first = null;
