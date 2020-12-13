@@ -15,6 +15,7 @@ public class Main {
         List<Integer> list = Arrays.asList(intArrOne);
 
         List<Integer> list2 = new ArrayList<>(Arrays.asList(intArrOne));
+        ArrayList<Integer> list3 = new ArrayList<>(Arrays.asList(intArrOne));
 
         System.out.println("list2.isEmpty(): " + list2.isEmpty());
 
@@ -23,8 +24,12 @@ public class Main {
         System.out.println("list2:  " + list2.getClass());
 
         list2.add(a);
-
         System.out.println("list2: " + list2);
+
+        list3.add(a);
+        list3.add(a);
+        list3.add(a);
+        System.out.println("list3: " + list3);
 
         Solution solution = new Solution();
         System.out.println(solution.solve(list, 6));
