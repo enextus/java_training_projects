@@ -107,7 +107,6 @@ public class OurLinkedList<T> implements OurList<T> {
 
     }
 
-
     @Override
     public boolean contains(Object obj) {
         return false;
