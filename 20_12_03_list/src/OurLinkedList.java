@@ -46,13 +46,14 @@ public class OurLinkedList<T> implements OurList<T> {
         boolean result = false;
         Node prev = first;
         Node curr = first;
-
+        Node next = last;
+        
         while (curr.next != null || curr == last) {
             if (curr.data.equals(element)) {
                 // remove the last remaining element
                 if (size == 1) {
-                    first = null;
-                    last = null;
+                    first = last = null;
+
                 }
                 // remove first element
                 else if (curr.equals(first)) {
@@ -66,14 +67,18 @@ public class OurLinkedList<T> implements OurList<T> {
                 // remove element
                 else {
                     prev.next = curr.next;
+                    next.prev = curr.prev;
                 }
+
                 size--;
                 result = true;
+
                 break;
             }
             prev = curr;
             curr = prev.next;
         }
+
         return result;
     }
 
