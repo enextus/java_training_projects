@@ -46,7 +46,9 @@ class OurLinkedListTest {
 
     @Test
     void test_sizeOfLinkedList_after_17_adds_size_17() {
+
         OurLinkedList<Integer> ourLinkedList = new OurLinkedList<>();
+
         for (int i = 0; i < 17; i++) {
             ourLinkedList.addLast(i);
         }
@@ -56,18 +58,21 @@ class OurLinkedListTest {
 
     @Test
     void test_remove_null_from_empty_list_exception() {
+
         OurLinkedList<Integer> ourLinkedList = new OurLinkedList<>();
         assertThrows(IllegalStateException.class, () -> ourLinkedList.remove(null));
     }
 
     @Test
     void test_remove_1_from_empty_list_exception() {
+
         OurLinkedList<Integer> ourLinkedList = new OurLinkedList<>();
         assertThrows(IllegalStateException.class, () -> ourLinkedList.remove(1));
     }
 
     @Test
     void test_remove_element_from_list_cont_1_element_true() {
+
         OurLinkedList<Integer> ourLinkedList = new OurLinkedList<>();
         ourLinkedList.add(1);
         assertTrue(ourLinkedList.remove(1));
@@ -75,6 +80,7 @@ class OurLinkedListTest {
 
     @Test
     void test_remove_element_from_list_a_not_cont_elem_exception() {
+
         OurLinkedList<Integer> ourLinkedList = new OurLinkedList<>();
         ourLinkedList.add(10);
         assertThrows(NullPointerException.class, () -> ourLinkedList.remove(2));
@@ -82,6 +88,7 @@ class OurLinkedListTest {
 
     @Test
     void test_remove_elements_true() {
+
         OurLinkedList<Integer> ourLinkedList = new OurLinkedList<>();
         for (int i = 0; i < 17; i++) {
             ourLinkedList.addLast(i);
@@ -90,7 +97,5 @@ class OurLinkedListTest {
         for (int i = 0; i < 17; i++) {
             assertTrue(ourLinkedList.remove(i));
         }
-
     }
 }
-
