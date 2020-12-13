@@ -39,6 +39,12 @@ public class OurLinkedList<T> implements OurList<T> {
         this.addLast(element);
     }
 
+
+    /**
+     * Appends the specified element to the end of this list.
+     *
+     * @param element
+     */
     @Override
     public void addLast(T element) {
         if (element == null)

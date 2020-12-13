@@ -55,7 +55,14 @@ class OurLinkedListTest {
     }
 
     @Test
-    void test_remove_from_empty_list() {
+    void test_remove_null_from_empty_list_exception() {
+        OurLinkedList<Integer> ourLinkedList = new OurLinkedList<Integer>();
+        assertThrows(IllegalStateException.class, () -> ourLinkedList.remove(null));
+    }
 
+    @Test
+    void test_remove_1_from_empty_list_exception() {
+        OurLinkedList<Integer> ourLinkedList = new OurLinkedList<Integer>();
+        assertThrows(IllegalStateException.class, () -> ourLinkedList.remove(1));
     }
 }
