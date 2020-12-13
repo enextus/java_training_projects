@@ -6,6 +6,10 @@ public class OurLinkedList<T> implements OurList<T> {
     Node<T> last;
     int size;
 
+    /**
+     * returns true if size more as 0
+     * @return boolean
+     */
     public boolean isEmpty() {
         return size == 0;
     }
