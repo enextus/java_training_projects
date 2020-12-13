@@ -1,6 +1,6 @@
 public class OurLinkedList<T> implements Iterable<T>{
 
-    private int theSize;
+    private int size;
     private int modCount = 0;
     private Node<T> begin;
     private Node<T> end;
@@ -20,12 +20,12 @@ public class OurLinkedList<T> implements Iterable<T>{
         end = new Node<T> (null, begin, null);
         begin.next = end;
 
-        theSize = 0;
+        size = 0;
         modCount++;
     }
 
     public int size() {
-        return theSize;
+        return size;
     }
 
     public boolean isEmpty() {
@@ -62,14 +62,14 @@ public class OurLinkedList<T> implements Iterable<T>{
         Node<T> newNode = new Node<T> (x, p.prev, p);
         newNode.prev.next = newNode;
         p.prev = newNode;
-        theSize++;
+        size++;
         modCount++;
     }
 
     private T remove(Node<T> p) {
         p.next.prev = p.prev;
         p.prev.next = p.next;
-        theSize--;
+        size--;
         modCount++;
 
         return p.data;
