@@ -8,6 +8,7 @@ public class OurLinkedList<T> implements OurList<T> {
 
     /**
      * returns true if size more as 0
+     *
      * @return boolean
      */
     public boolean isEmpty() {
