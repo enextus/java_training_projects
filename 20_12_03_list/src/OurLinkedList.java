@@ -10,11 +10,11 @@ public class OurLinkedList<T> implements OurList<T> {
         return size == 0;
     }
 
-    /**
+/*    *//**
      * Appends the specified element to the end of this list.
      *
      * @param element
-     */
+     *//*
     public void add(T element) {
         if (element == null)
             throw new NullPointerException("The argument for add() is null.");
@@ -28,12 +28,21 @@ public class OurLinkedList<T> implements OurList<T> {
             first = last;
         }
         size++;
+    }*/
+
+    /**
+     * Appends the specified element to the end of this list.
+     *
+     * @param element
+     */
+    public void add(T element) {
+        this.addLast(element);
     }
 
     @Override
     public void addLast(T element) {
         if (element == null)
-            throw new NullPointerException("The  argument for addLast() is null.");
+            throw new NullPointerException("The argument for add() is null.");
 
         if (!isEmpty()) {
             Node prev = last;
@@ -45,7 +54,6 @@ public class OurLinkedList<T> implements OurList<T> {
         }
         size++;
     }
-
 
     /**
      * Removes the first occurrence of the specified element from this list, if it is present.
