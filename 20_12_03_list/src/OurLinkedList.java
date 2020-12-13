@@ -26,11 +26,11 @@ public class OurLinkedList<T> implements OurList<T> {
             throw new NullPointerException("The argument for add() is null.");
 
         if (!isEmpty()) {
-            Node prev = last;
-            last = new Node(null, null, element);
+            Node<T> prev = last;
+            last = new Node<>(null, null, element);
             prev.next = last;
         } else {
-            last = new Node(null, null, element);
+            last = new Node<>(null, null, element);
             first = last;
         }
         size++;
@@ -49,9 +49,9 @@ public class OurLinkedList<T> implements OurList<T> {
             throw new IllegalStateException("Can't remove() from and empty list.");
 
         boolean result = false;
-        Node prev = first;
-        Node curr = first;
-        Node next = last;
+        Node<T> prev = first;
+        Node<T> curr = first;
+        Node<T> next = last;
 
         while (curr.next != null || curr == last) {
             if (curr.data.equals(element)) {
@@ -86,9 +86,27 @@ public class OurLinkedList<T> implements OurList<T> {
         return result;
     }
 
+    /**
+     * This method returns the element at the specified position in this list
+     * Returns the value at a given index.
+     * pre: 0 <= index < size
+     * Throws a NullPointerException if index > size or index < 0.
+     * @param index - index of the element to return. It must be in the range between 0 and (size-1).
+     * @return result
+     */
     @Override
     public T get(int index) {
-        return null;
+
+        if (index < 0 || index >= size) {
+            throw new IllegalArgumentException("index was out of bounds");
+        }
+
+        Node<T> curr = first;
+
+        for (int i = 0; i < index; i++) {
+            curr = curr.next;
+        }
+        return curr.data;
     }
 
     @Override
