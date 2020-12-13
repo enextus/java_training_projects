@@ -10,26 +10,6 @@ public class OurLinkedList<T> implements OurList<T> {
         return size == 0;
     }
 
-/*    *//**
-     * Appends the specified element to the end of this list.
-     *
-     * @param element
-     *//*
-    public void add(T element) {
-        if (element == null)
-            throw new NullPointerException("The argument for add() is null.");
-
-        if (!isEmpty()) {
-            Node prev = last;
-            last = new Node(null, null, element);
-            prev.next = last;
-        } else {
-            last = new Node(null, null, element);
-            first = last;
-        }
-        size++;
-    }*/
-
     /**
      * Appends the specified element to the end of this list.
      *
@@ -38,7 +18,6 @@ public class OurLinkedList<T> implements OurList<T> {
     public void add(T element) {
         this.addLast(element);
     }
-
 
     /**
      * Appends the specified element to the end of this list.
