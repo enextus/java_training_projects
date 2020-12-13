@@ -1,9 +1,11 @@
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+import java.util.Iterator;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class OurLinkedListTest {
-
 
 
     @Test
@@ -98,12 +100,54 @@ class OurLinkedListTest {
     void test_remove_elements_true() {
 
         OurLinkedList<Integer> ourLinkedList = new OurLinkedList<>();
-        for (int i = 0; i < 17; i++) {
+        for (int i = 0; i < 17; i++)
             ourLinkedList.addLast(i);
-        }
 
-        for (int i = 0; i < 17; i++) {
+        for (int i = 0; i < 17; i++)
             assertTrue(ourLinkedList.remove(i));
+    }
+
+// _______________________
+
+    @Test
+    public void test_SizeChange_results() {
+        OurLinkedList<Integer> ourLinkedList = new OurLinkedList<>();
+
+        for (int i = 0; i < 5; i++)
+            ourLinkedList.addLast(i);
+
+        assertEquals(5, ourLinkedList.size());
+        ourLinkedList.remove(0);
+        assertEquals(4, ourLinkedList.size());
+    }
+
+    @Test
+    public void testRemovedCorrectElement() {
+        OurLinkedList<Integer> ourLinkedList = new OurLinkedList<>();
+
+        assertTrue(ourLinkedList.contains(1));
+        ourLinkedList.remove(0);
+        assertFalse(ourLinkedList.contains(1));
+    }
+
+/*    @Test
+    public void testElementsMoved() {
+        OurLinkedList<Integer> ourLinkedList = new OurLinkedList<>(Arrays.asList(1, 2, 3, 4, 5));
+
+        ourLinkedList.remove(0);
+
+        Iterator<Integer> iter = ourLinkedList.iterator();
+        for (int i = 2; i <= 5; i++) {
+            assertTrue(iter.hasNext());
+            assertEquals(i, iter.next());
         }
+        assertFalse(iter.hasNext());
+    }*/
+
+    @Test
+    public void testReturnRemovedValue() {
+        OurLinkedList<Integer> ourLinkedList = new OurLinkedList<>();
+
+        assertEquals(1, ourLinkedList.remove(0));
     }
 }
