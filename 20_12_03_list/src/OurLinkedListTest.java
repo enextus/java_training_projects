@@ -157,6 +157,9 @@ class OurLinkedListTest {
         assertEquals(3, ourLinkedList.get(1));
         assertEquals(4, ourLinkedList.get(2));
 
+        assertThrows(IllegalArgumentException.class, () -> ourLinkedList.get(3));
+        assertThrows(IllegalArgumentException.class, () -> ourLinkedList.get(4));
+
     }
 
       //  assertThrows(NullPointerException.class, () -> ourLinkedList.remove(4));
