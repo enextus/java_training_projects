@@ -15,17 +15,8 @@ public class OurLinkedList<T> implements OurList<T> {
      *
      * @param element
      */
-    public void add(T element) {
-        this.addLast(element);
-    }
-
-    /**
-     * Appends the specified element to the end of this list.
-     *
-     * @param element
-     */
     @Override
-    public void addLast(T element) {
+    public void add(T element) {
         if (element == null)
             throw new NullPointerException("The argument for add() is null.");
 

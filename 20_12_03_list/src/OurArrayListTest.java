@@ -37,9 +37,9 @@ class OurArrayListTest {
 
     @Test
     public void testSizeAndAddLast_addSeveralElements_correctSize() {
-        list.addLast(1);
-        list.addLast(1);
-        list.addLast(1);
+        list.add(1);
+        list.add(1);
+        list.add(1);
         assertEquals(3, list.size());
     }
 
@@ -47,7 +47,7 @@ class OurArrayListTest {
     public void testGetAndAddLast_addSeveralElements_correctOrderOfElements() {
         int[] numbers = {-5, 18, 3, 1, 10, 2, 0, 6};
         for (int number : numbers) {
-            list.addLast(number);
+            list.add(number);
         }
 
         for (int i = 0; i < numbers.length; i++) {
@@ -59,7 +59,7 @@ class OurArrayListTest {
     public void testRemoveById_addSeveralElementsAndRemoveLast_correct() {
         int[] numbers = {-5, 18, 3, 1, 10, 2, 0, 6};
         for (int number : numbers) {
-            list.addLast(number);
+            list.add(number);
         }
 
         assertEquals(6, list.removeById(7));
@@ -74,7 +74,7 @@ class OurArrayListTest {
     public void testRemoveById_addCapacityNumberElementsAndRemoveLast_correct() {
 
         for (int i = 0; i < 16; i++) {
-            list.addLast(i);
+            list.add(i);
         }
 
         assertEquals(15, list.removeById(15));
@@ -90,7 +90,7 @@ class OurArrayListTest {
     public void testRemoveById_addCapacityNumberElementsAndRemoveFirst_correct() {
 
         for (int i = 0; i < 16; i++) {
-            list.addLast(i);
+            list.add(i);
         }
 
         assertEquals(0, list.removeById(0));
@@ -109,7 +109,7 @@ class OurArrayListTest {
     public void testRemoveById_addCapacityNumberElementsAndRemoveIntermediate_correct() {
 
         for (int i = 0; i < 18; i++) {
-            list.addLast(i);
+            list.add(i);
         }
 
         assertEquals(5, list.removeById(5));
@@ -136,7 +136,7 @@ class OurArrayListTest {
     @Test
     public void testAddLast_addInitialCapacityPlusOneElements_correctSizAndCapacity() {
         for (int i = 0; i < 17; i++) {
-            list.addLast(i);
+            list.add(i);
         }
 
         assertEquals(17, list.size());
@@ -192,8 +192,8 @@ class OurArrayListTest {
         list.removeById(2);//{0,1,3}
         list.set(1, 5);//{0,5,3}
 
-        list.addLast(-10);//{0,5,3,-10}
-        list.addLast(-15);//{0,5,3,-10,-15}
+        list.add(-10);//{0,5,3,-10}
+        list.add(-15);//{0,5,3,-10,-15}
 
         list.removeById(2);//{0,5,-10,-15}
         list.removeById(0);//{5,-10,-15}
@@ -209,7 +209,7 @@ class OurArrayListTest {
     public void testRemove_RemoveIntermediate_correct() {
 
         for (int i = 0; i < 16; i++) {
-            stringList.addLast("symbol " + i);
+            stringList.add("symbol " + i);
         }
 
         String removeElement = "symbol 5";
@@ -229,7 +229,7 @@ class OurArrayListTest {
     public void testRemove_RemoveFirst_correct() {
 
         for (int i = 0; i < 16; i++) {
-            stringList.addLast("symbol " + i);
+            stringList.add("symbol " + i);
         }
 
         assertTrue(stringList.remove("symbol 0"));
@@ -278,7 +278,7 @@ class OurArrayListTest {
         String[] expected = {"Evgeny Borisovich"};
 
         OurList<String> strings = new OurArrayList<>();
-        strings.addLast("Evgeny Borisovich");
+        strings.add("Evgeny Borisovich");
 
         Iterator<String> iterator = strings.forwardIterator();
 
@@ -297,10 +297,10 @@ class OurArrayListTest {
         String[] expected = {"Evgeny", "Borisovich", "Vladislava", "Evgenievna"};
 
         OurList<String> strings = new OurArrayList<>();
-        strings.addLast("Evgeny");
-        strings.addLast("Borisovich");
-        strings.addLast("Vladislava");
-        strings.addLast("Evgenievna");
+        strings.add("Evgeny");
+        strings.add("Borisovich");
+        strings.add("Vladislava");
+        strings.add("Evgenievna");
 
         Iterator<String> iterator = strings.forwardIterator();
 
@@ -332,7 +332,7 @@ class OurArrayListTest {
         String[] expected = {"Evgeny Borisovich"};
 
         OurList<String> strings = new OurArrayList<>();
-        strings.addLast("Evgeny Borisovich");
+        strings.add("Evgeny Borisovich");
 
         Iterator<String> iterator = strings.backwardIterator();
 
@@ -351,10 +351,10 @@ class OurArrayListTest {
         String[] expected = {"Evgenievna", "Vladislava", "Borisovich", "Evgeny"};
 
         OurList<String> strings = new OurArrayList<>();
-        strings.addLast("Evgeny");
-        strings.addLast("Borisovich");
-        strings.addLast("Vladislava");
-        strings.addLast("Evgenievna");
+        strings.add("Evgeny");
+        strings.add("Borisovich");
+        strings.add("Vladislava");
+        strings.add("Evgenievna");
 
         Iterator<String> iterator = strings.backwardIterator();
 
@@ -377,7 +377,7 @@ class OurArrayListTest {
      */
     private void addElementsToList(int number) {
         for (int j = 0; j < number; j++) {
-            list.addLast(j);
+            list.add(j);
         }
     }
 
@@ -385,7 +385,7 @@ class OurArrayListTest {
 
         String symbol = "symbol ";
         for (char i = 65; i < (65 + index); i++) {
-            stringList.addLast(symbol + i);
+            stringList.add(symbol + i);
         }
     }
 

@@ -13,7 +13,7 @@ public class OurArrayList<Type> implements OurList<Type> {
     }
 
     @Override
-    public void addLast(Type element) {
+    public void add(Type element) {
         if (size == source.length)
             increaseCapacity();
 

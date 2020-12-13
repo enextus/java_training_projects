@@ -1,8 +1,5 @@
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-import java.util.Iterator;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class OurLinkedListTest {
@@ -60,7 +57,7 @@ class OurLinkedListTest {
         OurLinkedList<Integer> ourLinkedList = new OurLinkedList<>();
 
         for (int i = 0; i < 17; i++) {
-            ourLinkedList.addLast(i);
+            ourLinkedList.add(i);
         }
 
         assertEquals(17, ourLinkedList.size());
@@ -101,7 +98,7 @@ class OurLinkedListTest {
 
         OurLinkedList<Integer> ourLinkedList = new OurLinkedList<>();
         for (int i = 0; i < 17; i++)
-            ourLinkedList.addLast(i);
+            ourLinkedList.add(i);
 
         for (int i = 0; i < 17; i++)
             assertTrue(ourLinkedList.remove(i));
@@ -112,7 +109,7 @@ class OurLinkedListTest {
         OurLinkedList<Integer> ourLinkedList = new OurLinkedList<>();
 
         for (int i = 0; i < 5; i++)
-            ourLinkedList.addLast(i);
+            ourLinkedList.add(i);
 
         assertEquals(5, ourLinkedList.size());
         ourLinkedList.remove(0);

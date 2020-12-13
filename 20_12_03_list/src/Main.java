@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Iterator;
 
 public class Main {
@@ -19,16 +18,16 @@ public class Main {
         // down casting
         // ArrayList anotherStrings = (ArrayList) strings;
 
-        strings.addLast("Vasya");
-        strings.addLast("Petya");
-        strings.addLast("Alisa");
+        strings.add("Vasya");
+        strings.add("Petya");
+        strings.add("Alisa");
 
         System.out.println(integers.size());
-        integers.addLast(112);
-        integers.addLast(456);
-        integers.addLast(null);
-        integers.addLast(null);
-        integers.addLast(19389);
+        integers.add(112);
+        integers.add(456);
+        integers.add(null);
+        integers.add(null);
+        integers.add(19389);
 
         System.out.println(getLineNumber() + ", " + integers.size());
         System.out.println(integers.get(0));

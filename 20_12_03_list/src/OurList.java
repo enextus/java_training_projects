@@ -7,7 +7,7 @@ public interface OurList<Type> {
      *
      * @param element - to add
      */
-    void addLast(Type element);
+    void add(Type element);
 
     /**
      * @param index - index of the element to return. It must be in the range between 0 and (size-1).
