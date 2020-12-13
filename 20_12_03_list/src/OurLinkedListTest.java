@@ -55,9 +55,9 @@ class OurLinkedListTest {
 
         OurLinkedList<Integer> ourLinkedList = new OurLinkedList<>();
 
-        for (int i = 0; i < 17; i++) {
+        for (int i = 0; i < 17; i++)
             ourLinkedList.add(i);
-        }
+
 
         assertEquals(17, ourLinkedList.size());
     }
@@ -161,10 +161,4 @@ class OurLinkedListTest {
         assertThrows(IllegalArgumentException.class, () -> ourLinkedList.get(4));
 
     }
-
-      //  assertThrows(NullPointerException.class, () -> ourLinkedList.remove(4));
-
-
-       // assertThrows(IllegalArgumentException.class, () -> ourLinkedList.get(-1));
-
 }
