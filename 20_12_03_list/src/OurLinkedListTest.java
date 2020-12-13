@@ -7,17 +7,23 @@ class OurLinkedListTest {
     @Test
     void test_sizeOfEmptyLinkedListIsZero_size() {
 
-        OurList<Integer> ourLinkedList = new OurLinkedList<Integer>();
+        OurLinkedList<Integer> ourLinkedList = new OurLinkedList<Integer>();
         assertEquals(0, ourLinkedList.size());
     }
 
+    @Test
+    void test_NullPointerException_after_add_null() {
+
+        OurLinkedList<Integer> ourLinkedList = new OurLinkedList<Integer>();
+        assertThrows(NullPointerException.class, () -> ourLinkedList.add(null));
+    }
 
     @Test
     void test_sizeOfLinkedList_after_null_add_size_0() {
 
         OurLinkedList<Integer> ourLinkedList = new OurLinkedList<Integer>();
         ourLinkedList.add(0);
-        assertEquals(0, ourLinkedList.size());
+        assertEquals(1, ourLinkedList.size());
     }
 
     @Test
