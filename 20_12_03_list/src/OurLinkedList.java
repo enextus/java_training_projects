@@ -12,7 +12,7 @@ public class OurLinkedList<T> implements OurList<T> {
 
     public void add(T element) {
         if (element == null)
-            throw new NullPointerException("The first argument for add() is null.");
+            throw new NullPointerException("The argument for add() is null.");
 
         if (!isEmpty()) {
             Node prev = last;
