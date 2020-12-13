@@ -11,6 +11,15 @@ class OurLinkedListTest {
         assertEquals(0, ourLinkedList.size());
     }
 
+
+    @Test
+    void test_sizeOfLinkedList_after_null_add_size_0() {
+
+        OurLinkedList<Integer> ourLinkedList = new OurLinkedList<Integer>();
+        ourLinkedList.add(0);
+        assertEquals(0, ourLinkedList.size());
+    }
+
     @Test
     void test_sizeOfLinkedList_after_one_add_size_1() {
 

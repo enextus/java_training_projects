@@ -10,6 +10,11 @@ public class OurLinkedList<T> implements OurList<T> {
         return size == 0;
     }
 
+    /**
+     * Appends the specified element to the end of this list.
+     *
+     * @param element
+     */
     public void add(T element) {
         if (element == null)
             throw new NullPointerException("The argument for add() is null.");
@@ -28,7 +33,7 @@ public class OurLinkedList<T> implements OurList<T> {
     @Override
     public void addLast(T element) {
         if (element == null)
-            throw new NullPointerException("The first argument for addLast() is null.");
+            throw new NullPointerException("The  argument for addLast() is null.");
 
         if (!isEmpty()) {
             Node prev = last;
@@ -39,6 +44,53 @@ public class OurLinkedList<T> implements OurList<T> {
             first = last;
         }
         size++;
+    }
+
+
+    /**
+     * Removes the first occurrence of the specified element from this list, if it is present.
+     * If this list does not contain the element, it is unchanged.
+     *
+     * @param item
+     * @return result
+     */
+    @Override
+    public boolean remove(T item) {
+        if (isEmpty())
+            throw new IllegalStateException("Can't remove() from and empty list.");
+
+        boolean result = false;
+        Node prev = first;
+        Node curr = first;
+
+        while (curr.next != null || curr == last) {
+            if (curr.data.equals(item)) {
+                // remove the last remaining element
+                if (size == 1) {
+                    first = null;
+                    last = null;
+                }
+                // remove first element
+                else if (curr.equals(first)) {
+                    first = first.next;
+                }
+                // remove last element
+                else if (curr.equals(last)) {
+                    last = prev;
+                    last.next = null;
+                }
+                // remove element
+                else {
+                    prev.next = curr.next;
+                }
+                size--;
+                result = true;
+                break;
+            }
+            prev = curr;
+            curr = prev.next;
+        }
+        return result;
     }
 
     @Override
@@ -71,10 +123,6 @@ public class OurLinkedList<T> implements OurList<T> {
 
     }
 
-    @Override
-    public boolean remove(Object obj) {
-        return false;
-    }
 
     @Override
     public boolean contains(Object obj) {
