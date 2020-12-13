@@ -133,4 +133,21 @@ class OurLinkedListTest {
         assertThrows(IllegalArgumentException.class, () -> ourLinkedList.get(5));
         assertThrows(IllegalArgumentException.class, () -> ourLinkedList.get(-1));
     }
+
+    @Test
+    void test_get_after_remove_exception() {
+
+        OurLinkedList<Integer> ourLinkedList = new OurLinkedList<>();
+
+        for (int i = 0; i < 5; i++)
+            ourLinkedList.add(i);
+
+        assertEquals(4, ourLinkedList.get(4));
+    }
+
+      //  assertThrows(NullPointerException.class, () -> ourLinkedList.remove(4));
+
+
+       // assertThrows(IllegalArgumentException.class, () -> ourLinkedList.get(-1));
+
 }
