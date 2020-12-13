@@ -89,14 +89,12 @@ public class OurLinkedList<T> implements OurList<T> {
     /**
      * This method returns the element at the specified position in this list
      * Returns the value at a given index.
-     * pre: 0 <= index < size
      * Throws a NullPointerException if index > size or index < 0.
      * @param index - index of the element to return. It must be in the range between 0 and (size-1).
      * @return result
      */
     @Override
     public T get(int index) {
-
         if (index < 0 || index >= size) {
             throw new IllegalArgumentException("index was out of bounds");
         }

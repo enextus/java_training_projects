@@ -114,4 +114,23 @@ class OurLinkedListTest {
         ourLinkedList.remove(0);
         assertEquals(4, ourLinkedList.size());
     }
+
+    @Test
+    void test_get_more_as_them_size_exception() {
+
+        OurLinkedList<Integer> ourLinkedList = new OurLinkedList<>();
+        assertThrows(IllegalArgumentException.class, () -> ourLinkedList.get(2));
+    }
+
+    @Test
+    void test_get_wrong_index_exception() {
+
+        OurLinkedList<Integer> ourLinkedList = new OurLinkedList<>();
+
+        for (int i = 0; i < 5; i++)
+            ourLinkedList.add(i);
+
+        assertThrows(IllegalArgumentException.class, () -> ourLinkedList.get(5));
+        assertThrows(IllegalArgumentException.class, () -> ourLinkedList.get(-1));
+    }
 }
