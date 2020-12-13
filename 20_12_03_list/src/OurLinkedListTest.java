@@ -143,6 +143,20 @@ class OurLinkedListTest {
             ourLinkedList.add(i);
 
         assertEquals(4, ourLinkedList.get(4));
+
+        assertEquals(0, ourLinkedList.get(0));
+        assertTrue(ourLinkedList.remove(0));
+
+        assertEquals(1, ourLinkedList.get(0));
+        assertEquals(2, ourLinkedList.get(1));
+        assertEquals(3, ourLinkedList.get(2));
+
+        assertTrue(ourLinkedList.remove(2));
+
+        assertEquals(1, ourLinkedList.get(0));
+        assertEquals(3, ourLinkedList.get(1));
+        assertEquals(4, ourLinkedList.get(2));
+
     }
 
       //  assertThrows(NullPointerException.class, () -> ourLinkedList.remove(4));
