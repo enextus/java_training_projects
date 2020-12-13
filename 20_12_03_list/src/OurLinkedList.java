@@ -10,17 +10,32 @@ public class OurLinkedList<T> implements OurList<T> {
         return size == 0;
     }
 
+    public void add(T element) {
+        if (element == null)
+            throw new NullPointerException("The first argument for add() is null.");
+
+        if (!isEmpty()) {
+            Node prev = last;
+            last = new Node(null, null, element);
+            prev.next = last;
+        } else {
+            last = new Node(null, null, element);
+            first = last;
+        }
+        size++;
+    }
+
     @Override
-    public void addLast(T item) {
-        if (item == null)
+    public void addLast(T element) {
+        if (element == null)
             throw new NullPointerException("The first argument for addLast() is null.");
 
         if (!isEmpty()) {
             Node prev = last;
-            last = new Node(item, null);
+            last = new Node(null, null, element);
             prev.next = last;
         } else {
-            last = new Node(item, null);
+            last = new Node(null, null, element);
             first = last;
         }
         size++;
