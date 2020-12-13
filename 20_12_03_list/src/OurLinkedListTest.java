@@ -4,6 +4,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class OurLinkedListTest {
 
+
+
+    @Test
+    void test_isEmpty_true() {
+        OurLinkedList<Integer> ourLinkedList = new OurLinkedList<>();
+        assertTrue(ourLinkedList.isEmpty());
+    }
+
     @Test
     void test_sizeOfEmptyLinkedListIsZero_size() {
 
