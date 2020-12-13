@@ -16,9 +16,7 @@ public class Solution {
             int multiplication = deque.getFirst() * deque.getLast();
 
             if (multiplication > n) {
-                System.out.println(deque.size());
                 deque.removeLast();
-                System.out.println(deque.size());
             } else if (multiplication < n) {
                 deque.removeFirst();
             } else {
