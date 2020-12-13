@@ -47,7 +47,7 @@ public class OurLinkedList<T> implements OurList<T> {
         Node prev = first;
         Node curr = first;
         Node next = last;
-        
+
         while (curr.next != null || curr == last) {
             if (curr.data.equals(element)) {
                 // remove the last remaining element
@@ -66,7 +66,7 @@ public class OurLinkedList<T> implements OurList<T> {
                 }
                 // remove element
                 else {
-                    prev.next = curr.next;
+                    prev.next = curr.next; // перескок через удаляемый node
                     next.prev = curr.prev;
                 }
 
