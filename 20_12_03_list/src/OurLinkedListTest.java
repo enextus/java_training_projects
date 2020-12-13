@@ -65,4 +65,12 @@ class OurLinkedListTest {
         OurLinkedList<Integer> ourLinkedList = new OurLinkedList<Integer>();
         assertThrows(IllegalStateException.class, () -> ourLinkedList.remove(1));
     }
+
+    @Test
+    void test_remove_element_from_list_cont_1_element_true() {
+        OurLinkedList<Integer> ourLinkedList = new OurLinkedList<Integer>();
+        ourLinkedList.add(1);
+        assertTrue(ourLinkedList.remove(1));
+    }
 }
+
