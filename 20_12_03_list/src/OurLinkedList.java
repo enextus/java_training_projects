@@ -66,8 +66,8 @@ public class OurLinkedList<T> implements OurList<T> {
                 }
                 // remove element
                 else {
-                    prev.next = curr.next; // перескок через удаляемый node
-                    next.prev = curr.prev;
+                    prev.next = curr.next; // перескок указателя на следующую node через (удаление current node)
+                    next.prev = curr.prev; // подключение новой node к "supply chain" к новой предыдущей
                 }
 
                 size--;
