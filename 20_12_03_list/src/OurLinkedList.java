@@ -57,7 +57,6 @@ public class OurLinkedList<T> implements OurList<T> {
                 // remove the last remaining element
                 if (size == 1) {
                     first = last = null;
-
                 }
                 // remove first element
                 else if (curr.equals(first)) {
