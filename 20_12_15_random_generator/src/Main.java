@@ -29,17 +29,19 @@ public class Main {
         System.out.println("randomGenerator.nextInts(n): " + randomGeneratorViaList.nextInts(12));
 
         /**
-         * 7
+         * 22
          *
-         * 468121027
+         * 303563356
          *
-         * RangeRandomRule{max=25, random=java.util.Random@6ce253f1}
+         * RangeRandomRule{max=25, random=java.util.Random@3d075dc0}
          *
-         * -3
+         * 0
          * -3
          * 0
          * 11
+         * 11
          * 0
+         * -3
          * randomGenerator.nextInts(n): [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
          * randomGenerator.nextInts(n): [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
          *
