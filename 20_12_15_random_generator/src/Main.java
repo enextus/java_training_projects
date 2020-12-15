@@ -1,6 +1,7 @@
 import generator.rule.ListRandomRule;
 import generator.rule.RangeRandomRule;
 import generator.RandomGenerator;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -18,11 +19,8 @@ public class Main {
 
         ListRandomRule listRandomRule = new ListRandomRule(new int[]{-3, 0, 11});
 
-        System.out.println(listRandomRule.nextInt());
-        System.out.println(listRandomRule.nextInt());
-        System.out.println(listRandomRule.nextInt());
-        System.out.println(listRandomRule.nextInt());
-        System.out.println(listRandomRule.nextInt());
+        for (int i = 0; i < 7; i++)
+            System.out.println(listRandomRule.nextInt());
 
         RandomGenerator randomGenerator = new RandomGenerator(rangeRandomRule);
         System.out.println("randomGenerator.nextInts(n): " + randomGenerator.nextInts(12));
