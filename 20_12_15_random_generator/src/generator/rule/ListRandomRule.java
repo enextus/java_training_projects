@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * implementation of the interface named "ListRandomRule"
+ */
 public class ListRandomRule implements RandomRule {
 
     private List<Integer> values;
@@ -33,10 +36,6 @@ public class ListRandomRule implements RandomRule {
 
     @Override
     public int nextInt() {
-
-    // System.out.println("values.size(): " + values.size());
-    // System.out.println("random.nextInt(values.size()): " + random.nextInt(values.size()));
-
         return values.get(random.nextInt(values.size()));
     }
 }
