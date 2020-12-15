@@ -21,7 +21,7 @@ public class ListRandomRule implements RandomRule {
         this.random = new Random();
     }
 
-    private List<Integer> convertIntToList(int[] ints){
+    private List<Integer> convertIntToList(int[] ints) {
 
         List<Integer> intList = new ArrayList<Integer>(ints.length);
 
@@ -33,6 +33,6 @@ public class ListRandomRule implements RandomRule {
 
     @Override
     public int nextInt() {
-        return random.nextInt();
+        return values.get(random.nextInt(values.size()));
     }
 }

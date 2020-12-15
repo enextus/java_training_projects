@@ -1,3 +1,4 @@
+import generator.rule.ListRandomRule;
 import generator.rule.RangeRandomRule;
 
 public class Main {
@@ -14,5 +15,13 @@ public class Main {
 
         System.out.println(rangeRandomRule);
         System.out.println();
+
+        ListRandomRule listRandomRule = new ListRandomRule(new int[]{-3, 45, 11, 78});
+
+        System.out.println(listRandomRule.nextInt());
+        System.out.println(listRandomRule.nextInt());
+        System.out.println(listRandomRule.nextInt());
+        System.out.println(listRandomRule.nextInt());
+        System.out.println(listRandomRule.nextInt());
     }
 }
