@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * polymorphism general
+ * polymorphism
  */
 public class RandomGenerator {
 
@@ -15,12 +15,11 @@ public class RandomGenerator {
     }
 
     public List<Integer> nextInts(int n) {
+
         List<Integer> intList = new ArrayList<>(n);
 
-        for (int j = 0; j < n; j++) {
+        for (int j = 0; j < n; j++)
             intList.add(j);
-            System.out.println("j: " + j);
-        }
 
         return intList;
     }
