@@ -26,18 +26,20 @@ public class Main {
         System.out.println(listRandomRule.nextInt());
 
         RandomGenerator randomGenerator = new RandomGenerator(rangeRandomRule);
+        System.out.println("randomGenerator.nextInts(n): " + randomGenerator.nextInts(12));
 
-        System.out.println("randomGenerator.nextInts(3): " + randomGenerator.nextInts(12));
+        RandomGenerator randomGenerator2 = new RandomGenerator(listRandomRule);
+        System.out.println("randomGenerator.nextInts(n): " + randomGenerator2.nextInts(12));
 
         /**
-         * 19
+         * 17
          *
          * 468121027
          *
          * RangeRandomRule{max=25, random=java.util.Random@6ce253f1}
          *
-         * 0
          * -3
+         * 11
          * 11
          * 11
          * 0
@@ -53,7 +55,20 @@ public class Main {
          * j: 9
          * j: 10
          * j: 11
-         * randomGenerator.nextInts(3): [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+         * randomGenerator.nextInts(n): [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+         * j: 0
+         * j: 1
+         * j: 2
+         * j: 3
+         * j: 4
+         * j: 5
+         * j: 6
+         * j: 7
+         * j: 8
+         * j: 9
+         * j: 10
+         * j: 11
+         * randomGenerator.nextInts(n): [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
          *
          * Process finished with exit code 0
          */
