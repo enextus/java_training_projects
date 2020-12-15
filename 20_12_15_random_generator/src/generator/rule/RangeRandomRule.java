@@ -7,10 +7,11 @@ import java.util.Random;
 public class RangeRandomRule implements RandomRule {
 
     private int max;
-    private Random random = new Random();
+    private Random random;
 
     public RangeRandomRule(int max) {
         this.max = max;
+        this.random = new Random();
     }
 
     @Override
