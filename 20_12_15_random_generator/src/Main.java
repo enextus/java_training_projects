@@ -16,12 +16,28 @@ public class Main {
         System.out.println(rangeRandomRule);
         System.out.println();
 
-        ListRandomRule listRandomRule = new ListRandomRule(new int[]{-3, 45, 11, 78});
+        ListRandomRule listRandomRule = new ListRandomRule(new int[]{-3, 0, 11});
 
         System.out.println(listRandomRule.nextInt());
         System.out.println(listRandomRule.nextInt());
         System.out.println(listRandomRule.nextInt());
         System.out.println(listRandomRule.nextInt());
         System.out.println(listRandomRule.nextInt());
+
+        /**
+         * 18
+         *
+         * 468121027
+         *
+         * RangeRandomRule{max=25, random=java.util.Random@6ce253f1}
+         *
+         * 11
+         * -3
+         * -3
+         * 11
+         * -3
+         *
+         * Process finished with exit code 0
+         */
     }
 }
