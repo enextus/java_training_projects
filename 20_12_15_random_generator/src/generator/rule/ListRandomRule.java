@@ -34,8 +34,8 @@ public class ListRandomRule implements RandomRule {
     @Override
     public int nextInt() {
 
-        System.out.println("values.size(): " + values.size());
-        System.out.println("random.nextInt(values.size()): " + random.nextInt(values.size()));
+    // System.out.println("values.size(): " + values.size());
+    // System.out.println("random.nextInt(values.size()): " + random.nextInt(values.size()));
 
         return values.get(random.nextInt(values.size()));
     }
