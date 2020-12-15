@@ -12,8 +12,11 @@ public class RandomGenerator {
     }
 
     public List<Integer> nextInts(int n) {
-        List<Integer> res = new ArrayList<>();
-        //TODO call n times rule.nextInt() and place them into the res
-        return res;
+        List<Integer> intList = new ArrayList<>(n);
+
+        for (int i : intList)
+            intList.add(i);
+
+        return intList;
     }
 }
