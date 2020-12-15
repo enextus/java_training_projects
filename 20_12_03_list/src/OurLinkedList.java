@@ -2,9 +2,26 @@ import java.util.Iterator;
 
 public class OurLinkedList<T> implements OurList<T> {
 
-    Node<T> first;
-    Node<T> last;
-    int size;
+    Node<T> first; // null
+    Node<T> last; // null
+    int size; // 0
+
+    private static class Node<T> {
+
+        public Node<T> next;
+        public Node<T> prev;
+
+        public T data;
+
+        public Node() {
+        }
+
+        public Node(Node<T> next, Node<T> prev, T element) {
+            this.next = next;
+            this.prev = prev;
+            data = element;
+        }
+    }
 
     /**
      * returns true if size more as 0
@@ -55,23 +72,27 @@ public class OurLinkedList<T> implements OurList<T> {
 
         while (curr.next != null || curr == last) {
             if (curr.data.equals(element)) {
+
                 // remove the last remaining element
                 if (size == 1) {
                     first = last = null;
                 }
+
                 // remove first element
                 else if (curr.equals(first)) {
                     first = first.next;
                 }
+
                 // remove last element
                 else if (curr.equals(last)) {
                     last = prev;
                     last.next = null;
                 }
+
                 // remove element
                 else {
                     prev.next = curr.next; // перевод указателя на следующую node через удаляемую (удаление current node)
-                    next.prev = curr.prev; // подключение новой node к "supply chain" к новой предыдущей
+                    next.prev = curr.prev; // подключение новой следующей node к новой предыдущей
                 }
 
                 size--;
@@ -146,22 +167,5 @@ public class OurLinkedList<T> implements OurList<T> {
     @Override
     public Iterator backwardIterator() {
         return null;
-    }
-
-    private static class Node<T> {
-
-        public Node<T> next;
-        public Node<T> prev;
-
-        public T data;
-
-        public Node() {
-        }
-
-        public Node(Node<T> next, Node<T> prev, T element) {
-            this.next = next;
-            this.prev = prev;
-            data = element;
-        }
     }
 }
