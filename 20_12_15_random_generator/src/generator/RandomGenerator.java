@@ -16,11 +16,11 @@ public class RandomGenerator {
 
     public List<Integer> nextInts(int n) {
 
-        List<Integer> intList = new ArrayList<>(n);
+        List<Integer> res = new ArrayList<>(n);
 
         for (int j = 1; j <= n; j++)
-            intList.add(j);
+            res.add(j);
 
-        return intList;
+        return res;
     }
 }
