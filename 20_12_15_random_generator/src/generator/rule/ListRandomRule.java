@@ -17,7 +17,7 @@ public class ListRandomRule implements RandomRule {
     }
 
     public ListRandomRule(int[] numbers) {
-        ( (this.values = (numbers)));
+        this.values = convertToList(numbers);
         this.random = new Random();
     }
 
