@@ -1,6 +1,7 @@
+import generator.RandomRule;
 import generator.rule.ListRandomRule;
 import generator.rule.RangeRandomRule;
-
+import generator.RandomGenerator;
 public class Main {
 
     public static void main(String[] args) {
@@ -24,18 +25,35 @@ public class Main {
         System.out.println(listRandomRule.nextInt());
         System.out.println(listRandomRule.nextInt());
 
+        RandomGenerator randomGenerator = new RandomGenerator(rangeRandomRule);
+
+        System.out.println("randomGenerator.nextInts(3): " + randomGenerator.nextInts(12));
+
         /**
-         * 18
+         * 19
          *
          * 468121027
          *
          * RangeRandomRule{max=25, random=java.util.Random@6ce253f1}
          *
+         * 0
+         * -3
          * 11
-         * -3
-         * -3
          * 11
-         * -3
+         * 0
+         * j: 0
+         * j: 1
+         * j: 2
+         * j: 3
+         * j: 4
+         * j: 5
+         * j: 6
+         * j: 7
+         * j: 8
+         * j: 9
+         * j: 10
+         * j: 11
+         * randomGenerator.nextInts(3): [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
          *
          * Process finished with exit code 0
          */

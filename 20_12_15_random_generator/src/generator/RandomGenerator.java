@@ -3,6 +3,9 @@ package generator;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * polymorphism general
+ */
 public class RandomGenerator {
 
     private RandomRule rule;
@@ -14,8 +17,10 @@ public class RandomGenerator {
     public List<Integer> nextInts(int n) {
         List<Integer> intList = new ArrayList<>(n);
 
-        for (int i : intList)
-            intList.add(i);
+        for (int j = 0; j < n; j++) {
+            intList.add(j);
+            System.out.println("j: " + j);
+        }
 
         return intList;
     }
