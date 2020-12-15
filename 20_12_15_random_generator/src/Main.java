@@ -1,4 +1,3 @@
-import generator.RandomRule;
 import generator.rule.ListRandomRule;
 import generator.rule.RangeRandomRule;
 import generator.RandomGenerator;
