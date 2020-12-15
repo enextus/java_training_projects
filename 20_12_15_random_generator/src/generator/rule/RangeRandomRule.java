@@ -15,6 +15,14 @@ public class RangeRandomRule implements RandomRule {
     }
 
     @Override
+    public String toString() {
+        return "RangeRandomRule{" +
+                "max=" + max +
+                ", random=" + random +
+                '}';
+    }
+
+    @Override
     public int nextInt() {
         return random.nextInt(max);
     }
