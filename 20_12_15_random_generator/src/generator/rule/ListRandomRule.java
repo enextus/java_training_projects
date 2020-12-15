@@ -17,11 +17,11 @@ public class ListRandomRule implements RandomRule {
     }
 
     public ListRandomRule(int[] numbers) {
-        this.values = convertToList(numbers);
+        this.values = convertIntToList(numbers);
         this.random = new Random();
     }
 
-    private List<Integer> convertToList(int[] ints){
+    private List<Integer> convertIntToList(int[] ints){
 
         List<Integer> intList = new ArrayList<Integer>(ints.length);
 
