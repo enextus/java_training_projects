@@ -27,8 +27,8 @@ public class Main {
         RandomGenerator randomGenerator = new RandomGenerator(rangeRandomRule);
         System.out.println("randomGenerator.nextInts(n): " + randomGenerator.nextInts(12));
 
-        RandomGenerator randomGenerator2 = new RandomGenerator(listRandomRule);
-        System.out.println("randomGenerator.nextInts(n): " + randomGenerator2.nextInts(12));
+        RandomGenerator randomGeneratorViaList = new RandomGenerator(listRandomRule);
+        System.out.println("randomGenerator.nextInts(n): " + randomGeneratorViaList.nextInts(12));
 
         /**
          * 7
