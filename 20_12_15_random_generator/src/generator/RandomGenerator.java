@@ -18,7 +18,7 @@ public class RandomGenerator {
         List<Integer> res = new ArrayList<>(n);
 
         for (int j = 1; j <= n; j++)
-            res.add(j);
+            res.add(rule.nextInt());
 
         return res;
     }
