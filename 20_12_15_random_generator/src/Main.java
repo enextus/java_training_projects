@@ -1,10 +1,18 @@
 import generator.rule.EvenRandomRule;
 import generator.rule.ListRandomRule;
+import generator.rule.OddTensRandomRule;
 import generator.rule.RangeRandomRule;
 import generator.RandomGenerator;
 
 public class Main {
-
+    /**
+     * Get the current line number.
+     *
+     * @return int - Current line number.
+     */
+    public static int getLineNumber() {
+        return Thread.currentThread().getStackTrace()[2].getLineNumber();
+    }
     public static void main(String[] args) {
 
         RangeRandomRule rangeRandomRule = new RangeRandomRule(25);
@@ -37,6 +45,17 @@ public class Main {
 
         // ___________________________
 
+
+        OddTensRandomRule oddTensRandomRule = new OddTensRandomRule(300);
+
+        for (int i = 0; i < 4; i++)
+            System.out.println(oddTensRandomRule.nextInt());
+        System.out.println(getLineNumber());
+        System.out.println(oddTensRandomRule);
+        System.out.println();
+
+        // ___________________________
+
         RandomGenerator randomGeneratorRangeRandomRule = new RandomGenerator(rangeRandomRule);
         System.out.println("randomGeneratorRangeRandomRule.nextInts(n): " + randomGeneratorRangeRandomRule.nextInts(12));
 
@@ -45,6 +64,9 @@ public class Main {
 
         RandomGenerator randomGeneratorEvenRandomRule = new RandomGenerator(evenRandomRule);
         System.out.println("randomGeneratorListRandomRule.nextInts(n): " + randomGeneratorEvenRandomRule.nextInts(12));
+
+        RandomGenerator randomGeneratorOddTensRandomRule = new RandomGenerator(oddTensRandomRule);
+        System.out.println("randomGeneratorOddTensRandomRule.nextInts(n): " + randomGeneratorOddTensRandomRule.nextInts(12));
 
         System.out.println();
         System.out.println(randomGeneratorRangeRandomRule);
@@ -55,6 +77,8 @@ public class Main {
         System.out.println();
         System.out.println(randomGeneratorEvenRandomRule);
 
+        System.out.println();
+        System.out.println(randomGeneratorOddTensRandomRule);
         /**
          * 2
          * 3
