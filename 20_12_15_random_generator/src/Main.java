@@ -21,16 +21,16 @@ public class Main {
         for (int i = 0; i < 7; i++)
             System.out.println(listRandomRule.nextInt());
 
-        System.out.println(rangeRandomRule);
+        System.out.println(listRandomRule);
         System.out.println();
 
         // ___________________________
 
-        RandomGenerator randomGenerator = new RandomGenerator(rangeRandomRule);
-        System.out.println("randomGenerator.nextInts(n): " + randomGenerator.nextInts(12));
+        RandomGenerator randomGeneratorRangeRandomRule = new RandomGenerator(rangeRandomRule);
+        System.out.println("randomGeneratorRangeRandomRule.nextInts(n): " + randomGeneratorRangeRandomRule.nextInts(12));
 
-        RandomGenerator randomGeneratorViaList = new RandomGenerator(listRandomRule);
-        System.out.println("randomGenerator.nextInts(n): " + randomGeneratorViaList.nextInts(12));
+        RandomGenerator randomGeneratorListRandomRule = new RandomGenerator(listRandomRule);
+        System.out.println("randomGeneratorListRandomRule.nextInts(n): " + randomGeneratorListRandomRule.nextInts(12));
 
         /**
          * 17

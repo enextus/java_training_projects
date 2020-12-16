@@ -38,4 +38,12 @@ public class ListRandomRule implements RandomRule {
     public int nextInt() {
         return values.get(random.nextInt(values.size()));
     }
+
+    @Override
+    public String toString() {
+        return "ListRandomRule{" +
+                "values=" + values +
+                ", random=" + random +
+                '}';
+    }
 }
