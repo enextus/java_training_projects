@@ -23,7 +23,6 @@ public class OddTensRandomRule implements RandomRule {
         while (true) {
             int nextInt = random.nextInt(max);
             if ((nextInt % 2) != 0)
-                System.out.println(15/10);
                 return nextInt;
         }
     }

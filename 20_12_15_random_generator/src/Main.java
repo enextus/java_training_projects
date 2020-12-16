@@ -50,6 +50,7 @@ public class Main {
 
         for (int i = 0; i < 4; i++)
             System.out.println(oddTensRandomRule.nextInt());
+
         System.out.println(getLineNumber());
         System.out.println(oddTensRandomRule);
         System.out.println();
