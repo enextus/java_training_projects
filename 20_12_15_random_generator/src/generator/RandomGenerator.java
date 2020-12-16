@@ -15,7 +15,6 @@ public class RandomGenerator {
     }
 
     public List<Integer> nextInts(int n) {
-
         List<Integer> res = new ArrayList<>(n);
 
         for (int j = 1; j <= n; j++)
