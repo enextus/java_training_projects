@@ -36,7 +36,7 @@ public class Main {
         // ___________________________
 
 
-        OddTensRandomRule oddTensRandomRule = new OddTensRandomRule(900);
+        OddTensRandomRule oddTensRandomRule = new OddTensRandomRule(100);
 
         for (int i = 0; i < 3; i++)
             System.out.println(oddTensRandomRule.nextInt());
@@ -47,7 +47,7 @@ public class Main {
         // ___________________________
 
 
-        EvenTensRandomRule evenTensRandomRule = new EvenTensRandomRule(900);
+        EvenTensRandomRule evenTensRandomRule = new EvenTensRandomRule(100);
 
         for (int i = 0; i < 3; i++)
             System.out.println(evenTensRandomRule.nextInt());
