@@ -22,9 +22,8 @@ public class EvenRandomRule implements RandomRule {
 
         while (true) {
             int nextInt = random.nextInt(max);
-            if ((nextInt % 2) == 0) {
+            if ((nextInt % 2) == 0)
                 return nextInt;
-            }
         }
     }
 }
