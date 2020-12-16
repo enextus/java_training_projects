@@ -27,7 +27,7 @@ public class Main {
 
         // ___________________________
 
-        EvenRandomRule evenRandomRule = new EvenRandomRule(25);
+        EvenRandomRule evenRandomRule = new EvenRandomRule(100);
 
         for (int i = 0; i < 7; i++)
             System.out.println(evenRandomRule.nextInt());
