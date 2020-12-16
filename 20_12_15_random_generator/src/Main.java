@@ -81,42 +81,45 @@ public class Main {
         System.out.println();
         System.out.println(randomGeneratorOddTensRandomRule);
         /**
-         * 2
-         * 3
-         * 13
-         * 11
-         * 24
+         * 18
          * 16
-         * 21
+         * 1
+         * 24
          * RangeRandomRule{max=25, random=java.util.Random@682a0b20}
          *
-         * -3
-         * 0
          * 0
          * -3
-         * -3
-         * -3
+         * 11
          * 11
          * ListRandomRule{values=[-3, 0, 11], random=java.util.Random@4dd8dc3}
          *
-         * 14
-         * 14
-         * 90
-         * 32
-         * 4
-         * 22
-         * 36
+         * 46
+         * 28
+         * 0
+         * 2
          * EvenRandomRule{max=100, random=java.util.Random@568db2f2}
          *
-         * randomGeneratorRangeRandomRule.nextInts(n): [12, 1, 24, 10, 2, 7, 1, 2, 21, 22, 2, 23]
-         * randomGeneratorListRandomRule.nextInts(n): [-3, 0, 0, 0, 0, 0, 11, 11, 11, 11, 11, 11]
-         * randomGeneratorListRandomRule.nextInts(n): [56, 76, 80, 88, 66, 32, 58, 62, 52, 38, 54, 24]
+         * 115
+         * 221
+         * 217
+         * 229
+         * 54
+         * OddTensRandomRule{max=300, random=java.util.Random@2d98a335}
+         *
+         * randomGeneratorRangeRandomRule.nextInts(n): [12, 11, 3, 16, 9, 0, 6, 9, 14, 20, 17, 22]
+         * randomGeneratorListRandomRule.nextInts(n): [11, 11, 0, 11, 0, 11, -3, 11, 11, 0, -3, 11]
+         * randomGeneratorListRandomRule.nextInts(n): [90, 44, 0, 52, 4, 66, 88, 48, 26, 12, 96, 72]
+         * randomGeneratorOddTensRandomRule.nextInts(n): [145, 119, 17, 227, 199, 99, 3, 29, 123, 179, 105, 281]
          *
          * RandomGenerator{rule=RangeRandomRule{max=25, random=java.util.Random@682a0b20}}
          *
          * RandomGenerator{rule=ListRandomRule{values=[-3, 0, 11], random=java.util.Random@4dd8dc3}}
          *
          * RandomGenerator{rule=EvenRandomRule{max=100, random=java.util.Random@568db2f2}}
+         *
+         * RandomGenerator{rule=OddTensRandomRule{max=300, random=java.util.Random@2d98a335}}
+         *
+         * Process finished with exit code 0
          */
     }
 }
