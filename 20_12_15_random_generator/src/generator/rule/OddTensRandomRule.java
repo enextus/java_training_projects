@@ -5,7 +5,7 @@ import generator.RandomRule;
 import java.util.Random;
 
 /**
- * implementation of the interface named "OddTensRandomRule". The Random numbers in the range are odd.
+ * implementation of the interface named "OddTensRandomRule". The Random odd tens numbers.
  */
 public class OddTensRandomRule implements RandomRule {
 
@@ -23,7 +23,7 @@ public class OddTensRandomRule implements RandomRule {
         while (true) {
             int nextInt = random.nextInt(max);
             if ((nextInt % 2) != 0)
-                return nextInt;
+                return ((nextInt % 100) % 10) * 10;
         }
     }
 

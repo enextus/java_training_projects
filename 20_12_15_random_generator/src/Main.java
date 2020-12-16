@@ -46,7 +46,7 @@ public class Main {
         // ___________________________
 
 
-        OddTensRandomRule oddTensRandomRule = new OddTensRandomRule(300);
+        OddTensRandomRule oddTensRandomRule = new OddTensRandomRule(900);
 
         for (int i = 0; i < 4; i++)
             System.out.println(oddTensRandomRule.nextInt());
