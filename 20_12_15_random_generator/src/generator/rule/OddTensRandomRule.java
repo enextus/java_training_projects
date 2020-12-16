@@ -29,7 +29,7 @@ public class OddTensRandomRule implements RandomRule {
 
     @Override
     public String toString() {
-        return "EvenRandomRule{" +
+        return "OddTensRandomRule{" +
                 "max=" + max +
                 ", random=" + random +
                 '}';
