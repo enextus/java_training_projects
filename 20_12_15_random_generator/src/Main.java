@@ -32,6 +32,11 @@ public class Main {
         RandomGenerator randomGeneratorListRandomRule = new RandomGenerator(listRandomRule);
         System.out.println("randomGeneratorListRandomRule.nextInts(n): " + randomGeneratorListRandomRule.nextInts(12));
 
+        System.out.println();
+        System.out.println(randomGeneratorRangeRandomRule);
+        System.out.println();
+        System.out.println(randomGeneratorListRandomRule);
+
         /**
          * 17
          * 13
