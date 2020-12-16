@@ -1,18 +1,7 @@
-import generator.rule.EvenRandomRule;
-import generator.rule.ListRandomRule;
-import generator.rule.OddTensRandomRule;
-import generator.rule.RangeRandomRule;
+import generator.rule.*;
 import generator.RandomGenerator;
 
 public class Main {
-    /**
-     * Get the current line number.
-     *
-     * @return int - Current line number.
-     */
-    public static int getLineNumber() {
-        return Thread.currentThread().getStackTrace()[2].getLineNumber();
-    }
 
     public static void main(String[] args) {
 
@@ -52,19 +41,17 @@ public class Main {
         for (int i = 0; i < 3; i++)
             System.out.println(oddTensRandomRule.nextInt());
 
-        System.out.println(getLineNumber());
         System.out.println(oddTensRandomRule);
         System.out.println();
 
         // ___________________________
 
 
-        OddTensRandomRule evenTensRandomRule = new OddTensRandomRule(900);
+        EvenTensRandomRule evenTensRandomRule = new EvenTensRandomRule(900);
 
         for (int i = 0; i < 3; i++)
             System.out.println(evenTensRandomRule.nextInt());
 
-        System.out.println(getLineNumber());
         System.out.println(evenTensRandomRule);
         System.out.println();
 
