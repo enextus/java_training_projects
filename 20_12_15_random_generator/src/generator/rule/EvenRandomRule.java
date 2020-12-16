@@ -8,6 +8,13 @@ import java.util.Random;
  * implementation of the interface named "EvenRandomRule". The Random numbers in the range are even.
  */
 public class EvenRandomRule implements RandomRule {
+    @Override
+    public String toString() {
+        return "EvenRandomRule{" +
+                "max=" + max +
+                ", random=" + random +
+                '}';
+    }
 
     private int max;
     private Random random;

@@ -48,8 +48,12 @@ public class Main {
 
         System.out.println();
         System.out.println(randomGeneratorRangeRandomRule);
+
         System.out.println();
         System.out.println(randomGeneratorListRandomRule);
+
+        System.out.println();
+        System.out.println(randomGeneratorEvenRandomRule);
 
         /**
          * * 23
