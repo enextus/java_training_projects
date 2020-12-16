@@ -9,8 +9,11 @@ public class Main {
         for (char character = 'a'; character <= 'z'; character++) {
             alphabet += character;
             System.out.print(character);
-            System.out.print(alphabet);
+
         }
+
+        System.out.println();
+        System.out.print(alphabet);
 
         /*
         aaabbcdddd
