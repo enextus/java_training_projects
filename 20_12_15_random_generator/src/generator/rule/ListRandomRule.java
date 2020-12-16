@@ -30,7 +30,6 @@ public class ListRandomRule implements RandomRule {
     }
 
     private List<Integer> convertIntToList(int[] ints) {
-
         List<Integer> res = new ArrayList<>(ints.length);
 
         for (int i : ints)
