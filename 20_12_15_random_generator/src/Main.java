@@ -13,6 +13,7 @@ public class Main {
     public static int getLineNumber() {
         return Thread.currentThread().getStackTrace()[2].getLineNumber();
     }
+
     public static void main(String[] args) {
 
         RangeRandomRule rangeRandomRule = new RangeRandomRule(25);
@@ -57,6 +58,18 @@ public class Main {
 
         // ___________________________
 
+
+        OddTensRandomRule evenTensRandomRule = new OddTensRandomRule(900);
+
+        for (int i = 0; i < 3; i++)
+            System.out.println(evenTensRandomRule.nextInt());
+
+        System.out.println(getLineNumber());
+        System.out.println(evenTensRandomRule);
+        System.out.println();
+
+        // ___________________________
+
         RandomGenerator randomGeneratorRangeRandomRule = new RandomGenerator(rangeRandomRule);
         System.out.println("randomGeneratorRangeRandomRule.nextInts(n): " + randomGeneratorRangeRandomRule.nextInts(12));
 
@@ -69,6 +82,10 @@ public class Main {
         RandomGenerator randomGeneratorOddTensRandomRule = new RandomGenerator(oddTensRandomRule);
         System.out.println("randomGeneratorOddTensRandomRule.nextInts(n): " + randomGeneratorOddTensRandomRule.nextInts(12));
 
+        RandomGenerator randomGeneratorEvenTensRandomRule = new RandomGenerator(evenTensRandomRule);
+        System.out.println("randomGeneratorEvenTensRandomRule.nextInts(n): " + randomGeneratorEvenTensRandomRule.nextInts(12));
+
+
         System.out.println();
         System.out.println(randomGeneratorRangeRandomRule);
 
@@ -80,6 +97,9 @@ public class Main {
 
         System.out.println();
         System.out.println(randomGeneratorOddTensRandomRule);
+
+        System.out.println();
+        System.out.println(randomGeneratorEvenTensRandomRule);
         /**
          * 18
          * 16

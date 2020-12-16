@@ -2,7 +2,7 @@ package generator.rule;
 
 import generator.RandomRule;
 
-        import java.util.Random;
+import java.util.Random;
 
 /**
  * implementation of the interface named "OddTensRandomRule". The Random odd tens numbers.
