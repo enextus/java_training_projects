@@ -26,12 +26,12 @@ public class ListRandomRule implements RandomRule {
 
     private List<Integer> convertIntToList(int[] ints) {
 
-        List<Integer> intList = new ArrayList<>(ints.length);
+        List<Integer> res = new ArrayList<>(ints.length);
 
         for (int i : ints)
-            intList.add(i);
+            res.add(i);
 
-        return intList;
+        return res;
     }
 
     @Override
