@@ -1,3 +1,4 @@
+import generator.rule.EvenRandomRule;
 import generator.rule.ListRandomRule;
 import generator.rule.RangeRandomRule;
 import generator.RandomGenerator;
@@ -26,11 +27,24 @@ public class Main {
 
         // ___________________________
 
+        EvenRandomRule evenRandomRule = new EvenRandomRule(25);
+
+        for (int i = 0; i < 7; i++)
+            System.out.println(evenRandomRule.nextInt());
+
+        System.out.println(evenRandomRule);
+        System.out.println();
+
+        // ___________________________
+
         RandomGenerator randomGeneratorRangeRandomRule = new RandomGenerator(rangeRandomRule);
         System.out.println("randomGeneratorRangeRandomRule.nextInts(n): " + randomGeneratorRangeRandomRule.nextInts(12));
 
         RandomGenerator randomGeneratorListRandomRule = new RandomGenerator(listRandomRule);
         System.out.println("randomGeneratorListRandomRule.nextInts(n): " + randomGeneratorListRandomRule.nextInts(12));
+
+        RandomGenerator randomGeneratorEvenRandomRule = new RandomGenerator(evenRandomRule);
+        System.out.println("randomGeneratorListRandomRule.nextInts(n): " + randomGeneratorEvenRandomRule.nextInts(12));
 
         System.out.println();
         System.out.println(randomGeneratorRangeRandomRule);
@@ -38,8 +52,7 @@ public class Main {
         System.out.println(randomGeneratorListRandomRule);
 
         /**
-         * /home/enextus/.jdks/openjdk-14.0.2/bin/java -javaagent:/snap/intellij-idea-ultimate/263/lib/idea_rt.jar=38657:/snap/intellij-idea-ultimate/263/bin -Dfile.encoding=UTF-8 -classpath /home/enextus/IdeaProjects/java_training_projects/20_12_15_random_generator/out/production/20_12_15_random_generator:/home/enextus/IdeaProjects/java_training_projects/20_12_15_random_generator/lib/junit-jupiter-5.4.2.jar:/home/enextus/IdeaProjects/java_training_projects/20_12_15_random_generator/lib/junit-jupiter-api-5.4.2.jar:/home/enextus/IdeaProjects/java_training_projects/20_12_15_random_generator/lib/apiguardian-api-1.0.0.jar:/home/enextus/IdeaProjects/java_training_projects/20_12_15_random_generator/lib/opentest4j-1.1.1.jar:/home/enextus/IdeaProjects/java_training_projects/20_12_15_random_generator/lib/junit-platform-commons-1.4.2.jar:/home/enextus/IdeaProjects/java_training_projects/20_12_15_random_generator/lib/junit-jupiter-params-5.4.2.jar:/home/enextus/IdeaProjects/java_training_projects/20_12_15_random_generator/lib/junit-jupiter-engine-5.4.2.jar:/home/enextus/IdeaProjects/java_training_projects/20_12_15_random_generator/lib/junit-platform-engine-1.4.2.jar Main
-         * 23
+         * * 23
          * 6
          * 2
          * 3
