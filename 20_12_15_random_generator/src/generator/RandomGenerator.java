@@ -22,4 +22,11 @@ public class RandomGenerator {
 
         return res;
     }
+
+    @Override
+    public String toString() {
+        return "RandomGenerator{" +
+                "rule=" + rule +
+                '}';
+    }
 }
