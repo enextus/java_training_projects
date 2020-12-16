@@ -34,25 +34,25 @@ public class Main {
 
         /**
          * 17
-         * 22
-         * 2
-         * 4
-         * 12
          * 13
+         * 18
+         * 4
+         * 24
          * 19
+         * 14
          * RangeRandomRule{max=25, random=java.util.Random@682a0b20}
          *
-         * -3
          * 0
-         * 11
-         * 11
-         * 11
-         * 11
+         * 0
          * -3
-         * RangeRandomRule{max=25, random=java.util.Random@682a0b20}
+         * 11
+         * 0
+         * 0
+         * 0
+         * ListRandomRule{values=[-3, 0, 11], random=java.util.Random@4dd8dc3}
          *
-         * randomGenerator.nextInts(n): [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-         * randomGenerator.nextInts(n): [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+         * randomGeneratorRangeRandomRule.nextInts(n): [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+         * randomGeneratorListRandomRule.nextInts(n): [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
          *
          * Process finished with exit code 0
          */
