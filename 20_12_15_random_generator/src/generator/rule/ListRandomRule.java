@@ -24,6 +24,11 @@ public class ListRandomRule implements RandomRule {
         this.random = new Random();
     }
 
+    @Override
+    public int nextInt() {
+        return values.get(random.nextInt(values.size()));
+    }
+
     private List<Integer> convertIntToList(int[] ints) {
 
         List<Integer> res = new ArrayList<>(ints.length);
@@ -32,11 +37,6 @@ public class ListRandomRule implements RandomRule {
             res.add(i);
 
         return res;
-    }
-
-    @Override
-    public int nextInt() {
-        return values.get(random.nextInt(values.size()));
     }
 
     @Override
