@@ -8,19 +8,23 @@ public class Main {
 
         RangeRandomRule rangeRandomRule = new RangeRandomRule(25);
 
-        System.out.println(rangeRandomRule.nextInt());
-        System.out.println();
-
-        System.out.println(rangeRandomRule.hashCode());
-        System.out.println();
+        for (int i = 0; i < 7; i++)
+            System.out.println(rangeRandomRule.nextInt());
 
         System.out.println(rangeRandomRule);
         System.out.println();
+
+        // ___________________________
 
         ListRandomRule listRandomRule = new ListRandomRule(new int[]{-3, 0, 11});
 
         for (int i = 0; i < 7; i++)
             System.out.println(listRandomRule.nextInt());
+
+        System.out.println(rangeRandomRule);
+        System.out.println();
+
+        // ___________________________
 
         RandomGenerator randomGenerator = new RandomGenerator(rangeRandomRule);
         System.out.println("randomGenerator.nextInts(n): " + randomGenerator.nextInts(12));
@@ -29,19 +33,24 @@ public class Main {
         System.out.println("randomGenerator.nextInts(n): " + randomGeneratorViaList.nextInts(12));
 
         /**
+         * 17
          * 22
+         * 2
+         * 4
+         * 12
+         * 13
+         * 19
+         * RangeRandomRule{max=25, random=java.util.Random@682a0b20}
          *
-         * 303563356
-         *
-         * RangeRandomRule{max=25, random=java.util.Random@3d075dc0}
-         *
-         * 0
          * -3
          * 0
          * 11
          * 11
-         * 0
+         * 11
+         * 11
          * -3
+         * RangeRandomRule{max=25, random=java.util.Random@682a0b20}
+         *
          * randomGenerator.nextInts(n): [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
          * randomGenerator.nextInts(n): [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
          *
