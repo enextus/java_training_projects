@@ -17,7 +17,7 @@ public class Main {
 
         RangeRandomRule rangeRandomRule = new RangeRandomRule(25);
 
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 3; i++)
             System.out.println(rangeRandomRule.nextInt());
 
         System.out.println(rangeRandomRule);
@@ -27,7 +27,7 @@ public class Main {
 
         ListRandomRule listRandomRule = new ListRandomRule(new int[]{-3, 0, 11});
 
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 3; i++)
             System.out.println(listRandomRule.nextInt());
 
         System.out.println(listRandomRule);
@@ -37,7 +37,7 @@ public class Main {
 
         EvenRandomRule evenRandomRule = new EvenRandomRule(100);
 
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 3; i++)
             System.out.println(evenRandomRule.nextInt());
 
         System.out.println(evenRandomRule);
@@ -48,7 +48,7 @@ public class Main {
 
         OddTensRandomRule oddTensRandomRule = new OddTensRandomRule(900);
 
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 3; i++)
             System.out.println(oddTensRandomRule.nextInt());
 
         System.out.println(getLineNumber());
