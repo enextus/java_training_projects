@@ -56,32 +56,42 @@ public class Main {
         System.out.println(randomGeneratorEvenRandomRule);
 
         /**
-         * * 23
-         * 6
          * 2
          * 3
-         * 19
-         * 5
+         * 13
+         * 11
+         * 24
+         * 16
          * 21
          * RangeRandomRule{max=25, random=java.util.Random@682a0b20}
          *
+         * -3
          * 0
          * 0
          * -3
          * -3
-         * 0
+         * -3
          * 11
-         * -3
          * ListRandomRule{values=[-3, 0, 11], random=java.util.Random@4dd8dc3}
          *
-         * randomGeneratorRangeRandomRule.nextInts(n): [7, 5, 12, 19, 5, 6, 9, 18, 3, 12, 11, 7]
-         * randomGeneratorListRandomRule.nextInts(n): [0, 0, -3, 11, -3, 0, 11, 0, -3, 0, 11, -3]
+         * 14
+         * 14
+         * 90
+         * 32
+         * 4
+         * 22
+         * 36
+         * EvenRandomRule{max=100, random=java.util.Random@568db2f2}
+         *
+         * randomGeneratorRangeRandomRule.nextInts(n): [12, 1, 24, 10, 2, 7, 1, 2, 21, 22, 2, 23]
+         * randomGeneratorListRandomRule.nextInts(n): [-3, 0, 0, 0, 0, 0, 11, 11, 11, 11, 11, 11]
+         * randomGeneratorListRandomRule.nextInts(n): [56, 76, 80, 88, 66, 32, 58, 62, 52, 38, 54, 24]
          *
          * RandomGenerator{rule=RangeRandomRule{max=25, random=java.util.Random@682a0b20}}
          *
          * RandomGenerator{rule=ListRandomRule{values=[-3, 0, 11], random=java.util.Random@4dd8dc3}}
          *
-         * Process finished with exit code 0
+         * RandomGenerator{rule=EvenRandomRule{max=100, random=java.util.Random@568db2f2}}
          */
     }
 }
