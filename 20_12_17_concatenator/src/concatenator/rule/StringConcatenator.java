@@ -1,4 +1,12 @@
 package concatenator.rule;
 
-public class StringConcatenator {
+import concatenator.IConcatenator;
+
+public class StringConcatenator implements IConcatenator {
+
+    @Override
+    public int concatenate() {
+
+        return -1;
+    }
 }

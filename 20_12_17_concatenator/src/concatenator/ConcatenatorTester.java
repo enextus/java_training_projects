@@ -6,11 +6,11 @@ import java.util.List;
 /**
  * polymorphism
  */
-public class Concatenator {
+public class ConcatenatorTester {
 
-    private Concatenator rule;
+    private IConcatenator rule;
 
-    public RandomGenerator(RandomRule rule) {
+    public ConcatenatorTester(IConcatenator rule) {
         this.rule = rule;
     }
 
@@ -18,7 +18,7 @@ public class Concatenator {
         List<Integer> res = new ArrayList<>(n);
 
         for (int j = 1; j <= n; j++)
-            res.add(rule.nextInt());
+            res.add(rule.concatenate());
 
         return res;
     }
