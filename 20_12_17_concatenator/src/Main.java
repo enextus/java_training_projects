@@ -41,14 +41,14 @@ public class Main {
 
         //string test
         test = new ConcatenationTest(stringConcatenator);
-        test.test(100000, "Evgeny Borisovich");
+        test.test(100000, "Santa Claus");
 
         //string builder test
         test = new ConcatenationTest(stringBuilderConcatenator);
-        test.test(10000000, "Evgeny Borisovich");
+        test.test(100000, "Santa Claus");
 
         //string buffer test
         test = new ConcatenationTest(stringBufferConcatenator);
-        test.test(10000000, "Evgeny Borisovich");
+        test.test(100000, "Santa Claus");
     }
 }
