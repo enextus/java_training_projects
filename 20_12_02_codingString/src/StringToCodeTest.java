@@ -10,6 +10,7 @@ class StringToCodeTest {
         String alphabet = "";
 
         for (char character = 'a'; character <= 'z'; character++) {
+
             alphabet += character;
 
             if (alphabet.length() <= 1)
@@ -21,7 +22,6 @@ class StringToCodeTest {
 
         StringToCode stringToCode = new StringToCode("abcdefghijklmnopqrstuvwxyz");
         assertTrue(stringToCode instanceof StringToCode);
-
     }
 
     @Test
