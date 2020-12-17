@@ -5,13 +5,10 @@ import concatenator.IConcatenator;
 public class StringConcatenator implements IConcatenator {
 
     @Override
-    public String concatenate(String[] arrayToConcatenate) {
-
+    public void concatenate(String[] arrayToConcatenate) {
         String res = "";
 
         for (String str : arrayToConcatenate)
-            s
-
-        return "";
+            res += str;
     }
 }
