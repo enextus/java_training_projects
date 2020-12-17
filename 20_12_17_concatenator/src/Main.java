@@ -1,11 +1,10 @@
-import concatenator.ConcatenationTest;
 import concatenator.IConcatenator;
+import concatenator.ConcatenationTest;
 import concatenator.concatenator.StringBufferConcatenator;
 import concatenator.concatenator.StringBuilderConcatenator;
 import concatenator.concatenator.StringConcatenator;
 
 public class Main {
-
     public static void main(String[] args) {
 // time test
 //        String res = "";
@@ -39,12 +38,15 @@ public class Main {
         IConcatenator stringBufferConcatenator = new StringBufferConcatenator();
 
         ConcatenationTest test;
+
         //string test
         test = new ConcatenationTest(stringConcatenator);
         test.test(100000, "Evgeny Borisovich");
+
         //string builder test
         test = new ConcatenationTest(stringBuilderConcatenator);
         test.test(10000000, "Evgeny Borisovich");
+
         //string buffer test
         test = new ConcatenationTest(stringBufferConcatenator);
         test.test(10000000, "Evgeny Borisovich");
