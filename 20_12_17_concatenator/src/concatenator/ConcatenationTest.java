@@ -1,4 +1,4 @@
-import concatenator.IConcatenator;
+package concatenator;
 
 import java.util.Arrays;
 
@@ -16,11 +16,13 @@ public class ConcatenationTest {
         long beforeTest = System.currentTimeMillis();
         concatenator.concatenate(arrayToConcatenate);
         long afterTest = System.currentTimeMillis();
+
         System.out.println(afterTest - beforeTest);
     }
 
     private String[] composeArray(int times, String text) {
         String[] strings = new String[times];
+
         Arrays.fill(strings, text);
         return strings;
     }
