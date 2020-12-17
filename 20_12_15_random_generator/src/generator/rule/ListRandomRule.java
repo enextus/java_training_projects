@@ -15,7 +15,7 @@ public class ListRandomRule implements RandomRule {
     private Random random;
 
     public ListRandomRule(List<Integer> numbers) {
-        this.values = new ArrayList<>(numbers);
+        this.values = new ArrayList<>(numbers); // ArrayList так как работает values.get О(1)
         this.random = new Random();
     }
 
