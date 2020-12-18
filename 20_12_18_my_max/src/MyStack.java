@@ -4,6 +4,7 @@ class GFG {
     // A user defined stack that supports getMax() in
     // addition to push() and pop()
     static class MyStack {
+
         Stack<Integer> s = new Stack<Integer>();
         int maxEle;
 
@@ -17,7 +18,6 @@ class GFG {
             else
                 System.out.print("Maximum Element in" +
                         "the stack is: " + maxEle + "\n");
-
         }
 
         // Prints top element of MyStack
