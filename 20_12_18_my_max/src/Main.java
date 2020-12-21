@@ -24,18 +24,12 @@ public class Main {
 
         System.out.println();
         s.pop();
-        s.getMax();
+        s.pop();
+        s.pop();
+        s.pop();
+        s.pop();
         s.pop();
         s.getMax();
-        s.pop();
-        s.getMax();
-        s.pop();
-        s.getMax();
-        s.pop();
-        s.getMax();
-        s.pop();
-        s.getMax();
-
 
         System.out.println();
 

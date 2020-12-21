@@ -9,8 +9,7 @@ class GFG {
         int maxEle;
 
         // getMax()
-        //
-        // Prints maximum element of MyStack
+        // Get maximum element of MyStack
         void getMax() {
             if (s.empty())
                 System.out.print("Stack is empty\n");
@@ -18,13 +17,12 @@ class GFG {
                 // variable maxEle stores the maximum element
                 // in the stack.
             else
-                System.out.print("Maximum Element in" +
-                        "the stack is: " + maxEle + "\n");
+                System.out.print("Element with bigiest value" +
+                        ": " + maxEle + "\n");
         }
 
         // getLast()
-        //
-        // Prints top element of MyStack
+        // Get top element of MyStack
         // The method returns the element at the top of the Stack
         // else returns NULL if the Stack is empty.
         void peek() {
@@ -34,19 +32,18 @@ class GFG {
                 return;
             }
 
-            int t = s.peek(); // Top element. getLast()
+            int topElement = s.peek(); // Top element. getLast()
 
-            System.out.print("Top Most Element is: ");
+            System.out.print("Top element is: ");
 
             // If t < maxEle means maxEle stores value of t.
-            if (t > maxEle)
+            if (topElement > maxEle)
                 System.out.print(maxEle);
             else
-                System.out.print(t);
+                System.out.print(topElement);
         }
 
         // removeLast()
-        //
         // Remove the top element from MyStack
         void pop() {
             if (s.empty()) {
@@ -55,21 +52,20 @@ class GFG {
             }
 
             System.out.print("Top element removed: ");
-            int t = s.peek();
+            int topElement = s.peek();
             s.pop();
 
             // Maximum will change as the maximum element
             // of the stack is being removed.
-            if (t > maxEle) {
+            if (topElement > maxEle) {
                 System.out.print(maxEle + "\n");
-                maxEle = 2 * maxEle - t;
+                maxEle = 2 * maxEle - topElement;
             } else
-                System.out.print(t + "\n");
+                System.out.print(topElement + "\n");
         }
 
         // addLast()
-        //
-        // The push(Object item) method is used to Pushes an item
+        // The push(Object item) method is used to pushes an item
         // onto the top of this stack.
         void push(int x) {
             // Insert new number into the stack
