@@ -55,18 +55,16 @@ class GFG {
             int topElement = s.peek();
             s.pop();
 
-            // Maximum will change as the maximum element
-            // of the stack is being removed.
+            // Maximum will change as the maximum element of the stack is being removed.
             if (topElement > maxEle) {
                 System.out.print(maxEle + "\n");
                 maxEle = 2 * maxEle - topElement;
             } else
-                System.out.print(topElement + "\n");
+                System.out.println(topElement + "\n");
         }
 
         // addLast()
-        // The push(Object item) method is used to pushes an item
-        // onto the top of this stack.
+        // The push(Object item) method is used to pushes an item onto the top of this stack.
         void push(int x) {
             // Insert new number into the stack
             if (s.empty()) {
