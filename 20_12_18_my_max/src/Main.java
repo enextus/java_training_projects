@@ -1,35 +1,51 @@
 public class Main {
-    /**
-     * Get the current line number.
-     *
-     * @return int - Current line number.
-     */
-    public static int getLineNumber() {
-        return Thread.currentThread().getStackTrace()[2].getLineNumber();
-    }
 
     public static void main(String[] args) {
 
         GFG.MyStack s = new GFG.MyStack();
+        s.push(144);
+        s.push(44);
+        s.push(77);
+        s.push(7);
+        s.push(44);
+        s.push(34);
+        s.push(344);
+
         s.push(3);
         s.push(5);
-        System.out.println(getLineNumber());
         s.getMax();
+
+        System.out.println();
 
         s.push(7);
         s.push(19);
-        System.out.println(getLineNumber());
+        s.push(60);
         s.getMax();
 
-        System.out.println(getLineNumber());
+        System.out.println();
         s.pop();
-        System.out.println(getLineNumber());
+        s.getMax();
+        s.pop();
+        s.getMax();
+        s.pop();
+        s.getMax();
+        s.pop();
+        s.getMax();
+        s.pop();
+        s.getMax();
+        s.pop();
         s.getMax();
 
-        System.out.println(getLineNumber());
-        s.pop();
 
-        System.out.println(getLineNumber());
-        s.peek();
+        System.out.println();
+
+        //s.pop();
+        //s.peek();
     }
 }
+
+
+// getLast()
+// removeLast()
+// addLast()
+// https://www.geeksforgeeks.org/find-maximum-in-a-stack-in-o1-time-and-o1-extra-space/
