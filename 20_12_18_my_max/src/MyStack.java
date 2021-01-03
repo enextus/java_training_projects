@@ -82,7 +82,8 @@ class MyStack {
             System.out.print(topElement);
     }
 
-    int size() {
-        return stack.size();
+    void size() {
+        System.out.print("Stack size is: ");
+        System.out.println(stack.size());
     }
 }
