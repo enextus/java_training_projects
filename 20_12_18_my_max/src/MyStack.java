@@ -19,7 +19,6 @@ class MyStack {
             maxElement = element;
             stack.push(element);
             System.out.print("Number inserted: " + element + "\n");
-            return;
         }
 
         if (element > maxElement) {         // If new number is greater than maxElement
