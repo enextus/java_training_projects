@@ -10,7 +10,7 @@ public class Main {
 
         System.out.println();
 
-        myStack.addLast(5);
+/*        myStack.addLast(5);
         myStack.getLast();
         myStack.getMax();
         myStack.size();
@@ -55,7 +55,7 @@ public class Main {
         myStack.removeLast();
         myStack.getLast();
         myStack.getMax();
-        myStack.size();
+        myStack.size();*/
 
         System.out.println();
     }
