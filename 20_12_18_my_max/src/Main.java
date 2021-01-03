@@ -34,11 +34,10 @@ public class Main {
 
         System.out.println();
 
-        //s.pop();
-        //s.peek();
+        // myStack.pop();
+        // myStack.peek();
     }
 }
-
 
 // getLast()
 // removeLast()
