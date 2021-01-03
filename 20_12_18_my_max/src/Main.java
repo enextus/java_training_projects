@@ -4,33 +4,41 @@ public class Main {
 
         MyStack myStack = new MyStack();
 
-        myStack.push(144);
-        myStack.push(44);
-        myStack.push(77);
-        myStack.push(7);
-        myStack.push(44);
-        myStack.push(34);
-        myStack.push(344);
-
-        myStack.push(3);
-        myStack.push(5);
         myStack.getMax();
 
-        System.out.println();
+        myStack.addLast(144);
 
-        myStack.push(7);
-        myStack.push(19);
-        myStack.push(60);
         myStack.getMax();
 
-        System.out.println();
-        myStack.pop();
-        myStack.pop();
-        myStack.pop();
-        myStack.pop();
-        myStack.pop();
-        myStack.pop();
+        myStack.addLast(44);
+        myStack.addLast(77);
+        myStack.addLast(700);
+
         myStack.getMax();
+
+//        myStack.push(44);
+//        myStack.push(34);
+//        myStack.push(344);
+//
+//        myStack.push(3);
+//        myStack.push(5);
+//        myStack.getMax();
+//
+//        System.out.println();
+//
+//        myStack.push(7);
+//        myStack.push(19);
+//        myStack.push(60);
+//        myStack.getMax();
+//
+//        System.out.println();
+//        myStack.pop();
+//        myStack.pop();
+//        myStack.pop();
+//        myStack.pop();
+//        myStack.pop();
+//        myStack.pop();
+//        myStack.getMax();
 
         System.out.println();
 
