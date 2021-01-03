@@ -4,13 +4,13 @@ class GFG {
     // A user defined stack that supports getMax() in addition to push() and pop()
     static class MyStack {
 
-        Stack<Integer> s = new Stack<Integer>();
+        Stack<Integer> stack = new Stack<Integer>();
         int maxEle;
 
         // getMax()
         // Get maximum element of MyStack
         void getMax() {
-            if (s.empty())
+            if (stack.empty())
                 System.out.print("Stack is empty\n");
 
                 // variable maxEle stores the maximum element
@@ -25,13 +25,13 @@ class GFG {
         // The method returns the element at the top of the Stack
         // else returns NULL if the Stack is empty.
         void peek() {
-            if (s.empty()) {
+            if (stack.empty()) {
 
                 System.out.print("Stack is empty ");
                 return;
             }
 
-            int topElement = s.peek(); // Top element. getLast()
+            int topElement = stack.peek(); // Top element. getLast()
 
             System.out.print("Top element is: ");
 
@@ -45,14 +45,14 @@ class GFG {
         // removeLast()
         // Remove the top element from MyStack
         void pop() {
-            if (s.empty()) {
+            if (stack.empty()) {
                 System.out.print("Stack is empty\n");
                 return;
             }
 
             System.out.print("Top element removed: ");
-            int topElement = s.peek();
-            s.pop();
+            int topElement = stack.peek();
+            stack.pop();
 
             // Maximum will change as the maximum element of the stack is being removed.
             if (topElement > maxEle) {
@@ -66,19 +66,19 @@ class GFG {
         // The push(Object item) method is used to pushes an item onto the top of this stack.
         void push(int x) {
             // Insert new number into the stack
-            if (s.empty()) {
+            if (stack.empty()) {
                 maxEle = x;
-                s.push(x);
+                stack.push(x);
                 System.out.print("Number inserted: " + x + "\n");
                 return;
             }
 
             // If new number is greater than maxEle
             if (x > maxEle) {
-                s.push(2 * x - maxEle);
+                stack.push(2 * x - maxEle);
                 maxEle = x;
             } else // If new number is less than maxEle
-                s.push(x);
+                stack.push(x);
 
             System.out.print("Number inserted: " + x + "\n");
         }
