@@ -5,7 +5,7 @@ class GFG {
     static class MyStack {
 
         Stack<Integer> stack = new Stack<Integer>();
-        int maxEle;
+        int maxElement;
 
         // getMax()
         // Get maximum element of MyStack
@@ -17,7 +17,7 @@ class GFG {
                 // in the stack.
             else
                 System.out.print("Element with bigiest value" +
-                        ": " + maxEle + "\n");
+                        ": " + maxElement + "\n");
         }
 
         // getLast()
@@ -36,8 +36,8 @@ class GFG {
             System.out.print("Top element is: ");
 
             // If t < maxEle means maxEle stores value of t.
-            if (topElement > maxEle)
-                System.out.print(maxEle);
+            if (topElement > maxElement)
+                System.out.print(maxElement);
             else
                 System.out.print(topElement);
         }
@@ -55,9 +55,9 @@ class GFG {
             stack.pop();
 
             // Maximum will change as the maximum element of the stack is being removed.
-            if (topElement > maxEle) {
-                System.out.print(maxEle + "\n");
-                maxEle = 2 * maxEle - topElement;
+            if (topElement > maxElement) {
+                System.out.print(maxElement + "\n");
+                maxElement = 2 * maxElement - topElement;
             } else
                 System.out.println(topElement + "\n");
         }
@@ -67,16 +67,16 @@ class GFG {
         void push(int x) {
             // Insert new number into the stack
             if (stack.empty()) {
-                maxEle = x;
+                maxElement = x;
                 stack.push(x);
                 System.out.print("Number inserted: " + x + "\n");
                 return;
             }
 
             // If new number is greater than maxEle
-            if (x > maxEle) {
-                stack.push(2 * x - maxEle);
-                maxEle = x;
+            if (x > maxElement) {
+                stack.push(2 * x - maxElement);
+                maxElement = x;
             } else // If new number is less than maxEle
                 stack.push(x);
 
