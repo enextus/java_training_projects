@@ -1,6 +1,5 @@
 import java.util.Stack;
 
-
 // A user defined stack that supports getMax() in addition to push() and pop()
 class MyStack {
 

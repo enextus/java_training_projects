@@ -2,34 +2,35 @@ public class Main {
 
     public static void main(String[] args) {
 
-        MyStack s = new MyStack();
-        s.push(144);
-        s.push(44);
-        s.push(77);
-        s.push(7);
-        s.push(44);
-        s.push(34);
-        s.push(344);
+        MyStack myStack = new MyStack();
 
-        s.push(3);
-        s.push(5);
-        s.getMax();
+        myStack.push(144);
+        myStack.push(44);
+        myStack.push(77);
+        myStack.push(7);
+        myStack.push(44);
+        myStack.push(34);
+        myStack.push(344);
 
-        System.out.println();
-
-        s.push(7);
-        s.push(19);
-        s.push(60);
-        s.getMax();
+        myStack.push(3);
+        myStack.push(5);
+        myStack.getMax();
 
         System.out.println();
-        s.pop();
-        s.pop();
-        s.pop();
-        s.pop();
-        s.pop();
-        s.pop();
-        s.getMax();
+
+        myStack.push(7);
+        myStack.push(19);
+        myStack.push(60);
+        myStack.getMax();
+
+        System.out.println();
+        myStack.pop();
+        myStack.pop();
+        myStack.pop();
+        myStack.pop();
+        myStack.pop();
+        myStack.pop();
+        myStack.getMax();
 
         System.out.println();
 
