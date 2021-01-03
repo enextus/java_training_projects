@@ -15,17 +15,16 @@ class MyStack {
 
     public int addLast(int element) {
         if (stack.empty()) {
-
             maxElement = element;
             stack.push(element);
 
             return element;
         }
 
-        if (element > maxElement) {         // If new number is greater than maxElement
+        if (element > maxElement) {
             stack.push(2 * element - maxElement);
             maxElement = element;
-        } else                              // If new number is less than maxElement
+        } else
             stack.push(element);
 
         return element;
