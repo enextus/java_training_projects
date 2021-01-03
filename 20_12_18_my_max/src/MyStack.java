@@ -1,6 +1,6 @@
 import java.util.Stack;
 
-// A user defined stack that supports getMax()
+// Demonstration of an user defined stack that supports getMax()
 class MyStack {
 
     Stack<Integer> stack = new Stack<Integer>();
