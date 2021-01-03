@@ -7,16 +7,14 @@ class GFG {
         Stack<Integer> stack = new Stack<Integer>();
         int maxElement;
 
-        // getMax()
-        // Get maximum element of MyStack
+        // getMax() : Get maximum element of MyStack
         void getMax() {
             if (stack.empty())
                 System.out.print("Stack is empty\n");
 
-                // variable maxEle stores the maximum element
-                // in the stack.
+                // variable maxElement stores in self the maximum element of the stack.
             else
-                System.out.print("Element with bigiest value" +
+                System.out.print("Element with biggest value" +
                         ": " + maxElement + "\n");
         }
 
