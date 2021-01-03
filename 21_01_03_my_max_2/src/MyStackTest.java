@@ -11,8 +11,14 @@ class MyStackTest {
         assertThrows(IndexOutOfBoundsException.class, () -> myStack.getLast());
     }
 
+
     @Test
-    public void testRemoveLast_not_empty_Stack() {
+    public void testAddLast() {
+
+    }
+
+    @Test
+    public void testGetLast_not_empty_Stack() {
         myStack.addLast(0);
         assertEquals(0, myStack.getLast());
 
@@ -45,7 +51,4 @@ class MyStackTest {
     void getMax() {
     }
 
-    @Test
-    public void addLast() {
-    }
 }
