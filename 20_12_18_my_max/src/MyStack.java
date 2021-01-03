@@ -7,18 +7,24 @@ class MyStack {
     int maxElement;
 
     void getMax() {
-        if (stack.empty())
+        if (stack.empty()) {
+
             System.out.print("Stack is empty\n");
-        else
-            System.out.print("Element with biggest value" +
-                    ": " + maxElement + "\n");
+            return;
+        }
+
+        System.out.print("Element with biggest value" +
+                ": " + maxElement + "\n");
     }
 
     void addLast(int element) {
         if (stack.empty()) {
+
             maxElement = element;
             stack.push(element);
+
             System.out.print("Number inserted: " + element + "\n");
+            return;
         }
 
         if (element > maxElement) {         // If new number is greater than maxElement
@@ -32,6 +38,7 @@ class MyStack {
 
     void removeLast() {
         if (stack.empty()) {
+
             System.out.print("Stack is empty\n");
             return;
         }

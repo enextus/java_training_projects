@@ -4,6 +4,12 @@ public class Main {
 
         MyStack myStack = new MyStack();
 
+        myStack.getLast();
+        myStack.getMax();
+        myStack.size();
+
+        System.out.println();
+        
         myStack.addLast(5);
         myStack.getLast();
         myStack.getMax();
