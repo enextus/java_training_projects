@@ -1,6 +1,6 @@
 import java.util.Stack;
 
-// A user defined stack that supports getMax() in addition to push() and pop()
+// A user defined stack that supports getMax()
 class MyStack {
 
     Stack<Integer> stack = new Stack<Integer>();
@@ -9,15 +9,12 @@ class MyStack {
     void getMax() {
         if (stack.empty())
             System.out.print("Stack is empty\n");
-
-            // variable maxElement stores in self the maximum element of the stack.
         else
             System.out.print("Element with biggest value" +
                     ": " + maxElement + "\n");
     }
 
     void addLast(int element) {
-        // Insert new number into the stack
         if (stack.empty()) {
             maxElement = element;
             stack.push(element);
@@ -25,11 +22,10 @@ class MyStack {
             return;
         }
 
-        // If new number is greater than maxElement
-        if (element > maxElement) {
+        if (element > maxElement) {         // If new number is greater than maxElement
             stack.push(2 * element - maxElement);
             maxElement = element;
-        } else // If new number is less than maxElement
+        } else                              // If new number is less than maxElement
             stack.push(element);
 
         System.out.print("Number inserted: " + element + "\n");
@@ -45,8 +41,8 @@ class MyStack {
         int topElement = stack.peek();
         stack.pop();
 
-        // Maximum will change as the maximum element of the stack is being removed.
-        if (topElement > maxElement) {
+
+        if (topElement > maxElement) {      // Maximum will change as the maximum element of the stack is being removed.
             System.out.print(maxElement + "\n");
             maxElement = 2 * maxElement - topElement;
         } else
@@ -60,12 +56,11 @@ class MyStack {
             return;
         }
 
-        int topElement = stack.peek(); // Top element. getLast()
+        int topElement = stack.peek();      // Top element. getLast()
 
         System.out.print("Top element is: ");
 
-        // If t < maxElement means maxElement stores value of t.
-        if (topElement > maxElement)
+        if (topElement > maxElement)        // If t < maxElement means maxElement stores value of t.
             System.out.println(maxElement);
         else
             System.out.println(topElement);
