@@ -2,7 +2,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        GFG.MyStack s = new GFG.MyStack();
+        MyStack s = new MyStack();
         s.push(144);
         s.push(44);
         s.push(77);
