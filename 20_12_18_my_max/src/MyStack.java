@@ -6,7 +6,6 @@ class MyStack {
     Stack<Integer> stack = new Stack<Integer>();
     int maxElement;
 
-    // getMax() : Get maximum element of MyStack
     void getMax() {
         if (stack.empty())
             System.out.print("Stack is empty\n");
@@ -17,9 +16,6 @@ class MyStack {
                     ": " + maxElement + "\n");
     }
 
-
-    // addLast()
-    // The addLast(Object x) method is used to add an item onto the top of the stack.
     void addLast(int element) {
         // Insert new number into the stack
         if (stack.empty()) {
@@ -39,9 +35,6 @@ class MyStack {
         System.out.print("Number inserted: " + element + "\n");
     }
 
-
-    // removeLast()
-    // Remove the top element from MyStack
     void removeLast() {
         if (stack.empty()) {
             System.out.print("Stack is empty\n");
@@ -60,10 +53,6 @@ class MyStack {
             System.out.println(topElement + "\n");
     }
 
-    // getLast()
-    // Get top element of MyStack
-    // The method returns the element at the top of the Stack
-    // else returns NULL if the Stack is empty.
     void getLast() {
         if (stack.empty()) {
 
