@@ -56,7 +56,7 @@ class MyStack {
     void getLast() {
         if (stack.empty()) {
 
-            System.out.print("Stack is empty ");
+            System.out.println("Stack is empty ");
             return;
         }
 
@@ -66,9 +66,9 @@ class MyStack {
 
         // If t < maxElement means maxElement stores value of t.
         if (topElement > maxElement)
-            System.out.print(maxElement);
+            System.out.println(maxElement);
         else
-            System.out.print(topElement);
+            System.out.println(topElement);
     }
 
     void size() {
