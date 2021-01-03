@@ -1,8 +1,7 @@
 import java.util.Stack;
 
 class GFG {
-    // A user defined stack that supports getMax() in
-    // addition to push() and pop()
+    // A user defined stack that supports getMax() in addition to push() and pop()
     static class MyStack {
 
         Stack<Integer> s = new Stack<Integer>();
