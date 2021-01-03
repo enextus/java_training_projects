@@ -44,21 +44,19 @@ class MyStack {
         return topElement;
     }
 
-    void getLast() {
+    public int getLast() {
         if (stack.empty())
             throw new IndexOutOfBoundsException();
 
         int topElement = stack.peek();
 
-        System.out.print("Top element is: ");
-
         if (topElement > maxElement)
-            System.out.println(maxElement);
+            return maxElement;
         else
-            System.out.println(topElement);
+            return topElement;
     }
 
-    void size() {
-        System.out.print("Stack size is: " + stack.size() + "\n");
+    public int size() {
+        return stack.size();
     }
 }
