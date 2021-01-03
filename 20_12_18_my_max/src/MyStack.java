@@ -75,7 +75,6 @@ class MyStack {
     }
 
     void size() {
-        System.out.print("Stack size is: ");
-        System.out.println(stack.size());
+        System.out.println("Stack size is: " + stack.size());
     }
 }
