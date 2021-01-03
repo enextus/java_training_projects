@@ -64,11 +64,11 @@ class MyStack {
             return;
         }
 
-        int topElement = stack.peek();      // Top element. getLast()
+        int topElement = stack.peek();
 
         System.out.print("Top element is: ");
 
-        if (topElement > maxElement)        // If t < maxElement means maxElement stores value of t.
+        if (topElement > maxElement)
             System.out.println(maxElement);
         else
             System.out.println(topElement);
