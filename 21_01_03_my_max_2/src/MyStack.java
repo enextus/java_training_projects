@@ -52,8 +52,8 @@ class MyStack {
 
         if (topElement > maxElement)
             return maxElement;
-        else
-            return topElement;
+
+        return topElement;
     }
 
     public int size() {
