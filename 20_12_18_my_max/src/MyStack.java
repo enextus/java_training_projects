@@ -11,7 +11,7 @@ class MyStack {
         if (stack.empty())
             System.out.print("Stack is empty\n");
 
-            // variable maxElement stores in self the maximum element of the stack.
+        // variable maxElement stores in self the maximum element of the stack.
         else
             System.out.print("Element with biggest value" +
                     ": " + maxElement + "\n");
@@ -19,7 +19,7 @@ class MyStack {
 
 
     // addLast()
-    // The addLast(Object item) method is used to pushes an item onto the top of this stack.
+    // The addLast(Object x) method is used to add an item onto the top of the stack.
     void addLast(int x) {
         // Insert new number into the stack
         if (stack.empty()) {
