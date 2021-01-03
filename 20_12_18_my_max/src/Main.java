@@ -9,7 +9,7 @@ public class Main {
         myStack.size();
 
         System.out.println();
-        
+
         myStack.addLast(5);
         myStack.getLast();
         myStack.getMax();
@@ -18,6 +18,41 @@ public class Main {
         System.out.println();
 
         myStack.addLast(30);
+        myStack.getLast();
+        myStack.getMax();
+        myStack.size();
+
+        System.out.println();
+
+        myStack.addLast(3);
+        myStack.getLast();
+        myStack.getMax();
+        myStack.size();
+
+        System.out.println();
+
+        myStack.addLast(2);
+        myStack.getLast();
+        myStack.getMax();
+        myStack.size();
+
+        System.out.println();
+
+        myStack.addLast(266);
+        myStack.getLast();
+        myStack.getMax();
+        myStack.size();
+
+        System.out.println();
+
+        myStack.removeLast();
+        myStack.getLast();
+        myStack.getMax();
+        myStack.size();
+
+        System.out.println();
+
+        myStack.removeLast();
         myStack.getLast();
         myStack.getMax();
         myStack.size();

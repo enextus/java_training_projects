@@ -44,14 +44,16 @@ class MyStack {
         }
 
         System.out.print("Top element removed: ");
+
         int topElement = stack.peek();
         stack.pop();
 
-
         if (topElement > maxElement) {      // Maximum will change as the maximum element of the stack is being removed.
+
             System.out.print(maxElement + "\n");
             maxElement = 2 * maxElement - topElement;
         } else
+
             System.out.println(topElement + "\n");
     }
 
