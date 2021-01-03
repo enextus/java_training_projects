@@ -11,7 +11,7 @@ class MyStack {
         if (stack.empty())
             System.out.print("Stack is empty\n");
 
-        // variable maxElement stores in self the maximum element of the stack.
+            // variable maxElement stores in self the maximum element of the stack.
         else
             System.out.print("Element with biggest value" +
                     ": " + maxElement + "\n");
@@ -20,25 +20,45 @@ class MyStack {
 
     // addLast()
     // The addLast(Object x) method is used to add an item onto the top of the stack.
-    void addLast(int x) {
+    void addLast(int element) {
         // Insert new number into the stack
         if (stack.empty()) {
-            maxElement = x;
-            stack.push(x);
-            System.out.print("Number inserted: " + x + "\n");
+            maxElement = element;
+            stack.push(element);
+            System.out.print("Number inserted: " + element + "\n");
             return;
         }
 
         // If new number is greater than maxElement
-        if (x > maxElement) {
-            stack.push(2 * x - maxElement);
-            maxElement = x;
+        if (element > maxElement) {
+            stack.push(2 * element - maxElement);
+            maxElement = element;
         } else // If new number is less than maxElement
-            stack.push(x);
+            stack.push(element);
 
-        System.out.print("Number inserted: " + x + "\n");
+        System.out.print("Number inserted: " + element + "\n");
     }
 
+
+    // removeLast()
+    // Remove the top element from MyStack
+    void removeLast() {
+        if (stack.empty()) {
+            System.out.print("Stack is empty\n");
+            return;
+        }
+
+        System.out.print("Top element removed: ");
+        int topElement = stack.peek();
+        stack.pop();
+
+        // Maximum will change as the maximum element of the stack is being removed.
+        if (topElement > maxElement) {
+            System.out.print(maxElement + "\n");
+            maxElement = 2 * maxElement - topElement;
+        } else
+            System.out.println(topElement + "\n");
+    }
 
     // getLast()
     // Get top element of MyStack
@@ -62,23 +82,7 @@ class MyStack {
             System.out.print(topElement);
     }
 
-    // removeLast()
-    // Remove the top element from MyStack
-    void removeLast() {
-        if (stack.empty()) {
-            System.out.print("Stack is empty\n");
-            return;
-        }
-
-        System.out.print("Top element removed: ");
-        int topElement = stack.peek();
-        stack.pop();
-
-        // Maximum will change as the maximum element of the stack is being removed.
-        if (topElement > maxElement) {
-            System.out.print(maxElement + "\n");
-            maxElement = 2 * maxElement - topElement;
-        } else
-            System.out.println(topElement + "\n");
+    int size() {
+        return stack.size();
     }
 }
