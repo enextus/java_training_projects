@@ -65,4 +65,26 @@ class MyStackTest {
         assertEquals(100, myStack.getMax());
     }
 
+    @Test
+    public void testGetMax_dynamic() {
+        myStack.addLast(1);
+        myStack.addLast(1000);
+        myStack.addLast(-10);
+        myStack.addLast(900);
+        myStack.addLast(10);
+        myStack.addLast(500);
+        myStack.addLast(0);
+        myStack.addLast(300);
+        myStack.addLast(10000);
+        myStack.addLast(100);
+        myStack.addLast(55);
+
+        assertEquals(10000, myStack.getMax());
+        myStack.removeLast();
+        myStack.removeLast();
+        myStack.removeLast();
+        myStack.removeLast();
+        assertEquals(1000, myStack.getMax());
+    }
+
 }
