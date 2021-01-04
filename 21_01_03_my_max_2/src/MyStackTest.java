@@ -88,4 +88,16 @@ class MyStackTest {
 
         assertEquals(1000, myStack.getMax());
     }
+
+    @Test
+    public void testRemoveLast_returned_values() {
+        myStack.addLast(5);
+        myStack.addLast(1000);
+        myStack.addLast(-10);
+
+        assertEquals(-10, myStack.removeLast());
+        assertEquals(1000, myStack.removeLast());
+        assertEquals(5, myStack.removeLast());
+
+    }
 }

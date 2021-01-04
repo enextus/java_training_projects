@@ -37,8 +37,11 @@ class MyStack {
         int topElement = stack.peek();
         stack.pop();
 
-        if (topElement > maxElement)
+        if (topElement > maxElement) {
             maxElement = 2 * maxElement - topElement;
+
+            return (topElement + maxElement) / 2;
+        }
 
         return topElement;
     }
