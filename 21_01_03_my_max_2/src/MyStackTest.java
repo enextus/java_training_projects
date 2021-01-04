@@ -80,10 +80,12 @@ class MyStackTest {
         myStack.addLast(55);
 
         assertEquals(10000, myStack.getMax());
+
         myStack.removeLast();
         myStack.removeLast();
         myStack.removeLast();
         myStack.removeLast();
+
         assertEquals(1000, myStack.getMax());
     }
 }
