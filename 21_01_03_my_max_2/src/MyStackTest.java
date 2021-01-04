@@ -86,5 +86,4 @@ class MyStackTest {
         myStack.removeLast();
         assertEquals(1000, myStack.getMax());
     }
-
 }
