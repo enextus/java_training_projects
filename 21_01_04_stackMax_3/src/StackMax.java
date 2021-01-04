@@ -18,15 +18,16 @@ public class StackMax {
         return source.getLast();
     }
 
-/*    public int removeLast() {
-
+    public int removeLast() {
+        return 0;
     }
 
     public int size() {
-
+        return 0;
     }
 
     public int getMax() {
         // foreach here over all the elements of the 'source'
-    }*/
+        return 0;
+    }
 }
