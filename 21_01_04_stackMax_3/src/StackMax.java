@@ -12,22 +12,42 @@ public class StackMax {
 
     public void addLast(int elt) {
         dequeElem.addLast(elt);
+
+        if (dequeMaxs.isEmpty()) {
+            dequeMaxs.addLast(elt);
+        } else {
+            if (elt > dequeMaxs.getLast()) {
+                dequeMaxs.addLast(elt);
+            } else {
+                dequeMaxs.addLast(dequeMaxs.getLast());
+            }
+        }
     }
 
     public int getLast() {
+        if (dequeElem.isEmpty())
+            throw new IndexOutOfBoundsException();
+
         return dequeElem.getLast();
     }
 
     public int removeLast() {
-        return 0;
+        if (dequeElem.isEmpty())
+            throw new IndexOutOfBoundsException();
+
+        dequeMaxs.removeLast();
+
+        return dequeElem.removeLast();
     }
 
     public int size() {
-        return 0;
+        return dequeElem.size();
     }
 
     public int getMax() {
-        // foreach here over all the elements of the 'source'
-        return 0;
+        if (dequeElem.isEmpty())
+            throw new IndexOutOfBoundsException();
+
+        return dequeMaxs.getLast();
     }
 }

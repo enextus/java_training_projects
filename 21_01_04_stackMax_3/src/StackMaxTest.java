@@ -2,8 +2,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class StackMaxTest {
 
     StackMax myStack = new StackMax();
@@ -65,6 +63,15 @@ class StackMaxTest {
 
         myStack.addLast(-5);
         assertEquals(100, myStack.getMax());
+
+        myStack.addLast(0);
+        assertEquals(100, myStack.getMax());
+
+        myStack.addLast(0);
+        assertEquals(100, myStack.getMax());
+
+        myStack.addLast(20000);
+        assertEquals(20000, myStack.getMax());
     }
 
     @Test
