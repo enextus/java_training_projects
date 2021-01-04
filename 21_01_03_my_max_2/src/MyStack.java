@@ -1,20 +1,21 @@
-import java.util.Stack;
+import java.util.ArrayDeque;
+// import java.util.Stack; // very old Stack, ArrayDeque is better
 
 // An user defined stack that supports getMax() with O (1) time and O (1) extra space complexity
 class MyStack {
 
-    Stack<Integer> stack = new Stack<Integer>();
+    ArrayDeque<Integer> stack = new ArrayDeque<Integer>();
     int maxElement;
 
     public int getMax() {
-        if (stack.empty())
+        if (stack.isEmpty())
             throw new IndexOutOfBoundsException();
 
         return maxElement;
     }
 
     public int addLast(int element) {
-        if (stack.empty()) {
+        if (stack.isEmpty()) {
             maxElement = element;
             stack.push(element);
 
@@ -31,7 +32,7 @@ class MyStack {
     }
 
     public int removeLast() {
-        if (stack.empty())
+        if (stack.isEmpty())
             throw new IndexOutOfBoundsException();
 
         int topElement = stack.peek();
@@ -47,7 +48,7 @@ class MyStack {
     }
 
     public int getLast() {
-        if (stack.empty())
+        if (stack.isEmpty())
             throw new IndexOutOfBoundsException();
 
         int topElement = stack.peek();
