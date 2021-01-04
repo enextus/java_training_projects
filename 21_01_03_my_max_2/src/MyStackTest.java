@@ -132,27 +132,5 @@ class MyStackTest {
 
         assertThrows(IndexOutOfBoundsException.class, () -> myStack.removeLast());
         assertThrows(IndexOutOfBoundsException.class, () -> myStack.removeLast());
-
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
