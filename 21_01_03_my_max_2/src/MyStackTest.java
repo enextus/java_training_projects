@@ -94,7 +94,11 @@ class MyStackTest {
         myStack.addLast(5);
         myStack.addLast(1000);
         myStack.addLast(-10);
+        myStack.addLast(10000);
+        myStack.addLast(-100);
 
+        assertEquals(-100, myStack.removeLast());
+        assertEquals(10000, myStack.removeLast());
         assertEquals(-10, myStack.removeLast());
         assertEquals(1000, myStack.removeLast());
         assertEquals(5, myStack.removeLast());
