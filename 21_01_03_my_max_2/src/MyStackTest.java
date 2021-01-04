@@ -102,7 +102,6 @@ class MyStackTest {
         assertEquals(-10, myStack.removeLast());
         assertEquals(1000, myStack.removeLast());
         assertEquals(5, myStack.removeLast());
-
     }
 
     @Test
