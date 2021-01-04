@@ -104,6 +104,36 @@ class MyStackTest {
         assertEquals(5, myStack.removeLast());
 
     }
+
+    @Test
+    public void testSize_empty() {
+        assertEquals(0, myStack.size());
+    }
+
+    @Test
+    public void testSize_not_empty() {
+        myStack.addLast(1);
+        assertEquals(1, myStack.size());
+
+        myStack.addLast(1);
+        assertEquals(2, myStack.size());
+
+        myStack.addLast(1);
+        assertEquals(3, myStack.size());
+
+        myStack.removeLast();
+        assertEquals(2, myStack.size());
+
+        myStack.removeLast();
+        assertEquals(1, myStack.size());
+
+        myStack.removeLast();
+        assertEquals(0, myStack.size());
+
+        assertThrows(IndexOutOfBoundsException.class, () -> myStack.removeLast());
+        assertThrows(IndexOutOfBoundsException.class, () -> myStack.removeLast());
+
+    }
 }
 
 
