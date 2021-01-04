@@ -2,20 +2,20 @@ import java.util.ArrayDeque;
 
 public class StackMax {
 
-    private final ArrayDeque<Integer> source;
-    private final ArrayDeque<Integer> currentMax;
+    private final ArrayDeque<Integer> dequeElem;
+    private final ArrayDeque<Integer> dequeMaxs;
 
     public StackMax() {
-        source = new ArrayDeque<>();
-        currentMax = new ArrayDeque<>();
+        dequeElem = new ArrayDeque<>();
+        dequeMaxs = new ArrayDeque<>();
     }
 
     public void addLast(int elt) {
-        source.addLast(elt);
+        dequeElem.addLast(elt);
     }
 
     public int getLast() {
-        return source.getLast();
+        return dequeElem.getLast();
     }
 
     public int removeLast() {
