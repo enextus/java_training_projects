@@ -1,6 +1,6 @@
 import java.util.Stack;
 
-// An user defined stack that supports getMax()
+// An user defined stack that supports getMax() with O (1) time and O (1) extra space complexity
 class MyStack {
 
     Stack<Integer> stack = new Stack<Integer>();
