@@ -17,16 +17,16 @@ class MyStack {
     public int addLast(int element) {
         if (stack.isEmpty()) {
             maxElement = element;
-            stack.push(element);
+            stack.addLast(element);
 
             return element;
         }
 
         if (element > maxElement) {
-            stack.push(2 * element - maxElement);
+            stack.addLast(2 * element - maxElement);
             maxElement = element;
         } else
-            stack.push(element);
+            stack.addLast(element);
 
         return element;
     }
@@ -35,8 +35,8 @@ class MyStack {
         if (stack.isEmpty())
             throw new IndexOutOfBoundsException();
 
-        int topElement = stack.peek();
-        stack.pop();
+        int topElement = stack.getLast();
+        stack.removeLast();
 
         if (topElement > maxElement) {
             maxElement = 2 * maxElement - topElement;
@@ -51,7 +51,7 @@ class MyStack {
         if (stack.isEmpty())
             throw new IndexOutOfBoundsException();
 
-        int topElement = stack.peek();
+        int topElement = stack.getLast();
 
         if (topElement > maxElement)
             return maxElement;
