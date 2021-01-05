@@ -4,8 +4,12 @@ import java.util.ArrayDeque;
 // An user defined stack that supports getMax() with O (1) time and O (1) extra space complexity
 class MyStack {
 
-    ArrayDeque<Integer> stack = new ArrayDeque<Integer>();
+    ArrayDeque<Integer> stack;
     int maxElement;
+
+    public MyStack() {
+        this.stack = new ArrayDeque<Integer>();
+    }
 
     public int getMax() {
         if (stack.isEmpty())

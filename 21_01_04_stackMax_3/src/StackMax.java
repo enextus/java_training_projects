@@ -6,8 +6,8 @@ public class StackMax {
     private final ArrayDeque<Integer> dequeMaxs;
 
     public StackMax() {
-        dequeElem = new ArrayDeque<>();
-        dequeMaxs = new ArrayDeque<>();
+        this.dequeElem = new ArrayDeque<>();
+        this.dequeMaxs = new ArrayDeque<>();
     }
 
     public void addLast(int elt) {
