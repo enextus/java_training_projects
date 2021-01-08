@@ -24,6 +24,7 @@ public class StackMax {
         }
     }
 
+
     public int getLast() {
         if (dequeElem.isEmpty())
             throw new IndexOutOfBoundsException();
