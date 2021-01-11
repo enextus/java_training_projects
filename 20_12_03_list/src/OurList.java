@@ -135,16 +135,36 @@ public interface OurList<Type> extends Iterable<Type> {
         Type max = this.get(0);
 
         for (Type currentElt : this) {
+
             Comparable<Type> compCurrentElement = (Comparable<Type>) currentElt;
+
             if (compCurrentElement.compareTo(max) > 0)
                 max = currentElt;
+
         }
 
         return max;
     }
 
-    default Type min(Comparator<Type> comparator) {
+/*    default Type min(Comparator<Type> comparator) {
         return max(comparator.reversed());
+    }*/
+
+    default Type min() {
+        if (size() == 0)
+            throw new NoSuchElementException();
+
+        Type min = this.get(0);
+
+        for (Type currentElt : this) {
+
+            Comparable<Type> compCurrentElement = (Comparable<Type>) currentElt;
+
+            if (compCurrentElement.compareTo(min) < 0)
+                min = currentElt;
+        }
+
+        return min;
     }
 
 }
