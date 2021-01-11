@@ -50,8 +50,7 @@ class Main {
         set.add(person2);
         set.add(person3);
 
-        for (Object o:set
-             ) {
+        for (Object o:set) {
             System.out.println(o);
         }
     }
