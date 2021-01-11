@@ -6,7 +6,7 @@ import java.util.NoSuchElementException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public abstract class OurListTest {
+public abstract class OurListTest{
 
     OurList<Integer> list;
     OurList<String> stringList;
