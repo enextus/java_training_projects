@@ -11,7 +11,7 @@ public class OurLinkedList<T> implements OurList<T> {
         public Node<T> next;
         public Node<T> prev;
 
-        public T data;
+        public T element;
 
         public Node() {
         }
@@ -19,7 +19,7 @@ public class OurLinkedList<T> implements OurList<T> {
         public Node(Node<T> next, Node<T> prev, T element) {
             this.next = next;
             this.prev = prev;
-            data = element;
+            this.element = element;
         }
     }
 
@@ -30,6 +30,27 @@ public class OurLinkedList<T> implements OurList<T> {
      */
     public boolean isEmpty() {
         return size == 0;
+    }
+
+    /**
+     * Appends the specified element to the end of this list.
+     *
+     * @param element
+     */
+    @Override
+    public void addLast(T element) {
+        if (element == null)
+            throw new NullPointerException("The argument for add() is null.");
+
+        if (!isEmpty()) {
+            Node<T> prev = last;
+            last = new Node<>(null, null, element);
+            prev.next = last;
+        } else {
+            last = new Node<>(null, null, element);
+            first = last;
+        }
+        size++;
     }
 
     /**
@@ -71,7 +92,7 @@ public class OurLinkedList<T> implements OurList<T> {
         Node<T> next = last;
 
         while (curr.next != null || curr == last) {
-            if (curr.data.equals(element)) {
+            if (curr.element.equals(element)) {
 
                 // remove the last remaining element
                 if (size == 1) {
@@ -126,7 +147,7 @@ public class OurLinkedList<T> implements OurList<T> {
         for (int i = 0; i < index; i++) {
             curr = curr.next;
         }
-        return curr.data;
+        return curr.element;
     }
 
     @Override
@@ -167,5 +188,61 @@ public class OurLinkedList<T> implements OurList<T> {
     @Override
     public Iterator backwardIterator() {
         return null;
+    }
+
+
+    // Casting, down-casting etc.
+//        List<Integer> list = new ArrayList<>();
+//        ArrayList<Integer> arrayList = (ArrayList<Integer>) list;
+
+//        LinkedList<Integer> linkedList = new LinkedList<>();
+//        Deque<Integer> deque = linkedList;
+//
+//        linkedList.removeLast();
+//        deque.removeLast();
+
+    @Override
+    public Iterator<T> iterator() {
+        return forwardIterator();
+    }
+
+    private class ForwardIterator implements Iterator<T> {
+
+        Node<T> currentNode = first;
+
+        @Override
+        public boolean hasNext() {
+            return currentNode != null;
+        }
+
+        @Override
+        public T next() {
+            if (currentNode == null)
+                throw new IndexOutOfBoundsException();
+
+            T res = currentNode.element;
+            currentNode = currentNode.next;
+            return res;
+        }
+    }
+
+    private class BackwardIterator implements Iterator<T> {
+
+        Node<T> currentNode = last;
+
+        @Override
+        public boolean hasNext() {
+            return currentNode != null;
+        }
+
+        @Override
+        public T next() {
+            if (currentNode == null)
+                throw new IndexOutOfBoundsException();
+
+            T res = currentNode.element;
+            currentNode = currentNode.prev;
+            return res;
+        }
     }
 }
