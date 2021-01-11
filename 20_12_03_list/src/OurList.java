@@ -160,6 +160,10 @@ public interface OurList<Type> extends Iterable<Type> {
 
             Comparable<Type> compCurrentElement = (Comparable<Type>) currentElt;
 
+/*            Comparable<C> a = ...;
+            Comparable<C> b = ...;
+            Comparable<C> min = ObjectUtils.min(a, b);*/
+
             if (compCurrentElement.compareTo(min) < 0)
                 min = currentElt;
         }
