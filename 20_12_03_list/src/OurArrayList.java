@@ -12,6 +12,15 @@ public class OurArrayList<Type> implements OurList<Type> {
         this.size = 0;
     }
 
+
+    @Override
+    public void addLast(Type element) {
+        if (size == source.length)
+            increaseCapacity();
+
+        source[size++] = element;
+    }
+
     @Override
     public void add(Type element) {
         if (size == source.length)
