@@ -1,4 +1,4 @@
-public interface IStackMax<T> {
+public interface StackMax<T> {
     public void addLast(T elt);
 
     public T getLast();
@@ -10,3 +10,4 @@ public interface IStackMax<T> {
     public T getMax();
 
 }
+

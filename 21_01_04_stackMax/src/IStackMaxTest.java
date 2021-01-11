@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 abstract class StackMaxTest {
 
-    IStackMax<Integer> myStack;
+    StackMax<Integer> myStack;
 
     @Test
     public void testRemoveLast_empty_Stack_throwsIOOBE() {
