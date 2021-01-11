@@ -1,20 +1,18 @@
-import com.sun.source.util.Trees;
-
 import java.util.Comparator;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class Person implements Comparable<Person> {
-    public int getAge() {
+/*public class Person implements Comparable<Person> {*/
+public class Person<Person> {
+/*    public int getAge() {
         return age;
-    }
+    }*/
 
     int age;
 
     public Person(int age) {
         this.age = age;
     }
-
 
     @Override
     public String toString() {
@@ -23,17 +21,22 @@ public class Person implements Comparable<Person> {
                 '}';
     }
 
-    @Override
+/*    @Override
     public int compareTo(Person o) {
         return this.age - o.age;
-    }
+    }*/
 }
 
-class ComparePerson implements Comparator<Person>{
+class ComparePerson implements Comparator<Person> {
 
     @Override
-    public int compare(Object o1, Object o2) {
-        return o1.getAge() - o2.getAge();
+    public String toString() {
+        return super.toString();
+    }
+
+    @Override
+    public int compare(Person o1, Person o2) {
+        return o1.age - o2.age;
     }
 }
 
@@ -50,8 +53,7 @@ class Main {
         set.add(person2);
         set.add(person3);
 
-        for (Object o:set) {
+        for (Object o : set)
             System.out.println(o);
-        }
     }
 }
