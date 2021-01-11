@@ -98,7 +98,7 @@ public class OurArrayList<Type> implements OurList<Type> {
         return false;
     }
 
-    @Override
+    @Override  // O(n) - to find the needle.
     public boolean contains(Type obj) {
         if (obj == null) {
             for (int i = 0; i < size; i++) {
@@ -115,7 +115,7 @@ public class OurArrayList<Type> implements OurList<Type> {
         return false;
     }
 
-    @Override
+    @Override // O(n) is the complexity of using the iterator
     public Iterator<Type> forwardIterator() {
         Iterator<Type> iterator = new ForwardIterator();
         return iterator;
@@ -126,6 +126,59 @@ public class OurArrayList<Type> implements OurList<Type> {
         Iterator<Type> iterator = new BackwardIterator<>((Type[]) source, size);
         return iterator;
     }
+
+    //    @Override
+//    public void sort(Comparator<Type> comparator) {
+//        Type[] copy = (Type[]) new Object[size];
+//
+//        int i = 0;
+//        for (Type elt : this) {
+//            copy[i++] = elt;
+//        }//copy: {15, -8, 3}
+//
+//        Arrays.sort(copy, comparator);
+//
+//        // copy:{-8, 3, 15}
+//        this.clear();
+//        for (Type elt : copy) {
+//            this.addLast(elt);
+//        }
+//    }
+//
+//    @Override
+//    public Type max(Comparator<Type> comparator) {
+//        if (size == 0)
+//            throw new NoSuchElementException();
+//
+////        Iterator<Type> iterator = iterator();
+////        Type max = iterator.next();
+////
+////        while (iterator.hasNext()) {
+////            Type currentElt = iterator.next();
+////            if (comparator.compare(currentElt, max) > 0)
+////                max = currentElt;
+////        }
+//
+//        Type max = this.get(0);
+//
+//        for (Type currentElt : this) {
+//            if (comparator.compare(currentElt, max) > 0)
+//                max = currentElt;
+//        }
+//
+//        return max;
+//    }
+//
+//    @Override
+//    public Type min(Comparator<Type> comparator) {
+//        return max(comparator.reversed());
+//    }
+
+    @Override
+    public Iterator<Type> iterator() {
+        return forwardIterator();
+    }
+
 
     private class ForwardIterator implements Iterator<Type> {
 
