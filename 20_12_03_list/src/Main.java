@@ -1,6 +1,7 @@
 import java.util.Iterator;
 
 public class Main {
+
     /**
      * Get the current line number.
      *
