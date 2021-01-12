@@ -81,7 +81,7 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
 
     @Override
     public int size() {
-        return 0;
+        return size;
     }
 
     @Override
