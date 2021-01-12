@@ -46,7 +46,9 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
         }
 
         int index = hash(key) % capacity;
+
         Pair<K, V> newPair = new Pair<>(key, value, source[index]);
+
         source[index] = newPair;
         size++;
         return null;
