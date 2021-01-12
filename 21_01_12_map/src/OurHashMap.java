@@ -84,6 +84,16 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
         return size;
     }
 
+
+    /**
+     * Returns {@code true} if this map contains no key-value mappings.
+     *
+     * @return {@code true} if this map contains no key-value mappings
+     */
+    public boolean isEmpty() {
+        return size == 0;
+    }
+    
     @Override
     public Iterator<K> keyIterator() {
         return null;
