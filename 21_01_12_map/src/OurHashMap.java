@@ -39,7 +39,7 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
         Pair<K, V> pair = find(key);
 
         System.out.println();
-        System.out.println(pair);
+        System.out.println("pair: " + pair);
         System.out.println();
 
         if (pair != null) {
@@ -63,15 +63,17 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
     }
 
     private Pair<K, V> find(K key) {
-        int index = hash(key) % capacity;
-//        int index = Math.abs(key.hashCode() % capacity);
+
+        int index = Math.abs(key.hashCode() % capacity);
 
         Pair<K, V> current = source[index];
+
         while (current != null) {
             if (key.equals(current.key))
                 return current;
             current = current.next;
         }
+
         return null;
     }
 

@@ -18,7 +18,7 @@ public class Main {
 
 
 
-        Map<Auto, String> map2 = new HashMap<>();
+        OurHashMap<Auto, String> map2 =  new OurHashMap<Auto, String>();
 
         System.out.println(map2);
 
