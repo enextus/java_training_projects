@@ -19,10 +19,10 @@ public class ToyDemo {
         System.out.println("toy3: " + toy3);
 
         System.out.println("\n");*/
-        System.out.println(getLineNumber());
+
 
         Toy toy4 = new Toy("Кукла", 34, "Disney", 22);
-        System.out.println(getLineNumber());
+
         System.out.println("toy4: " + toy4);
     }
 }
