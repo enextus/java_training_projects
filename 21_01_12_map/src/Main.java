@@ -3,6 +3,10 @@ import java.util.Map;
 import java.util.Objects;
 
 public class Main {
+    static void fillMap(Map<Auto, String> map) {
+        Auto greyOpel = new Auto("Grey", "Opel");
+        map.put(greyOpel, "Value of grey opel");
+    }
 
     public static void main(String[] args) {
         Map<Auto, String> map = new HashMap<>();
@@ -13,8 +17,4 @@ public class Main {
         System.out.println(value);//
     }
 
-    static void fillMap(Map<Auto, String> map) {
-        Auto greyOpel = new Auto("Grey", "Opel");
-        map.put(greyOpel, "Value of grey opel");
-    }
 }
