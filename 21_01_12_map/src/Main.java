@@ -15,6 +15,17 @@ public class Main {
         Auto anotherGreyOpel = new Auto("Grey", "Opel");
         String value = map.get(anotherGreyOpel);
         System.out.println(value);//
-    }
 
+
+
+        Map<Auto, String> map2 = new HashMap<>();
+
+        System.out.println(map2);
+
+        map2.put(anotherGreyOpel, "Value of Auto");
+        map2.put(anotherGreyOpel, "Value of Auto4");
+
+        System.out.println(map2);
+
+    }
 }

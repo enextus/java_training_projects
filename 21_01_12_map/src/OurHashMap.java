@@ -38,6 +38,10 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
 
         Pair<K, V> pair = find(key);
 
+        System.out.println();
+        System.out.println(pair);
+        System.out.println();
+
         if (pair != null) {
             V res = pair.value;
             pair.value = value;
@@ -128,5 +132,14 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
 //        public Pair<K, V> getNext() {
 //            return next;
 //        }
+
+        @Override
+        public String toString() {
+            return "Pair{" +
+                    "key=" + key +
+                    ", value=" + value +
+                    ", next=" + next +
+                    '}';
+        }
     }
 }
