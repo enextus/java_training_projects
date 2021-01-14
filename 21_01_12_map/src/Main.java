@@ -31,21 +31,19 @@ public class Main {
         System.out.println("map.size: " + map.size());
         System.out.println();
 
-/*        System.out.println("TO REMOVE");
-
-        System.out.println(map.remove(Opel1));
-
-        System.out.println("REMOVED");
-
         System.out.println("TO REMOVE");
 
-        System.out.println(map.remove(Opel2));
+        System.out.println(map.remove(Opel6));
 
         System.out.println("REMOVED");
+
+
 
         System.out.println("map: " + map);
         System.out.println("map.size: " + map.size());
-        System.out.println();*/
+        System.out.println();
+
+
 
 /*        for (Map.Entry<Auto, String> entry : map.entrySet()) {
             System.out.println(entry.getKey() + "/" + entry.getValue());

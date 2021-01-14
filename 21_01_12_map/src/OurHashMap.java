@@ -69,22 +69,16 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
 
         if (pair != null) {
 
-            // System.out.println("2. pair: " + pair);
-
             V res = pair.value;
             pair.value = value;
 
             return res;
         }
 
-        // System.out.println("1. pair: " + pair);
-
         int index = hash(key) % capacity;
 
-        // System.out.println("-> index: " + index);
 
-        // esli est tam uze Pair, to ona zapishetsja (source[index]) w pole NEXT, esli net to NULL
-        Pair<K, V> newPair = new Pair<>(key, value, source[index]);
+        Pair<K, V> newPair = new Pair<>(key, value, source[index]); // esli est tam uze Pair, to ona zapishetsja (source[index]) w pole NEXT, esli net to NULL
 
         // System.out.println("newPair.key: " + newPair.key);
         // System.out.println("newPair.value: " + newPair.value);
@@ -161,13 +155,28 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
         if (pairToRemove.next == null) { // 1. case: We have only one Pair in this cell (at this index)
             source[index] = null;
             size--;
-            return pairToRemove.value;
-        }
 
+            return pairToRemove.value;
+        } else {
+
+            Pair<K, V> currentPair = source[index];
+
+            while (currentPair != null) {
+
+                System.out.println("HERE");
+
+                if (key.equals(currentPair.key)) {
+                    source[index] = null;
+                    size--;
+                    return currentPair.value;
+                }
+
+                currentPair = currentPair.next;
+            }
+        }
 
         return pairToRemove.value;
     }
-
 
     /**
      * Returns {@code true} if this map contains no key-value mappings.
