@@ -33,7 +33,7 @@ public class Main {
 
         System.out.println("TO REMOVE");
 
-        System.out.println(map.remove(Opel6));
+        System.out.println(map.remove(Opel2));
 
         System.out.println("REMOVED");
 

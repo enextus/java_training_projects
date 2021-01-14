@@ -164,15 +164,19 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
             while (currentPair != null) {
 
                 System.out.println("HERE");
+                System.out.println("pairToRemove: " + pairToRemove);
 
                 if (key.equals(currentPair.key)) {
 
-                    // source[index] = null;
 
+                    System.out.println("currentPair.next: " + currentPair.next);
 
+                    V res = currentPair.value;
+                    currentPair = currentPair.next;
 
                     size--;
-                    return currentPair.value;
+
+                    return res;
                 }
 
                 currentPair = currentPair.next;
