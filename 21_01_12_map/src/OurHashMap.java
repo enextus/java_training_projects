@@ -167,7 +167,6 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
 
                 if (key.equals(currentPair.key)) {
 
-
                     System.out.println("- - > currentPair.next: " + currentPair.next);
 
                     V res = currentPair.value;
