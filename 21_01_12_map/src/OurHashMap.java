@@ -159,7 +159,7 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
             return pairToRemove.value;
         } else { // 2. case: We have more as one Pair in this cell (at this index)
 
-            Pair<K, V> currentPair = source[index];
+            Pair<K, V> currentPair = pairToRemove;
 
             while (currentPair != null) {
 
