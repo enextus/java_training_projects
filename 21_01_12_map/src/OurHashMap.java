@@ -163,14 +163,17 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
 
             while (currentPair != null) { // perebor Pairs wnutri cell
 
+                System.out.println("pairToRemove: " + pairToRemove);
                 System.out.println("currentPair: " + currentPair);
 
                 if (key.equals(currentPair.key)) {
 
-                    System.out.println("- - > currentPair.next: " + currentPair.next);
+                    System.out.println("- - > currentPair: " + currentPair);
                     System.out.println("- - > currentPair.next: " + currentPair.next);
 
-                    currentPair = currentPair.next;
+
+                    pairToRemove.next =  currentPair.next;
+
                     size--;
                     return currentPair.value;
                 }
@@ -180,6 +183,7 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
 
 
                 currentPair = currentPair.next;
+                System.out.println("\n");
             }
         }
 
