@@ -8,7 +8,7 @@ public class Solution {
         int points = 0;
         int maxPoints = 0;
 
-        // get(i) -> ArrayList O(1); LinkedList O(n);
+        // get(i) -> ArrayList O(1)
         ArrayList<Integer> numbers = new ArrayList<>(integerList);
 
         for (int i = 0; i < numbers.size(); i++) {
