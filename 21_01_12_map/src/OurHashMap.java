@@ -208,7 +208,7 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
             this.next = next;
         }
 
-        public K getKey() {
+/*        public K getKey() {
             return key;
         }
 
@@ -218,7 +218,7 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
 
         public Pair<K, V> getNext() {
             return next;
-        }
+        }*/
 
         @Override
         public String toString() {
