@@ -28,6 +28,7 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
 
     /**
      * Hash function
+     *
      * @param key
      * @return
      */
@@ -49,6 +50,7 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
 
     /**
      * Return actual size of the map
+     *
      * @return size of map
      */
     @Override
@@ -65,6 +67,11 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
 
         if (pair != null) {
 
+            /////////////////////////////////////////////////////////
+            // System.out.println("2. pair: " + pair);
+            // System.out.println();
+            /////////////////////////////////////////////////////////
+
             V res = pair.value;
             pair.value = value;
 
@@ -72,29 +79,25 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
         }
 
         /////////////////////////////////////////////////////////
-        System.out.println("pair: " + pair);
-        System.out.println();
+        // System.out.println("1. pair: " + pair);
         /////////////////////////////////////////////////////////
 
         int index = hash(key) % capacity;
 
         /////////////////////////////////////////////////////////
-        System.out.println("index: " + index);
-        System.out.println();
+        // System.out.println("-> index: " + index);
         /////////////////////////////////////////////////////////
 
+        // esli est tam uze Pair, to ona zapishetsja (source[index]) w NEXT, esli net to NULL
         Pair<K, V> newPair = new Pair<>(key, value, source[index]);
 
-        ///////////////////////////////////////////////////////
-        System.out.println("newPair: " + newPair);
-        System.out.println();
-        ///////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////
+        // System.out.println("newPair.key: " + newPair.key);
+        // System.out.println("newPair.value: " + newPair.value);
+        // System.out.println("newPair.next: " + newPair.next);
+        /////////////////////////////////////////////////////////
 
-        System.out.println("newPair.key: " + newPair.key);
-        System.out.println("newPair.value: " + newPair.value);
-        System.out.println("newPair.next: " + newPair.next);
-
-
+        // pomestim posledniju prishedshuju Pair na etot index. (zapishem staruju Pair wnutri novoj w NEXT)
         source[index] = newPair;
         size++;
 
@@ -144,7 +147,7 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
 
         if (pair == null)
             return null;
-        
+
         return pair.value;
     }
 
