@@ -9,7 +9,7 @@ import java.util.Iterator;
  */
 public class OurHashMap<K, V> implements OurMap<K, V> {
     private static final double DEFAULT_LOAD_FACTOR = 0.75;
-    private static final int INITIAL_CAPACITY = 16;
+    private static final int INITIAL_CAPACITY = 4;
 
     private Pair<K, V>[] source;
     private int size;
@@ -60,17 +60,16 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
 
     @Override
     public V put(K key, V value) {
-        if (size >= loadFactor * capacity)
+        if (size >= loadFactor * capacity) {
+            System.out.println("DO REHASH!");
             resize();
+        }
 
         Pair<K, V> pair = find(key);
 
         if (pair != null) {
 
-            /////////////////////////////////////////////////////////
             // System.out.println("2. pair: " + pair);
-            // System.out.println();
-            /////////////////////////////////////////////////////////
 
             V res = pair.value;
             pair.value = value;
@@ -78,26 +77,20 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
             return res;
         }
 
-        /////////////////////////////////////////////////////////
         // System.out.println("1. pair: " + pair);
-        /////////////////////////////////////////////////////////
 
         int index = hash(key) % capacity;
 
-        /////////////////////////////////////////////////////////
         // System.out.println("-> index: " + index);
-        /////////////////////////////////////////////////////////
 
-        // esli est tam uze Pair, to ona zapishetsja (source[index]) w NEXT, esli net to NULL
+        // esli est tam uze Pair, to ona zapishetsja (source[index]) w pole NEXT, esli net to NULL
         Pair<K, V> newPair = new Pair<>(key, value, source[index]);
 
-        /////////////////////////////////////////////////////////
         // System.out.println("newPair.key: " + newPair.key);
         // System.out.println("newPair.value: " + newPair.value);
         // System.out.println("newPair.next: " + newPair.next);
-        /////////////////////////////////////////////////////////
 
-        // pomestim posledniju prishedshuju Pair na etot index. (zapishem staruju Pair wnutri novoj w NEXT)
+        // pomestim posledniju prishedshuju Pair na etot index. (zapishem staruju Pair wnutri novoj w pole - NEXT)
         source[index] = newPair;
         size++;
 
@@ -153,7 +146,26 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
 
     @Override
     public V remove(K key) {
-        return null;
+        if (size() == 0)
+            return null;
+
+        // Pair<K, V> pair = find(key);
+
+        int index = Math.abs(key.hashCode() % capacity);
+
+        Pair<K, V> pairToRemove = source[index];
+
+        if (pairToRemove == null)
+            return null;
+
+        if (pairToRemove.next == null) { // 1. case: We have only one Pair in this cell (at this index)
+            source[index] = null;
+            size--;
+            return pairToRemove.value;
+        }
+
+
+        return pairToRemove.value;
     }
 
 
