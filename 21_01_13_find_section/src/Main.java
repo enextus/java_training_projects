@@ -6,9 +6,12 @@ public class Main {
 
         Solution sol = new Solution();
 
-        Integer[] spam = new Integer[] {1, 2, 6, 12, 55, 77, 79, 89, 100, 123, 180, 300};
-        List<Integer> list = Arrays.asList(spam);
+        Integer[] points;
+        List<Integer> listOfPoints;
 
-        sol.maxCoveredPoints( list, 13);
+        points = new Integer[]{1, 6, 12, 44, 55, 77, 79, 89, 92, 100};
+        listOfPoints = Arrays.asList(points);
+
+        System.out.println("maxCoveredPoints: " + sol.maxCoveredPoints(listOfPoints, 55));
     }
 }
