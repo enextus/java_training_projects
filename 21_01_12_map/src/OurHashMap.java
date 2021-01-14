@@ -9,7 +9,7 @@ import java.util.Iterator;
  */
 public class OurHashMap<K, V> implements OurMap<K, V> {
     private static final double DEFAULT_LOAD_FACTOR = 0.75;
-    private static final int INITIAL_CAPACITY = 8;
+    private static final int INITIAL_CAPACITY = 16;
 
     private Pair<K, V>[] source;
     private int size;
@@ -163,13 +163,13 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
 
             while (currentPair != null) { // perebor Pairs wnutri cell
 
-                System.out.println("pairToRemove: " + pairToRemove);
-                System.out.println("currentPair: " + currentPair);
+/*                System.out.println("pairToRemove: " + pairToRemove);
+                System.out.println("currentPair: " + currentPair);*/
 
                 if (key.equals(currentPair.key)) {
 
-                    System.out.println("- - > currentPair: " + currentPair);
-                    System.out.println("- - > currentPair.next: " + currentPair.next);
+/*                    System.out.println("- - > currentPair: " + currentPair);
+                    System.out.println("- - > currentPair.next: " + currentPair.next);*/
 
 
                     pairToRemove.next =  currentPair.next;
