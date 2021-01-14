@@ -5,6 +5,7 @@ import java.util.List;
 public class Solution {
 
     public int maxCoveredPoints(List<Integer> integerList, int cut) {
+
         int points = 0;
         int maxPoints = 0;
 
