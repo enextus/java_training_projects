@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Iterator;
 
 /**
@@ -15,8 +16,18 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
     private double loadFactor;
     private int capacity;
 
+    @Override
+    public String toString() {
+        return "OurHashMap{" +
+                "source=" + Arrays.toString(source) +
+                ", size=" + size +
+                ", loadFactor=" + loadFactor +
+                ", capacity=" + capacity +
+                '}';
+    }
+
     public OurHashMap() {
-        source = new Pair[INITIAL_CAPACITY];
+        source = new Pair[INITIAL_CAPACITY]; // [<K1, V1>, <K2, V2>, <K3, V3>, <K4, V4>] -> [<null, null>,.. <null, null>]
         capacity = INITIAL_CAPACITY;
         size = 0;
         loadFactor = DEFAULT_LOAD_FACTOR;
@@ -31,6 +42,14 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
         this.loadFactor = loadFactor;
     }
 
+    /**
+     * @return size of map
+     */
+    @Override
+    public int size() {
+        return size;
+    }
+
     @Override
     public V put(K key, V value) {
         if (size >= loadFactor * capacity)
@@ -38,20 +57,43 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
 
         Pair<K, V> pair = find(key);
 
-        System.out.println();
-        System.out.println("pair: " + pair);
-        System.out.println();
 
         if (pair != null) {
+
+            /////////////////////////////////////////////////////////
+            System.out.println("pair: " + pair);
+            System.out.println();
+            /////////////////////////////////////////////////////////
+
             V res = pair.value;
             pair.value = value;
             size++;
             return res;
         }
 
+        /////////////////////////////////////////////////////////
+        System.out.println("pair: " + pair);
+        System.out.println();
+        /////////////////////////////////////////////////////////
+
         int index = hash(key) % capacity;
 
+        /////////////////////////////////////////////////////////
+        System.out.println("index: " + index);
+        System.out.println();
+        /////////////////////////////////////////////////////////
+
         Pair<K, V> newPair = new Pair<>(key, value, source[index]);
+
+        ///////////////////////////////////////////////////////
+        System.out.println("newPair: " + newPair);
+        System.out.println();
+        ///////////////////////////////////////////////////////
+
+        System.out.println("newPair.key: " + newPair.key);
+        System.out.println("newPair.value: " + newPair.value);
+        System.out.println("newPair.next: " + newPair.next);
+
 
         source[index] = newPair;
         size++;
@@ -79,17 +121,19 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
 
     @Override
     public V get(K key) {
-        return null;
+        int index = Math.abs(key.hashCode() % capacity);
+
+        Pair<K, V> current = source[index];
+
+        Pair<K, V>     current2 = (Pair<K, V>) current.getKey();
+
+
+        return current2;
     }
 
     @Override
     public V remove(K key) {
         return null;
-    }
-
-    @Override
-    public int size() {
-        return size;
     }
 
 
@@ -123,17 +167,17 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
             this.next = next;
         }
 
-//        public K getKey() {
-//            return key;
-//        }
-//
-//        public V getValue() {
-//            return value;
-//        }
-//
-//        public Pair<K, V> getNext() {
-//            return next;
-//        }
+        public K getKey() {
+            return key;
+        }
+
+        public V getValue() {
+            return value;
+        }
+
+        public Pair<K, V> getNext() {
+            return next;
+        }
 
         @Override
         public String toString() {
