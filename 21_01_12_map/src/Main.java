@@ -18,14 +18,21 @@ public class Main {
         Auto anotherOpel2 = new Auto("Red", "Opel");
         Auto anotherOpel3 = new Auto("Black", "Audi");
 
-/*        String value = map.get(anotherGreyOpel);
-        System.out.println("value: " + value);*/
+
 
         map.put(anotherGreyOpel, "Value of anotherGreyOpel");
         map.put(anotherOpel2, "Value of anotherOpel2");
         map.put(anotherOpel3, "Value of anotherOpel3");
 
         map.put(anotherOpel3, "Value of anotherOpel3333");
+
+        String value = map.get(anotherGreyOpel);
+        String value1 = map.get(anotherOpel2);
+        String value2 = map.get(anotherOpel3);
+
+        System.out.println("value: " + value);
+        System.out.println("value: " + value1);
+        System.out.println("value: " + value2);
 
         System.out.println("map: " + map);
         System.out.println("map.size: " + map.size());

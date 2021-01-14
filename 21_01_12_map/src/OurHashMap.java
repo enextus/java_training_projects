@@ -67,7 +67,6 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
 
             V res = pair.value;
             pair.value = value;
-            size++;
             return res;
         }
 
@@ -121,14 +120,15 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
 
     @Override
     public V get(K key) {
-        int index = Math.abs(key.hashCode() % capacity);
+        if (size() == 0)
+            return null;
 
-        Pair<K, V> current = source[index];
+        Pair<K, V> pair = find(key);
 
-        Pair<K, V>     current2 = (Pair<K, V>) current.getKey();
-
-
-        return current2;
+        if (pair == null)
+            return null;
+        
+        return pair.value;
     }
 
     @Override
