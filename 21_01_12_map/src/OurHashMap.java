@@ -170,9 +170,9 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
                     System.out.println("- - > currentPair.next: " + currentPair.next);
 
                     V res = currentPair.value;
-                    currentPair = currentPair.next;
 
-                    size--;
+                    // currentPair = currentPair.next;
+                    //size--;
 
                     return res;
                 }
