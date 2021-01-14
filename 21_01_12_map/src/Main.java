@@ -9,7 +9,7 @@ public class Main {
     }*/
 
     public static void main(String[] args) {
-        Map<Auto, String> map = new HashMap<Auto, String>();
+        OurHashMap<Auto, String> map = new OurHashMap<>();
 
 
 //        fillMap(map);
@@ -18,13 +18,11 @@ public class Main {
         Auto anotherOpel2 = new Auto("Red", "Opel");
         Auto anotherOpel3 = new Auto("Black", "Audi");
 
+        map.put(anotherGreyOpel, "1. Value of anotherGreyOpel");
+        map.put(anotherOpel2, "2. Value of anotherOpel2");
+        map.put(anotherOpel3, "3. Value of anotherOpel3");
 
-
-        map.put(anotherGreyOpel, "Value of anotherGreyOpel");
-        map.put(anotherOpel2, "Value of anotherOpel2");
-        map.put(anotherOpel3, "Value of anotherOpel3");
-
-        map.put(anotherOpel3, "Value of anotherOpel3333");
+        map.put(anotherOpel3, "4. Value of anotherOpel3333");
 
         String value = map.get(anotherGreyOpel);
         String value1 = map.get(anotherOpel2);
@@ -39,8 +37,8 @@ public class Main {
         System.out.println();
 
 
-        for (Map.Entry<Auto, String> entry : map.entrySet()) {
+/*        for (Map.Entry<Auto, String> entry : map.entrySet()) {
             System.out.println(entry.getKey() + "/" + entry.getValue());
-        }
+        }*/
     }
 }

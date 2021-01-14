@@ -36,12 +36,11 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
     }
 
     public OurHashMap() {
-        source = new Pair[INITIAL_CAPACITY]; // [<K1, V1>, <K2, V2>, <K3, V3>, <K4, V4>] -> [<null, null>,.. <null, null>]
+        source = new Pair[INITIAL_CAPACITY]; // [<K1, V1>, <K2, V2>, ..., <K16, V16>] -> [<null, null>,.. <null, null>]
         capacity = INITIAL_CAPACITY;
         size = 0;
         loadFactor = DEFAULT_LOAD_FACTOR;
     }
-
 
     public OurHashMap(double loadFactor) {
         this();
@@ -64,16 +63,11 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
 
         Pair<K, V> pair = find(key);
 
-
         if (pair != null) {
-
-            /////////////////////////////////////////////////////////
-            System.out.println("pair: " + pair);
-            System.out.println();
-            /////////////////////////////////////////////////////////
 
             V res = pair.value;
             pair.value = value;
+
             return res;
         }
 
@@ -103,11 +97,27 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
 
         source[index] = newPair;
         size++;
+
         return null;
     }
 
     private void resize() {
+        capacity = capacity * 2;
+        Pair<K, V>[] newSource = new Pair[capacity];
 
+        for (Pair<K, V> cell : source) {
+
+            Pair<K, V> currentPair = cell;
+            while (currentPair != null) {
+                int newIndex = hash(currentPair.key) % capacity;
+                currentPair.next = newSource[newIndex];
+                newSource[newIndex] = currentPair;
+
+                currentPair = currentPair.next;
+            }
+        }
+
+        source = newSource;
     }
 
     private Pair<K, V> find(K key) {
