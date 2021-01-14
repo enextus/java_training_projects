@@ -12,7 +12,15 @@ public class Auto {
             this.color = color;
         }
 
-        @Override
+    @Override
+    public String toString() {
+        return "Auto{" +
+                "make='" + make + '\'' +
+                ", color='" + color + '\'' +
+                '}';
+    }
+
+    @Override
         public boolean equals(Object o) {
             if (this == o) return true;
             if (!(o instanceof Auto)) return false;
