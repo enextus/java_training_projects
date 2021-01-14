@@ -40,8 +40,41 @@ public class Main {
         System.out.println("map.size: " + map.size());
         System.out.println();
 
+        System.out.println("TO REMOVE: " + Opel1);
+        System.out.println(map.remove(Opel1));
+        System.out.println("REMOVED");
+        System.out.println();
+
+        System.out.println("TO REMOVE: " + Opel3);
+        System.out.println(map.remove(Opel3));
+        System.out.println("REMOVED");
+        System.out.println();
+
+        System.out.println("TO REMOVE: " + Opel4);
+        System.out.println(map.remove(Opel4));
+        System.out.println("REMOVED");
+        System.out.println();
+
+        System.out.println("TO REMOVE: " + Opel5);
+        System.out.println(map.remove(Opel5));
+        System.out.println("REMOVED");
+        System.out.println();
 
 
+        System.out.println("TO REMOVE: " + Opel6);
+        System.out.println(map.remove(Opel6));
+        System.out.println("REMOVED");
+        System.out.println();
+
+
+        System.out.println("TO REMOVE: " + Opel6);
+        System.out.println(map.remove(Opel6));
+        System.out.println("REMOVED");
+        System.out.println();
+
+        System.out.println("map: " + map);
+        System.out.println("map.size: " + map.size());
+        System.out.println();
 /*        for (Map.Entry<Auto, String> entry : map.entrySet()) {
             System.out.println(entry.getKey() + "/" + entry.getValue());
         }*/
