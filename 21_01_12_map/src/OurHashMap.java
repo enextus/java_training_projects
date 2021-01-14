@@ -9,7 +9,7 @@ import java.util.Iterator;
  */
 public class OurHashMap<K, V> implements OurMap<K, V> {
     private static final double DEFAULT_LOAD_FACTOR = 0.75;
-    private static final int INITIAL_CAPACITY = 4;
+    private static final int INITIAL_CAPACITY = 8;
 
     private Pair<K, V>[] source;
     private int size;
