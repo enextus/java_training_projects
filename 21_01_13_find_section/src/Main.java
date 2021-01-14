@@ -8,6 +8,8 @@ public class Main {
 
         List<Integer> integerList = Arrays.asList(0, 1, 6, 8, 12, 22, 34, 44, 55, 77, 79, 89, 92, 100);
 
+        System.out.println(integerList.getClass());
+
         System.out.println("maxCoveredPoints: " + sol.maxCoveredPoints(integerList, 55));
     }
 }
