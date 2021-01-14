@@ -26,6 +26,15 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
                 '}';
     }
 
+    /**
+     * Hash function
+     * @param key
+     * @return
+     */
+    static int hash(Object key) {
+        return Math.abs(key.hashCode());
+    }
+
     public OurHashMap() {
         source = new Pair[INITIAL_CAPACITY]; // [<K1, V1>, <K2, V2>, <K3, V3>, <K4, V4>] -> [<null, null>,.. <null, null>]
         capacity = INITIAL_CAPACITY;
@@ -33,9 +42,6 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
         loadFactor = DEFAULT_LOAD_FACTOR;
     }
 
-    static int hash(Object key) {
-        return Math.abs(key.hashCode());
-    }
 
     public OurHashMap(double loadFactor) {
         this();
@@ -43,6 +49,7 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
     }
 
     /**
+     * Return actual size of the map
      * @return size of map
      */
     @Override
