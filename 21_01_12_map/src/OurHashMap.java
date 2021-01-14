@@ -168,14 +168,13 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
                 if (key.equals(currentPair.key)) {
 
                     System.out.println("- - > currentPair.next: " + currentPair.next);
+                    System.out.println("- - > currentPair.next: " + currentPair.next);
 
-                    V res = currentPair.value;
-
-                    // currentPair = currentPair.next;
-                    //size--;
-
-                    return res;
+                    currentPair = currentPair.next;
+                    size--;
+                    return currentPair.value;
                 }
+
 
 
 
