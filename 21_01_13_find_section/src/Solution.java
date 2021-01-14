@@ -1,17 +1,19 @@
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Solution {
 
-    public int maxCoveredPoints(List<Integer> number, int cut) {
+    public int maxCoveredPoints(List<Integer> integerList, int cut) {
         int points = 0;
         int maxPoints = 0;
 
-        System.out.println("number.size(): " + number.size());
+        ArrayList<Integer> numbers = new ArrayList<>(integerList);
 
-        for (int i = 0; i < number.size(); i++) {
-            for (int j = i ; j < number.size(); j++) {
+        for (int i = 0; i < numbers.size(); i++) {
+            for (int j = i ; j < numbers.size(); j++) {
 
-                if (number.get(j) - number.get(i) <= cut) {
+                if (numbers.get(j) - numbers.get(i) <= cut) {
                     points++;
                 }
             }
