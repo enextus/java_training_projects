@@ -166,7 +166,11 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
                 System.out.println("HERE");
 
                 if (key.equals(currentPair.key)) {
-                    source[index] = null;
+
+                    // source[index] = null;
+
+
+
                     size--;
                     return currentPair.value;
                 }
