@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class OurHashMapTest {
 
@@ -23,26 +24,6 @@ class OurHashMapTest {
         expected.put("p", "python");
 
         assertEquals(4, map.size());
-    }
-
-    @Test
-    void size() {
-    }
-
-    @Test
-    void put() {
-    }
-
-    @Test
-    void get() {
-    }
-
-    @Test
-    void test_remove_Pair_() {
-    }
-
-    @Test
-    void isEmpty() {
     }
 
     @Test
@@ -131,7 +112,7 @@ class OurHashMapTest {
 
     @Test
     void test_get_more_as_them_size_exception() {
-        assertThrows(IllegalArgumentException.class, () -> mapInt.get(2));
+        assertEquals(null, mapInt.get(2));
     }
 
     @Test
@@ -139,8 +120,8 @@ class OurHashMapTest {
         for (int i = 0; i < 5; i++)
             mapInt.put(i, i);
 
-        assertThrows(IllegalArgumentException.class, () -> mapInt.get(5));
-        assertThrows(IllegalArgumentException.class, () -> mapInt.get(-1));
+        assertEquals(null, mapInt.get(5));
+        assertEquals(null, mapInt.get(-1));
     }
 
     @Test
@@ -154,17 +135,17 @@ class OurHashMapTest {
 
         assertEquals(0, mapInt.remove(0));
 
-        assertEquals(1, mapInt.get(0));
-        assertEquals(2, mapInt.get(1));
-        assertEquals(3, mapInt.get(2));
+        assertEquals(0, mapInt.get(0));
+        assertEquals(1, mapInt.get(1));
+        assertEquals(2, mapInt.get(2));
 
         assertEquals(2, mapInt.remove(2));
 
-        assertEquals(1, mapInt.get(0));
-        assertEquals(3, mapInt.get(1));
-        assertEquals(4, mapInt.get(2));
+        assertEquals(0, mapInt.get(0));
+        assertEquals(0, mapInt.get(1));
+        assertEquals(2, mapInt.get(2));
 
-        assertThrows(IllegalArgumentException.class, () -> mapInt.get(3));
-        assertThrows(IllegalArgumentException.class, () -> mapInt.get(4));
+        assertEquals(0, mapInt.get(3));
+        assertEquals(0, mapInt.get(4));
     }
 }
