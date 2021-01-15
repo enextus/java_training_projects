@@ -8,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class OurHashMapTest {
 
     OurHashMap<Integer, Integer> mapInt = new OurHashMap<>();
+
     OurHashMap<String, String> map = new OurHashMap<>();
 
     @Test
