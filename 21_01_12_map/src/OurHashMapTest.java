@@ -1,5 +1,7 @@
 import org.junit.jupiter.api.Test;
 
+import java.util.Map;
+
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -135,17 +137,17 @@ class OurHashMapTest {
 
         assertEquals(0, mapInt.remove(0));
 
-        assertEquals(0, mapInt.get(0));
+        assertEquals(null, mapInt.get(0));
         assertEquals(1, mapInt.get(1));
         assertEquals(2, mapInt.get(2));
 
         assertEquals(2, mapInt.remove(2));
 
-        assertEquals(0, mapInt.get(0));
-        assertEquals(0, mapInt.get(1));
-        assertEquals(2, mapInt.get(2));
+        assertEquals(null, mapInt.get(0));
+        assertEquals(1, mapInt.get(1));
+        assertEquals(null, mapInt.get(2));
 
-        assertEquals(0, mapInt.get(3));
-        assertEquals(0, mapInt.get(4));
+        assertEquals(3, mapInt.get(3));
+        assertEquals(4, mapInt.get(4));
     }
 }

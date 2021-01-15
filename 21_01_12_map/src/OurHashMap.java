@@ -61,7 +61,7 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
     @Override
     public V put(K key, V value) {
         if (size >= loadFactor * capacity) {
-            System.out.println("DO REHASH!");
+            // System.out.println("DO REHASH!");
             resize();
         }
 
