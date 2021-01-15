@@ -4,9 +4,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class OurHashMapTest {
 
-    OurHashMap<String, String> map = new OurHashMap<>();
     OurHashMap<Integer, Integer> mapInt = new OurHashMap<>();
-    OurHashMap<String, String> expected = new OurHashMap<String, String>();
+
+    OurHashMap<String, String> map = new OurHashMap<>();
+    OurHashMap<String, String> expected = new OurHashMap<>();
 
     @Test
     public void testAssertMap() {
@@ -44,17 +45,13 @@ class OurHashMapTest {
     void isEmpty() {
     }
 
-
     @Test
     void test_isEmpty_true() {
-
         assertTrue(map.isEmpty());
     }
 
     @Test
     void test_sizeOfEmptyLinkedListIsZero_size() {
-
-
         assertEquals(0, map.size());
     }
 
@@ -85,58 +82,45 @@ class OurHashMapTest {
 
     @Test
     void test_sizeOfLinkedList_after_17_adds_size_17() {
-
-
         for (int i = 0; i < 17; i++)
             mapInt.put(i, i);
-
 
         assertEquals(17, mapInt.size());
     }
 
     @Test
     void test_remove_null_from_empty_list_exception() {
-
-
-        assertThrows(IllegalStateException.class, () -> map.remove(null));
+        assertThrows(IllegalStateException.class, () -> mapInt.remove(null));
     }
 
     @Test
     void test_remove_1_from_empty_list_exception() {
-
-        assertThrows(IllegalStateException.class, () -> map.remove(1));
+        assertThrows(IllegalStateException.class, () -> mapInt.remove(1));
     }
 
     @Test
     void test_remove_element_from_list_cont_1_element_true() {
-
-        map.put(1);
-        assertTrue(map.remove(1));
+        mapInt.put(1, 1);
+        assertEquals(1, mapInt.remove(1));
     }
 
     @Test
     void test_remove_element_from_list_a_not_cont_elem_exception() {
-
-
-        map.put(10);
-        assertThrows(NullPointerException.class, () -> map.remove(2));
+        mapInt.put(10, 10);
+        assertThrows(NullPointerException.class, () -> mapInt.remove(2));
     }
 
     @Test
     void test_remove_elements_true() {
-
+        for (int i = 0; i < 17; i++)
+            mapInt.put(i, i);
 
         for (int i = 0; i < 17; i++)
-            map.put(i);
-
-        for (int i = 0; i < 17; i++)
-            assertTrue(map.remove(i));
+            assertEquals(i, mapInt.remove(i));
     }
 
     @Test
     void test_SizeChange_results() {
-
-
         for (int i = 0; i < 5; i++)
             mapInt.put(i, i);
 
@@ -147,46 +131,40 @@ class OurHashMapTest {
 
     @Test
     void test_get_more_as_them_size_exception() {
-
-
-        assertThrows(IllegalArgumentException.class, () -> map.get(2));
+        assertThrows(IllegalArgumentException.class, () -> mapInt.get(2));
     }
 
     @Test
     void test_get_wrong_index_exception() {
-
-
         for (int i = 0; i < 5; i++)
-            map.add(i);
+            mapInt.put(i, i);
 
-        assertThrows(IllegalArgumentException.class, () -> map.get(5));
-        assertThrows(IllegalArgumentException.class, () -> map.get(-1));
+        assertThrows(IllegalArgumentException.class, () -> mapInt.get(5));
+        assertThrows(IllegalArgumentException.class, () -> mapInt.get(-1));
     }
 
     @Test
     void test_get_after_remove_exception() {
 
-
         for (int i = 0; i < 5; i++)
-            map.put(i);
+            mapInt.put(i, i);
 
-        assertEquals(4, map.get(4));
+        assertEquals(4, mapInt.get(4));
+        assertEquals(0, mapInt.get(0));
 
-        assertEquals(0, map.get(0));
-        assertTrue(map.remove(0));
+        assertEquals(0, mapInt.remove(0));
 
-        assertEquals(1, map.get(0));
-        assertEquals(2, map.get(1));
-        assertEquals(3, map.get(2));
+        assertEquals(1, mapInt.get(0));
+        assertEquals(2, mapInt.get(1));
+        assertEquals(3, mapInt.get(2));
 
-        assertTrue(map.remove(2));
+        assertEquals(2, mapInt.remove(2));
 
-        assertEquals(1, map.get(0));
-        assertEquals(3, map.get(1));
-        assertEquals(4, map.get(2));
+        assertEquals(1, mapInt.get(0));
+        assertEquals(3, mapInt.get(1));
+        assertEquals(4, mapInt.get(2));
 
-        assertThrows(IllegalArgumentException.class, () -> map.get(3));
-        assertThrows(IllegalArgumentException.class, () -> map.get(4));
-
+        assertThrows(IllegalArgumentException.class, () -> mapInt.get(3));
+        assertThrows(IllegalArgumentException.class, () -> mapInt.get(4));
     }
 }
