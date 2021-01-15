@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class OurHashMapTest {
 
     OurHashMap<String, String> map = new OurHashMap<>();
+    OurHashMap<Integer, Integer> mapInt = new OurHashMap<>();
     OurHashMap<String, String> expected = new OurHashMap<String, String>();
 
     @Test
@@ -59,35 +60,27 @@ class OurHashMapTest {
 
     @Test
     void test_NullPointerException_after_add_null() {
-
-
-        assertThrows(NullPointerException.class, () -> map.add(null));
+        assertThrows(NullPointerException.class, () -> map.put(null, null));
     }
 
     @Test
     void test_sizeOfLinkedList_after_null_add_size_0() {
-
-
-        map.put(0);
-        assertEquals(1, map.size());
+        mapInt.put(0, 0);
+        assertEquals(1, mapInt.size());
     }
 
     @Test
     void test_sizeOfLinkedList_after_one_add_size_1() {
-
-
-        map.put(333);
-        assertEquals(1, map.size());
+        mapInt.put(333, 333);
+        assertEquals(1, mapInt.size());
     }
 
     @Test
     void test_sizeOfLinkedList_after_3_adds_size_3() {
-
-
-        map.put(1);
-        map.put(2);
-        map.put(3);
-        assertEquals(3, map.size());
+        mapInt.put(1, 1);
+        mapInt.put(2, 1);
+        mapInt.put(3, 1);
+        assertEquals(3, mapInt.size());
     }
 
     @Test
@@ -95,10 +88,10 @@ class OurHashMapTest {
 
 
         for (int i = 0; i < 17; i++)
-            map.put(i);
+            mapInt.put(i, i);
 
 
-        assertEquals(17, map.size());
+        assertEquals(17, mapInt.size());
     }
 
     @Test
@@ -116,7 +109,6 @@ class OurHashMapTest {
 
     @Test
     void test_remove_element_from_list_cont_1_element_true() {
-
 
         map.put(1);
         assertTrue(map.remove(1));
@@ -146,11 +138,11 @@ class OurHashMapTest {
 
 
         for (int i = 0; i < 5; i++)
-            map.put(i);
+            mapInt.put(i, i);
 
-        assertEquals(5, map.size());
-        map.remove(0);
-        assertEquals(4, map.size());
+        assertEquals(5, mapInt.size());
+        mapInt.remove(0);
+        assertEquals(4, mapInt.size());
     }
 
     @Test
