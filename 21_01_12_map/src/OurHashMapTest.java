@@ -71,12 +71,12 @@ class OurHashMapTest {
 
     @Test
     void test_remove_null_from_empty_list_exception() {
-        assertThrows(IllegalStateException.class, () -> mapInt.remove(null));
+        assertEquals(null, mapInt.remove(null));
     }
 
     @Test
     void test_remove_1_from_empty_list_exception() {
-        assertThrows(IllegalStateException.class, () -> mapInt.remove(1));
+        assertEquals(null, mapInt.remove(1));
     }
 
     @Test
@@ -88,7 +88,7 @@ class OurHashMapTest {
     @Test
     void test_remove_element_from_list_a_not_cont_elem_exception() {
         mapInt.put(10, 10);
-        assertThrows(NullPointerException.class, () -> mapInt.remove(2));
+        assertEquals(null, mapInt.remove(1));
     }
 
     @Test
