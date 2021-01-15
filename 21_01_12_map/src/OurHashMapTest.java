@@ -47,47 +47,47 @@ class OurHashMapTest {
     @Test
     void test_isEmpty_true() {
 
-        assertTrue(ourLinkedList.isEmpty());
+        assertTrue(map.isEmpty());
     }
 
     @Test
     void test_sizeOfEmptyLinkedListIsZero_size() {
 
 
-        assertEquals(0, ourLinkedList.size());
+        assertEquals(0, map.size());
     }
 
     @Test
     void test_NullPointerException_after_add_null() {
 
 
-        assertThrows(NullPointerException.class, () -> ourLinkedList.add(null));
+        assertThrows(NullPointerException.class, () -> map.add(null));
     }
 
     @Test
     void test_sizeOfLinkedList_after_null_add_size_0() {
 
 
-        ourLinkedList.put(0);
-        assertEquals(1, ourLinkedList.size());
+        map.put(0);
+        assertEquals(1, map.size());
     }
 
     @Test
     void test_sizeOfLinkedList_after_one_add_size_1() {
 
 
-        ourLinkedList.put(333);
-        assertEquals(1, ourLinkedList.size());
+        map.put(333);
+        assertEquals(1, map.size());
     }
 
     @Test
     void test_sizeOfLinkedList_after_3_adds_size_3() {
 
 
-        ourLinkedList.put(1);
-        ourLinkedList.put(2);
-        ourLinkedList.put(3);
-        assertEquals(3, ourLinkedList.size());
+        map.put(1);
+        map.put(2);
+        map.put(3);
+        assertEquals(3, map.size());
     }
 
     @Test
@@ -95,39 +95,39 @@ class OurHashMapTest {
 
 
         for (int i = 0; i < 17; i++)
-            ourLinkedList.add(i);
+            map.put(i);
 
 
-        assertEquals(17, ourLinkedList.size());
+        assertEquals(17, map.size());
     }
 
     @Test
     void test_remove_null_from_empty_list_exception() {
 
 
-        assertThrows(IllegalStateException.class, () -> ourLinkedList.remove(null));
+        assertThrows(IllegalStateException.class, () -> map.remove(null));
     }
 
     @Test
     void test_remove_1_from_empty_list_exception() {
 
-        assertThrows(IllegalStateException.class, () -> ourLinkedList.remove(1));
+        assertThrows(IllegalStateException.class, () -> map.remove(1));
     }
 
     @Test
     void test_remove_element_from_list_cont_1_element_true() {
 
 
-        ourLinkedList.put(1);
-        assertTrue(ourLinkedList.remove(1));
+        map.put(1);
+        assertTrue(map.remove(1));
     }
 
     @Test
     void test_remove_element_from_list_a_not_cont_elem_exception() {
 
 
-        ourLinkedList.put(10);
-        assertThrows(NullPointerException.class, () -> ourLinkedList.remove(2));
+        map.put(10);
+        assertThrows(NullPointerException.class, () -> map.remove(2));
     }
 
     @Test
@@ -146,18 +146,18 @@ class OurHashMapTest {
 
 
         for (int i = 0; i < 5; i++)
-            ourLinkedList.put(i);
+            map.put(i);
 
-        assertEquals(5, ourLinkedList.size());
-        ourLinkedList.remove(0);
-        assertEquals(4, ourLinkedList.size());
+        assertEquals(5, map.size());
+        map.remove(0);
+        assertEquals(4, map.size());
     }
 
     @Test
     void test_get_more_as_them_size_exception() {
 
 
-        assertThrows(IllegalArgumentException.class, () -> ourLinkedList.get(2));
+        assertThrows(IllegalArgumentException.class, () -> map.get(2));
     }
 
     @Test
@@ -165,10 +165,10 @@ class OurHashMapTest {
 
 
         for (int i = 0; i < 5; i++)
-            ourLinkedList.add(i);
+            map.add(i);
 
-        assertThrows(IllegalArgumentException.class, () -> ourLinkedList.get(5));
-        assertThrows(IllegalArgumentException.class, () -> ourLinkedList.get(-1));
+        assertThrows(IllegalArgumentException.class, () -> map.get(5));
+        assertThrows(IllegalArgumentException.class, () -> map.get(-1));
     }
 
     @Test
@@ -197,6 +197,4 @@ class OurHashMapTest {
         assertThrows(IllegalArgumentException.class, () -> map.get(4));
 
     }
-
-
 }
