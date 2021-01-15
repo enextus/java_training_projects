@@ -100,6 +100,8 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
             Pair<K, V> currentPair = cell;
             while (currentPair != null) {
                 int newIndex = hash(currentPair.key) % capacity;
+                Pair<K, V> next = currentPair.next;
+
                 currentPair.next = newSource[newIndex];
                 newSource[newIndex] = currentPair;
 
