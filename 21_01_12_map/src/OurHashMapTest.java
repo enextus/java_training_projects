@@ -8,9 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class OurHashMapTest {
 
     OurHashMap<Integer, Integer> mapInt = new OurHashMap<>();
-
     OurHashMap<String, String> map = new OurHashMap<>();
-    OurHashMap<String, String> expected = new OurHashMap<>();
 
     @Test
     public void testAssertMap() {
@@ -19,11 +17,6 @@ class OurHashMapTest {
         map.put("c", "c++");
         map.put("p", "python");
         map.put("n", "node");
-
-        expected.put("n", "node");
-        expected.put("c", "c++");
-        expected.put("j", "java");
-        expected.put("p", "python");
 
         assertEquals(4, map.size());
     }

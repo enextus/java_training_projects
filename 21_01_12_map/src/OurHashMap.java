@@ -152,7 +152,7 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
         if (pairToRemove == null)
             return null;
 
-        if (pairToRemove.next == null) { // 1. case: We have only one Pair in this cell (at this index)
+        if (pairToRemove.next == null && key.equals(pairToRemove.key)) { // 1. case: We have only one Pair in this cell (at this index)
             source[index] = null;
             size--;
 
