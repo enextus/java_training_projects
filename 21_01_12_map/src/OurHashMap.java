@@ -147,7 +147,7 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
 
         // Pair<K, V> pair = find(key);
 
-        int index = Math.abs(key.hashCode() % capacity);
+        int index = key.hashCode() % capacity;
 
         Pair<K, V> pairToRemove = source[index];
 
