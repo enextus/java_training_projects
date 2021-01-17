@@ -20,7 +20,6 @@ public class App {
         Point point11 = new Point(9.0, 8.0);
 
         List<Point> pointsList = Arrays.asList(point1, point2, point3, point4, point5, point6, point7, point8, point9, point10, point11);
-
         Collections.sort(pointsList);
 
         for (Point pnt : pointsList)
