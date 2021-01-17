@@ -220,9 +220,7 @@ class OurHashMapTest {
         map.put("WIN56828", mazda);
         map.put("WIN56628", mazda);
         map.put("WIN56298", mazda);
-
         map.put("WIN8988", bmw);
-
         map.put("WIN8989", bmw);
         map.put("WIN5628", audi);
         map.put("WIN56256", audi2);
@@ -257,7 +255,6 @@ class OurHashMapTest {
 
         assertEquals(bmw1, map.get("WIN8988"));
         assertNotSame(bmw, map.get("WIN8988"));
-
 
         map.put("WIN74528", opel);
         map.put("WIN56828", mazda);
