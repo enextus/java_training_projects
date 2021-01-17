@@ -3,12 +3,18 @@ import java.util.Objects;
 public class Point {
     double x;
     double y;
+    double rad;
 
     public Point(double x, double y) {
         this.x = x;
         this.y = y;
+        this.rad = coordToRad(this.x, this.y);
     }
 
+    public double coordToRad(double x, double y){
+        double sinx = this.getX() / (Math.sqrt((Math.pow(this.getY(), 2)) + (Math.pow(this.getX(), 2))));
+        return Math.asin(sinx);
+    }
 
     public double getX() {
         return x;
