@@ -344,21 +344,20 @@ class OurHashMapTest {
 
     @Test
     public void test_OurHashMap_keyIterator() {
-        for (int i = 0; i < 5; i++) {
-            mapInt.put(i * 2, i * 2);
+        for (int i = 0; i < 10; i++) {
+            mapInt.put(i, i);
         }
 
         Iterator<Integer> iterator = mapInt.keyIterator();
 
-        int[] expKey = {0, 2, 4, 6, 8};
-        int[] expVal = {0, 2, 4, 6, 8};
+        int[] exp = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 
         int key;
         int i = 0;
         while (iterator.hasNext()) {
             key = iterator.next();
-            assertEquals(expKey[i], key);
-            assertEquals(expVal[i], mapInt.get(key));
+            assertEquals(exp[i], key);
+            assertEquals(exp[i], mapInt.get(key));
             i++;
         }
     }
