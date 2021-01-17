@@ -66,7 +66,7 @@ class OurHashMapTest {
 
     @Test
     void test_remove_1_from_OurHashMap_empty_list_exception() {
-        assertEquals(null, mapInt.remove(1));
+        assertNull(mapInt.remove(1));
     }
 
     @Test
@@ -74,13 +74,13 @@ class OurHashMapTest {
         mapInt.put(1, 1);
         assertEquals(1, mapInt.remove(1));
 
-        assertEquals(null, mapInt.remove(1));
+        assertNull(mapInt.remove(1));
     }
 
     @Test
     void test_remove_element_from_OurHashMap_a_not_cont_elem_exception() {
         mapInt.put(10, 10);
-        assertEquals(null, mapInt.remove(1));
+        assertNull(mapInt.remove(1));
     }
 
     @Test
@@ -281,12 +281,8 @@ class OurHashMapTest {
 
         Iterator<String> iterator = map.keyIterator();
 
-        String key;
-
-        for (int i = 0; i < map.size(); i++) {
-            key = iterator.next();
-            assertNotNull(map.get(key));
-        }
+        for (int i = 0; i < map.size(); i++)
+            assertNotNull(map.get(iterator.next()));
     }
 
     @Test
@@ -303,7 +299,6 @@ class OurHashMapTest {
 
         Iterator<String> iterator = map.keyIterator();
 
-        int i = 0;
         while (iterator.hasNext()) {
             String key = iterator.next();
             assertEquals("WIN4528", key);
@@ -328,9 +323,8 @@ class OurHashMapTest {
 
         Iterator<String> iterator = map.keyIterator();
 
-        while (iterator.hasNext()) {
+        while (iterator.hasNext())
             assertNotNull(iterator.next());
-        }
     }
 
     @Test
