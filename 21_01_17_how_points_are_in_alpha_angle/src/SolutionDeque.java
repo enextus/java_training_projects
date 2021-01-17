@@ -21,6 +21,7 @@ public class SolutionDeque {
                         maximusDeque.addLast(1);
                     else
                         maximusDeque.addLast(maximusDeque.getLast() + 1);
+
                 }
             }
 
@@ -34,13 +35,5 @@ public class SolutionDeque {
         return maxPoints;
     }
 
-    public static class Point {
-        int x;
-        int y;
 
-        public Point(int x, int y) {
-            this.x = x;
-            this.y = y;
-        }
-    }
 }
