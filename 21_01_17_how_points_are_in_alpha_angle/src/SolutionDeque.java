@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SolutionDeque {
-    public int coveredPoints(List<Integer> integerList, int leftCorner, int rightCorner) {
+    public int coveredPoints(List<Integer> integerList, int rightCorner) {
 
         int maxPoints = 0;
-        int cut = rightCorner - leftCorner;
+        int cut = rightCorner;
 
         ArrayList<Integer> numbers = new ArrayList<>(integerList);        // get(i) -> ArrayList O(1)
         ArrayDeque<Integer> maximusDeque = new ArrayDeque<Integer>();
@@ -16,6 +16,7 @@ public class SolutionDeque {
 
             for (int j = i; j < numbers.size(); j++) {
                 if (numbers.get(j) - numbers.get(i) <= cut) {
+
                     if (maximusDeque.isEmpty())
                         maximusDeque.addLast(1);
                     else
@@ -23,8 +24,9 @@ public class SolutionDeque {
                 }
             }
 
-            if (maximusDeque.size() >= maxPoints)
-                maxPoints = maximusDeque.size();
+            int size = maximusDeque.size();
+            if (size >= maxPoints)
+                maxPoints = size;
 
             maximusDeque.clear();
         }
