@@ -11,7 +11,6 @@ public class Point implements Comparable<Point> {
         this.rad = coordToRad(this.x, this.y);
     }
 
-
     private double coordToRad(double x, double y) {
         double sinx = this.getX() / (Math.sqrt((Math.pow(this.getY(), 2)) + (Math.pow(this.getX(), 2))));
         return Math.asin(sinx);
