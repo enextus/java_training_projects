@@ -1,12 +1,17 @@
 import java.util.Objects;
 
 public class Point {
-    int x;
-    int y;
+    double x;
+    double y;
 
-    public Point(int x, int y) {
+    public Point(double x, double y) {
         this.x = x;
         this.y = y;
+    }
+
+
+    public double getX() {
+        return x;
     }
 
     @Override
@@ -14,7 +19,16 @@ public class Point {
         if (this == o) return true;
         if (!(o instanceof Point)) return false;
         Point point = (Point) o;
-        return x == point.x && y == point.y;
+        return Double.compare(point.getX(), getX()) == 0 && Double.compare(point.getY(), getY()) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getX(), getY());
+    }
+
+    public double getY() {
+        return y;
     }
 
     @Override
@@ -23,18 +37,5 @@ public class Point {
                 "x=" + x +
                 ", y=" + y +
                 '}';
-    }
-
-    public int getX() {
-        return x;
-    }
-
-    public int getY() {
-        return y;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(x, y);
     }
 }
