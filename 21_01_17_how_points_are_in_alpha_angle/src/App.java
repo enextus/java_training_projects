@@ -1,3 +1,4 @@
+import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.List;
 
@@ -31,7 +32,8 @@ public class App {
         double a = 1.0;
         double b = 2.0;
         double c = 0.5;
-        double d = 3.1415;
+        double d = Math.PI;
+        double e = Math.PI;
 
         System.out.format("%.1f радиан = %.3f градусов %n", a, Math.toDegrees(a));
         System.out.format("%.1f радиан = %.3f градусов %n", b, Math.toDegrees(b));
