@@ -6,9 +6,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class OurHashMapTest {
-
-    OurMap<Integer, Integer> mapInt = new OurHashMap<>();
     OurMap<String, Auto> map = new OurHashMap<>();
+    OurMap<Integer, Integer> mapInt = new OurHashMap<>();
 
     Auto opel = new Auto("grey", "Opel");
     Auto mazda = new Auto("red", "Mazda");
@@ -54,10 +53,10 @@ class OurHashMapTest {
 
     @Test
     void test_sizeOfLinkedList_OurHashMap_after_17_adds_size_17() {
-        for (int i = 0; i < 17; i++)
+        for (int i = 0; i < 99; i++)
             mapInt.put(i, i);
 
-        assertEquals(17, mapInt.size());
+        assertEquals(99, mapInt.size());
     }
 
     @Test
@@ -99,17 +98,38 @@ class OurHashMapTest {
             mapInt.put(i, i);
 
         assertEquals(5, mapInt.size());
+
         mapInt.remove(0);
         assertEquals(4, mapInt.size());
+
+        mapInt.remove(1);
+        assertEquals(3, mapInt.size());
+
+        mapInt.remove(2);
+        assertEquals(2, mapInt.size());
+
+        mapInt.remove(3);
+        assertEquals(1, mapInt.size());
+
+        mapInt.remove(4);
+        assertEquals(0, mapInt.size());
+
+        mapInt.remove(5);
+        assertEquals(0, mapInt.size());
+
+        mapInt.remove(5);
+        assertEquals(0, mapInt.size());
     }
 
     @Test
     void test_OurHashMap_get_more_as_them_size_exception() {
+        assertEquals(null, mapInt.get(-2));
+        assertEquals(null, mapInt.get(0));
         assertEquals(null, mapInt.get(2));
     }
 
     @Test
-    void test_get_wrong_index_exception() {
+    void test_OurHashMap_get_wrong_index_exception() {
         for (int i = 0; i < 5; i++)
             mapInt.put(i, i);
 
@@ -127,13 +147,12 @@ class OurHashMapTest {
         assertEquals(0, mapInt.get(0));
 
         assertEquals(0, mapInt.remove(0));
-
         assertEquals(null, mapInt.get(0));
+
         assertEquals(1, mapInt.get(1));
         assertEquals(2, mapInt.get(2));
 
         assertEquals(2, mapInt.remove(2));
-
         assertEquals(null, mapInt.get(0));
         assertEquals(1, mapInt.get(1));
         assertEquals(null, mapInt.get(2));
@@ -141,7 +160,6 @@ class OurHashMapTest {
         assertEquals(3, mapInt.get(3));
         assertEquals(4, mapInt.get(4));
     }
-
 
     @Test
     void test_OurHashMap_Put_resize() {
@@ -154,35 +172,29 @@ class OurHashMapTest {
         map.put("WIN8989", bmw);
         map.put("WIN5628", audi);
         map.put("WIN56256", audi2);
+
         assertEquals(map.get("WIN56256"), audi2);
         assertEquals(map.size(), 9);
+        assertEquals(9, map.size());
     }
 
     @Test
     void change_OurHashMap_TheValueOofAnExistingElement() {
-
-        Auto audi = new Auto("blue", "Audi");
-        Auto audi2 = new Auto("braun", "Audi");
-
         map.put("WIN5628", audi);
+        assertEquals(audi, map.get("WIN5628"));
+
         map.put("WIN5628", audi2);
-        assertEquals(map.get("WIN5628"), audi2);
-        assertNotSame(map.get("WIN5628"), audi);
+        assertEquals(audi2, map.get("WIN5628"));
+
         assertEquals(map.size(), 1);
     }
 
     @Test
     void testRemove_OurHashMap_twoObjectInCells_bottom() {
-        Auto opel = new Auto("grey", "Opel");
-        Auto mazda = new Auto("red", "Mazda");
-        Auto bmw = new Auto("black", "BMW");
-        Auto audi = new Auto("blue", "Audi");
-        Auto audi2 = new Auto("braun", "Audi");
-
         map.put("WIN4528", opel);
         map.put("WIN74528", opel);
 
-        assertEquals(map.get("WIN74528"), opel);
+        assertEquals(opel, map.get("WIN74528"));
 
         map.put("WIN56828", mazda);
         map.put("WIN56628", mazda);
@@ -195,11 +207,11 @@ class OurHashMapTest {
         map.put("WIN5628", audi);
         map.put("WIN56256", audi2);
 
-        assertEquals(map.remove("WIN8989"), bmw);
-        assertEquals(map.get("WIN74528"), opel);
-        assertEquals(map.size(), 8);
+        assertEquals(bmw, map.remove("WIN8989"));
+        assertEquals(opel, map.get("WIN74528"));
+        assertEquals(8, map.size());
 
-        assertNull(map.get("WIN74528"));
+        assertEquals(opel, map.get("WIN74528"));
     }
 
     @Test
