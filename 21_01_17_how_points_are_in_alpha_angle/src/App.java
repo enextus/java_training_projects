@@ -20,7 +20,22 @@ public class App {
 
         List<Point> pointsList = Arrays.asList(point1, point2, point3, point4, point5, point6, point7, point8, point9, point10, point11);
 
+        for (Point pnt:pointsList
+             ) {
+            System.out.println(pnt);
+        }
 
-        System.out.println("Points: " + sol.coveredPoints(pointsList, 1));
+        System.out.println(pointsList.get(0));
+        System.out.println(pointsList.getClass());
+
+        double a = 90.0;
+        double b = 45.0;
+        double c = 0.017453;
+
+        System.out.format("%.1f радиан = %.3f градусов %n", a, Math.toDegrees(a));
+        System.out.format("%.1f радиан = %.3f градусов %n", b, Math.toDegrees(b));
+        System.out.format("%.6f радиан = %.5f градусу %n", c, Math.toDegrees(c));
+
+        //System.out.println("Points: " + sol.coveredPoints(pointsList, 1));
     }
 }
