@@ -7,7 +7,7 @@ public class App {
 
         SolutionDeque sol = new SolutionDeque();
 
-        Point point0 = new Point(2.1, 8.2);
+        Point point0 = new Point(-2.1, 8.2);
         Point point1 = new Point(-4.2, -16.4);
         Point point2 = new Point(3.0, 3.3);
         Point point3 = new Point(7.2, 7.4);
@@ -19,7 +19,7 @@ public class App {
         Point point9 = new Point(8.5, 33.3);
         Point point10 = new Point(6.5, 6.3);
         Point point11 = new Point(0.5, 0.9);
-        Point point12 = new Point(3.3, 6.0);
+        Point point12 = new Point(-3.3, -6.0);
         Point point13 = new Point(26.4, 2.2);
         Point point14 = new Point(5.5, 2.0);
         Point point15 = new Point(8.3, 5.3);
