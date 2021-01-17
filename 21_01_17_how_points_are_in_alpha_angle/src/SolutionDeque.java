@@ -4,18 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SolutionDeque {
-    public int maxTrees(List<Point> points, int rightCorner) {
+    public int maxTrees(List<Point> points, int alpha) {
 
         int maxPoints = 0;
-        int cut = rightCorner;
+        double angleRad = (alpha * Math.PI) / 180;
 
-        ArrayList<Point> pointArrayList = new ArrayList<>(points);
+        ArrayList<Point> arrayList = new ArrayList<>(points);
         ArrayDeque<Integer> maximusDeque = new ArrayDeque<>();
 
-        for (int i = 0; i < pointArrayList.size(); i++) {
+        for (int i = 0; i < arrayList.size(); i++) {
 
-            for (int j = i; j < pointArrayList.size(); j++) {
-                if (pointArrayList.get(j) - pointArrayList.get(i) <= cut) {
+            for (int j = i; j < arrayList.size(); j++) {
+                if (arrayList.get(j).getRad() - arrayList.get(i).getRad() <= angleRad) {
 
                     if (maximusDeque.isEmpty())
                         maximusDeque.addLast(1);

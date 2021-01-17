@@ -1,4 +1,4 @@
-package misc;
+package misc.misc;
 
 import java.text.NumberFormat;
 
@@ -19,7 +19,7 @@ public class Test {
     int m = (int) min;
     int sec = (int) (min * 60) % 60;
         System.out.println("радиан(" + rad + ")=" + g + "(градусов)" + "=" + m + "(минут)" + "=" + sec + "(секунд)");
-    //Переводим в градусы, минуты, секунды в радианы
+    //Переводим градусы, минуты, секунды в радианы
     int sec1 = 1;
     int min1 = 0;
     int grad1 = 180;

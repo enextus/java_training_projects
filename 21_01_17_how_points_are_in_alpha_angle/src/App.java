@@ -35,6 +35,6 @@ public class App {
         for (Point pnt : pointsList)
             System.out.println(pnt);
 
-        sol.maxTrees(pointsList, 45 );
+        System.out.println("\nmaxTrees: " + sol.maxTrees(pointsList, 15));
     }
 }

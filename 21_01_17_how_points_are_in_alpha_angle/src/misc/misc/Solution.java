@@ -1,4 +1,4 @@
-package misc;
+package misc.misc;
 
 import java.util.ArrayList;
 import java.util.List;
