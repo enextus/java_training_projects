@@ -294,9 +294,7 @@ class OurHashMapTest {
         Iterator<String> iterator = map.keyIterator();
 
         assertFalse(iterator.hasNext());
-        assertThrows(IndexOutOfBoundsException.class, () -> {
-            iterator.next();
-        });
+        assertThrows(IndexOutOfBoundsException.class, () -> iterator.next());
     }
 
     @Test
