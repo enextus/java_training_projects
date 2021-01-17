@@ -1,4 +1,5 @@
 import java.text.NumberFormat;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -21,6 +22,8 @@ public class App {
 
         List<Point> pointsList = Arrays.asList(point1, point2, point3, point4, point5, point6, point7, point8, point9, point10, point11);
 
+        ArrayList<Point> pointsListSorted = new ArrayList<Point>(pointsList.sort(Comparable););
+
         for (Point pnt : pointsList
         ) {
             System.out.println(pnt);
@@ -28,44 +31,6 @@ public class App {
 
         System.out.println(pointsList.get(0));
         System.out.println(pointsList.getClass());
-
-        double a = 1.0;
-        double b = 2.0;
-        double c = 0.5;
-        double d = Math.PI;
-        double e = Math.PI / 4;
-
-        System.out.format("%.1f радиан = %.3f градусов %n", a, Math.toDegrees(a));
-        System.out.format("%.1f радиан = %.3f градусов %n", b, Math.toDegrees(b));
-        System.out.format("%.6f радиан = %.5f градусу %n", c, Math.toDegrees(c));
-        System.out.format("%.6f радиан = %.5f градусу %n", d, Math.toDegrees(d));
-        System.out.format("%.6f радиан = %.5f градусу %n", e, Math.toDegrees(e));
-
-        //System.out.println("Points: " + sol.coveredPoints(pointsList, 1));
-
-
-        int x = 180; //градусы
-        double radian = (Math.PI * x) / 180; //перевод градусов в радианы
-        double rez = Math.sin(radian); //входное значение в радианах
-        NumberFormat nf = NumberFormat.getInstance();
-        nf.setMaximumFractionDigits(4);
-        System.out.println("sin(" + x + ")градусов=" + nf.format(rez));
-        //Переводим радианы в градусы, минуты, секунды (1 градус 60 минут или 360 секунд)
-        double rad = 3.1416;
-        double grad = (rad * 180) / Math.PI; //перевод из радиан в градусы
-        int g = (int) grad;
-        double min = (grad * 60) % 60;
-        int m = (int) min;
-        int sec = (int) (min * 60) % 60;
-        System.out.println("радиан(" + rad + ")=" + g + "(градусов)" + "=" + m + "(минут)" + "=" + sec + "(секунд)");
-        //Переводим в градусы, минуты, секунды в радианы
-        int sec1 = 1;
-        int min1 = 0;
-        int grad1 = 180;
-        int g1 = sec1 / 60 / 60 + min1 / 60 + grad1;
-        double rad1 = (g1 * Math.PI) / 180;
-        System.out.println(grad1 + "(градусов)" + "=" + min1 + "(минут)" + "=" + sec1 + "(секунд)" + "=" + nf.format(rad1) + "(радиан)");
-
 
         Point poi_10_10 = new Point(10, 10);
         System.out.println(poi_10_10.getX());
