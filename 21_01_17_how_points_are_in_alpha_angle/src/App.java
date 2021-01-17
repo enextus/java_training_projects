@@ -32,12 +32,6 @@ public class App {
                 new Point(-9.4, -8.9)
         );
 
-
-
-
-
-
-
         Collections.sort(pointsList);
 
         for (Point pnt : pointsList)
