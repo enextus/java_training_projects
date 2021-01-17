@@ -11,7 +11,7 @@ class OurHashMapTest {
 
     OurHashMap_naive<String, Auto> map = new OurHashMap_naive<>();
 
-/*    @Test
+    @Test
     public void testAssertMap() {
 
         map.put("j", "java");
@@ -20,7 +20,7 @@ class OurHashMapTest {
         map.put("n", "node");
 
         assertEquals(4, map.size());
-    }*/
+    }
 
 
 
