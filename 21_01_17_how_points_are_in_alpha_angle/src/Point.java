@@ -26,8 +26,12 @@ public class Point implements Comparable<Point> {
     }
 
     @Override
-    public int compareTo(Point other) {
-        return ((int) (this.getRad() - other.getRad()));
+    public int compareTo(Point compares) {
+        if(this.getRad()<compares.getRad())
+            return -1;
+        else if(compares.getRad()<this.getRad())
+            return 1;
+        return 0;
     }
 
     @Override

@@ -1,6 +1,7 @@
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class App {
@@ -22,26 +23,13 @@ public class App {
 
         List<Point> pointsList = Arrays.asList(point1, point2, point3, point4, point5, point6, point7, point8, point9, point10, point11);
 
-        ArrayList<Point> pointsListSorted = new ArrayList<Point>(pointsList.sort(Comparable););
+        Collections.sort(pointsList);
 
         for (Point pnt : pointsList
         ) {
             System.out.println(pnt);
         }
 
-        System.out.println(pointsList.get(0));
-        System.out.println(pointsList.getClass());
-
-        Point poi_10_10 = new Point(10, 10);
-        System.out.println(poi_10_10.getX());
-        System.out.println(poi_10_10.getY());
-
-        double hypotenuse1 = Math.sqrt((Math.pow(poi_10_10.getY(), 2)) + (Math.pow(poi_10_10.getX(), 2)));
-        double sinx1 = poi_10_10.getX() / (Math.sqrt((Math.pow(poi_10_10.getY(), 2)) + (Math.pow(poi_10_10.getX(), 2))));
-
-        System.out.println("sinx1: " + sinx1);
-        System.out.println("Angle_in_Radian: " + Math.asin(sinx1));
-        System.out.println("Angle_in_Grad: " + Math.toDegrees(Math.asin(sinx1)));
 
         Point poi_1_1 = new Point(1, 1);
         System.out.println(poi_1_1.getX());
