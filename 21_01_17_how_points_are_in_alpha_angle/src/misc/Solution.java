@@ -1,3 +1,5 @@
+package misc;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,9 +18,9 @@ public class Solution {
             for (int j = i; j < numbers.size(); j++) {
 
 
-/*                System.out.println("(i): " + numbers.get(i) + ", (j): " + numbers.get(j));
+                System.out.println("(i): " + numbers.get(i) + ", (j): " + numbers.get(j));
                 System.out.println("(j) - (i): " + (numbers.get(j) - numbers.get(i)) + ", cut = " + cut);
-                System.out.println();*/
+                System.out.println();
 
 
                 if (numbers.get(j) - numbers.get(i) <= cut)

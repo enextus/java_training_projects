@@ -1,3 +1,5 @@
+package misc;
+
 import java.text.NumberFormat;
 
 public class Test {
