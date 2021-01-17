@@ -17,8 +17,6 @@ class OurHashMapTest {
     Auto audi = new Auto("blue", "Audi");
     Auto audi2 = new Auto("braun", "Audi");
 
-    // String[] autoWin = {"WIN4528", "WIN56828", "WIN56628", "WIN56298", "WIN8988", "WIN8989", "WIN5628", "WIN56256"};
-
     @Test
     void test_sizeOfEmpty_OurHashMap_IsZero_size() {
         assertEquals(0, map.size());
@@ -47,12 +45,6 @@ class OurHashMapTest {
     }
 
     @Test
-    void test_sizeOfLinkedList_OurHashMap_after_one_add_size_1() {
-        mapInt.put(333, 333);
-        assertEquals(1, mapInt.size());
-    }
-
-    @Test
     void test_sizeOfLinkedList_OurHashMap_after_3_adds_size_3() {
         mapInt.put(1, 1);
         mapInt.put(2, 1);
@@ -70,7 +62,7 @@ class OurHashMapTest {
 
     @Test
     void test_remove_null_from_OurHashMap_empty_list_exception() {
-        assertEquals(null, mapInt.remove(null));
+        assertThrows(NullPointerException.class, () -> mapInt.remove(null));
     }
 
     @Test
@@ -82,6 +74,8 @@ class OurHashMapTest {
     void test_remove_element_from_OurHashMap_list_cont_1_element_true() {
         mapInt.put(1, 1);
         assertEquals(1, mapInt.remove(1));
+
+        assertEquals(null, mapInt.remove(1));
     }
 
     @Test
