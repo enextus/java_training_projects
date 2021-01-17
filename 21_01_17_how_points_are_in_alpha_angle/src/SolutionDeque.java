@@ -1,7 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Solution {
+import java.util.ArrayList;
+import java.util.List;
+
+public class SolutionDeque {
 
     public int coveredPoints(List<Integer> integerList, int leftCorner, int rightCorner) {
 
@@ -27,7 +30,7 @@ public class Solution {
 
             if (points >= maxPoints) {
                 maxPoints = points;
-                System.out.println("******************************           Points: " + points);
+                System.out.println("Points: " + points);
             }
 
             points = 0;
