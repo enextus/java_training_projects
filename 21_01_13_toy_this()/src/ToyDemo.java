@@ -11,16 +11,14 @@ public class ToyDemo {
     public static void main(String[] args) {
 
         Toy toy2 = new Toy();
-        System.out.println("toy2: " + toy2);
-
+        System.out.println("toy2: " + toy2 + ", Line: " + getLineNumber());
         System.out.println("\n");
 
         Toy toy3 = new Toy("Кукла", 34, "Disney");
-        System.out.println("toy3: " + toy3);
-
+        System.out.println("toy3: " + toy3 + ", Line: " + getLineNumber());
         System.out.println("\n");
 
         Toy toy4 = new Toy("Кукла", 34, "Disney", 22);
-        System.out.println("toy4: " + toy4);
+        System.out.println("toy4: " + toy4 + ", Line: " + getLineNumber());
     }
 }

@@ -4,10 +4,8 @@ public class Toy {
     String manufacturer;
     int age;
 
-    public Toy(String name, int cost, String manufacturer, int age) {
-        this(name, cost, manufacturer);
-        this.age = age;
-        System.out.println("В конструкторе с четырьмя параметрами - присваиваем данные значения (4)");
+    public Toy() {
+        System.out.println("В конструкторе по умолчанию - присваиваем дефолтные значения");
     }
 
     public Toy(String name, int cost, String manufacturer) {
@@ -18,8 +16,10 @@ public class Toy {
         System.out.println("В конструкторе с тремя параметрами - присваиваем данные значения (3)");
     }
 
-    public Toy() {
-        System.out.println("В конструкторе по умолчанию - присваиваем дефолтные значения");
+    public Toy(String name, int cost, String manufacturer, int age) {
+        this(name, cost, manufacturer);
+        this.age = age;
+        System.out.println("В конструкторе с четырьмя параметрами - присваиваем данные значения (4)");
     }
 
     @Override
