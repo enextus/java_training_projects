@@ -6,6 +6,6 @@ public class Main {
         List<Integer> integerList = Arrays.asList(0, 1, 4, 5, 13, 22, 31, 34, 44, 55, 100);
         Solution sol = new Solution();
 
-        System.out.println("points: " + sol.coveredPoints(integerList, 2, 36));
+        System.out.println("points: " + sol.coveredPoints(integerList, 0, 15));
     }
 }
