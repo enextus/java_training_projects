@@ -123,9 +123,9 @@ class OurHashMapTest {
 
     @Test
     void test_OurHashMap_get_more_as_them_size_exception() {
-        assertEquals(null, mapInt.get(-2));
-        assertEquals(null, mapInt.get(0));
-        assertEquals(null, mapInt.get(2));
+        assertNull(mapInt.get(-2));
+        assertNull(mapInt.get(0));
+        assertNull(mapInt.get(2));
     }
 
     @Test
@@ -133,8 +133,8 @@ class OurHashMapTest {
         for (int i = 0; i < 5; i++)
             mapInt.put(i, i);
 
-        assertEquals(null, mapInt.get(5));
-        assertEquals(null, mapInt.get(-1));
+        assertNull(mapInt.get(5));
+        assertNull(mapInt.get(-1));
     }
 
     @Test
@@ -147,15 +147,15 @@ class OurHashMapTest {
         assertEquals(0, mapInt.get(0));
 
         assertEquals(0, mapInt.remove(0));
-        assertEquals(null, mapInt.get(0));
+        assertNull(mapInt.get(0));
 
         assertEquals(1, mapInt.get(1));
         assertEquals(2, mapInt.get(2));
 
         assertEquals(2, mapInt.remove(2));
-        assertEquals(null, mapInt.get(0));
+        assertNull(mapInt.get(0));
         assertEquals(1, mapInt.get(1));
-        assertEquals(null, mapInt.get(2));
+        assertNull(mapInt.get(2));
 
         assertEquals(3, mapInt.get(3));
         assertEquals(4, mapInt.get(4));
@@ -294,7 +294,7 @@ class OurHashMapTest {
         Iterator<String> iterator = map.keyIterator();
 
         assertFalse(iterator.hasNext());
-        assertThrows(IndexOutOfBoundsException.class, () -> iterator.next());
+        assertThrows(IndexOutOfBoundsException.class, iterator::next);
     }
 
     @Test
@@ -309,9 +309,7 @@ class OurHashMapTest {
             assertEquals("WIN4528", key);
         }
 
-        assertThrows(IndexOutOfBoundsException.class, () -> {
-            iterator.next();
-        });
+        assertThrows(IndexOutOfBoundsException.class, iterator::next);
     }
 
     @Test
@@ -326,25 +324,19 @@ class OurHashMapTest {
         map.put("WIN5628", audi);
         map.put("WIN56256", audi2);
 
-        Iterator<String> iterator = map.keyIterator();
-
-        int i = 0;
-        while (iterator.hasNext()) {
-            i++;
-        }
-
         assertEquals(9, map.size());
 
-        assertThrows(IndexOutOfBoundsException.class, () -> {
-            iterator.next();
-        });
+        Iterator<String> iterator = map.keyIterator();
+
+        while (iterator.hasNext()) {
+            assertNotNull(iterator.next());
+        }
     }
 
     @Test
     public void test_OurHashMap_keyIterator() {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 10; i++)
             mapInt.put(i, i);
-        }
 
         Iterator<Integer> iterator = mapInt.keyIterator();
 
@@ -358,5 +350,30 @@ class OurHashMapTest {
             assertEquals(exp[i], mapInt.get(key));
             i++;
         }
+    }
+
+    @Test
+    public void test_OurHashMap_keyIterator_Rehash_Correct() {
+        for (int i = 0; i < 8; i++)
+            mapInt.put(i, i);
+
+        assertEquals(8, mapInt.size());
+
+        for (int i = 0; i < 8; i++)
+            assertEquals(i, mapInt.get(i));
+
+        for (int i = 0; i < mapInt.size(); i++)
+            assertEquals(i, mapInt.get(i));
+
+        for (int i = 8; i < 30; i++)
+            mapInt.put(i, i);
+
+        assertEquals(30, mapInt.size());
+
+        for (int i = 0; i < 8; i++)
+            assertEquals(i, mapInt.get(i));
+
+        for (int i = 0; i < mapInt.size(); i++)
+            assertEquals(i, mapInt.get(i));
     }
 }
