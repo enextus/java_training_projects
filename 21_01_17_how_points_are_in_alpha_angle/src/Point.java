@@ -11,13 +11,17 @@ public class Point {
         this.rad = coordToRad(this.x, this.y);
     }
 
-    public double coordToRad(double x, double y){
+    private double coordToRad(double x, double y){
         double sinx = this.getX() / (Math.sqrt((Math.pow(this.getY(), 2)) + (Math.pow(this.getX(), 2))));
         return Math.asin(sinx);
     }
 
     public double getX() {
         return x;
+    }
+
+    public double getRad() {
+        return rad;
     }
 
     @Override
