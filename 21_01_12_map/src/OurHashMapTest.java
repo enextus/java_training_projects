@@ -1,16 +1,15 @@
 import org.junit.jupiter.api.Test;
 
 import java.util.Iterator;
-import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class OurHashMapTest {
 
-    OurMap<Integer, Integer> mapInt = new OurHashMap<>();
+    OurMap<Integer, Integer> mapInt = new OurHashMap_naive<>();
 
-    OurHashMap<String, Auto> map = new OurHashMap<>();
+    OurHashMap_naive<String, Auto> map = new OurHashMap_naive<>();
 
 /*    @Test
     public void testAssertMap() {
@@ -146,7 +145,7 @@ class OurHashMapTest {
 
     @Test
     void testPut_resize() {
-        OurMap<String, Auto> map = new OurHashMap<>(0.5);
+        OurMap<String, Auto> map = new OurHashMap_naive<>(0.5);
         Auto opel = new Auto("grey", "Opel");
         Auto mazda = new Auto("red", "Mazda");
         Auto bmw = new Auto("black", "BMW");
@@ -230,7 +229,7 @@ class OurHashMapTest {
 
     @Test
     void testRemove_twoObjectInCells_UpElement() {
-        OurHashMap<String, Auto> map = new OurHashMap<>();
+        OurHashMap_naive<String, Auto> map = new OurHashMap_naive<>();
         Auto opel = new Auto("grey", "Opel");
         Auto mazda = new Auto("red", "Mazda");
         Auto bmw = new Auto("black", "BMW");
@@ -286,7 +285,7 @@ class OurHashMapTest {
         checkAllElements(map, autoWin);
     }
 
-    void checkAllElements(OurHashMap<String, Auto> mapCheck, String[] arrayStr) {
+    void checkAllElements(OurHashMap_naive<String, Auto> mapCheck, String[] arrayStr) {
         for (String elm : arrayStr) {
             // System.out.println(elm);
             assertNotNull(mapCheck.get(elm));
@@ -356,7 +355,7 @@ class OurHashMapTest {
         });
     }
 
-    OurMap<Integer, String> intMap = new OurHashMap<>();
+    OurMap<Integer, String> intMap = new OurHashMap_naive<>();
 
     @Test
     public void test_keyIterator() {

@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Iterator;
 
 /**
@@ -16,31 +15,15 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
     private double loadFactor;
     private int capacity;
 
-    @Override
-    public String toString() {
-        return "OurHashMap{" +
-                "source=" + Arrays.toString(source) +
-                ", size=" + size +
-                ", loadFactor=" + loadFactor +
-                ", capacity=" + capacity +
-                '}';
-    }
-
-    /**
-     * Hash function
-     *
-     * @param key
-     * @return
-     */
-    static int hash(Object key) {
-        return Math.abs(key.hashCode());
-    }
-
     public OurHashMap() {
-        source = new Pair[INITIAL_CAPACITY]; // [<K1, V1>, <K2, V2>, ..., <K16, V16>] -> [<null, null>,.. <null, null>]
+        source = new Pair[INITIAL_CAPACITY];
         capacity = INITIAL_CAPACITY;
         size = 0;
         loadFactor = DEFAULT_LOAD_FACTOR;
+    }
+
+    static int hash(Object key) {
+        return Math.abs(key.hashCode());
     }
 
     public OurHashMap(double loadFactor) {
@@ -48,46 +31,23 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
         this.loadFactor = loadFactor;
     }
 
-    /**
-     * Return actual size of the map
-     *
-     * @return size of map
-     */
-    @Override
-    public int size() {
-        return size;
-    }
-
     @Override
     public V put(K key, V value) {
-        if (size >= loadFactor * capacity) {
-            // System.out.println("DO REHASH!");
+        if (size >= loadFactor * capacity)
             resize();
-        }
 
         Pair<K, V> pair = find(key);
 
         if (pair != null) {
-
             V res = pair.value;
             pair.value = value;
-
             return res;
         }
 
         int index = hash(key) % capacity;
-
-
-        Pair<K, V> newPair = new Pair<>(key, value, source[index]); // esli est tam uze Pair, to ona zapishetsja (source[index]) w pole NEXT, esli net to NULL
-
-        // System.out.println("newPair.key: " + newPair.key);
-        // System.out.println("newPair.value: " + newPair.value);
-        // System.out.println("newPair.next: " + newPair.next);
-
-        // pomestim posledniju prishedshuju Pair na etot index. (zapishem staruju Pair wnutri novoj w pole - NEXT)
+        Pair<K, V> newPair = new Pair<>(key, value, source[index]);
         source[index] = newPair;
         size++;
-
         return null;
     }
 
@@ -105,7 +65,7 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
                 currentPair.next = newSource[newIndex];
                 newSource[newIndex] = currentPair;
 
-                currentPair = currentPair.next;
+                currentPair = next;
             }
         }
 
@@ -113,97 +73,135 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
     }
 
     private Pair<K, V> find(K key) {
-
-        int index = Math.abs(key.hashCode() % capacity);
+        int index = hash(key) % capacity;
+//        int index = Math.abs(key.hashCode() % capacity);
 
         Pair<K, V> current = source[index];
-
         while (current != null) {
             if (key.equals(current.key))
                 return current;
+            current = current.next;
+        }
+        return null;
+    }
+
+    @Override
+    public V get(K key) {
+        Pair<K, V> pair = find(key);
+        return pair == null ? null : pair.value;
+    }
+
+    @Override
+    public V remove(K key) {
+        int index = hash(key) % capacity;
+        Pair<K, V> current = source[index];
+
+        if (current == null)
+            return null;
+
+        if (current.key.equals(key)) {
+            source[index] = current.next;
+            V res = current.value;
+
+            clearPair(current);
+
+            size--;
+            return res;
+        }
+
+        while (current.next != null) {
+            if (current.next.key.equals(key)) {
+                Pair<K, V> pairToRemove = current.next;
+                V res = pairToRemove.value;
+                current.next = pairToRemove.next;
+
+                clearPair(pairToRemove);
+
+                size--;
+                return res;
+            }
             current = current.next;
         }
 
         return null;
     }
 
-    @Override
-    public V get(K key) {
-        if (size() == 0)
-            return null;
-
-        Pair<K, V> pair = find(key);
-
-        if (pair == null)
-            return null;
-
-        return pair.value;
+    private void clearPair(Pair<K, V> pair) {
+        pair.next = null;
+        pair.value = null;
+        pair.key = null;
     }
 
     @Override
-    public V remove(K key) {
-        if (size() == 0)
-            return null;
-
-        // Pair<K, V> pair = find(key);
-
-        int index = key.hashCode() % capacity;
-
-        Pair<K, V> pairToRemove = source[index];
-
-        if (pairToRemove == null)
-            return null;
-
-        if ((pairToRemove.next == null) && (key.equals(pairToRemove.key))) { // 1. case: We have only one Pair in this cell (at this index)
-            source[index] = null;
-            size--;
-
-            return pairToRemove.value;
-        } else { // 2. case: We have more as one Pair in this cell (at this index)
-
-            Pair<K, V> currentPair = pairToRemove;
-
-            while (currentPair != null) { // perebor Pairs wnutri cell
-
-/*                System.out.println("pairToRemove: " + pairToRemove);
-                System.out.println("currentPair: " + currentPair);*/
-
-                if (key.equals(currentPair.key)) {
-
-/*                    System.out.println("- - > currentPair: " + currentPair);
-                    System.out.println("- - > currentPair.next: " + currentPair.next);*/
-
-                    pairToRemove.next = currentPair.next;
-
-                    size--;
-                    return currentPair.value;
-                }
-
-                currentPair = currentPair.next;
-/*                  System.out.println("\n");*/
-            }
-        }
-
-        return pairToRemove.value;
-    }
-
-    /**
-     * Returns {@code true} if this map contains no key-value mappings.
-     *
-     * @return {@code true} if this map contains no key-value mappings
-     */
-    public boolean isEmpty() {
-        return size == 0;
+    public int size() {
+        return size;
     }
 
     @Override
     public Iterator<K> keyIterator() {
-        return null;
+        return new KeyIterator();
+    }
+
+    private class KeyIterator implements Iterator<K> {
+
+        int index = 0;
+        int position = 0;
+        Pair<K, V> currentPair;
+
+        KeyIterator() {
+            if (size == 0)
+                return;
+
+            while (source[index] == null) {
+                index++;
+            }
+
+            currentPair = source[index];
+        }
+
+        @Override
+        public boolean hasNext() {
+            return position < size;
+        }
+
+        @Override
+        public K next() {
+            if (position >= size)
+                throw new IndexOutOfBoundsException();
+
+            K res = currentPair.key;
+
+            if (currentPair.next != null) {
+                currentPair = currentPair.next;
+            } else {
+                do {
+                    index++;
+                } while (index < capacity && source[index] == null);
+
+                currentPair = index < capacity ? source[index] : null;
+            }
+
+            position++;
+            return res;
+        }
     }
 
     @Override
     public Iterator<V> valueIterator() {
-        return null;
+        return new Iterator<V>() {
+
+            final KeyIterator keyIterator = new KeyIterator();
+
+            @Override
+            public boolean hasNext() {
+                return keyIterator.hasNext();
+            }
+
+            @Override
+            public V next() {
+                return get(keyIterator.next());
+            }
+        };
     }
 
     static private class Pair<K, V> {
@@ -217,25 +215,17 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
             this.next = next;
         }
 
-/*        public K getKey() {
-            return key;
-        }
-
-        public V getValue() {
-            return value;
-        }
-
-        public Pair<K, V> getNext() {
-            return next;
-        }*/
-
-        @Override
-        public String toString() {
-            return "Pair{" +
-                    "key=" + key +
-                    ", value=" + value +
-                    ", next=" + next +
-                    '}';
-        }
+//        public K getKey() {
+//            return key;
+//        }
+//
+//        public V getValue() {
+//            return value;
+//        }
+//
+//        public Pair<K, V> getNext() {
+//            return next;
+//        }
     }
+
 }

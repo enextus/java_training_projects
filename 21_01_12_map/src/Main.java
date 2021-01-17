@@ -1,7 +1,3 @@
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
-
 public class Main {
 /*    static void fillMap(Map<Auto, String> map) {
         Auto greyOpel = new Auto("Grey", "Opel");
@@ -9,7 +5,7 @@ public class Main {
     }*/
 
     public static void main(String[] args) {
-        OurHashMap<Auto, String> map = new OurHashMap<>();
+        OurHashMap_naive<Auto, String> map = new OurHashMap_naive<>();
 
 //        fillMap(map);
 
