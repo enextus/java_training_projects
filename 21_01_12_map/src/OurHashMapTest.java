@@ -8,13 +8,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class OurHashMapTest {
 
     OurMap<Integer, Integer> mapInt = new OurHashMap<>();
-    OurMap<String, Auto> map        = new OurHashMap<>();
+    OurMap<String, Auto> map = new OurHashMap<>();
 
-    Auto opel   = new Auto("grey", "Opel");
-    Auto mazda  = new Auto("red", "Mazda");
-    Auto bmw    = new Auto("black", "BMW");
-    Auto audi   = new Auto("blue", "Audi");
-    Auto audi2  = new Auto("braun", "Audi");
+    Auto opel = new Auto("grey", "Opel");
+    Auto mazda = new Auto("red", "Mazda");
+    Auto bmw = new Auto("black", "BMW");
+    Auto bmw1 = new Auto("black", "BMW");
+    Auto audi = new Auto("blue", "Audi");
+    Auto audi2 = new Auto("braun", "Audi");
 
     // String[] autoWin = {"WIN4528", "WIN56828", "WIN56628", "WIN56298", "WIN8988", "WIN8989", "WIN5628", "WIN56256"};
 
@@ -24,7 +25,7 @@ class OurHashMapTest {
     }
 
     @Test
-    public void testAssertMap() {
+    public void testAssert_OurHashMap_size() {
         map.put("o", opel);
         map.put("m", mazda);
         map.put("b", bmw);
@@ -35,24 +36,24 @@ class OurHashMapTest {
     }
 
     @Test
-    void test_NullPointerException_after_add_null() {
+    void test_NullPointerException_OurHashMap_after_add_null() {
         assertThrows(NullPointerException.class, () -> map.put(null, null));
     }
 
     @Test
-    void test_sizeOfLinkedList_after_null_add_size_0() {
+    void test_sizeOfLinkedList_OurHashMap_after_null_add_size_0() {
         mapInt.put(0, 0);
         assertEquals(1, mapInt.size());
     }
 
     @Test
-    void test_sizeOfLinkedList_after_one_add_size_1() {
+    void test_sizeOfLinkedList_OurHashMap_after_one_add_size_1() {
         mapInt.put(333, 333);
         assertEquals(1, mapInt.size());
     }
 
     @Test
-    void test_sizeOfLinkedList_after_3_adds_size_3() {
+    void test_sizeOfLinkedList_OurHashMap_after_3_adds_size_3() {
         mapInt.put(1, 1);
         mapInt.put(2, 1);
         mapInt.put(3, 1);
@@ -60,7 +61,7 @@ class OurHashMapTest {
     }
 
     @Test
-    void test_sizeOfLinkedList_after_17_adds_size_17() {
+    void test_sizeOfLinkedList_OurHashMap_after_17_adds_size_17() {
         for (int i = 0; i < 17; i++)
             mapInt.put(i, i);
 
@@ -68,29 +69,29 @@ class OurHashMapTest {
     }
 
     @Test
-    void test_remove_null_from_empty_list_exception() {
+    void test_remove_null_from_OurHashMap_empty_list_exception() {
         assertEquals(null, mapInt.remove(null));
     }
 
     @Test
-    void test_remove_1_from_empty_list_exception() {
+    void test_remove_1_from_OurHashMap_empty_list_exception() {
         assertEquals(null, mapInt.remove(1));
     }
 
     @Test
-    void test_remove_element_from_list_cont_1_element_true() {
+    void test_remove_element_from_OurHashMap_list_cont_1_element_true() {
         mapInt.put(1, 1);
         assertEquals(1, mapInt.remove(1));
     }
 
     @Test
-    void test_remove_element_from_list_a_not_cont_elem_exception() {
+    void test_remove_element_from_OurHashMap_a_not_cont_elem_exception() {
         mapInt.put(10, 10);
         assertEquals(null, mapInt.remove(1));
     }
 
     @Test
-    void test_remove_elements_true() {
+    void test_OurHashMap_remove_elements_true() {
         for (int i = 0; i < 17; i++)
             mapInt.put(i, i);
 
@@ -99,7 +100,7 @@ class OurHashMapTest {
     }
 
     @Test
-    void test_SizeChange_results() {
+    void test_OurHashMap_SizeChange_results() {
         for (int i = 0; i < 5; i++)
             mapInt.put(i, i);
 
@@ -109,7 +110,7 @@ class OurHashMapTest {
     }
 
     @Test
-    void test_get_more_as_them_size_exception() {
+    void test_OurHashMap_get_more_as_them_size_exception() {
         assertEquals(null, mapInt.get(2));
     }
 
@@ -123,7 +124,7 @@ class OurHashMapTest {
     }
 
     @Test
-    void test_get_after_remove_exception() {
+    void test_OurHashMap_get_after_remove_exception() {
 
         for (int i = 0; i < 5; i++)
             mapInt.put(i, i);
@@ -149,7 +150,7 @@ class OurHashMapTest {
 
 
     @Test
-    void testPut_resize() {
+    void test_OurHashMap_Put_resize() {
         map.put("WIN4528", opel);
         map.put("WIN74528", opel);
         map.put("WIN56828", mazda);
@@ -164,7 +165,7 @@ class OurHashMapTest {
     }
 
     @Test
-    void changeTheValueOofAnExistingElement() {
+    void change_OurHashMap_TheValueOofAnExistingElement() {
 
         Auto audi = new Auto("blue", "Audi");
         Auto audi2 = new Auto("braun", "Audi");
@@ -177,7 +178,7 @@ class OurHashMapTest {
     }
 
     @Test
-    void testRemove_twoObjectInCells_bottom() {
+    void testRemove_OurHashMap_twoObjectInCells_bottom() {
         Auto opel = new Auto("grey", "Opel");
         Auto mazda = new Auto("red", "Mazda");
         Auto bmw = new Auto("black", "BMW");
@@ -214,7 +215,9 @@ class OurHashMapTest {
         map.put("WIN56828", mazda);
         map.put("WIN56628", mazda);
         map.put("WIN56298", mazda);
+
         map.put("WIN8988", bmw);
+
         map.put("WIN8989", bmw);
         map.put("WIN5628", audi);
         map.put("WIN56256", audi2);
@@ -222,11 +225,10 @@ class OurHashMapTest {
         assertEquals(map.remove("WIN8988"), bmw);
         assertNull(map.get("WIN8988"));
         assertEquals(map.size(), 8);
-
     }
 
     @Test
-    void testRemove_twoObjectInCells_UpElement() {
+    void testRemove_OurHashMap_twoObjectInCells_UpElement() {
         map.put("WIN4528", opel);
         map.put("WIN74528", opel);
         map.put("WIN56828", mazda);
@@ -243,15 +245,7 @@ class OurHashMapTest {
     }
 
     @Test
-    void put_changeElement() {
-
-        Auto opel = new Auto("grey", "Opel");
-        Auto mazda = new Auto("red", "Mazda");
-        Auto bmw = new Auto("black", "BMW");
-        Auto bmw1 = new Auto("pink", "BMW");
-        Auto audi = new Auto("blue", "Audi");
-        Auto audi2 = new Auto("braun", "Audi");
-
+    void put_OurHashMap_changeElement() {
         map.put("WIN4528", opel);
         map.put("WIN8988", bmw);
         map.put("WIN8988", bmw1);
@@ -274,7 +268,7 @@ class OurHashMapTest {
         checkAllElements(map, autoWin);
     }
 
-    void checkAllElements(OurHashMap_naive<String, Auto> mapCheck, String[] arrayStr) {
+    void checkAllElements_OurHashMap_(OurHashMap_naive<String, Auto> mapCheck, String[] arrayStr) {
         for (String elm : arrayStr) {
             // System.out.println(elm);
             assertNotNull(mapCheck.get(elm));
@@ -282,7 +276,7 @@ class OurHashMapTest {
     }
 
     @Test
-    public void testKeyIterator_emptyList() {
+    public void testKeyIterator_OurHashMap_emptyList() {
         Iterator<String> iterator = map.keyIterator();
 
         assertFalse(iterator.hasNext());
@@ -292,7 +286,7 @@ class OurHashMapTest {
     }
 
     @Test
-    public void testKeyIterator_oneElement() {
+    public void testKeyIterator_OurHashMap_oneElement() {
 
         Auto opel = new Auto("grey", "Opel");
         map.put("WIN4528", opel);
@@ -312,7 +306,7 @@ class OurHashMapTest {
     }
 
     @Test
-    public void testForwardIterator_severalElements() {
+    public void testForwardIterator_OurHashMap_severalElements() {
         Auto opel = new Auto("grey", "Opel");
         Auto mazda = new Auto("red", "Mazda");
         Auto bmw = new Auto("black", "BMW");
@@ -347,7 +341,7 @@ class OurHashMapTest {
     OurMap<Integer, String> intMap = new OurHashMap_naive<>();
 
     @Test
-    public void test_keyIterator() {
+    public void test_OurHashMap_keyIterator() {
         for (int i = 0; i < 5; i++) {
             intMap.put(i, "aaa");
             intMap.put(i * 2, "bbb");
