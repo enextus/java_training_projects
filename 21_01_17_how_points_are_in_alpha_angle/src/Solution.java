@@ -3,7 +3,7 @@ import java.util.List;
 
 public class Solution {
 
-    public int maxCoveredPoints(List<Integer> integerList, int leftCorner, int rightCorner) {
+    public int coveredPoints(List<Integer> integerList, int leftCorner, int rightCorner) {
 
         int points = 0;
         int maxPoints = 0;
@@ -14,9 +14,11 @@ public class Solution {
         for (int i = 0; i < numbers.size(); i++) {
             for (int j = i; j < numbers.size(); j++) {
 
-                System.out.println("numbers.get(j): " + numbers.get(j) + ", numbers.get(i): " + numbers.get(i) + ", numbers.get(j) - numbers.get(i): " + (numbers.get(j) - numbers.get(i)));
+                System.out.println("(i): " + numbers.get(i) + ", (j): " + numbers.get(j));
+                System.out.println("(j) - (i): " + (numbers.get(j) - numbers.get(i)));
+                System.out.println();
 
-                if ((numbers.get(j) - numbers.get(i) >= leftCorner) && (numbers.get(j) - numbers.get(i) <= rightCorner))
+                if ((numbers.get(j) >= leftCorner) && (numbers.get(j) - numbers.get(i) <= rightCorner))
                     points++;
             }
 
