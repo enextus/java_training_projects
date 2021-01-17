@@ -7,26 +7,31 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class OurHashMapTest {
 
-    OurMap<Integer, Integer> mapInt = new OurHashMap_naive<>();
+    OurMap<Integer, Integer> mapInt = new OurHashMap<>();
+    OurMap<String, Auto> map        = new OurHashMap<>();
 
-    OurHashMap_naive<String, Auto> map = new OurHashMap_naive<>();
+    Auto opel   = new Auto("grey", "Opel");
+    Auto mazda  = new Auto("red", "Mazda");
+    Auto bmw    = new Auto("black", "BMW");
+    Auto audi   = new Auto("blue", "Audi");
+    Auto audi2  = new Auto("braun", "Audi");
+
+    // String[] autoWin = {"WIN4528", "WIN56828", "WIN56628", "WIN56298", "WIN8988", "WIN8989", "WIN5628", "WIN56256"};
+
+    @Test
+    void test_sizeOfEmpty_OurHashMap_IsZero_size() {
+        assertEquals(0, map.size());
+    }
 
     @Test
     public void testAssertMap() {
+        map.put("o", opel);
+        map.put("m", mazda);
+        map.put("b", bmw);
+        map.put("a", audi);
+        map.put("a2", audi2);
 
-        map.put("j", "java");
-        map.put("c", "c++");
-        map.put("p", "python");
-        map.put("n", "node");
-
-        assertEquals(4, map.size());
-    }
-
-
-
-    @Test
-    void test_sizeOfEmptyLinkedListIsZero_size() {
-        assertEquals(0, map.size());
+        assertEquals(5, map.size());
     }
 
     @Test
@@ -188,22 +193,29 @@ class OurHashMapTest {
 
         map.put("WIN4528", opel);
         map.put("WIN74528", opel);
+
+        assertEquals(map.get("WIN74528"), opel);
+
         map.put("WIN56828", mazda);
         map.put("WIN56628", mazda);
+
+
+
         map.put("WIN56298", mazda);
         map.put("WIN8988", bmw);
         map.put("WIN8989", bmw);
         map.put("WIN5628", audi);
         map.put("WIN56256", audi2);
+
         assertEquals(map.remove("WIN8989"), bmw);
         assertEquals(map.get("WIN74528"), opel);
         assertEquals(map.size(), 8);
-        String[] autoWin = {"WIN4528", "WIN56828", "WIN74528", "WIN56628", "WIN56298", "WIN8988", "WIN5628", "WIN56256"};
-        checkAllElements(map, autoWin);
+
+        assertNull(map.get("WIN74528"));
     }
 
     @Test
-    void testRemove_OneElement() {
+    void testRemove_OurHashMap_OneElement() {
         Auto opel = new Auto("grey", "Opel");
         Auto mazda = new Auto("red", "Mazda");
         Auto bmw = new Auto("black", "BMW");
@@ -223,19 +235,11 @@ class OurHashMapTest {
         assertEquals(map.remove("WIN8988"), bmw);
         assertNull(map.get("WIN8988"));
         assertEquals(map.size(), 8);
-        String[] autoWin = {"WIN4528", "WIN56828", "WIN74528", "WIN56628", "WIN56298", "WIN8989", "WIN5628", "WIN56256"};
-        checkAllElements(map, autoWin);
+
     }
 
     @Test
     void testRemove_twoObjectInCells_UpElement() {
-        OurHashMap_naive<String, Auto> map = new OurHashMap_naive<>();
-        Auto opel = new Auto("grey", "Opel");
-        Auto mazda = new Auto("red", "Mazda");
-        Auto bmw = new Auto("black", "BMW");
-        Auto audi = new Auto("blue", "Audi");
-        Auto audi2 = new Auto("braun", "Audi");
-
         map.put("WIN4528", opel);
         map.put("WIN74528", opel);
         map.put("WIN56828", mazda);
@@ -245,12 +249,10 @@ class OurHashMapTest {
         map.put("WIN8989", bmw);
         map.put("WIN5628", audi);
         map.put("WIN56256", audi2);
+
         assertEquals(map.remove("WIN74528"), opel);
         assertEquals(map.get("WIN8989"), bmw);
         assertEquals(map.size(), 8);
-
-        String[] autoWin = {"WIN4528", "WIN56828", "WIN56628", "WIN56298", "WIN8988", "WIN8989", "WIN5628", "WIN56256"};
-        checkAllElements(map, autoWin);
     }
 
     @Test
