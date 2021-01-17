@@ -33,12 +33,13 @@ public class App {
         double b = 2.0;
         double c = 0.5;
         double d = Math.PI;
-        double e = Math.PI;
+        double e = Math.PI/4;
 
         System.out.format("%.1f радиан = %.3f градусов %n", a, Math.toDegrees(a));
         System.out.format("%.1f радиан = %.3f градусов %n", b, Math.toDegrees(b));
         System.out.format("%.6f радиан = %.5f градусу %n", c, Math.toDegrees(c));
         System.out.format("%.6f радиан = %.5f градусу %n", d, Math.toDegrees(d));
+        System.out.format("%.6f радиан = %.5f градусу %n", e, Math.toDegrees(e));
 
         //System.out.println("Points: " + sol.coveredPoints(pointsList, 1));
 
