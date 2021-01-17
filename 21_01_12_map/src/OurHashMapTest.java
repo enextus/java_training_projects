@@ -210,7 +210,6 @@ class OurHashMapTest {
         assertEquals(bmw, map.remove("WIN8989"));
         assertEquals(opel, map.get("WIN74528"));
         assertEquals(8, map.size());
-
         assertEquals(opel, map.get("WIN74528"));
     }
 
@@ -228,9 +227,9 @@ class OurHashMapTest {
         map.put("WIN5628", audi);
         map.put("WIN56256", audi2);
 
-        assertEquals(map.remove("WIN8988"), bmw);
+        assertEquals(bmw, map.remove("WIN8988"));
         assertNull(map.get("WIN8988"));
-        assertEquals(map.size(), 8);
+        assertEquals(8, map.size());
     }
 
     @Test
@@ -245,9 +244,9 @@ class OurHashMapTest {
         map.put("WIN5628", audi);
         map.put("WIN56256", audi2);
 
-        assertEquals(map.remove("WIN74528"), opel);
-        assertEquals(map.get("WIN8989"), bmw);
-        assertEquals(map.size(), 8);
+        assertEquals(opel, map.remove("WIN74528"));
+        assertEquals(bmw, map.get("WIN8989"));
+        assertEquals(8, map.size());
     }
 
     @Test
@@ -255,29 +254,38 @@ class OurHashMapTest {
         map.put("WIN4528", opel);
         map.put("WIN8988", bmw);
         map.put("WIN8988", bmw1);
-        assertEquals(map.get("WIN8988"), bmw1);
-        assertNotSame(map.get("WIN8988"), bmw);
+
+        assertEquals(bmw1, map.get("WIN8988"));
+        assertNotSame(bmw, map.get("WIN8988"));
 
 
         map.put("WIN74528", opel);
         map.put("WIN56828", mazda);
         map.put("WIN56628", mazda);
         map.put("WIN56298", mazda);
-
         map.put("WIN5628", audi);
         map.put("WIN5628", audi2);
-        assertEquals(map.get("WIN5628"), audi2);
-        assertNotSame(map.get("WIN5628"), audi);
-        assertEquals(map.size(), 7);
 
-        String[] autoWin = {"WIN4528", "WIN56828", "WIN74528", "WIN56628", "WIN56298", "WIN8988", "WIN5628"};
-        //checkAllElements(map, autoWin);
+        assertEquals(audi2, map.get("WIN5628"));
+        assertNotSame(audi, map.get("WIN5628"));
+        assertEquals(7, map.size());
     }
 
-    void checkAllElements_OurHashMap_(OurHashMap_naive<String, Auto> mapCheck, String[] arrayStr) {
-        for (String elm : arrayStr) {
-            // System.out.println(elm);
-            assertNotNull(mapCheck.get(elm));
+    @Test
+    public void checkAllElements_OurHashMap() {
+        map.put("o", opel);
+        map.put("m", mazda);
+        map.put("b", bmw);
+        map.put("a", audi);
+        map.put("a2", audi2);
+
+        Iterator<String> iterator = map.keyIterator();
+
+        String key;
+
+        for (int i = 0; i < map.size(); i++) {
+            key = iterator.next();
+            assertNotNull(map.get(key));
         }
     }
 
@@ -293,8 +301,6 @@ class OurHashMapTest {
 
     @Test
     public void testKeyIterator_OurHashMap_oneElement() {
-
-        Auto opel = new Auto("grey", "Opel");
         map.put("WIN4528", opel);
 
         Iterator<String> iterator = map.keyIterator();
@@ -302,7 +308,6 @@ class OurHashMapTest {
         int i = 0;
         while (iterator.hasNext()) {
             String key = iterator.next();
-            System.out.println(key);
             assertEquals("WIN4528", key);
         }
 
@@ -313,12 +318,6 @@ class OurHashMapTest {
 
     @Test
     public void testForwardIterator_OurHashMap_severalElements() {
-        Auto opel = new Auto("grey", "Opel");
-        Auto mazda = new Auto("red", "Mazda");
-        Auto bmw = new Auto("black", "BMW");
-        Auto audi = new Auto("blue", "Audi");
-        Auto audi2 = new Auto("braun", "Audi");
-
         map.put("WIN4528", opel);
         map.put("WIN74528", opel);
         map.put("WIN56828", mazda);
@@ -333,7 +332,6 @@ class OurHashMapTest {
 
         int i = 0;
         while (iterator.hasNext()) {
-            System.out.println(iterator.next());
             i++;
         }
 
@@ -344,20 +342,24 @@ class OurHashMapTest {
         });
     }
 
-    OurMap<Integer, String> intMap = new OurHashMap_naive<>();
-
     @Test
     public void test_OurHashMap_keyIterator() {
         for (int i = 0; i < 5; i++) {
-            intMap.put(i, "aaa");
-            intMap.put(i * 2, "bbb");
+            mapInt.put(i * 2, i * 2);
         }
-        Iterator<Integer> iterator = intMap.keyIterator();
-        int[] exp = {0, 1, 2, 3, 4, 6, 8};
+
+        Iterator<Integer> iterator = mapInt.keyIterator();
+
+        int[] expKey = {0, 2, 4, 6, 8};
+        int[] expVal = {0, 2, 4, 6, 8};
+
+        int key;
         int i = 0;
         while (iterator.hasNext()) {
-            System.out.println(iterator.next());
-//            assertEquals(exp[i++], iterator.next());
+            key = iterator.next();
+            assertEquals(expKey[i], key);
+            assertEquals(expVal[i], mapInt.get(key));
+            i++;
         }
     }
 }
