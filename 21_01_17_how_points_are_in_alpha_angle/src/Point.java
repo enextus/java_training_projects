@@ -21,15 +21,19 @@ public class Point implements Comparable<Point> {
         return x;
     }
 
+    public double getY() {
+        return y;
+    }
+
     public double getRad() {
         return rad;
     }
 
     @Override
     public int compareTo(Point compares) {
-        if(this.getRad()<compares.getRad())
+        if (this.getRad() < compares.getRad())
             return -1;
-        else if(compares.getRad()<this.getRad())
+        else if (compares.getRad() < this.getRad())
             return 1;
         return 0;
     }
@@ -55,9 +59,4 @@ public class Point implements Comparable<Point> {
     public int hashCode() {
         return Objects.hash(getX(), getY());
     }
-
-    public double getY() {
-        return y;
-    }
-
 }
