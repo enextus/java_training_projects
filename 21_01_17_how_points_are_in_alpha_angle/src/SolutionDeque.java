@@ -34,6 +34,4 @@ public class SolutionDeque {
 
         return maxPoints;
     }
-
-
 }
