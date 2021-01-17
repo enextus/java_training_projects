@@ -10,26 +10,26 @@ public class SolutionDeque {
         double angleRad = (alpha * Math.PI) / 180;
 
         ArrayList<Point> arrayList = new ArrayList<>(points);
-        ArrayDeque<Integer> maximusDeque = new ArrayDeque<>();
+        ArrayDeque<Integer> maximsDeque = new ArrayDeque<>();
 
         for (int i = 0; i < arrayList.size(); i++) {
 
             for (int j = i; j < arrayList.size(); j++) {
                 if (arrayList.get(j).getRad() - arrayList.get(i).getRad() <= angleRad) {
 
-                    if (maximusDeque.isEmpty())
-                        maximusDeque.addLast(1);
+                    if (maximsDeque.isEmpty())
+                        maximsDeque.addLast(1);
                     else
-                        maximusDeque.addLast(maximusDeque.getLast() + 1);
+                        maximsDeque.addLast(maximsDeque.getLast() + 1);
 
                 }
             }
 
-            int size = maximusDeque.size();
+            int size = maximsDeque.size();
             if (size >= maxPoints)
                 maxPoints = size;
 
-            maximusDeque.clear();
+            maximsDeque.clear();
         }
 
         return maxPoints;
