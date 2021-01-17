@@ -23,10 +23,8 @@ public class SolutionDeque {
                 }
             }
 
-            if (maximusDeque.size() >= maxPoints) {
+            if (maximusDeque.size() >= maxPoints)
                 maxPoints = maximusDeque.size();
-            }
-
 
             maximusDeque.clear();
         }
@@ -38,5 +36,9 @@ public class SolutionDeque {
         int x;
         int y;
 
+        public Point(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
     }
 }
