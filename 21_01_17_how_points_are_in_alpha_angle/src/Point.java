@@ -8,12 +8,12 @@ public class Point implements Comparable<Point> {
     public Point(double x, double y) {
         this.x = x;
         this.y = y;
-        this.rad = coordToRad(this.x, this.y);
+        this.rad = cordToRad(this.x, this.y);
     }
 
-    private double coordToRad(double x, double y) {
-        double sinx = this.getX() / (Math.sqrt((Math.pow(this.getY(), 2)) + (Math.pow(this.getX(), 2))));
-        return Math.asin(sinx);
+    private double cordToRad(double x, double y) {
+        double sins = this.getX() / (Math.sqrt((Math.pow(this.getY(), 2)) + (Math.pow(this.getX(), 2))));
+        return Math.asin(sins);
     }
 
     public double getX() {
