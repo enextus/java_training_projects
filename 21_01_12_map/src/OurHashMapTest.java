@@ -150,13 +150,6 @@ class OurHashMapTest {
 
     @Test
     void testPut_resize() {
-        OurMap<String, Auto> map = new OurHashMap_naive<>(0.5);
-        Auto opel = new Auto("grey", "Opel");
-        Auto mazda = new Auto("red", "Mazda");
-        Auto bmw = new Auto("black", "BMW");
-        Auto audi = new Auto("blue", "Audi");
-        Auto audi2 = new Auto("braun", "Audi");
-
         map.put("WIN4528", opel);
         map.put("WIN74528", opel);
         map.put("WIN56828", mazda);
@@ -199,7 +192,7 @@ class OurHashMapTest {
         map.put("WIN56828", mazda);
         map.put("WIN56628", mazda);
 
-
+        assertEquals(mazda, map.get("WIN56828"));
 
         map.put("WIN56298", mazda);
         map.put("WIN8988", bmw);
@@ -216,12 +209,6 @@ class OurHashMapTest {
 
     @Test
     void testRemove_OurHashMap_OneElement() {
-        Auto opel = new Auto("grey", "Opel");
-        Auto mazda = new Auto("red", "Mazda");
-        Auto bmw = new Auto("black", "BMW");
-        Auto audi = new Auto("blue", "Audi");
-        Auto audi2 = new Auto("braun", "Audi");
-
         map.put("WIN4528", opel);
         map.put("WIN74528", opel);
         map.put("WIN56828", mazda);
