@@ -18,46 +18,46 @@ class BinaryTreeVertexTest {
 
     @Test
     void height_Test_node_4() {
-        assertEquals(4, binaryTreeVertex.heightTree(node_4));
+        assertEquals(9, binaryTreeVertex.vertexCount(node_4));
     }
 
     @Test
     void height_Test_node_2() {
-        assertEquals(1, binaryTreeVertex.heightTree(node_2));
+        assertEquals(3, binaryTreeVertex.vertexCount(node_2));
     }
 
     @Test
     void height_Test_node_1() {
-        assertEquals(0, binaryTreeVertex.heightTree(node_1));
+        assertEquals(1, binaryTreeVertex.vertexCount(node_1));
     }
 
     @Test
     void height_Test_node_3() {
-        assertEquals(0, binaryTreeVertex.heightTree(node_3));
+        assertEquals(1, binaryTreeVertex.vertexCount(node_3));
     }
 
     @Test
     void height_Test_node_5() {
-        assertEquals(3, binaryTreeVertex.heightTree(node_5));
+        assertEquals(5, binaryTreeVertex.vertexCount(node_5));
     }
 
     @Test
     void height_Test_node_6() {
-        assertEquals(2, binaryTreeVertex.heightTree(node_6));
+        assertEquals(4, binaryTreeVertex.vertexCount(node_6));
     }
 
     @Test
     void height_Test_node_7() {
-        assertEquals(0, binaryTreeVertex.heightTree(node_7));
+        assertEquals(1, binaryTreeVertex.vertexCount(node_7));
     }
 
     @Test
     void height_Test_node_8() {
-        assertEquals(1, binaryTreeVertex.heightTree(node_8));
+        assertEquals(2, binaryTreeVertex.vertexCount(node_8));
     }
 
     @Test
     void height_Test_node_9() {
-        assertEquals(0, binaryTreeVertex.heightTree(node_9));
+        assertEquals(1, binaryTreeVertex.vertexCount(node_9));
     }
 }
