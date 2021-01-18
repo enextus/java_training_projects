@@ -39,13 +39,20 @@ class SolutionDequeTest {
     );
 
     @Test
-    void maxTrees() {
+    void maxTrees_Test_print_all() {
         Collections.sort(pointsList);
 
         for (Point pnt : pointsList)
             System.out.println(pnt);
 
         System.out.println("\nmaxTrees: " + sol.maxTrees(pointsList, 15));
+    }
+
+    @Test
+    void maxTrees() {
+        Collections.sort(pointsList);
+        assertEquals(8, sol.maxTrees(pointsList, 15));
+
     }
 
 
