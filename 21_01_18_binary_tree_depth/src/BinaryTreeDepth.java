@@ -8,8 +8,8 @@ public class BinaryTreeDepth {
         int right = heightTree(root.right);
 
         if (left > right)
-            return 1 + left;
+            return left + 1;
         else
-            return 1 + right;
+            return right + 1;
     }
 }
