@@ -1,4 +1,4 @@
-public class BinaryTree {
+public class BinaryTreeDepth {
 
     int heightTree(Node root) {
         if (root == null) {

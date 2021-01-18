@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/binary_tree.iml" filepath="$PROJECT_DIR$/binary_tree.iml" />
+      <module fileurl="file://$PROJECT_DIR$/21_01_18_binary_tree_depth.iml" filepath="$PROJECT_DIR$/21_01_18_binary_tree_depth.iml" />
     </modules>
   </component>
 </project>

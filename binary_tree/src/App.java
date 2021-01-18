@@ -11,8 +11,8 @@ public class App {
         Node node_2 = new Node(node_1, node_3);
         Node node_4 = new Node(node_2, node_5);
 
-        BinaryTree binaryTree = new BinaryTree();
+        BinaryTreeDepth binaryTreeDepth = new BinaryTreeDepth();
 
-        System.out.println(binaryTree.heightTree(node_4));
+        System.out.println(binaryTreeDepth.heightTree(node_4));
     }
 }
