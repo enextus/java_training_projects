@@ -1,11 +1,11 @@
 public class BinaryTreeDepth {
 
-    int heightTree(Node root) {
-        if (root == null)
+    public int heightTree(Node node) {
+        if (node == null)
             return -1;
 
-        int left = heightTree(root.left);
-        int right = heightTree(root.right);
+        int left = heightTree(node.left);
+        int right = heightTree(node.right);
 
         if (left > right)
             return left + 1;
