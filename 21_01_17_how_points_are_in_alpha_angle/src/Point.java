@@ -38,14 +38,6 @@ public class Point implements Comparable<Point> {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Point)) return false;
-        Point point = (Point) o;
-        return Double.compare(point.getX(), getX()) == 0 && Double.compare(point.getY(), getY()) == 0;
-    }
-
-    @Override
     public String toString() {
         return "Point{" +
                 "x=" + x +
@@ -55,7 +47,15 @@ public class Point implements Comparable<Point> {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Point)) return false;
+        Point point = (Point) o;
+        return Double.compare(point.getX(), getX()) == 0 && Double.compare(point.getY(), getY()) == 0 && Double.compare(point.getRad(), getRad()) == 0;
+    }
+
+    @Override
     public int hashCode() {
-        return Objects.hash(getX(), getY());
+        return Objects.hash(getX(), getY(), getRad());
     }
 }
