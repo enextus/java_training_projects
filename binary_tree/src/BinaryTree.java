@@ -1,12 +1,12 @@
 public class BinaryTree {
 
-    int height(Node root) {
+    int heightTree(Node root) {
         if (root == null) {
             return -1;
         } else {
 
-            int left = height(root.left);
-            int right = height(root.right);
+            int left = heightTree(root.left);
+            int right = heightTree(root.right);
 
             if (left > right)
                 return 1 + left;

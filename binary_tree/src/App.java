@@ -13,6 +13,6 @@ public class App {
 
         BinaryTree binaryTree = new BinaryTree();
 
-        System.out.println(binaryTree.height(node_4));
+        System.out.println(binaryTree.heightTree(node_4));
     }
 }
