@@ -1,5 +1,5 @@
 public class BinaryTreeVertex {
-    int vertexCount(Node root) {
+    public int vertexCount(Node root) {
         if (root == null)
             return 0;
 
