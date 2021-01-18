@@ -25,6 +25,6 @@ public class App {
         System.out.println("node_8.left: " + node_8.left + ", node_8.right: " + node_8.right);
         System.out.println("node_9.left: " + node_9.left + ", node_9.right: " + node_9.right);
 
-        System.out.println(binaryTreeDepth.heightTree(node_4));
+        System.out.println("\nBinaryTreeDepth: " + binaryTreeDepth.heightTree(node_4));
     }
 }
