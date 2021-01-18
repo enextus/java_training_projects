@@ -52,20 +52,18 @@ class SolutionDequeTest {
 
     @Test
     void maxTrees_Test_empty_angle_alpha_and_one_Point_in_zero_coordinates() {
-        List<Point> pointsList = Arrays.asList(
+        List<Point> pointsList = Collections.singletonList(
                 new Point(0, 0)
         );
-        Collections.sort(pointsList);
 
         assertEquals(0, sol.maxTrees(pointsList, 0));
     }
 
     @Test
-    void maxTrees_Test_angle_alpha_and_one_Point_in_thе_I_coordinate_quarter() {
-        List<Point> pointsList = Arrays.asList(
-                new Point((Math.sqrt(2)) / 2, (Math.sqrt(2)) / 2)
+    void maxTrees_Test_alpha_and_one_Point_in_the_I_coordinate_quarter() {
+        List<Point> pointsList = Collections.singletonList(
+                new Point(Math.sqrt(2) / 2, Math.sqrt(2) / 2)
         );
-        Collections.sort(pointsList);
 
         assertEquals(1, sol.maxTrees(pointsList, 1));
         assertEquals(1, sol.maxTrees(pointsList, 15));
@@ -77,11 +75,10 @@ class SolutionDequeTest {
     }
 
     @Test
-    void maxTrees_Test_angle_alpha_and_one_Point_in_thе_II_coordinate_quarter() {
-        List<Point> pointsList = Arrays.asList(
-                new Point(-((Math.sqrt(2)) / 2), (Math.sqrt(2)) / 2)
+    void maxTrees_Test_alpha_and_one_Point_in_the_II_coordinate_quarter() {
+        List<Point> pointsList = Collections.singletonList(
+                new Point(-(Math.sqrt(2) / 2), Math.sqrt(2) / 2)
         );
-        Collections.sort(pointsList);
 
         assertEquals(1, sol.maxTrees(pointsList, 1));
         assertEquals(1, sol.maxTrees(pointsList, 15));
@@ -93,11 +90,10 @@ class SolutionDequeTest {
     }
 
     @Test
-    void maxTrees_Test_angle_alpha_and_one_Point_in_thе_III_coordinate_quarter() {
-        List<Point> pointsList = Arrays.asList(
-                new Point(-((Math.sqrt(2)) / 2), -((Math.sqrt(2)) / 2))
+    void maxTrees_Test_alpha_and_one_Point_in_the_III_coordinate_quarter() {
+        List<Point> pointsList = Collections.singletonList(
+                new Point(-(Math.sqrt(2) / 2), -(Math.sqrt(2) / 2))
         );
-        Collections.sort(pointsList);
 
         assertEquals(1, sol.maxTrees(pointsList, 1));
         assertEquals(1, sol.maxTrees(pointsList, 15));
@@ -109,11 +105,10 @@ class SolutionDequeTest {
     }
 
     @Test
-    void maxTrees_Test_angle_alpha_and_one_Point_in_thе_IV_coordinate_quarter() {
-        List<Point> pointsList = Arrays.asList(
-                new Point((Math.sqrt(2)) / 2, -((Math.sqrt(2)) / 2))
+    void maxTrees_Test_alpha_and_one_Point_in_the_IV_coordinate_quarter() {
+        List<Point> pointsList = Collections.singletonList(
+                new Point(Math.sqrt(2) / 2, -(Math.sqrt(2) / 2))
         );
-        Collections.sort(pointsList);
 
         assertEquals(1, sol.maxTrees(pointsList, 1));
         assertEquals(1, sol.maxTrees(pointsList, 15));
@@ -127,10 +122,10 @@ class SolutionDequeTest {
     @Test
     void maxTrees_Test_angle_alpha_and_4_Points_in_all_quarters() {
         List<Point> pointsList = Arrays.asList(
-                new Point((Math.sqrt(2)) / 2, (Math.sqrt(2)) / 2),
-                new Point(-((Math.sqrt(2)) / 2), (Math.sqrt(2)) / 2),
-                new Point(-((Math.sqrt(2)) / 2), -((Math.sqrt(2)) / 2)),
-                new Point((Math.sqrt(2)) / 2, -((Math.sqrt(2)) / 2))
+                new Point(Math.sqrt(2) / 2, Math.sqrt(2) / 2),
+                new Point(-(Math.sqrt(2) / 2), Math.sqrt(2) / 2),
+                new Point(-(Math.sqrt(2) / 2), -(Math.sqrt(2) / 2)),
+                new Point(Math.sqrt(2) / 2, -(Math.sqrt(2) / 2))
         );
         Collections.sort(pointsList);
 
@@ -140,15 +135,13 @@ class SolutionDequeTest {
     @Test
     void maxTrees_Test_45_angle_alpha_and_2_Points_in_all_quarters() {
         List<Point> pointsList = Arrays.asList(
-                new Point((Math.sqrt(2)) / 2, (Math.sqrt(2)) / 2),
-                new Point(-((Math.sqrt(2)) / 2), (Math.sqrt(2)) / 2),
-                new Point(-((Math.sqrt(2)) / 2), -((Math.sqrt(2)) / 2)),
-                new Point((Math.sqrt(2)) / 2, -((Math.sqrt(2)) / 2))
+                new Point(Math.sqrt(2) / 2, Math.sqrt(2) / 2),
+                new Point(-(Math.sqrt(2) / 2), Math.sqrt(2) / 2),
+                new Point(-(Math.sqrt(2) / 2), -(Math.sqrt(2) / 2)),
+                new Point(Math.sqrt(2) / 2, -(Math.sqrt(2) / 2))
         );
         Collections.sort(pointsList);
 
         assertEquals(4, sol.maxTrees(pointsList, 360));
     }
-
-
 }
