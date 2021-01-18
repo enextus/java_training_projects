@@ -1,5 +1,3 @@
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -9,7 +7,6 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class SolutionDequeTest {
-
 
     SolutionDeque sol = new SolutionDeque();
 
@@ -47,18 +44,111 @@ class SolutionDequeTest {
         System.out.println("\nmaxTrees: " + sol.maxTrees(pointsList, 15));
     }
 
-
     @Test
-    void maxTrees_Test_empty_angle_alpha() {
+    void maxTrees_Test_test_size() {
         Collections.sort(pointsList);
-        assertEquals(1, sol.maxTrees(pointsList, 0));
-
+        assertEquals(21, pointsList.size());
     }
 
     @Test
-    void maxTrees() {
+    void maxTrees_Test_empty_angle_alpha_and_one_Point_in_zero_coordinates() {
+        List<Point> pointsList = Arrays.asList(
+                new Point(0, 0)
+        );
         Collections.sort(pointsList);
-        assertEquals(8, sol.maxTrees(pointsList, 15));
 
+        assertEquals(0, sol.maxTrees(pointsList, 0));
     }
+
+    @Test
+    void maxTrees_Test_angle_alpha_and_one_Point_in_thе_I_coordinate_quarter() {
+        List<Point> pointsList = Arrays.asList(
+                new Point((Math.sqrt(2)) / 2, (Math.sqrt(2)) / 2)
+        );
+        Collections.sort(pointsList);
+
+        assertEquals(1, sol.maxTrees(pointsList, 1));
+        assertEquals(1, sol.maxTrees(pointsList, 15));
+        assertEquals(1, sol.maxTrees(pointsList, 45));
+        assertEquals(1, sol.maxTrees(pointsList, 90));
+        assertEquals(1, sol.maxTrees(pointsList, 180));
+        assertEquals(1, sol.maxTrees(pointsList, 270));
+        assertEquals(1, sol.maxTrees(pointsList, 360));
+    }
+
+    @Test
+    void maxTrees_Test_angle_alpha_and_one_Point_in_thе_II_coordinate_quarter() {
+        List<Point> pointsList = Arrays.asList(
+                new Point(-((Math.sqrt(2)) / 2), (Math.sqrt(2)) / 2)
+        );
+        Collections.sort(pointsList);
+
+        assertEquals(1, sol.maxTrees(pointsList, 1));
+        assertEquals(1, sol.maxTrees(pointsList, 15));
+        assertEquals(1, sol.maxTrees(pointsList, 45));
+        assertEquals(1, sol.maxTrees(pointsList, 90));
+        assertEquals(1, sol.maxTrees(pointsList, 180));
+        assertEquals(1, sol.maxTrees(pointsList, 270));
+        assertEquals(1, sol.maxTrees(pointsList, 360));
+    }
+
+    @Test
+    void maxTrees_Test_angle_alpha_and_one_Point_in_thе_III_coordinate_quarter() {
+        List<Point> pointsList = Arrays.asList(
+                new Point(-((Math.sqrt(2)) / 2), -((Math.sqrt(2)) / 2))
+        );
+        Collections.sort(pointsList);
+
+        assertEquals(1, sol.maxTrees(pointsList, 1));
+        assertEquals(1, sol.maxTrees(pointsList, 15));
+        assertEquals(1, sol.maxTrees(pointsList, 45));
+        assertEquals(1, sol.maxTrees(pointsList, 90));
+        assertEquals(1, sol.maxTrees(pointsList, 180));
+        assertEquals(1, sol.maxTrees(pointsList, 270));
+        assertEquals(1, sol.maxTrees(pointsList, 360));
+    }
+
+    @Test
+    void maxTrees_Test_angle_alpha_and_one_Point_in_thе_IV_coordinate_quarter() {
+        List<Point> pointsList = Arrays.asList(
+                new Point((Math.sqrt(2)) / 2, -((Math.sqrt(2)) / 2))
+        );
+        Collections.sort(pointsList);
+
+        assertEquals(1, sol.maxTrees(pointsList, 1));
+        assertEquals(1, sol.maxTrees(pointsList, 15));
+        assertEquals(1, sol.maxTrees(pointsList, 45));
+        assertEquals(1, sol.maxTrees(pointsList, 90));
+        assertEquals(1, sol.maxTrees(pointsList, 180));
+        assertEquals(1, sol.maxTrees(pointsList, 270));
+        assertEquals(1, sol.maxTrees(pointsList, 360));
+    }
+
+    @Test
+    void maxTrees_Test_angle_alpha_and_4_Points_in_all_quarters() {
+        List<Point> pointsList = Arrays.asList(
+                new Point((Math.sqrt(2)) / 2, (Math.sqrt(2)) / 2),
+                new Point(-((Math.sqrt(2)) / 2), (Math.sqrt(2)) / 2),
+                new Point(-((Math.sqrt(2)) / 2), -((Math.sqrt(2)) / 2)),
+                new Point((Math.sqrt(2)) / 2, -((Math.sqrt(2)) / 2))
+        );
+        Collections.sort(pointsList);
+
+        assertEquals(4, sol.maxTrees(pointsList, 360));
+    }
+
+    @Test
+    void maxTrees_Test_45_angle_alpha_and_2_Points_in_all_quarters() {
+        List<Point> pointsList = Arrays.asList(
+                new Point((Math.sqrt(2)) / 2, (Math.sqrt(2)) / 2),
+                new Point(-((Math.sqrt(2)) / 2), (Math.sqrt(2)) / 2),
+                new Point(-((Math.sqrt(2)) / 2), -((Math.sqrt(2)) / 2)),
+                new Point((Math.sqrt(2)) / 2, -((Math.sqrt(2)) / 2))
+        );
+        Collections.sort(pointsList);
+
+        assertEquals(4, sol.maxTrees(pointsList, 360));
+    }
+
+
 }

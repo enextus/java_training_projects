@@ -38,5 +38,7 @@ public class App {
             System.out.println(pnt);
 
         System.out.println("\nmaxTrees: " + sol.maxTrees(pointsList, 15));
+
+        System.out.println("(Math.sqrt(2)) / 2): " + (Math.sqrt(2) / 2));
     }
 }
