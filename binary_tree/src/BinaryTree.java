@@ -4,13 +4,15 @@ public class BinaryTree {
         if (root == null) {
             return 0;
         } else {
+
             int left = height(root.left);
             int right = height(root.right);
-            if (left > right) {
+
+            if (left > right)
                 return 1 + left;
-            } else {
+            else
                 return 1 + right;
-            }
+
         }
     }
 }
