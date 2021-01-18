@@ -14,7 +14,7 @@ class SolutionDequeTest {
     SolutionDeque sol = new SolutionDeque();
 
     List<Point> pointsList = Arrays.asList(
-            new Point(7.1, 8.2)/*,
+            new Point(7.1, 8.2),
             new Point(-4.2, -16.4),
             new Point(3.0, 3.3),
             new Point(7.2, 7.4),
@@ -34,7 +34,7 @@ class SolutionDequeTest {
             new Point(-5.5, -2.0),
             new Point(8.9, 9.9),
             new Point(2.2, -1.3),
-            new Point(-9.4, -8.9)*/
+            new Point(-9.4, -8.9)
     );
 
     @Test
