@@ -14,7 +14,7 @@ class SolutionDequeTest {
     SolutionDeque sol = new SolutionDeque();
 
     List<Point> pointsList = Arrays.asList(
-            new Point(-2.1, 8.2),
+            new Point(7.1, 8.2)/*,
             new Point(-4.2, -16.4),
             new Point(3.0, 3.3),
             new Point(7.2, 7.4),
@@ -25,7 +25,6 @@ class SolutionDequeTest {
             new Point(-7.5, -2.0),
             new Point(8.5, 33.3),
             new Point(6.5, 6.3),
-            new Point(0.5, 0.9),
             new Point(-3.3, -6.0),
             new Point(26.4, 2.2),
             new Point(5.5, 2.0),
@@ -35,7 +34,7 @@ class SolutionDequeTest {
             new Point(-5.5, -2.0),
             new Point(8.9, 9.9),
             new Point(2.2, -1.3),
-            new Point(-9.4, -8.9)
+            new Point(-9.4, -8.9)*/
     );
 
     @Test
@@ -48,12 +47,18 @@ class SolutionDequeTest {
         System.out.println("\nmaxTrees: " + sol.maxTrees(pointsList, 15));
     }
 
+
+    @Test
+    void maxTrees_Test_empty_angle_alpha() {
+        Collections.sort(pointsList);
+        assertEquals(1, sol.maxTrees(pointsList, 0));
+
+    }
+
     @Test
     void maxTrees() {
         Collections.sort(pointsList);
         assertEquals(8, sol.maxTrees(pointsList, 15));
 
     }
-
-
 }
