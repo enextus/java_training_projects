@@ -1,9 +1,9 @@
 import java.util.Objects;
 
 public class Point implements Comparable<Point> {
-    double x;
-    double y;
-    double rad;
+    private final double x;
+    private final double y;
+    private final double rad;
 
     public Point(double x, double y) {
         this.x = x;

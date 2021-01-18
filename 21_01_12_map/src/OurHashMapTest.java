@@ -31,7 +31,10 @@ class OurHashMapTest {
 
         assertEquals(5, map.size());
     }
-
+    @Test
+    public void testGetContains_emptyObject_notExistKey() {
+        assertNull(mapInt.get(5));
+    }
     @Test
     void test_NullPointerException_OurHashMap_after_add_null() {
         assertThrows(NullPointerException.class, () -> map.put(null, null));
