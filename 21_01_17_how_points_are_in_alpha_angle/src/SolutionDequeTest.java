@@ -142,6 +142,6 @@ class SolutionDequeTest {
         );
         Collections.sort(pointsList);
 
-        assertEquals(4, sol.maxTrees(pointsList, 360));
+        assertEquals(2, sol.maxTrees(pointsList, 90));
     }
 }
