@@ -167,8 +167,8 @@ class SolutionDequeTest {
             System.out.println(pnt);
 
 /*        assertEquals(1, sol.maxTrees(pointsListIn4QuartsBut8Points, 45));
-        assertEquals(3, sol.maxTrees(pointsListIn4QuartsBut8Points, 90));
-        assertEquals(4, sol.maxTrees(pointsListIn4QuartsBut8Points, 135));*/
+        assertEquals(3, sol.maxTrees(pointsListIn4QuartsBut8Points, 90));*/
+        assertEquals(3, sol.maxTrees(pointsListIn4QuartsBut8Points, 134));
         assertEquals(4, sol.maxTrees(pointsListIn4QuartsBut8Points, 179));
         assertEquals(5, sol.maxTrees(pointsListIn4QuartsBut8Points, 224));
         assertEquals(6, sol.maxTrees(pointsListIn4QuartsBut8Points, 269));
