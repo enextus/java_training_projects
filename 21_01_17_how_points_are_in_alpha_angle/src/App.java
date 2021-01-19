@@ -49,13 +49,6 @@ public class App {
         for (Point pnt : pointsList)
             System.out.println(pnt);
 
-/*        System.out.println("\nmaxTrees: " + sol.maxTrees(pointsList, 1));
-        System.out.println("\nMath.sqrt: " + 0/Math.sqrt(1));
-        System.out.println("\nMath.sqrt: " + Math.sin(45));
-        System.out.println("\nMath.sqrt: " + Math.asin(0));
-        System.out.println("\nMath.sqrt: " + Math.asin(0.7071067811865476));
-        System.out.println("\nMath.sqrt: " + Math.asin(1));*/
-        System.out.println("\nMath.sqrt: " + Math.asin(-0.7071067811865476));
-
+        System.out.println("\nmaxTrees: " + sol.maxTrees(pointsList, 1));
     }
 }
