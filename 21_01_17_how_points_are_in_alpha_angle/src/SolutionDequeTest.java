@@ -164,7 +164,7 @@ class SolutionDequeTest {
         Collections.sort(pointsListIn4QuartsBut8Points);
 
 
-        System.out.println("         " +pointsList.get(pointsList.size() - 1).getNumberOfPoints());
+        System.out.println("         " +pointsList.get(pointsList.size() - 1).getNumberOfInstances());
 
         for (Point pnt : pointsListIn4QuartsBut8Points)
             System.out.println(pnt);
