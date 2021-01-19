@@ -34,14 +34,14 @@ public class App {
 
 
         List<Point> pointsList = Arrays.asList(
-                new Point(1, 0)/*,
+                new Point(1, 0),
                 new Point(Math.sqrt(2) / 2, Math.sqrt(2) / 2),
                 new Point(0, 1),
                 new Point(-(Math.sqrt(2) / 2), Math.sqrt(2) / 2),
                 new Point(-1, 0),
                 new Point(-(Math.sqrt(2) / 2), -(Math.sqrt(2) / 2)),
                 new Point(-1, 0),
-                new Point(Math.sqrt(2) / 2, -(Math.sqrt(2) / 2))*/
+                new Point(Math.sqrt(2) / 2, -(Math.sqrt(2) / 2))
         );
 
         Collections.sort(pointsList);
@@ -54,8 +54,8 @@ public class App {
         System.out.println("\nMath.sqrt: " + Math.sin(45));
         System.out.println("\nMath.sqrt: " + Math.asin(0));
         System.out.println("\nMath.sqrt: " + Math.asin(0.7071067811865476));
-        System.out.println("\nMath.sqrt: " + Math.asin(1));
-        System.out.println("\nMath.sqrt: " + Math.asin(-0.7071067811865476));*/
+        System.out.println("\nMath.sqrt: " + Math.asin(1));*/
+        System.out.println("\nMath.sqrt: " + Math.asin(-0.7071067811865476));
 
     }
 }

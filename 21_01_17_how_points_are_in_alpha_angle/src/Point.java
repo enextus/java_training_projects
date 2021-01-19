@@ -12,12 +12,37 @@ public class Point implements Comparable<Point> {
     }
 
     private double cordToRad(double x, double y) {
-        //double sins = this.getX() / Math.sqrt((Math.pow(this.getY(), 2)) + (Math.pow(this.getX(), 2)));
+        double sins = 0;
+        double res = 0;
 
-        double sins = this.getY() / Math.sqrt((Math.pow(this.getY(), 2) + (Math.pow(this.getX(), 2))));
+        // 1. quarter
+        if (this.getX() >= 0 && this.getY() >= 0) {
+            System.out.println("I");
+            sins = this.getY() / Math.sqrt((Math.pow(this.getY(), 2) + (Math.pow(this.getX(), 2))));
+            res = Math.asin(sins);
+        }
+
+        // 2. quarter
+        if (this.getX() < 0 && this.getY() >= 0) {
+            System.out.println("II");
+            sins = this.getY() / Math.sqrt((Math.pow(this.getY(), 2) + (Math.pow(this.getX(), 2))));
+            res = Math.asin(sins);
+        }
+
+        // 3. quarter
+        if (this.getX() < 0 && this.getY() < 0) {
+            System.out.println("II");
+            sins = this.getY() / Math.sqrt((Math.pow(this.getY(), 2) + (Math.pow(this.getX(), 2))));
+            res = Math.asin(sins) + Math.PI +  Math.PI / 2;
+        }
+
+        System.out.println("X: " + this.getX() + ", Y: " + this.getY());
         System.out.println("sins: " + sins);
-        System.out.println("Math.asin(sins): " + Math.asin(sins));
-        return Math.asin(sins);
+        System.out.println("Math.asin(sins): " + res);
+        System.out.println();
+
+
+        return res;
     }
 
     public double getX() {
