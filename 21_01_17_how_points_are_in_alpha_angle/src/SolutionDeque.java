@@ -7,7 +7,7 @@ public class SolutionDeque {
     public int maxTrees(List<Point> points, int alpha) {
 
         int maxPoints = 0;
-        double angleRad = (alpha * Math.PI) / 180;
+        double angleRad = gradInToRad(alpha);
 
         ArrayList<Point> arrayList = new ArrayList<>(points);
         ArrayDeque<Integer> maximsDeque = new ArrayDeque<>();
@@ -31,5 +31,9 @@ public class SolutionDeque {
         }
 
         return maxPoints;
+    }
+
+    private double gradInToRad(int alpha) {
+        return (alpha * Math.PI) / 180;
     }
 }
