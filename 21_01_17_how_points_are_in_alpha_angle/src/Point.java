@@ -19,8 +19,8 @@ public class Point implements Comparable<Point> {
     }
 
     private double cordToRad(double x, double y) {
-        double sina = 0;
-        double rad = 0;
+        double sina;
+        double rad;
 
         sina = this.getY() / Math.sqrt(Math.pow(this.getY(), 2) + (Math.pow(this.getX(), 2)));
         rad = Math.asin(sina);
