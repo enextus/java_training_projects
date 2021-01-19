@@ -15,7 +15,7 @@ public class Point implements Comparable<Point> {
         double sins = 0;
         double radian = 0;
 
-        sins = this.getY() / Math.sqrt((Math.pow(this.getY(), 2) + (Math.pow(this.getX(), 2))));
+        sins = this.getY() / Math.sqrt(Math.pow(this.getY(), 2) + (Math.pow(this.getX(), 2)));
         radian = Math.asin(sins);
 
         if (this.getX() < 0 && this.getY() > 0) {
