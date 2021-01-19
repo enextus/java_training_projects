@@ -12,25 +12,25 @@ public class Point implements Comparable<Point> {
     }
 
     private double cordToRad(double x, double y) {
-        double sins = 0;
-        double radian = 0;
+        double sinА = 0;
+        double rad = 0;
 
-        sins = this.getY() / Math.sqrt(Math.pow(this.getY(), 2) + (Math.pow(this.getX(), 2)));
-        radian = Math.asin(sins);
+        sinА = this.getY() / Math.sqrt(Math.pow(this.getY(), 2) + (Math.pow(this.getX(), 2)));
+        rad = Math.asin(sinА);
 
         if (this.getX() < 0 && this.getY() > 0) {
-            radian = radian + Math.PI / 2;
+            rad = rad + Math.PI / 2;
         }
 
         if (this.getX() <= 0 && this.getY() <= 0) {
-            radian = Math.PI - radian;
+            rad = Math.PI - rad;
         }
 
         if (this.getX() > 0 && this.getY() < 0) {
-            radian = Math.PI + Math.PI / 2 - radian;
+            rad = Math.PI + Math.PI / 2 - rad;
         }
 
-        return radian;
+        return rad;
     }
 
     public double getX() {
