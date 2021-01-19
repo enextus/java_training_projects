@@ -7,9 +7,6 @@ public class BinaryTreeDepth {
         int left = heightTree(node.left);
         int right = heightTree(node.right);
 
-        if (left > right)
-            return left + 1;
-        else
-            return right + 1;
+        return 1 + Math.max(left, right);
     }
 }
