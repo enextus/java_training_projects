@@ -52,16 +52,6 @@ class SolutionDequeTest {
             new Point(Math.sqrt(2) / 2, -(Math.sqrt(2) / 2))
     );
 
-/*    @Test
-    void maxTrees_Test_print_all() {
-        Collections.sort(pointsList);
-
-        for (Point pnt : pointsList)
-            System.out.println(pnt);
-
-        System.out.println("\nmaxTrees: " + sol.maxTrees(pointsList, 90));
-    }*/
-
     @Test
     void maxTrees_Test_test_size() {
         Collections.sort(pointsList);
@@ -155,7 +145,7 @@ class SolutionDequeTest {
         assertEquals(8, sol.maxTrees(pointsListIn4QuartsBut8Points, 360));
     }
 
-    @Test
+/*    @Test
     void maxTrees_Test_45_plus_upwards_angle_alpha_and_8_Points_in_all_quarters() {
         Collections.sort(pointsListIn4QuartsBut8Points);
 
@@ -173,5 +163,5 @@ class SolutionDequeTest {
         //assertEquals(7, sol.maxTrees(pointsListIn4QuartsBut8Points, 270));
         //assertEquals(8, sol.maxTrees(pointsListIn4QuartsBut8Points, 315));
         //assertEquals(8, sol.maxTrees(pointsListIn4QuartsBut8Points, 360));
-    }
+    }*/
 }

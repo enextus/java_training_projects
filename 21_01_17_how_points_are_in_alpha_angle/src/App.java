@@ -7,7 +7,7 @@ public class App {
 
         SolutionDeque sol = new SolutionDeque();
 
-        List<Point> pointsList = Arrays.asList(
+/*        List<Point> pointsList = Arrays.asList(
                 new Point(-2.1, 8.2),
                 new Point(-4.2, -16.4),
                 new Point(3.0, 3.3),
@@ -30,6 +30,18 @@ public class App {
                 new Point(8.9, 9.9),
                 new Point(2.2, -1.3),
                 new Point(-9.4, -8.9)
+        );*/
+
+
+        List<Point> pointsList = Arrays.asList(
+                new Point(1, 0)/*,
+                new Point(Math.sqrt(2) / 2, Math.sqrt(2) / 2),
+                new Point(0, 1),
+                new Point(-(Math.sqrt(2) / 2), Math.sqrt(2) / 2),
+                new Point(-1, 0),
+                new Point(-(Math.sqrt(2) / 2), -(Math.sqrt(2) / 2)),
+                new Point(-1, 0),
+                new Point(Math.sqrt(2) / 2, -(Math.sqrt(2) / 2))*/
         );
 
         Collections.sort(pointsList);
@@ -37,8 +49,13 @@ public class App {
         for (Point pnt : pointsList)
             System.out.println(pnt);
 
-        System.out.println("\nmaxTrees: " + sol.maxTrees(pointsList, 15));
+/*        System.out.println("\nmaxTrees: " + sol.maxTrees(pointsList, 1));
+        System.out.println("\nMath.sqrt: " + 0/Math.sqrt(1));
+        System.out.println("\nMath.sqrt: " + Math.sin(45));
+        System.out.println("\nMath.sqrt: " + Math.asin(0));
+        System.out.println("\nMath.sqrt: " + Math.asin(0.7071067811865476));
+        System.out.println("\nMath.sqrt: " + Math.asin(1));
+        System.out.println("\nMath.sqrt: " + Math.asin(-0.7071067811865476));*/
 
-        System.out.println("(Math.sqrt(2)) / 2): " + (Math.sqrt(2) / 2));
     }
 }

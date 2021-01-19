@@ -24,6 +24,9 @@ public class SolutionDeque {
             }
 
             int size = maximsDeque.size();
+
+            System.out.println("\nmaximsDeque.size(): " + maximsDeque.size());
+
             if (size > maxPoints)
                 maxPoints = size;
 
