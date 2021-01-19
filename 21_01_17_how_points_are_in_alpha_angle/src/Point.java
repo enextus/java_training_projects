@@ -2,15 +2,10 @@ import java.util.Objects;
 
 public class Point implements Comparable<Point> {
 
-    private static int numberOfInstances = 0;
-
-    public static int getNumberOfInstances() {
-        return numberOfInstances;
-    }
-
     private final double x;
     private final double y;
     private final double rad;
+    private static int numberOfInstances;
 
     public Point(double x, double y) {
         this.x = x;
@@ -19,16 +14,16 @@ public class Point implements Comparable<Point> {
         numberOfInstances++;
     }
 
-    public static void setNumberOfInstances(int numberOfInstances) {
-        Point.numberOfInstances = numberOfInstances;
+    public static int getNumberOfInstances() {
+        return numberOfInstances;
     }
 
     private double cordToRad(double x, double y) {
-        double sinА = 0;
+        double sina = 0;
         double rad = 0;
 
-        sinА = this.getY() / Math.sqrt(Math.pow(this.getY(), 2) + (Math.pow(this.getX(), 2)));
-        rad = Math.asin(sinА);
+        sina = this.getY() / Math.sqrt(Math.pow(this.getY(), 2) + (Math.pow(this.getX(), 2)));
+        rad = Math.asin(sina);
 
         if (this.getX() < 0 && this.getY() > 0) {
             rad = rad + Math.PI / 2;
