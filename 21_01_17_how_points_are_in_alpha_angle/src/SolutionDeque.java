@@ -16,17 +16,15 @@ public class SolutionDeque {
 
             for (int j = i; j < arrayList.size(); j++) {
                 if (arrayList.get(j).getRad() - arrayList.get(i).getRad() <= angleRad) {
-
                     if (maximsDeque.isEmpty())
                         maximsDeque.addLast(1);
                     else
                         maximsDeque.addLast(maximsDeque.getLast() + 1);
-
                 }
             }
 
             int size = maximsDeque.size();
-            if (size >= maxPoints)
+            if (size > maxPoints)
                 maxPoints = size;
 
             maximsDeque.clear();

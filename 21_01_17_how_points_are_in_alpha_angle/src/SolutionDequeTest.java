@@ -52,7 +52,7 @@ class SolutionDequeTest {
             new Point(Math.sqrt(2) / 2, -(Math.sqrt(2) / 2))
     );
 
-    @Test
+/*    @Test
     void maxTrees_Test_print_all() {
         Collections.sort(pointsList);
 
@@ -60,7 +60,7 @@ class SolutionDequeTest {
             System.out.println(pnt);
 
         System.out.println("\nmaxTrees: " + sol.maxTrees(pointsList, 90));
-    }
+    }*/
 
     @Test
     void maxTrees_Test_test_size() {
@@ -153,5 +153,25 @@ class SolutionDequeTest {
         Collections.sort(pointsListIn4QuartsBut8Points);
 
         assertEquals(8, sol.maxTrees(pointsListIn4QuartsBut8Points, 360));
+    }
+
+    @Test
+    void maxTrees_Test_45_plus_upwards_angle_alpha_and_8_Points_in_all_quarters() {
+        Collections.sort(pointsListIn4QuartsBut8Points);
+
+        for (Point pnt : pointsListIn4QuartsBut8Points)
+            System.out.println(pnt);
+
+        System.out.println("\nmaxTrees: " + sol.maxTrees(pointsListIn4QuartsBut8Points, 1));
+
+        assertEquals(1, sol.maxTrees(pointsListIn4QuartsBut8Points, 1));
+        //assertEquals(2, sol.maxTrees(pointsListIn4QuartsBut8Points, 45));
+        //assertEquals(3, sol.maxTrees(pointsListIn4QuartsBut8Points, 90));
+        //assertEquals(4, sol.maxTrees(pointsListIn4QuartsBut8Points, 135));
+        //assertEquals(5, sol.maxTrees(pointsListIn4QuartsBut8Points, 180));
+        //assertEquals(6, sol.maxTrees(pointsListIn4QuartsBut8Points, 225));
+        //assertEquals(7, sol.maxTrees(pointsListIn4QuartsBut8Points, 270));
+        //assertEquals(8, sol.maxTrees(pointsListIn4QuartsBut8Points, 315));
+        //assertEquals(8, sol.maxTrees(pointsListIn4QuartsBut8Points, 360));
     }
 }
