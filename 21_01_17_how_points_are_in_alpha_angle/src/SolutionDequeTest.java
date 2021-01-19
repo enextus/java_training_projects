@@ -59,6 +59,12 @@ class SolutionDequeTest {
     }
 
     @Test
+    void maxTrees_Test_test_size2() {
+        Collections.sort(pointsListIn4QuartsBut8Points);
+        assertEquals(8, pointsListIn4QuartsBut8Points.size());
+    }
+
+    @Test
     void maxTrees_Test_empty_angle_alpha_and_one_Point_in_zero_coordinates() {
         List<Point> pointsList = Collections.singletonList(new Point(0, 0));
 
@@ -143,6 +149,14 @@ class SolutionDequeTest {
         Collections.sort(pointsListIn4QuartsBut8Points);
 
         assertEquals(8, sol.maxTrees(pointsListIn4QuartsBut8Points, 360));
+    }
+
+
+    @Test
+    void maxTrees_Test_360_angle_alpha_and_21_Points_in_all_quarters() {
+        Collections.sort(pointsList);
+
+        assertEquals(21, sol.maxTrees(pointsList, 360));
     }
 
     @Test
