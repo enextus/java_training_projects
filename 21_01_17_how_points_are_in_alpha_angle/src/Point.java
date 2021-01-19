@@ -27,7 +27,7 @@ public class Point implements Comparable<Point> {
         }
 
         if (this.getX() > 0 && this.getY() < 0) {
-            rad = Math.PI + Math.PI / 2 - rad;
+            rad = Math.PI + (Math.PI / 2) - rad;
         }
 
         return rad;
