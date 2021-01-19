@@ -34,7 +34,7 @@ class SolutionDequeTest {
             new Point(-9.4, -8.9)
     );
 
-    List<Point> pointsListIn4Quarts = Arrays.asList(
+    List<Point> pointsListIn4Quarts4Points = Arrays.asList(
             new Point(Math.sqrt(2) / 2, Math.sqrt(2) / 2),
             new Point(-(Math.sqrt(2) / 2), Math.sqrt(2) / 2),
             new Point(-(Math.sqrt(2) / 2), -(Math.sqrt(2) / 2)),
@@ -125,23 +125,23 @@ class SolutionDequeTest {
 
     @Test
     void maxTrees_Test_angle_alpha_and_4_Points_in_all_quarters() {
-        Collections.sort(pointsListIn4Quarts);
+        Collections.sort(pointsListIn4Quarts4Points);
 
-        assertEquals(4, sol.maxTrees(pointsListIn4Quarts, 360));
+        assertEquals(4, sol.maxTrees(pointsListIn4Quarts4Points, 360));
     }
 
     @Test
     void maxTrees_Test_90_angle_alpha_and_2_Points_in_all_quarters() {
-        Collections.sort(pointsListIn4Quarts);
+        Collections.sort(pointsListIn4Quarts4Points);
 
-        assertEquals(2, sol.maxTrees(pointsListIn4Quarts, 90));
+        assertEquals(2, sol.maxTrees(pointsListIn4Quarts4Points, 90));
     }
 
     @Test
     void maxTrees_Test_150_angle_alpha_and_2_Points_in_all_quarters() {
-        Collections.sort(pointsListIn4Quarts);
+        Collections.sort(pointsListIn4Quarts4Points);
 
-        assertEquals(3, sol.maxTrees(pointsListIn4Quarts, 180));
+        assertEquals(3, sol.maxTrees(pointsListIn4Quarts4Points, 180));
     }
 
     @Test
