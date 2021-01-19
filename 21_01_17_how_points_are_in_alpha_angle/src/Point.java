@@ -5,17 +5,11 @@ public class Point implements Comparable<Point> {
     private final double x;
     private final double y;
     private final double rad;
-    private static int numberOfInstances;
 
     public Point(double x, double y) {
         this.x = x;
         this.y = y;
         this.rad = cordToRad(this.x, this.y);
-        numberOfInstances++;
-    }
-
-    public static int getNumberOfInstances() {
-        return numberOfInstances;
     }
 
     private double cordToRad(double x, double y) {
