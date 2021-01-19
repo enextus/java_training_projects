@@ -22,19 +22,13 @@ public class Point implements Comparable<Point> {
             radian = radian + Math.PI / 2;
         }
 
-        if (this.getX() < 0 && this.getY() < 0) {
-            radian = radian + Math.PI;
+        if (this.getX() <= 0 && this.getY() <= 0) {
+            radian = Math.PI - radian;
         }
 
         if (this.getX() > 0 && this.getY() < 0) {
-            radian = radian + Math.PI + Math.PI / 2;
+            radian = Math.PI + Math.PI / 2 - radian;
         }
-
-/*        System.out.println();
-        System.out.println("X: " + this.getX() + ", Y: " + this.getY());
-        System.out.println("sins: " + sins);
-        System.out.println("Math.asin(sins): " + res);
-        System.out.println();*/
 
         return radian;
     }

@@ -124,12 +124,12 @@ class SolutionDequeTest {
         assertEquals(4, sol.maxTrees(pointsListIn4Quarts, 360));
     }
 
-    @Test
+/*    @Test
     void maxTrees_Test_90_angle_alpha_and_2_Points_in_all_quarters() {
         Collections.sort(pointsListIn4Quarts);
 
         assertEquals(2, sol.maxTrees(pointsListIn4Quarts, 90));
-    }
+    }*/
 
     @Test
     void maxTrees_Test_150_angle_alpha_and_2_Points_in_all_quarters() {
@@ -145,7 +145,7 @@ class SolutionDequeTest {
         assertEquals(8, sol.maxTrees(pointsListIn4QuartsBut8Points, 360));
     }
 
-/*    @Test
+    @Test
     void maxTrees_Test_45_plus_upwards_angle_alpha_and_8_Points_in_all_quarters() {
         Collections.sort(pointsListIn4QuartsBut8Points);
 
@@ -163,5 +163,5 @@ class SolutionDequeTest {
         //assertEquals(7, sol.maxTrees(pointsListIn4QuartsBut8Points, 270));
         //assertEquals(8, sol.maxTrees(pointsListIn4QuartsBut8Points, 315));
         //assertEquals(8, sol.maxTrees(pointsListIn4QuartsBut8Points, 360));
-    }*/
+    }
 }
