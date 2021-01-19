@@ -13,36 +13,33 @@ public class Point implements Comparable<Point> {
 
     private double cordToRad(double x, double y) {
         double sins = 0;
-        double res = 0;
+        double radian = 0;
 
-        // 1. quarter
-        if (this.getX() >= 0 && this.getY() >= 0) {
-            System.out.println("I");
-            sins = this.getY() / Math.sqrt((Math.pow(this.getY(), 2) + (Math.pow(this.getX(), 2))));
-            res = Math.asin(sins);
-        }
+        sins = this.getY() / Math.sqrt((Math.pow(this.getY(), 2) + (Math.pow(this.getX(), 2))));
+        radian = Math.asin(sins);
 
-        // 2. quarter
-        if (this.getX() < 0 && this.getY() >= 0) {
+        if (this.getX() < 0 && this.getY() > 0) {
             System.out.println("II");
-            sins = this.getY() / Math.sqrt((Math.pow(this.getY(), 2) + (Math.pow(this.getX(), 2))));
-            res = Math.asin(sins);
+            radian = radian + Math.PI / 2;
         }
 
-        // 3. quarter
         if (this.getX() < 0 && this.getY() < 0) {
-            System.out.println("II");
-            sins = this.getY() / Math.sqrt((Math.pow(this.getY(), 2) + (Math.pow(this.getX(), 2))));
-            res = Math.asin(sins) + Math.PI +  Math.PI / 2;
+            System.out.println("III");
+            radian = radian + Math.PI;
         }
 
+        if (this.getX() > 0 && this.getY() < 0) {
+            System.out.println("IV");
+            radian = radian + Math.PI + Math.PI / 2;
+        }
+
+/*        System.out.println();
         System.out.println("X: " + this.getX() + ", Y: " + this.getY());
         System.out.println("sins: " + sins);
         System.out.println("Math.asin(sins): " + res);
-        System.out.println();
+        System.out.println();*/
 
-
-        return res;
+        return radian;
     }
 
     public double getX() {
