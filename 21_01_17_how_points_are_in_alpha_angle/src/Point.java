@@ -1,6 +1,13 @@
 import java.util.Objects;
 
 public class Point implements Comparable<Point> {
+
+    private static int numberOfPoints = 0;
+
+    public static int getNumberOfPoints() {
+        return numberOfPoints;
+    }
+
     private final double x;
     private final double y;
     private final double rad;
@@ -9,6 +16,7 @@ public class Point implements Comparable<Point> {
         this.x = x;
         this.y = y;
         this.rad = cordToRad(this.x, this.y);
+        numberOfPoints++;
     }
 
     private double cordToRad(double x, double y) {

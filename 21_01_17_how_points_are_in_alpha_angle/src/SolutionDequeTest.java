@@ -163,6 +163,9 @@ class SolutionDequeTest {
     void maxTrees_Test_45_plus_upwards_angle_alpha_and_8_Points_in_all_quarters() {
         Collections.sort(pointsListIn4QuartsBut8Points);
 
+
+        System.out.println("         " +pointsList.get(pointsList.size() - 1).getNumberOfPoints());
+
         for (Point pnt : pointsListIn4QuartsBut8Points)
             System.out.println(pnt);
 
