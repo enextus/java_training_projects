@@ -11,6 +11,11 @@ class PrimeNumbersTest {
     PrimeNumbers primeNumbers = new PrimeNumbers();
 
     @Test
+    void isPrime_Test_non_prime_number_minus_1() {
+        assertFalse(primeNumbers.isPrime(-1));
+    }
+
+    @Test
     void isPrime_Test_non_prime_number_minus_100() {
         assertFalse(primeNumbers.isPrime(-100));
     }
@@ -31,11 +36,6 @@ class PrimeNumbersTest {
     }
 
     @Test
-    void isPrime_Test_prime_number_127() {
-        assertTrue(primeNumbers.isPrime(127));
-    }
-
-    @Test
     void isPrime_Test_non_prime_number_4() {
         assertFalse(primeNumbers.isPrime(4));
     }
@@ -43,6 +43,11 @@ class PrimeNumbersTest {
     @Test
     void isPrime_Test_non_prime_number_126() {
         assertFalse(primeNumbers.isPrime(126));
+    }
+
+    @Test
+    void isPrime_Test_prime_number_127() {
+        assertTrue(primeNumbers.isPrime(127));
     }
 
     @Test
