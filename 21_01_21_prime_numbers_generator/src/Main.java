@@ -7,11 +7,11 @@ public class Main {
         System.out.println(primeNumbers.isPrime(127));
         System.out.println(primeNumbers.isPrime(Integer.MAX_VALUE));*/
 
-        int upperBound = 23;
+        int upperBound = 3079;
 
         System.out.println("\nList of prime numbers between 2 and " + upperBound + ":");
 
         for (Integer number : primeNumbers.getPrimes(upperBound))
-            System.out.print(number + "; ");
+            System.out.println(number + "; ");
     }
 }
