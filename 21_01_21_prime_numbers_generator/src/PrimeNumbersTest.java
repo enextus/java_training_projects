@@ -3,7 +3,6 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -29,6 +28,11 @@ class PrimeNumbersTest {
     @Test
     void isPrime_Test_smaller_as_126() {
         assertEquals(false, primeNumbers.isPrime(126));
+    }
+
+    @Test
+    void isPrime_Test_Integer_MAX_VALUE() {
+        assertEquals(true, primeNumbers.isPrime(Integer.MAX_VALUE));
     }
 
     @Test
