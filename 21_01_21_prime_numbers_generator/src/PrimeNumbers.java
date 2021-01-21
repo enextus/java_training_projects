@@ -3,6 +3,7 @@ import java.util.List;
 
 public class PrimeNumbers {
     public List<Integer> getPrimes(int upperBound) {
+        
         if (upperBound < 2)
             return null;
 
@@ -15,7 +16,7 @@ public class PrimeNumbers {
             if (isPrime(smallestPrimeNumber + i))
                 primeNumbers.add(smallestPrimeNumber + i);
         }
-        
+
         return primeNumbers;
     }
 
