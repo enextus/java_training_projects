@@ -13,5 +13,7 @@ public class Main {
 
         for (Integer number : primeNumbers.getPrimes(upperBound))
             System.out.println(number + "; ");
+
+        System.out.println("Arraylist contains: " + primeNumbers.toString());
     }
 }

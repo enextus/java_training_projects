@@ -1,6 +1,9 @@
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class PrimeNumbersTest {
@@ -14,9 +17,10 @@ class PrimeNumbersTest {
         assertEquals(null, primeNumbers.getPrimes(1));
     }
 
-    @Test
+/*    @Test
     void getPrimes_Test_smallest_Prime_2() {
-        assertEquals([2], primeNumbers.getPrimes(2));
-    }
+        assertArrayEquals(new ArrayList<Integer>() {2
+        }, primeNumbers.getPrimes(2));
+    }*/
 
 }
