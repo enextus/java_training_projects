@@ -2,11 +2,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PrimeNumbers {
-    @Override
-    public String toString() {
-        return "PrimeNumbers{}";
-    }
-
     public List<Integer> getPrimes(int upperBound) {
 
         int smallestPrimeNumber = 2;
@@ -24,7 +19,7 @@ public class PrimeNumbers {
         return primeNumbers;
     }
 
-    public boolean isPrime(int number) {
+    private boolean isPrime(int number) {
 
         if (number % 2 == 0)
             return number == 2;
