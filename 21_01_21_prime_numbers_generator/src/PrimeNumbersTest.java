@@ -10,7 +10,6 @@ class PrimeNumbersTest {
 
     PrimeNumbers primeNumbers = new PrimeNumbers();
 
-
     @Test
     void isPrime_Test_non_prime_number_minus_100() {
         assertFalse(primeNumbers.isPrime(-100));
