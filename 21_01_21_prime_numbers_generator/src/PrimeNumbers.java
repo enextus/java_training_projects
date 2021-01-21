@@ -3,6 +3,8 @@ import java.util.List;
 
 public class PrimeNumbers {
     public List<Integer> getPrimes(int upperBound) {
+        if (upperBound < 2)
+            return null;
 
         int smallestPrimeNumber = 2;
         int loopLength = upperBound - smallestPrimeNumber + 1;
@@ -10,10 +12,8 @@ public class PrimeNumbers {
         List<Integer> primeNumbers = new ArrayList<>();
 
         for (int i = 0; i < loopLength; i++) {
-
-            if (isPrime(smallestPrimeNumber + i)) {
+            if (isPrime(smallestPrimeNumber + i))
                 primeNumbers.add(smallestPrimeNumber + i);
-            }
         }
 
         return primeNumbers;
