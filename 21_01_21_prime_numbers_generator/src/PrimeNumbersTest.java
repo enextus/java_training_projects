@@ -57,18 +57,19 @@ class PrimeNumbersTest {
 
     @Test
     void getPrimes_Test_smaller_as_2() {
+        assertNull(primeNumbers.getPrimes(-127));
         assertNull(primeNumbers.getPrimes(-1));
-        assertNull(primeNumbers.getPrimes(-0));
+        assertNull(primeNumbers.getPrimes(0));
         assertNull(primeNumbers.getPrimes(1));
     }
 
     @Test
-    void getPrimes_Test_smallest_Prime_2() {
+    void getPrimes_Test_smallest_Prime_is_2() {
         assertEquals(new ArrayList<>(Arrays.asList(2)), primeNumbers.getPrimes(2));
     }
 
     @Test
-    void getPrimes_Test_smallest_Prime_13() {
+    void getPrimes_Test_Prime_13() {
         assertEquals(new ArrayList<>(Arrays.asList(2, 3, 5, 7, 11, 13)), primeNumbers.getPrimes(13));
     }
 }
