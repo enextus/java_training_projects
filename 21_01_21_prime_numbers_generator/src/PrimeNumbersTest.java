@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -9,5 +10,13 @@ class PrimeNumbersTest {
     @Test
     void getPrimes_Test_smaller_as_2() {
         assertEquals(null, primeNumbers.getPrimes(-1));
+        assertEquals(null, primeNumbers.getPrimes(-0));
+        assertEquals(null, primeNumbers.getPrimes(1));
     }
+
+    @Test
+    void getPrimes_Test_smallest_Prime_2() {
+        assertEquals([2], primeNumbers.getPrimes(2));
+    }
+
 }
