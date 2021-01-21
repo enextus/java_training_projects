@@ -12,27 +12,27 @@ class PrimeNumbersTest {
 
     @Test
     void isPrime_Test_smaller_as_2() {
-        assertEquals(true, primeNumbers.isPrime(2));
+        assertTrue(primeNumbers.isPrime(2));
     }
 
     @Test
     void isPrime_Test_smaller_as_127() {
-        assertEquals(true, primeNumbers.isPrime(127));
+        assertTrue(primeNumbers.isPrime(127));
     }
 
     @Test
     void isPrime_Test_smaller_as_4() {
-        assertEquals(false, primeNumbers.isPrime(4));
+        assertFalse(primeNumbers.isPrime(4));
     }
 
     @Test
     void isPrime_Test_smaller_as_126() {
-        assertEquals(false, primeNumbers.isPrime(126));
+        assertFalse(primeNumbers.isPrime(126));
     }
 
     @Test
     void isPrime_Test_Integer_MAX_VALUE() {
-        assertEquals(true, primeNumbers.isPrime(Integer.MAX_VALUE));
+        assertTrue(primeNumbers.isPrime(Integer.MAX_VALUE));
     }
 
     @Test
