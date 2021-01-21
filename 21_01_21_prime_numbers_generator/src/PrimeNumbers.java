@@ -9,22 +9,15 @@ public class PrimeNumbers {
 
     public List<Integer> getPrimes(int upperBound) {
 
-        int a = 2;
-
-        int loopLength = upperBound - a + 1;
-        int size = 0;
-
-        for (int i = 0; i < loopLength; i++) {
-            if (isPrime(a + i))
-                size++;
-        }
+        int smallestPrimeNumber = 2;
+        int loopLength = upperBound - smallestPrimeNumber + 1;
 
         List<Integer> primeNumbers = new ArrayList<>();
 
         for (int i = 0; i < loopLength; i++) {
 
-            if (isPrime(a + i)) {
-                primeNumbers.add(a + i);
+            if (isPrime(smallestPrimeNumber + i)) {
+                primeNumbers.add(smallestPrimeNumber + i);
             }
         }
 
