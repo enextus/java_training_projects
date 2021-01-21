@@ -15,7 +15,7 @@ public class PrimeNumbers {
             if (isPrime(smallestPrimeNumber + i))
                 primeNumbers.add(smallestPrimeNumber + i);
         }
-
+        
         return primeNumbers;
     }
 
