@@ -4,11 +4,16 @@ public class PrimeNumbers {
     public List<Integer> getPrimes(int a, int b) {
 
         int loopLength = b - a + 1;
-        int arrayLength = 0;
+        int size = 0;
 
-        for (int i = 0; i < loopLength; i++) if (isPrime(a + i)) arrayLength++;
+        for (int i = 0; i < loopLength; i++) {
+            if (isPrime(a + i))
+                size++;
+        }
 
-        int[] arr = new int[arrayLength];
+        int[] arr = new int[size];
+        List<Integer> primeNumbers;
+
 
         int counter = 0;
 
@@ -20,7 +25,6 @@ public class PrimeNumbers {
 
             counter++;
         }
-
 
         List<Integer> res = null;
         return res;
