@@ -37,9 +37,9 @@ class PrimeNumbersTest {
 
     @Test
     void getPrimes_Test_smaller_as_2() {
-        assertEquals(null, primeNumbers.getPrimes(-1));
-        assertEquals(null, primeNumbers.getPrimes(-0));
-        assertEquals(null, primeNumbers.getPrimes(1));
+        assertNull(primeNumbers.getPrimes(-1));
+        assertNull(primeNumbers.getPrimes(-0));
+        assertNull(primeNumbers.getPrimes(1));
     }
 
     @Test
