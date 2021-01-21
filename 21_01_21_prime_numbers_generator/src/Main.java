@@ -6,5 +6,8 @@ public class Main {
         System.out.println(primeNumbers.isPrime(13));
         System.out.println(primeNumbers.isPrime(127));
         System.out.println(primeNumbers.isPrime(Integer.MAX_VALUE));
+
+        System.out.println("List of prime numbers:");
+
     }
 }

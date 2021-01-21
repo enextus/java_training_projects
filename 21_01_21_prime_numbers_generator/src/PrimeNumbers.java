@@ -1,9 +1,17 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class PrimeNumbers {
-    public List<Integer> getPrimes(int a, int b) {
+    @Override
+    public String toString() {
+        return "PrimeNumbers{}";
+    }
 
-        int loopLength = b - a + 1;
+    public List<Integer> getPrimes(int upperBound) {
+
+        int a = 2;
+
+        int loopLength = upperBound - a + 1;
         int size = 0;
 
         for (int i = 0; i < loopLength; i++) {
@@ -11,23 +19,16 @@ public class PrimeNumbers {
                 size++;
         }
 
-        int[] arr = new int[size];
-        List<Integer> primeNumbers;
-
-
-        int counter = 0;
+        List<Integer> primeNumbers = new ArrayList<>();
 
         for (int i = 0; i < loopLength; i++) {
 
-            if (isPrime(a + i))
-                arr[counter] = a + i;
-            else continue;
-
-            counter++;
+            if (isPrime(a + i)) {
+                primeNumbers.add(a + i);
+            }
         }
 
-        List<Integer> res = null;
-        return res;
+        return primeNumbers;
     }
 
     public boolean isPrime(int number) {
