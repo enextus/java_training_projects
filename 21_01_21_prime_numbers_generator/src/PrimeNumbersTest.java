@@ -67,6 +67,12 @@ class PrimeNumbersTest {
         assertEquals(new ArrayList<>(Arrays.asList(2)), primeNumbers.getPrimes(2));
     }
 
+
+    @Test
+    void getPrimes_Test_Prime_5() {
+        assertEquals(new ArrayList<>(Arrays.asList(2, 3, 5)), primeNumbers.getPrimes(5));
+    }
+
     @Test
     void getPrimes_Test_Prime_13() {
         assertEquals(new ArrayList<>(Arrays.asList(2, 3, 5, 7, 11, 13)), primeNumbers.getPrimes(13));
