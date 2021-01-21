@@ -3,6 +3,7 @@ public class Main {
         PrimeNumbers primeNumbers = new PrimeNumbers();
 
         System.out.println(primeNumbers.isPrime(1));
+        System.out.println(primeNumbers.isPrime(-20));
         System.out.println(primeNumbers.isPrime(2));
         System.out.println(primeNumbers.isPrime(13));
         System.out.println(primeNumbers.isPrime(127));
