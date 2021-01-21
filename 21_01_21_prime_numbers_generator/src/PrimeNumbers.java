@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PrimeNumbers {
-
     public List<Integer> getPrimes(int upperBound) {
 
         if (upperBound < 2)
