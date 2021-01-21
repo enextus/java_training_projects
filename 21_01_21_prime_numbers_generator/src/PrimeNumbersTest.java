@@ -21,10 +21,10 @@ class PrimeNumbersTest {
         assertFalse(primeNumbers.isPrime(0));
     }
 
-    @Test
+/*    @Test
     void isPrime_Test_non_prime_number_1() {
         assertFalse(primeNumbers.isPrime(1));
-    }
+    }*/
 
     @Test
     void isPrime_Test_prime_number_2() {
