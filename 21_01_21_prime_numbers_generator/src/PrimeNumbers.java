@@ -21,7 +21,7 @@ public class PrimeNumbers {
         return primeNumbers;
     }
 
-    private boolean isPrime(int number) {
+    boolean isPrime(int number) {
 
         if (number % 2 == 0)
             return number == 2;
