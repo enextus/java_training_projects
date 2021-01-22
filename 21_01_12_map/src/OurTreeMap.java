@@ -146,6 +146,42 @@ public class OurTreeMap<K, V> implements OurMap<K, V> {
         return null;
     }
 
+    class KeyIterator<K, V> implements Iterator<K> {
+        Node<K, V> currentNode;
+        int index;
+
+        public KeyIterator() {
+            index = 0;
+            currentNode = (Node<K, V>) root;
+            while (currentNode != null && currentNode.left != null)
+                currentNode = currentNode.left;
+        }
+
+        @Override
+        public boolean hasNext() {
+            return index < size;
+        }
+
+        @Override
+        public K next() {
+            if (index == size)
+                throw new NullPointerException();
+            K res = currentNode.key;
+            index++;
+            if (hasNext()) {
+                if (currentNode.right != null) {
+                    currentNode = currentNode.right;
+                    while (currentNode.left != null)
+                        currentNode = currentNode.left;
+                } else
+                    while (keyComparator.compare(currentNode.key, currentNode.parent.key) > 0)
+                        currentNode = currentNode.parent;
+            }
+
+            return res;
+        }
+    }
+
     @Override
     public Iterator<V> valueIterator() {
         return null;
