@@ -187,6 +187,11 @@ public class OurHashMap_naive<K, V> implements OurMap<K, V> {
         return pairToRemove.value;
     }
 
+    @Override
+    public boolean containsKey(K key) {
+        return false;
+    }
+
     /**
      * Returns {@code true} if this map contains no key-value mappings.
      *
