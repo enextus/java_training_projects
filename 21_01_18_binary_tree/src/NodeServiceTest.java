@@ -3,6 +3,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class NodeServiceTest {
+
     Node node_7 = new Node(null, null);
     Node node_9 = new Node(null, null);
     Node node_8 = new Node(node_9, null);

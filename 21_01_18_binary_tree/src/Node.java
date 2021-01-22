@@ -1,4 +1,5 @@
 public class Node {
+
     private final Node left;
     private final Node right;
 
