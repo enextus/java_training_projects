@@ -1,86 +1,48 @@
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+
 public class Main {
-/*    static void fillMap(Map<Auto, String> map) {
-        Auto greyOpel = new Auto("Grey", "Opel");
-        map.put(greyOpel, "Value of grey opel");
-    }*/
 
     public static void main(String[] args) {
-        OurMap<Auto, String> map = new OurHashMap<>();
+        Map<Auto, String> map = new HashMap<>();
+        fillMap(map);
 
-//        fillMap(map);
+        // Рекомендуется в качестве ключей для HashMap использовать только те объекты,
+        // у которых переопределены hashCode и equals, а также они immutable (не изменяются
+        // с момента создания)
+        Auto anotherGreyOpel = new Auto("Grey", "Opel");
+        String value = map.get(anotherGreyOpel);
+        System.out.println(value);//
+    }
 
-        Auto Opel1 = new Auto("Lila", "Opel");
+    static void fillMap(Map<Auto, String> map) {
+        Auto greyOpel = new Auto("Grey", "Opel");
+        map.put(greyOpel, "Value of grey opel");
+    }
+}
 
-/*        Auto Opel2 = new Auto("Red", "Opel");
-        Auto Opel3 = new Auto("Gray", "Opel");
-        Auto Opel4 = new Auto("Gray2", "Opel");
-        Auto Opel5 = new Auto("Gray3", "Opel");
-        Auto Opel6 = new Auto("Gray4", "Opel");*/
+class Auto {
+    private final String make;
 
-        map.put(Opel1, "1");
-        map.put(null, null);
+    private final String color;
 
-/*        map.put(Opel2, "2");
-        map.put(Opel3, "3");
-        map.put(Opel4, "4");
-        map.put(Opel5, "5");
-        map.put(Opel6, "6");*/
+    public Auto(String make, String color) {
+        this.make = make;
+        this.color = color;
+    }
 
-        System.out.println("map: " + map);
-        System.out.println("map.size: " + map.size());
-        System.out.println();
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Auto)) return false;
+        Auto auto = (Auto) o;
+        return Objects.equals(make, auto.make) &&
+                Objects.equals(color, auto.color);
+    }
 
-/*        System.out.println("TO REMOVE: " + Opel1);
-        System.out.println(map.remove(Opel1));
-        System.out.println("REMOVED");
-        System.out.println();*/
-
-/*        System.out.println("TO REMOVE: " + Opel2);
-        System.out.println(map.remove(Opel2));
-        System.out.println("REMOVED");
-        System.out.println();
-
-        System.out.println("map: " + map);
-        System.out.println("map.size: " + map.size());
-        System.out.println();
-
-        System.out.println("TO REMOVE: " + Opel1);
-        System.out.println(map.remove(Opel1));
-        System.out.println("REMOVED");
-        System.out.println();
-
-        System.out.println("TO REMOVE: " + Opel3);
-        System.out.println(map.remove(Opel3));
-        System.out.println("REMOVED");
-        System.out.println();
-
-        System.out.println("TO REMOVE: " + Opel4);
-        System.out.println(map.remove(Opel4));
-        System.out.println("REMOVED");
-        System.out.println();
-
-        System.out.println("TO REMOVE: " + Opel5);
-        System.out.println(map.remove(Opel5));
-        System.out.println("REMOVED");
-        System.out.println();
-
-
-        System.out.println("TO REMOVE: " + Opel6);
-        System.out.println(map.remove(Opel6));
-        System.out.println("REMOVED");
-        System.out.println();
-
-
-        System.out.println("TO REMOVE: " + Opel6);
-        System.out.println(map.remove(Opel6));
-        System.out.println("REMOVED");
-        System.out.println();*/
-
-/*        System.out.println("map: " + map);
-        System.out.println("map.size: " + map.size());
-        System.out.println();*/
-/*        for (Map.Entry<Auto, String> entry : map.entrySet()) {
-            System.out.println(entry.getKey() + "/" + entry.getValue());
-        }*/
+    @Override
+    public int hashCode() {
+        return Objects.hash(make, color);
     }
 }
