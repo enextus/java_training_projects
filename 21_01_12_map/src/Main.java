@@ -22,6 +22,7 @@ public class Main {
     }
 }
 
+/*
 class Auto {
     private final String make;
 
@@ -45,4 +46,4 @@ class Auto {
     public int hashCode() {
         return Objects.hash(make, color);
     }
-}
+}*/
