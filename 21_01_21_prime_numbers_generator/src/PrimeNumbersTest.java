@@ -10,26 +10,6 @@ class PrimeNumbersTest {
     PrimeNumbers primeNumbers = new PrimeNumbers();
 
     @Test
-    void isPrime_Test_non_prime_number_minus_1() {
-        assertFalse(primeNumbers.isPrime(-1));
-    }
-
-    @Test
-    void isPrime_Test_non_prime_number_minus_100() {
-        assertFalse(primeNumbers.isPrime(-100));
-    }
-
-    @Test
-    void isPrime_Test_non_prime_number_0() {
-        assertFalse(primeNumbers.isPrime(0));
-    }
-
-    @Test
-    void isPrime_Test_non_prime_number_1() {
-        assertFalse(primeNumbers.isPrime(1));
-    }
-
-    @Test
     void isPrime_Test_prime_number_2() {
         assertTrue(primeNumbers.isPrime(2));
     }
