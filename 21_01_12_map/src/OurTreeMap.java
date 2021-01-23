@@ -17,6 +17,7 @@ public class OurTreeMap<K, V> implements OurMap<K, V> {
         }
     }
 
+
     private final Comparator<K> keyComparator;
     private Node<K, V> root;
     private int size;
@@ -146,7 +147,7 @@ public class OurTreeMap<K, V> implements OurMap<K, V> {
         return null;
     }
 
-    class KeyIterator<K, V> implements Iterator<K> {
+    class KeyIterator implements Iterator<K> {
         Node<K, V> currentNode;
         int index;
 
