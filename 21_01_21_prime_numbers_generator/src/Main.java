@@ -16,4 +16,5 @@ public class Main {
         for (Integer number : primeNumbers.getPrimes(upperBound))
             System.out.println(number);
     }
+
 }
