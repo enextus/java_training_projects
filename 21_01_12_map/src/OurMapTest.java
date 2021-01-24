@@ -4,7 +4,7 @@ import java.util.Iterator;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class OurMapTest {
+abstract class OurMapTest {
     OurMap<String, Auto> map;
 
     @Test
@@ -291,5 +291,24 @@ class OurMapTest {
         assertNull(intMap.remove(5));
         assertEquals(3, intMap.size());
         assertNull(intMap.get(5));
+    }
+
+    @Test
+    public void testRemove_OneElement_exist() {
+        intMap.put(1, "a");
+        assertEquals("a", intMap.remove(1));
+        assertEquals(0, intMap.size());
+        assertNull(intMap.get(5));
+    }
+
+    @Test
+    void test_contains_trueCase() {
+        intMap.put(666, "@");
+        assertTrue(intMap.containsKey(666));
+    }
+
+    @Test
+    void test_contains_falseCase() {
+        assertFalse(intMap.containsKey(666));
     }
 }

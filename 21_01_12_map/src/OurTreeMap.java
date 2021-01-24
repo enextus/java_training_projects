@@ -17,7 +17,6 @@ public class OurTreeMap<K, V> implements OurMap<K, V> {
         }
     }
 
-
     private final Comparator<K> keyComparator;
     private Node<K, V> root;
     private int size;
@@ -99,6 +98,7 @@ public class OurTreeMap<K, V> implements OurMap<K, V> {
         return null;
     }
 
+
     @Override
     public V remove(K key) {
         Node<K, V> nodeToRemove = findNode(key);
@@ -114,11 +114,38 @@ public class OurTreeMap<K, V> implements OurMap<K, V> {
     }
 
     private V linearRemove(Node<K, V> nodeToRemove) {
-        return null;
+
+        Node<K, V> child = nodeToRemove.left == null ? nodeToRemove.right : nodeToRemove.left;
+        Node<K, V> parent = nodeToRemove.parent;
+        V res = nodeToRemove.value;
+
+        if (parent == null) {
+            root = child;
+        } else if (parent.left == nodeToRemove) {
+            parent.left = child;
+        } else {
+            parent.right = child;
+        }
+
+        if (child != null) {
+            child.parent = parent;
+        }
+
+        clearNode(nodeToRemove);
+
+        return res;
+    }
+
+    private void clearNode(Node<K, V> nodeToRemove) {
+        nodeToRemove.key = null;
+        nodeToRemove.value = null;
+        nodeToRemove.left = null;
+        nodeToRemove.right = null;
+        nodeToRemove.parent = null;
     }
 
     private V junctionRemove(Node<K, V> nodeToRemove) {
-        Node<K, V> nextNode = findNext(nodeToRemove);
+        Node<K, V> nextNode = findNextInRightBranch(nodeToRemove);
 
         V oldValue = nodeToRemove.value;
         nodeToRemove.key = nextNode.key;
@@ -128,13 +155,26 @@ public class OurTreeMap<K, V> implements OurMap<K, V> {
         return oldValue;
     }
 
-    private Node<K, V> findNext(Node<K, V> nodeToRemove) {
-        return null;
+    private Node<K, V> findNextInRightBranch(Node<K, V> node) {
+        Node<K, V> current = node.right;
+
+        while (current.left != null)
+            current = current.left;
+
+        return current;
     }
+
+    private Node<K, V> findNextRightParent(Node<K, V> current) {
+        while (current.parent != null && current.parent.left != current) {
+            current = current.parent;
+        }
+        return current.parent;
+    }
+
 
     @Override
     public boolean containsKey(K key) {
-        return false;
+        return findNode(key) != null;
     }
 
     @Override
@@ -142,49 +182,54 @@ public class OurTreeMap<K, V> implements OurMap<K, V> {
         return size;
     }
 
-    @Override
-    public Iterator<K> keyIterator() {
-        return null;
+    private Node<K, V> findMinNode() {
+        Node<K, V> current = root;
+
+        while (current.left != null) {
+            current = current.left;
+        }
+        return current;
     }
 
-    class KeyIterator implements Iterator<K> {
-        Node<K, V> currentNode;
-        int index;
-
-        public KeyIterator() {
-            index = 0;
-            currentNode = (Node<K, V>) root;
-            while (currentNode != null && currentNode.left != null)
-                currentNode = currentNode.left;
-        }
-
-        @Override
-        public boolean hasNext() {
-            return index < size;
-        }
-
-        @Override
-        public K next() {
-            if (index == size)
-                throw new NullPointerException();
-            K res = currentNode.key;
-            index++;
-            if (hasNext()) {
-                if (currentNode.right != null) {
-                    currentNode = currentNode.right;
-                    while (currentNode.left != null)
-                        currentNode = currentNode.left;
-                } else
-                    while (keyComparator.compare(currentNode.key, currentNode.parent.key) > 0)
-                        currentNode = currentNode.parent;
-            }
-
-            return res;
-        }
+    @Override
+    public Iterator<K> keyIterator() {
+        return new KeyIterator();
     }
 
     @Override
     public Iterator<V> valueIterator() {
         return null;
+    }
+
+    private class KeyIterator implements Iterator<K> {
+
+        Node<K, V> current;
+        int currentElementNumber;
+
+        public KeyIterator() {
+            if (size > 0)
+                current = findMinNode();
+        }
+
+        @Override
+        public boolean hasNext() {
+            return currentElementNumber < size;
+        }
+
+        @Override
+        public K next() {
+            if (currentElementNumber == size)
+                throw new IndexOutOfBoundsException();
+
+            K res = current.key;
+
+            if (current.right != null)
+                current = findNextInRightBranch(current);
+            else
+                current = findNextRightParent(current);
+
+            currentElementNumber++;
+            return res;
+        }
     }
 }
