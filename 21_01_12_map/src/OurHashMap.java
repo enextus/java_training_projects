@@ -126,11 +126,6 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
         return null;
     }
 
-    /**
-     * The java.util.HashMap.containsKey() method is used to check whether a particular key is being mapped into the HashMap or not.
-     * @param key
-     * @return
-     */
     @Override
     public boolean containsKey(K key) {
         return false;
@@ -237,5 +232,4 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
 //            return next;
 //        }
     }
-
 }
