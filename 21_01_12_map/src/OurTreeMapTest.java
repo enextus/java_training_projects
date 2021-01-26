@@ -45,15 +45,7 @@ class OurTreeMapTest extends OurMapTest {
         intMap.put(-5, "b");
         intMap.put(2, "b");
 
-        List<Integer> expected = Arrays.asList(-10, -5, 1, 2, 3, 5);
-
-        List<Integer> actual = new ArrayList<>();
-
-        Iterator<Integer> keyIterator = intMap.keyIterator();
-        while (keyIterator.hasNext())
-            actual.add(keyIterator.next());
-
-        assertEquals(expected, actual);
+        exp();
     }
 
     @Test
@@ -65,6 +57,10 @@ class OurTreeMapTest extends OurMapTest {
         intMap.put(3, "b");
         intMap.put(5, "b");
 
+        exp();
+    }
+
+    private void exp() {
         List<Integer> expected = Arrays.asList(-10, -5, 1, 2, 3, 5);
 
         List<Integer> actual = new ArrayList<>();
