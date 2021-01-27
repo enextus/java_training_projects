@@ -45,7 +45,6 @@ public class OurHashSet<T> implements OurSet<T> {
         source = new OurHashMap<>(initialCapacity);
     }
 
-
     /**
      * Returns the number of elements in this set (its cardinality).
      *
