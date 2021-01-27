@@ -34,7 +34,7 @@ public class OurHashSet<T> implements OurSet<T> {
      */
     public OurHashSet(Collection<? extends T> c) {
         map = new OurHashMap<>(Math.max((int) (c.size() / .75f) + 1, 16));
-        addAll(c);
+        addAll((OurSet<T>) c);
     }
 
 
@@ -48,7 +48,7 @@ public class OurHashSet<T> implements OurSet<T> {
      *                                  than zero, or if the load factor is nonpositive
      */
     public OurHashSet(int initialCapacity, float loadFactor) {
-        map = new OurHashMap<>(initialCapacity, loadFactor);
+        map = new OurHashMap<K, V>(initialCapacity, loadFactor);
     }
 
 
@@ -62,18 +62,6 @@ public class OurHashSet<T> implements OurSet<T> {
      */
     public OurHashSet(int initialCapacity) {
         map = new OurHashMap<>(initialCapacity);
-    }
-
-
-    /**
-     * Returns an iterator over the elements in this set.  The elements
-     * are returned in no particular order.
-     *
-     * @return an Iterator over the elements in this set
-     * @see ConcurrentModificationException
-     */
-    public Iterator<T> iterator() {
-        return map.keySet().iterator();
     }
 
 
@@ -149,4 +137,8 @@ public class OurHashSet<T> implements OurSet<T> {
         return map.remove((T) o) == PRESENT;
     }
 
+    @Override
+    public Iterator<T> iterator() {
+        return null;
+    }
 }
