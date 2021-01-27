@@ -30,10 +30,10 @@ public class OurHashSet<T> implements OurSet<T> {
      * @param c the collection whose elements are to be placed into this set
      * @throws NullPointerException if the specified collection is null
      */
-    public HashSet(Collection<? extends T> c) {
+/*    public HashSet(Collection<? extends T> c) {
         map = new HashMap<>(Math.max((int) (c.size() / .75f) + 1, 16));
         addAll(c);
-    }
+    }*/
 
     /**
      * Constructs a new, empty set; the backing <tt>HashMap</tt> instance has
