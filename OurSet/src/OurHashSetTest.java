@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class OurHashSetTest {
 
     @Test
-    void sizeTestAfterAddElement() {
+    void hashSetsizeTestAfterAddElement() {
         OurSet<Date> hashSet = new OurHashSet<>();
 
         Date date = new Date();
@@ -17,7 +17,7 @@ class OurHashSetTest {
     }
 
     @Test
-    void sizeTestAfterAddSameElement() {
+    void hashSetsizeTestAfterAddSameElement() {
         OurSet<Date> hashSet = new OurHashSet<>();
 
         Date date = new Date();
