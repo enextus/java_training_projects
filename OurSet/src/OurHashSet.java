@@ -2,8 +2,7 @@ import java.util.Collection;
 import java.util.Iterator;
 
 /**
- * This class implements the OurSet interface, backed by a hash table
- * (actually a OurHashMap instance).
+ * This class implements the OurSet interface, backed by an OurHashMap instance.
  */
 
 public class OurHashSet<T> implements OurSet<T> {
