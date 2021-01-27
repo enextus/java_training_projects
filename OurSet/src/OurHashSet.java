@@ -25,14 +25,13 @@ public class OurHashSet<T> implements OurSet<T> {
      * (0.75) and an initial capacity sufficient to contain the elements in
      * the specified collection.
      *
-     * @param c the collection whose elements are to be placed into this set
+     * @param collection the collection whose elements are to be placed into this set
      * @throws NullPointerException if the specified collection is null
      */
-    public OurHashSet(Collection<? extends T> c) {
-        source = new OurHashMap<>(Math.max((int) (c.size() / .75f) + 1, 16));
-        addAll((OurSet<T>) c);
+    public OurHashSet(Collection<? extends T> collection) {
+        source = new OurHashMap<>(Math.max((int) (collection.size() / .75f) + 1, 16));
+        addAll((OurSet<T>) collection);
     }
-
 
     /**
      * Constructs a new, empty set; the backing OurHashMap instance has
