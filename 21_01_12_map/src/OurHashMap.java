@@ -128,7 +128,7 @@ public class OurHashMap<K, V> implements OurMap<K, V> {
 
     @Override
     public boolean containsKey(K key) {
-        return false;
+        return find(key) != null;
     }
 
     private void clearPair(Pair<K, V> pair) {
