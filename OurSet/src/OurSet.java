@@ -1,14 +1,11 @@
-package 21_01_12_map/src/OurHashMap.java;
-
 import java.io.InvalidObjectException;
-
 
 /**
  * This class implements the OurSet interface, backed by a hash table
  * (actually a OurHashMap instance).
  */
 
-public class OurHashSet<T> implements Set<T> {
+public class OurHashSet<T> implements OurSet<T> {
     static final long serialVersionUID = -5024744406713321676L;
 
     private transient OurHashMap<T, Object> map;
