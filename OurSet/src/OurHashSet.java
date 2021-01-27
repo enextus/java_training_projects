@@ -7,14 +7,13 @@ import java.util.Iterator;
 
 public class OurHashSet<T> implements OurSet<T> {
 
-    private transient OurHashMap<T, Object> source;
+    private final transient OurHashMap<T, Object> source;
 
     // Dummy value to associate with an Object in the backing Map
     private static final Object commonValue = new Object();
 
     /**
-     * Constructs a new, empty set; the backing <tt>OurHashMap</tt> instance has
-     * default initial capacity (16) and load factor (0.75).
+     * Constructs a new, empty set; the backing OurHashMap instance has initial capacity (16) and load factor (0.75).
      */
     public OurHashSet() {
         source = new OurHashMap<>();
@@ -22,7 +21,7 @@ public class OurHashSet<T> implements OurSet<T> {
 
     /**
      * Constructs a new set containing the elements in the specified
-     * collection.  The <tt>HashMap</tt> is created with default load factor
+     * collection.  The OurHashMap is created with default load factor
      * (0.75) and an initial capacity sufficient to contain the elements in
      * the specified collection.
      *
@@ -36,16 +35,15 @@ public class OurHashSet<T> implements OurSet<T> {
 
 
     /**
-     * Constructs a new, empty set; the backing <tt>HashMap</tt> instance has
+     * Constructs a new, empty set; the backing OurHashMap instance has
      * the specified initial capacity and the specified load factor.
      *
      * @param initialCapacity the initial capacity of the hash map
      * @param loadFactor      the load factor of the hash map
-     * @throws IllegalArgumentException if the initial capacity is less
-     *                                  than zero, or if the load factor is nonpositive
+     * @throws IllegalArgumentException if the initial capacity is less than zero, or if the load factor is non positive.
      */
     public OurHashSet(int initialCapacity, float loadFactor) {
-        source = new OurHashMap<>(initialCapacity, loadFactor);
+        source = new OurHashMap<Object, Object>(initialCapacity, loadFactor);
     }
 
 
