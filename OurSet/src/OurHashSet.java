@@ -12,7 +12,7 @@ public class OurHashSet<T> implements OurSet<T> {
     private transient OurHashMap<T, Object> source;
 
     // Dummy value to associate with an Object in the backing Map
-    private static final Object PRESENT = new Object();
+    private static final Object commonValue = new Object();
 
     /**
      * Constructs a new, empty set; the backing <tt>OurHashMap</tt> instance has
@@ -116,7 +116,7 @@ public class OurHashSet<T> implements OurSet<T> {
      * element
      */
     public boolean add(T e) {
-        return source.put(e, PRESENT) == null;
+        return source.put(e, commonValue) == null;
     }
 
 
@@ -133,7 +133,7 @@ public class OurHashSet<T> implements OurSet<T> {
      * @return <tt>true</tt> if the set contained the specified element
      */
     public boolean remove(Object o) {
-        return source.remove((T) o) == PRESENT;
+        return source.remove((T) o) == commonValue;
     }
 
     @Override
