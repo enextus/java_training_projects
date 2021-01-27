@@ -48,7 +48,7 @@ public class OurHashSet<T> implements OurSet<T> {
      *                                  than zero, or if the load factor is nonpositive
      */
     public OurHashSet(int initialCapacity, float loadFactor) {
-        map = new OurHashMap<K, V>(initialCapacity, loadFactor);
+        map = new OurHashMap<>(initialCapacity, loadFactor);
     }
 
 
