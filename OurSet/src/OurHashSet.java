@@ -1,4 +1,6 @@
 import java.io.InvalidObjectException;
+import java.util.Collection;
+import java.util.Iterator;
 
 /**
  * This class implements the OurSet interface, backed by a hash table
@@ -30,10 +32,11 @@ public class OurHashSet<T> implements OurSet<T> {
      * @param c the collection whose elements are to be placed into this set
      * @throws NullPointerException if the specified collection is null
      */
-/*    public HashSet(Collection<? extends T> c) {
-        map = new HashMap<>(Math.max((int) (c.size() / .75f) + 1, 16));
+    public OurHashSet(Collection<? extends T> c) {
+        map = new OurHashMap<>(Math.max((int) (c.size() / .75f) + 1, 16));
         addAll(c);
-    }*/
+    }
+
 
     /**
      * Constructs a new, empty set; the backing <tt>HashMap</tt> instance has
@@ -48,6 +51,7 @@ public class OurHashSet<T> implements OurSet<T> {
         map = new OurHashMap<>(initialCapacity, loadFactor);
     }
 
+
     /**
      * Constructs a new, empty set; the backing <tt>HashMap</tt> instance has
      * the specified initial capacity and default load factor (0.75).
@@ -60,22 +64,6 @@ public class OurHashSet<T> implements OurSet<T> {
         map = new OurHashMap<>(initialCapacity);
     }
 
-    /**
-     * Constructs a new, empty linked hash set.  (This package private
-     * constructor is only used by LinkedHashSet.) The backing
-     * HashMap instance is a LinkedHashMap with the specified initial
-     * capacity and the specified load factor.
-     *
-     * @param initialCapacity the initial capacity of the hash map
-     * @param loadFactor      the load factor of the hash map
-     * @param dummy           ignored (distinguishes this
-     *                        constructor from other int, float constructor.)
-     * @throws IllegalArgumentException if the initial capacity is less
-     *                                  than zero, or if the load factor is nonpositive
-     */
-    OurHashSet(int initialCapacity, float loadFactor, boolean dummy) {
-        map = new LinkedHashMap<>(initialCapacity, loadFactor);
-    }
 
     /**
      * Returns an iterator over the elements in this set.  The elements
@@ -88,6 +76,7 @@ public class OurHashSet<T> implements OurSet<T> {
         return map.keySet().iterator();
     }
 
+
     /**
      * Returns the number of elements in this set (its cardinality).
      *
@@ -95,6 +84,21 @@ public class OurHashSet<T> implements OurSet<T> {
      */
     public int size() {
         return map.size();
+    }
+
+    @Override
+    public void addAll(OurSet<T> another) {
+
+    }
+
+    @Override
+    public void retainAll(OurSet<T> another) {
+
+    }
+
+    @Override
+    public void removeAll(OurSet<T> another) {
+
     }
 
 
@@ -108,8 +112,9 @@ public class OurHashSet<T> implements OurSet<T> {
      * @return <tt>true</tt> if this set contains the specified element
      */
     public boolean contains(Object o) {
-        return map.containsKey(o);
+        return map.containsKey((T) o);
     }
+
 
     /**
      * Adds the specified element to this set if it is not already present.
@@ -126,6 +131,7 @@ public class OurHashSet<T> implements OurSet<T> {
     public boolean add(T e) {
         return map.put(e, PRESENT) == null;
     }
+
 
     /**
      * Removes the specified element from this set if it is present.
