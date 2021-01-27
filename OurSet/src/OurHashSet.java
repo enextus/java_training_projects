@@ -1,4 +1,3 @@
-import java.io.InvalidObjectException;
 import java.util.Collection;
 import java.util.Iterator;
 
@@ -10,7 +9,7 @@ import java.util.Iterator;
 public class OurHashSet<T> implements OurSet<T> {
     static final long serialVersionUID = -5024744406713321676L;
 
-    private transient OurHashMap<T, Object> map;
+    private transient OurHashMap<T, Object> source;
 
     // Dummy value to associate with an Object in the backing Map
     private static final Object PRESENT = new Object();
@@ -20,7 +19,7 @@ public class OurHashSet<T> implements OurSet<T> {
      * default initial capacity (16) and load factor (0.75).
      */
     public OurHashSet() {
-        map = new OurHashMap<>();
+        source = new OurHashMap<>();
     }
 
     /**
@@ -33,7 +32,7 @@ public class OurHashSet<T> implements OurSet<T> {
      * @throws NullPointerException if the specified collection is null
      */
     public OurHashSet(Collection<? extends T> c) {
-        map = new OurHashMap<>(Math.max((int) (c.size() / .75f) + 1, 16));
+        source = new OurHashMap<>(Math.max((int) (c.size() / .75f) + 1, 16));
         addAll((OurSet<T>) c);
     }
 
@@ -48,7 +47,7 @@ public class OurHashSet<T> implements OurSet<T> {
      *                                  than zero, or if the load factor is nonpositive
      */
     public OurHashSet(int initialCapacity, float loadFactor) {
-        map = new OurHashMap<>(initialCapacity, loadFactor);
+        source = new OurHashMap<>(initialCapacity, loadFactor);
     }
 
 
@@ -61,7 +60,7 @@ public class OurHashSet<T> implements OurSet<T> {
      *                                  than zero
      */
     public OurHashSet(int initialCapacity) {
-        map = new OurHashMap<>(initialCapacity);
+        source = new OurHashMap<>(initialCapacity);
     }
 
 
@@ -71,7 +70,7 @@ public class OurHashSet<T> implements OurSet<T> {
      * @return the number of elements in this set (its cardinality)
      */
     public int size() {
-        return map.size();
+        return source.size();
     }
 
     @Override
@@ -100,7 +99,7 @@ public class OurHashSet<T> implements OurSet<T> {
      * @return <tt>true</tt> if this set contains the specified element
      */
     public boolean contains(Object o) {
-        return map.containsKey((T) o);
+        return source.containsKey((T) o);
     }
 
 
@@ -117,7 +116,7 @@ public class OurHashSet<T> implements OurSet<T> {
      * element
      */
     public boolean add(T e) {
-        return map.put(e, PRESENT) == null;
+        return source.put(e, PRESENT) == null;
     }
 
 
@@ -134,7 +133,7 @@ public class OurHashSet<T> implements OurSet<T> {
      * @return <tt>true</tt> if the set contained the specified element
      */
     public boolean remove(Object o) {
-        return map.remove((T) o) == PRESENT;
+        return source.remove((T) o) == PRESENT;
     }
 
     @Override
