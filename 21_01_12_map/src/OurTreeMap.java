@@ -198,7 +198,22 @@ public class OurTreeMap<K, V> implements OurMap<K, V> {
 
     @Override
     public Iterator<V> valueIterator() {
-        return null;
+        return new ValueIterator();
+    }
+
+    private class ValueIterator implements Iterator<V> {
+
+        Iterator<K> keyIterator = new KeyIterator();
+
+        @Override
+        public boolean hasNext() {
+            return keyIterator.hasNext();
+        }
+
+        @Override
+        public V next() {
+            return get(keyIterator.next());
+        }
     }
 
     private class KeyIterator implements Iterator<K> {
