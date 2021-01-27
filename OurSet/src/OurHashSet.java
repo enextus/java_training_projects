@@ -6,7 +6,6 @@ import java.util.Iterator;
  */
 
 public class OurHashSet<T> implements OurSet<T> {
-    static final long serialVersionUID = -5024744406713321676L;
 
     private transient OurHashMap<T, Object> source;
 
