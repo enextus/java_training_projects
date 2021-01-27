@@ -16,7 +16,7 @@ public class OurHashSet<T> implements OurSet<T> {
     private static final Object PRESENT = new Object();
 
     /**
-     * Constructs a new, empty set; the backing <tt>HashMap</tt> instance has
+     * Constructs a new, empty set; the backing <tt>OurHashMap</tt> instance has
      * default initial capacity (16) and load factor (0.75).
      */
     public OurHashSet() {
