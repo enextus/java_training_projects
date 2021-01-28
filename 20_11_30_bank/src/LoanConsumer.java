@@ -1,4 +1,5 @@
 public class LoanConsumer {
+
     private final String name;
     private final int age;
     private final int annualIncome;
@@ -20,4 +21,5 @@ public class LoanConsumer {
         this.age = age;
         this.annualIncome = annualIncome;
     }
+
 }
