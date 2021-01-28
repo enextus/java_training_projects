@@ -41,6 +41,7 @@ class OurHashSetTest {
         assertFalse(hashSet.contains(date));
     }
 
+
     private static final int LIST_SIZE = 100;
 
     public static class RandomUtils {
@@ -74,7 +75,7 @@ class OurHashSetTest {
     }
 
     @Test
-    public void testWithAdd() {
+    public void hashSet_Test_Add() {
         List<String> order1 = RandomUtils.createStringList(LIST_SIZE);
         List<String> order2 = new ArrayList<>(order1);
 
@@ -89,7 +90,6 @@ class OurHashSetTest {
         for (String item : order2)
             set2.add(item);
 
-
         List<String> list1 = new ArrayList<>(set1);
         List<String> list2 = new ArrayList<>(set2);
 
@@ -97,7 +97,7 @@ class OurHashSetTest {
     }
 
     @Test
-    public void testWithAddAll() {
+    public void hashSet_Test_AddAll() {
         List<String> order1 = RandomUtils.createStringList(LIST_SIZE);
         List<String> order2 = new ArrayList<>(order1);
 
@@ -109,8 +109,8 @@ class OurHashSetTest {
         set1.addAll(order1);
         set2.addAll(order2);
 
-        List<String> list1 = new ArrayList<String>((Collection<? extends String>) set1);
-        List<String> list2 = new ArrayList<String>((Collection<? extends String>) set2);
+        List<String> list1 = new ArrayList<String>(set1);
+        List<String> list2 = new ArrayList<String>(set2);
 
         assertNotEquals(list1, list2);
     }
