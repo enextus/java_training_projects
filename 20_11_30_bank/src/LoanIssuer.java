@@ -1,4 +1,5 @@
 public class LoanIssuer {
+
     private final String name;
     private final boolean isLazy;
     private final boolean isKind;
@@ -41,4 +42,5 @@ public class LoanIssuer {
 
         return "Bank employee " + this.name + " declined a loan to " + other.getName() + ".";
     }
+
 }
