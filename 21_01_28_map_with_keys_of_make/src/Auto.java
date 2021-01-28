@@ -1,6 +1,7 @@
 import java.util.Objects;
 
 public class Auto {
+
     String make;
     String color;
 
@@ -8,7 +9,6 @@ public class Auto {
         this.make = make;
         this.color = color;
     }
-
 
     @Override
     public boolean equals(Object o) {
@@ -22,4 +22,5 @@ public class Auto {
     public int hashCode() {
         return Objects.hash(make, color);
     }
+
 }
