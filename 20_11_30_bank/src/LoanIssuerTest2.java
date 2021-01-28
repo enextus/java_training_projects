@@ -158,4 +158,5 @@ public class LoanIssuerTest2 {
         assertFalse(issuer.toIssue(customerSeniorFewGold));
         assertFalse(issuer.toIssue(customerYoungButReach));
     }
+
 }
