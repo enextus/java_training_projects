@@ -1,4 +1,5 @@
 public interface StackMax<T> {
+
     public void addLast(T elt);
 
     public T getLast();
