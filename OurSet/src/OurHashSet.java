@@ -29,7 +29,6 @@ public class OurHashSet<T> implements OurSet<T> {
         return source.size();
     }
 
-
     public boolean contains(Object o) {
         return source.containsKey((T) o);
     }
@@ -44,7 +43,6 @@ public class OurHashSet<T> implements OurSet<T> {
 
     @Override
     public void addAll(OurSet<T> another) {
-
     }
 
     @Override
