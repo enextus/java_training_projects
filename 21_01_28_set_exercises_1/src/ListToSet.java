@@ -8,8 +8,7 @@ public class ListToSet {
 
         Set<Integer> set = new HashSet<>();
 
-        for (int v : list)
-            set.add(v);
+        set.addAll(list);
 
         return set;
     }
