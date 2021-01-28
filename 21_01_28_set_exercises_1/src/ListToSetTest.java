@@ -18,7 +18,7 @@ class ListToSetTest {
     }
 
     @Test
-    void Test_listToSet_NoOrder() {
+    void Test_listToSet_Contains() {
         Set<Integer> first = listToSet.listToSet(arrayList);
         Set<Integer> second = listToSet.listToSet(arrayList);
         Set<Integer> third = listToSet.listToSet(arrayList);
