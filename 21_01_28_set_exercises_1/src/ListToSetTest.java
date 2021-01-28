@@ -9,19 +9,19 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class ListToSetTest {
 
-    private final ListToSet listToSet = new ListToSet();
+    private final ListToSet toSetObj = new ListToSet();
     private final List<Integer> arrayList = Arrays.asList(1, 1, 2, 1);
 
     @Test
     void Test_listToSet_size() {
-        assertEquals(2, listToSet.addListToSet(arrayList).size());
+        assertEquals(2, toSetObj.addToSet(arrayList).size());
     }
 
     @Test
     void Test_listToSet_Contains() {
-        Set<Integer> first = listToSet.addListToSet(arrayList);
-        Set<Integer> second = listToSet.addListToSet(arrayList);
-        Set<Integer> third = listToSet.addListToSet(arrayList);
+        Set<Integer> first = toSetObj.addToSet(arrayList);
+        Set<Integer> second = toSetObj.addToSet(arrayList);
+        Set<Integer> third = toSetObj.addToSet(arrayList);
 
         assertTrue(first.containsAll(second));
         assertTrue(first.containsAll(third));
