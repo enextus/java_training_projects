@@ -26,16 +26,25 @@ public class Main {
         for (Auto car : lstAutos)
             System.out.println(car);
 
+        System.out.println("\n");
 
-        HashMap<String, Auto> autosMap = new HashMap<String, Auto>(5) {
+        // s pomo4ju Set opredeljaem unikalnye kliu4i Opel, BMW, Audi
+
+        // sozdaem Lists po modeljam
+
+        List<Auto> opel = new ArrayList<>();
+        List<Auto> bmw = new ArrayList<>();
+        List<Auto> audi = new ArrayList<>();
+
+        HashMap<String, List> autosMap = new HashMap<>(5) {
             {
-                this.put("Opel", testAuto1);
-                this.put("BMW", testAuto2);
-                this.put("Audi", testAuto3);
-                this.put("Audi", testAuto4);
-                this.put("BMW", testAuto5);
+                this.put("Opel", opel);
+                this.put("BMW", bmw);
+                this.put("Audi", audi);
             }
         };
+
+        System.out.println("autosMap: " + autosMap);
 
 
     }

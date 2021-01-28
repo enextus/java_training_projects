@@ -4,16 +4,12 @@ import java.util.Map;
 
 public class ListToMap<K, V> {
 
-    public Map<K, V> createMap(List<Auto> lstOfAutos) {
+    public Map<String, List> createMap(List<Auto> lstOfAutos) {
 
         // key -> make
         // val -> list of make
 
-        //Auto{make='Opel', color='Green'}
-        //Auto{make='BMW', color='White'}
-        //Auto{make='Audi', color='Red'}
-
-        Map<K, V> autosMap = new HashMap<K, V>();
+        HashMap<String, Auto> autosMap = new HashMap<>(5);
 
         return null;
     }
