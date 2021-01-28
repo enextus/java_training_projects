@@ -6,12 +6,12 @@ public class ListToSet {
     
     public Set<Integer> addToSet(List<Integer> list) {
 
-        Set<Integer> integerSet = new HashSet<>();
+        Set<Integer> intSet = new HashSet<>();
 
         // for (int v : list) set.add(v);
-        integerSet.addAll(list);
+        intSet.addAll(list);
 
-        return integerSet;
+        return intSet;
     }
 
 }
