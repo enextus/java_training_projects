@@ -23,4 +23,12 @@ public class Auto {
         return Objects.hash(make, color);
     }
 
+    @Override
+    public String toString() {
+        return "Auto{" +
+                "make='" + make + '\'' +
+                ", color='" + color + '\'' +
+                '}';
+    }
+
 }
