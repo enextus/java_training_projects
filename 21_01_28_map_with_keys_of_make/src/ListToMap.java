@@ -1,17 +1,23 @@
-import java.util.HashSet;
+import java.util.HashMap;
 import java.util.List;
-import java.util.Set;
+import java.util.Map;
 
-public class ListToMap {
+public class ListToMap<K, V> {
 
-    public Set<Integer> addToSet(List<Integer> list) {
+    public Map<K, V> createMap(List<Auto> lstOfAutos) {
 
-        Set<Integer> intSet = new HashSet<>();
+        // key -> make
+        // val -> list of make
 
-        // for (int v : list) set.add(v);
-        intSet.addAll(list);
 
-        return intSet;
+        //Auto{make='Opel', color='Green'}
+        //Auto{make='BMW', color='White'}
+        //Auto{make='Audi', color='Red'}
+
+        Map<K, V> autosMap = new HashMap<K, V>();
+
+
+        return null;
     }
 
 }
