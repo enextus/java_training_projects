@@ -28,13 +28,21 @@ public class Main {
 
         System.out.println("\n");
 
-        // s pomo4ju Set opredeljaem unikalnye kliu4i Opel, BMW, Audi
+        // s pomo4ju Set opredeljaem unikalnye kliu4i -> Opel, BMW, Audi
 
-        // sozdaem Lists po modeljam
+        // sozdaem Listy po modeljam:
 
         List<Auto> opel = new ArrayList<>();
+        opel.add(testAuto1);
+
         List<Auto> bmw = new ArrayList<>();
+        bmw.add(testAuto2);
+        bmw.add(testAuto5);
+
         List<Auto> audi = new ArrayList<>();
+        audi.add(testAuto3);
+        audi.add(testAuto4);
+
 
         HashMap<String, List> autosMap = new HashMap<>(5) {
             {
