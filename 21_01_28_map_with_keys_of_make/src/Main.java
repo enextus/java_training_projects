@@ -22,7 +22,8 @@ public class Main {
         lstAutos.add(testAuto4);
         lstAutos.add(testAuto5);
 
-        System.out.println("Whole list of Autos: " + lstAutos);
+        for (Auto car : lstAutos)
+            System.out.println(car);
     }
 
 }
