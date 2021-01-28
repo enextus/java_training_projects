@@ -3,23 +3,23 @@ import java.util.ArrayDeque;
 public class StackMax {
 
     private final ArrayDeque<Integer> dequeElem;
-    private final ArrayDeque<Integer> dequeMaxs;
+    private final ArrayDeque<Integer> dequeMaxis;
 
     public StackMax() {
         dequeElem = new ArrayDeque<>();
-        dequeMaxs = new ArrayDeque<>();
+        dequeMaxis = new ArrayDeque<>();
     }
 
     public void addLast(int elt) {
         dequeElem.addLast(elt);
 
-        if (dequeMaxs.isEmpty()) {
-            dequeMaxs.addLast(elt);
+        if (dequeMaxis.isEmpty()) {
+            dequeMaxis.addLast(elt);
         } else {
-            if (elt > dequeMaxs.getLast()) {
-                dequeMaxs.addLast(elt);
+            if (elt > dequeMaxis.getLast()) {
+                dequeMaxis.addLast(elt);
             } else {
-                dequeMaxs.addLast(dequeMaxs.getLast());
+                dequeMaxis.addLast(dequeMaxis.getLast());
             }
         }
     }
@@ -35,7 +35,7 @@ public class StackMax {
         if (dequeElem.isEmpty())
             throw new IndexOutOfBoundsException();
 
-        dequeMaxs.removeLast();
+        dequeMaxis.removeLast();
 
         return dequeElem.removeLast();
     }
@@ -48,6 +48,7 @@ public class StackMax {
         if (dequeElem.isEmpty())
             throw new IndexOutOfBoundsException();
 
-        return dequeMaxs.getLast();
+        return dequeMaxis.getLast();
     }
+
 }

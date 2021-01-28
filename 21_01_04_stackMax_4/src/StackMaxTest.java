@@ -141,4 +141,5 @@ class StackMaxTest {
         assertThrows(IndexOutOfBoundsException.class, () -> myStack.removeLast());
         assertThrows(IndexOutOfBoundsException.class, () -> myStack.removeLast());
     }
+
 }
