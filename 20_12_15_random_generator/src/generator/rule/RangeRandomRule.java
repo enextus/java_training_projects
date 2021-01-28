@@ -5,9 +5,7 @@ import generator.RandomRule;
 import java.util.Random;
 
 /**
- *
- *  implementation of the interface named "RangeRandomRule".
- *
+ * implementation of the interface named "RangeRandomRule".
  */
 public class RangeRandomRule implements RandomRule {
 

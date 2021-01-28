@@ -24,12 +24,12 @@ public class Main {
         System.out.println(getLineNumber() + " " + opel.hashCode());
         boolean b = new String("2") == new String("2");
         System.out.println(b);
-        System.out.println(  );
+        System.out.println();
 
-        Integer v= ((Integer) 21 * 2);
+        Integer v = ((Integer) 21 * 2);
 
         System.out.println("v.hashCode() " +
-                "" +v.hashCode());
+                "" + v.hashCode());
     }
 
     private static Auto switchAuto(Auto auto) {

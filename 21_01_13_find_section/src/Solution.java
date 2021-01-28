@@ -12,7 +12,7 @@ public class Solution {
         ArrayList<Integer> numbers = new ArrayList<>(integerList);
 
         for (int i = 0; i < numbers.size(); i++) {
-            for (int j = i ; j < numbers.size(); j++) {
+            for (int j = i; j < numbers.size(); j++) {
 
                 if (numbers.get(j) - numbers.get(i) <= cut)
                     points++;

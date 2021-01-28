@@ -21,6 +21,6 @@ public class BackwardArrayIterator implements Iterator<Integer> {
         currentIndex--;
         return res;
 
-       // return source[currentIndex--];
+        // return source[currentIndex--];
     }
 }
