@@ -9,7 +9,7 @@ public class Main {
 
         ListToSet listToSet = new ListToSet();
 
-        System.out.println(listToSet.listToSet(arrayList));
+        System.out.println(listToSet.addListToSet(arrayList));
 
     }
 }

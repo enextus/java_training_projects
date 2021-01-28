@@ -4,7 +4,7 @@ import java.util.Set;
 
 public class ListToSet {
     
-    public Set<Integer> listToSet(List<Integer> list) {
+    public Set<Integer> addListToSet(List<Integer> list) {
 
         Set<Integer> set = new HashSet<>();
 

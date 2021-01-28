@@ -14,14 +14,14 @@ class ListToSetTest {
 
     @Test
     void Test_listToSet_size() {
-        assertEquals(2, listToSet.listToSet(arrayList).size());
+        assertEquals(2, listToSet.addListToSet(arrayList).size());
     }
 
     @Test
     void Test_listToSet_Contains() {
-        Set<Integer> first = listToSet.listToSet(arrayList);
-        Set<Integer> second = listToSet.listToSet(arrayList);
-        Set<Integer> third = listToSet.listToSet(arrayList);
+        Set<Integer> first = listToSet.addListToSet(arrayList);
+        Set<Integer> second = listToSet.addListToSet(arrayList);
+        Set<Integer> third = listToSet.addListToSet(arrayList);
 
         assertTrue(first.containsAll(second));
         assertTrue(first.containsAll(third));
