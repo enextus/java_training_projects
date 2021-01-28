@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class ListToSetTest {
 
@@ -18,10 +19,11 @@ class ListToSetTest {
 
     @Test
     void Test_listToSet_NoOrder() {
-        Set<Integer> set_1 = listToSet.listToSet(arrayList);
-        Set<Integer> set_2 = listToSet.listToSet(arrayList);
-
-       // assertEqualsNoOrder(set_1, set_2);
+        Set<Integer> first = listToSet.listToSet(arrayList);
+        Set<Integer> second = listToSet.listToSet(arrayList);
+        
+        assertTrue(first.containsAll(second));
+        assertTrue(second.containsAll(first));
     }
 
 }
