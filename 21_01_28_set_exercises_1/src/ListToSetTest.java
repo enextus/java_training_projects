@@ -31,7 +31,6 @@ class ListToSetTest {
 
         assertTrue(third.containsAll(first));
         assertTrue(third.containsAll(second));
-
     }
 
 }
