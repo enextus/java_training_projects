@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class Main {
@@ -24,6 +25,19 @@ public class Main {
 
         for (Auto car : lstAutos)
             System.out.println(car);
+
+
+        HashMap<String, Auto> autosMap = new HashMap<String, Auto>(5) {
+            {
+                this.put("Opel", testAuto1);
+                this.put("BMW", testAuto2);
+                this.put("Audi", testAuto3);
+                this.put("Audi", testAuto4);
+                this.put("BMW", testAuto5);
+            }
+        };
+
+
     }
 
 }

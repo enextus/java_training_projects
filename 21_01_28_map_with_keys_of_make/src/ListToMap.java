@@ -9,13 +9,11 @@ public class ListToMap<K, V> {
         // key -> make
         // val -> list of make
 
-
         //Auto{make='Opel', color='Green'}
         //Auto{make='BMW', color='White'}
         //Auto{make='Audi', color='Red'}
 
         Map<K, V> autosMap = new HashMap<K, V>();
-
 
         return null;
     }
