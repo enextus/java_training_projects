@@ -69,7 +69,6 @@ public class OurHashSet<T> implements OurSet<T> {
 
     }
 
-
     /**
      * Returns <tt>true</tt> if this set contains the specified element.
      * More formally, returns <tt>true</tt> if and only if this set
@@ -82,7 +81,6 @@ public class OurHashSet<T> implements OurSet<T> {
     public boolean contains(Object o) {
         return source.containsKey((T) o);
     }
-
 
     /**
      * Adds the specified element to this set if it is not already present.
@@ -99,7 +97,6 @@ public class OurHashSet<T> implements OurSet<T> {
     public boolean add(T e) {
         return source.put(e, commonValue) == null;
     }
-
 
     /**
      * Removes the specified element from this set if it is present.
