@@ -19,18 +19,18 @@ class ListToSetTest {
 
     @Test
     void Test_listToSet_Contains() {
-        Set<Integer> firstSet = toSetObj.addToSet(arrList);
-        Set<Integer> secondSet = toSetObj.addToSet(arrList);
-        Set<Integer> thirdSet = toSetObj.addToSet(arrList);
+        Set<Integer> firstIntSet = toSetObj.addToSet(arrList);
+        Set<Integer> secondIntSet = toSetObj.addToSet(arrList);
+        Set<Integer> thirdIntSet = toSetObj.addToSet(arrList);
 
-        assertTrue(firstSet.containsAll(secondSet));
-        assertTrue(firstSet.containsAll(thirdSet));
+        assertTrue(firstIntSet.containsAll(secondIntSet));
+        assertTrue(firstIntSet.containsAll(thirdIntSet));
 
-        assertTrue(secondSet.containsAll(firstSet));
-        assertTrue(secondSet.containsAll(thirdSet));
+        assertTrue(secondIntSet.containsAll(firstIntSet));
+        assertTrue(secondIntSet.containsAll(thirdIntSet));
 
-        assertTrue(thirdSet.containsAll(firstSet));
-        assertTrue(thirdSet.containsAll(secondSet));
+        assertTrue(thirdIntSet.containsAll(firstIntSet));
+        assertTrue(thirdIntSet.containsAll(secondIntSet));
     }
 
 }
