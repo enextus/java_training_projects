@@ -21,9 +21,17 @@ class ListToSetTest {
     void Test_listToSet_NoOrder() {
         Set<Integer> first = listToSet.listToSet(arrayList);
         Set<Integer> second = listToSet.listToSet(arrayList);
-        
+        Set<Integer> third = listToSet.listToSet(arrayList);
+
         assertTrue(first.containsAll(second));
+        assertTrue(first.containsAll(third));
+
         assertTrue(second.containsAll(first));
+        assertTrue(second.containsAll(third));
+
+        assertTrue(third.containsAll(first));
+        assertTrue(third.containsAll(second));
+
     }
 
 }
