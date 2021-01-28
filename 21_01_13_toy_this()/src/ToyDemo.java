@@ -1,4 +1,5 @@
 public class ToyDemo {
+
     /**
      * Get the current line number.
      *
@@ -21,4 +22,5 @@ public class ToyDemo {
         Toy toy4 = new Toy("Кукла", 34, "Disney", 22);
         System.out.println("toy4: " + toy4 + ", Line: " + getLineNumber());
     }
+
 }

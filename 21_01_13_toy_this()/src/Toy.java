@@ -1,4 +1,5 @@
 public class Toy {
+
     String name;
     int cost;
     String manufacturer;
@@ -31,4 +32,5 @@ public class Toy {
                 ", age=" + age +
                 '}';
     }
+
 }
