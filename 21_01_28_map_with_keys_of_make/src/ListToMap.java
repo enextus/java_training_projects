@@ -28,7 +28,7 @@ public class ListToMap<K, V> {
         // key -> make
         // val -> list of make
 
-        HashMap<String, Auto> autosMap = new HashMap<>(5);
+        HashMap<String, List<Auto>> autosMap = new HashMap<>(5);
 
         HashSet<String> keySet = findKeys(lstOfAutos);
 
@@ -46,7 +46,7 @@ public class ListToMap<K, V> {
         }
 
 
-        return autosMap;
+        return null;
     }
 
 
