@@ -19,7 +19,7 @@ class ListToMapTest {
 
 
     @Test
-    void test_findKeys() {
+    void test_findKeys_size_of_keySet() {
 
         lstAutos.add(car_1);
         lstAutos.add(car_2);
