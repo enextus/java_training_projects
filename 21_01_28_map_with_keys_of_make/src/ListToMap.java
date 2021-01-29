@@ -14,7 +14,7 @@ public class ListToMap<K, V> {
         return null;
     }
 
-    private Set<String> findKeys(List<Auto> list) {
+    public Set<String> findKeys(List<Auto> list) {
 
         Set<String> keySet = new HashSet<>();
 
