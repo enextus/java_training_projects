@@ -1,7 +1,6 @@
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -84,18 +83,27 @@ class ListToMapTest {
     @Test
     void test_createMap_size_of_generated_map() {
 
-        lstAutos.add(car_1);
-        lstAutos.add(car_2);
-
         // autosMap: {
         // Opel=[Auto{make='Opel', color='Green'}],
         // BMW=[Auto{make='BMW', color='White'}, Auto{make='BMW', color='Black'}],
         // Audi=[Auto{make='Audi', color='Red'}, Auto{make='Audi', color='Blue'}]
         // }
 
-        HashMap<String, List<Auto>> expectedMap = new HashMap<>(5);
-
+        lstAutos.add(car_1);
+        lstAutos.add(car_2);
         assertEquals(2, testMap.createMap(lstAutos).size());
+
+        lstAutos.add(car_1);
+        lstAutos.add(car_2);
+        lstAutos.add(car_3);
+        assertEquals(3, testMap.createMap(lstAutos).size());
+
+        lstAutos.add(car_1);
+        lstAutos.add(car_2);
+        lstAutos.add(car_3);
+        lstAutos.add(car_4);
+        lstAutos.add(car_5);
+        assertEquals(3, testMap.createMap(lstAutos).size());
     }
 
 }
