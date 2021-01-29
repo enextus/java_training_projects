@@ -2,8 +2,8 @@ import java.util.Objects;
 
 public class Auto {
 
-    String make;
-    String color;
+    private String make;
+    private String color;
 
     public Auto(String make, String color) {
         this.make = make;

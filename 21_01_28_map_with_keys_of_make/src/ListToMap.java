@@ -7,7 +7,7 @@ public class ListToMap{
         HashSet<String> keySet = new HashSet<>();
 
         for (Auto car : list)
-            keySet.add(car.make);
+            keySet.add(car.getMake());
 
         return keySet;
     }
