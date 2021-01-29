@@ -16,7 +16,7 @@ public class ListToMap<K, V> {
 
     public HashSet<String> findKeys(List<Auto> list) {
 
-        Set<String> keySet = new HashSet<>();
+        HashSet<String> keySet = new HashSet<>();
 
         for (Auto car : list)
             keySet.add(car.make);
