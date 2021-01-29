@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main_production {
+public class Main_prod {
     public static void main(String[] args) {
 
         ListToMap lstToMap = new ListToMap();
