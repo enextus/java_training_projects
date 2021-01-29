@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -32,12 +29,15 @@ public class Main {
 
         ListToMap lsTM = new ListToMap();
 
-        Set<String> keySet = lsTM.findKeys(lstAutos);
+        HashSet<String> keySet = lsTM.findKeys(lstAutos);
 
         System.out.println("KeySet: " + keySet);
 
+        Iterator<String> it = keySet.iterator();
 
-
+        while (it.hasNext()) {
+            System.out.println(it.next());
+        }
 
 
         // sozdaem Listy po modeljam:
