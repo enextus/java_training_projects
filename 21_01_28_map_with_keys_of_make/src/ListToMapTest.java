@@ -48,10 +48,37 @@ class ListToMapTest {
     }
 
     @Test
-    void createListOfMake() {
+    void test_createListOfMake_size_of_generated_list() {
+
+        lstAutos.add(car_1);
+        lstAutos.add(car_2);
+        lstAutos.add(car_3);
+        lstAutos.add(car_4);
+        lstAutos.add(car_5);
+
+        List<Auto> expected = new ArrayList<>();
+
+        expected.add(car_3);
+        expected.add(car_4);
+
+        assertEquals(expected.size(), testMap.createListOfMake("Audi", lstAutos).size());
+        assertEquals(expected, testMap.createListOfMake("Audi", lstAutos));
     }
 
     @Test
-    void createMap() {
+    void test_createListOfMake_contains_of_generated_list() {
+
+        lstAutos.add(car_1);
+        lstAutos.add(car_2);
+        lstAutos.add(car_3);
+        lstAutos.add(car_4);
+        lstAutos.add(car_5);
+
+        List<Auto> expected = new ArrayList<>();
+
+        expected.add(car_3);
+        expected.add(car_4);
+        
+        assertEquals(expected, testMap.createListOfMake("Audi", lstAutos));
     }
 }
