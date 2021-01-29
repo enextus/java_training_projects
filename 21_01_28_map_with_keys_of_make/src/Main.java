@@ -39,6 +39,8 @@ public class Main {
             System.out.println(it.next());
         }
 
+        System.out.println("\n");
+        System.out.println("_____________________________________________________________");
 
         // sozdaem Listy po modeljam:
 
