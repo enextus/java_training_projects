@@ -11,10 +11,6 @@ public class Main {
         Auto testAuto4 = new Auto("Audi", "Blue");
         Auto testAuto5 = new Auto("BMW", "Black");
 
-        System.out.println("Test-Auto: " + testAuto1);
-        System.out.println("Test-Auto: " + testAuto2);
-        System.out.println("Test-Auto: " + testAuto3);
-
         List<Auto> lstAutos = new ArrayList<>();
 
         lstAutos.add(testAuto1);
@@ -23,14 +19,19 @@ public class Main {
         lstAutos.add(testAuto4);
         lstAutos.add(testAuto5);
 
+        System.out.println("Лист объектов класса Auto (make, color):");
+
         for (Auto car : lstAutos)
             System.out.println(car);
 
         System.out.println("\n");
+        System.out.println("_____________________________________________________________");
 
         // s pomo4ju Set opredeljaem unikalnye kliu4i -> Opel, BMW, Audi
 
         // sozdaem Listy po modeljam:
+
+
 
         List<Auto> opel = new ArrayList<>();
         opel.add(testAuto1);
@@ -53,7 +54,6 @@ public class Main {
         };
 
         System.out.println("autosMap: " + autosMap);
-
 
     }
 

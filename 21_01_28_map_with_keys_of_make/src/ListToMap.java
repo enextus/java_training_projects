@@ -9,6 +9,8 @@ public class ListToMap<K, V> {
         // key -> make
         // val -> list of make
 
+        //lstOfAutosTemp =
+
         HashMap<String, Auto> autosMap = new HashMap<>(5);
 
         return null;
