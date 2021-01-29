@@ -3,12 +3,11 @@ import java.io.IOException;
 import java.util.Arrays;
 
 public class Main {
+    // final static String dir = System.getProperty("user.dir");
     final static String FILE_NAME = "input.txt";
 
     public static void main(String[] args) throws IOException {
-
-        final String dir = System.getProperty("user.dir");
-        System.out.println("Current dir: " + dir);
+        //System.out.println("Current dir: " + dir);
 
         FileInputStream inputStream = new FileInputStream(FILE_NAME);
         byte[] bytes = new byte[inputStream.available()];
