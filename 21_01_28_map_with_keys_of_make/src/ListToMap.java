@@ -12,11 +12,11 @@ public class ListToMap<K, V> {
         return keySet;
     }
 
-    public Auto findMake(String make, List lstOfAutos) {
+    public List<Auto> createListOfMake(String make, List<Auto> lstOfAutos) {
 
         for (Auto car : lstOfAutos) {
             if (car.getMake().equals(make)) {
-                return car;
+                // return car;
             }
         }
 
@@ -38,15 +38,15 @@ public class ListToMap<K, V> {
 
             String key = it.next();
 
-            lstOfAutos.f
+            List<Auto> currentAutosList = createListOfMake(key, lstOfAutos);
 
-            autosMap.put(key, auto);
-
+            // siuda dolzen prihodit List po modeljam
+            autosMap.put(key, currentAutosList);
 
         }
 
 
-        return null;
+        return autosMap;
     }
 
 
