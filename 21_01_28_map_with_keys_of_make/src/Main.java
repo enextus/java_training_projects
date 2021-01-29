@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
@@ -29,8 +30,17 @@ public class Main {
 
         // s pomo4ju Set opredeljaem unikalnye kliu4i -> Opel, BMW, Audi
 
-        // sozdaem Listy po modeljam:
+        ListToMap lsTM = new ListToMap();
 
+        Set<String> keySet = lsTM.findKeys(lstAutos);
+
+        System.out.println("KeySet: " + keySet);
+
+
+
+
+
+        // sozdaem Listy po modeljam:
 
 
         List<Auto> opel = new ArrayList<>();
