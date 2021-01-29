@@ -31,7 +31,6 @@ public class ListToMap{
     public Map<String, List<Auto>> createMap(List<Auto> lstOfAutos) {
 
         HashMap<String, List<Auto>> autosMap = new HashMap<>(5);
-
         HashSet<String> keySet = findKeys(lstOfAutos);
 
         Iterator<String> it = keySet.iterator();
@@ -44,7 +43,6 @@ public class ListToMap{
 
             // here comes List of Cars with defined make
             autosMap.put(currentKey, currentAutosList);
-
         }
 
         return autosMap;
