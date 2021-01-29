@@ -37,6 +37,7 @@ public class Main {
 
         while (it.hasNext()) {
             System.out.println(it.next());
+            // peredaerm key w metod Szdat List automobilja po marke
         }
 
         System.out.println("\n");

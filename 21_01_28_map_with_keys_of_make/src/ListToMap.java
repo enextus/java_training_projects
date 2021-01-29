@@ -1,7 +1,4 @@
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class ListToMap<K, V> {
 
@@ -15,14 +12,39 @@ public class ListToMap<K, V> {
         return keySet;
     }
 
+    public Auto findMake(String make, List lstOfAutos) {
+
+        for (Auto car : lstOfAutos) {
+            if (car.getMake().equals(make)) {
+                return car;
+            }
+        }
+
+        return null;
+    }
+
     public Map<String, List> createMap(List<Auto> lstOfAutos) {
 
         // key -> make
         // val -> list of make
 
-        //lstOfAutosTemp =
-
         HashMap<String, Auto> autosMap = new HashMap<>(5);
+
+        HashSet<String> keySet = findKeys(lstOfAutos);
+
+        Iterator<String> it = keySet.iterator();
+
+        while (it.hasNext()) {
+
+            String key = it.next();
+
+            lstOfAutos.f
+
+            autosMap.put(key, auto);
+
+
+        }
+
 
         return null;
     }
