@@ -48,7 +48,7 @@ public class ListToMap{
 
         }
 
-        return null;
+        return autosMap;
     }
 
 }
