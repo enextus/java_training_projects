@@ -25,7 +25,7 @@ public class ListToMap{
             }
         }
 
-        // wozwra4aem List Auto s konkretnoj make
+        // return generated List of Cars with defined make
         return res;
     }
 
@@ -39,12 +39,12 @@ public class ListToMap{
 
         while (it.hasNext()) {
 
-            String key = it.next();
+            String currentKey = it.next();
 
-            List<Auto> currentAutosList = createListOfMake(key, lstOfAutos);
+            List<Auto> currentAutosList = createListOfMake(currentKey, lstOfAutos);
 
-            // siuda dolzen prihodit List po modeljam
-            autosMap.put(key, currentAutosList);
+            // here comes List of Cars with defined make
+            autosMap.put(currentKey, currentAutosList);
 
         }
 
