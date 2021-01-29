@@ -2,7 +2,7 @@ import java.util.*;
 
 public class ListToMap{
 
-    public HashSet<String> findKeys(List<Auto> list) {
+    HashSet<String> findKeys(List<Auto> list) {
 
         HashSet<String> keySet = new HashSet<>();
 
@@ -12,15 +12,14 @@ public class ListToMap{
         return keySet;
     }
 
-    public List<Auto> createListOfMake(String make, List<Auto> lstOfAutos) {
+    List<Auto> createListOfMake(String make, List<Auto> lstOfAutos) {
 
         List<Auto> res = new ArrayList<>();
 
         for (Auto car : lstOfAutos) {
             if (car.getMake().equals(make)) {
 
-                // return car;
-                // mashina najdena i pishem ee w List
+                // found car will be added to the List
                 res.add(car);
             }
         }
