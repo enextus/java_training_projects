@@ -1,6 +1,4 @@
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class ListToMap<K, V> {
 
@@ -14,6 +12,16 @@ public class ListToMap<K, V> {
         HashMap<String, Auto> autosMap = new HashMap<>(5);
 
         return null;
+    }
+
+    private Set<String> findKeys(List<Auto> list) {
+
+        Set<String> keySet = new HashSet<>();
+
+        for (Auto car : list)
+            keySet.add(car.make);
+
+        return keySet;
     }
 
 }
