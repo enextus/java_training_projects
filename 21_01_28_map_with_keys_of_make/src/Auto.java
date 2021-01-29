@@ -14,7 +14,6 @@ public class Auto {
         return make;
     }
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

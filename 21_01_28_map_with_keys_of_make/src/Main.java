@@ -45,7 +45,6 @@ public class Main {
 
         // sozdaem Listy po modeljam:
 
-
         List<Auto> opel = new ArrayList<>();
         opel.add(testAuto1);
 

@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class ListToMap<K, V> {
+public class ListToMap{
 
     public HashSet<String> findKeys(List<Auto> list) {
 
