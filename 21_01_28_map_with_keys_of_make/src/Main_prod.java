@@ -6,19 +6,19 @@ public class Main_prod {
 
         ListToMap lstToMap = new ListToMap();
 
-        Auto testAuto1 = new Auto("Opel", "Green");
-        Auto testAuto2 = new Auto("BMW", "White");
-        Auto testAuto3 = new Auto("Audi", "Red");
-        Auto testAuto4 = new Auto("Audi", "Blue");
-        Auto testAuto5 = new Auto("BMW", "Black");
+        Auto car_1 = new Auto("Opel", "Green");
+        Auto car_2 = new Auto("BMW", "White");
+        Auto car_3 = new Auto("Audi", "Red");
+        Auto car_4 = new Auto("Audi", "Blue");
+        Auto car_5 = new Auto("BMW", "Black");
 
         List<Auto> lstAutos = new ArrayList<>();
 
-        lstAutos.add(testAuto1);
-        lstAutos.add(testAuto2);
-        lstAutos.add(testAuto3);
-        lstAutos.add(testAuto4);
-        lstAutos.add(testAuto5);
+        lstAutos.add(car_1);
+        lstAutos.add(car_2);
+        lstAutos.add(car_3);
+        lstAutos.add(car_4);
+        lstAutos.add(car_5);
 
         System.out.println("autosMap: " + lstToMap.createMap(lstAutos));
 
