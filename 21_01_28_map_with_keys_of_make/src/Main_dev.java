@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Main {
+public class Main_dev {
     public static void main(String[] args) {
 
         Auto testAuto1 = new Auto("Opel", "Green");
