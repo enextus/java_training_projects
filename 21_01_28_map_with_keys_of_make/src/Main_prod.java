@@ -22,6 +22,12 @@ public class Main_prod {
 
         System.out.println("autosMap: " + lstToMap.createMap(lstAutos));
 
+        // autosMap: {
+        // Opel=[Auto{make='Opel', color='Green'}],
+        // BMW=[Auto{make='BMW', color='White'}, Auto{make='BMW', color='Black'}],
+        // Audi=[Auto{make='Audi', color='Red'}, Auto{make='Audi', color='Blue'}]
+        // }
+
     }
 
 }
