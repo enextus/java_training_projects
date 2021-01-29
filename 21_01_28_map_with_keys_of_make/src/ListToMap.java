@@ -18,7 +18,6 @@ public class ListToMap{
 
         for (Auto car : lstOfAutos) {
             if (car.getMake().equals(make)) {
-
                 // found car will be added to the List
                 res.add(car);
             }
@@ -38,7 +37,6 @@ public class ListToMap{
         while (it.hasNext()) {
 
             String currentKey = it.next();
-
             List<Auto> currentAutosList = createListOfMake(currentKey, lstOfAutos);
 
             // here comes List of Cars with defined make
