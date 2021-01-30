@@ -9,9 +9,8 @@ public class ListToMap {
         Iterator<String> it = keySet.iterator();
         while (it.hasNext()) {
             String currentKey = it.next();
-            List<Auto> currentAutosList = createListOfMake(currentKey, lstOfAutos);
-            // here comes List of Cars with defined make
-            carsMap.put(currentKey, currentAutosList);
+            List<Auto> currentCarsList = createListOfMake(currentKey, lstOfAutos);
+            carsMap.put(currentKey, currentCarsList); // here comes List of Cars with specified make
         }
 
         return carsMap;
@@ -20,8 +19,9 @@ public class ListToMap {
     HashSet<String> findKeys(List<Auto> list) {
         HashSet<String> keySet = new HashSet<>();
 
-        for (Auto car : list)
+        for (Auto car : list) {
             keySet.add(car.getMake());
+        }
 
         return keySet;
     }
@@ -30,14 +30,11 @@ public class ListToMap {
         List<Auto> carListOfSpecificMake = new ArrayList<>();
 
         for (Auto car : lstOfAutos) {
-            if (car.getMake().equals(make)) {
-                // found car will be added to the List
-                carListOfSpecificMake.add(car);
-            }
+            if (car.getMake().equals(make))
+                carListOfSpecificMake.add(car); // found car will be added to the List
         }
 
-        // return generated List of Cars with specific make
-        return carListOfSpecificMake;
+        return carListOfSpecificMake; // return generated List of Cars with specified make
     }
 
 }
