@@ -3,7 +3,7 @@ import java.util.*;
 public class ListToMap {
 
     public Map<String, List<Auto>> createMap(List<Auto> lstOfAutos) {
-        HashMap<String, List<Auto>> autosMap = new HashMap<>(5);
+        HashMap<String, List<Auto>> carsMap = new HashMap<>(5);
         HashSet<String> keySet = findKeys(lstOfAutos);
 
         Iterator<String> it = keySet.iterator();
@@ -11,10 +11,10 @@ public class ListToMap {
             String currentKey = it.next();
             List<Auto> currentAutosList = createListOfMake(currentKey, lstOfAutos);
             // here comes List of Cars with defined make
-            autosMap.put(currentKey, currentAutosList);
+            carsMap.put(currentKey, currentAutosList);
         }
 
-        return autosMap;
+        return carsMap;
     }
 
     HashSet<String> findKeys(List<Auto> list) {
