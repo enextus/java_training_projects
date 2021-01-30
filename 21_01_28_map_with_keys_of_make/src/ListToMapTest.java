@@ -14,6 +14,9 @@ class ListToMapTest {
     private final Auto car_3 = new Auto("Audi", "Red");
     private final Auto car_4 = new Auto("Audi", "Blue");
     private final Auto car_5 = new Auto("BMW", "Black");
+    private final Auto car_6 = new Auto("TOYOTA", "Black");
+    private final Auto car_7 = new Auto("TOYOTA", "White");
+    private final Auto car_8 = new Auto("TOYOTA", "Blue");
 
     private final List<Auto> lstAutos = new ArrayList<>();
 
@@ -45,6 +48,14 @@ class ListToMapTest {
         lstAutos.add(car_4);
         lstAutos.add(car_5);
         assertEquals(3, testMap.findKeys(lstAutos).size());
+
+        lstAutos.add(car_1);
+        lstAutos.add(car_2);
+        lstAutos.add(car_3);
+        lstAutos.add(car_4);
+        lstAutos.add(car_5);
+        lstAutos.add(car_6);
+        assertEquals(4, testMap.findKeys(lstAutos).size());
     }
 
     @Test
