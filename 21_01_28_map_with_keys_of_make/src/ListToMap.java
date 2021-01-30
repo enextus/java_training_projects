@@ -27,17 +27,17 @@ public class ListToMap {
     }
 
     List<Auto> createListOfMake(String make, List<Auto> lstOfAutos) {
-        List<Auto> res = new ArrayList<>();
+        List<Auto> carListOfSpecificMake = new ArrayList<>();
 
         for (Auto car : lstOfAutos) {
             if (car.getMake().equals(make)) {
                 // found car will be added to the List
-                res.add(car);
+                carListOfSpecificMake.add(car);
             }
         }
 
-        // return generated List of Cars with defined make
-        return res;
+        // return generated List of Cars with specific make
+        return carListOfSpecificMake;
     }
 
 }
