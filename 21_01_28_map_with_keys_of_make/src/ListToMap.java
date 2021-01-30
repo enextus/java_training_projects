@@ -1,6 +1,21 @@
 import java.util.*;
 
-public class ListToMap{
+public class ListToMap {
+
+    public Map<String, List<Auto>> createMap(List<Auto> lstOfAutos) {
+        HashMap<String, List<Auto>> autosMap = new HashMap<>(5);
+        HashSet<String> keySet = findKeys(lstOfAutos);
+
+        Iterator<String> it = keySet.iterator();
+        while (it.hasNext()) {
+            String currentKey = it.next();
+            List<Auto> currentAutosList = createListOfMake(currentKey, lstOfAutos);
+            // here comes List of Cars with defined make
+            autosMap.put(currentKey, currentAutosList);
+        }
+
+        return autosMap;
+    }
 
     HashSet<String> findKeys(List<Auto> list) {
         HashSet<String> keySet = new HashSet<>();
@@ -23,21 +38,6 @@ public class ListToMap{
 
         // return generated List of Cars with defined make
         return res;
-    }
-
-    public Map<String, List<Auto>> createMap(List<Auto> lstOfAutos) {
-        HashMap<String, List<Auto>> autosMap = new HashMap<>(5);
-        HashSet<String> keySet = findKeys(lstOfAutos);
-
-        Iterator<String> it = keySet.iterator();
-        while (it.hasNext()) {
-            String currentKey = it.next();
-            List<Auto> currentAutosList = createListOfMake(currentKey, lstOfAutos);
-            // here comes List of Cars with defined make
-            autosMap.put(currentKey, currentAutosList);
-        }
-
-        return autosMap;
     }
 
 }
