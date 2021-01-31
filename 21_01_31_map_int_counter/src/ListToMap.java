@@ -15,9 +15,7 @@ public class ListToMap {
 
     Integer countFrequency(List<Integer> lstInt, Integer currentKey) {
 
-        Collections.frequency(lstInt, currentKey);
-
-        return -1;
+        return Collections.frequency(lstInt, currentKey);
     }
 
     HashSet<Integer> findKeys(List<Integer> list) {
