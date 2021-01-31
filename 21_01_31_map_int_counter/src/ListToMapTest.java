@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -93,6 +94,14 @@ class ListToMapTest {
     }
 
     @Test
+    void test_createMap_2_2() {
+
+        lst.add(1);
+        lst.add(2);
+        assertEquals(2, testMap.createMap(lst).size());
+    }
+
+    @Test
     void test_createMap_4_3() {
 
         lst.add(4);
@@ -105,11 +114,21 @@ class ListToMapTest {
     }
 
     @Test
-    void test_createMap_2_2() {
+    void test_createMap_4_3__() {
 
-        lst.add(1);
+        HashMap<Integer, Integer> expectedMap = new HashMap<>();
+        expectedMap.put(2, 1);
+        expectedMap.put(3, 2);
+        expectedMap.put(4, 3);
+
+        lst.add(4);
+        lst.add(4);
+        lst.add(3);
+        lst.add(3);
+        lst.add(4);
         lst.add(2);
-        assertEquals(2, testMap.createMap(lst).size());
+
+        assertEquals(expectedMap, testMap.createMap(lst));
     }
 
 }
