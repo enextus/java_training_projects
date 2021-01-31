@@ -58,6 +58,29 @@ class ListToMapTest {
         lstAutos.add(car_5);
         lstAutos.add(car_6);
         assertEquals(4, testMap.findKeys(lstAutos).size());
+
+        lstAutos.add(car_1);
+        lstAutos.add(car_2);
+        lstAutos.add(car_3);
+        lstAutos.add(car_4);
+        lstAutos.add(car_5);
+        lstAutos.add(car_6);
+        lstAutos.add(car_7);
+        lstAutos.add(car_8);
+        assertEquals(5, testMap.findKeys(lstAutos).size());
+
+        lstAutos.add(car_1);
+        lstAutos.add(car_2);
+        lstAutos.add(car_3);
+        lstAutos.add(car_4);
+        lstAutos.add(car_5);
+        lstAutos.add(car_6);
+        lstAutos.add(car_7);
+        lstAutos.add(car_8);
+        lstAutos.add(car_9);
+        lstAutos.add(car_10);
+        lstAutos.add(car_11);
+        assertEquals(6, testMap.findKeys(lstAutos).size());
     }
 
     @Test
