@@ -3,10 +3,12 @@ import java.util.*;
 public class ListToMap {
 
     public Map<Integer, List<Integer>> createMap(List<Integer> lstOfAutos) {
+
         HashMap<Integer, List<Integer>> carsMap = new HashMap<>(5);
         HashSet<Integer> keySet = findKeys(lstOfAutos);
 
         Iterator<Integer> it = keySet.iterator();
+
         while (it.hasNext()) {
             Integer currentKey = it.next();
             List<Integer> currentCarsList = createListOfInts(currentKey, lstOfAutos);
