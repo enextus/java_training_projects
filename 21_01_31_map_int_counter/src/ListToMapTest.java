@@ -8,8 +8,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ListToMapTest {
 
-    // Map format expectation: [1,2,4,2,3,1]-> {{1: 2}, {2: 2}, {3: 1}, {4: 1}}
-
     private final List<Integer> lst = new ArrayList<>();
     private final ListToMap testMap = new ListToMap();
 
@@ -115,6 +113,8 @@ class ListToMapTest {
 
     @Test
     void test_createMap_equals_() {
+
+        // Map format expectation: [1,2,4,2,3,1]-> {{1: 2}, {2: 2}, {3: 1}, {4: 1}}
 
         HashMap<Integer, Integer> expectedMap = new HashMap<>();
         expectedMap.put(2, 1);
