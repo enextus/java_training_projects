@@ -26,10 +26,10 @@ public class ListToMap {
         return keySet;
     }
 
-    List<Integer> createListOfMake(String make, List<Integer> lstOfAutos) {
+    List<Integer> createListOfMake(Integer make, List<Integer> integerList) {
         List<Integer> carListOfSpecificMake = new ArrayList<>();
 
-        for (Integer elm : lstOfAutos) {
+        for (Integer elm : integerList) {
             if (elm.equals(make))
                 carListOfSpecificMake.add(elm); // found car will be added to the List
         }

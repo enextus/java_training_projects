@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
 
         // [1,2,4,2,3,1]-> {{1: 2}, {2: 2}, {3: 1}, {4: 1}}
-        
+
         List<Integer> lstInt = new ArrayList<>();
 
         lstInt.add(1);
@@ -27,7 +27,7 @@ public class Main {
 
         ListToMap lsTM = new ListToMap();
 
-        HashSet<String> keySet = lsTM.findKeys(lstInt);
+        HashSet<Integer> keySet = lsTM.findKeys(lstInt);
 
         System.out.println("KeySet: " + keySet);
     }
