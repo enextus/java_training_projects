@@ -2,20 +2,20 @@ import java.util.*;
 
 public class ListToMap {
 
-    public Map<Integer, List<Integer>> createMap(List<Integer> lstOfAutos) {
+    public Map<Integer, Integer> createMap(List<Integer> lstInt) {
 
-        HashMap<Integer, List<Integer>> carsMap = new HashMap<>(5);
-        HashSet<Integer> keySet = findKeys(lstOfAutos);
+        HashMap<Integer, Integer> intsMap = new HashMap<>(4);
+        HashSet<Integer> keySet = findKeys(lstInt);
 
         Iterator<Integer> it = keySet.iterator();
 
         while (it.hasNext()) {
             Integer currentKey = it.next();
-            List<Integer> currentCarsList = createListOfInts(currentKey, lstOfAutos);
-            carsMap.put(currentKey, currentCarsList);
+
+            intsMap.put(currentKey, Collections.frequency(lstInt, currentKey));
         }
 
-        return carsMap;
+        return intsMap;
     }
 
     HashSet<Integer> findKeys(List<Integer> list) {
@@ -26,17 +26,6 @@ public class ListToMap {
         }
 
         return keySet;
-    }
-
-    List<Integer> createListOfInts(Integer integer, List<Integer> integerList) {
-        List<Integer> carListOfSpecificMake = new ArrayList<>();
-
-        for (Integer elm : integerList) {
-            if (elm.equals(integer))
-                carListOfSpecificMake.add(elm);
-        }
-
-        return carListOfSpecificMake;
     }
 
 }
