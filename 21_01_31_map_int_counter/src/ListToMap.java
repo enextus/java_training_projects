@@ -10,7 +10,7 @@ public class ListToMap {
         while (it.hasNext()) {
             Integer currentKey = it.next();
             List<Integer> currentCarsList = createListOfInts(currentKey, lstOfAutos);
-            carsMap.put(currentKey, currentCarsList); // here comes List of Cars with specified make
+            carsMap.put(currentKey, currentCarsList);
         }
 
         return carsMap;
@@ -26,15 +26,15 @@ public class ListToMap {
         return keySet;
     }
 
-    List<Integer> createListOfInts(Integer make, List<Integer> integerList) {
+    List<Integer> createListOfInts(Integer integer, List<Integer> integerList) {
         List<Integer> carListOfSpecificMake = new ArrayList<>();
 
         for (Integer elm : integerList) {
-            if (elm.equals(make))
-                carListOfSpecificMake.add(elm); // found car will be added to the List
+            if (elm.equals(integer))
+                carListOfSpecificMake.add(elm);
         }
 
-        return carListOfSpecificMake; // return generated List of Cars with specified make
+        return carListOfSpecificMake;
     }
 
 }
