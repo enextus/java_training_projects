@@ -94,7 +94,7 @@ class ListToMapTest {
     }
 
     @Test
-    void test_createMap_2_2() {
+    void test_createMap__size_of_2_2() {
 
         lst.add(1);
         lst.add(2);
@@ -102,7 +102,7 @@ class ListToMapTest {
     }
 
     @Test
-    void test_createMap_4_3() {
+    void test_createMap__size_of_4_3() {
 
         lst.add(4);
         lst.add(4);
@@ -114,7 +114,7 @@ class ListToMapTest {
     }
 
     @Test
-    void test_createMap_4_3__() {
+    void test_createMap_equals_() {
 
         HashMap<Integer, Integer> expectedMap = new HashMap<>();
         expectedMap.put(2, 1);
@@ -127,7 +127,6 @@ class ListToMapTest {
         lst.add(3);
         lst.add(4);
         lst.add(2);
-
         assertEquals(expectedMap, testMap.createMap(lst));
     }
 
