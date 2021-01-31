@@ -13,14 +13,14 @@ public class ListToMap {
         return intsMap;
     }
 
-    Integer countFrequency(List<Integer> lstInt, Integer currentKey) {
-
-        return Collections.frequency(lstInt, currentKey);
-    }
-
     HashSet<Integer> findKeys(List<Integer> list) {
 
         return new HashSet<>(list);
+    }
+
+    Integer countFrequency(List<Integer> lstInt, Integer currentKey) {
+
+        return Collections.frequency(lstInt, currentKey);
     }
 
 }
