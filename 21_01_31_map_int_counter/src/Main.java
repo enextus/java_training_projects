@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 
@@ -31,7 +32,14 @@ public class Main {
 
         System.out.println("KeySet: " + keySet);
 
+        for (Integer elm : keySet)
+            System.out.println("elm: " + elm + ", " + Collections.frequency(lstInt, elm));
 
+
+/*        elm: 1, 2
+        elm: 2, 2
+        elm: 3, 1
+        elm: 4, 1*/
     }
 
 }
