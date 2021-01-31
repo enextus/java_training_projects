@@ -14,13 +14,6 @@ class ListToMapTest {
     
     @Test
     void test_findKeys_size_of_keySet() {
-
-        lstInt.add(1);
-        lstInt.add(2);
-        lstInt.add(4);
-        lstInt.add(2);
-        lstInt.add(3);
-        lstInt.add(1);
         
         lstInt.add(1);
         assertEquals(1, testMap.findKeys(lstInt).size());
@@ -38,21 +31,6 @@ class ListToMapTest {
         lstInt.add(2);
         lstInt.add(3);
         lstInt.add(4);
-        assertEquals(3, testMap.findKeys(lstInt).size());
-
-        lstInt.add(1);
-        lstInt.add(2);
-        lstInt.add(3);
-        lstInt.add(4);
-        lstInt.add(5);
-        assertEquals(3, testMap.findKeys(lstInt).size());
-
-        lstInt.add(1);
-        lstInt.add(2);
-        lstInt.add(3);
-        lstInt.add(4);
-        lstInt.add(5);
-        lstInt.add(6);
         assertEquals(4, testMap.findKeys(lstInt).size());
 
         lstInt.add(1);
@@ -60,23 +38,7 @@ class ListToMapTest {
         lstInt.add(3);
         lstInt.add(4);
         lstInt.add(5);
-        lstInt.add(6);
-        lstInt.add(7);
-        lstInt.add(8);
         assertEquals(5, testMap.findKeys(lstInt).size());
-
-        lstInt.add(1);
-        lstInt.add(2);
-        lstInt.add(3);
-        lstInt.add(4);
-        lstInt.add(5);
-        lstInt.add(6);
-        lstInt.add(7);
-        lstInt.add(8);
-        lstInt.add(9);
-        lstInt.add(10);
-        lstInt.add(11);
-        assertEquals(6, testMap.findKeys(lstInt).size());
     }
 
 
