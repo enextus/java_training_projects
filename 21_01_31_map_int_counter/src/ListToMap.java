@@ -9,7 +9,7 @@ public class ListToMap {
         Iterator<Integer> it = keySet.iterator();
         while (it.hasNext()) {
             Integer currentKey = it.next();
-            List<Integer> currentCarsList = createListOfMake(currentKey, lstOfAutos);
+            List<Integer> currentCarsList = createListOfInts(currentKey, lstOfAutos);
             carsMap.put(currentKey, currentCarsList); // here comes List of Cars with specified make
         }
 
@@ -26,7 +26,7 @@ public class ListToMap {
         return keySet;
     }
 
-    List<Integer> createListOfMake(Integer make, List<Integer> integerList) {
+    List<Integer> createListOfInts(Integer make, List<Integer> integerList) {
         List<Integer> carListOfSpecificMake = new ArrayList<>();
 
         for (Integer elm : integerList) {
