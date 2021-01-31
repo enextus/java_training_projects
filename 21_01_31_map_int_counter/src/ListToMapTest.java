@@ -68,7 +68,6 @@ class ListToMapTest {
         assertEquals(1, testMap.countFrequency(lst, 1));
     }
 
-
     @Test
     void test_countFrequency_2_2() {
 
