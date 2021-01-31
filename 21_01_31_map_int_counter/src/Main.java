@@ -39,6 +39,12 @@ public class Main {
         elm: 2, 2
         elm: 3, 1
         elm: 4, 1*/
+
+        System.out.println("\n");
+        System.out.println("_____________________________________________________________");
+
+        System.out.println("Our Integer map with counter:");
+        System.out.println(lsTM.createMap(lstInt));
     }
 
 }

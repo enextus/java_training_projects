@@ -21,9 +21,8 @@ public class ListToMap {
     HashSet<Integer> findKeys(List<Integer> list) {
         HashSet<Integer> keySet = new HashSet<>();
 
-        for (Integer elm : list) {
+        for (Integer elm : list)
             keySet.add(elm);
-        }
 
         return keySet;
     }
