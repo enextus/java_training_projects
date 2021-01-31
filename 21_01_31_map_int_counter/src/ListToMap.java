@@ -2,13 +2,13 @@ import java.util.*;
 
 public class ListToMap {
 
-    public Map<String, List<Integer>> createMap(List<Integer> lstOfAutos) {
-        HashMap<String, List<Integer>> carsMap = new HashMap<>(5);
-        HashSet<String> keySet = findKeys(lstOfAutos);
+    public Map<Integer, List<Integer>> createMap(List<Integer> lstOfAutos) {
+        HashMap<Integer, List<Integer>> carsMap = new HashMap<>(5);
+        HashSet<Integer> keySet = findKeys(lstOfAutos);
 
-        Iterator<String> it = keySet.iterator();
+        Iterator<Integer> it = keySet.iterator();
         while (it.hasNext()) {
-            String currentKey = it.next();
+            Integer currentKey = it.next();
             List<Integer> currentCarsList = createListOfMake(currentKey, lstOfAutos);
             carsMap.put(currentKey, currentCarsList); // here comes List of Cars with specified make
         }
@@ -16,11 +16,11 @@ public class ListToMap {
         return carsMap;
     }
 
-    HashSet<String> findKeys(List<Integer> list) {
-        HashSet<String> keySet = new HashSet<>();
+    HashSet<Integer> findKeys(List<Integer> list) {
+        HashSet<Integer> keySet = new HashSet<>();
 
-        for (Integer car : list) {
-            keySet.add(car.getMake());
+        for (Integer elm : list) {
+            keySet.add(elm);
         }
 
         return keySet;
@@ -29,9 +29,9 @@ public class ListToMap {
     List<Integer> createListOfMake(String make, List<Integer> lstOfAutos) {
         List<Integer> carListOfSpecificMake = new ArrayList<>();
 
-        for (Integer car : lstOfAutos) {
-            if (car.getMake().equals(make))
-                carListOfSpecificMake.add(car); // found car will be added to the List
+        for (Integer elm : lstOfAutos) {
+            if (elm.equals(make))
+                carListOfSpecificMake.add(elm); // found car will be added to the List
         }
 
         return carListOfSpecificMake; // return generated List of Cars with specified make
