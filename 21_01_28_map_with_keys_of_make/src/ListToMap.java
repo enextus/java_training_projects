@@ -20,7 +20,7 @@ public class ListToMap {
         HashSet<String> keySet = new HashSet<>();
 
         for (Auto car : list) {
-            keySet.add(car.getMake().toLowerCase(Locale.ROOT));
+            keySet.add(car.getMake());
         }
 
         return keySet;

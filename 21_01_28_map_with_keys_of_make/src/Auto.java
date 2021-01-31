@@ -1,3 +1,4 @@
+import java.util.Locale;
 import java.util.Objects;
 
 public class Auto {
@@ -6,7 +7,7 @@ public class Auto {
     private String color;
 
     public Auto(String make, String color) {
-        this.make = make;
+        this.make = make.toLowerCase(Locale.ROOT);
         this.color = color;
     }
 

@@ -10,16 +10,22 @@ class ListToMapTest {
     private final ListToMap testMap = new ListToMap();
 
     private final Auto car_1 = new Auto("Opel", "Green");
+
     private final Auto car_2 = new Auto("BMW", "White");
+
     private final Auto car_3 = new Auto("Audi", "Red");
-    private final Auto car_4 = new Auto("Audi", "Blue");
+    private final Auto car_4 = new Auto("audi", "Blue");
+
     private final Auto car_5 = new Auto("BMW", "Black");
+
     private final Auto car_6 = new Auto("TOYOTA", "Black");
+
     private final Auto car_7 = new Auto("Ford", "White");
-    private final Auto car_8 = new Auto("Ford", "Blue");
+    private final Auto car_8 = new Auto("FORD", "Blue");
+
     private final Auto car_9 = new Auto("TESLA", "Blue");
-    private final Auto car_10 = new Auto("TESLA", "Red");
-    private final Auto car_11 = new Auto("TESLA", "Orange");
+    private final Auto car_10 = new Auto("Tesla", "Red");
+    private final Auto car_11 = new Auto("tesla", "Orange");
 
     private final List<Auto> lstAutos = new ArrayList<>();
 
@@ -96,8 +102,8 @@ class ListToMapTest {
         expected.add(car_3);
         expected.add(car_4);
 
-        assertEquals(expected.size(), testMap.createListOfMake("Audi", lstAutos).size());
-        assertEquals(expected, testMap.createListOfMake("Audi", lstAutos));
+        assertEquals(expected.size(), testMap.createListOfMake("audi", lstAutos).size());
+        assertEquals(expected, testMap.createListOfMake("audi", lstAutos));
     }
 
     @Test
@@ -113,7 +119,7 @@ class ListToMapTest {
         expected.add(car_3);
         expected.add(car_4);
 
-        assertEquals(expected, testMap.createListOfMake("Audi", lstAutos));
+        assertEquals(expected, testMap.createListOfMake("audi", lstAutos));
     }
 
     @Test
