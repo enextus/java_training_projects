@@ -13,9 +13,9 @@ public class ListToMap {
         return intsMap;
     }
 
-    HashSet<Integer> findKeys(List<Integer> list) {
+    HashSet<Integer> findKeys(List<Integer> lst) {
 
-        return new HashSet<>(list);
+        return new HashSet<>(lst);
     }
 
     Integer countFrequency(List<Integer> lstInt, Integer currentKey) {
