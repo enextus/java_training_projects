@@ -62,15 +62,39 @@ class ListToMapTest {
     }
 
     @Test
-    void countFrequency() {
+    void test_countFrequency_1_1() {
+
+        lst.add(1);
+        assertEquals(1, testMap.countFrequency(lst, 1));
+    }
+
+
+    @Test
+    void test_countFrequency_2_2() {
+
+        lst.add(1);
+        lst.add(2);
+        lst.add(1);
+        lst.add(2);
+        lst.add(3);
+        lst.add(4);
+        assertEquals(2, testMap.countFrequency(lst, 2));
+    }
+
+    @Test
+    void test_countFrequency_4_3() {
+
+        lst.add(4);
+        lst.add(4);
+        lst.add(3);
+        lst.add(3);
+        lst.add(4);
+        lst.add(2);
+        assertEquals(3, testMap.countFrequency(lst, 4));
     }
 
     @Test
     void createMap() {
-    }
-
-    @Test
-    void findKeys() {
     }
 
 }
