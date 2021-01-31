@@ -15,11 +15,13 @@ class ListToMapTest {
     private final Auto car_4 = new Auto("Audi", "Blue");
     private final Auto car_5 = new Auto("BMW", "Black");
     private final Auto car_6 = new Auto("TOYOTA", "Black");
-    private final Auto car_7 = new Auto("TOYOTA", "White");
-    private final Auto car_8 = new Auto("TOYOTA", "Blue");
+    private final Auto car_7 = new Auto("Ford", "White");
+    private final Auto car_8 = new Auto("Ford", "Blue");
+    private final Auto car_9 = new Auto("TESLA", "Blue");
+    private final Auto car_10 = new Auto("TESLA", "Red");
+    private final Auto car_11 = new Auto("TESLA", "Orange");
 
     private final List<Auto> lstAutos = new ArrayList<>();
-
 
     @Test
     void test_findKeys_size_of_keySet() {
