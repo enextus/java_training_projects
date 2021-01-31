@@ -35,10 +35,11 @@ class ListToMapTest {
 
         lstInt.add(1);
         lstInt.add(2);
+        lstInt.add(1);
+        lstInt.add(2);
         lstInt.add(3);
         lstInt.add(4);
-        lstInt.add(5);
-        assertEquals(5, testMap.findKeys(lstInt).size());
+        assertEquals(4, testMap.findKeys(lstInt).size());
     }
 
 
