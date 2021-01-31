@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ListToMapTest {
 
-    // Expectation: [1,2,4,2,3,1]-> {{1: 2}, {2: 2}, {3: 1}, {4: 1}}
+    // Map format expectation: [1,2,4,2,3,1]-> {{1: 2}, {2: 2}, {3: 1}, {4: 1}}
 
     private final List<Integer> lstInt = new ArrayList<>();
     private final ListToMap testMap = new ListToMap();
