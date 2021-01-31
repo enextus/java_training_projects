@@ -7,8 +7,8 @@ public class ListToMap {
         HashMap<Integer, Integer> intsMap = new HashMap<>();
         HashSet<Integer> keySet = findKeys(lst);
 
-        for (Integer currentKey : keySet)
-            intsMap.put(currentKey, countFrequency(lst, currentKey));
+        for (Integer key : keySet)
+            intsMap.put(key, countFrequency(lst, key));
 
         return intsMap;
     }
