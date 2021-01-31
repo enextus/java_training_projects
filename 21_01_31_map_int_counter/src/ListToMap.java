@@ -4,7 +4,7 @@ public class ListToMap {
 
     public Map<Integer, Integer> createMap(List<Integer> lstInt) {
 
-        HashMap<Integer, Integer> intsMap = new HashMap<>(4);
+        HashMap<Integer, Integer> intsMap = new HashMap<>();
         HashSet<Integer> keySet = findKeys(lstInt);
 
         for (Integer currentKey : keySet)
