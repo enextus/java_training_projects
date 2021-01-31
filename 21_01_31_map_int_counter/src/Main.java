@@ -45,6 +45,9 @@ public class Main {
 
         System.out.println("Our Integer map with counter:");
         System.out.println(lsTM.createMap(lstInt));
+
+/*        Our Integer list:
+        {1=2, 2=2, 3=1, 4=1}*/
     }
 
 }
