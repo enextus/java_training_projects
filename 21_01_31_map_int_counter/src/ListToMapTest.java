@@ -93,7 +93,23 @@ class ListToMapTest {
     }
 
     @Test
-    void createMap() {
+    void test_createMap_4_3() {
+
+        lst.add(4);
+        lst.add(4);
+        lst.add(3);
+        lst.add(3);
+        lst.add(4);
+        lst.add(2);
+        assertEquals(3, testMap.createMap(lst).size());
+    }
+
+    @Test
+    void test_createMap_2_2() {
+
+        lst.add(1);
+        lst.add(2);
+        assertEquals(2, testMap.createMap(lst).size());
     }
 
 }
