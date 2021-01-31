@@ -18,9 +18,9 @@ public class ListToMap {
         return new HashSet<>(lst);
     }
 
-    Integer countFrequency(List<Integer> lstInt, Integer currentKey) {
+    Integer countFrequency(List<Integer> lst, Integer currentKey) {
 
-        return Collections.frequency(lstInt, currentKey);
+        return Collections.frequency(lst, currentKey);
     }
 
 }
