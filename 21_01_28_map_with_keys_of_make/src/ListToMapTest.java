@@ -14,7 +14,7 @@ class ListToMapTest {
     private final Auto car_2 = new Auto("BMW", "White");
 
     private final Auto car_3 = new Auto("Audi", "Red");
-    private final Auto car_4 = new Auto("audi", "Blue");
+    private final Auto car_4 = new Auto("auDi", "Blue");
 
     private final Auto car_5 = new Auto("BMW", "Black");
 
