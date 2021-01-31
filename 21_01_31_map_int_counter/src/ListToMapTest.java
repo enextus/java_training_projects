@@ -62,6 +62,10 @@ class ListToMapTest {
     }
 
     @Test
+    void countFrequency() {
+    }
+
+    @Test
     void createMap() {
     }
 
@@ -69,7 +73,4 @@ class ListToMapTest {
     void findKeys() {
     }
 
-    @Test
-    void countFrequency() {
-    }
 }
