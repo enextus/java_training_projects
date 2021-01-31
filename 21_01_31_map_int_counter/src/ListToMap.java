@@ -8,9 +8,16 @@ public class ListToMap {
         HashSet<Integer> keySet = findKeys(lstInt);
 
         for (Integer currentKey : keySet)
-            intsMap.put(currentKey, Collections.frequency(lstInt, currentKey));
+            intsMap.put(currentKey, countFrequency(lstInt, currentKey));
 
         return intsMap;
+    }
+
+    Integer countFrequency(List<Integer> lstInt, Integer currentKey) {
+
+        Collections.frequency(lstInt, currentKey);
+
+        return -1;
     }
 
     HashSet<Integer> findKeys(List<Integer> list) {
