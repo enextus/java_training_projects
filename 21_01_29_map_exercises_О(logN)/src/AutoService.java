@@ -14,6 +14,10 @@ public class AutoService {
 
         Map<String, List<Auto>> result = new HashMap<>();
 
+        System.out.println("result: " + result);
+
+        System.out.println("______________________________________");
+
         for (Auto auto : autos) {
             List<Auto> autosList = result.get(auto.getMake());
 

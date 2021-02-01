@@ -1,4 +1,11 @@
 public class Auto {
+    @Override
+    public String toString() {
+        return "Auto{" +
+                "make='" + make + '\'' +
+                ", color='" + color + '\'' +
+                '}';
+    }
 
     private String make;
     private String color;
