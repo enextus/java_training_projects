@@ -48,7 +48,9 @@ public class TestFileWriterVsFileStreamTimeCosts {
 
         writer(true);
         writer(false);
-        System.out.println("\n");
+
+        System.out.println(" ");
+
         stream(true);
         stream(false);
     }
