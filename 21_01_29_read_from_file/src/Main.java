@@ -11,15 +11,24 @@ public class Main {
     public static void main(String[] args) throws IOException {
         //System.out.println("Current dir: " + dir);
 
+        System.out.println("________________________________\n");
+
+        System.out.println("FILE_NAME: " + FILE_NAME);
+
+        System.out.println("________________________________\n");
+
         FileInputStream inputStream = new FileInputStream(FILE_NAME);
         byte[] bytes = new byte[inputStream.available()];
 
         int num = inputStream.read(bytes);
         String res = new String(bytes);
 
-        System.out.println(res);
+        System.out.println("________________________________\n");
+
+        //System.out.println(res);
+
         System.out.println(Arrays.toString(bytes));
-        System.out.println(num);
+        //System.out.println(num);
 
     }
 
