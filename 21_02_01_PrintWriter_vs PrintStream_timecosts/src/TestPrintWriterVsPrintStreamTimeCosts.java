@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class TestFileWriterVsFileStreamTimeCosts {
+public class TestPrintWriterVsPrintStreamTimeCosts {
 
     private final static byte[] bytes = new byte[5_000_000];
 
@@ -10,36 +10,41 @@ public class TestFileWriterVsFileStreamTimeCosts {
         }
     }
 
+    static long getCurrentTimeMillis() {
+
+        return System.currentTimeMillis();
+    }
+
     static void writer(boolean flush) throws IOException {
 
-        Writer fw = new FileWriter("output.txt");
-        long a = System.currentTimeMillis();
+        Writer pw = new PrintWriter("output.txt");
+        long a = getCurrentTimeMillis();
 
         for (byte j : bytes) {
-            fw.write(j);
+            pw.write(j);
 
             if (flush)
-                fw.flush();
+                pw.flush();
         }
 
-        fw.close();
+        pw.close();
 
         System.out.println("FileWriter with" + (flush ? "" : "out") + " flushing: " + (System.currentTimeMillis() - a));
     }
 
     static void stream(boolean flush) throws IOException {
 
-        OutputStream fos = new FileOutputStream("output.txt");
-        long a = System.currentTimeMillis();
+        OutputStream ps = new PrintStream("output.txt");
+        long a = getCurrentTimeMillis();
 
         for (byte j : bytes) {
-            fos.write(j);
+            ps.write(j);
 
             if (flush)
-                fos.flush();
+                ps.flush();
         }
 
-        fos.close();
+        ps.close();
 
         System.out.println("FileOutputStream with" + (flush ? "" : "out") + " flushing: " + (System.currentTimeMillis() - a));
     }
