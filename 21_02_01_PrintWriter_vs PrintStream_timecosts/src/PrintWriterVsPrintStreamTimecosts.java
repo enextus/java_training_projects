@@ -1,6 +1,7 @@
 import java.io.*;
 
-public class Test {
+public class PrintWriterVsPrintStreamTimecosts {
+
     static byte[] bytes = new byte[10_000_000];
 
     static {
