@@ -11,7 +11,7 @@ public class TestPrintWriterVsPrintStreamTimeCosts {
     }
 
     public static void main(String[] args) throws Exception {
-        
+
         writer(true);
         writer(false);
 
@@ -20,27 +20,37 @@ public class TestPrintWriterVsPrintStreamTimeCosts {
     }
 
     static void writer(boolean flush) throws IOException {
+
         Writer out = new FileWriter("output.txt");
         long a = System.currentTimeMillis();
+
         for (byte j : bytes) {
             out.write(j);
-            if (flush) out.flush();
+
+            if (flush)
+                out.flush();
         }
+
         out.close();
-        System.out.println("FileWriter with" + (flush ? "" : "out") + " flushing: " +
-                (System.currentTimeMillis() - a));
+
+        System.out.println("FileWriter with" + (flush ? "" : "out") + " flushing: " + (System.currentTimeMillis() - a));
     }
 
     static void stream(boolean flush) throws IOException {
+
         OutputStream out = new FileOutputStream("output.txt");
         long a = System.currentTimeMillis();
+
         for (byte j : bytes) {
             out.write(j);
-            if (flush) out.flush();
+
+            if (flush)
+                out.flush();
         }
+
         out.close();
-        System.out.println("FileOutputStream with" + (flush ? "" : "out") + " flushing: " +
-                (System.currentTimeMillis() - a));
+
+        System.out.println("FileOutputStream with" + (flush ? "" : "out") + " flushing: " + (System.currentTimeMillis() - a));
     }
 
 /*  So, what's the lesson?
