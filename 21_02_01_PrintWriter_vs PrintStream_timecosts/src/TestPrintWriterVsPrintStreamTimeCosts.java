@@ -11,8 +11,10 @@ public class TestPrintWriterVsPrintStreamTimeCosts {
     }
 
     public static void main(String[] args) throws Exception {
+        
         writer(true);
         writer(false);
+
         stream(true);
         stream(false);
     }
