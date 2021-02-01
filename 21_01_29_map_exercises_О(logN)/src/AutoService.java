@@ -5,11 +5,6 @@ import java.util.Map;
 
 public class AutoService {
 
-    @Override
-    public String toString() {
-        return "AutoService{}";
-    }
-
     Map<String, List<Auto>> groupByMake(List<Auto> autos) {
 
         Map<String, List<Auto>> result = new HashMap<>();
@@ -31,6 +26,11 @@ public class AutoService {
         }
 
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "AutoService{}";
     }
 
 }
