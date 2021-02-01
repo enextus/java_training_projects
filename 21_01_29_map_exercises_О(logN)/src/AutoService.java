@@ -18,9 +18,6 @@ public class AutoService {
 
             List<Auto> autosList = result.get(auto.getMake());
 
-            System.out.println(result.get(auto.getMake()));
-            System.out.println(autosList);
-
             if (autosList == null) {
                 autosList = new ArrayList<>();
 
@@ -30,12 +27,7 @@ public class AutoService {
                 result.put(auto.getMake(), autosList);
             }
 
-            System.out.println("1. ->>>" + autosList);
-
             autosList.add(auto);
-
-            System.out.println("2. ->>>" + autosList);
-            System.out.println("\n");
         }
 
         return result;
