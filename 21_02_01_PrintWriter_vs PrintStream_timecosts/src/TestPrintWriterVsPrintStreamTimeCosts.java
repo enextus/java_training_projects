@@ -2,7 +2,7 @@ import java.io.*;
 
 public class TestPrintWriterVsPrintStreamTimeCosts {
 
-    private final static byte[] bytes = new byte[100_000_000];
+    private final static byte[] bytes = new byte[5_000_000];
 
     static {
         for (int i = 0; i < bytes.length; i++) {
