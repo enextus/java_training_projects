@@ -12,8 +12,7 @@ class AutoServiceTest {
     private final Auto car_4 = new Auto("Audi", "Blue");
     private final Auto car_5 = new Auto("BMW", "Black");
 
-
-    AutoService autoService = new AutoService();
+    private final AutoService autoService = new AutoService();
 
     @Test
     void testGroupByMake_size_of_generated_map() {

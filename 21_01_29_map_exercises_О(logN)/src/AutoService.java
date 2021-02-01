@@ -6,20 +6,21 @@ import java.util.Map;
 public class AutoService {
 
     Map<String, List<Auto>> groupByMake(List<Auto> autos) {
-        Map<String, List<Auto>> res = new HashMap<>();
+
+        Map<String, List<Auto>> result = new HashMap<>();
 
         for (Auto auto : autos) {
-            List<Auto> autosList = res.get(auto.getMake());
+            List<Auto> autosList = result.get(auto.getMake());
 
             if (autosList == null) {
                 autosList = new ArrayList<>();
-                res.put(auto.getMake(), autosList);
+                result.put(auto.getMake(), autosList);
             }
 
             autosList.add(auto);
         }
 
-        return res;
+        return result;
     }
 
 }
