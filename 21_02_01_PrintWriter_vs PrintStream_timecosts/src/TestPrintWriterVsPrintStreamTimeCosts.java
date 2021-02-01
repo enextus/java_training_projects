@@ -53,6 +53,9 @@ public class TestPrintWriterVsPrintStreamTimeCosts {
         stream(false);
     }
 
+
+
+
 /*  So, what's the lesson?
     - all writers are buffered because internally they delegate to StreamEncoder which is itself buffered;
     - FileOutputStream is not buffered;
