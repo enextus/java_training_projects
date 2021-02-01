@@ -1,6 +1,5 @@
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Arrays;
 
 public class Main {
 
@@ -9,7 +8,7 @@ public class Main {
     final static String FILE_NAME = "warandpeace_copy.txt";
 
     public static void main(String[] args) throws IOException {
-        //System.out.println("Current dir: " + dir);
+        // System.out.println("Current dir: " + dir);
 
         System.out.println("________________________________\n");
 
@@ -18,17 +17,17 @@ public class Main {
         System.out.println("________________________________\n");
 
         FileInputStream inputStream = new FileInputStream(FILE_NAME);
-        byte[] bytes = new byte[inputStream.available()];
+        byte[] bytesArray = new byte[inputStream.available()];
 
-        int num = inputStream.read(bytes);
-        String res = new String(bytes);
+        int num = inputStream.read(bytesArray);
+        String res = new String(bytesArray);
 
         System.out.println("________________________________\n");
 
-        //System.out.println(res);
+        // System.out.println(res);
 
-        System.out.println(Arrays.toString(bytes));
-        //System.out.println(num);
+        // System.out.println(Arrays.toString(bytes));
+        // System.out.println(num);
 
     }
 
