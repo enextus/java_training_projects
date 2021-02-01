@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class TestPrintWriterVsPrintStreamTimeCosts {
+public class TestFileWriterVsFileStreamTimeCosts {
 
     private final static byte[] bytes = new byte[5_000_000];
 
