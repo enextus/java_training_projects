@@ -1,11 +1,13 @@
 import java.io.*;
 
-public class TestPrintWriterVsPrintStreamTimecosts {
+public class TestPrintWriterVsPrintStreamTimeCosts {
 
-    static byte[] bytes = new byte[10_000_000];
+    private final static byte[] bytes = new byte[10_000_000];
 
     static {
-        for (int i = 0; i < bytes.length; i++) bytes[i] = (byte) (i % 100 + 32);
+        for (int i = 0; i < bytes.length; i++) {
+            bytes[i] = (byte) (i % 100 + 32);
+        }
     }
 
     public static void main(String[] args) throws Exception {
