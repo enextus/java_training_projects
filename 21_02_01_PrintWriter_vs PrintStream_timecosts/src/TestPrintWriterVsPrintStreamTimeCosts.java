@@ -38,17 +38,17 @@ public class TestPrintWriterVsPrintStreamTimeCosts {
 
     static void stream(boolean flush) throws IOException {
 
-        OutputStream out = new FileOutputStream("output.txt");
+        OutputStream fos = new FileOutputStream("output.txt");
         long a = System.currentTimeMillis();
 
         for (byte j : bytes) {
-            out.write(j);
+            fos.write(j);
 
             if (flush)
-                out.flush();
+                fos.flush();
         }
 
-        out.close();
+        fos.close();
 
         System.out.println("FileOutputStream with" + (flush ? "" : "out") + " flushing: " + (System.currentTimeMillis() - a));
     }
