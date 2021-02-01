@@ -11,6 +11,7 @@ public class AutoService {
 
         for (Auto auto : autos) {
 
+            // hier wird das List genohmen das für ein bestimmtes Model gemacht wurde
             List<Auto> autosList = result.get(auto.getMake());
 
             if (autosList == null) {
