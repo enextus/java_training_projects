@@ -39,4 +39,11 @@ public class TestPrintWriterVsPrintStreamTimecosts {
                 (System.currentTimeMillis() - a));
     }
 
+/*  So, what's the lesson?
+    - all writers are buffered because internally they delegate to StreamEncoder which is itself buffered;
+    - FileOutputStream is not buffered;
+    - non-buffered writing byte-by-byte is very slow.
+    - Good practices demand that you always do buffered writing: either using buffered sinks,
+      or maintaining an explicit buffer on your side.*/
+
 }
