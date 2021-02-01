@@ -3,8 +3,10 @@ import java.io.IOException;
 import java.util.Arrays;
 
 public class Main {
+
     // final static String dir = System.getProperty("user.dir");
-    final static String FILE_NAME = "input.txt";
+    // final static String FILE_NAME = "input.txt";
+    final static String FILE_NAME = "warandpeace_copy.txt";
 
     public static void main(String[] args) throws IOException {
         //System.out.println("Current dir: " + dir);
