@@ -12,17 +12,17 @@ public class TestFileWriterVsFileStreamTimeCosts {
 
     static void writer(boolean flush) throws IOException {
 
-        Writer out = new FileWriter("output.txt");
+        Writer fw = new FileWriter("output.txt");
         long a = System.currentTimeMillis();
 
         for (byte j : bytes) {
-            out.write(j);
+            fw.write(j);
 
             if (flush)
-                out.flush();
+                fw.flush();
         }
 
-        out.close();
+        fw.close();
 
         System.out.println("FileWriter with" + (flush ? "" : "out") + " flushing: " + (System.currentTimeMillis() - a));
     }
