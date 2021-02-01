@@ -18,7 +18,7 @@ public class TestPrintWriterVsPrintStreamTimeCosts {
     static void writer(boolean flush) throws IOException {
 
         Writer pw = new PrintWriter("output.txt");
-        long a = getCurrentTimeMillis();
+        long startTime = getCurrentTimeMillis();
 
         for (byte j : bytes) {
             pw.write(j);
@@ -29,13 +29,13 @@ public class TestPrintWriterVsPrintStreamTimeCosts {
 
         pw.close();
 
-        System.out.println("FileWriter with" + (flush ? "" : "out") + " flushing: " + (System.currentTimeMillis() - a));
+        System.out.println("PrintWriter with" + (flush ? "" : "out") + " flushing: " + (getCurrentTimeMillis() - startTime));
     }
 
     static void stream(boolean flush) throws IOException {
 
         OutputStream ps = new PrintStream("output.txt");
-        long a = getCurrentTimeMillis();
+        long startTime = getCurrentTimeMillis();
 
         for (byte j : bytes) {
             ps.write(j);
@@ -46,7 +46,7 @@ public class TestPrintWriterVsPrintStreamTimeCosts {
 
         ps.close();
 
-        System.out.println("FileOutputStream with" + (flush ? "" : "out") + " flushing: " + (System.currentTimeMillis() - a));
+        System.out.println("PrintStream with" + (flush ? "" : "out") + " flushing: " + (getCurrentTimeMillis() - startTime));
     }
 
     public static void main(String[] args) throws Exception {
