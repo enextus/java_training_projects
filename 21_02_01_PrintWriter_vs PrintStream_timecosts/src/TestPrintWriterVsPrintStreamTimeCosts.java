@@ -15,7 +15,7 @@ public class TestPrintWriterVsPrintStreamTimeCosts {
         return System.currentTimeMillis();
     }
 
-    static void writer(boolean flush) throws IOException {
+    static void printWriter(boolean flush) throws IOException {
 
         Writer pw = new PrintWriter("output.txt");
         long startTime = getCurrentTimeMillis();
@@ -32,7 +32,7 @@ public class TestPrintWriterVsPrintStreamTimeCosts {
         System.out.println("PrintWriter with" + (flush ? "" : "out") + " flushing: " + (getCurrentTimeMillis() - startTime));
     }
 
-    static void stream(boolean flush) throws IOException {
+    static void printStream(boolean flush) throws IOException {
 
         OutputStream ps = new PrintStream("output.txt");
         long startTime = getCurrentTimeMillis();
@@ -51,13 +51,13 @@ public class TestPrintWriterVsPrintStreamTimeCosts {
 
     public static void main(String[] args) throws Exception {
 
-        writer(true);
-        writer(false);
+        printWriter(true);
+        printWriter(false);
 
         System.out.println(" ");
 
-        stream(true);
-        stream(false);
+        printStream(true);
+        printStream(false);
     }
 
 /*  So, what's the lesson?
