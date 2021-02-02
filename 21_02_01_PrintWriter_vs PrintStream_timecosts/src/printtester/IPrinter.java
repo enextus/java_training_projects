@@ -8,5 +8,5 @@ import java.io.IOException;
  */
 public interface IPrinter {
 
-    void print(String[] arrayToPrint) throws IOException;
+    void print(boolean flush) throws IOException;
 }
