@@ -14,11 +14,11 @@ public class Main {
 
         PrintTest test;
 
-        //string printWriterPrinter test
+        // printWriterPrinter test
         test = new PrintTest(printWriterPrinter);
         test.test();
 
-        //string printStreamPrinter test
+        // printStreamPrinter test
         test = new PrintTest(printStreamPrinter);
         test.test();
     }
