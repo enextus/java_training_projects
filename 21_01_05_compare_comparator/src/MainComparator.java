@@ -8,6 +8,7 @@ public class MainComparator {
     }
 
     static void newPerson2() {
+
         PersonComparator personComparator1 = new PersonComparator(10);
         PersonComparator personComparator2 = new PersonComparator(1);
         PersonComparator personComparator3 = new PersonComparator(100);
@@ -16,18 +17,17 @@ public class MainComparator {
         PersonComparator personComparator6 = new PersonComparator(33);
         PersonComparator personComparator7 = new PersonComparator(12);
 
-        TreeSet<PersonComparator> set2 = new TreeSet<PersonComparator>(new ComparatorForPerson());
+        TreeSet<PersonComparator> set = new TreeSet<>(new ComparatorForPerson());
 
+        set.add(personComparator1);
+        set.add(personComparator2);
+        set.add(personComparator3);
+        set.add(personComparator4);
+        set.add(personComparator5);
+        set.add(personComparator6);
+        set.add(personComparator7);
 
-        set2.add(personComparator1);
-        set2.add(personComparator2);
-        set2.add(personComparator3);
-        set2.add(personComparator4);
-        set2.add(personComparator5);
-        set2.add(personComparator6);
-        set2.add(personComparator7);
-
-        for (Object o : set2)
+        for (Object o : set)
             System.out.println(o);
     }
 
