@@ -1,5 +1,6 @@
 package printtester;
 
+import java.io.IOException;
 import java.util.Arrays;
 
 public class PrintTest {
@@ -10,27 +11,16 @@ public class PrintTest {
         this.timer = timer;
     }
     
-    public void test(int times, String text) {
-
-        String[] arrayToConcatenate = composeArray(times, text);
+    public void test(int times, String text) throws IOException {
 
         long beforeTest = System.currentTimeMillis();
 
 
-        //timer.print(arrayToConcatenate);
+        timer.print(true);
 
 
         long afterTest = System.currentTimeMillis();
 
         System.out.println(afterTest - beforeTest);
     }
-
-    String[] composeArray(int times, String text) {
-
-        String[] strings = new String[times];
-        Arrays.fill(strings, text);
-
-        return strings;
-    }
-    
 }
