@@ -4,10 +4,10 @@ import java.util.Arrays;
 
 public class PrintWriterVsPrintStreamTimeCostsTest {
 
-    private final ITimer concatenator;
+    private final ITimer timer;
 
-    public PrintWriterVsPrintStreamTimeCostsTest(ITimer concatenator) {
-        this.concatenator = concatenator;
+    public PrintWriterVsPrintStreamTimeCostsTest(ITimer timer) {
+        this.timer = timer;
     }
     
     public void test(int i, String text) {
@@ -15,7 +15,7 @@ public class PrintWriterVsPrintStreamTimeCostsTest {
         String[] arrayToConcatenate = composeArray(i, text);
 
         long beforeTest = System.currentTimeMillis();
-        concatenator.concatenate(arrayToConcatenate);
+        timer.concatenate(arrayToConcatenate);
         long afterTest = System.currentTimeMillis();
 
         System.out.println(afterTest - beforeTest);
