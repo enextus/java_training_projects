@@ -1,4 +1,4 @@
-package concatenator;
+package timetester;
 
 /**
  * The interface provides the single method concatenate which should provide concatenation two Strings variables

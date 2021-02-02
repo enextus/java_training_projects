@@ -1,4 +1,4 @@
-package concatenator;
+package timetester;
 
 import java.util.Arrays;
 

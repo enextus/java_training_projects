@@ -1,6 +1,6 @@
-package concatenator.timetester;
+package timetester.timetester;
 
-import concatenator.ITimer;
+import timetester.ITimer;
 
 public class StringBufferTimer implements ITimer {
 
