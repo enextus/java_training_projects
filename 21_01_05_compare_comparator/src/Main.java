@@ -9,7 +9,7 @@ class Main {
         Person person2 = new Person(1);
         Person person3 = new Person(100);
 
-        Set set = new TreeSet(new ComparePerson());
+        Set set = new TreeSet(new ComparePersonComparator());
 
         set.add(person1);
         set.add(person2);

@@ -1,17 +1,13 @@
-import java.util.Comparator;
-import java.util.Set;
-import java.util.TreeSet;
-
-/*public class Person implements Comparable<Person> {*/
-public class Person<Person> {
-/*    public int getAge() {
-        return age;
-    }*/
+public class Person implements Comparable<Person> {
 
     int age;
 
     public Person(int age) {
         this.age = age;
+    }
+
+    public int getAge() {
+        return age;
     }
 
     @Override
@@ -21,10 +17,9 @@ public class Person<Person> {
                 '}';
     }
 
-/*    @Override
+    @Override
     public int compareTo(Person o) {
         return this.age - o.age;
-    }*/
+    }
+
 }
-
-

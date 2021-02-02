@@ -1,6 +1,6 @@
 import java.util.Comparator;
 
-class ComparePerson implements Comparator<Person> {
+class ComparePersonComparator implements Comparator<Person> {
 
     @Override
     public String toString() {
@@ -11,4 +11,5 @@ class ComparePerson implements Comparator<Person> {
     public int compare(Person o1, Person o2) {
         return o1.age - o2.age;
     }
+
 }
