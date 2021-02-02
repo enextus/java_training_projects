@@ -5,11 +5,11 @@ import printtester.IPrinter;
 public class StringBuilderPrinter implements IPrinter {
 
     @Override
-    public void print(String[] arrayToTest) {
+    public void print(String[] arrayToPrint) {
 
         StringBuilder builder = new StringBuilder();
 
-        for (String str : arrayToTest)
+        for (String str : arrayToPrint)
             builder.append(str);
 
         builder.toString();

@@ -5,11 +5,11 @@ import printtester.IPrinter;
 public class StringBufferPrinter implements IPrinter {
 
     @Override
-    public void print(String[] arrayToTest) {
+    public void print(String[] arrayToPrint) {
 
         StringBuffer buffer = new StringBuffer();
 
-        for (String str : arrayToTest)
+        for (String str : arrayToPrint)
             buffer.append(str);
 
         buffer.toString(); // anschließende Umwandlung Obj toString
