@@ -5,16 +5,16 @@ public class MainComparable {
 
     public static void main(String[] args) {
 
-        Person person1 = new Person(10);
-        Person person2 = new Person(1);
-        Person person3 = new Person(100);
+        PersonComparable personComparable1 = new PersonComparable(10);
+        PersonComparable personComparable2 = new PersonComparable(1);
+        PersonComparable personComparable3 = new PersonComparable(100);
 
         Set set = new TreeSet(new ComparePersonComparator());
 
 
-        set.add(person1);
-        set.add(person2);
-        set.add(person3);
+        set.add(personComparable1);
+        set.add(personComparable2);
+        set.add(personComparable3);
 
         for (Object o : set)
             System.out.println(o);

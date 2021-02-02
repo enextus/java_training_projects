@@ -1,8 +1,8 @@
-public class Person implements Comparable<Person> {
+public class PersonComparable implements Comparable<PersonComparable> {
 
     int age;
 
-    public Person(int age) {
+    public PersonComparable(int age) {
         this.age = age;
     }
 
@@ -18,7 +18,7 @@ public class Person implements Comparable<Person> {
     }
 
     @Override
-    public int compareTo(Person other) {
+    public int compareTo(PersonComparable other) {
         return this.getAge() - other.getAge();
     }
 

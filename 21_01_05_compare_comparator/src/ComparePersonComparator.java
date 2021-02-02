@@ -1,6 +1,6 @@
 import java.util.Comparator;
 
-class ComparePersonComparator implements Comparator<Person> {
+class ComparePersonComparator implements Comparator<PersonComparable> {
 
     @Override
     public String toString() {
@@ -8,7 +8,7 @@ class ComparePersonComparator implements Comparator<Person> {
     }
 
     @Override
-    public int compare(Person o1, Person o2) {
+    public int compare(PersonComparable o1, PersonComparable o2) {
         return o1.age - o2.age;
     }
 
