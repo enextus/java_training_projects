@@ -34,7 +34,6 @@ public class PrintStreamPrinter implements IPrinter {
         }
 
         ps.close();
-
     }
 
 }
