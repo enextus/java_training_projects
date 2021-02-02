@@ -1,4 +1,4 @@
-package timetester;
+package printtester;
 
 import java.util.Arrays;
 

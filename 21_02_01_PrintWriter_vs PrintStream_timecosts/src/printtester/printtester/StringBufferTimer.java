@@ -1,6 +1,6 @@
-package timetester.timetester;
+package printtester.printtester;
 
-import timetester.ITimer;
+import printtester.ITimer;
 
 public class StringBufferTimer implements ITimer {
 

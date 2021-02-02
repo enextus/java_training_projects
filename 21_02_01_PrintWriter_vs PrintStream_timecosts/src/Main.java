@@ -1,7 +1,7 @@
-import timetester.ITimer;
-import timetester.PrintWriterVsPrintStreamTimeCostsTest;
-import timetester.timetester.StringBufferTimer;
-import timetester.timetester.StringBuilderTimer;
+import printtester.ITimer;
+import printtester.PrintWriterVsPrintStreamTimeCostsTest;
+import printtester.printtester.StringBufferTimer;
+import printtester.printtester.StringBuilderTimer;
 
 public class Main {
 
