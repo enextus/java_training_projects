@@ -9,7 +9,6 @@ import java.io.PrintStream;
 public class PrintStreamPrinter implements IPrinter {
 
     private final static byte[] bytes = new byte[5_000_000];
-    private final static boolean flush = true;
 
     static {
         for (int i = 0; i < bytes.length; i++) {
