@@ -25,7 +25,8 @@ public class Main {
 
 }
 
-/*      1986
-        1569
+/*      10381
+        9021
+
         Process finished with exit code 0*/
 
