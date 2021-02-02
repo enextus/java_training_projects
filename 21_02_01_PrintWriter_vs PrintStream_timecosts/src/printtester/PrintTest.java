@@ -2,11 +2,11 @@ package printtester;
 
 import java.util.Arrays;
 
-public class PrintWriterVsPrintStreamTimeCostsTest {
+public class PrintTest {
 
     private final IPrinter timer;
 
-    public PrintWriterVsPrintStreamTimeCostsTest(IPrinter timer) {
+    public PrintTest(IPrinter timer) {
         this.timer = timer;
     }
     

@@ -1,5 +1,5 @@
 import printtester.IPrinter;
-import printtester.PrintWriterVsPrintStreamTimeCostsTest;
+import printtester.PrintTest;
 import printtester.printtester.StringBufferPrinter;
 import printtester.printtester.StringBuilderPrinter;
 
@@ -10,14 +10,14 @@ public class Main {
         IPrinter stringBuilderConcatenator = new StringBuilderPrinter();
         IPrinter stringBufferConcatenator = new StringBufferPrinter();
 
-        PrintWriterVsPrintStreamTimeCostsTest test;
+        PrintTest test;
 
         //string builder test
-        test = new PrintWriterVsPrintStreamTimeCostsTest(stringBuilderConcatenator);
+        test = new PrintTest(stringBuilderConcatenator);
         test.test(100000, "Santa Claus");
 
         //string buffer test
-        test = new PrintWriterVsPrintStreamTimeCostsTest(stringBufferConcatenator);
+        test = new PrintTest(stringBufferConcatenator);
         test.test(100000, "Santa Claus");
     }
 
