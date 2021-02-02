@@ -35,13 +35,6 @@ public class PrintWriterPrinter implements IPrinter {
         }
 
         pw.close();
-
-/*      StringBuffer buffer = new StringBuffer();
-        for (String str : arrayToPrint)
-            buffer.append(str);
-
-        buffer.toString(); // anschließende Umwandlung Obj toString*/
-
     }
 
 }
