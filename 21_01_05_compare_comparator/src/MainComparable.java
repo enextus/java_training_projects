@@ -1,4 +1,3 @@
-import java.util.Collection;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -11,6 +10,7 @@ public class MainComparable {
     }
 
     static void newPerson() {
+
         PersonComparable personComparable1 = new PersonComparable(10);
         PersonComparable personComparable2 = new PersonComparable(1);
         PersonComparable personComparable3 = new PersonComparable(100);
@@ -19,7 +19,6 @@ public class MainComparable {
         PersonComparable personComparable6 = new PersonComparable(33);
 
         Set<PersonComparable> set = new TreeSet<>();
-
 
         set.add(personComparable1);
         set.add(personComparable2);
