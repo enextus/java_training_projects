@@ -10,12 +10,13 @@ public class ConcatenationTest {
         this.concatenator = concatenator;
     }
 
-    public void test(int times, String text) {
+    public void test(int numberОfАttempts, String text) {
 
-        String[] arrayToConcatenate = composeArray(times, text);
+        String[] arrayToConcatenate = composeArray(numberОfАttempts, text);
 
         long beforeTest = System.currentTimeMillis();
         concatenator.concatenate(arrayToConcatenate);
+
         long afterTest = System.currentTimeMillis();
 
         System.out.println(afterTest - beforeTest);
