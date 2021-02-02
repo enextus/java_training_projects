@@ -11,7 +11,6 @@ public class PrintWriterPrinter implements IPrinter {
     private final static byte[] bytes = new byte[1_000_000];
     private final static boolean flush = true;
 
-
     static {
         for (int i = 0; i < bytes.length; i++) {
             bytes[i] = (byte) (i % 100 + 32);
@@ -25,8 +24,6 @@ public class PrintWriterPrinter implements IPrinter {
 
     @Override
     public void print(boolean flush) throws IOException {
-
-
 
         Writer pw = new PrintWriter("output.txt");
         long beforeTest = getCurrentTimeMillis();

@@ -17,7 +17,7 @@ public class PrintTest {
         long beforeTest = System.currentTimeMillis();
 
 
-        timer.print(arrayToConcatenate);
+        //timer.print(arrayToConcatenate);
 
 
         long afterTest = System.currentTimeMillis();
