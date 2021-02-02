@@ -3,6 +3,7 @@
  * The news item has larger priority, if it is more positive and shorter
  */
 public class News implements Comparable<News> {
+
     String text;
 
     // 1 to 10
@@ -36,4 +37,5 @@ public class News implements Comparable<News> {
                 ", positivity=" + positivity +
                 '}';
     }
+
 }
