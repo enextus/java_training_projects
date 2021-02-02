@@ -2,6 +2,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 class Main {
+
     public static void main(String[] args) {
 
         Person person1 = new Person(10);
@@ -17,4 +18,5 @@ class Main {
         for (Object o : set)
             System.out.println(o);
     }
+
 }
