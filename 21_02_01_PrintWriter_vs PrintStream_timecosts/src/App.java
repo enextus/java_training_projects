@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class TestPrintWriterVsPrintStreamTimeCosts {
+public class App {
 
     private final static byte[] bytes = new byte[1_000_000];
 
@@ -35,7 +35,7 @@ public class TestPrintWriterVsPrintStreamTimeCosts {
     static void printStream(boolean flush) throws IOException {
 
         OutputStream ps = new PrintStream("output.txt");
-        long startTime = getCurrentTimeMillis();
+        long beforeTest = getCurrentTimeMillis();
 
         for (byte j : bytes) {
             ps.write(j);
@@ -46,7 +46,7 @@ public class TestPrintWriterVsPrintStreamTimeCosts {
 
         ps.close();
 
-        System.out.println("PrintStream with" + (flush ? "" : "out") + " flushing: " + (getCurrentTimeMillis() - startTime));
+        System.out.println("PrintStream with" + (flush ? "" : "out") + " flushing: " + (getCurrentTimeMillis() - beforeTest));
     }
 
     public static void main(String[] args) throws Exception {
