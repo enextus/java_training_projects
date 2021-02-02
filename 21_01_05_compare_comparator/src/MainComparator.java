@@ -1,7 +1,7 @@
 import java.util.Set;
 import java.util.TreeSet;
 
-class MainComparator {
+public class MainComparator {
 
     public static void main(String[] args) {
 
