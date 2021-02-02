@@ -1,6 +1,6 @@
 import java.util.TreeSet;
 
-public class MainComparator {
+public class Main {
 
     public static void main(String[] args) {
 
