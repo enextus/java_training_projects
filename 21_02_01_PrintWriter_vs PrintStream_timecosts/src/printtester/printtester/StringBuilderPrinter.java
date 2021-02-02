@@ -5,7 +5,7 @@ import printtester.IPrinter;
 public class StringBuilderPrinter implements IPrinter {
 
     @Override
-    public void concatenate(String[] arrayToTest) {
+    public void print(String[] arrayToTest) {
 
         StringBuilder builder = new StringBuilder();
 

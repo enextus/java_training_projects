@@ -5,5 +5,5 @@ package printtester;
  */
 public interface IPrinter {
 
-    void concatenate(String[] arrayToTest);
+    void print(String[] arrayToTest);
 }

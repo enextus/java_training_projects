@@ -5,7 +5,7 @@ import printtester.IPrinter;
 public class StringBufferPrinter implements IPrinter {
 
     @Override
-    public void concatenate(String[] arrayToTest) {
+    public void print(String[] arrayToTest) {
 
         StringBuffer buffer = new StringBuffer();
 
