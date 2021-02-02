@@ -11,4 +11,5 @@ public class StringConcatenator implements IConcatenator {
         for (String str : arrayToConcatenate)
             res += str;
     }
+
 }

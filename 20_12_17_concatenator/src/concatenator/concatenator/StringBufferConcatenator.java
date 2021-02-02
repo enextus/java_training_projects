@@ -6,6 +6,7 @@ public class StringBufferConcatenator implements IConcatenator {
 
     @Override
     public void concatenate(String[] arrayToConcatenate) {
+
         StringBuffer buffer = new StringBuffer();
 
         for (String str : arrayToConcatenate)
@@ -13,4 +14,5 @@ public class StringBufferConcatenator implements IConcatenator {
 
         buffer.toString(); // anschließende Umwandlung Obj toString
     }
+
 }

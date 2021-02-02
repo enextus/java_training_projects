@@ -14,4 +14,5 @@ public class StringBuilderConcatenator implements IConcatenator {
 
         builder.toString();
     }
+
 }
