@@ -7,7 +7,6 @@ public class ConcatenationTest {
     private final IConcatenator concatenator;
 
     public ConcatenationTest(IConcatenator concatenator) {
-
         this.concatenator = concatenator;
     }
 
@@ -22,7 +21,7 @@ public class ConcatenationTest {
         System.out.println(afterTest - beforeTest);
     }
 
-    private String[] composeArray(int times, String text) {
+    String[] composeArray(int times, String text) {
 
         String[] strings = new String[times];
 
