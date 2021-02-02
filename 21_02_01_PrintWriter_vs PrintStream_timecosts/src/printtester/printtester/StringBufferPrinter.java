@@ -2,7 +2,6 @@ package printtester.printtester;
 
 import printtester.IPrinter;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.Writer;
@@ -10,6 +9,8 @@ import java.io.Writer;
 public class StringBufferPrinter implements IPrinter {
 
     private final static byte[] bytes = new byte[1_000_000];
+    private final static boolean flush = true;
+
 
     static {
         for (int i = 0; i < bytes.length; i++) {
@@ -23,9 +24,9 @@ public class StringBufferPrinter implements IPrinter {
     }
 
     @Override
-    public void print(String[] arrayToPrint) throws IOException {
+    public void print(boolean flush) throws IOException {
 
-        boolean flush = true;
+
 
         Writer pw = new PrintWriter("output.txt");
         long beforeTest = getCurrentTimeMillis();
@@ -38,9 +39,6 @@ public class StringBufferPrinter implements IPrinter {
         }
 
         pw.close();
-
-
-
 
 /*      StringBuffer buffer = new StringBuffer();
         for (String str : arrayToPrint)
