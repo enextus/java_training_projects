@@ -7,10 +7,12 @@ public class ConcatenationTest {
     private final IConcatenator concatenator;
 
     public ConcatenationTest(IConcatenator concatenator) {
+
         this.concatenator = concatenator;
     }
 
     public void test(int times, String text) {
+
         String[] arrayToConcatenate = composeArray(times, text);
 
         long beforeTest = System.currentTimeMillis();
@@ -21,9 +23,12 @@ public class ConcatenationTest {
     }
 
     private String[] composeArray(int times, String text) {
+
         String[] strings = new String[times];
 
         Arrays.fill(strings, text);
+
         return strings;
     }
+
 }

@@ -5,9 +5,10 @@ import concatenator.concatenator.StringBuilderConcatenator;
 import concatenator.concatenator.StringConcatenator;
 
 public class Main {
+
     public static void main(String[] args) {
 
-/*        IConcatenator stringConcatenator = new StringConcatenator();
+        IConcatenator stringConcatenator = new StringConcatenator();
         IConcatenator stringBuilderConcatenator = new StringBuilderConcatenator();
         IConcatenator stringBufferConcatenator = new StringBufferConcatenator();
 
@@ -23,7 +24,7 @@ public class Main {
 
         //string buffer test
         test = new ConcatenationTest(stringBufferConcatenator);
-        test.test(100000, "Santa Claus");*/
+        test.test(100000, "Santa Claus");
     }
-}
 
+}
