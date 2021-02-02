@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintStream;
 
-public class PrintWriterPrinter implements IPrinter {
+public class PrintStreamPrinter implements IPrinter {
 
     private final static byte[] bytes = new byte[1_000_000];
     private final static boolean flush = true;

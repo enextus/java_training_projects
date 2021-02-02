@@ -1,6 +1,6 @@
 import printtester.IPrinter;
 import printtester.PrintTest;
-import printtester.printtester.PrintWriterPrinter;
+import printtester.printtester.PrintStreamPrinter;
 import printtester.printtester.StringBuilderPrinter;
 
 public class Main {
@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
 
         IPrinter stringBuilderConcatenator = new StringBuilderPrinter();
-        IPrinter stringBufferConcatenator = new PrintWriterPrinter();
+        IPrinter stringBufferConcatenator = new PrintStreamPrinter();
 
         PrintTest test;
 
