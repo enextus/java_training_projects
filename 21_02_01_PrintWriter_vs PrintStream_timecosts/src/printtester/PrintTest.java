@@ -4,10 +4,10 @@ import java.io.IOException;
 
 public class PrintTest {
 
-    private final IPrinter timer;
+    private final IPrinter iPrinter;
 
-    public PrintTest(IPrinter timer) {
-        this.timer = timer;
+    public PrintTest(IPrinter iPrinter) {
+        this.iPrinter = iPrinter;
     }
     
     public void test(int times, String text) throws IOException {
@@ -15,7 +15,7 @@ public class PrintTest {
         long beforeTest = System.currentTimeMillis();
 
 
-        timer.print(true);
+        iPrinter.print(true);
 
 
         long afterTest = System.currentTimeMillis();
