@@ -6,5 +6,4 @@ package concatenator;
 public interface IConcatenator {
 
     void concatenate(String[] arrayToConcatenate);
-
 }
