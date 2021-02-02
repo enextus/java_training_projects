@@ -2,14 +2,14 @@ package concatenator;
 
 import java.util.Arrays;
 
-public class ConcatenationTest {
+public class PrintWriterVsPrintStreamTimeCostsTest {
 
     private final IConcatenator concatenator;
 
-    public ConcatenationTest(IConcatenator concatenator) {
+    public PrintWriterVsPrintStreamTimeCostsTest(IConcatenator concatenator) {
         this.concatenator = concatenator;
     }
-
+    
     public void test(int i, String text) {
 
         String[] arrayToConcatenate = composeArray(i, text);
@@ -28,5 +28,5 @@ public class ConcatenationTest {
 
         return strings;
     }
-
+    
 }

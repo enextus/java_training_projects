@@ -1,5 +1,5 @@
 import concatenator.IConcatenator;
-import concatenator.ConcatenationTest;
+import concatenator.PrintWriterVsPrintStreamTimeCostsTest;
 import concatenator.concatenator.StringBufferConcatenator;
 import concatenator.concatenator.StringBuilderConcatenator;
 
@@ -10,14 +10,14 @@ public class Main {
         IConcatenator stringBuilderConcatenator = new StringBuilderConcatenator();
         IConcatenator stringBufferConcatenator = new StringBufferConcatenator();
 
-        ConcatenationTest test;
+        PrintWriterVsPrintStreamTimeCostsTest test;
 
         //string builder test
-        test = new ConcatenationTest(stringBuilderConcatenator);
+        test = new PrintWriterVsPrintStreamTimeCostsTest(stringBuilderConcatenator);
         test.test(100000, "Santa Claus");
 
         //string buffer test
-        test = new ConcatenationTest(stringBufferConcatenator);
+        test = new PrintWriterVsPrintStreamTimeCostsTest(stringBufferConcatenator);
         test.test(100000, "Santa Claus");
     }
 
