@@ -10,9 +10,9 @@ public class PrintWriterVsPrintStreamTimeCostsTest {
         this.timer = timer;
     }
     
-    public void test(int i, String text) {
+    public void test(int times, String text) {
 
-        String[] arrayToConcatenate = composeArray(i, text);
+        String[] arrayToConcatenate = composeArray(times, text);
 
         long beforeTest = System.currentTimeMillis();
         timer.concatenate(arrayToConcatenate);
@@ -21,9 +21,9 @@ public class PrintWriterVsPrintStreamTimeCostsTest {
         System.out.println(afterTest - beforeTest);
     }
 
-    String[] composeArray(int i, String text) {
+    String[] composeArray(int times, String text) {
 
-        String[] strings = new String[i];
+        String[] strings = new String[times];
         Arrays.fill(strings, text);
 
         return strings;
