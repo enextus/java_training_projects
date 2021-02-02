@@ -4,9 +4,9 @@ import java.util.Arrays;
 
 public class PrintWriterVsPrintStreamTimeCostsTest {
 
-    private final IConcatenator concatenator;
+    private final ITimer concatenator;
 
-    public PrintWriterVsPrintStreamTimeCostsTest(IConcatenator concatenator) {
+    public PrintWriterVsPrintStreamTimeCostsTest(ITimer concatenator) {
         this.concatenator = concatenator;
     }
     

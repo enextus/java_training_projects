@@ -1,8 +1,8 @@
 package concatenator.concatenator;
 
-import concatenator.IConcatenator;
+import concatenator.ITimer;
 
-public class StringBufferConcatenator implements IConcatenator {
+public class StringBufferTimer implements ITimer {
 
     @Override
     public void concatenate(String[] arrayToConcatenate) {
