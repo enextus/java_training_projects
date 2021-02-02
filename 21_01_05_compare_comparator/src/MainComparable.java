@@ -18,7 +18,7 @@ public class MainComparable {
         PersonComparable personComparable5 = new PersonComparable(32);
         PersonComparable personComparable6 = new PersonComparable(33);
 
-        Set<PersonComparable> set = new TreeSet<PersonComparable>((Collection<? extends PersonComparable>) new ComparatorForPerson());
+        Set<PersonComparable> set = new TreeSet<>();
 
 
         set.add(personComparable1);
