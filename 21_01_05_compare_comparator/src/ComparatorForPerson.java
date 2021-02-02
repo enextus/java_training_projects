@@ -1,15 +1,23 @@
 import java.util.Comparator;
 
-class ComparatorForPerson implements Comparator<PersonComparable> {
-
+class ComparatorForPerson implements Comparator<PersonComparator> {
     @Override
     public String toString() {
-        return super.toString();
+        return "ComparatorForPerson{}";
     }
 
     @Override
-    public int compare(PersonComparable o1, PersonComparable o2) {
-        return o1.age - o2.age;
+    public int hashCode() {
+        return super.hashCode();
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    public int compare(PersonComparator o1, PersonComparator o2) {
+        return o1.age - o2.age;
+    }
 }

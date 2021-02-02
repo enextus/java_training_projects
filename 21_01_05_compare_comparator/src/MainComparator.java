@@ -1,21 +1,33 @@
-import java.util.Set;
 import java.util.TreeSet;
 
 public class MainComparator {
 
     public static void main(String[] args) {
 
-        PersonComparable personComparable1 = new PersonComparable(10);
-        PersonComparable personComparable2 = new PersonComparable(1);
-        PersonComparable personComparable3 = new PersonComparable(100);
+        newPerson2();
+    }
 
-        Set set = new TreeSet(new ComparatorForPerson());
+    static void newPerson2() {
+        PersonComparator personComparator1 = new PersonComparator(10);
+        PersonComparator personComparator2 = new PersonComparator(1);
+        PersonComparator personComparator3 = new PersonComparator(100);
+        PersonComparator personComparator4 = new PersonComparator(56);
+        PersonComparator personComparator5 = new PersonComparator(32);
+        PersonComparator personComparator6 = new PersonComparator(33);
+        PersonComparator personComparator7 = new PersonComparator(12);
 
-        set.add(personComparable1);
-        set.add(personComparable2);
-        set.add(personComparable3);
+        TreeSet<PersonComparator> set2 = new TreeSet<PersonComparator>(new ComparatorForPerson());
 
-        for (Object o : set)
+
+        set2.add(personComparator1);
+        set2.add(personComparator2);
+        set2.add(personComparator3);
+        set2.add(personComparator4);
+        set2.add(personComparator5);
+        set2.add(personComparator6);
+        set2.add(personComparator7);
+
+        for (Object o : set2)
             System.out.println(o);
     }
 
