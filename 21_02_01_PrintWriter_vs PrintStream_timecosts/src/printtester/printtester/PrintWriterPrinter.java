@@ -18,7 +18,6 @@ public class PrintWriterPrinter implements IPrinter {
     }
 
     static long getCurrentTimeMillis() {
-
         return System.currentTimeMillis();
     }
 
