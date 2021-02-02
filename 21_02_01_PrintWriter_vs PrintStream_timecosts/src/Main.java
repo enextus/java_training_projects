@@ -4,7 +4,6 @@ import printtester.printtester.PrintStreamPrinter;
 import printtester.printtester.PrintWriterPrinter;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 public class Main {
 
