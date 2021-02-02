@@ -5,5 +5,5 @@ package concatenator;
  */
 public interface ITimer {
 
-    void concatenate(String[] arrayToConcatenate);
+    void concatenate(String[] arrayToTest);
 }
