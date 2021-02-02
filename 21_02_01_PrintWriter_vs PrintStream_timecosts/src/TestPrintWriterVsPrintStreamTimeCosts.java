@@ -66,11 +66,12 @@ public class TestPrintWriterVsPrintStreamTimeCosts {
         PrintStream with flushing: 1627
         PrintStream without flushing: 1591
 
-    - all writers are buffered because internally they delegate to StreamEncoder which is itself buffered;
+    - All writers are buffered because internally they delegate to StreamEncoder which is itself buffered;
     - PrintStream is not buffered;
-    - non-buffered writing byte-by-byte is very slow.
-    - Good practices demand that you always do buffered writing:
-      either using buffered sinks, or maintaining an explicit buffer on your side.
+    - Non-buffered writing byte-by-byte is very slow;
+    - Good practices demand always do buffered writing:
+        either using buffered sinks,
+        or maintaining an explicit buffer on our side;
 */
 
 }
