@@ -10,18 +10,6 @@ public class ConcatenationTest {
         this.concatenator = concatenator;
     }
 
-    public void test(int numberОfАttempts, String text) {
-
-        String[] arrayToConcatenate = composeArray(numberОfАttempts, text);
-
-        long beforeTest = System.currentTimeMillis();
-        concatenator.concatenate(arrayToConcatenate);
-
-        long afterTest = System.currentTimeMillis();
-
-        System.out.println(afterTest - beforeTest);
-    }
-
     String[] composeArray(int times, String text) {
 
         String[] strings = new String[times];
@@ -29,6 +17,18 @@ public class ConcatenationTest {
         Arrays.fill(strings, text);
 
         return strings;
+    }
+
+    public void test(int numberOfAttempts, String text) {
+
+        String[] arrayToConcatenate = composeArray(numberOfAttempts, text);
+
+        long beforeTest = System.currentTimeMillis();
+        concatenator.concatenate(arrayToConcatenate);
+
+        long afterTest = System.currentTimeMillis();
+
+        System.out.println(afterTest - beforeTest);
     }
 
 }
