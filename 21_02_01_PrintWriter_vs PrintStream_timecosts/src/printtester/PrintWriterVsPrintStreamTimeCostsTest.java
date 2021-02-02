@@ -4,9 +4,9 @@ import java.util.Arrays;
 
 public class PrintWriterVsPrintStreamTimeCostsTest {
 
-    private final ITimer timer;
+    private final IPrinter timer;
 
-    public PrintWriterVsPrintStreamTimeCostsTest(ITimer timer) {
+    public PrintWriterVsPrintStreamTimeCostsTest(IPrinter timer) {
         this.timer = timer;
     }
     

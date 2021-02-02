@@ -1,14 +1,14 @@
-import printtester.ITimer;
+import printtester.IPrinter;
 import printtester.PrintWriterVsPrintStreamTimeCostsTest;
-import printtester.printtester.StringBufferTimer;
-import printtester.printtester.StringBuilderTimer;
+import printtester.printtester.StringBufferPrinter;
+import printtester.printtester.StringBuilderPrinter;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        ITimer stringBuilderConcatenator = new StringBuilderTimer();
-        ITimer stringBufferConcatenator = new StringBufferTimer();
+        IPrinter stringBuilderConcatenator = new StringBuilderPrinter();
+        IPrinter stringBufferConcatenator = new StringBufferPrinter();
 
         PrintWriterVsPrintStreamTimeCostsTest test;
 

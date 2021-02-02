@@ -1,8 +1,8 @@
 package printtester.printtester;
 
-import printtester.ITimer;
+import printtester.IPrinter;
 
-public class StringBuilderTimer implements ITimer {
+public class StringBuilderPrinter implements IPrinter {
 
     @Override
     public void concatenate(String[] arrayToTest) {
