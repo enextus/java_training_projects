@@ -1,4 +1,4 @@
-package concatenator.concatenator;
+package concatenator.timetester;
 
 import concatenator.ITimer;
 
