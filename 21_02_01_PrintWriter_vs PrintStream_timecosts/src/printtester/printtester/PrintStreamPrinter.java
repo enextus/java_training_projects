@@ -8,7 +8,7 @@ import java.io.PrintStream;
 
 public class PrintStreamPrinter implements IPrinter {
 
-    private final static byte[] bytes = new byte[1_000_000];
+    private final static byte[] bytes = new byte[5_000_000];
     private final static boolean flush = true;
 
     static {
