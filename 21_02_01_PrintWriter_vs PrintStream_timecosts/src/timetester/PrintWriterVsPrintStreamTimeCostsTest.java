@@ -15,7 +15,11 @@ public class PrintWriterVsPrintStreamTimeCostsTest {
         String[] arrayToConcatenate = composeArray(times, text);
 
         long beforeTest = System.currentTimeMillis();
+
+
         timer.concatenate(arrayToConcatenate);
+
+
         long afterTest = System.currentTimeMillis();
 
         System.out.println(afterTest - beforeTest);
