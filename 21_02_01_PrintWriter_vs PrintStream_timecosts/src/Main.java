@@ -15,11 +15,11 @@ public class Main {
         PrintTest test;
 
         //string printWriterPrinter test
-        test = new PrintTest(printStreamPrinter);
+        test = new PrintTest(printWriterPrinter);
         test.test(100000, "Santa Claus");
 
         //string printStreamPrinter test
-        test = new PrintTest(stringBufferConcatenator);
+        test = new PrintTest(printStreamPrinter);
         test.test(100000, "Santa Claus");
     }
 
