@@ -1,22 +1,24 @@
 import printtester.IPrinter;
 import printtester.PrintTest;
 import printtester.printtester.PrintStreamPrinter;
-import printtester.printtester.StringBuilderPrinter;
+import printtester.printtester.PrintWriterPrinter;
+
+import java.io.PrintWriter;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        IPrinter stringBuilderConcatenator = new StringBuilderPrinter();
-        IPrinter stringBufferConcatenator = new PrintStreamPrinter();
+        IPrinter printWriterPrinter = new PrintWriterPrinter();
+        IPrinter printStreamPrinter = new PrintStreamPrinter();
 
         PrintTest test;
 
-        //string builder test
-        test = new PrintTest(stringBuilderConcatenator);
+        //string printWriterPrinter test
+        test = new PrintTest(printStreamPrinter);
         test.test(100000, "Santa Claus");
 
-        //string buffer test
+        //string printStreamPrinter test
         test = new PrintTest(stringBufferConcatenator);
         test.test(100000, "Santa Claus");
     }
