@@ -1,7 +1,7 @@
 import java.util.Set;
 import java.util.TreeSet;
 
-class Main {
+class MainComparator {
 
     public static void main(String[] args) {
 
@@ -9,7 +9,7 @@ class Main {
         PersonComparable personComparable2 = new PersonComparable(1);
         PersonComparable personComparable3 = new PersonComparable(100);
 
-        Set set = new TreeSet(new ComparePersonComparator());
+        Set set = new TreeSet(new ComparatorForPerson());
 
         set.add(personComparable1);
         set.add(personComparable2);

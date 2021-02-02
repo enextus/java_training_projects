@@ -1,6 +1,6 @@
 import java.util.Comparator;
 
-class ComparePersonComparator implements Comparator<PersonComparable> {
+class ComparatorForPerson implements Comparator<PersonComparable> {
 
     @Override
     public String toString() {
