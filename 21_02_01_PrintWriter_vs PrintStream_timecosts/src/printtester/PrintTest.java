@@ -10,7 +10,7 @@ public class PrintTest {
         this.iPrinter = iPrinter;
     }
     
-    public void test(int times, String text) throws IOException {
+    public void test() throws IOException {
 
         long beforeTest = System.currentTimeMillis();
 

@@ -17,11 +17,11 @@ public class Main {
 
         //string printWriterPrinter test
         test = new PrintTest(printWriterPrinter);
-        test.test(100000, "Santa Claus");
+        test.test();
 
         //string printStreamPrinter test
         test = new PrintTest(printStreamPrinter);
-        test.test(100000, "Santa Claus");
+        test.test();
     }
 
 }
