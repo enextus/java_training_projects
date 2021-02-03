@@ -44,7 +44,7 @@ public class ReadLinesFromConsole {
     }
 
 }
-s
+
 /*
     String[] greeting = {"Hey", "there", "amigo!"};
     String delimiter = " ";
