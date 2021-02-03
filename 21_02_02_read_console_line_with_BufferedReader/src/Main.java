@@ -3,7 +3,10 @@ import java.io.IOException;
 class Main {
 
     public static void main(String[] args) throws IOException {
-        // readFromConsole();
+
+        ReadLinesFromConsole reader = new ReadLinesFromConsole();
+
+        reader.read();
     }
 
 }
