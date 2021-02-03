@@ -1,5 +1,7 @@
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class ReadLinesFromConsole {
 
@@ -8,6 +10,9 @@ public class ReadLinesFromConsole {
 
     public void readAndWrite() {
         try (BufferedReader inBuffer = new BufferedReader(new InputStreamReader(System.in))) {
+
+            List<String> lstStr = new ArrayList<>();
+
             String line;
 
             while ((line = inBuffer.readLine()) != null && !line.equals("exit")) {
