@@ -4,13 +4,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ReadLinesFromConsole {
-    @Override
-    public String toString() {
-        return "ReadLinesFromConsole{" +
-                "arrWords=" + Arrays.toString(arrWords) +
-                ", flush=" + flush +
-                '}';
-    }
 
     String[] arrWords;
     boolean flush = true;
