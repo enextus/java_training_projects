@@ -30,6 +30,7 @@ public class ReadLinesFromConsole {
         Writer pw = new PrintWriter("output.txt");
 
 
+
         pw.write(String.valueOf(arrWords));
 
         if (flush)
