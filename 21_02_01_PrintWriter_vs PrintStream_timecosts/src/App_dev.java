@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class App {
+public class App_dev {
 
     private final static byte[] bytes = new byte[1_000_000];
 

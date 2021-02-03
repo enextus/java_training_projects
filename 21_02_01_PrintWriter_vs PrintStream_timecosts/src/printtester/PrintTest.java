@@ -22,4 +22,5 @@ public class PrintTest {
 
         System.out.println(afterTest - beforeTest);
     }
+
 }
