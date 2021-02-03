@@ -29,17 +29,9 @@ public class ReadLinesFromConsole {
 
         Writer pw = new PrintWriter("output.txt");
 
-        System.out.println("\n");
-        System.out.println("arrWords: " + arrWords);
-        System.out.println("arrWords.getClass(): " + arrWords.getClass());
-        System.out.println("\n");
-
-        for (String elm : arrWords
-        ) {
+        for (String elm : arrWords) {
             pw.write(elm);
         }
-
-        //pw.write(String.valueOf(arrWords));
 
         if (flush)
             pw.flush();
