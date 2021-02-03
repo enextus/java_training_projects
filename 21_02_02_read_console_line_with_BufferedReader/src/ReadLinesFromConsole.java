@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class ReadLinesFromConsole {
 
-    public void read() {
+    public void readWrite() {
         try (BufferedReader inBuffer = new BufferedReader(new InputStreamReader(System.in))) {
             String line;
 
