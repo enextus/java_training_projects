@@ -11,7 +11,7 @@ class Main {
 
             String line;
 
-            while ((line = buffer.readLine()) != null || !line.equals(("exit"))) {
+            while ((line = buffer.readLine()) != null || line.equals(("exit"))) {
                 String[] tokens = line.split("\\s");
                 System.out.println(Arrays.toString(tokens));
             }
