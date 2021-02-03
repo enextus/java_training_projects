@@ -5,14 +5,14 @@ import java.util.Arrays;
 class Main {
     // Read multi-line input using BufferedReader class
     public static void main(String[] args) {
-        try (InputStreamReader in = new InputStreamReader(System.in);
-
-             BufferedReader buffer = new BufferedReader(in)) {
+        try (BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in))) {
 
             String line;
 
-            while ((line = buffer.readLine()) != null || line.equals(("exit"))) {
+            while ((line = buffer.readLine()) != null || !line.equals(("exit"))) {
+
                 String[] tokens = line.split("\\s");
+
                 System.out.println(Arrays.toString(tokens));
             }
 
