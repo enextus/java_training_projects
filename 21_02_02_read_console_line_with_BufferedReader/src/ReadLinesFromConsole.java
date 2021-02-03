@@ -47,3 +47,9 @@ public class ReadLinesFromConsole {
     }
 
 }
+
+/*
+    String[] greeting = {"Hey", "there", "amigo!"};
+    String delimiter = " ";
+    String.join(delimiter, greeting)
+    The output will be "Hey there amigo!".*/
