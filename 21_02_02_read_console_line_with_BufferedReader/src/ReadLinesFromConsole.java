@@ -19,12 +19,9 @@ public class ReadLinesFromConsole {
                 System.out.println("Your input was: " + Arrays.toString(arrWords));
                 lstStr.add(arrWords);
             }
-
-        } finally {
-            System.out.println("Read done!");
+            return lstStr;
         }
 
-        return lstStr;
     }
 
     static void printWriter(List<String[]> lstStr) throws IOException {
