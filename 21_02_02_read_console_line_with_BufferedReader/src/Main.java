@@ -6,7 +6,7 @@ class Main {
 
         ReadLinesFromConsole reader = new ReadLinesFromConsole();
 
-        reader.readWrite();
+        reader.readAndWrite();
     }
 
 }

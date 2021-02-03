@@ -6,7 +6,7 @@ public class ReadLinesFromConsole {
     String[] arrWords;
     boolean flush = true;
 
-    public void readWrite() {
+    public void readAndWrite() {
         try (BufferedReader inBuffer = new BufferedReader(new InputStreamReader(System.in))) {
             String line;
 
