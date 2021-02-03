@@ -28,20 +28,23 @@ public class ReadLinesFromConsole {
     }
 
     static void printWriter(List<String[]> lstStr) throws IOException {
+        try {
+            Writer pw = new PrintWriter("output.txt");
 
-        Writer pw = new PrintWriter("output.txt");
+            for (String[] elm : lstStr) {
 
-        for (String[] elm : lstStr) {
+                pw.write(Arrays.toString(elm) + " ");
+                pw.write("\n");
+            }
 
-            pw.write(Arrays.toString(elm) + " ");
-            pw.write("\n");
+            pw.close();
+        } finally {
+            System.out.println("Done!");
         }
-
-        pw.close();
     }
 
 }
-
+s
 /*
     String[] greeting = {"Hey", "there", "amigo!"};
     String delimiter = " ";
