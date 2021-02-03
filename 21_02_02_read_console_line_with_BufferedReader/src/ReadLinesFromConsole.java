@@ -29,7 +29,7 @@ public class ReadLinesFromConsole {
         Writer pw = new PrintWriter("output.txt");
 
         for (String elm : arrWords) {
-            pw.write(elm);
+            pw.write(elm + " ");
         }
 
         if (flush)
