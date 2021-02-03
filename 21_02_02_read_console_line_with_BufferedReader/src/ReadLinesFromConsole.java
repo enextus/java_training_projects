@@ -3,12 +3,14 @@ import java.util.Arrays;
 
 public class ReadLinesFromConsole {
 
+    String[] arrWords;
+
     public void readWrite() {
         try (BufferedReader inBuffer = new BufferedReader(new InputStreamReader(System.in))) {
             String line;
 
             while ((line = inBuffer.readLine()) != null && !line.equals("exit")) {
-                String[] arrWords = line.split("\\s");
+                arrWords = line.split("\\s");
                 System.out.println("Your input was: " + Arrays.toString(arrWords));
             }
 
@@ -17,11 +19,10 @@ public class ReadLinesFromConsole {
         }
 
         System.out.println("Bye!");
+
     }
 
     private final static byte[] bytes = new byte[5_000_000];
-
-
 
     static void printWriter(boolean flush) throws IOException {
 
