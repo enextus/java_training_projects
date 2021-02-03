@@ -25,8 +25,6 @@ public class ReadLinesFromConsole {
 
     }
 
-    private final static byte[] bytes = new byte[5_000_000];
-
     static void printWriter(String[] arrWords, boolean flush) throws IOException {
 
         Writer pw = new PrintWriter("output.txt");
@@ -41,6 +39,5 @@ public class ReadLinesFromConsole {
 
         System.out.println("PrintWriter with" + (flush ? "" : "out") + " flushing: ");
     }
-
 
 }
