@@ -8,7 +8,7 @@ public class ReadLinesFromConsole {
     String[] arrWords;
     List<String[]> lstStr;
 
-    public List<String[]> readAndWrite() {
+    public List<String[]> readAndWrite()  throws IOException  {
         try (BufferedReader inBuffer = new BufferedReader(new InputStreamReader(System.in))) {
 
             lstStr = new ArrayList<>();
@@ -20,8 +20,8 @@ public class ReadLinesFromConsole {
                 lstStr.add(arrWords);
             }
 
-        } catch (IOException e) {
-            e.printStackTrace();
+        } finally {
+            System.out.println("Read done!");
         }
 
         return lstStr;
@@ -39,7 +39,7 @@ public class ReadLinesFromConsole {
 
             pw.close();
         } finally {
-            System.out.println("Done!");
+            System.out.println("Write done!");
         }
     }
 
