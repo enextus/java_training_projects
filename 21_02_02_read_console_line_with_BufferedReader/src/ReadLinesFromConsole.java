@@ -15,7 +15,7 @@ public class ReadLinesFromConsole {
                 System.out.println("Your input was: " + Arrays.toString(arrWords));
             }
 
-            printWriter(flush);
+            printWriter(arrWords, flush);
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -27,16 +27,15 @@ public class ReadLinesFromConsole {
 
     private final static byte[] bytes = new byte[5_000_000];
 
-    static void printWriter(boolean flush) throws IOException {
+    static void printWriter(String[] arrWords, boolean flush) throws IOException {
 
         Writer pw = new PrintWriter("output.txt");
 
-        for (byte j : bytes) {
-            pw.write(j);
 
-            if (flush)
-                pw.flush();
-        }
+        pw.write(String.valueOf(arrWords));
+
+        if (flush)
+            pw.flush();
 
         pw.close();
 
