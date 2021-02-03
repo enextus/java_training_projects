@@ -35,7 +35,7 @@ public class ReadLinesFromConsole {
         Writer pw = new PrintWriter("output.txt");
 
         for (String[] elm : lstStr) {
-            pw.write(elm.toString() + " ");
+            pw.write(Arrays.toString(elm) + " ");
         }
 
         if (flush)
