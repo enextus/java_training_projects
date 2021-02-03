@@ -22,7 +22,6 @@ public class ReadLinesFromConsole {
         }
 
         System.out.println("Bye!");
-
     }
 
     static void printWriter(String[] arrWords, boolean flush) throws IOException {
