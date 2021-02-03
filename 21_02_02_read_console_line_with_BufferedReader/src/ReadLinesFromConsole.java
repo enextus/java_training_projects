@@ -4,6 +4,7 @@ import java.util.Arrays;
 public class ReadLinesFromConsole {
 
     String[] arrWords;
+    boolean flush = true;
 
     public void readWrite() {
         try (BufferedReader inBuffer = new BufferedReader(new InputStreamReader(System.in))) {
@@ -13,6 +14,8 @@ public class ReadLinesFromConsole {
                 arrWords = line.split("\\s");
                 System.out.println("Your input was: " + Arrays.toString(arrWords));
             }
+
+            printWriter(flush);
 
         } catch (Exception e) {
             e.printStackTrace();
