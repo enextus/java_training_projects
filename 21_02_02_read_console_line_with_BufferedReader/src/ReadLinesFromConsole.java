@@ -21,7 +21,6 @@ public class ReadLinesFromConsole {
             }
             return lstStr;
         }
-
     }
 
     static void printWriter(List<String[]> lstStr) throws IOException {
@@ -37,7 +36,7 @@ public class ReadLinesFromConsole {
             pw.close();
 
         } finally {
-            System.out.println("Write done!");
+            System.out.println("Done!");
         }
     }
 
