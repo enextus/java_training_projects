@@ -21,7 +21,7 @@ public class ReadLinesFromConsole {
                 lstStr.add(arrWords);
             }
 
-            printWriter(arrWords, flush);
+            printWriter(lstStr, flush);
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -30,11 +30,11 @@ public class ReadLinesFromConsole {
         System.out.println("Bye!");
     }
 
-    static void printWriter(String[] arrWords, boolean flush) throws IOException {
+    static void printWriter(List<String[]> lstStr, boolean flush) throws IOException {
 
         Writer pw = new PrintWriter("output.txt");
 
-        for (String elm : arrWords) {
+        for (String[] elm : lstStr) {
             pw.write(elm + " ");
         }
 
