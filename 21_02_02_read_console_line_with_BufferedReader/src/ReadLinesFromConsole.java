@@ -11,13 +11,14 @@ public class ReadLinesFromConsole {
     public void readAndWrite() {
         try (BufferedReader inBuffer = new BufferedReader(new InputStreamReader(System.in))) {
 
-            List<String> lstStr = new ArrayList<>();
+            List<String[]> lstStr = new ArrayList<>();
 
             String line;
 
             while ((line = inBuffer.readLine()) != null && !line.equals("exit")) {
                 arrWords = line.split("\\s");
                 System.out.println("Your input was: " + Arrays.toString(arrWords));
+                lstStr.add(arrWords);
             }
 
             printWriter(arrWords, flush);
