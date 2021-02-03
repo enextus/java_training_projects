@@ -12,7 +12,6 @@ public class ReadLinesFromConsole {
         try (BufferedReader inBuffer = new BufferedReader(new InputStreamReader(System.in))) {
 
             List<String[]> lstStr = new ArrayList<>();
-
             String line;
 
             while ((line = inBuffer.readLine()) != null && !line.equals("exit")) {
