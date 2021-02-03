@@ -29,16 +29,24 @@ public class ReadLinesFromConsole {
 
         Writer pw = new PrintWriter("output.txt");
 
+        System.out.println("\n");
+        System.out.println("arrWords: " + arrWords);
+        System.out.println("arrWords.getClass(): " + arrWords.getClass());
+        System.out.println("\n");
 
+        for (String elm : arrWords
+        ) {
+            pw.write(elm);
+        }
 
-        pw.write(String.valueOf(arrWords));
+        //pw.write(String.valueOf(arrWords));
 
         if (flush)
             pw.flush();
 
         pw.close();
 
-        System.out.println("PrintWriter write your input text in to the file with" + (flush ? "" : "out") + " flushing. ");
+        System.out.println("PrintWriter has written your input text in to the file with" + (flush ? "" : "out") + " flushing. ");
     }
 
 }
