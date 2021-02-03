@@ -37,7 +37,7 @@ public class ReadLinesFromConsole {
 
         pw.close();
 
-        System.out.println("PrintWriter has written your input text in to the file with" + (flush ? "" : "out") + " flushing. ");
+        System.out.println("Input text was written in to the file with" + (flush ? "" : "out") + " flushing. ");
     }
 
 }
