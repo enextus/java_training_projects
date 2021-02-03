@@ -21,19 +21,23 @@ public class ReadLinesFromConsole {
 
     private final static byte[] bytes = new byte[5_000_000];
 
-    public void print(boolean flush) throws IOException {
 
-        OutputStream ps = new PrintStream("output.txt");
 
+    static void printWriter(boolean flush) throws IOException {
+
+        Writer pw = new PrintWriter("output.txt");
 
         for (byte j : bytes) {
-            ps.write(j);
+            pw.write(j);
 
             if (flush)
-                ps.flush();
+                pw.flush();
         }
 
-        ps.close();
+        pw.close();
+
+        System.out.println("PrintWriter with" + (flush ? "" : "out") + " flushing: ");
     }
+
 
 }
