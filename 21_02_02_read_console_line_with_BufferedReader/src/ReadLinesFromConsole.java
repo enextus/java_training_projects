@@ -20,13 +20,10 @@ public class ReadLinesFromConsole {
                 lstStr.add(arrWords);
             }
 
-            // printWriter(lstStr, flush);
-
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        // System.out.println("Bye!");
         return lstStr;
     }
 
@@ -41,8 +38,6 @@ public class ReadLinesFromConsole {
         }
 
         pw.close();
-
-        System.out.println("Input text was written in to the file with");
     }
 
 }
