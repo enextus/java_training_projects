@@ -3,7 +3,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 
 class Main {
-    // Read multi-line input from console in Java 7 using BufferedReader class
+    // Read multi-line input using BufferedReader class
     public static void main(String[] args) {
         try (InputStreamReader in = new InputStreamReader(System.in);
              BufferedReader buffer = new BufferedReader(in)) {
@@ -15,5 +15,7 @@ class Main {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
+
 }
