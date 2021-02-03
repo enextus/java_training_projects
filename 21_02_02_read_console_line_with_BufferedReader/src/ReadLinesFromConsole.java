@@ -6,12 +6,12 @@ import java.util.List;
 public class ReadLinesFromConsole {
 
     String[] arrWords;
-    boolean flush = true;
+    List<String[]> lstStr;
 
-    public void readAndWrite() {
+    public List<String[]> readAndWrite() {
         try (BufferedReader inBuffer = new BufferedReader(new InputStreamReader(System.in))) {
 
-            List<String[]> lstStr = new ArrayList<>();
+            lstStr = new ArrayList<>();
             String line;
 
             while ((line = inBuffer.readLine()) != null && !line.equals("exit")) {
@@ -20,30 +20,29 @@ public class ReadLinesFromConsole {
                 lstStr.add(arrWords);
             }
 
-            printWriter(lstStr, flush);
+            // printWriter(lstStr, flush);
 
-        } catch (Exception e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
-        System.out.println("Bye!");
+        // System.out.println("Bye!");
+        return lstStr;
     }
 
-    static void printWriter(List<String[]> lstStr, boolean flush) throws IOException {
+    static void printWriter(List<String[]> lstStr) throws IOException {
 
         Writer pw = new PrintWriter("output.txt");
 
         for (String[] elm : lstStr) {
+
             pw.write(Arrays.toString(elm) + " ");
             pw.write("\n");
         }
 
-        if (flush)
-            pw.flush();
-
         pw.close();
 
-        System.out.println("Input text was written in to the file with" + (flush ? "" : "out") + " flushing. ");
+        System.out.println("Input text was written in to the file with");
     }
 
 }
