@@ -36,6 +36,7 @@ public class ReadLinesFromConsole {
 
         for (String[] elm : lstStr) {
             pw.write(Arrays.toString(elm) + " ");
+            pw.write("\n");
         }
 
         if (flush)
