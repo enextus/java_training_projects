@@ -9,7 +9,7 @@ class Main {
 
             String line;
 
-            while ((line = inBuffer.readLine()) != null || !line.equals(("exit"))) {
+            while ((line = inBuffer.readLine()) != null || !line.equals("exit")) {
 
                 String[] tokens = line.split("\\s");
 
