@@ -38,6 +38,7 @@ public class ReadLinesFromConsole {
             }
 
             pw.close();
+
         } finally {
             System.out.println("Write done!");
         }
