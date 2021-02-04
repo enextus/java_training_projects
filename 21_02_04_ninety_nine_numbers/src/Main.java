@@ -12,7 +12,7 @@ public class Main {
         int high = 100;
         int secretNumber = rnd.nextInt(high - low) + low;
 
-        System.out.println("secretNumber: " + secretNumber);
+        System.out.println("SecretNumber: " + secretNumber);
 
         for (int i = 1; i <= 100; i++) {
             if (i == secretNumber)
@@ -23,7 +23,7 @@ public class Main {
 
         Collections.shuffle(intList);
 
-        System.out.println("intList: " + intList);
+        System.out.println("IntList: " + intList);
 
         // _______________________________________________________
 
@@ -33,7 +33,7 @@ public class Main {
             intSetFull.add(i);
         }
 
-        System.out.println("intSetFull: " + intSetFull);
+        System.out.println("IntSetFull: " + intSetFull);
 
         // _______________________________________________________
 
