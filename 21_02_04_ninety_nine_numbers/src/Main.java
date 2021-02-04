@@ -6,11 +6,11 @@ public class Main {
 
         List<Integer> intList = new ArrayList<>();
 
-        Random r = new Random();
+        Random rnd = new Random();
 
         int low = 1;
         int high = 100;
-        int secretNumber = r.nextInt(high - low) + low;
+        int secretNumber = rnd.nextInt(high - low) + low;
 
         System.out.println("secretNumber: " + secretNumber);
 
