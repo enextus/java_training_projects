@@ -12,8 +12,12 @@ public class Main {
         int high = 99;
         int secretNumber = r.nextInt(high - low) + low;
 
+        System.out.println("secretNumber: " + secretNumber);
 
         for (int i = 1; i <= 99; i++) {
+            if (i == secretNumber)
+                continue;
+
             intList.add(i);
         }
 
