@@ -39,7 +39,7 @@ public class Main {
 
         intSetFull.removeAll(intList);
 
-        System.out.println("The secret number was found: " + intSetFull);
+        System.out.println("The secret number was found: " + intSetFull.iterator().next());
     }
 
 }
