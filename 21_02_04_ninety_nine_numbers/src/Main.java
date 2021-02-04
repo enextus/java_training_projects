@@ -9,12 +9,12 @@ public class Main {
         Random r = new Random();
 
         int low = 1;
-        int high = 99;
+        int high = 100;
         int secretNumber = r.nextInt(high - low) + low;
 
         System.out.println("secretNumber: " + secretNumber);
 
-        for (int i = 1; i <= 99; i++) {
+        for (int i = 1; i <= 100; i++) {
             if (i == secretNumber)
                 continue;
 
