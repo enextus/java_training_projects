@@ -37,13 +37,9 @@ public class Main {
 
         // _______________________________________________________
 
-        Set<Integer> intSetShort = new HashSet<>(); // not ordered
-
-
         intSetFull.removeAll(intList);
 
-        System.out.println("1: " + intSetFull);
-
+        System.out.println("The secret number was found: " + intSetFull);
     }
 
 }
