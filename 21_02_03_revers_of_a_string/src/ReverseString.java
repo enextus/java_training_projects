@@ -16,7 +16,7 @@ public class ReverseString {
             res = res + stack.pop();
         }
 
-        return res.toLowerCase(Locale.ROOT);
+        return res;
     }
 
 }
