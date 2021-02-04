@@ -12,7 +12,9 @@ public class CapitalLettersFileAction extends FileAction {
 
     @Override
     protected List<String> perform(List<String> text) {
+        // TODO implement - done
         List<String> res = text;
+
         res.replaceAll(String::toUpperCase);
 
         return res;
