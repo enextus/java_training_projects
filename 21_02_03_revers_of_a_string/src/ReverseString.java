@@ -1,4 +1,4 @@
-import java.util.ArrayDeque;
+import java.util.Locale;
 import java.util.Stack;
 
 public class ReverseString {
@@ -13,12 +13,10 @@ public class ReverseString {
         }
 
         while (!stack.isEmpty()) {
-            res = res + stack.pop().toString().toLowerCase();
+            res = res + stack.pop();
         }
 
-        return res;
+        return res.toLowerCase(Locale.ROOT);
     }
-
-
 
 }
