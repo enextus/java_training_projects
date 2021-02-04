@@ -8,6 +8,7 @@ public class Main {
         List<Integer> intList = new ArrayList<>();
 
         Random r = new Random();
+
         int low = 1;
         int high = 99;
         int secretNumber = r.nextInt(high - low) + low;
@@ -33,11 +34,13 @@ public class Main {
             intSetFull.add(i);
         }
 
-        System.out.println(intSetFull);
+        System.out.println("intSetFull: " + intSetFull);
 
         Set<Integer> intSetShort = new HashSet<>(); // not ordered
 
 
+        // removeAll(Collection c)
+        // retainAll(Collection c)
     }
 
 }
