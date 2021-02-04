@@ -12,6 +12,3 @@ public class Main {
     }
 
 }
-
-
-// TODO - test + War and Peace perewernut.
