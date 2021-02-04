@@ -1,5 +1,8 @@
 package action.action;
 
+import action.FileAction;
+import action.FileOperations;
+
 import java.util.List;
 
 public class CapitalLettersFileAction extends FileAction {

@@ -14,12 +14,14 @@ public abstract class FileAction {
 
 
     /**
-     * The method receives a filename and must read the file into a {@link List} of Strings, calls the 'perform'
-     * method, then writes the result back to the file.
+     * The method receives a filename
+     * and must read the file into a {@link List} of Strings,
+     * calls the 'perform' method,
+     * then writes the result back to the file.
      *
      * @param filename name of the file to handle
      */
     public void handleFile(String filename) {
-//TODO implement here 3 string (exactly 3)
+        //TODO implement here 3 string (exactly 3)
     }
 }
