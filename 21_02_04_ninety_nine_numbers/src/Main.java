@@ -4,7 +4,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-
         List<Integer> intList = new ArrayList<>();
 
         Random r = new Random();
@@ -36,11 +35,15 @@ public class Main {
 
         System.out.println("intSetFull: " + intSetFull);
 
+        // _______________________________________________________
+
         Set<Integer> intSetShort = new HashSet<>(); // not ordered
 
 
-        // removeAll(Collection c)
-        // retainAll(Collection c)
+        System.out.println(intSetFull.removeAll(intList));
+
+        System.out.println(intSetFull.retainAll(intList));
+
     }
 
 }
