@@ -7,6 +7,11 @@ class ReverseStringTest {
     private final ReverseString strReverser = new ReverseString();
 
     @Test
+    void test_reverseString_quotes_vs_quotes() {
+        assertEquals("", strReverser.reverseString(""));
+    }
+
+    @Test
     void test_reverseString_a_vs_a() {
         assertEquals("a", strReverser.reverseString("a"));
     }
