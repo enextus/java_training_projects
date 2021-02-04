@@ -7,6 +7,16 @@ class ReverseStringTest {
     private final ReverseString strReverser = new ReverseString();
 
     @Test
+    void test_reverseString_a_vs_a() {
+        assertEquals("a", strReverser.reverseString("a"));
+    }
+
+    @Test
+    void test_reverseString_a1_vs_1a() {
+        assertEquals("1a", strReverser.reverseString("a1"));
+    }
+
+    @Test
     void test_reverseString_abc_vs_cba() {
         assertEquals("cba", strReverser.reverseString("abc"));
     }
