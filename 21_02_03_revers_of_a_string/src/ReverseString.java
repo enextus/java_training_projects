@@ -1,4 +1,3 @@
-import java.util.Locale;
 import java.util.Stack;
 
 public class ReverseString {

@@ -36,4 +36,10 @@ class ReverseStringTest {
         assertEquals("C b A", strReverser.reverseString("A b C"));
     }
 
+
+    @Test
+    void test_reverseString_alphabet_vs_reversed_alphabet() {
+        assertEquals("ZYXWVUTSRQPONMLKJIHGFEDCBA", strReverser.reverseString("ABCDEFGHIJKLMNOPQRSTUVWXYZ"));
+    }
+
 }
