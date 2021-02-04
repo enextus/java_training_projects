@@ -27,6 +27,9 @@ public abstract class FileAction {
         List<String> lstOfStr = fileOperations.readToList(filename);
 
 
+        // public void writeList(List<String> text, String filename)
+        fileOperations.writeList(filename);
+
 
         //TODO implement here 3 string (exactly 3)
     }
