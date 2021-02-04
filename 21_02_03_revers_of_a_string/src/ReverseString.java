@@ -1,10 +1,10 @@
-import java.util.Stack;
+import java.util.ArrayDeque;
 
 public class ReverseString {
 
     public String reverseString(String str) {
 
-        Stack<Character> stack = new Stack<>();
+        ArrayDeque<Character> stack = new ArrayDeque<>();
         String result = "";
 
         for (Character character : str.toCharArray()) {
