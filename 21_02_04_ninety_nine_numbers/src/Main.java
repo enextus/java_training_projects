@@ -40,9 +40,9 @@ public class Main {
         Set<Integer> intSetShort = new HashSet<>(); // not ordered
 
 
-        System.out.println(intSetFull.removeAll(intList));
+        intSetFull.removeAll(intList);
 
-        System.out.println(intSetFull.retainAll(intList));
+        System.out.println("1: " + intSetFull);
 
     }
 
