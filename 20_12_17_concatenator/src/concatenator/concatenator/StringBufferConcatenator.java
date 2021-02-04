@@ -4,6 +4,7 @@ import concatenator.IConcatenator;
 
 public class StringBufferConcatenator implements IConcatenator {
 
+
     @Override
     public void concatenate(String[] arrayToConcatenate) {
 
