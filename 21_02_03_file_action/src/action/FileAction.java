@@ -23,6 +23,7 @@ public abstract class FileAction {
      * @param filename name of the file to handle
      */
     public void handleFile(String filename) throws IOException {
+
         //TODO implement here 3 string (exactly 3) - done
         List<String> lstOfStr = fileOperations.readToList(filename);
 
