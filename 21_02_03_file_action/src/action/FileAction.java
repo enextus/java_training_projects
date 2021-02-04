@@ -27,7 +27,9 @@ public abstract class FileAction {
         //TODO implement here 3 string (exactly 3) - done
         List<String> lstOfStr = fileOperations.readToList(filename);
 
-        fileOperations.writeList(perform(lstOfStr), filename);
+        List<String> rework = perform(lstOfStr);
+
+        fileOperations.writeList(rework, filename);
     }
 
 }

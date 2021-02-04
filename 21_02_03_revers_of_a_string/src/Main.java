@@ -8,7 +8,7 @@ public class Main {
 
         strToReverse = "А роза упала на лапу Азора";
 
-        System.out.println("Result: " + strReverser.reverseString(strToReverse.toLowerCase()));
+        System.out.println("Result: " + strReverser.reverseString(strToReverse));
     }
 
 }
