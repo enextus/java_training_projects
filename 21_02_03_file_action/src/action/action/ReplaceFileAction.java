@@ -25,7 +25,8 @@ public class ReplaceFileAction extends FileAction {
      */
     @Override
     protected List<String> perform(List<String> text) {
-        //TODO implement
+
+        //TODO implement - done
         List<String> res = new ArrayList<>();
 
         for (String string : text) {
