@@ -13,10 +13,12 @@ public class ReverseString {
         }
 
         while (!stack.isEmpty()) {
-            res = res + stack.pop();
+            res = res + stack.pop().toString().toLowerCase();
         }
 
         return res;
     }
+
+
 
 }
