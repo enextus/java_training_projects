@@ -21,11 +21,9 @@ class FindTheLostNumberTest {
 
     @Test
     void test_findTheLostNumber_value() {
-
         Integer expected = findTheLostNumber.getLostNUmber();
         List<Integer> list = findTheLostNumber.generateTheList();
         Set<Integer> set = findTheLostNumber.generateAHundredNumbers();
-
 
         assertEquals(expected, findTheLostNumber.findTheLostNumber(set, list));
     }
