@@ -5,7 +5,7 @@ class MyRunnable implements Runnable {
 
     MyRunnable() {
         // second
-        thread = new Thread(this, "test thread");
+        thread = new Thread(this, "first thread");
         System.out.println(TAG + "first thread " + thread);
         thread.start(); // start of thread
     }
