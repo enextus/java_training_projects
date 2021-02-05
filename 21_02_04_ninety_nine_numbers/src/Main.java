@@ -25,7 +25,7 @@ public class Main {
 
         Integer res = findTheLostNumber.findTheLostNumber(intSetFull, intList);
 
-        System.out.println("The secret number was found: " + res);
+        System.out.println("The lost number was found: " + res);
     }
 
 }

@@ -22,9 +22,9 @@ public class FindTheLostNumber {
         Random rnd = new Random();
         int low = 1;
         int high = 100;
-        int secretNumber = rnd.nextInt(high - low) + low;
+        int lostNumber = rnd.nextInt(high - low) + low;
 
-        return secretNumber;
+        return lostNumber;
     }
 
     List<Integer> generateTheList() {
