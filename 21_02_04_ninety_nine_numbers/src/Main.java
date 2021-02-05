@@ -19,9 +19,9 @@ public class Main {
 
         // _______________________________________________________
 
-        intSetFull.removeAll(intList);
+       Integer res = findTheLostNumber.findTheLostNumber(intSetFull, intList);
 
-        System.out.println("The secret number was found: " + intSetFull.iterator().next());
+        System.out.println("The secret number was found: " + res);
     }
 
 }
