@@ -16,4 +16,11 @@ class FindTheLostNumberTest {
         assertEquals(100, findTheLostNumber.generateAHundredNumbers().size());
     }
 
+    @Test
+    void test_findTheLostNumber_value() {
+
+        findTheLostNumber
+
+        assertEquals(100, findTheLostNumber.generateAHundredNumbers().size());
+    }
 }

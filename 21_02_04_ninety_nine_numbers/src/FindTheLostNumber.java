@@ -2,6 +2,16 @@ import java.util.*;
 
 public class FindTheLostNumber {
 
+    Integer lostNUmber;
+
+    public FindTheLostNumber() {
+        this.lostNUmber = generateTheLostNumber();
+    }
+
+    public Integer getLostNUmber() {
+        return lostNUmber;
+    }
+
     public Integer findTheLostNumber(Set<Integer> intSetFull, List<Integer> intList) {
 
         intSetFull.removeAll(intList);
@@ -9,16 +19,21 @@ public class FindTheLostNumber {
         return intSetFull.iterator().next();
     }
 
-    List<Integer> generateTheList() {
-
-        List<Integer> intList = new ArrayList<>();
+    Integer generateTheLostNumber() {
         Random rnd = new Random();
         int low = 1;
         int high = 100;
         int secretNumber = rnd.nextInt(high - low) + low;
 
+        return secretNumber;
+    }
+
+    List<Integer> generateTheList() {
+
+        List<Integer> intList = new ArrayList<>();
+
         for (int i = 1; i <= 100; i++) {
-            if (i == secretNumber)
+            if (i == getLostNUmber())
                 continue;
 
             intList.add(i);
