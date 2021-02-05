@@ -4,10 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Date date = new Date();
-        long timeMilli = date.getTime();
-
-        MyRunnable myr = new MyRunnable(timeMilli);
+        MyRunnable myr = new MyRunnable(new Date().getTime());
 
         Thread thr1 = new Thread(myr);
         thr1.start();
