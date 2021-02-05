@@ -2,7 +2,7 @@ import java.util.*;
 
 public class FindTheLostNumber {
 
-    Integer lostNUmber;
+    private final Integer lostNUmber;
 
     public FindTheLostNumber() {
         this.lostNUmber = generateTheLostNumber();
