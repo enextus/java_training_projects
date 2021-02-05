@@ -17,12 +17,12 @@ class MyRunnable implements Runnable {
 
         try {
             for (int i = 5; i > 0; i--) {
-                System.out.println(TAG + "second thread: " + i);
+                System.out.println(TAG + "thread: " + i);
                 Thread.sleep(5);
             }
         } catch (InterruptedException e) {
             System.out.println("e: " + e + "\n");
-            System.out.println(TAG + "second thread was break");
+            System.out.println(TAG + "thread was broken");
             // break;
         }
     }
