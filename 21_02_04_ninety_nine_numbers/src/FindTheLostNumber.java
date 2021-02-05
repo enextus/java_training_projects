@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class FindTheLostNumber {
 
@@ -23,6 +20,17 @@ public class FindTheLostNumber {
         Collections.shuffle(intList);
 
         return intList;
+    }
+
+    Set<Integer> generateAHundredNumbers() {
+
+        Set<Integer> intSetFull = new TreeSet<>(); // ordered
+
+        for (int i = 1; i <= 100; i++) {
+            intSetFull.add(i);
+        }
+
+        return intSetFull;
     }
 
 

@@ -1,6 +1,5 @@
 import java.util.List;
 import java.util.Set;
-import java.util.TreeSet;
 
 public class Main {
 
@@ -14,11 +13,7 @@ public class Main {
 
         // _______________________________________________________
 
-        Set<Integer> intSetFull = new TreeSet<>(); // ordered
-
-        for (int i = 1; i <= 100; i++) {
-            intSetFull.add(i);
-        }
+        Set<Integer> intSetFull = findTheLostNumber.generateAHundredNumbers();
 
         System.out.println("IntSetFull: " + intSetFull);
 
