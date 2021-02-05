@@ -3,17 +3,17 @@ class MyRunnable implements Runnable {
     Thread thread;
     final String tag = "21-02-05 - ";
 
-    MyRunnable() {
+/*    MyRunnable() {
         // second
         thread = new Thread(this, "first thread");
         System.out.println(tag + "first thread " + thread + "\n");
         thread.start(); // start of first thread
-    }
+    }*/
 
     @Override
     public void run() {
 
-        System.out.println("Start 2. thread: ");
+        System.out.println("Start thread: ");
 
         try {
             for (int i = 3; i > 0; i--) {
