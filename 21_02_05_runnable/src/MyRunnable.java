@@ -6,9 +6,8 @@ class MyRunnable implements Runnable {
     final String tag = "21-02-05 - ";
     long startTime;
 
-
     public MyRunnable(long startTime) {
-        this.startTime = new Date().getTime();
+        this.startTime = getStartTime();
 
         // second
         // thread = new Thread(this, "first thread");
@@ -17,7 +16,7 @@ class MyRunnable implements Runnable {
     }
 
     public long getStartTime() {
-        return startTime;
+        return new Date().getTime();
     }
 
     @Override
