@@ -39,4 +39,5 @@ class FindTheLostNumberTest {
 
         assertEquals(expected, findTheLostNumber.findTheLostNumber(set, list));
     }
+
 }
