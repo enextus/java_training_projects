@@ -1,7 +1,7 @@
 class MyRunnable implements Runnable {
 
     Thread thread;
-    final String tag = "Some TAG here - ";
+    final String tag = "21-02-05 - ";
 
     MyRunnable() {
         // second
@@ -13,7 +13,7 @@ class MyRunnable implements Runnable {
     @Override
     public void run() {
 
-        System.out.println("Start thread: ");
+        System.out.println("Start 2. thread: ");
 
         try {
             for (int i = 5; i > 0; i--) {
