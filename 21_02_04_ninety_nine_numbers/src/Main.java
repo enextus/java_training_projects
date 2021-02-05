@@ -6,9 +6,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        FindTheSecretNumber ftsn = new FindTheSecretNumber();
+        FindTheSecretNumber findTheSecretNumber = new FindTheSecretNumber();
 
-        List<Integer> intList = ftsn.generateTheList();
+        List<Integer> intList = findTheSecretNumber.generateTheList();
 
         System.out.println("IntList: " + intList);
 

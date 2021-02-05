@@ -1,6 +1,6 @@
 import org.junit.jupiter.api.Test;
 
-class FindTheSecretNumberTest {
+class FindTheLostNumberTest {
 
     @Test
     void generateTheList() {
