@@ -2,6 +2,13 @@ import java.util.*;
 
 public class FindTheLostNumber {
 
+    public Integer findTheLostNumber(Set<Integer> intSetFull, List<Integer> intList) {
+
+        intSetFull.removeAll(intList);
+
+        return intSetFull.iterator().next();
+    }
+
     List<Integer> generateTheList() {
 
         List<Integer> intList = new ArrayList<>();
@@ -32,6 +39,5 @@ public class FindTheLostNumber {
 
         return intSetFull;
     }
-
 
 }
