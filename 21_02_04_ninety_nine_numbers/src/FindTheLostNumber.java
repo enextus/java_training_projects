@@ -8,7 +8,7 @@ public class FindTheLostNumber {
         this.lostNUmber = generateTheLostNumber();
     }
 
-    public Integer getLostNUmber() {
+    Integer getLostNUmber() {
         return lostNUmber;
     }
 
