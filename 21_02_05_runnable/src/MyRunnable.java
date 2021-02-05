@@ -1,24 +1,28 @@
 
 class MyRunnable implements Runnable {
-    Thread thread;
 
-    // Конструктор
+    Thread thread;
+    final String TAG = "testTag ";
+
     MyRunnable() {
-        // Создаём новый второй поток
-        thread = new Thread(this, "Поток для примера");
-        Log.i(TAG, "Создан второй поток " + thread);
-        thread.start(); // Запускаем поток
+        // second
+        thread = new Thread(this, "test thread");
+        System.out.println(TAG + "first thread " + thread);
+        thread.start(); // start of thread
     }
 
-    // Обязательный метод для интерфейса Runnable
     public void run() {
         try {
             for (int i = 5; i > 0; i--) {
-                Log.i(TAG, "Второй поток: " + i);
+
+
+                System.out.println(TAG + "second thread: " + i);
+
                 Thread.sleep(500);
             }
         } catch (InterruptedException e) {
-            Log.i(TAG, "Второй поток прерван");
+            System.out.println(TAG + "second thread was break");
         }
     }
+
 }
