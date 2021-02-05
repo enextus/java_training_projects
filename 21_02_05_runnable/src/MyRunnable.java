@@ -1,4 +1,3 @@
-
 class MyRunnable implements Runnable {
 
     Thread thread;
@@ -14,11 +13,8 @@ class MyRunnable implements Runnable {
     public void run() {
         try {
             for (int i = 5; i > 0; i--) {
-
-
                 System.out.println(TAG + "second thread: " + i);
-
-                Thread.sleep(500);
+                Thread.sleep(5);
             }
         } catch (InterruptedException e) {
             System.out.println(TAG + "second thread was break");
