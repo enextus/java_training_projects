@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class FindTheSecretNumber {
 
-    public List<Integer> generateTheList(){
+    List<Integer> generateTheList() {
 
         List<Integer> intList = new ArrayList<>();
         Random rnd = new Random();
@@ -24,4 +24,6 @@ public class FindTheSecretNumber {
 
         return intList;
     }
+
+    
 }

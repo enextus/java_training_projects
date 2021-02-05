@@ -1,27 +1,14 @@
-import java.util.*;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        List<Integer> intList = new ArrayList<>();
+        FindTheSecretNumber ftsn = new FindTheSecretNumber();
 
-        Random rnd = new Random();
-
-        int low = 1;
-        int high = 100;
-        int secretNumber = rnd.nextInt(high - low) + low;
-
-        System.out.println("SecretNumber: " + secretNumber);
-
-        for (int i = 1; i <= 100; i++) {
-            if (i == secretNumber)
-                continue;
-
-            intList.add(i);
-        }
-
-        Collections.shuffle(intList);
+        List<Integer> intList = ftsn.generateTheList();
 
         System.out.println("IntList: " + intList);
 
