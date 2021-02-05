@@ -20,10 +20,11 @@ class MyRunnable implements Runnable {
 
             for (int i = 3; i > 0; i--) {
                 System.out.println(tag + "loop number " + i + ", time: " + getStartTime());
-                Thread.sleep(50);
-
-
+                Thread.sleep(500);
             }
+
+            System.out.println("End thread.");
+
         } catch (InterruptedException e) {
             System.out.println("e: " + e + "\n");
             System.out.println(tag + "thread was broken");
