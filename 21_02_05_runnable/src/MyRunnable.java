@@ -16,7 +16,7 @@ class MyRunnable implements Runnable {
         System.out.println("Start 2. thread: ");
 
         try {
-            for (int i = 5; i > 0; i--) {
+            for (int i = 3; i > 0; i--) {
                 System.out.println(tag + "thread: " + i);
                 Thread.sleep(5);
             }
