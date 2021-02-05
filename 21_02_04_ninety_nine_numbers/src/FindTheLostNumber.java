@@ -29,7 +29,6 @@ public class FindTheLostNumber {
     }
 
     List<Integer> generateTheList() {
-
         List<Integer> intList = new ArrayList<>();
 
         for (int i = 1; i <= 100; i++) {
@@ -45,7 +44,6 @@ public class FindTheLostNumber {
     }
 
     Set<Integer> generateAHundredNumbers() {
-
         Set<Integer> intSetFull = new TreeSet<>(); // ordered
 
         for (int i = 1; i <= 100; i++) {
