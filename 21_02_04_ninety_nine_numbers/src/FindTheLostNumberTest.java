@@ -1,5 +1,8 @@
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+import java.util.Set;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class FindTheLostNumberTest {
@@ -20,7 +23,10 @@ class FindTheLostNumberTest {
     void test_findTheLostNumber_value() {
 
         Integer expected = findTheLostNumber.getLostNUmber();
+        List<Integer> list = findTheLostNumber.generateTheList();
+        Set<Integer> set = findTheLostNumber.generateAHundredNumbers();
 
-        assertEquals(expected, findTheLostNumber.generateAHundredNumbers().size());
+
+        assertEquals(expected, findTheLostNumber.findTheLostNumber(set, list));
     }
 }
