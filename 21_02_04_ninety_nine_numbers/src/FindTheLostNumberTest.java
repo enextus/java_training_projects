@@ -19,8 +19,8 @@ class FindTheLostNumberTest {
     @Test
     void test_findTheLostNumber_value() {
 
-        findTheLostNumber
+        Integer expected = findTheLostNumber.getLostNUmber();
 
-        assertEquals(100, findTheLostNumber.generateAHundredNumbers().size());
+        assertEquals(expected, findTheLostNumber.generateAHundredNumbers().size());
     }
 }
