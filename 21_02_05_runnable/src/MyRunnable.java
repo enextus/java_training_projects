@@ -10,7 +10,11 @@ class MyRunnable implements Runnable {
         thread.start(); // start of thread
     }
 
+    @Override
     public void run() {
+
+        System.out.println("Start second thread: ");
+
         try {
             for (int i = 5; i > 0; i--) {
                 System.out.println(TAG + "second thread: " + i);
@@ -18,6 +22,7 @@ class MyRunnable implements Runnable {
             }
         } catch (InterruptedException e) {
             System.out.println(TAG + "second thread was break");
+            // break;
         }
     }
 
