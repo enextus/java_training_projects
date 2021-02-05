@@ -12,11 +12,11 @@ class FindTheLostNumberTest {
 
     @Test
     void test_generateTheLostNumber_size() {
-        Integer mynum = findTheLostNumber.generateTheLostNumber();
+        Integer myNum = findTheLostNumber.generateTheLostNumber();
         int min = 1;
         int max = 100;
 
-        assertTrue(min <= mynum && mynum <= max);
+        assertTrue(min <= myNum && myNum <= max);
     }
 
     @Test
