@@ -1,8 +1,13 @@
+import java.util.Date;
+
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {
 
-        MyRunnable myr = new MyRunnable();
+        Date date = new Date();
+        long timeMilli = date.getTime();
+
+        MyRunnable myr = new MyRunnable(timeMilli);
 
         Thread thr1 = new Thread(myr);
         thr1.start();
