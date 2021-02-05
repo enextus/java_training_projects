@@ -2,7 +2,7 @@ import java.util.Date;
 
 public class Main {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
 
         Date date = new Date();
         long timeMilli = date.getTime();
@@ -12,7 +12,7 @@ public class Main {
         Thread thr1 = new Thread(myr);
         thr1.start();
 
-        Thread childTread = new Thread(myr);
+        /*Thread childTread = new Thread(myr);
         childTread.start();
 
         for (int i = 0; i < 3; i++) {
@@ -20,7 +20,7 @@ public class Main {
             Thread.sleep(1000);
         }
 
-        childTread.join();
+        childTread.join();*/
         System.out.println("End");
     }
 
