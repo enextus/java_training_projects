@@ -1,4 +1,9 @@
+
 public class CharThread extends Thread {
+
+    public static class instanceCounter {
+     //
+    }
 
     final int times;
     final int commonNumber;
