@@ -6,9 +6,12 @@ public class App_dev {
 
         // __________________________________________________________________
 
-        MyCharThread myOwnThread = new MyCharThread(3, "Аксенов");
+        MyCharThread myOwnThread0 = new MyCharThread(3, "Аксенов");
+
+        //MyCharThread.listOfTarakans.add(myOwnThread0);
+
         // realise Thread with JAVA implementation and our MyCharThread class
-        Thread threadRes = new Thread(myOwnThread);
+        Thread threadRes = new Thread(myOwnThread0);
 
         // start of our thread
         threadRes.start();
@@ -22,9 +25,9 @@ public class App_dev {
 
         // __________________________________________________________________
 
-        MyCharThread hath1 = new MyCharThread(3, "Солженицын");
+        MyCharThread myOwnThread1 = new MyCharThread(3, "Солженицын");
         // realise Thread with JAVA implementation and our MyCharThread class
-        Thread threadRes1 = new Thread(hath1);
+        Thread threadRes1 = new Thread(myOwnThread1);
 
         // start of our thread
         threadRes1.start();
@@ -38,9 +41,9 @@ public class App_dev {
 
         // __________________________________________________________________
 
-        MyCharThread hath2 = new MyCharThread(3, "Щаранский");
+        MyCharThread myOwnThread2 = new MyCharThread(3, "Щаранский");
         // realise Thread with JAVA implementation and our MyCharThread class
-        Thread threadRes2 = new Thread(hath2);
+        Thread threadRes2 = new Thread(myOwnThread2);
 
         // start of our thread
         threadRes2.start();

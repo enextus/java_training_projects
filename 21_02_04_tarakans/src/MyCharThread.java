@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
@@ -7,7 +8,7 @@ public class MyCharThread extends Thread implements Comparable<MyCharThread> {
     public static int callCount = 0;
     public static long classCreationTime = 0;
 
-    public static List<MyCharThread> listOfTarakans;
+    public static List<MyCharThread> listOfTarakans = new ArrayList<>();
 
     // This static block will be executed if the class CharThread will be loaded by JVM;
     static {
@@ -15,8 +16,6 @@ public class MyCharThread extends Thread implements Comparable<MyCharThread> {
         setClassCreationTime(classCreationTime);
 
         System.out.println("0. - " + classCreationTime + " - was executed.\n");
-
-        listOfTarakans = null;
     }
 
     // This non-static block will be executed if an instance will be created;
