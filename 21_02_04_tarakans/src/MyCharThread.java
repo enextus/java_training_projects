@@ -78,7 +78,6 @@ public class MyCharThread extends Thread implements Comparable<MyCharThread> {
 
     @Override
     public int compareTo(MyCharThread other) {
-
         return this.wholeTimeForAllTimes - other.wholeTimeForAllTimes;
     }
 
