@@ -63,9 +63,8 @@ public class MyCharThread extends Thread implements Comparable<MyCharThread> {
 
     @Override
     public void run() {
-
         // Here is the logic of not-main thread!!!
-        System.out.println("Start CharThread.");
+        // System.out.println("Start CharThread.");
 
         for (int i = 0; i < this.times; i++) {
 
@@ -79,9 +78,16 @@ public class MyCharThread extends Thread implements Comparable<MyCharThread> {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+
         }
 
-        System.out.println("Whole time: " + this.getWholeTimeForAllTimes() + " milliseconds");
+        System.out.println("----------->    Whole time: " + this.getWholeTimeForAllTimes() + " milliseconds");
+
+        System.out.println(this.getWholeTimeForAllTimes());
+        System.out.println(this.getCommonNumber());
+        System.out.println(this.getNickname());
+        System.out.println(this.getState());
+        System.out.println();
     }
 
     @Override
