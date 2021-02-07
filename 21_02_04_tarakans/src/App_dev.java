@@ -28,10 +28,10 @@ public class App_dev {
         threadRes1.start();
 
         // get parameters
-        System.out.println("threadRes1.getName(): " + threadRes1.getName());
+/*        System.out.println("threadRes1.getName(): " + threadRes1.getName());
         System.out.println("threadRes1.getId(): " + threadRes1.getId());
         System.out.println("threadRes1.getState(): " + threadRes1.getState());
-        System.out.println("threadRes1.getPriority(): " + threadRes1.getPriority());
+        System.out.println("threadRes1.getPriority(): " + threadRes1.getPriority());*/
         System.out.println();
 
         // __________________________________________________________________
@@ -44,20 +44,12 @@ public class App_dev {
         threadRes2.start();
 
         // get parameters
-        System.out.println("threadRes2.getName(): " + threadRes2.getName());
+/*        System.out.println("threadRes2.getName(): " + threadRes2.getName());
         System.out.println("threadRes2.getId(): " + threadRes2.getId());
         System.out.println("threadRes2.getState(): " + threadRes2.getState());
-        System.out.println("threadRes2.getPriority(): " + threadRes2.getPriority());
+        System.out.println("threadRes2.getPriority(): " + threadRes2.getPriority());*/
         System.out.println();
 
-/*      // __________________________________________________________________
-
-        MyCharThread hath3 = new MyCharThread(1, '~');
-        // realise Thread with JAVA implementation and our MyCharThread class
-        Thread threadRes3 = new Thread(hath3);
-
-        // start of our thread
-        threadRes3.start();*/
     }
 
 }
