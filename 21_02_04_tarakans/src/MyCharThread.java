@@ -1,5 +1,4 @@
 import java.util.Date;
-import java.util.Random;
 
 public class MyCharThread extends Thread {
 
@@ -45,29 +44,24 @@ public class MyCharThread extends Thread {
         return this.commonNumber;
     }
 
-    static int randInt() {
-        int min = 50;
-        int max = 100;
 
-        Random rand = null;
-
-        return rand.nextInt((max - min) + 1) + min;
-    }
 
     @Override
     public void run() {
+
+        IntRandomNumberGenerator timeSequenceGenerator = new IntRandomNumberGenerator(50, 100);
 
         // Here is the logic of not-main thread!!!
         System.out.println("Start CharThread.");
 
         for (int i = 0; i < times; i++) {
 
-            int timeNeededForOneCm;
 
             System.out.println("commonNumber: " + getCommonNumber());
             System.out.println("ch: " + getCh());
 
-            timeNeededForOneCm = randInt();
+
+            int timeNeededForOneCm = timeSequenceGenerator.nextInt();
 
             System.out.println("timeNeededForOneCm: " + timeNeededForOneCm + " milliseconds");
 
