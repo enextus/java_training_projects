@@ -31,9 +31,9 @@ public class CharThread extends Thread {
         // Here is the logic of not-main thread
         System.out.println("Start CharThread");
         for (int i = 0; i < times; i++) {
-            System.out.println(times);
+
+            System.out.println("commonNumber: " + commonNumber);
             System.out.println(ch);
-            System.out.println(commonNumber);
 
             try {
                 Thread.sleep(100);
