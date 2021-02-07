@@ -51,7 +51,6 @@ public class MyCharThread extends Thread {
 
         Random rand = null;
 
-        assert rand != null;
         return rand.nextInt((max - min) + 1) + min;
     }
 

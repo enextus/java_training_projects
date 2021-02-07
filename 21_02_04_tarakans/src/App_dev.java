@@ -12,10 +12,10 @@ public class App_dev {
         threadRes.start();
 
         // get parameters
-        System.out.println("threadRes.getName(): " + threadRes.getName());
+/*        System.out.println("threadRes.getName(): " + threadRes.getName());
         System.out.println("threadRes.getId(): " + threadRes.getId());
         System.out.println("threadRes.getState(): " + threadRes.getState());
-        System.out.println("threadRes.getPriority(): " + threadRes.getPriority());
+        System.out.println("threadRes.getPriority(): " + threadRes.getPriority());*/
         System.out.println();
 
         // __________________________________________________________________
