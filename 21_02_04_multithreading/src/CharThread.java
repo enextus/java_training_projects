@@ -53,7 +53,6 @@ public class CharThread extends Thread {
                 e.printStackTrace();
             }
         }
-
     }
 
 }
