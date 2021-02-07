@@ -1,6 +1,6 @@
 import java.util.List;
 
-class ListThread extends Thread {
+class ListThread extends Thread implements Comparable<ListThread> {
     private static String items[] = {"A", "B", "C", "D"};
     private List<String> list;
     private String name;
@@ -27,4 +27,9 @@ class ListThread extends Thread {
         }
     }
 
+    @Override
+    public int compareTo(ListThread other) {
+        // return this. - other.;
+        return 0;
+    }
 }

@@ -5,7 +5,7 @@ public class ThreadWork {
 
     public static void main(String[] args) {
 
-        int count = 5;
+        int count = 10;
         Thread[] threads = new ListThread[count];
         List<String> masterList = new Vector<String>();
 
