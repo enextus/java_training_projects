@@ -1,10 +1,30 @@
+import java.util.Collections;
+
 public class App_dev {
 
+/*    static void newPerson() {
+
+        PersonComparable personComparable1 = new PersonComparable(10);
+        PersonComparable personComparable2 = new PersonComparable(1);
+        PersonComparable personComparable3 = new PersonComparable(100);
+        PersonComparable personComparable4 = new PersonComparable(56);
+        PersonComparable personComparable5 = new PersonComparable(32);
+        PersonComparable personComparable6 = new PersonComparable(33);
+
+        Set<PersonComparable> set = new TreeSet<>();
+
+        set.add(personComparable1);
+        set.add(personComparable2);
+        set.add(personComparable3);
+        set.add(personComparable4);
+        set.add(personComparable5);
+        set.add(personComparable6);
+
+        for (Object o : set)
+            System.out.println(o);
+    }*/
+
     public static void main(String[] args) {
-
-
-
-
 
 /*        List<News> news = Arrays.asList(
                 new News("Hello world", 9),
@@ -16,24 +36,6 @@ public class App_dev {
         Arrays.sort(news.toArray());
 
         System.out.println(news);
-
-
-
-
-
-
-
-            @Override
-    public int compareTo(PersonComparable other) {
-        return this.getAge() - other.getAge();
-    }
-
-
-
-
-
-
-
 
 
 
@@ -98,6 +100,16 @@ public class App_dev {
         MyCharThread myOwnThread9 = new MyCharThread(10, "Березовский");
         Thread threadRes9 = new Thread(myOwnThread9);
         threadRes9.start();
+
+        // ____________________________________________________________________________________________
+
+        Collections.sort(MyCharThread.getListOfTarakans());
+        System.out.println(MyCharThread.getListOfTarakans());
+
+        for (MyCharThread tarakan : MyCharThread.listOfTarakans) {
+            System.out.println(tarakan);
+        }
+
     }
 
 }

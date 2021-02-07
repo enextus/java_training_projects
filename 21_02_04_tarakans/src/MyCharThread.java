@@ -1,14 +1,9 @@
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class MyCharThread extends Thread implements Comparable<MyCharThread> {
 
     public static int callCount = 0;
     public static long classCreationTime = 0;
-
-    public static List<MyCharThread> listOfTarakans = new ArrayList<>();
 
     static {
         final long classCreationTime = new Date().getTime();
@@ -18,6 +13,8 @@ public class MyCharThread extends Thread implements Comparable<MyCharThread> {
     {
         callCount += 1;
     }
+
+    public static List<MyCharThread> listOfTarakans = new ArrayList<>();
 
     final int times;
     final String nickname;
@@ -71,13 +68,20 @@ public class MyCharThread extends Thread implements Comparable<MyCharThread> {
             }
         }
 
-        System.out.println("Nickname: " + this.getNickname() + ", Time: " + this.getWholeTimeForAllTimes() + " milliseconds.");
+        // System.out.println("Nickname: " + this.getNickname() + ", Time: " + this.getWholeTimeForAllTimes() + " milliseconds.");
         MyCharThread.listOfTarakans.add(this);
 
-/*        for (MyCharThread tarakan : MyCharThread.listOfTarakans
-        ) {
-            System.out.println(tarakan);
+        System.out.println("Size: " + MyCharThread.listOfTarakans.size());
+
+/*        Iterator<MyCharThread> iter = MyCharThread.listOfTarakans.iterator();
+        while (iter.hasNext()){
+            System.out.print(iter.next() + " ");
         }*/
+
+    }
+
+    public static List<MyCharThread> getListOfTarakans() {
+        return listOfTarakans;
     }
 
     @Override
