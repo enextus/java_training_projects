@@ -1,7 +1,7 @@
 import java.util.Collections;
 import java.util.List;
 
-public class App_dev {
+public class ThreadWork {
 
 /*    static void newPerson() {
 
