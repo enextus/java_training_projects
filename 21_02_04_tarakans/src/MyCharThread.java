@@ -54,11 +54,11 @@ public class MyCharThread extends Thread implements Comparable<MyCharThread> {
     }
 
     public String getNickname() {
-        return this.nickname;
+        return nickname;
     }
 
     public int getCommonNumber() {
-        return this.commonNumber;
+        return commonNumber;
     }
 
     @Override
