@@ -1,10 +1,8 @@
-import java.util.List;
-
 public class App_dev {
 
     public static void main(String[] args) {
 
-        MyCharThread myOwnThread0 = new MyCharThread(3, "Аксенов");
+        MyCharThread myOwnThread0 = new MyCharThread(10, "Аксенов");
         MyCharThread.listOfTarakans.add(myOwnThread0);
 
         // realise Thread with JAVA implementation and our MyCharThread class
@@ -15,7 +13,7 @@ public class App_dev {
 
         System.out.println();
 
-        MyCharThread myOwnThread1 = new MyCharThread(3, "Солженицын");
+        MyCharThread myOwnThread1 = new MyCharThread(10, "Солженицын");
         MyCharThread.listOfTarakans.add(myOwnThread1);
 
         // realise Thread with JAVA implementation and our MyCharThread class
@@ -24,7 +22,7 @@ public class App_dev {
         // start of our thread
         threadRes1.start();
 
-        MyCharThread myOwnThread2 = new MyCharThread(3, "Щаранский");
+        MyCharThread myOwnThread2 = new MyCharThread(10, "Щаранский");
         MyCharThread.listOfTarakans.add(myOwnThread2);
 
         // realise Thread with JAVA implementation and our MyCharThread class
@@ -32,8 +30,6 @@ public class App_dev {
 
         // start of our thread
         threadRes2.start();
-
-        System.out.println("MyCharThread.listOfTarakans.size(): " + MyCharThread.listOfTarakans.size());
     }
 
 }

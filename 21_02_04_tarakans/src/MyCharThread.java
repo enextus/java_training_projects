@@ -15,7 +15,7 @@ public class MyCharThread extends Thread implements Comparable<MyCharThread> {
         final long classCreationTime = new Date().getTime();
         setClassCreationTime(classCreationTime);
 
-        System.out.println("0. - " + classCreationTime + " - was executed.\n");
+        // System.out.println("0. - " + classCreationTime + " - was executed.\n");
     }
 
     // This non-static block will be executed if an instance will be created;
@@ -77,9 +77,7 @@ public class MyCharThread extends Thread implements Comparable<MyCharThread> {
 
         }
 
-        System.out.println("__________________________________________________________________");
         System.out.println(this.getNickname() + " - " + this.getWholeTimeForAllTimes() + " milliseconds.");
-
     }
 
     @Override
