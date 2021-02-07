@@ -77,15 +77,15 @@ public class MyCharThread extends Thread implements Comparable<MyCharThread> {
 
         }
 
-        System.out.println(this.getNickname() + ", " + this.getWholeTimeForAllTimes());
-        System.out.println(this.getCommonNumber());
-        System.out.println();
+        System.out.println("__________________________________________________________________");
+        System.out.println(this.getNickname() + " - " + this.getWholeTimeForAllTimes() + " milliseconds.");
+
     }
 
     @Override
     public int compareTo(MyCharThread other) {
 
-        return other.wholeTimeForAllTimes - this.wholeTimeForAllTimes;
+        return this.wholeTimeForAllTimes - other.wholeTimeForAllTimes;
     }
 
     @Override

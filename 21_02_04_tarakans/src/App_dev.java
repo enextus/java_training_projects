@@ -34,15 +34,6 @@ public class App_dev {
         threadRes2.start();
 
         System.out.println("MyCharThread.listOfTarakans.size(): " + MyCharThread.listOfTarakans.size());
-
-        List<MyCharThread> temp = MyCharThread.listOfTarakans;
-
-        for (MyCharThread tarakan : temp) {
-
-            System.out.println("1. here");
-            System.out.println(tarakan);
-            System.out.println("2. here");
-        }
     }
 
 }
