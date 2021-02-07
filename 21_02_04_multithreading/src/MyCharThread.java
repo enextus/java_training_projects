@@ -1,17 +1,18 @@
+import java.util.Date;
+
 public class MyCharThread extends Thread {
 
     public static int callCount = 0;
-
-    public static int getCallCount() {
-        return callCount;
-    }
+    public static long classCreationTime = 0;
 
     // This static block will be executed if the class CharThread will be loaded by JVM;
     static {
-        System.out.println("0. here was executed.\n");
+        final long classCreationTime = new Date().getTime();
+        setClassCreationTime(classCreationTime);
+
+        System.out.println("0. - " + classCreationTime + " - was executed.\n");
     }
 
-    // Instead of performing increment in the constructor instance block is preferred to make this program generic;
     // This non-static block will be executed if an instance will be created;
     {
         callCount += 1;
@@ -27,12 +28,20 @@ public class MyCharThread extends Thread {
         this.commonNumber = getCallCount();
     }
 
+    public static void setClassCreationTime(long classCreationTime) {
+        MyCharThread.classCreationTime = classCreationTime;
+    }
+
+    public static int getCallCount() {
+        return callCount;
+    }
+
     public char getCh() {
-        return ch;
+        return this.ch;
     }
 
     public int getCommonNumber() {
-        return commonNumber;
+        return this.commonNumber;
     }
 
     @Override
