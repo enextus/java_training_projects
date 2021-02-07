@@ -1,7 +1,7 @@
 import java.util.Date;
 import java.util.Objects;
 
-public class MyCharThread extends Thread implements Comparable {
+public class MyCharThread extends Thread implements Comparable<MyCharThread> {
 
     public static int callCount = 0;
     public static long classCreationTime = 0;
@@ -94,11 +94,9 @@ public class MyCharThread extends Thread implements Comparable {
     }
 
     @Override
-    public int compareTo(Object other) {
+    public int compareTo(MyCharThread other) {
 
-        int temp = other - this.wholeTimeForAllTimes;
-        return 0;
+        return other.wholeTimeForAllTimes - this.wholeTimeForAllTimes;
     }
 
 }
-
