@@ -6,12 +6,13 @@ public class CharThread extends Thread {
     // This non-static block will be executed if an instance will be created;
     {
         callCount += 1;
-        System.out.println("1. here was executed");
+        System.out.println("1. here was executed.");
+        System.out.println("This non-static block will be executed if an instance will be created.");
     }
 
     // This static block will be executed if the class CharThread will be loaded by JVM;
     static {
-        System.out.println("0. here was executed");
+        System.out.println("0. here was executed.");
     }
 
     final int times;
@@ -40,7 +41,7 @@ public class CharThread extends Thread {
     public void run() {
 
         // Here is the logic of not-main thread
-        System.out.println("Start CharThread");
+        System.out.println("Start CharThread.");
 
         for (int i = 0; i < times; i++) {
 
