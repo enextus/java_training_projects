@@ -58,19 +58,6 @@ public class MyCharThread extends Thread implements Comparable<MyCharThread> {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof MyCharThread)) return false;
-        MyCharThread that = (MyCharThread) o;
-        return times == that.times && getCommonNumber() == that.getCommonNumber() && getWholeTimeForAllTimes() == that.getWholeTimeForAllTimes() && Objects.equals(getNickname(), that.getNickname()) && Objects.equals(timeSequenceGenerator, that.timeSequenceGenerator);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(times, getNickname(), getCommonNumber(), timeSequenceGenerator, getWholeTimeForAllTimes());
-    }
-
-    @Override
     public void run() {
 
         // Here is the logic of not-main thread!!!
@@ -108,6 +95,19 @@ public class MyCharThread extends Thread implements Comparable<MyCharThread> {
     public int compareTo(MyCharThread other) {
 
         return other.wholeTimeForAllTimes - this.wholeTimeForAllTimes;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof MyCharThread)) return false;
+        MyCharThread that = (MyCharThread) o;
+        return times == that.times && getCommonNumber() == that.getCommonNumber() && getWholeTimeForAllTimes() == that.getWholeTimeForAllTimes() && Objects.equals(getNickname(), that.getNickname()) && Objects.equals(timeSequenceGenerator, that.timeSequenceGenerator);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(times, getNickname(), getCommonNumber(), timeSequenceGenerator, getWholeTimeForAllTimes());
     }
 
 }
