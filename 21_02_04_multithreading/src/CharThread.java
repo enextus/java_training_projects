@@ -28,6 +28,10 @@ public class CharThread extends Thread {
         return callCount;
     }
 
+    public char getCh() {
+        return ch;
+    }
+
     public int getCommonNumber() {
         return commonNumber;
     }
@@ -37,10 +41,11 @@ public class CharThread extends Thread {
 
         // Here is the logic of not-main thread
         System.out.println("Start CharThread");
+
         for (int i = 0; i < times; i++) {
 
-            System.out.println("commonNumber: " + commonNumber);
-            System.out.println(ch);
+            System.out.println("commonNumber: " + getCommonNumber());
+            System.out.println("ch: " + getCh());
 
             try {
                 Thread.sleep(100);
