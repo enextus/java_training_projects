@@ -52,6 +52,8 @@ public class App_dev {
         System.out.println("threadRes2.getPriority(): " + threadRes2.getPriority());*/
         System.out.println();
 
+        //
+
     }
 
 }
