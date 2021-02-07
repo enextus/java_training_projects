@@ -4,7 +4,7 @@ public class App_dev {
 
         // __________________________________________________________________
 
-        MyCharThread myOwnThread = new MyCharThread(1, '#');
+        MyCharThread myOwnThread = new MyCharThread(3, '#');
         // realise Thread with JAVA implementation and our MyCharThread class
         Thread threadRes = new Thread(myOwnThread);
 
@@ -20,7 +20,7 @@ public class App_dev {
 
         // __________________________________________________________________
 
-        MyCharThread hath1 = new MyCharThread(1, '*');
+        MyCharThread hath1 = new MyCharThread(3, '*');
         // realise Thread with JAVA implementation and our MyCharThread class
         Thread threadRes1 = new Thread(hath1);
 
@@ -36,7 +36,7 @@ public class App_dev {
 
         // __________________________________________________________________
 
-        MyCharThread hath2 = new MyCharThread(1, '%');
+        MyCharThread hath2 = new MyCharThread(3, '%');
         // realise Thread with JAVA implementation and our MyCharThread class
         Thread threadRes2 = new Thread(hath2);
 

@@ -21,11 +21,23 @@ public class MyCharThread extends Thread {
     final int times;
     final char ch;
     final int commonNumber;
+    final IntRandomNumberGenerator timeSequenceGenerator;
+    int wholeTimeForAllTimes;
 
     public MyCharThread(int times, char ch) {
         this.times = times;
         this.ch = ch;
         this.commonNumber = getCallCount();
+        this.timeSequenceGenerator = new IntRandomNumberGenerator(50, 100);
+        this.wholeTimeForAllTimes = 0;
+    }
+
+    public int getWholeTimeForAllTimes() {
+        return wholeTimeForAllTimes;
+    }
+
+    public void setWholeTimeForAllTimes(int wholeTimeForAllTimes) {
+        this.wholeTimeForAllTimes = wholeTimeForAllTimes;
     }
 
     public static void setClassCreationTime(long classCreationTime) {
@@ -49,21 +61,23 @@ public class MyCharThread extends Thread {
     @Override
     public void run() {
 
-        IntRandomNumberGenerator timeSequenceGenerator = new IntRandomNumberGenerator(50, 100);
-
         // Here is the logic of not-main thread!!!
         System.out.println("Start CharThread.");
 
-        for (int i = 0; i < times; i++) {
-
+        for (int i = 0; i < this.times; i++) {
 
             System.out.println("commonNumber: " + getCommonNumber());
             System.out.println("ch: " + getCh());
 
-
             int timeNeededForOneCm = timeSequenceGenerator.nextInt();
 
             System.out.println("timeNeededForOneCm: " + timeNeededForOneCm + " milliseconds");
+
+            int temp = this.getWholeTimeForAllTimes();
+            this.setWholeTimeForAllTimes(temp + timeNeededForOneCm);
+
+            System.out.println("Whole time now: " + this.getWholeTimeForAllTimes() + " milliseconds");
+
 
             try {
                 Thread.sleep(100);
