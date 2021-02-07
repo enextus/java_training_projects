@@ -1,29 +1,8 @@
-import java.util.Collections;
 import java.util.List;
 
 public class ThreadWork {
 
-/*    static void newPerson() {
-
-        PersonComparable personComparable1 = new PersonComparable(10);
-        PersonComparable personComparable2 = new PersonComparable(1);
-        PersonComparable personComparable3 = new PersonComparable(100);
-        PersonComparable personComparable4 = new PersonComparable(56);
-        PersonComparable personComparable5 = new PersonComparable(32);
-        PersonComparable personComparable6 = new PersonComparable(33);
-
-        Set<PersonComparable> set = new TreeSet<>();
-
-        set.add(personComparable1);
-        set.add(personComparable2);
-        set.add(personComparable3);
-        set.add(personComparable4);
-        set.add(personComparable5);
-        set.add(personComparable6);
-
-        for (Object o : set)
-            System.out.println(o);
-    }*/
+    // https://stackoverflow.com/questions/31367744/multiple-threads-in-a-thread-pool-writing-data-in-same-list
 
     public static void main(String[] args) {
 
