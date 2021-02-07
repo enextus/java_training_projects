@@ -8,7 +8,7 @@ public class MyCharThread extends Thread {
 
     // This static block will be executed if the class CharThread will be loaded by JVM;
     static {
-        System.out.println("0. here was executed.");
+        System.out.println("0. here was executed.\n");
     }
 
     // Instead of performing increment in the constructor instance block is preferred to make this program generic;
@@ -45,6 +45,7 @@ public class MyCharThread extends Thread {
 
             System.out.println("commonNumber: " + getCommonNumber());
             System.out.println("ch: " + getCh());
+
 
             try {
                 Thread.sleep(100);
