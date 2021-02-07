@@ -1,6 +1,7 @@
 import java.util.Date;
+import java.util.Objects;
 
-public class MyCharThread extends Thread {
+public class MyCharThread extends Thread implements Comparable {
 
     public static int callCount = 0;
     public static long classCreationTime = 0;
@@ -56,7 +57,18 @@ public class MyCharThread extends Thread {
         return this.commonNumber;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof MyCharThread)) return false;
+        MyCharThread that = (MyCharThread) o;
+        return times == that.times && getCommonNumber() == that.getCommonNumber() && getWholeTimeForAllTimes() == that.getWholeTimeForAllTimes() && Objects.equals(getNickname(), that.getNickname()) && Objects.equals(timeSequenceGenerator, that.timeSequenceGenerator);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(times, getNickname(), getCommonNumber(), timeSequenceGenerator, getWholeTimeForAllTimes());
+    }
 
     @Override
     public void run() {
@@ -69,15 +81,7 @@ public class MyCharThread extends Thread {
             System.out.println("commonNumber: " + getCommonNumber());
             System.out.println("nickname: " + getNickname());
 
-            int timeNeededForOneCm = timeSequenceGenerator.nextInt();
-
-            System.out.println("timeNeededForOneCm: " + timeNeededForOneCm + " milliseconds");
-
-            int temp = this.getWholeTimeForAllTimes();
-            this.setWholeTimeForAllTimes(temp + timeNeededForOneCm);
-
-            System.out.println("Whole time now: " + this.getWholeTimeForAllTimes() + " milliseconds");
-
+            this.setWholeTimeForAllTimes(this.getWholeTimeForAllTimes() + timeSequenceGenerator.nextInt());
 
             try {
                 Thread.sleep(100);
@@ -85,6 +89,16 @@ public class MyCharThread extends Thread {
                 e.printStackTrace();
             }
         }
+
+        System.out.println("Whole time: " + this.getWholeTimeForAllTimes() + " milliseconds");
+    }
+
+    @Override
+    public int compareTo(Object other) {
+
+        int temp = other - this.wholeTimeForAllTimes;
+        return 0;
     }
 
 }
+
