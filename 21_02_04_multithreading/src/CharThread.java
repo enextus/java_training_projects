@@ -2,9 +2,16 @@ public class CharThread extends Thread {
 
     public static int callCount = 0;
 
-    // Instead of performing increment in the constructor instance block is preferred to make this program generic.
+    // Instead of performing increment in the constructor instance block is preferred to make this program generic;
+    // This non-static block will be executed if an instance will be created;
     {
         callCount += 1;
+        System.out.println("1. here was executed");
+    }
+
+    // This static block will be executed if the class CharThread will be loaded by JVM;
+    static {
+        System.out.println("0. here was executed");
     }
 
     final int times;
@@ -41,6 +48,7 @@ public class CharThread extends Thread {
                 e.printStackTrace();
             }
         }
+
     }
 
 }
