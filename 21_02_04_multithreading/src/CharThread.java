@@ -1,34 +1,21 @@
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class CharThread extends Thread {
 
-    public static class instanceCounter {
+    private static final AtomicInteger callCount = new AtomicInteger(0);
 
-        final int commonNumber;
-
-        public instanceCounter(int commonNumber) {
-            this.commonNumber = commonNumber;
-        }
-
-        public int getCommonNumber() {
-            return commonNumber;
-        }
-
-        public int makeCommonNumber() {
-            int temp = this.getCommonNumber();
-            temp += 1;
-
-            return temp;
-        }
+    public static AtomicInteger getCallCount() {
+        return callCount;
     }
 
     final int times;
     final char ch;
-    final int commonNumber;
+    final AtomicInteger commonNumber;
 
     public CharThread(int times, char ch) {
         this.times = times;
         this.ch = ch;
-        this.commonNumber = instanceCounter.makeCommonNumber();
+        this.commonNumber = getCallCount();
     }
 
     @Override
