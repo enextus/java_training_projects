@@ -61,16 +61,14 @@ public class MyCharThread extends Thread implements Comparable<MyCharThread> {
     public void run() {
 
         for (int i = 0; i < this.times; i++) {
+
             this.setWholeTimeForAllTimes(this.getWholeTimeForAllTimes() + timeSequenceGenerator.nextInt());
 
             try {
                 Thread.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
-                System.out.println("2. HERE");
             }
-
-            System.out.println("3. HERE");
         }
 
         System.out.println("Nickname: " + this.getNickname() + ", Time: " + this.getWholeTimeForAllTimes() + " milliseconds.");
