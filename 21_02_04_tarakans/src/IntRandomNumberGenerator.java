@@ -3,7 +3,7 @@ import java.util.Random;
 
 public final class IntRandomNumberGenerator {
 
-    private PrimitiveIterator.OfInt randomIterator;
+    private final PrimitiveIterator.OfInt randomIterator;
 
     /**
      * Initialize a new random number generator that generates
