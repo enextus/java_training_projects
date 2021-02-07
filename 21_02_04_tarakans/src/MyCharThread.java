@@ -67,7 +67,7 @@ public class MyCharThread extends Thread {
         for (int i = 0; i < this.times; i++) {
 
             System.out.println("commonNumber: " + getCommonNumber());
-            System.out.println("ch: " + getNickname());
+            System.out.println("nickname: " + getNickname());
 
             int timeNeededForOneCm = timeSequenceGenerator.nextInt();
 
