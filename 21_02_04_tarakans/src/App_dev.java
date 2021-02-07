@@ -2,7 +2,7 @@ public class App_dev {
 
     public static void main(String[] args) {
 
-        MyCharThread myOwnThread0 = new MyCharThread(10, "Аксенов");
+        MyCharThread myOwnThread0 = new MyCharThread(10, "Лукашенко");
         MyCharThread.listOfTarakans.add(myOwnThread0);
         // realise Thread with JAVA implementation and our MyCharThread class
         Thread threadRes = new Thread(myOwnThread0);
@@ -30,14 +30,14 @@ public class App_dev {
         // start of our thread
         threadRes3.start();
 
-        MyCharThread myOwnThread4 = new MyCharThread(10, "Солженицын");
+        MyCharThread myOwnThread4 = new MyCharThread(10, "Столыпин");
         MyCharThread.listOfTarakans.add(myOwnThread4);
         // realise Thread with JAVA implementation and our MyCharThread class
         Thread threadRes4 = new Thread(myOwnThread4);
         // start of our thread
         threadRes4.start();
 
-        MyCharThread myOwnThread5 = new MyCharThread(10, "Щаранский");
+        MyCharThread myOwnThread5 = new MyCharThread(10, "Керенский");
         MyCharThread.listOfTarakans.add(myOwnThread5);
         // realise Thread with JAVA implementation and our MyCharThread class
         Thread threadRes5 = new Thread(myOwnThread5);
