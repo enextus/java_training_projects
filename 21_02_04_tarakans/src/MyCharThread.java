@@ -94,6 +94,17 @@ public class MyCharThread extends Thread implements Comparable<MyCharThread> {
     }
 
     @Override
+    public String toString() {
+        return "MyCharThread{" +
+                "times=" + times +
+                ", nickname='" + nickname + '\'' +
+                ", commonNumber=" + commonNumber +
+                ", timeSequenceGenerator=" + timeSequenceGenerator +
+                ", wholeTimeForAllTimes=" + wholeTimeForAllTimes +
+                '}';
+    }
+
+    @Override
     public int compareTo(MyCharThread other) {
 
         return other.wholeTimeForAllTimes - this.wholeTimeForAllTimes;
