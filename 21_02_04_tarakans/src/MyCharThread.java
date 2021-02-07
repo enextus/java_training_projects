@@ -10,15 +10,11 @@ public class MyCharThread extends Thread implements Comparable<MyCharThread> {
 
     public static List<MyCharThread> listOfTarakans = new ArrayList<>();
 
-    // This static block will be executed if the class CharThread will be loaded by JVM;
     static {
         final long classCreationTime = new Date().getTime();
         setClassCreationTime(classCreationTime);
-
-        // System.out.println("0. - " + classCreationTime + " - was executed.\n");
     }
 
-    // This non-static block will be executed if an instance will be created;
     {
         callCount += 1;
     }
@@ -109,5 +105,4 @@ public class MyCharThread extends Thread implements Comparable<MyCharThread> {
     public int hashCode() {
         return Objects.hash(times, getNickname(), getCommonNumber(), timeSequenceGenerator, getWholeTimeForAllTimes());
     }
-
 }
