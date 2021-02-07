@@ -38,7 +38,7 @@ public class CharThread extends Thread {
     @Override
     public void run() {
 
-        // Here is the logic of not-main thread
+        // Here is the logic of not-main thread!!!
         System.out.println("Start CharThread.");
 
         for (int i = 0; i < times; i++) {
