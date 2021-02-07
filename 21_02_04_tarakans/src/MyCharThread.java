@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 public class MyCharThread extends Thread implements Comparable<MyCharThread> {
 
@@ -78,4 +79,27 @@ public class MyCharThread extends Thread implements Comparable<MyCharThread> {
         return this.wholeTimeForAllTimes - other.wholeTimeForAllTimes;
     }
 
+    @Override
+    public String toString() {
+        return "MyCharThread{" +
+                "times=" + times +
+                ", nickname='" + nickname + '\'' +
+                ", commonNumber=" + commonNumber +
+                ", timeSequenceGenerator=" + timeSequenceGenerator +
+                ", wholeTimeForAllTimes=" + wholeTimeForAllTimes +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof MyCharThread)) return false;
+        MyCharThread that = (MyCharThread) o;
+        return times == that.times && getCommonNumber() == that.getCommonNumber() && getWholeTimeForAllTimes() == that.getWholeTimeForAllTimes() && Objects.equals(getNickname(), that.getNickname()) && Objects.equals(timeSequenceGenerator, that.timeSequenceGenerator);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(times, getNickname(), getCommonNumber(), timeSequenceGenerator, getWholeTimeForAllTimes());
+    }
 }
