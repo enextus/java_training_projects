@@ -67,10 +67,6 @@ public class MyCharThread extends Thread implements Comparable<MyCharThread> {
         // System.out.println("Start CharThread.");
 
         for (int i = 0; i < this.times; i++) {
-
-            System.out.println("commonNumber: " + getCommonNumber());
-            System.out.println("nickname: " + getNickname());
-
             this.setWholeTimeForAllTimes(this.getWholeTimeForAllTimes() + timeSequenceGenerator.nextInt());
 
             try {
@@ -81,13 +77,15 @@ public class MyCharThread extends Thread implements Comparable<MyCharThread> {
 
         }
 
-        System.out.println("----------->    Whole time: " + this.getWholeTimeForAllTimes() + " milliseconds");
-
-        System.out.println(this.getWholeTimeForAllTimes());
+        System.out.println(this.getNickname() + ", " + this.getWholeTimeForAllTimes());
         System.out.println(this.getCommonNumber());
-        System.out.println(this.getNickname());
-        System.out.println(this.getState());
         System.out.println();
+    }
+
+    @Override
+    public int compareTo(MyCharThread other) {
+
+        return other.wholeTimeForAllTimes - this.wholeTimeForAllTimes;
     }
 
     @Override
@@ -99,12 +97,6 @@ public class MyCharThread extends Thread implements Comparable<MyCharThread> {
                 ", timeSequenceGenerator=" + timeSequenceGenerator +
                 ", wholeTimeForAllTimes=" + wholeTimeForAllTimes +
                 '}';
-    }
-
-    @Override
-    public int compareTo(MyCharThread other) {
-
-        return other.wholeTimeForAllTimes - this.wholeTimeForAllTimes;
     }
 
     @Override
