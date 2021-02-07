@@ -1,4 +1,4 @@
-public class CharThread extends Thread {
+public class MyCharThread extends Thread {
 
     public static int callCount = 0;
 
@@ -21,7 +21,7 @@ public class CharThread extends Thread {
     final char ch;
     final int commonNumber;
 
-    public CharThread(int times, char ch) {
+    public MyCharThread(int times, char ch) {
         this.times = times;
         this.ch = ch;
         this.commonNumber = getCallCount();
