@@ -1,21 +1,28 @@
-import java.util.concurrent.atomic.AtomicInteger;
-
 public class CharThread extends Thread {
 
-    private static final AtomicInteger callCount = new AtomicInteger(0);
+    public static int callCount = 0;
 
-    public static AtomicInteger getCallCount() {
-        return callCount;
+    // Instead of performing increment in the constructor instance block is preferred to make this program generic.
+    {
+        callCount += 1;
     }
 
     final int times;
     final char ch;
-    final AtomicInteger commonNumber;
+    final int commonNumber;
 
     public CharThread(int times, char ch) {
         this.times = times;
         this.ch = ch;
         this.commonNumber = getCallCount();
+    }
+
+    public static int getCallCount() {
+        return callCount;
+    }
+
+    public int getCommonNumber() {
+        return commonNumber;
     }
 
     @Override
