@@ -68,15 +68,8 @@ public class MyCharThread extends Thread implements Comparable<MyCharThread> {
             }
         }
 
-        // System.out.println("Nickname: " + this.getNickname() + ", Time: " + this.getWholeTimeForAllTimes() + " milliseconds.");
-        MyCharThread.listOfTarakans.add(this);
-
-        System.out.println("Size: " + MyCharThread.listOfTarakans.size());
-
-/*        Iterator<MyCharThread> iter = MyCharThread.listOfTarakans.iterator();
-        while (iter.hasNext()){
-            System.out.print(iter.next() + " ");
-        }*/
+        System.out.println("Nickname: " + this.getNickname() + ", Time: " + this.getWholeTimeForAllTimes() + " milliseconds.");
+       // MyCharThread.listOfTarakans.add(this);
 
     }
 

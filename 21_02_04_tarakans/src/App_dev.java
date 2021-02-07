@@ -1,4 +1,5 @@
 import java.util.Collections;
+import java.util.List;
 
 public class App_dev {
 
@@ -103,12 +104,17 @@ public class App_dev {
 
         // ____________________________________________________________________________________________
 
-        Collections.sort(MyCharThread.getListOfTarakans());
-        System.out.println(MyCharThread.getListOfTarakans());
+        List<MyCharThread> res = MyCharThread.listOfTarakans;
+        List<MyCharThread> res2 = MyCharThread.getListOfTarakans();
 
-        for (MyCharThread tarakan : MyCharThread.listOfTarakans) {
-            System.out.println(tarakan);
-        }
+        System.out.println("res: " + res);
+        System.out.println("res2: " + res2);
+
+/*        Collections.sort(res);
+
+        for (MyCharThread tarakan : res) {
+            System.out.println("-> " + tarakan);
+        }*/
 
     }
 
