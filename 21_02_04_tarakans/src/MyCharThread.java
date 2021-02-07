@@ -73,11 +73,11 @@ public class MyCharThread extends Thread implements Comparable<MyCharThread> {
 
         System.out.println("Nickname: " + this.getNickname() + ", Time: " + this.getWholeTimeForAllTimes() + " milliseconds.");
         MyCharThread.listOfTarakans.add(this);
-    }
 
-    @Override
-    public int compareTo(MyCharThread other) {
-        return this.wholeTimeForAllTimes - other.wholeTimeForAllTimes;
+/*        for (MyCharThread tarakan : MyCharThread.listOfTarakans
+        ) {
+            System.out.println(tarakan);
+        }*/
     }
 
     @Override
@@ -102,5 +102,10 @@ public class MyCharThread extends Thread implements Comparable<MyCharThread> {
     @Override
     public int hashCode() {
         return Objects.hash(times, getNickname(), getCommonNumber(), timeSequenceGenerator, getWholeTimeForAllTimes());
+    }
+
+    @Override
+    public int compareTo(MyCharThread other) {
+        return this.getWholeTimeForAllTimes() - other.getWholeTimeForAllTimes();
     }
 }

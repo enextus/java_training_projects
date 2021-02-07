@@ -2,9 +2,47 @@ public class App_dev {
 
     public static void main(String[] args) {
 
+
+
+
+
+/*        List<News> news = Arrays.asList(
+                new News("Hello world", 9),
+                new News("Trump is no more president", 5),
+                new News("Bitcoin is greater than 30000$", 9)
+        );
+
+        Collections.sort(news);
+        Arrays.sort(news.toArray());
+
+        System.out.println(news);
+
+
+
+
+
+
+
+            @Override
+    public int compareTo(PersonComparable other) {
+        return this.getAge() - other.getAge();
+    }
+
+
+
+
+
+
+
+
+
+
+        */
+
+
         MyCharThread myOwnThread0 = new MyCharThread(10, "Лукашенко");
-        Thread threadRes = new Thread(myOwnThread0);
-        threadRes.start();
+        Thread threadRes0 = new Thread(myOwnThread0);
+        threadRes0.start();
 
         // ____________________________________________________________________________________________
 
@@ -60,8 +98,6 @@ public class App_dev {
         MyCharThread myOwnThread9 = new MyCharThread(10, "Березовский");
         Thread threadRes9 = new Thread(myOwnThread9);
         threadRes9.start();
-
-        System.out.println("\n\n");
     }
 
 }
