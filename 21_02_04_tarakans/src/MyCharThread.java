@@ -19,14 +19,14 @@ public class MyCharThread extends Thread {
     }
 
     final int times;
-    final String tarakanNickname;
+    final String nickname;
     final int commonNumber;
     final IntRandomNumberGenerator timeSequenceGenerator;
     int wholeTimeForAllTimes;
 
-    public MyCharThread(int times, String tarakanNickname) {
+    public MyCharThread(int times, String nickname) {
         this.times = times;
-        this.tarakanNickname = tarakanNickname;
+        this.nickname = nickname;
         this.commonNumber = getCallCount();
         this.timeSequenceGenerator = new IntRandomNumberGenerator(50, 100);
         this.wholeTimeForAllTimes = 0;
@@ -48,8 +48,8 @@ public class MyCharThread extends Thread {
         return callCount;
     }
 
-    public String getTarakanNickname() {
-        return this.tarakanNickname;
+    public String getNickname() {
+        return this.nickname;
     }
 
     public int getCommonNumber() {
@@ -67,7 +67,7 @@ public class MyCharThread extends Thread {
         for (int i = 0; i < this.times; i++) {
 
             System.out.println("commonNumber: " + getCommonNumber());
-            System.out.println("ch: " + getTarakanNickname());
+            System.out.println("ch: " + getNickname());
 
             int timeNeededForOneCm = timeSequenceGenerator.nextInt();
 
