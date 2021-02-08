@@ -26,7 +26,7 @@ public class ThreadWork {
         List<MyCharThread> masterList = new Vector<>();
 
         for (int i = 0; i < count; i++) {
-            threads[i] = new MyCharThread(masterList, "Tarakan " + (i + 1));
+            threads[i] = new MyCharThread(masterList, "00" + (i + 1));
             threads[i].start();
         }
 
@@ -44,6 +44,11 @@ public class ThreadWork {
                     + item.getWholeTimeForAllTimes() + " ms."
                     + "]");
         }
+
+        MyCharThread temp = masterList.get(0);
+
+        System.out.println();
+        System.out.println("Tarakan: " + temp.nickname + " won wit the time: " + temp.getWholeTimeForAllTimes());
     }
 
 }
@@ -51,17 +56,17 @@ public class ThreadWork {
 /*
 
 Done!! Print Your Tarakan - List:
-        [Thread 3: 626 ms.]
-        [Thread 9: 673 ms.]
-        [Thread 10: 698 ms.]
-        [Thread 6: 719 ms.]
-        [Thread 5: 721 ms.]
-        [Thread 7: 739 ms.]
-        [Thread 2: 770 ms.]
-        [Thread 4: 772 ms.]
-        [Thread 8: 780 ms.]
-        [Thread 1: 785 ms.]
+[009: 711 ms.]
+[003: 717 ms.]
+[001: 727 ms.]
+[0010: 738 ms.]
+[007: 747 ms.]
+[008: 766 ms.]
+[005: 769 ms.]
+[002: 777 ms.]
+[004: 793 ms.]
+[006: 824 ms.]
 
-        Process finished with exit code 0
+Tarakan: 009 won wit the time: 711
 
 */
