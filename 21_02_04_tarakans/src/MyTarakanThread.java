@@ -8,6 +8,10 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
     private static int callCount = 0;
     private static long classCreationTime = 0;
 
+    public static long getClassCreationTime() {
+        return classCreationTime;
+    }
+
     static {
         final long classCreationTime = new Date().getTime();
         setClassCreationTime(classCreationTime);

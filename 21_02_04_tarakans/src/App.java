@@ -37,7 +37,10 @@ public class App {
         System.out.println();
         System.out.println("Tarakan: "
                 + temp.getNickname() + " won wit the time: "
-                + temp.getWholeTimeForAllTimes());
+                + temp.getWholeTimeForAllTimes() + " | common number: "
+                + temp.getCommonNumber()  + " | creation time: "
+                + temp.getClassCreationTime()
+        );
     }
 
     private static boolean isOperationRunning(Thread[] threads) {
