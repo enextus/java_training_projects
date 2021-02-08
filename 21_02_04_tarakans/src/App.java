@@ -59,17 +59,17 @@ public class App {
 /*
 
 Done!! Print Your Tarakan - List:
-[003: 705 ms.]
-[005: 723 ms.]
-[007: 726 ms.]
-[008: 745 ms.]
-[006: 754 ms.]
-[001: 765 ms.]
-[009: 774 ms.]
-[0010: 789 ms.]
-[002: 811 ms.]
-[004: 814 ms.]
+[007: 663 ms.]
+[003: 666 ms.]
+[006: 703 ms.]
+[002: 718 ms.]
+[008: 722 ms.]
+[005: 760 ms.]
+[004: 767 ms.]
+[009: 783 ms.]
+[0010: 787 ms.]
+[001: 796 ms.]
 
-Tarakan: 003 won wit the time: 705
+Tarakan: 007 won wit the time: 663
 
 */
