@@ -75,17 +75,18 @@ public class App {
 /*
 
 Done!! Print Your Tarakan - List:
-[007: 663 ms.]
-[003: 666 ms.]
-[006: 703 ms.]
-[002: 718 ms.]
-[008: 722 ms.]
-[005: 760 ms.]
-[004: 767 ms.]
-[009: 783 ms.]
-[0010: 787 ms.]
-[001: 796 ms.]
+[003:  WholeTimeForAllRealTime: -> 5461 ms.; ---> 5461 whole time as given: 674 ms.]
+[004:  WholeTimeForAllRealTime: -> 4080 ms.; ---> 4080 whole time as given: 685 ms.]
+[006:  WholeTimeForAllRealTime: -> 4183 ms.; ---> 4183 whole time as given: 699 ms.]
+[001:  WholeTimeForAllRealTime: -> 5835 ms.; ---> 5835 whole time as given: 714 ms.]
+[0010:  WholeTimeForAllRealTime: -> 5627 ms.; ---> 5627 whole time as given: 736 ms.]
+[005:  WholeTimeForAllRealTime: -> 6809 ms.; ---> 6809 whole time as given: 774 ms.]
+[002:  WholeTimeForAllRealTime: -> 5887 ms.; ---> 5887 whole time as given: 775 ms.]
+[008:  WholeTimeForAllRealTime: -> 4836 ms.; ---> 4836 whole time as given: 784 ms.]
+[009:  WholeTimeForAllRealTime: -> 5151 ms.; ---> 5151 whole time as given: 796 ms.]
+[007:  WholeTimeForAllRealTime: -> 4366 ms.; ---> 4366 whole time as given: 895 ms.]
 
-Tarakan: 007 won wit the time: 663
+Tarakan: 003 won wit the time: 5461 | -> common number: 3 | -> class creation real time: 1612807342255 | -> instance creation time: 1612807342269 | -> whole real time: 5461
+
 
 */

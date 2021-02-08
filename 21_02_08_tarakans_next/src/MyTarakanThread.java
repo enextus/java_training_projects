@@ -87,10 +87,11 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
             System.out.println(" ----> " + this.getWholeTimeForAllTimes());
 
             int temp = timeSequenceGenerator.nextInt();
-            System.out.println(" --> " + temp);
+            System.out.println("" + i + ":: " + " --> " + temp);
 
             this.setWholeTimeForAllTimes(
                     this.getWholeTimeForAllTimes() + temp);
+
         }
 
         int result = (int) (System.currentTimeMillis() - this.getInstanceCreationTime());
