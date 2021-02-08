@@ -4,9 +4,8 @@ import java.util.Vector;
 
 public class ThreadWork {
 
-    // https://stackoverflow.com/questions/31367744/multiple-threads-in-a-thread-pool-writing-data-in-same-list
-
     private static boolean isOperationRunning(Thread[] threads) {
+
         boolean running = false;
 
         for (Thread thread : threads) {
@@ -15,18 +14,14 @@ public class ThreadWork {
                 break;
             }
         }
+
         return running;
     }
 
     public static void main(String[] args) {
 
-/*
-        Collections.sort(news);
-        Arrays.sort(news.toArray());
-        System.out.println(news);
-        */
-
         int count = 10;
+
         MyCharThread[] threads = new MyCharThread[count];
         List<MyCharThread> masterList = new Vector<>();
 
@@ -34,6 +29,7 @@ public class ThreadWork {
             threads[index] = new MyCharThread(masterList, "Thread " + (index + 1));
             threads[index].start();
         }
+
         while (isOperationRunning(threads)) {
             // do nothing
         }
@@ -43,12 +39,15 @@ public class ThreadWork {
         Collections.sort(masterList);
 
         for (MyCharThread item : masterList) {
-            System.out.println("[" + item.getNickname() + ": " + item.getWholeTimeForAllTimes() + " ms." + "]");
+            System.out.println("["
+                    + item.getNickname() + ": "
+                    + item.getWholeTimeForAllTimes() + " ms."
+                    + "]");
         }
-
     }
 
 }
+
 /*
 
 Done!! Print Your Tarakan - List:
