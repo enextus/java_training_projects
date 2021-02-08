@@ -27,12 +27,10 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
     private final String nickname;
     private final int commonNumber;
     private final IntRandomNumberGenerator timeSequenceGenerator;
-    private final long instanceCreationTime;
+    long instanceCreationTime;
     private int wholeTimeForAllTimes;
+    int wholeTimeForAllRealTimes;
 
-    public long getInstanceCreationTime() {
-        return instanceCreationTime;
-    }
 
     public MyTarakanThread(List<MyTarakanThread> masterList, String nickname) {
         this.listParticipants = masterList;
@@ -41,6 +39,22 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
         this.timeSequenceGenerator = new IntRandomNumberGenerator(shortiesTime, longestTime);
         this.instanceCreationTime = new Date().getTime();
         this.wholeTimeForAllTimes = 0;
+        this.wholeTimeForAllRealTimes = 0;
+    }
+    public void setWholeTimeForAllRealTimes(int wholeTimeForAllRealTimes) {
+        this.wholeTimeForAllRealTimes = wholeTimeForAllRealTimes;
+    }
+
+    public int getWholeTimeForAllRealTimes() {
+        return wholeTimeForAllRealTimes;
+    }
+
+    public void setInstanceCreationTime(long instanceCreationTime) {
+        this.instanceCreationTime = instanceCreationTime;
+    }
+
+    public long getInstanceCreationTime() {
+        return instanceCreationTime;
     }
 
     int getWholeTimeForAllTimes() {
@@ -78,7 +92,8 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
                     + timeSequenceGenerator.nextInt());
         }
 
-        //int result = (int) (Sytem.currentTimesMillis() - startingTime);
+        int result = (int) (System.currentTimeMillis() - this.getInstanceCreationTime());
+        this.setWholeTimeForAllRealTimes(result);
         listParticipants.add(this);
     }
 

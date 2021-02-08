@@ -30,15 +30,21 @@ public class App {
             System.out.println("["
                     + item.getNickname() + ": "
                     + item.getWholeTimeForAllTimes() + " ms."
+                    + " Created: "
+                    +  item.getWholeTimeForAllRealTimes() + " "
                     + "]");
         }
 
         System.out.println();
         System.out.println("Tarakan: "
                 + temp.getNickname() + " won wit the time: "
-                + temp.getWholeTimeForAllTimes() + " | common number: "
-                + temp.getCommonNumber()  + " | creation time: "
-                + temp.getClassCreationTime()
+                + temp.getWholeTimeForAllTimes() + " | -> common number: "
+                + temp.getCommonNumber() + " | -> class creation real time: "
+                + temp.getClassCreationTime() +
+                " | -> instance creation time: "
+                + temp.getInstanceCreationTime() + " | -> whole real time: "
+                + temp.getWholeTimeForAllRealTimes()
+
         );
     }
 
