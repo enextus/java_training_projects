@@ -9,10 +9,10 @@ public class App {
         int count = 10;
 
         MyTarakanThread[] threads = new MyTarakanThread[count];
-        List<MyTarakanThread> masterList = new ArrayList<>();
+        List<MyTarakanThread> tarakanList = new ArrayList<>();
 
         for (int i = 0; i < count; i++) {
-            threads[i] = new MyTarakanThread(masterList, "00" + (i + 1));
+            threads[i] = new MyTarakanThread(tarakanList, "00" + (i + 1));
             threads[i].start();
         }
 
@@ -22,16 +22,16 @@ public class App {
 
         System.out.println("Done!! Print Your Tarakan - List:");
 
-        Collections.sort(masterList);
+        Collections.sort(tarakanList);
 
-        for (MyTarakanThread item : masterList) {
+        for (MyTarakanThread item : tarakanList) {
             System.out.println("["
                     + item.getNickname() + ": "
                     + item.getWholeTimeForAllTimes() + " ms."
                     + "]");
         }
 
-        MyTarakanThread temp = masterList.get(0);
+        MyTarakanThread temp = tarakanList.get(0);
 
         System.out.println();
         System.out.println("Tarakan: "
