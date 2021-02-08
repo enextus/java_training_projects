@@ -60,52 +60,12 @@ public class MyCharThread extends Thread implements Comparable<MyCharThread> {
     @Override
     public void run() {
 
-/*
-        for (int i = 0; i < this.times; i++) {
-
-            this.setWholeTimeForAllTimes(this.getWholeTimeForAllTimes() + timeSequenceGenerator.nextInt());
-
-            try {
-                Thread.sleep(100);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-*/
-
-
-
         for (int i = 0; i < this.times; ++i) {
             randomWait();
-            String data = "Thread [" + getNickname() + "][" + wholeTimeForAllTimes + "]";
-
             this.setWholeTimeForAllTimes(this.getWholeTimeForAllTimes() + timeSequenceGenerator.nextInt());
-
-            System.out.println("data ->>>> " + data);
-
-            //list.add(data);
-
-            try {
-                Thread.sleep(100);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
         }
 
         list.add(this);
-
-
-
-
-
-
-/*        System.out.println("Nickname: " + this.getNickname() + ", Time: " + this.getWholeTimeForAllTimes() + " milliseconds.");
-        MyCharThread.listOfTarakans.add(this);
-
-        for (MyCharThread tarakan : MyCharThread.listOfTarakans) {
-            System.out.println("-> " + tarakan);
-        }*/
-
     }
 
     private void randomWait() {

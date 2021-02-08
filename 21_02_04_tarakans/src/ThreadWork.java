@@ -36,7 +36,7 @@ public class ThreadWork {
 
         int count = 10;
         MyCharThread[] threads = new MyCharThread[count];
-        List<MyCharThread> masterList = new Vector<MyCharThread>();
+        List<MyCharThread> masterList = new Vector<>();
 
         for (int index = 0; index < count; index++) {
             threads[index] = new MyCharThread(masterList, "Thread " + (index + 1));
