@@ -2,7 +2,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Vector;
 
-public class ThreadWork {
+public class App {
 
     private static boolean isOperationRunning(Thread[] threads) {
 
@@ -56,17 +56,17 @@ public class ThreadWork {
 /*
 
 Done!! Print Your Tarakan - List:
-[009: 711 ms.]
-[003: 717 ms.]
-[001: 727 ms.]
-[0010: 738 ms.]
-[007: 747 ms.]
-[008: 766 ms.]
-[005: 769 ms.]
-[002: 777 ms.]
-[004: 793 ms.]
-[006: 824 ms.]
+[004: 661 ms.]
+[007: 683 ms.]
+[0010: 728 ms.]
+[009: 729 ms.]
+[003: 743 ms.]
+[002: 754 ms.]
+[001: 780 ms.]
+[006: 782 ms.]
+[008: 803 ms.]
+[005: 809 ms.]
 
-Tarakan: 009 won wit the time: 711
+Tarakan: 004 won wit the time: 661
 
 */
