@@ -49,3 +49,20 @@ public class ThreadWork {
     }
 
 }
+/*
+
+Done!! Print Your Tarakan - List:
+        [Thread 3: 626 ms.]
+        [Thread 9: 673 ms.]
+        [Thread 10: 698 ms.]
+        [Thread 6: 719 ms.]
+        [Thread 5: 721 ms.]
+        [Thread 7: 739 ms.]
+        [Thread 2: 770 ms.]
+        [Thread 4: 772 ms.]
+        [Thread 8: 780 ms.]
+        [Thread 1: 785 ms.]
+
+        Process finished with exit code 0
+
+*/
