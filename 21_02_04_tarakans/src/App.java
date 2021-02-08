@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
 public class App {
@@ -29,9 +30,13 @@ public class App {
         for (MyTarakanThread item : listParticipants) {
             System.out.println("["
                     + item.getNickname() + ": "
+                    + item.getWholeTimeForAllRealTimes() + " ms." +
+
+            new Date(item.getWholeTimeForAllRealTimes()).toString()
+                    + " Whole Real Time: "
                     + item.getWholeTimeForAllTimes() + " ms."
-                    + " Created: "
-                    +  item.getWholeTimeForAllRealTimes() + " "
+
+
                     + "]");
         }
 
