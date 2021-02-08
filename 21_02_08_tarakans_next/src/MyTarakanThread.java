@@ -7,10 +7,6 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
     private static int callCount = 0;
     private static long classCreationTime = 0;
 
-    public static long getClassCreationTime() {
-        return classCreationTime;
-    }
-
     static {
         final long classCreationTime = new Date().getTime();
         setClassCreationTime(classCreationTime);
@@ -112,22 +108,6 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
     @Override
     public int compareTo(MyTarakanThread other) {
         return this.getWholeTimeForAllTimes() - other.getWholeTimeForAllTimes();
-    }
-
-    @Override
-    public String toString() {
-        return "MyTarakanThread{" +
-                "listParticipants=" + listParticipants +
-                ", shortiesTime=" + shortiesTime +
-                ", longestTime=" + longestTime +
-                ", minutesCount=" + minutesCount +
-                ", nickname='" + nickname + '\'' +
-                ", commonNumber=" + commonNumber +
-                ", timeSequenceGenerator=" + timeSequenceGenerator +
-                ", instanceCreationTime=" + instanceCreationTime +
-                ", wholeTimeForAllTimes=" + wholeTimeForAllTimes +
-                ", wholeTimeForAllRealTimes=" + wholeTimeForAllRealTimes +
-                '}';
     }
 
     @Override
