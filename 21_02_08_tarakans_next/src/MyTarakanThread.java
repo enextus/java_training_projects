@@ -119,12 +119,17 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
 
     @Override
     public String toString() {
-        return "MyCharThread{" +
-                "times=" + minutesCount +
+        return "MyTarakanThread{" +
+                "listParticipants=" + listParticipants +
+                ", shortiesTime=" + shortiesTime +
+                ", longestTime=" + longestTime +
+                ", minutesCount=" + minutesCount +
                 ", nickname='" + nickname + '\'' +
                 ", commonNumber=" + commonNumber +
                 ", timeSequenceGenerator=" + timeSequenceGenerator +
+                ", instanceCreationTime=" + instanceCreationTime +
                 ", wholeTimeForAllTimes=" + wholeTimeForAllTimes +
+                ", wholeTimeForAllRealTimes=" + wholeTimeForAllRealTimes +
                 '}';
     }
 
