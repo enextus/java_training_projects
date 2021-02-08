@@ -31,7 +31,6 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
     private int wholeTimeForAllTimes;
     int wholeTimeForAllRealTimes;
 
-
     public MyTarakanThread(List<MyTarakanThread> masterList, String nickname) {
         this.listParticipants = masterList;
         this.nickname = nickname;
@@ -41,16 +40,13 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
         this.wholeTimeForAllTimes = 0;
         this.wholeTimeForAllRealTimes = 0;
     }
+
     public void setWholeTimeForAllRealTimes(int wholeTimeForAllRealTimes) {
         this.wholeTimeForAllRealTimes = wholeTimeForAllRealTimes;
     }
 
     public int getWholeTimeForAllRealTimes() {
         return wholeTimeForAllRealTimes;
-    }
-
-    public void setInstanceCreationTime(long instanceCreationTime) {
-        this.instanceCreationTime = instanceCreationTime;
     }
 
     public long getInstanceCreationTime() {
@@ -83,7 +79,6 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
 
     @Override
     public void run() {
-
         for (int i = 0; i < this.minutesCount; ++i) {
 
             randomWait();
@@ -107,7 +102,7 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
 
     @Override
     public int compareTo(MyTarakanThread other) {
-        return this.getWholeTimeForAllTimes() - other.getWholeTimeForAllTimes();
+        return this.getWholeTimeForAllRealTimes() - other.getWholeTimeForAllRealTimes();
     }
 
     @Override
@@ -126,12 +121,11 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
         if (this == o) return true;
         if (!(o instanceof MyTarakanThread)) return false;
         MyTarakanThread that = (MyTarakanThread) o;
-        return minutesCount == that.minutesCount && getCommonNumber() == that.getCommonNumber() && getWholeTimeForAllTimes() == that.getWholeTimeForAllTimes() && Objects.equals(getNickname(), that.getNickname()) && Objects.equals(timeSequenceGenerator, that.timeSequenceGenerator);
+        return shortiesTime == that.shortiesTime && longestTime == that.longestTime && minutesCount == that.minutesCount && getCommonNumber() == that.getCommonNumber() && getInstanceCreationTime() == that.getInstanceCreationTime() && getWholeTimeForAllTimes() == that.getWholeTimeForAllTimes() && getWholeTimeForAllRealTimes() == that.getWholeTimeForAllRealTimes() && Objects.equals(listParticipants, that.listParticipants) && Objects.equals(getNickname(), that.getNickname()) && Objects.equals(timeSequenceGenerator, that.timeSequenceGenerator);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(minutesCount, getNickname(), getCommonNumber(), timeSequenceGenerator, getWholeTimeForAllTimes());
+        return Objects.hash(listParticipants, shortiesTime, longestTime, minutesCount, getNickname(), getCommonNumber(), timeSequenceGenerator, getInstanceCreationTime(), getWholeTimeForAllTimes(), getWholeTimeForAllRealTimes());
     }
-
 }

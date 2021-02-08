@@ -38,7 +38,7 @@ public class App {
         System.out.println();
         System.out.println("Tarakan: "
                 + temp.getNickname() + " won wit the time: "
-                + temp.getWholeTimeForAllTimes() + " | -> common number: "
+                + temp.getWholeTimeForAllRealTimes() + " | -> common number: "
                 + temp.getCommonNumber() + " | -> class creation real time: "
                 + temp.getClassCreationTime() +
                 " | -> instance creation time: "
