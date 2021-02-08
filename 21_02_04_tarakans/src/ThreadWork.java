@@ -25,9 +25,9 @@ public class ThreadWork {
         MyCharThread[] threads = new MyCharThread[count];
         List<MyCharThread> masterList = new Vector<>();
 
-        for (int index = 0; index < count; index++) {
-            threads[index] = new MyCharThread(masterList, "Thread " + (index + 1));
-            threads[index].start();
+        for (int i = 0; i < count; i++) {
+            threads[i] = new MyCharThread(masterList, "Tarakan " + (i + 1));
+            threads[i].start();
         }
 
         while (isOperationRunning(threads)) {
