@@ -17,10 +17,9 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
         callCount += 1;
     }
 
-    public static List<MyTarakanThread> listOfTarakans = new ArrayList<>();
-    private List<MyTarakanThread> listParticipants;
-    int shortiesTime = 50;
-    int longestTime = 100;
+    private final List<MyTarakanThread> listParticipants;
+    final int shortiesTime = 50;
+    final int longestTime = 100;
     final int minutesCount = 10;
     final String nickname;
     final int commonNumber;
@@ -76,10 +75,6 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
             Thread.sleep((long) (3000 * Math.random()));
         } catch (InterruptedException x) {
         }
-    }
-
-    public static List<MyTarakanThread> getListOfTarakans() {
-        return listOfTarakans;
     }
 
     @Override
