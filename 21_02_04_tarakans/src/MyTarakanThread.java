@@ -19,6 +19,8 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
 
     public static List<MyTarakanThread> listOfTarakans = new ArrayList<>();
     private List<MyTarakanThread> list;
+    int shortiesTime = 50;
+    int longestTime = 100;
     final int times = 10;
     final String nickname;
     final int commonNumber;
@@ -29,7 +31,7 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
         this.list = masterList;
         this.nickname = nickname;
         this.commonNumber = getCallCount();
-        this.timeSequenceGenerator = new IntRandomNumberGenerator(50, 100);
+        this.timeSequenceGenerator = new IntRandomNumberGenerator(shortiesTime, longestTime);
         this.wholeTimeForAllTimes = 0;
     }
 
