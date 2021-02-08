@@ -46,8 +46,8 @@ public class ThreadWork {
             // do nothing
         }
 
-        System.out.println("Done!! Print Your List ...");
-        System.out.println(masterList);
+        System.out.println("Done!! Print Your Tarakan - List:");
+
         for (MyCharThread item : masterList) {
             System.out.println("[" + item + "]");
         }
