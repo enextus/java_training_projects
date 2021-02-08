@@ -85,13 +85,13 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
             randomWait();
 
             System.out.println(" ----> " + this.getWholeTimeForAllTimes());
+
             int temp = timeSequenceGenerator.nextInt();
             System.out.println(" --> " + temp);
 
-            this.setWholeTimeForAllTimes(this.getWholeTimeForAllTimes()
-                    + temp);
+            this.setWholeTimeForAllTimes(
+                    this.getWholeTimeForAllTimes() + temp);
 
-            //Pause for 4 seconds
             try {
                 Thread.sleep(temp);
             } catch (InterruptedException e) {
@@ -114,7 +114,7 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
 
     @Override
     public int compareTo(MyTarakanThread other) {
-        return this.getWholeTimeForAllRealTimes() - other.getWholeTimeForAllRealTimes();
+        return this.getWholeTimeForAllTimes() - other.getWholeTimeForAllTimes();
     }
 
     @Override
