@@ -30,13 +30,12 @@ public class App {
         for (MyTarakanThread item : listParticipants) {
             System.out.println("["
                     + item.getNickname() + ": "
-                    + item.getWholeTimeForAllRealTimes() + " ms.; ---> " +
+                    + " WholeTimeForAllRealTime: -> " +
+                    +item.getWholeTimeForAllRealTimes() + " ms.; ---> " +
 
                     new Date(item.getWholeTimeForAllRealTimes()).getTime()
-                    + " Whole Real Time: "
+                    + " whole time as given: "
                     + item.getWholeTimeForAllTimes() + " ms."
-
-
                     + "]");
         }
 
