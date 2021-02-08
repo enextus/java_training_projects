@@ -40,7 +40,7 @@ public class ThreadWork {
         System.out.println("Done!! Print Your Tarakan - List:");
 
         for (MyCharThread item : masterList) {
-            System.out.println("[" + item.getNickname() + ": " + item.getWholeTimeForAllTimes() + "]");
+            System.out.println("[" + item.getNickname() + ": " + item.getWholeTimeForAllTimes() + " ms." + "]");
         }
 
     }
