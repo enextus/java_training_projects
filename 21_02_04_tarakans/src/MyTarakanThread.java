@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
@@ -28,13 +27,19 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
     private final String nickname;
     private final int commonNumber;
     private final IntRandomNumberGenerator timeSequenceGenerator;
+    private final long instanceCreationTime;
     private int wholeTimeForAllTimes;
+
+    public long getInstanceCreationTime() {
+        return instanceCreationTime;
+    }
 
     public MyTarakanThread(List<MyTarakanThread> masterList, String nickname) {
         this.listParticipants = masterList;
         this.nickname = nickname;
         this.commonNumber = getCallCount();
         this.timeSequenceGenerator = new IntRandomNumberGenerator(shortiesTime, longestTime);
+        this.instanceCreationTime = new Date().getTime();
         this.wholeTimeForAllTimes = 0;
     }
 
@@ -66,11 +71,14 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
     public void run() {
 
         for (int i = 0; i < this.minutesCount; ++i) {
+
             randomWait();
+
             this.setWholeTimeForAllTimes(this.getWholeTimeForAllTimes()
                     + timeSequenceGenerator.nextInt());
         }
 
+        //int result = (int) (Sytem.currentTimesMillis() - startingTime);
         listParticipants.add(this);
     }
 

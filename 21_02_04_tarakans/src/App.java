@@ -24,6 +24,7 @@ public class App {
         System.out.println("Done!! Print Your Tarakan - List:");
 
         Collections.sort(listParticipants);
+        MyTarakanThread temp = listParticipants.get(0);
 
         for (MyTarakanThread item : listParticipants) {
             System.out.println("["
@@ -31,8 +32,6 @@ public class App {
                     + item.getWholeTimeForAllTimes() + " ms."
                     + "]");
         }
-
-        MyTarakanThread temp = listParticipants.get(0);
 
         System.out.println();
         System.out.println("Tarakan: "
