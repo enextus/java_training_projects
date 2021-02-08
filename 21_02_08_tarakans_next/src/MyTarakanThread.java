@@ -91,12 +91,6 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
 
             this.setWholeTimeForAllTimes(
                     this.getWholeTimeForAllTimes() + temp);
-
-            try {
-                Thread.sleep(temp);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
         }
 
         int result = (int) (System.currentTimeMillis() - this.getInstanceCreationTime());
