@@ -3,7 +3,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
-public class MyCharThread extends Thread implements Comparable<MyCharThread> {
+public class MyTarakanThread extends Thread implements Comparable<MyTarakanThread> {
 
     public static int callCount = 0;
     public static long classCreationTime = 0;
@@ -17,15 +17,15 @@ public class MyCharThread extends Thread implements Comparable<MyCharThread> {
         callCount += 1;
     }
 
-    public static List<MyCharThread> listOfTarakans = new ArrayList<>();
-    private List<MyCharThread> list;
+    public static List<MyTarakanThread> listOfTarakans = new ArrayList<>();
+    private List<MyTarakanThread> list;
     final int times = 10;
     final String nickname;
     final int commonNumber;
     final IntRandomNumberGenerator timeSequenceGenerator;
     int wholeTimeForAllTimes;
 
-    public MyCharThread(List<MyCharThread> masterList, String nickname) {
+    public MyTarakanThread(List<MyTarakanThread> masterList, String nickname) {
         this.list = masterList;
         this.nickname = nickname;
         this.commonNumber = getCallCount();
@@ -42,7 +42,7 @@ public class MyCharThread extends Thread implements Comparable<MyCharThread> {
     }
 
     public static void setClassCreationTime(long classCreationTime) {
-        MyCharThread.classCreationTime = classCreationTime;
+        MyTarakanThread.classCreationTime = classCreationTime;
     }
 
     public static int getCallCount() {
@@ -76,12 +76,12 @@ public class MyCharThread extends Thread implements Comparable<MyCharThread> {
         }
     }
 
-    public static List<MyCharThread> getListOfTarakans() {
+    public static List<MyTarakanThread> getListOfTarakans() {
         return listOfTarakans;
     }
 
     @Override
-    public int compareTo(MyCharThread other) {
+    public int compareTo(MyTarakanThread other) {
         return this.getWholeTimeForAllTimes() - other.getWholeTimeForAllTimes();
     }
 
@@ -99,8 +99,8 @@ public class MyCharThread extends Thread implements Comparable<MyCharThread> {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof MyCharThread)) return false;
-        MyCharThread that = (MyCharThread) o;
+        if (!(o instanceof MyTarakanThread)) return false;
+        MyTarakanThread that = (MyTarakanThread) o;
         return times == that.times && getCommonNumber() == that.getCommonNumber() && getWholeTimeForAllTimes() == that.getWholeTimeForAllTimes() && Objects.equals(getNickname(), that.getNickname()) && Objects.equals(timeSequenceGenerator, that.timeSequenceGenerator);
     }
 

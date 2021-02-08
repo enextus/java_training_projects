@@ -22,11 +22,11 @@ public class App {
 
         int count = 10;
 
-        MyCharThread[] threads = new MyCharThread[count];
-        List<MyCharThread> masterList = new Vector<>();
+        MyTarakanThread[] threads = new MyTarakanThread[count];
+        List<MyTarakanThread> masterList = new Vector<>();
 
         for (int i = 0; i < count; i++) {
-            threads[i] = new MyCharThread(masterList, "00" + (i + 1));
+            threads[i] = new MyTarakanThread(masterList, "00" + (i + 1));
             threads[i].start();
         }
 
@@ -38,14 +38,14 @@ public class App {
 
         Collections.sort(masterList);
 
-        for (MyCharThread item : masterList) {
+        for (MyTarakanThread item : masterList) {
             System.out.println("["
                     + item.getNickname() + ": "
                     + item.getWholeTimeForAllTimes() + " ms."
                     + "]");
         }
 
-        MyCharThread temp = masterList.get(0);
+        MyTarakanThread temp = masterList.get(0);
 
         System.out.println();
         System.out.println("Tarakan: " + temp.nickname + " won wit the time: " + temp.getWholeTimeForAllTimes());
