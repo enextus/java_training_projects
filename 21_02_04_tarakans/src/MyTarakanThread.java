@@ -18,10 +18,10 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
     }
 
     private final List<MyTarakanThread> listParticipants;
-    final int shortiesTime = 50;
-    final int longestTime = 100;
-    final int minutesCount = 10;
-    final String nickname;
+    private final int shortiesTime = 50;
+    private final int longestTime = 100;
+    private final int minutesCount = 10;
+    private final String nickname;
     final int commonNumber;
     final IntRandomNumberGenerator timeSequenceGenerator;
     int wholeTimeForAllTimes;
