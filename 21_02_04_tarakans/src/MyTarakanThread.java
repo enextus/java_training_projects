@@ -50,7 +50,7 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
         MyTarakanThread.classCreationTime = classCreationTime;
     }
 
-    public static int getCallCount() {
+    static int getCallCount() {
         return callCount;
     }
 
