@@ -21,7 +21,7 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
     private List<MyTarakanThread> list;
     int shortiesTime = 50;
     int longestTime = 100;
-    final int times = 10;
+    final int minutesCount = 10;
     final String nickname;
     final int commonNumber;
     final IntRandomNumberGenerator timeSequenceGenerator;
@@ -62,7 +62,7 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
     @Override
     public void run() {
 
-        for (int i = 0; i < this.times; ++i) {
+        for (int i = 0; i < this.minutesCount; ++i) {
             randomWait();
             this.setWholeTimeForAllTimes(this.getWholeTimeForAllTimes() + timeSequenceGenerator.nextInt());
         }
@@ -90,7 +90,7 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
     @Override
     public String toString() {
         return "MyCharThread{" +
-                "times=" + times +
+                "times=" + minutesCount +
                 ", nickname='" + nickname + '\'' +
                 ", commonNumber=" + commonNumber +
                 ", timeSequenceGenerator=" + timeSequenceGenerator +
@@ -103,12 +103,12 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
         if (this == o) return true;
         if (!(o instanceof MyTarakanThread)) return false;
         MyTarakanThread that = (MyTarakanThread) o;
-        return times == that.times && getCommonNumber() == that.getCommonNumber() && getWholeTimeForAllTimes() == that.getWholeTimeForAllTimes() && Objects.equals(getNickname(), that.getNickname()) && Objects.equals(timeSequenceGenerator, that.timeSequenceGenerator);
+        return minutesCount == that.minutesCount && getCommonNumber() == that.getCommonNumber() && getWholeTimeForAllTimes() == that.getWholeTimeForAllTimes() && Objects.equals(getNickname(), that.getNickname()) && Objects.equals(timeSequenceGenerator, that.timeSequenceGenerator);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(times, getNickname(), getCommonNumber(), timeSequenceGenerator, getWholeTimeForAllTimes());
+        return Objects.hash(minutesCount, getNickname(), getCommonNumber(), timeSequenceGenerator, getWholeTimeForAllTimes());
     }
 
 }
