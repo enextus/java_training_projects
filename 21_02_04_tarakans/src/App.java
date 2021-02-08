@@ -30,9 +30,9 @@ public class App {
         for (MyTarakanThread item : listParticipants) {
             System.out.println("["
                     + item.getNickname() + ": "
-                    + item.getWholeTimeForAllRealTimes() + " ms." +
+                    + item.getWholeTimeForAllRealTimes() + " ms.; ---> " +
 
-            new Date(item.getWholeTimeForAllRealTimes()).toString()
+                    new Date(item.getWholeTimeForAllRealTimes()).getTime()
                     + " Whole Real Time: "
                     + item.getWholeTimeForAllTimes() + " ms."
 
@@ -41,15 +41,13 @@ public class App {
         }
 
         System.out.println();
-        System.out.println("Tarakan: "
-                + temp.getNickname() + " won wit the time: "
-                + temp.getWholeTimeForAllRealTimes() + " | -> common number: "
-                + temp.getCommonNumber() + " | -> class creation real time: "
-                + temp.getClassCreationTime() +
-                " | -> instance creation time: "
-                + temp.getInstanceCreationTime() + " | -> whole real time: "
-                + temp.getWholeTimeForAllRealTimes()
-
+        System.out.println(
+                "Tarakan: " + temp.getNickname()
+                + " won wit the time: " + temp.getWholeTimeForAllRealTimes()
+                + " | -> common number: " + temp.getCommonNumber()
+                + " | -> class creation real time: " + temp.getClassCreationTime()
+                + " | -> instance creation time: " + temp.getInstanceCreationTime()
+                + " | -> whole real time: " + temp.getWholeTimeForAllRealTimes()
         );
     }
 

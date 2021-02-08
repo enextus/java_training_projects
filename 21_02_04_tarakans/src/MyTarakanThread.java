@@ -27,9 +27,9 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
     private final String nickname;
     private final int commonNumber;
     private final IntRandomNumberGenerator timeSequenceGenerator;
-    long instanceCreationTime;
+    private final long instanceCreationTime;
     private int wholeTimeForAllTimes;
-    int wholeTimeForAllRealTimes;
+    private int wholeTimeForAllRealTimes;
 
     public MyTarakanThread(List<MyTarakanThread> masterList, String nickname) {
         this.listParticipants = masterList;
