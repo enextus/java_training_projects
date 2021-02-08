@@ -63,7 +63,8 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
 
         for (int i = 0; i < this.minutesCount; ++i) {
             randomWait();
-            this.setWholeTimeForAllTimes(this.getWholeTimeForAllTimes() + timeSequenceGenerator.nextInt());
+            this.setWholeTimeForAllTimes(this.getWholeTimeForAllTimes()
+                    + timeSequenceGenerator.nextInt());
         }
 
         listParticipants.add(this);
