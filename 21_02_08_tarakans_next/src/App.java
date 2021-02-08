@@ -50,8 +50,7 @@ public class App {
         System.out.println();
         System.out.println(
                 "Tarakan: " + temp.getNickname()
-                + " won wit the time: " + temp.getWholeTimeForAllRealTimes()
-                + " | -> whole real time: " + temp.getWholeTimeForAllRealTimes()
+                + " won wit the time: " + temp.getWholeTimeForAllTimes()
         );
     }
 
