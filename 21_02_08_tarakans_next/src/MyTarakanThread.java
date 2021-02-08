@@ -84,7 +84,6 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
 
             randomWait();
 
-            System.out.println(" ----> " + this.getWholeTimeForAllTimes());
             int temp = timeSequenceGenerator.nextInt();
 
             this.setWholeTimeForAllTimes(
@@ -94,7 +93,11 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
 
         int result = (int) (System.currentTimeMillis() - this.getInstanceCreationTime());
         this.setWholeTimeForAllRealTimes(result);
-        listParticipants.add(this);
+
+        synchronized (this) {
+            listParticipants.add(this);
+        }
+
     }
 
     private void randomWait() {
@@ -102,6 +105,7 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
             Thread.currentThread();
             Thread.sleep((long) (1000 * Math.random()));
         } catch (InterruptedException x) {
+            System.out.println("Thread  interrupted.");
         }
     }
 
