@@ -85,9 +85,7 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
             randomWait();
 
             System.out.println(" ----> " + this.getWholeTimeForAllTimes());
-
             int temp = timeSequenceGenerator.nextInt();
-            System.out.println("" + i + ":: " + " --> " + temp);
 
             this.setWholeTimeForAllTimes(
                     this.getWholeTimeForAllTimes() + temp);
