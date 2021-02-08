@@ -5,8 +5,8 @@ import java.util.Objects;
 
 public class MyTarakanThread extends Thread implements Comparable<MyTarakanThread> {
 
-    public static int callCount = 0;
-    public static long classCreationTime = 0;
+    private static int callCount = 0;
+    private static long classCreationTime = 0;
 
     static {
         final long classCreationTime = new Date().getTime();
