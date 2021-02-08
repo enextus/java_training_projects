@@ -1,6 +1,6 @@
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Vector;
 
 public class App {
 
@@ -23,7 +23,7 @@ public class App {
         int count = 10;
 
         MyTarakanThread[] threads = new MyTarakanThread[count];
-        List<MyTarakanThread> masterList = new Vector<>();
+        List<MyTarakanThread> masterList = new ArrayList<>();
 
         for (int i = 0; i < count; i++) {
             threads[i] = new MyTarakanThread(masterList, "00" + (i + 1));
