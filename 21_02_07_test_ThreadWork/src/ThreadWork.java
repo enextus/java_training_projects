@@ -18,9 +18,9 @@ public class ThreadWork {
         }
 
         System.out.println("Done!! Print Your List ...");
-
+        System.out.println(masterList);
         for (String item : masterList) {
-            System.out.println("[" + item + "]");
+            System.out.println("[" + item + "]" + "[" + item + "]");
         }
     }
 

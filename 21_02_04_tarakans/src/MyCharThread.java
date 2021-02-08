@@ -1,4 +1,7 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Objects;
 
 public class MyCharThread extends Thread implements Comparable<MyCharThread> {
 
@@ -15,15 +18,15 @@ public class MyCharThread extends Thread implements Comparable<MyCharThread> {
     }
 
     public static List<MyCharThread> listOfTarakans = new ArrayList<>();
-
-    final int times;
+    private List<MyCharThread> list;
+    final int times = 10;
     final String nickname;
     final int commonNumber;
     final IntRandomNumberGenerator timeSequenceGenerator;
     int wholeTimeForAllTimes;
 
-    public MyCharThread(int times, String nickname) {
-        this.times = times;
+    public MyCharThread(List<MyCharThread> masterList, String nickname) {
+        this.list = masterList;
         this.nickname = nickname;
         this.commonNumber = getCallCount();
         this.timeSequenceGenerator = new IntRandomNumberGenerator(50, 100);
@@ -57,6 +60,7 @@ public class MyCharThread extends Thread implements Comparable<MyCharThread> {
     @Override
     public void run() {
 
+/*
         for (int i = 0; i < this.times; i++) {
 
             this.setWholeTimeForAllTimes(this.getWholeTimeForAllTimes() + timeSequenceGenerator.nextInt());
@@ -67,6 +71,33 @@ public class MyCharThread extends Thread implements Comparable<MyCharThread> {
                 e.printStackTrace();
             }
         }
+*/
+
+
+
+        for (int i = 0; i < this.times; ++i) {
+            randomWait();
+            String data = "Thread [" + getNickname() + "][" + wholeTimeForAllTimes + "]";
+
+            this.setWholeTimeForAllTimes(this.getWholeTimeForAllTimes() + timeSequenceGenerator.nextInt());
+
+            System.out.println("data ->>>> " + data);
+
+            //list.add(data);
+
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
+        list.add(this);
+
+
+
+
+
 
 /*        System.out.println("Nickname: " + this.getNickname() + ", Time: " + this.getWholeTimeForAllTimes() + " milliseconds.");
         MyCharThread.listOfTarakans.add(this);
@@ -75,6 +106,14 @@ public class MyCharThread extends Thread implements Comparable<MyCharThread> {
             System.out.println("-> " + tarakan);
         }*/
 
+    }
+
+    private void randomWait() {
+        try {
+            Thread.currentThread();
+            Thread.sleep((long) (3000 * Math.random()));
+        } catch (InterruptedException x) {
+        }
     }
 
     public static List<MyCharThread> getListOfTarakans() {

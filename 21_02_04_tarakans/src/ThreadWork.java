@@ -1,8 +1,21 @@
 import java.util.List;
+import java.util.Vector;
 
 public class ThreadWork {
 
     // https://stackoverflow.com/questions/31367744/multiple-threads-in-a-thread-pool-writing-data-in-same-list
+
+    private static boolean isOperationRunning(Thread[] threads) {
+        boolean running = false;
+
+        for (Thread thread : threads) {
+            if (thread.isAlive()) {
+                running = true;
+                break;
+            }
+        }
+        return running;
+    }
 
     public static void main(String[] args) {
 
@@ -21,73 +34,34 @@ public class ThreadWork {
 
         */
 
+        int count = 10;
+        MyCharThread[] threads = new MyCharThread[count];
+        List<MyCharThread> masterList = new Vector<MyCharThread>();
 
+        for (int index = 0; index < count; index++) {
+            threads[index] = new MyCharThread(masterList, "Thread " + (index + 1));
+            threads[index].start();
+        }
+        while (isOperationRunning(threads)) {
+            // do nothing
+        }
+
+        System.out.println("Done!! Print Your List ...");
+        System.out.println(masterList);
+        for (MyCharThread item : masterList) {
+            System.out.println("[" + item + "]");
+        }
+
+/*
         MyCharThread myOwnThread0 = new MyCharThread(10, "Лукашенко");
         Thread threadRes0 = new Thread(myOwnThread0);
         threadRes0.start();
 
         // ____________________________________________________________________________________________
 
-        MyCharThread myOwnThread1 = new MyCharThread(10, "Солженицын");
-        Thread threadRes1 = new Thread(myOwnThread1);
-        threadRes1.start();
-
-        // ____________________________________________________________________________________________
-
-        MyCharThread myOwnThread2 = new MyCharThread(10, "Щаранский");
-        Thread threadRes2 = new Thread(myOwnThread2);
-        threadRes2.start();
-
-        // ____________________________________________________________________________________________
-
-        MyCharThread myOwnThread3 = new MyCharThread(10, "Аксенов");
-        Thread threadRes3 = new Thread(myOwnThread3);
-        threadRes3.start();
-
-        // ____________________________________________________________________________________________
-
-        MyCharThread myOwnThread4 = new MyCharThread(10, "Столыпин");
-        Thread threadRes4 = new Thread(myOwnThread4);
-        threadRes4.start();
-
-        // ____________________________________________________________________________________________
-
-        MyCharThread myOwnThread5 = new MyCharThread(10, "Керенский");
-        Thread threadRes5 = new Thread(myOwnThread5);
-        threadRes5.start();
-
-        // ____________________________________________________________________________________________
-
-
-        MyCharThread myOwnThread6 = new MyCharThread(10, "Брежнев");
-        Thread threadRes6 = new Thread(myOwnThread6);
-        threadRes6.start();
-
-        // ____________________________________________________________________________________________
-
-        MyCharThread myOwnThread7 = new MyCharThread(10, "Чубайс");
-        Thread threadRes7 = new Thread(myOwnThread7);
-        threadRes7.start();
-
-        // ____________________________________________________________________________________________
-
-        MyCharThread myOwnThread8 = new MyCharThread(10, "Абрамович");
-        Thread threadRes8 = new Thread(myOwnThread8);
-        threadRes8.start();
-
-        // ____________________________________________________________________________________________
-
-        MyCharThread myOwnThread9 = new MyCharThread(10, "Березовский");
-        Thread threadRes9 = new Thread(myOwnThread9);
-        threadRes9.start();
-
-        // ____________________________________________________________________________________________
-
         List<MyCharThread> res = MyCharThread.listOfTarakans;
-        List<MyCharThread> res2 = MyCharThread.getListOfTarakans();
+        List<MyCharThread> res2 = MyCharThread.getListOfTarakans();*/
 
-        System.out.println("res: " + res);
-        System.out.println("res2: " + res2);
 
 /*        Collections.sort(res);
 
