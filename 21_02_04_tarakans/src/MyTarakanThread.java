@@ -79,12 +79,24 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
 
     @Override
     public void run() {
+
         for (int i = 0; i < this.minutesCount; ++i) {
 
             randomWait();
 
+            System.out.println(" ----> " + this.getWholeTimeForAllTimes());
+            int temp = timeSequenceGenerator.nextInt();
+            System.out.println(" --> " + temp);
+
             this.setWholeTimeForAllTimes(this.getWholeTimeForAllTimes()
-                    + timeSequenceGenerator.nextInt());
+                    + temp);
+
+            //Pause for 4 seconds
+            try {
+                Thread.sleep(temp);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
 
         int result = (int) (System.currentTimeMillis() - this.getInstanceCreationTime());
