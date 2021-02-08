@@ -4,20 +4,6 @@ import java.util.List;
 
 public class App {
 
-    private static boolean isOperationRunning(Thread[] threads) {
-
-        boolean running = false;
-
-        for (Thread thread : threads) {
-            if (thread.isAlive()) {
-                running = true;
-                break;
-            }
-        }
-
-        return running;
-    }
-
     public static void main(String[] args) {
 
         int count = 10;
@@ -49,6 +35,20 @@ public class App {
 
         System.out.println();
         System.out.println("Tarakan: " + temp.nickname + " won wit the time: " + temp.getWholeTimeForAllTimes());
+    }
+
+    private static boolean isOperationRunning(Thread[] threads) {
+
+        boolean running = false;
+
+        for (Thread thread : threads) {
+            if (thread.isAlive()) {
+                running = true;
+                break;
+            }
+        }
+
+        return running;
     }
 
 }
