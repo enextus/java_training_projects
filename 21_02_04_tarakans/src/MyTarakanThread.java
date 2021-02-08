@@ -107,7 +107,7 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
     private void randomWait() {
         try {
             Thread.currentThread();
-            Thread.sleep((long) (3000 * Math.random()));
+            Thread.sleep((long) (10000 * Math.random()));
         } catch (InterruptedException x) {
         }
     }

@@ -5,7 +5,7 @@ import java.util.List;
 
 public class App {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         int count = 10;
 
@@ -17,10 +17,16 @@ public class App {
             threadTrack[i].start();
         }
 
+        for (int i = 0; i < count; i++) {
+            threadTrack[i].join();
+        }
+/*
+
         while (isOperationRunning(threadTrack)) {
 
             // do nothing
         }
+*/
 
         System.out.println("Done!! Print Your Tarakan - List:");
 
