@@ -8,15 +8,15 @@ public class App {
 
         int count = 10;
 
-        MyTarakanThread[] threads = new MyTarakanThread[count];
+        MyTarakanThread[] threadTrack = new MyTarakanThread[count];
         List<MyTarakanThread> listParticipants = new ArrayList<>();
 
         for (int i = 0; i < count; i++) {
-            threads[i] = new MyTarakanThread(listParticipants, "00" + (i + 1));
-            threads[i].start();
+            threadTrack[i] = new MyTarakanThread(listParticipants, "00" + (i + 1));
+            threadTrack[i].start();
         }
 
-        while (isOperationRunning(threads)) {
+        while (isOperationRunning(threadTrack)) {
 
             // do nothing
         }
