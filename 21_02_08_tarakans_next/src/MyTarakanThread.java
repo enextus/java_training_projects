@@ -9,14 +9,12 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
     private final int minutesCount = 10;
     private final String nickname;
     private final IntRandomNumberGenerator sequenceGenerator;
-    private final long instanceCreationTime;
     private int wholeTimeForAllTimes;
 
     public MyTarakanThread(List<MyTarakanThread> masterList, String nickname) {
         this.listParticipants = masterList;
         this.nickname = nickname;
         this.sequenceGenerator = new IntRandomNumberGenerator(shortiesTime, longestTime);
-        this.instanceCreationTime = new Date().getTime();
         this.wholeTimeForAllTimes = 0;
     }
 
