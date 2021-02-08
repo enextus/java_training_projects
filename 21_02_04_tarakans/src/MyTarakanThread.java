@@ -18,7 +18,7 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
     }
 
     public static List<MyTarakanThread> listOfTarakans = new ArrayList<>();
-    private List<MyTarakanThread> list;
+    private List<MyTarakanThread> listParticipants;
     int shortiesTime = 50;
     int longestTime = 100;
     final int minutesCount = 10;
@@ -28,7 +28,7 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
     int wholeTimeForAllTimes;
 
     public MyTarakanThread(List<MyTarakanThread> masterList, String nickname) {
-        this.list = masterList;
+        this.listParticipants = masterList;
         this.nickname = nickname;
         this.commonNumber = getCallCount();
         this.timeSequenceGenerator = new IntRandomNumberGenerator(shortiesTime, longestTime);
@@ -67,7 +67,7 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
             this.setWholeTimeForAllTimes(this.getWholeTimeForAllTimes() + timeSequenceGenerator.nextInt());
         }
 
-        list.add(this);
+        listParticipants.add(this);
     }
 
     private void randomWait() {
