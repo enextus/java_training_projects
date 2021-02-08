@@ -34,7 +34,9 @@ public class App {
         MyTarakanThread temp = masterList.get(0);
 
         System.out.println();
-        System.out.println("Tarakan: " + temp.getNickname() + "  "  + temp.getCommonNumber() + "  "  + temp.getNickname() + " won wit the time: " + temp.getWholeTimeForAllTimes());
+        System.out.println("Tarakan: "
+                + temp.getNickname() + " won wit the time: "
+                + temp.getWholeTimeForAllTimes());
     }
 
     private static boolean isOperationRunning(Thread[] threads) {
