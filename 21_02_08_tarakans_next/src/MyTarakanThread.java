@@ -20,10 +20,6 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
         this.wholeTimeForAllTimes = 0;
     }
 
-    public long getInstanceCreationTime() {
-        return instanceCreationTime;
-    }
-
     int getWholeTimeForAllTimes() {
         return wholeTimeForAllTimes;
     }
