@@ -56,20 +56,6 @@ public class App {
         );
     }
 
-    private static boolean isOperationRunning(Thread[] threads) {
-
-        boolean running = false;
-
-        for (Thread thread : threads) {
-            if (thread.isAlive()) {
-                running = true;
-                break;
-            }
-        }
-
-        return running;
-    }
-
 }
 
 /*
