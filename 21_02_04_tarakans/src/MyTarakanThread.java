@@ -34,15 +34,15 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
         this.wholeTimeForAllTimes = 0;
     }
 
-    public int getWholeTimeForAllTimes() {
+    int getWholeTimeForAllTimes() {
         return wholeTimeForAllTimes;
     }
 
-    public void setWholeTimeForAllTimes(int wholeTimeForAllTimes) {
+    void setWholeTimeForAllTimes(int wholeTimeForAllTimes) {
         this.wholeTimeForAllTimes = wholeTimeForAllTimes;
     }
 
-    public static void setClassCreationTime(long classCreationTime) {
+    static void setClassCreationTime(long classCreationTime) {
         MyTarakanThread.classCreationTime = classCreationTime;
     }
 
@@ -50,11 +50,11 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
         return callCount;
     }
 
-    public String getNickname() {
+    String getNickname() {
         return nickname;
     }
 
-    public int getCommonNumber() {
+    int getCommonNumber() {
         return commonNumber;
     }
 
