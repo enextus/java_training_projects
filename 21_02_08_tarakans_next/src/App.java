@@ -21,13 +21,11 @@ public class App {
             threadTrack[i].join();
         }
 /*
-
         while (isOperationRunning(threadTrack)) {
 
             // do nothing
         }
 */
-
         System.out.println("Done!! Print Your Tarakan - List:");
 
         Collections.sort(listParticipants);
@@ -57,6 +55,10 @@ public class App {
     }
 
 }
+
+
+
+
 
 /*
 
