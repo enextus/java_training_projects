@@ -1,14 +1,10 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 public class App {
 
     public static void main(String[] args) throws InterruptedException {
 
 
         Employee e1 = new Employee("tanya", 100, 200, false);
-        Employee e2 = new Employee("vasya", 200, 300, false);
+        Employee e2 = new Employee("vasya", 200, 300, true);
         Employee e3 = new Employee("petya", 200, 300, false);
 
 

@@ -14,11 +14,27 @@ public class Employee {
         this.sequenceGenerator = new IntRandomNumberGenerator(shortiesTime, longestTime);
     }
 
-
-    String getNickname() {
+    public String getNickname() {
         return nickname;
     }
 
+    public IntRandomNumberGenerator getSequenceGenerator() {
+        return sequenceGenerator;
+    }
 
+    public boolean isTurboPossibility() {
+        return turboPossibility;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "nickname='" + nickname + '\'' +
+                ", shortiesTime=" + shortiesTime +
+                ", longestTime=" + longestTime +
+                ", sequenceGenerator=" + sequenceGenerator +
+                ", turboPossibility=" + turboPossibility +
+                '}';
+    }
 
 }
