@@ -1,27 +1,17 @@
 import java.util.List;
 
-public class Work extends Thread implements Comparable<BankThread> {
+public class Work extends Thread {
 
     private int numberOfCompletedContracts = 0;
-    private int wholeTimeForAllContracts;
-    private final List<BankThread> bankThreadList;
-    private final List<Employee> listEmployee;
 
+    private final List<BankThread> bankThreadList;
 
     public Work(int numberOfCompletedContracts) {
         this.numberOfCompletedContracts = numberOfCompletedContracts;
         this.bankThreadList = null;
     }
 
-    int getWholeTimeForAllContracts() {
-        return wholeTimeForAllContracts;
-    }
 
-
-
-    void setWholeTimeForAllContracts(int wholeTimeForAllContracts) {
-        this.wholeTimeForAllContracts = wholeTimeForAllContracts;
-    }
 
 
 
@@ -29,6 +19,8 @@ public class Work extends Thread implements Comparable<BankThread> {
     public void run() {
 
         randomWait();
+
+        // some code
 
         synchronized (this) {
             bankThreadList.add(this);
@@ -44,9 +36,5 @@ public class Work extends Thread implements Comparable<BankThread> {
             System.out.println("Thread  interrupted.");
         }
     }
-    @Override
-    public int compareTo(BankThread other) {
-        return this.getWholeTimeForAllContracts() - other.getWholeTimeForAllContracts();
 
-    }
 }
