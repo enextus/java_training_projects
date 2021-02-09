@@ -5,13 +5,13 @@ public class BankThread extends Thread implements Comparable<BankThread> {
 
     private final List<BankThread> bankThreadList;
     private final List<Employee> listEmployee;
-    private final String threadName;
+    private final Integer threadName;
     private final int numberOfCompletedContracts = 20;
     private int wholeTimeForAllContracts;
 
-    public BankThread(List<Employee> listEmployee, String threadName) {
+    public BankThread(List<Employee> listEmployee, Integer threadNumber) {
         this.listEmployee = listEmployee;
-        this.threadName = threadName;
+        this.threadName = threadNumber;
 
         //this.bankThreadList = bankThreadList;
         this.bankThreadList = null;
