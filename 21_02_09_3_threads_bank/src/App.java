@@ -9,10 +9,10 @@ public class App {
         int count = 10;
 
         BankThread[] bankThreads = new BankThread[count];
-        List<BankThread> listParticipants = new ArrayList<>();
+        List<BankThread> listEmployee = new ArrayList<>();
 
         for (int i = 0; i < count; i++) {
-            bankThreads[i] = new BankThread(listParticipants, "00" + (i + 1));
+            bankThreads[i] = new BankThread(listEmployee, "00" + (i + 1));
             bankThreads[i].start();
         }
 
@@ -22,10 +22,10 @@ public class App {
 
         System.out.println("Done!! Print Your Tarakan - List:");
 
-        Collections.sort(listParticipants);
-        BankThread temp = listParticipants.get(0);
+        Collections.sort(listEmployee);
+        BankThread temp = listEmployee.get(0);
 
-        for (BankThread item : listParticipants) {
+        for (BankThread item : listEmployee) {
             System.out.println("[" + item.getNickname() + ": "
                     + " time: " + item.getWholeTimeForAllTimes() + " ms."
                     + "]");
