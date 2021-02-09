@@ -35,8 +35,7 @@ public class BankThread extends Thread implements Comparable<BankThread> {
 
             randomWait();
 
-            this.setWholeTimeForAllContracts(
-                    this.getWholeTimeForAllContracts() + sequenceGenerator.nextInt());
+          //  this.setWholeTimeForAllContracts(this.getWholeTimeForAllContracts() + sequenceGenerator.nextInt());
 
         }
 

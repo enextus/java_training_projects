@@ -9,7 +9,6 @@ public class Employee {
         this.nickname = nickname;
         this.shortiesTime = shortiesTime;
         this.longestTime = longestTime;
-
         this.sequenceGenerator = new IntRandomNumberGenerator(shortiesTime, longestTime);
     }
 
