@@ -4,16 +4,16 @@ import java.util.List;
 public class BankThread extends Thread implements Comparable<BankThread> {
 
     private final List<BankThread> listEmployee;
-    private final int shortiesTime = 50;
-    private final int longestTime = 100;
+    private final int shortiesTime = 100;
+    private final int longestTime = 200;
     private final int minutesCount = 10;
-    private final String Nickname;
+    private final String nickname;
     private final IntRandomNumberGenerator sequenceGenerator;
     private int wholeTimeForAllTimes;
 
     public BankThread(List<BankThread> listEmployee, String nickname) {
         this.listEmployee = listEmployee;
-        this.Nickname = nickname;
+        this.nickname = nickname;
         this.sequenceGenerator = new IntRandomNumberGenerator(shortiesTime, longestTime);
         this.wholeTimeForAllTimes = 0;
     }
@@ -27,7 +27,7 @@ public class BankThread extends Thread implements Comparable<BankThread> {
     }
 
     String getNickname() {
-        return Nickname;
+        return nickname;
     }
 
     @Override
