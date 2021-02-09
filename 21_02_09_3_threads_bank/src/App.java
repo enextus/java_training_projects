@@ -8,7 +8,9 @@ public class App {
         Employee e3 = new Employee("petya", 200, 300, false);
 
 
-
+        System.out.println(e1);
+        System.out.println(e2);
+        System.out.println(e3);
 
 
 /*
