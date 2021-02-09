@@ -20,11 +20,11 @@ public class BankThread  extends Thread implements Comparable<BankThread> {
 
         // some code
         System.out.println("Started!");
-/*
+
         synchronized (this) {
-            bankThreadList.add(this);
+            Work.bankThreadList.add(this);
         }
-*/
+
 
     }
     int getWholeTimeForAllContracts() {
