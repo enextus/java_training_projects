@@ -1,23 +1,22 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class App {
 
     public static void main(String[] args) throws InterruptedException {
 
-
-        Employee e1 = new Employee("tanya", 100, 200, false);
-        Employee e2 = new Employee("vasya", 200, 300, true);
-        Employee e3 = new Employee("petya", 200, 300, false);
-
-
-        System.out.println(e1);
-        System.out.println(e2);
-        System.out.println(e3);
+        ArrayList<Employee> listEmployee = new ArrayList<Employee>();
+        listEmployee.add(new Employee("tanya", 100, 200, false));
+        listEmployee.add(new Employee("vasya", 200, 300, true));
+        listEmployee.add(new Employee("petya", 200, 300, false));
 
 
-/*
         int count = 10;
 
         BankThread[] bankThreads = new BankThread[count];
-        List<BankThread> listEmployee = new ArrayList<>();
+        List<BankThread> bankThreadList = new ArrayList<>();
+
 
         for (int i = 0; i < count; i++) {
             //   bankThreads[i] = new BankThread(listEmployee, "00" + (i + 1));
@@ -32,11 +31,11 @@ public class App {
         System.out.println();
         System.out.println("Done. Print Your employees - List:");
 
-        Collections.sort(listEmployee);
-        BankThread temp = listEmployee.get(0);*/
+        Collections.sort(bankThreadList);
+        BankThread temp = bankThreadList.get(0);
 
-/*        for (BankThread item : listEmployee) {
-            System.out.println("[" + item.getNickname() + ": "
+/*        for (BankThread item : bankThreadList) {
+           System.out.println("[" + item.getNickname() + ": "
                     + " time: " + item.getWholeTimeForAllContracts() + " ms."
                     + "]");
         }
