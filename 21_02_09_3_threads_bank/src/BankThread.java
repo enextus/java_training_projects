@@ -11,8 +11,8 @@ public class BankThread extends Thread implements Comparable<BankThread> {
     private final IntRandomNumberGenerator sequenceGenerator;
     private int wholeTimeForAllTimes;
 
-    public BankThread(List<BankThread> threadsList, String nickname) {
-        this.listEmployee = threadsList;
+    public BankThread(List<BankThread> listEmployee, String nickname) {
+        this.listEmployee = listEmployee;
         this.Nickname = nickname;
         this.sequenceGenerator = new IntRandomNumberGenerator(shortiesTime, longestTime);
         this.wholeTimeForAllTimes = 0;

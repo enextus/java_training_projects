@@ -20,6 +20,7 @@ public class App {
             bankThreads[i].join();
         }
 
+        System.out.println();
         System.out.println("Done. Print Your employees - List:");
 
         Collections.sort(listEmployee);
@@ -34,7 +35,8 @@ public class App {
         System.out.println();
         System.out.println(
                 "Employee: " + temp.getNickname()
-                        + " won wit the time: " + temp.getWholeTimeForAllTimes()
+                        + " \n" +
+                        "was the fastest with the time: " + temp.getWholeTimeForAllTimes()
         );
     }
 
