@@ -8,16 +8,16 @@ public class App {
 
         int count = 10;
 
-        BankThread[] threadTrack = new BankThread[count];
+        BankThread[] bankThreads = new BankThread[count];
         List<BankThread> listParticipants = new ArrayList<>();
 
         for (int i = 0; i < count; i++) {
-            threadTrack[i] = new BankThread(listParticipants, "00" + (i + 1));
-            threadTrack[i].start();
+            bankThreads[i] = new BankThread(listParticipants, "00" + (i + 1));
+            bankThreads[i].start();
         }
 
         for (int i = 0; i < count; i++) {
-            threadTrack[i].join();
+            bankThreads[i].join();
         }
 
         System.out.println("Done!! Print Your Tarakan - List:");
@@ -26,14 +26,14 @@ public class App {
         BankThread temp = listParticipants.get(0);
 
         for (BankThread item : listParticipants) {
-            System.out.println("[" + item.getnickname() + ": "
+            System.out.println("[" + item.getNickname() + ": "
                     + " time: " + item.getWholeTimeForAllTimes() + " ms."
                     + "]");
         }
 
         System.out.println();
         System.out.println(
-                "Tarakan: " + temp.getnickname()
+                "Tarakan: " + temp.getNickname()
                 + " won wit the time: " + temp.getWholeTimeForAllTimes()
         );
     }
