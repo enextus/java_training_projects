@@ -14,7 +14,8 @@ public class BankThread extends Thread implements Comparable<BankThread> {
         this.listEmployee = listEmployee;
 
 
-        this.bankThreadList = bankThreadList;
+      //  this.bankThreadList = bankThreadList;
+        this.bankThreadList = null;
 
 
         this.wholeTimeForAllContracts = 0;

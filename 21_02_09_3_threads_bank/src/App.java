@@ -26,7 +26,7 @@ public class App {
         Collections.sort(listEmployee);
         BankThread temp = listEmployee.get(0);
 
-        for (BankThread item : listEmployee) {
+/*        for (BankThread item : listEmployee) {
             System.out.println("[" + item.getNickname() + ": "
                     + " time: " + item.getWholeTimeForAllContracts() + " ms."
                     + "]");
@@ -37,7 +37,7 @@ public class App {
                 "Employee: " + temp.getNickname()
                         + " \n" +
                         "was the fastest with the time: " + temp.getWholeTimeForAllContracts()
-        );
+        );*/
     }
 
 }
