@@ -4,22 +4,20 @@ import java.util.List;
 public class BankThread extends Thread implements Comparable<BankThread> {
 
     private final List<BankThread> listEmployee;
-
     private final int numberOfCompletedContracts = 10;
-
-    private int wholeTimeForAllTimes;
+    private int wholeTimeForAllContracts;
 
     public BankThread(List<BankThread> listEmployee) {
         this.listEmployee = listEmployee;
-        this.wholeTimeForAllTimes = 0;
+        this.wholeTimeForAllContracts = 0;
     }
 
-    int getWholeTimeForAllTimes() {
-        return wholeTimeForAllTimes;
+    int getWholeTimeForAllContracts() {
+        return wholeTimeForAllContracts;
     }
 
-    void setWholeTimeForAllTimes(int wholeTimeForAllTimes) {
-        this.wholeTimeForAllTimes = wholeTimeForAllTimes;
+    void setWholeTimeForAllContracts(int wholeTimeForAllContracts) {
+        this.wholeTimeForAllContracts = wholeTimeForAllContracts;
     }
 
 
@@ -30,8 +28,8 @@ public class BankThread extends Thread implements Comparable<BankThread> {
 
             randomWait();
 
-            this.setWholeTimeForAllTimes(
-                    this.getWholeTimeForAllTimes() + sequenceGenerator.nextInt());
+            this.setWholeTimeForAllContracts(
+                    this.getWholeTimeForAllContracts() + sequenceGenerator.nextInt());
 
         }
 
@@ -52,7 +50,7 @@ public class BankThread extends Thread implements Comparable<BankThread> {
 
     @Override
     public int compareTo(BankThread other) {
-        return this.getWholeTimeForAllTimes() - other.getWholeTimeForAllTimes();
+        return this.getWholeTimeForAllContracts() - other.getWholeTimeForAllContracts();
     }
 
 }

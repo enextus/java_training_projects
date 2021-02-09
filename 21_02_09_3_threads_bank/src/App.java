@@ -28,7 +28,7 @@ public class App {
 
         for (BankThread item : listEmployee) {
             System.out.println("[" + item.getNickname() + ": "
-                    + " time: " + item.getWholeTimeForAllTimes() + " ms."
+                    + " time: " + item.getWholeTimeForAllContracts() + " ms."
                     + "]");
         }
 
@@ -36,7 +36,7 @@ public class App {
         System.out.println(
                 "Employee: " + temp.getNickname()
                         + " \n" +
-                        "was the fastest with the time: " + temp.getWholeTimeForAllTimes()
+                        "was the fastest with the time: " + temp.getWholeTimeForAllContracts()
         );
     }
 
