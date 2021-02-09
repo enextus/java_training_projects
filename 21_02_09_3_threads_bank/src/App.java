@@ -7,6 +7,8 @@ public class App {
 
         Work work = new Work(20);
 
+        int numberOfCompletedContracts = work.getNumberOfCompletedContracts();
+
         ArrayList<Employee> listEmployee = new ArrayList<Employee>();
         listEmployee.add(new Employee("tanya", 100, 200, false));
         listEmployee.add(new Employee("vasya", 200, 300, true));
@@ -22,7 +24,7 @@ public class App {
 
         //  Employees list done
 
-        BankThread[] bankThreads = new BankThread[work.getNumberOfCompletedContracts()];
+        BankThread[] bankThreads = new BankThread[numberOfCompletedContracts];
         // array of bankThreads done
 
         List<BankThread> bankThreadsList = new ArrayList<>();
