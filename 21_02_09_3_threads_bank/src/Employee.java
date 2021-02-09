@@ -3,7 +3,7 @@ public class Employee {
     private final String nickname;
     private final int shortiesTime;
     private final int longestTime;
-    private final IntRandomNumberGenerator sequenceGenerator;
+    //private final IntRandomNumberGenerator sequenceGenerator;
     private final boolean turboPossibility;
 
     public Employee(String nickname, int shortestTime, int longestTime, boolean turboPossibility) {
@@ -11,16 +11,22 @@ public class Employee {
         this.shortiesTime = shortestTime;
         this.longestTime = longestTime;
         this.turboPossibility = turboPossibility;
-        this.sequenceGenerator = new IntRandomNumberGenerator(shortestTime, longestTime);
+        //this.sequenceGenerator = new IntRandomNumberGenerator(shortestTime, longestTime);
     }
 
     public String getNickname() {
         return nickname;
     }
 
-    public IntRandomNumberGenerator getSequenceGenerator() {
-        return sequenceGenerator;
+    public int getShortiesTime() {
+        return shortiesTime;
     }
+
+    public int getLongestTime() {
+        return longestTime;
+    }
+
+
 
     public boolean isTurboPossibility() {
         return turboPossibility;
@@ -32,7 +38,6 @@ public class Employee {
                 "nickname='" + nickname + '\'' +
                 ", shortiesTime=" + shortiesTime +
                 ", longestTime=" + longestTime +
-                ", sequenceGenerator=" + sequenceGenerator +
                 ", turboPossibility=" + turboPossibility +
                 '}';
     }
