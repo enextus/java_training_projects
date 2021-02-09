@@ -20,7 +20,6 @@ public class BankThread extends Thread implements Comparable<BankThread> {
         this.wholeTimeForAllContracts = wholeTimeForAllContracts;
     }
 
-
     @Override
     public void run() {
 
