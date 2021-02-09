@@ -5,7 +5,7 @@ public class BankThread extends Thread implements Comparable<BankThread> {
 
     private final List<BankThread> listEmployee;
 
-    private final int minutesCount = 10;
+    private final int numberOfCompletedContracts = 10;
 
     private int wholeTimeForAllTimes;
 
@@ -26,7 +26,7 @@ public class BankThread extends Thread implements Comparable<BankThread> {
     @Override
     public void run() {
 
-        for (int i = 0; i < this.minutesCount; ++i) {
+        for (int i = 0; i < this.numberOfCompletedContracts; ++i) {
 
             randomWait();
 
