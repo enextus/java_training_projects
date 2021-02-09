@@ -9,7 +9,7 @@ public class BankThread extends Thread implements Comparable<BankThread> {
     private final int numberOfCompletedContracts = 20;
     private int wholeTimeForAllContracts;
 
-    public BankThread(List<Employee> listEmployee, Integer threadNumber) {
+    public BankThread(Employee employee, Integer threadNumber) {
         this.listEmployee = listEmployee;
         this.threadName = threadNumber;
 
@@ -31,13 +31,7 @@ public class BankThread extends Thread implements Comparable<BankThread> {
     @Override
     public void run() {
 
-        for (int i = 0; i < this.numberOfCompletedContracts; ++i) {
-
             randomWait();
-
-          //  this.setWholeTimeForAllContracts(this.getWholeTimeForAllContracts() + sequenceGenerator.nextInt());
-
-        }
 
         synchronized (this) {
             bankThreadList.add(this);
@@ -54,9 +48,9 @@ public class BankThread extends Thread implements Comparable<BankThread> {
         }
     }
 
-    @Override
+/*    @Override
     public int compareTo(BankThread other) {
         return this.getWholeTimeForAllContracts() - other.getWholeTimeForAllContracts();
-    }
+    }*/
 
 }

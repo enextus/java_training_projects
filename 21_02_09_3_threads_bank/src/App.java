@@ -13,16 +13,15 @@ public class App {
         listEmployee.add(new Employee("vasya", 200, 300, true));
         listEmployee.add(new Employee("petya", 200, 300, false));
 
-
         System.out.println("listEmployee.size(): " + listEmployee.size());
         System.out.println("listEmployee: " + listEmployee);
-
 
         for (Employee emp : listEmployee
         ) {
             System.out.println("emp: " + emp);
         }
 
+        //  Employees list done
 
         BankThread[] bankThreads = new BankThread[numberOfCompletedContracts];
         List<BankThread> bankThreadList = new ArrayList<>();
