@@ -26,10 +26,10 @@ public class BankThread  extends Thread implements Comparable<BankThread> {
 
             IntRandomNumberGenerator sequenceGenerator2 = new IntRandomNumberGenerator(50, 100);
             int time = sequenceGenerator2.nextInt();
-
             this.getEmployee().setWholeTimeForAllContracts(this.getEmployee().getWholeTimeForAllContracts() + time);
 
         } else {
+
             this.getEmployee().setWholeTimeForAllContracts(this.getEmployee().getWholeTimeForAllContracts() + this.sequenceGenerator.nextInt());
         }
 
