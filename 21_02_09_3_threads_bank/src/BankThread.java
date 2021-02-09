@@ -7,7 +7,7 @@ public class BankThread extends Thread implements Comparable<BankThread> {
 
     private final List<Employee> listEmployee;
 
-    private final int numberOfCompletedContracts = 10;
+    private final int numberOfCompletedContracts = 20;
     private int wholeTimeForAllContracts;
 
     public BankThread(List<Employee> listEmployee) {

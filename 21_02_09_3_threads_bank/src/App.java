@@ -12,7 +12,10 @@ public class App {
         listEmployee.add(new Employee("petya", 200, 300, false));
 
 
-        int count = 10;
+
+
+
+        int count = 20;
 
         BankThread[] bankThreads = new BankThread[count];
         List<BankThread> bankThreadList = new ArrayList<>();
