@@ -24,7 +24,8 @@ public class BankThread  extends Thread implements Comparable<BankThread> {
 
         if (this.getEmployee().isTurboPossibility()) {
 
-            int time = 0;
+            IntRandomNumberGenerator sequenceGenerator2 = new IntRandomNumberGenerator(50, 100);
+            int time = sequenceGenerator2.nextInt();
 
             this.getEmployee().setWholeTimeForAllContracts(this.getEmployee().getWholeTimeForAllContracts() + time);
 
