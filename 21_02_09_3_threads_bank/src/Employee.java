@@ -3,7 +3,6 @@ public class Employee {
     private final String nickname;
     private final int shortiesTime;
     private final int longestTime;
-    //private final IntRandomNumberGenerator sequenceGenerator;
     private final boolean turboPossibility;
 
     public Employee(String nickname, int shortestTime, int longestTime, boolean turboPossibility) {
