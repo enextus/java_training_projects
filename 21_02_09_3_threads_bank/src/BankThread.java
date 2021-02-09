@@ -4,12 +4,19 @@ import java.util.List;
 public class BankThread extends Thread implements Comparable<BankThread> {
 
     private final List<BankThread> bankThreadList;
+
     private final List<Employee> listEmployee;
+
     private final int numberOfCompletedContracts = 10;
     private int wholeTimeForAllContracts;
 
-    public BankThread(List<BankThread> bankThreadList) {
+    public BankThread(List<Employee> listEmployee) {
+        this.listEmployee = listEmployee;
+
+
         this.bankThreadList = bankThreadList;
+
+
         this.wholeTimeForAllContracts = 0;
     }
 
