@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class App {
@@ -24,13 +23,18 @@ public class App {
         //  Employees list done
 
         BankThread[] bankThreads = new BankThread[numberOfCompletedContracts];
-        List<BankThread> bankThreadList = new ArrayList<>();
+        // array of bankThreads done
 
+        List<BankThread> bankThreadsList = new ArrayList<>();
+        // list of bank threads
 
-        for (int i = 0; i < numberOfCompletedContracts; i++) {
-            bankThreads[i] = new BankThread(listEmployee, (i + 1));
-            bankThreads[i] = null;
-            bankThreads[i].start();
+        for (Employee emp : listEmployee) {
+
+            for (int i = 0; i < numberOfCompletedContracts; i++) {
+                bankThreads[i] = new BankThread(emp, (i + 1));
+                bankThreads[i].start();
+            }
+
         }
 
         for (int i = 0; i < numberOfCompletedContracts; i++) {
@@ -40,10 +44,16 @@ public class App {
         System.out.println();
         System.out.println("Done. Print Your employees - List:");
 
-        Collections.sort(bankThreadList);
-        BankThread temp = bankThreadList.get(0);
+        System.out.println("bank thread are started");
+        // bank thread are started
 
-/*        for (BankThread item : bankThreadList) {
+
+
+/*
+        Collections.sort(bankThreadsList);
+        BankThread temp = bankThreadsList.get(0);
+
+       for (BankThread item : bankThreadList) {
            System.out.println("[" + item.getNickname() + ": "
                     + " time: " + item.getWholeTimeForAllContracts() + " ms."
                     + "]");

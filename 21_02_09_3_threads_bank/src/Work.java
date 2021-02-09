@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class Work extends Thread {
+public class Work{
 
     private int numberOfCompletedContracts = 0;
 
@@ -14,27 +14,5 @@ public class Work extends Thread {
 
 
 
-
-    @Override
-    public void run() {
-
-        randomWait();
-
-        // some code
-
-        synchronized (this) {
-            bankThreadList.add(this);
-        }
-
-    }
-
-    private void randomWait() {
-        try {
-            Thread.currentThread();
-            Thread.sleep((long) (1000 * Math.random()));
-        } catch (InterruptedException x) {
-            System.out.println("Thread  interrupted.");
-        }
-    }
 
 }
