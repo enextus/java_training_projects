@@ -12,7 +12,8 @@ public class App {
         listEmployee.add(new Employee("petya", 200, 300, false));
 
 
-
+        System.out.println("listEmployee.size(): " + listEmployee.size());
+        System.out.println("listEmployee: " + listEmployee);
 
 
         int count = 20;
@@ -22,7 +23,7 @@ public class App {
 
 
         for (int i = 0; i < count; i++) {
-            //   bankThreads[i] = new BankThread(listEmployee, "00" + (i + 1));
+           // bankThreads[i] = new BankThread(listEmployee, (i + 1));
             bankThreads[i] = null;
             bankThreads[i].start();
         }
