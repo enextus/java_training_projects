@@ -22,7 +22,15 @@ public class BankThread  extends Thread implements Comparable<BankThread> {
 
         System.out.println("Started!");
 
-        this.getEmployee().setWholeTimeForAllContracts(this.getEmployee().getWholeTimeForAllContracts() + this.sequenceGenerator.nextInt());
+        if (this.getEmployee().isTurboPossibility()) {
+
+            int time = 0;
+
+            this.getEmployee().setWholeTimeForAllContracts(this.getEmployee().getWholeTimeForAllContracts() + time);
+
+        } else {
+            this.getEmployee().setWholeTimeForAllContracts(this.getEmployee().getWholeTimeForAllContracts() + this.sequenceGenerator.nextInt());
+        }
 
 /*        synchronized (this) {
 

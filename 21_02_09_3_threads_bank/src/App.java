@@ -43,13 +43,8 @@ public class App {
             bankThreads[i].join();
         }
 
-
-
-
         System.out.println("bank thread are started");
         // bank thread are started
-
-
 
 /*
         System.out.println();
