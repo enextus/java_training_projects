@@ -1,19 +1,19 @@
 
 import java.util.List;
 
-public class MyTarakanThread extends Thread implements Comparable<MyTarakanThread> {
+public class BankThread extends Thread implements Comparable<BankThread> {
 
-    private final List<MyTarakanThread> listParticipants;
+    private final List<BankThread> listEmployee;
     private final int shortiesTime = 50;
     private final int longestTime = 100;
     private final int minutesCount = 10;
-    private final String nickname;
+    private final String name;
     private final IntRandomNumberGenerator sequenceGenerator;
     private int wholeTimeForAllTimes;
 
-    public MyTarakanThread(List<MyTarakanThread> masterList, String nickname) {
-        this.listParticipants = masterList;
-        this.nickname = nickname;
+    public BankThread(List<BankThread> threadsList, String name) {
+        this.listEmployee = threadsList;
+        this.name = name;
         this.sequenceGenerator = new IntRandomNumberGenerator(shortiesTime, longestTime);
         this.wholeTimeForAllTimes = 0;
     }
@@ -27,7 +27,7 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
     }
 
     String getNickname() {
-        return nickname;
+        return name;
     }
 
     @Override
@@ -43,7 +43,7 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
         }
 
         synchronized (this) {
-            listParticipants.add(this);
+            listEmployee.add(this);
         }
 
     }
@@ -58,7 +58,7 @@ public class MyTarakanThread extends Thread implements Comparable<MyTarakanThrea
     }
 
     @Override
-    public int compareTo(MyTarakanThread other) {
+    public int compareTo(BankThread other) {
         return this.getWholeTimeForAllTimes() - other.getWholeTimeForAllTimes();
     }
 
