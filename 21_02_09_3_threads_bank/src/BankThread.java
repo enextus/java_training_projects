@@ -19,7 +19,7 @@ public class BankThread  extends Thread implements Comparable<BankThread> {
         randomWait();
 
         // some code
-
+        System.out.println("Started!");
 /*
         synchronized (this) {
             bankThreadList.add(this);

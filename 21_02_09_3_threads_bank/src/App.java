@@ -41,8 +41,8 @@ public class App {
             bankThreads[i].join();
         }
 
-        System.out.println();
-        System.out.println("Done. Print Your employees - List:");
+
+
 
         System.out.println("bank thread are started");
         // bank thread are started
@@ -50,6 +50,8 @@ public class App {
 
 
 /*
+        System.out.println();
+        System.out.println("Done. Print Your employees - List:");
         Collections.sort(bankThreadsList);
         BankThread temp = bankThreadsList.get(0);
 
