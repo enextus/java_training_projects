@@ -3,13 +3,13 @@ import java.util.List;
 
 public class BankThread extends Thread implements Comparable<BankThread> {
 
-    private final List<BankThread> list;
+    private final List<BankThread> bankThreadList;
     private final List<Employee> listEmployee;
     private final int numberOfCompletedContracts = 10;
     private int wholeTimeForAllContracts;
 
-    public BankThread(List<BankThread> list) {
-        this.list = list;
+    public BankThread(List<BankThread> bankThreadList) {
+        this.bankThreadList = bankThreadList;
         this.wholeTimeForAllContracts = 0;
     }
 
@@ -34,7 +34,7 @@ public class BankThread extends Thread implements Comparable<BankThread> {
         }
 
         synchronized (this) {
-            list.add(this);
+            bankThreadList.add(this);
         }
 
     }
