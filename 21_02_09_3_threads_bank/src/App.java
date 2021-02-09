@@ -5,7 +5,7 @@ public class App {
 
     public static void main(String[] args) throws InterruptedException {
 
-        int numberOfCompletedContracts = 20;
+        Work work = new Work(20);
 
         ArrayList<Employee> listEmployee = new ArrayList<Employee>();
         listEmployee.add(new Employee("tanya", 100, 200, false));
@@ -22,7 +22,7 @@ public class App {
 
         //  Employees list done
 
-        BankThread[] bankThreads = new BankThread[numberOfCompletedContracts];
+        BankThread[] bankThreads = new BankThread[work.getNumberOfCompletedContracts()];
         // array of bankThreads done
 
         List<BankThread> bankThreadsList = new ArrayList<>();
