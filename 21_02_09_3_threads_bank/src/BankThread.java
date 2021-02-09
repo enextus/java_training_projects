@@ -7,13 +7,13 @@ public class BankThread extends Thread implements Comparable<BankThread> {
     private final int shortiesTime = 50;
     private final int longestTime = 100;
     private final int minutesCount = 10;
-    private final String name;
+    private final String Nickname;
     private final IntRandomNumberGenerator sequenceGenerator;
     private int wholeTimeForAllTimes;
 
-    public BankThread(List<BankThread> threadsList, String name) {
+    public BankThread(List<BankThread> threadsList, String Nickname) {
         this.listEmployee = threadsList;
-        this.name = name;
+        this.Nickname = Nickname;
         this.sequenceGenerator = new IntRandomNumberGenerator(shortiesTime, longestTime);
         this.wholeTimeForAllTimes = 0;
     }
@@ -26,8 +26,8 @@ public class BankThread extends Thread implements Comparable<BankThread> {
         this.wholeTimeForAllTimes = wholeTimeForAllTimes;
     }
 
-    String getNickname() {
-        return name;
+    String getnickname() {
+        return Nickname;
     }
 
     @Override

@@ -26,14 +26,14 @@ public class App {
         BankThread temp = listParticipants.get(0);
 
         for (BankThread item : listParticipants) {
-            System.out.println("[" + item.getNickname() + ": "
+            System.out.println("[" + item.getnickname() + ": "
                     + " time: " + item.getWholeTimeForAllTimes() + " ms."
                     + "]");
         }
 
         System.out.println();
         System.out.println(
-                "Tarakan: " + temp.getNickname()
+                "Tarakan: " + temp.getnickname()
                 + " won wit the time: " + temp.getWholeTimeForAllTimes()
         );
     }
