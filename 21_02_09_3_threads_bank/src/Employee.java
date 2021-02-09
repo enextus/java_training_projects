@@ -25,8 +25,6 @@ public class Employee {
         return longestTime;
     }
 
-
-
     public boolean isTurboPossibility() {
         return turboPossibility;
     }

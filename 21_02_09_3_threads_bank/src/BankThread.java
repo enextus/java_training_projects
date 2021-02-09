@@ -1,4 +1,3 @@
-
 public class BankThread  extends Thread implements Comparable<BankThread> {
 
     private final Employee employee;
@@ -12,12 +11,15 @@ public class BankThread  extends Thread implements Comparable<BankThread> {
         this.sequenceGenerator = new IntRandomNumberGenerator(employee.getShortiesTime(), employee.getLongestTime());
 
     }
+
     public IntRandomNumberGenerator getSequenceGenerator() {
         return sequenceGenerator;
     }
+
     void setWholeTimeForAllContracts(int wholeTimeForAllContracts) {
         this.wholeTimeForAllContracts = wholeTimeForAllContracts;
     }
+
     @Override
     public void run() {
 
@@ -26,16 +28,14 @@ public class BankThread  extends Thread implements Comparable<BankThread> {
         // some code
         System.out.println("Started!");
 
-
-        this.setWholeTimeForAllContracts(
-                this.getWholeTimeForAllContracts() + this.sequenceGenerator.nextInt());
+        this.setWholeTimeForAllContracts(this.getWholeTimeForAllContracts() + this.sequenceGenerator.nextInt());
 
         synchronized (this) {
             Work.bankThreadList.add(this);
         }
 
-
     }
+
     int getWholeTimeForAllContracts() {
         return wholeTimeForAllContracts;
     }
