@@ -2,7 +2,7 @@ public class BankThread  extends Thread implements Comparable<BankThread> {
 
     private final Employee employee;
     private final Integer threadName;
-    private int wholeTimeForAllContracts;
+
     private final IntRandomNumberGenerator sequenceGenerator;
 
     public BankThread(Employee employee, Integer threadNumber) {
@@ -16,9 +16,6 @@ public class BankThread  extends Thread implements Comparable<BankThread> {
         return sequenceGenerator;
     }
 
-    void setWholeTimeForAllContracts(int wholeTimeForAllContracts) {
-        this.wholeTimeForAllContracts = wholeTimeForAllContracts;
-    }
 
     @Override
     public void run() {
@@ -28,16 +25,19 @@ public class BankThread  extends Thread implements Comparable<BankThread> {
         // some code
         System.out.println("Started!");
 
-        this.setWholeTimeForAllContracts(this.getWholeTimeForAllContracts() + this.sequenceGenerator.nextInt());
+        this.getEmployee().setWholeTimeForAllContracts(this.getEmployee().getWholeTimeForAllContracts() + this.sequenceGenerator.nextInt());
 
-        synchronized (this) {
-            Work.bankThreadList.add(this);
-        }
+/*        synchronized (this) {
 
+        }*/
+        Work.bankThreadList.add(this);
     }
 
-    int getWholeTimeForAllContracts() {
-        return wholeTimeForAllContracts;
+
+    @Override
+    public int compareTo(BankThread other) {
+        return this.getEmployee().getWholeTimeForAllContracts() - other.getEmployee().getWholeTimeForAllContracts();
+
     }
 
     public Employee getEmployee() {
@@ -57,10 +57,6 @@ public class BankThread  extends Thread implements Comparable<BankThread> {
         }
     }
 
-    @Override
-    public int compareTo(BankThread other) {
-        return this.getWholeTimeForAllContracts() - other.getWholeTimeForAllContracts();
 
-    }
 
 }

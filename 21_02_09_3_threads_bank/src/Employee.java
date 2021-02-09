@@ -4,13 +4,22 @@ public class Employee {
     private final int shortiesTime;
     private final int longestTime;
     private final boolean turboPossibility;
+    private int wholeTimeForAllContracts;
 
     public Employee(String nickname, int shortestTime, int longestTime, boolean turboPossibility) {
         this.nickname = nickname;
         this.shortiesTime = shortestTime;
         this.longestTime = longestTime;
         this.turboPossibility = turboPossibility;
-        //this.sequenceGenerator = new IntRandomNumberGenerator(shortestTime, longestTime);
+    }
+
+    void setWholeTimeForAllContracts(int wholeTimeForAllContracts) {
+        this.wholeTimeForAllContracts = wholeTimeForAllContracts;
+    }
+
+
+    int getWholeTimeForAllContracts() {
+        return wholeTimeForAllContracts;
     }
 
     public String getNickname() {
