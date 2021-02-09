@@ -2,7 +2,6 @@ public class BankThread  extends Thread implements Comparable<BankThread> {
 
     private final Employee employee;
     private final Integer threadName;
-
     private final IntRandomNumberGenerator sequenceGenerator;
 
     public BankThread(Employee employee, Integer threadNumber) {
@@ -16,13 +15,11 @@ public class BankThread  extends Thread implements Comparable<BankThread> {
         return sequenceGenerator;
     }
 
-
     @Override
     public void run() {
 
         randomWait();
 
-        // some code
         System.out.println("Started!");
 
         this.getEmployee().setWholeTimeForAllContracts(this.getEmployee().getWholeTimeForAllContracts() + this.sequenceGenerator.nextInt());
@@ -32,7 +29,6 @@ public class BankThread  extends Thread implements Comparable<BankThread> {
         }*/
         Work.bankThreadList.add(this);
     }
-
 
     @Override
     public int compareTo(BankThread other) {
@@ -56,7 +52,5 @@ public class BankThread  extends Thread implements Comparable<BankThread> {
             System.out.println("Thread  interrupted.");
         }
     }
-
-
 
 }

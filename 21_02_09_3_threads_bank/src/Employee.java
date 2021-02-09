@@ -17,7 +17,6 @@ public class Employee {
         this.wholeTimeForAllContracts = wholeTimeForAllContracts;
     }
 
-
     int getWholeTimeForAllContracts() {
         return wholeTimeForAllContracts;
     }
