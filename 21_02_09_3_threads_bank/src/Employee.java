@@ -6,12 +6,12 @@ public class Employee {
     private final IntRandomNumberGenerator sequenceGenerator;
     private final boolean turboPossibility;
 
-    public Employee(String nickname, int shortiesTime, int longestTime, boolean turboPossibility) {
+    public Employee(String nickname, int shortestTime, int longestTime, boolean turboPossibility) {
         this.nickname = nickname;
-        this.shortiesTime = shortiesTime;
+        this.shortiesTime = shortestTime;
         this.longestTime = longestTime;
         this.turboPossibility = turboPossibility;
-        this.sequenceGenerator = new IntRandomNumberGenerator(shortiesTime, longestTime);
+        this.sequenceGenerator = new IntRandomNumberGenerator(shortestTime, longestTime);
     }
 
     public String getNickname() {
