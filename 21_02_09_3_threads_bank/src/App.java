@@ -20,7 +20,7 @@ public class App {
             bankThreads[i].join();
         }
 
-        System.out.println("Done!! Print Your Tarakan - List:");
+        System.out.println("Done. Print Your employees - List:");
 
         Collections.sort(listEmployee);
         BankThread temp = listEmployee.get(0);
@@ -33,8 +33,8 @@ public class App {
 
         System.out.println();
         System.out.println(
-                "Tarakan: " + temp.getNickname()
-                + " won wit the time: " + temp.getWholeTimeForAllTimes()
+                "Employee: " + temp.getNickname()
+                        + " won wit the time: " + temp.getWholeTimeForAllTimes()
         );
     }
 
