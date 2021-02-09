@@ -3,11 +3,13 @@ public class BankThread  extends Thread implements Comparable<BankThread> {
     private final Employee employee;
     private final Integer threadName;
     private final IntRandomNumberGenerator sequenceGenerator;
+    private final IntRandomNumberGenerator sequenceGeneratorTurbo;
 
     public BankThread(Employee employee, Integer threadNumber) {
         this.employee = employee;
         this.threadName = threadNumber;
         this.sequenceGenerator = new IntRandomNumberGenerator(employee.getShortiesTime(), employee.getLongestTime());
+        this.sequenceGeneratorTurbo = new IntRandomNumberGenerator(50, 100);;
 
     }
 
@@ -24,8 +26,7 @@ public class BankThread  extends Thread implements Comparable<BankThread> {
 
         if (this.getEmployee().isTurboPossibility()) {
 
-            IntRandomNumberGenerator sequenceGenerator2 = new IntRandomNumberGenerator(50, 100);
-            int time = sequenceGenerator2.nextInt();
+            int time = sequenceGeneratorTurbo.nextInt();
             this.getEmployee().setWholeTimeForAllContracts(this.getEmployee().getWholeTimeForAllContracts() + time);
 
         } else {
@@ -33,10 +34,10 @@ public class BankThread  extends Thread implements Comparable<BankThread> {
             this.getEmployee().setWholeTimeForAllContracts(this.getEmployee().getWholeTimeForAllContracts() + this.sequenceGenerator.nextInt());
         }
 
-/*        synchronized (this) {
+        synchronized (this) {
+            Work.bankThreadList.add(this);
+        }
 
-        }*/
-        Work.bankThreadList.add(this);
     }
 
     @Override
