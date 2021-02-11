@@ -3,16 +3,26 @@ public class Main {
 
     public static void main(String[] args) {
 
+        OneItemStringQueue queue = new OneItemStringQueue();
+
+        Thread consumerThread1 = new Thread(new MessageSupplier(queue));
+        Thread consumerThread2 = new Thread(new MessageSupplier(queue));
+        Thread consumerThread3 = new Thread(new MessageSupplier(queue));
 
 
+        Thread supplierThread = new Thread(new MessageSupplier(queue));
 
-        MessageSupplier messageSupplier = new MessageSupplier();
-        OneItemStringQueue oneItemStringQueue = new OneItemStringQueue();
-        messageSupplier.start();
+        consumerThread1.setDaemon(true);
+        consumerThread2.setDaemon(true);
+        consumerThread3.setDaemon(true);
 
+        consumerThread1.start();
+        consumerThread2.start();
+        consumerThread3.start();
 
+        supplierThread.start();
 
-        //TODO create here several consumer threads and one supplier thread and start them.
+        // TODO create here several consumer threads and one supplier thread and start them.
     }
 
 }

@@ -13,6 +13,7 @@ public class OneItemStringQueue {
             source = item;
             // wake
             mutex.notify();
+            System.out.println("This thread id: " + Thread.currentThread().getId());
 
         }
     }
@@ -20,9 +21,13 @@ public class OneItemStringQueue {
     public String removeLast() throws InterruptedException {
 
         synchronized (mutex) {
-            while (source == null)
+            while (source == null) {
+
+                System.out.println("This thread id: " + Thread.currentThread().getId());
                 //sleep
                 mutex.wait();
+            }
+
         }
 
         String res = source;
