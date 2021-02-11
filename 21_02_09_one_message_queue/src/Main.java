@@ -6,5 +6,5 @@ public class Main {
 
         //TODO create here several consumer threads and one supplier thread and start them.
     }
-}
 
+}
