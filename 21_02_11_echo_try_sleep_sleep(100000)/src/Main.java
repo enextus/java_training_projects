@@ -7,7 +7,9 @@ public class Main {
     public static void main(String[] args) throws IOException {
         // write your code here
 
-        Echo echo = new Echo("Hallo!");
+        Echo echo = new Echo("Hello!");
+
+        System.out.println(echo);
 
         Thread echoTh = new Thread(echo);
         echoTh.start();
@@ -17,13 +19,13 @@ public class Main {
 
             String line;
 
-            while ((line = br.readLine()) !=null && !line.equals("exit")){
+            while ((line = br.readLine()) != null && !line.equals("exit")) {
 
                 echo.setMessage(line);
                 echoTh.interrupt();
             }
 
         }
-
     }
+
 }
