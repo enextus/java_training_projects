@@ -34,7 +34,7 @@ public class BankThread  extends Thread implements Comparable<BankThread> {
             this.getEmployee().setWholeTimeForAllContracts(this.getEmployee().getWholeTimeForAllContracts() + this.sequenceGenerator.nextInt());
         }
 
-        synchronized (this) {
+        synchronized (bankThreadList) {
             Work.bankThreadList.add(this);
         }
 

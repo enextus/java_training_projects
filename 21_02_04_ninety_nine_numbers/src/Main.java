@@ -26,6 +26,14 @@ public class Main {
         Integer res = findTheLostNumber.findTheLostNumber(intSetFull, intList);
 
         System.out.println("The lost number was found: " + res);
+
+        int size = intList.size();
+        int i = 0;
+        for (; i < size; i++) {
+
+            System.out.println(intList.get(i));
+        }
+
     }
 
 }
