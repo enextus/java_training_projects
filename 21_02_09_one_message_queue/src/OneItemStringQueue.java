@@ -5,14 +5,20 @@ public class OneItemStringQueue {
 
     private String source;
 
-    public void addFirst(String item) {
-        source = item;
 
-        // wake
-        mutex.notify();
+
+    public void addFirst(String item) {
+
+        synchronized (mutex){
+            source = item;
+            // wake
+            mutex.notify();
+
+        }
     }
 
     public String removeLast() throws InterruptedException {
+
         synchronized (mutex) {
             while (source == null)
                 //sleep
