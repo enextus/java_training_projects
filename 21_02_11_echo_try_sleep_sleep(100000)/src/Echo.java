@@ -1,9 +1,15 @@
 public class Echo implements Runnable {
 
+    {
+        System.out.println("1 -> " + this.getMessage());
+    }
+
     private String message;
 
     public Echo(String message) {
         this.message = message;
+        this.setMessage(this.getMessage());
+        System.out.println("2 -> " + this.getMessage());
     }
 
     @Override
@@ -24,6 +30,14 @@ public class Echo implements Runnable {
                 System.out.println(message);
             }
         }
+    }
+
+/*    public void setMessage(String message) {
+        this.message = message;
+    }*/
+
+    public String getMessage() {
+        return message;
     }
 
     public void setMessage(String message) {
