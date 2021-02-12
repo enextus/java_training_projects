@@ -31,5 +31,7 @@ public class Consumer implements Runnable {
 
         //TODO if the format seems to be correct, but the operation is not found then write to the file the line with the
         //TODO postfix '#wrong operation'. E.g. "hello world#opper_case" -> "hello world#opper_case#wrong operation"
+        return "";
     }
+
 }

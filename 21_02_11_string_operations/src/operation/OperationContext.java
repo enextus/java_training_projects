@@ -17,5 +17,7 @@ public class OperationContext {
 
     public IStringOperation getOperation(String name) {
         //TODO  complete
+        return null;
     }
+
 }

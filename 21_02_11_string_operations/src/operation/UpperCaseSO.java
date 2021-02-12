@@ -11,4 +11,5 @@ public class UpperCaseSO implements IStringOperation {
     public String getName() {
         return "upper_case";
     }
+
 }
