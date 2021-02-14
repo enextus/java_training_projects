@@ -6,18 +6,19 @@ public class App {
 
         EchoRunnable echoRunnable = new EchoRunnable("www");
 
-        Thread myThread = new Thread(echoRunnable);
+        Thread myThread_01 = new Thread(echoRunnable);
 
-        myThread.start();
+        myThread_01.start();
 
-        for (int i = 0; i < 10; i++) {
+        // Thread MAIN
+        for (int i = 0; i < 7; i++) {
 
             Thread.sleep(250);
 
             System.out.println(i + " ->>>    A");
             System.out.println("");
         }
-
+        // Thread MAIN
     }
 
 }
