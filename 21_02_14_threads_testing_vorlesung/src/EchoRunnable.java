@@ -13,8 +13,8 @@ public class EchoRunnable implements Runnable {
     public void run() {
 
         System.out.println("");
-        System.out.println("myThread_01: Thread.currentThread(): " + Thread.currentThread());
-        System.out.println("myThread_01: Thread.activeCount(): " + Thread.activeCount());
+        System.out.println("ThreadName: " + Thread.currentThread().getName());
+        System.out.println("ActiveCount: " + Thread.activeCount());
 
         try {
             Thread.sleep(sleepMillis);
