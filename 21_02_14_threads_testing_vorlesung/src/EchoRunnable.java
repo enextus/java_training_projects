@@ -1,14 +1,11 @@
 public class EchoRunnable implements Runnable {
 
     private String message;
+    private final long sleepMillis;
 
-/*    {
-        System.out.println("->> hier wird { im EchoRunnable } abgearbeitet");
-        System.out.println("");
-    }*/
-
-    public EchoRunnable(String message) {
+    public EchoRunnable(String message, long sleepMillis) {
         this.message = message;
+        this.sleepMillis = sleepMillis;
         this.setMessage(this.getMessage());
     }
 
@@ -21,7 +18,7 @@ public class EchoRunnable implements Runnable {
         for (int i = 150; i < 156; i++) {
 
             try {
-                Thread.sleep(100);
+                Thread.sleep(sleepMillis);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

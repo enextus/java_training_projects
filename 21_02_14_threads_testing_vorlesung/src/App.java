@@ -4,8 +4,7 @@ public class App {
         System.out.println("MAIN: Thread.currentThread(): " + Thread.currentThread());
         System.out.println("MAIN: Thread.activeCount(): " + Thread.activeCount());
 
-        EchoRunnable echoRunnable = new EchoRunnable("www");
-
+        EchoRunnable echoRunnable = new EchoRunnable("www", 100);
         Thread myThread_01 = new Thread(echoRunnable);
 
         myThread_01.start();
@@ -13,13 +12,19 @@ public class App {
         // Thread MAIN
         for (int i = 0; i < 7; i++) {
 
-            Thread.sleep(250);
+            Thread.sleep(350);
 
             System.out.println(i + " ->>>    A");
             System.out.println("");
+            secondPrintB();
         }
         // Thread MAIN
 
+    }
+
+    private static void secondPrintB() throws InterruptedException {
+        Thread.sleep(10);
+        System.out.println("------------------> BBBB");
     }
 
 }
