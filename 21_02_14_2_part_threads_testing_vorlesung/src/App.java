@@ -1,13 +1,32 @@
 public class App {
     public static void main(String[] args) throws InterruptedException {
 
-        Thread myThread_01 = Thread.currentThread();
-        myThread_01.join(); // stopt thread aus dem der Thread war gestartet  DEATH LOOK
 
-        System.out.println("weiter main ");
+        final Thread mainThreadLink = Thread.currentThread();
 
-        System.out.println("\nMAIN done");
+        // System.out.println(mainThreadLink.toString());
 
+        Thread runThread = new Thread(
+
+                new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            System.out.println("Run: wait for main!");
+                            mainThreadLink.join();
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+
+        );
+
+        runThread.start();
+
+        System.out.println("Main: wait for run!");
+
+        runThread.join();
     }
 
 }
