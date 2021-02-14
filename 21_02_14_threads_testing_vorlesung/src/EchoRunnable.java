@@ -1,4 +1,4 @@
-public class Echo implements Runnable {
+public class EchoRunnable implements Runnable {
 
     {
         System.out.println("1 -> " + this.getMessage());
@@ -6,13 +6,18 @@ public class Echo implements Runnable {
 
     private String message;
 
-    public Echo(String message) {
+    public EchoRunnable(String message) {
         this.message = message;
         this.setMessage(this.getMessage());
     }
 
     @Override
     public void run() {
+
+
+        System.out.println("Thread.currentThread(): " + Thread.currentThread());
+        System.out.println("Thread.class: " + Thread.class);
+        System.out.println("Thread.activeCount(): " + Thread.activeCount());
 
 /*        while (true) {
 
@@ -30,7 +35,6 @@ public class Echo implements Runnable {
             }
 
         }*/
-
 
     }
 
