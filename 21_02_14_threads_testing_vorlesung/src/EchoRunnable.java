@@ -15,17 +15,17 @@ public class EchoRunnable implements Runnable {
         System.out.println("myThread_01: Thread.currentThread(): " + Thread.currentThread());
         System.out.println("myThread_01: Thread.activeCount(): " + Thread.activeCount());
 
-        for (int i = 150; i < 156; i++) {
-
-            try {
-                Thread.sleep(sleepMillis);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-
-            System.out.println(i + " ->>>>>>>>>    B");
-            System.out.println("");
+        try {
+            Thread.sleep(sleepMillis);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
+
+        // some code
+        System.out.println(" ->>>>>>>>>    C.");
+        System.out.println("");
+        System.out.println(" ->>>>>>>>>    C..");
+        System.out.println("");
 
 /*        while (true) {
             // Some complex logic lasting long time
