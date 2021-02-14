@@ -17,7 +17,14 @@ public class EchoRunnable implements Runnable {
         System.out.println("ActiveCount: " + Thread.activeCount());
 
         try {
-            Thread.sleep(sleepMillis);
+
+            for (int i = 0; i < 4; i++) {
+
+                Thread.sleep(sleepMillis);
+
+                System.out.println(" ->>>>>>>>> " + message);
+            }
+
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
             // e.printStackTrace();
@@ -26,11 +33,7 @@ public class EchoRunnable implements Runnable {
         // some code
         System.out.println("");
 
-        System.out.println(" ->>>>>>    C.");
-
-        System.out.println("");
-
-        System.out.println(" ->>>>>>>>> " + message);
+        System.out.println(" ->>>>>>    Second thread done.");
 
         System.out.println("");
 
