@@ -12,22 +12,30 @@ public class EchoRunnable implements Runnable {
     @Override
     public void run() {
 
+        System.out.println("");
         System.out.println("myThread_01: Thread.currentThread(): " + Thread.currentThread());
         System.out.println("myThread_01: Thread.activeCount(): " + Thread.activeCount());
 
         try {
             Thread.sleep(sleepMillis);
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
+            // e.printStackTrace();
         }
 
         // some code
-        System.out.println(" ->>>>>>>>>    C.");
         System.out.println("");
-        System.out.println(" ->>>>>>>>>    C..");
+
+        System.out.println(" ->>>>>>    C.");
+
+        System.out.println("");
+
+        System.out.println(" ->>>>>>>>> " + message);
+
         System.out.println("");
 
 /*        while (true) {
+
             // Some complex logic lasting long time
             try {
 
@@ -37,8 +45,11 @@ public class EchoRunnable implements Runnable {
                 Thread.sleep(100000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
-                System.out.println(message);
+
             }
+
+            System.out.println(message);
+
         }*/
 
     }

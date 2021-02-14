@@ -4,11 +4,17 @@ public class App {
         System.out.println("MAIN: Thread.currentThread(): " + Thread.currentThread());
         System.out.println("MAIN: Thread.activeCount(): " + Thread.activeCount());
 
-        EchoRunnable echoRunnable = new EchoRunnable("www", 2000);
-        Thread myThread_01 = new Thread(echoRunnable);
+        EchoRunnable echoRunnable1 = new EchoRunnable("D ", 360);
+        EchoRunnable echoRunnable2 = new EchoRunnable("E ", 55);
+
+        // echoRunnable.run(); // naive - wird nicht funktionieren
+
+        Thread myThread_01 = new Thread(echoRunnable1);
+        Thread myThread_02 = new Thread(echoRunnable2);
 
         // Thread myThread_01
         myThread_01.start();
+        myThread_02.start();
         // Thread myThread_01
 
         // Thread MAIN
