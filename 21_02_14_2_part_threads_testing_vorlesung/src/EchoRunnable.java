@@ -14,14 +14,11 @@ public class EchoRunnable implements Runnable {
 
         System.out.println("");
         System.out.println("ThreadName: " + Thread.currentThread().getName());
-        System.out.println("ActiveCount: " + Thread.activeCount());
 
         try {
 
-            for (int i = 0; i < 4; i++) {
-
+            for (int i = 0; i < 6; i++) {
                 Thread.sleep(sleepMillis);
-
                 System.out.println(" ->>>>>>>>> " + message);
             }
 
@@ -32,9 +29,7 @@ public class EchoRunnable implements Runnable {
 
         // some code
         System.out.println("");
-
-        System.out.println(" ->>>>>>    Second thread done.");
-
+        System.out.println(" ->>>>>>    Thread " + Thread.currentThread().getName() + " is done.");
         System.out.println("");
 
 /*        while (true) {
