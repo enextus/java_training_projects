@@ -13,9 +13,13 @@ public class MainAccordion {
             threadA.start();
             threadB.start();
 
-            threadA.join();
-            threadB.join();
 
+            threadA.join();
+
+
+            System.out.println(System.currentTimeMillis());
+            threadB.join();
+            System.out.println(System.currentTimeMillis());
             // C
             line();
 
