@@ -17,8 +17,7 @@ public class App {
         System.out.println("listEmployee.size(): " + listEmployee.size());
         System.out.println("listEmployee: " + listEmployee);
 
-        for (Employee emp : listEmployee
-        ) {
+        for (Employee emp : listEmployee) {
             System.out.println("emp: " + emp);
         }
 
@@ -31,12 +30,10 @@ public class App {
         // list of bank threads
 
         for (Employee emp : listEmployee) {
-
             for (int i = 0; i < numberOfCompletedContracts; i++) {
                 bankThreads[i] = new BankThread(emp, (i + 1));
                 bankThreads[i].start();
             }
-
         }
 
         for (int i = 0; i < numberOfCompletedContracts; i++) {
