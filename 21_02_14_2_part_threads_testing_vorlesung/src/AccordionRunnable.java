@@ -14,7 +14,7 @@ public class AccordionRunnable implements Runnable {
 
         try {
 
-            for (int i = 0; i < 6; i++) {
+            for (int i = 0; i < 3; i++) {
                 Thread.sleep(sleepMillis);
                 System.out.println(message);
             }
