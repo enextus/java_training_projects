@@ -16,7 +16,8 @@ public class AccordionRunnable implements Runnable {
 
             for (int i = 0; i < 3; i++) {
                 Thread.sleep(sleepMillis);
-                System.out.println(message);
+                System.out.print(message + " <-- ");
+                System.out.println(Thread.currentThread().getName());
             }
 
         } catch (InterruptedException e) {
