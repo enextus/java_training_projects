@@ -13,13 +13,18 @@ public class MainAccordion {
             threadA.start();
             threadB.start();
 
-
+            long startTime0 = System.nanoTime();
             threadA.join();
+            System.out.println(System.nanoTime() - startTime0);
 
 
-            System.out.println(System.currentTimeMillis());
+
+
+            long startTime = System.nanoTime();
             threadB.join();
-            System.out.println(System.currentTimeMillis());
+            System.out.println(System.nanoTime() - startTime);
+
+
             // C
             line();
 
