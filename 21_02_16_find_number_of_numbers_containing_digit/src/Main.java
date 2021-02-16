@@ -6,13 +6,14 @@ public class Main {
      */
     public static void main(String[] args) {
 
-        int n;
-        n = 0;
+        int rangeMax = 23; // 2, 12, 20, 22
 
         int count = 0;
-        for (int i = 2; i <= n; i++) { // Можем начать с 2
+        for (int i = 2; i <= rangeMax; i++) { // beginning with 2
             count += numberOf2s(i);
         }
+
+        System.out.println("Result: " + count);
 
     }
 
