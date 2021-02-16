@@ -29,6 +29,14 @@ public class FindNumberOfDigitOneInRange {
         this.result = result;
     }
 
+    /**
+     * There is a range of numbers from a to b inclusive.
+     * Find the number of numbers containing the digit 1.
+     *
+     * @param initialLeftCorner
+     * @param initialRightCorner
+     * @return
+     */
     public int findNumberOfNumbers(int initialLeftCorner, int initialRightCorner) {
 
         if (initialLeftCorner < 0) {
@@ -48,6 +56,14 @@ public class FindNumberOfDigitOneInRange {
         return getResult();
     }
 
+    /**
+     * There is a range of numbers from a to b inclusive.
+     * Find the number of numbers containing the digit 1.
+     *
+     * @param leftCorner
+     * @param rightCorner
+     * @return
+     */
     public int calcNumberOfNumbers(int leftCorner, int rightCorner) {
 
         int count = 0;
@@ -58,6 +74,13 @@ public class FindNumberOfDigitOneInRange {
         return count;
     }
 
+    /**
+     * There is a range of numbers from a to b inclusive.
+     * Find the number of numbers containing the digit 1.
+     *
+     * @param n
+     * @return
+     */
     int countTheNumberOfDigitsOne(int n) {
 
         int count = 0;
