@@ -10,21 +10,21 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int rangeMax = 12;
+        int rightRangeCorner = 12;
         int result = 0;
 
-        for (int i = 2; i <= rangeMax; i++) {
+        for (int i = 2; i <= rightRangeCorner; i++) {
 
             int count = 0;
-            for (int j = 2; j <= rangeMax; j++) {
+            for (int j = 2; j <= rightRangeCorner; j++) {
                 count += findTheNumberOfDigitsTwo(j);
             }
 
             result = count;
         }
 
-        System.out.print("Result: " + result + ", Range: [2 - " + rangeMax + "]" + " -> ");
-        printRange(rangeMax);
+        System.out.print("Result: " + result + ", Range: [2 - " + rightRangeCorner + "]" + " -> ");
+        printRange(rightRangeCorner);
     }
 
     private static int findTheNumberOfDigitsTwo(int n) {
@@ -33,7 +33,7 @@ public class Main {
 
         while (n > 0) {
 
-            if (n % 10 == 2)
+            if (n % 10 == 1)
                 count++;
 
             n = n / 10;
