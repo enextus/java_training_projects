@@ -26,6 +26,8 @@ public class Main_dev {
             }
 
             System.out.println(negativePart);
+
+            leftRangeCorner = 0;
         }
 
 
