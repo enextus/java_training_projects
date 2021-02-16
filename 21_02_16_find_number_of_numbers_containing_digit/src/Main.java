@@ -11,21 +11,24 @@ public class Main {
 
         int rangeMax = 14; // 2, 12, 20, 22
 
-        for (int k = 0; k < 30; k++) {
+        for (int k = 0; k < rangeMax; k++) {
 
             int count = k;
             for (int i = 2; i <= rangeMax; i++) { // beginning with 2
                 count += findNumbers(i);
             }
 
-            System.out.println(" --- Result: " + count + "RangeMax: "   );
+            System.out.print(" --- Result: " + count + ", Range: ");
             printRange(k);
         }
 
     }
 
     private static void printRange(int k) {
-        for (int j = 0; j < k; j++) { System.out.print(k + ", "); }
+        for (int j = 0; j < k; j++) {
+            System.out.print("" + j + ", ");
+        }
+        System.out.println("");
     }
 
     private static int findNumbers(int n) {
