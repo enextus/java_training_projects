@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
 
         int rangeMax = 12;
-        int res = 0;
+        int result = 0;
 
         for (int i = 2; i <= rangeMax; i++) {
 
@@ -20,10 +20,10 @@ public class Main {
                 count += findTheNumberOfDigitsTwo(j);
             }
 
-            res = count;
+            result = count;
         }
 
-        System.out.print("Result: " + res + ", Range: [2 - " + rangeMax + "]" + " -> ");
+        System.out.print("Result: " + result + ", Range: [2 - " + rangeMax + "]" + " -> ");
         printRange(rangeMax);
     }
 
