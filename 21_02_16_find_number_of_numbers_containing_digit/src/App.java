@@ -3,8 +3,8 @@ public class App {
 
         FindNumberOfDigitOneInRange calculateNumber = new FindNumberOfDigitOneInRange();
 
-        System.out.println(calculateNumber.startNumberOfNumbers(-11, 11));
-        System.out.println(calculateNumber.startNumberOfNumbers(0, 11));
+        System.out.println(calculateNumber.getNumberOfNumbers(-11, 11));
+        System.out.println(calculateNumber.getNumberOfNumbers(0, 11));
 
         //calculateNumber.printVisual();
     }

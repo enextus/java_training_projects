@@ -37,7 +37,7 @@ public class FindNumberOfDigitOneInRange {
     }
 
 
-    public int startNumberOfNumbers(int leftCorner, int rightCorner) {
+    public int getNumberOfNumbers(int leftCorner, int rightCorner) {
 
         if (leftCorner < 0) {
 
@@ -85,7 +85,6 @@ public class FindNumberOfDigitOneInRange {
 
         return count;
     }
-
 
     void printVisual() {
 
