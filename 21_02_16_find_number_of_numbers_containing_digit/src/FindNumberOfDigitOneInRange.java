@@ -82,7 +82,7 @@ public class FindNumberOfDigitOneInRange {
         return count;
     }
 
-    void printVisual() {
+/*    void printVisual() {
 
         this.setResult(calcNumberOfNumbers(getLeftRangeCorner(), getRightRangeCorner()));
 
@@ -103,6 +103,6 @@ public class FindNumberOfDigitOneInRange {
         }
 
         System.out.println(lstInt);
-    }
+    }*/
 
 }
