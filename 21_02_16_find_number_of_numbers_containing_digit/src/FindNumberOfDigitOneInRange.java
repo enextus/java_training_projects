@@ -33,22 +33,22 @@ public class FindNumberOfDigitOneInRange {
         this.result = result;
     }
 
-    public int findNumberOfNumbers(int leftCorner, int rightCorner) {
+    public int findNumberOfNumbers(int initialLeftCorner, int initialRightCorner) {
 
-        if (leftCorner < 0) {
+        if (initialLeftCorner < 0) {
 
             int negativeRes;
 
             this.setLeftRangeCorner(0);
-            this.setRightRangeCorner(rightCorner);
-            this.setResult(calcNumberOfNumbers(getLeftRangeCorner(), Math.abs(leftCorner)));
+            this.setRightRangeCorner(initialRightCorner);
+            this.setResult(calcNumberOfNumbers(getLeftRangeCorner(), Math.abs(initialLeftCorner)));
 
             negativeRes = this.calcNumberOfNumbers(getLeftRangeCorner(), getRightRangeCorner());
 
             this.setResult(getResult() + negativeRes);
 
         } else
-            this.setResult(calcNumberOfNumbers(leftCorner, rightCorner));
+            this.setResult(calcNumberOfNumbers(initialLeftCorner, initialRightCorner));
 
         return getResult();
     }
