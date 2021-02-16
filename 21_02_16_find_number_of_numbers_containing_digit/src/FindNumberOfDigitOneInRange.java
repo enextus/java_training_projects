@@ -82,27 +82,4 @@ public class FindNumberOfDigitOneInRange {
         return count;
     }
 
-/*    void printVisual() {
-
-        this.setResult(calcNumberOfNumbers(getLeftRangeCorner(), getRightRangeCorner()));
-
-        System.out.print("Result: " + getResult()
-                + ", Range: [" + getLeftRangeCorner()
-                + " - " + getRightRangeCorner()
-                + "] -> ");
-
-        printRange(getRightRangeCorner());
-    }
-
-    private void printRange(int rangeMax) {
-
-        List<Integer> lstInt = new ArrayList<>();
-
-        for (int i = getLeftRangeCorner(); i <= getRightRangeCorner(); i++) {
-            lstInt.add(i);
-        }
-
-        System.out.println(lstInt);
-    }*/
-
 }

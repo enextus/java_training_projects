@@ -73,4 +73,16 @@ public class Main_dev {
         System.out.println(lstInt);
     }
 
+    /*    void printVisual() {
+
+        this.setResult(calcNumberOfNumbers(getLeftRangeCorner(), getRightRangeCorner()));
+
+        System.out.print("Result: " + getResult()
+                + ", Range: [" + getLeftRangeCorner()
+                + " - " + getRightRangeCorner()
+                + "] -> ");
+
+        printRange(getRightRangeCorner());
+    }
+    }*/
 }
