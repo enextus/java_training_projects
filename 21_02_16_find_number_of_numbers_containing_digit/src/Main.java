@@ -10,10 +10,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int rightRangeCorner = 12;
+        int leftRangeCorner = 7;
+        int rightRangeCorner = 10;
         int result = 0;
 
-        for (int i = 2; i <= rightRangeCorner; i++) {
+        for (int i = leftRangeCorner; i <= rightRangeCorner; i++) {
 
             int count = 0;
             for (int j = 2; j <= rightRangeCorner; j++) {
