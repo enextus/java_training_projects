@@ -30,21 +30,13 @@ public class FindTheNumberOfDigitsOneInRange {
 
     public int calculateNumberOfNumbers() {
 
-        int result;
-        result = 0;
+        int count = 0;
 
-        for (int i = getLeftRangeCorner(); i <= getRightRangeCorner(); i++) {
-
-            int count = 0;
-            for (int j = getLeftRangeCorner(); j <= getRightRangeCorner(); j++) {
-                count += findTheNumberOfDigitsOne(j);
-            }
-
-            result = count;
+        for (int j = getLeftRangeCorner(); j <= getRightRangeCorner(); j++) {
+            count += findTheNumberOfDigitsOne(j);
         }
 
-
-        return result;
+        return count;
     }
 
 
