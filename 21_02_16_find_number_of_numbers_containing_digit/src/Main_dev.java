@@ -10,11 +10,11 @@ public class Main_dev {
 
     public static void main(String[] args) {
 
-        int leftRangeCorner = 0;
-        int rightRangeCorner = 3000;
+        int leftRangeCorner;
+        int rightRangeCorner;
 
         leftRangeCorner = 0;
-        rightRangeCorner = 3000;
+        rightRangeCorner = 11;
 
 
         int result = 0;
@@ -22,15 +22,15 @@ public class Main_dev {
         for (int i = leftRangeCorner; i <= rightRangeCorner; i++) {
 
             int count = 0;
-            for (int j = 2; j <= rightRangeCorner; j++) {
+            for (int j = leftRangeCorner; j <= rightRangeCorner; j++) {
                 count += findTheNumberOfDigitsOne(j);
             }
 
             result = count;
         }
 
-        System.out.print("Result: " + result + ", Range: [2 - " + rightRangeCorner + "]" + " -> ");
-        printRange(rightRangeCorner);
+        System.out.print("Result: " + result + ", Range: [" + leftRangeCorner + " - " + rightRangeCorner + "]" + " -> ");
+        printRange(leftRangeCorner, rightRangeCorner);
     }
 
     private static int findTheNumberOfDigitsOne(int n) {
@@ -48,11 +48,11 @@ public class Main_dev {
         return count;
     }
 
-    private static void printRange(int rangeMax) {
+    private static void printRange(int leftRangeCorner, int rightRangeCorner) {
 
         List<Integer> lstInt = new ArrayList<>();
 
-        for (int i = 2; i <= rangeMax; i++) {
+        for (int i = leftRangeCorner; i <= rightRangeCorner; i++) {
             lstInt.add(i);
         }
 
