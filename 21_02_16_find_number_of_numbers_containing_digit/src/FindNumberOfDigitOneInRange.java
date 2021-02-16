@@ -49,10 +49,7 @@ public class FindNumberOfDigitOneInRange {
             this.setRightRangeCorner(rightCorner);
 
             this.setResult(calculateNumberOfNumbers(getLeftRangeCorner(), Math.abs(temp1)));
-
-
             res2 = this.calculateNumberOfNumbers(getLeftRangeCorner(), getRightRangeCorner());
-
             this.setResult(getResult() + res2);
 
             System.out.println("here: " + getResult());
