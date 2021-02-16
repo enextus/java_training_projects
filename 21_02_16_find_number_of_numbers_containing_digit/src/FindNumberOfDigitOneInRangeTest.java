@@ -86,4 +86,8 @@ class FindNumberOfDigitOneInRangeTest {
         assertEquals(2, calculateNumber.getNumberOfNumbers(-1, 1));
     }
 
+    @Test
+    void test_getNumberOfNumbers_min11_1__2() {
+        assertEquals(5, calculateNumber.getNumberOfNumbers(-11, 1));
+    }
 }
