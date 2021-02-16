@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class Main_dev {
 
     /**
      * There is a range of numbers from a to b inclusive.
@@ -10,15 +10,20 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int leftRangeCorner = 7;
-        int rightRangeCorner = 50;
+        int leftRangeCorner = 0;
+        int rightRangeCorner = 3000;
+
+        leftRangeCorner = 0;
+        rightRangeCorner = 3000;
+
+
         int result = 0;
 
         for (int i = leftRangeCorner; i <= rightRangeCorner; i++) {
 
             int count = 0;
             for (int j = 2; j <= rightRangeCorner; j++) {
-                count += findTheNumberOfDigitsTwo(j);
+                count += findTheNumberOfDigitsOne(j);
             }
 
             result = count;
@@ -28,7 +33,7 @@ public class Main {
         printRange(rightRangeCorner);
     }
 
-    private static int findTheNumberOfDigitsTwo(int n) {
+    private static int findTheNumberOfDigitsOne(int n) {
 
         int count = 0;
 
