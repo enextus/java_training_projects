@@ -6,14 +6,12 @@ public class Main {
      */
     public static void main(String[] args) {
 
-        // for (int j = 0; j < k; j++) { System.out.print(k + ", "); }
 
+        int rangeMax = 10; // 2, 12, 20, 22
 
-        int rangeMax = 14; // 2, 12, 20, 22
+        for (int k = 2; k <= rangeMax; k++) {
 
-        for (int k = 0; k < rangeMax; k++) {
-
-            int count = k;
+            int count = 0;
             for (int i = 2; i <= rangeMax; i++) { // beginning with 2
                 count += findNumbers(i);
             }
@@ -25,7 +23,7 @@ public class Main {
     }
 
     private static void printRange(int k) {
-        for (int j = 0; j < k; j++) {
+        for (int j = 2; j <= k; j++) {
             System.out.print("" + j + ", ");
         }
         System.out.println("");
