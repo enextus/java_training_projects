@@ -1,7 +1,7 @@
 public class App {
     public static void main(String[] args) {
 
-        FindTheNumberOfDigitsOneInRange calculateNumber = new FindTheNumberOfDigitsOneInRange(0, 11);
+        FindNumberOfDigitOneInRange calculateNumber = new FindNumberOfDigitOneInRange(0, 11);
 
         System.out.println(calculateNumber.calculateNumberOfNumbers());
         calculateNumber.printVisual();

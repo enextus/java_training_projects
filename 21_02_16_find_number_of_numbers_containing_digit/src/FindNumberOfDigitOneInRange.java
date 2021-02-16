@@ -1,13 +1,13 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class FindTheNumberOfDigitsOneInRange {
+public class FindNumberOfDigitOneInRange {
 
     private final int leftRangeCorner;
     private final int rightRangeCorner;
     private int result;
 
-    public FindTheNumberOfDigitsOneInRange(int leftRangeCorner, int rightRangeCorner) {
+    public FindNumberOfDigitOneInRange(int leftRangeCorner, int rightRangeCorner) {
         this.leftRangeCorner = leftRangeCorner;
         this.rightRangeCorner = rightRangeCorner;
     }
