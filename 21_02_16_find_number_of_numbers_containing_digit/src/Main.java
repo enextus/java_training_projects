@@ -6,30 +6,40 @@ public class Main {
      */
     public static void main(String[] args) {
 
-        int rangeMax = 23; // 2, 12, 20, 22
+        // for (int j = 0; j < k; j++) { System.out.print(k + ", "); }
 
-        int count = 0;
-        for (int i = 2; i <= rangeMax; i++) { // beginning with 2
-            count += numberOf2s(i);
+
+        int rangeMax = 14; // 2, 12, 20, 22
+
+        for (int k = 0; k < 30; k++) {
+
+            int count = k;
+            for (int i = 2; i <= rangeMax; i++) { // beginning with 2
+                count += findNumbers(i);
+            }
+
+            System.out.println(" --- Result: " + count + "RangeMax: "   );
+            printRange(k);
         }
-
-        System.out.println("Result: " + count);
 
     }
 
-    private static int numberOf2s(int n) {
-        int count = 0;
+    private static void printRange(int k) {
+        for (int j = 0; j < k; j++) { System.out.print(k + ", "); }
+    }
+
+    private static int findNumbers(int n) {
+
+        int res = 0;
+
         while (n > 0) {
-            if (n % 10 == 2) {
-                count++;
-            }
+            if (n % 10 == 2)
+                res++;
+
             n = n / 10;
         }
-        return count;
+
+        return res;
     }
-
-
-
-
 
 }
