@@ -36,7 +36,6 @@ public class FindNumberOfDigitOneInRange {
         this.result = result;
     }
 
-
     public int getNumberOfNumbers(int leftCorner, int rightCorner) {
 
         if (leftCorner < 0) {
@@ -58,7 +57,6 @@ public class FindNumberOfDigitOneInRange {
 
         return getResult();
     }
-
 
     public int calcNumberOfNumbers(int leftCorner, int rightCorner) {
 
