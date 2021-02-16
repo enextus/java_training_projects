@@ -55,4 +55,9 @@ class FindNumberOfDigitOneInRangeTest {
     void test_calc_NumberOfNumbers_0_1__1() {
         assertEquals(1, calculateNumber.calcNumberOfNumbers(0, 1));
     }
+
+    @Test
+    void test_calc_NumberOfNumbers_0_11__3() {
+        assertEquals(4, calculateNumber.calcNumberOfNumbers(0, 11));
+    }
 }
