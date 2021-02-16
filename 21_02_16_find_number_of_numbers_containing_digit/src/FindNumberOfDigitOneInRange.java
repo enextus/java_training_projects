@@ -1,16 +1,12 @@
 public class FindNumberOfDigitOneInRange {
 
-    private int leftRangeCorner;
+    private final int leftRangeCorner;
     private int rightRangeCorner;
     private int result;
 
     public FindNumberOfDigitOneInRange() {
         this.leftRangeCorner = 0;
         this.rightRangeCorner = 0;
-    }
-
-    private void setLeftRangeCorner(int leftRangeCorner) {
-        this.leftRangeCorner = leftRangeCorner;
     }
 
     private void setRightRangeCorner(int rightRangeCorner) {
@@ -39,7 +35,6 @@ public class FindNumberOfDigitOneInRange {
 
             int negativeRes;
 
-            this.setLeftRangeCorner(0);
             this.setRightRangeCorner(initialRightCorner);
             this.setResult(calcNumberOfNumbers(getLeftRangeCorner(), Math.abs(initialLeftCorner)));
 
