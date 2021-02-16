@@ -54,11 +54,8 @@ public class FindNumberOfDigitOneInRange {
 
             System.out.println("here: " + getResult());
 
-        } else {
-
+        } else
             this.setResult(calculateNumberOfNumbers(leftCorner, rightCorner));
-
-        }
 
         return getResult();
     }
