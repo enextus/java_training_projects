@@ -10,7 +10,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int rangeMax = 30;
+        int rangeMax = 12;
         int res = 0;
 
         for (int i = 2; i <= rangeMax; i++) {
@@ -29,16 +29,17 @@ public class Main {
 
     private static int findNumbers(int n) {
 
-        int res = 0;
+        int count = 0;
 
         while (n > 0) {
+
             if (n % 10 == 2)
-                res++;
+                count++;
 
             n = n / 10;
         }
 
-        return res;
+        return count;
     }
 
     private static void printRange(int rangeMax) {
