@@ -4,8 +4,9 @@ public class App {
         FindNumberOfDigitOneInRange calculateNumber = new FindNumberOfDigitOneInRange();
 
         System.out.println(calculateNumber.startNumberOfNumbers(-11, 11));
-        calculateNumber.printVisual();
+        System.out.println(calculateNumber.startNumberOfNumbers(0, 11));
 
-
+        //calculateNumber.printVisual();
     }
+
 }
