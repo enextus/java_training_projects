@@ -56,7 +56,7 @@ public class FindNumberOfDigitOneInRange {
 
         } else {
 
-            // this.setResult(calculateNumberOfNumbers(getLeftRangeCorner(), Math.abs(temp1)));
+            this.setResult(calculateNumberOfNumbers(leftCorner, rightCorner));
 
         }
 
