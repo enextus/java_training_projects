@@ -12,15 +12,15 @@ public class FindNumberOfDigitOneInRange {
         this.rightRangeCorner = 0;
     }
 
-    public void setLeftRangeCorner(int leftRangeCorner) {
+    private void setLeftRangeCorner(int leftRangeCorner) {
         this.leftRangeCorner = leftRangeCorner;
     }
 
-    public void setRightRangeCorner(int rightRangeCorner) {
+    private void setRightRangeCorner(int rightRangeCorner) {
         this.rightRangeCorner = rightRangeCorner;
     }
 
-    public int getResult() {
+    private int getResult() {
         return result;
     }
 
