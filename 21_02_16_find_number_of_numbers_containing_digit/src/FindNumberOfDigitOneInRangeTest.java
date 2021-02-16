@@ -32,6 +32,16 @@ class FindNumberOfDigitOneInRangeTest {
     }
 
     @Test
+    void test_count_TheNumberOfDigitsOne_111_3_() {
+        assertEquals(3, calculateNumber.countTheNumberOfDigitsOne(111));
+    }
+
+    @Test
+    void test_count_TheNumberOfDigitsOne_101010_3_() {
+        assertEquals(3, calculateNumber.countTheNumberOfDigitsOne(111));
+    }
+
+    @Test
     void test_calc_NumberOfNumbers() {
     }
 
