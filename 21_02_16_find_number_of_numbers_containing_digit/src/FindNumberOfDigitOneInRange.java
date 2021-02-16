@@ -33,7 +33,7 @@ public class FindNumberOfDigitOneInRange {
         this.result = result;
     }
 
-    public int getNumberOfNumbers(int leftCorner, int rightCorner) {
+    public int findNumberOfNumbers(int leftCorner, int rightCorner) {
 
         if (leftCorner < 0) {
 
