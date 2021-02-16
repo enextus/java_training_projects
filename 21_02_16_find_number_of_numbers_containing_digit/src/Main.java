@@ -27,17 +27,6 @@ public class Main {
         printRange(rangeMax);
     }
 
-    private static void printRange(int rangeMax) {
-
-        List<Integer> lstInt = new ArrayList<>();
-
-        for (int i = 2; i <= rangeMax; i++) {
-            lstInt.add(i);
-        }
-
-        System.out.println(lstInt);
-    }
-
     private static int findNumbers(int n) {
 
         int res = 0;
@@ -50,6 +39,17 @@ public class Main {
         }
 
         return res;
+    }
+
+    private static void printRange(int rangeMax) {
+
+        List<Integer> lstInt = new ArrayList<>();
+
+        for (int i = 2; i <= rangeMax; i++) {
+            lstInt.add(i);
+        }
+
+        System.out.println(lstInt);
     }
 
 }
