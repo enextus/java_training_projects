@@ -1,31 +1,41 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     /**
      * There is a range of numbers from a to b inclusive.
      * Find the number of numbers containing the digit 1.
      */
+
     public static void main(String[] args) {
 
-        int rangeMax = 20; // 2, 12, 20, 22
+        int rangeMax = 30;
+        int res = 0;
 
-        for (int k = 2; k <= rangeMax; k++) {
+        for (int i = 2; i <= rangeMax; i++) {
 
             int count = 0;
-            for (int i = 2; i <= rangeMax; i++) { // beginning with 2
-                count += findNumbers(i);
+            for (int j = 2; j <= rangeMax; j++) {
+                count += findNumbers(j);
             }
 
-            System.out.print("Result: " + count + ", Range: ");
-            printRange(k);
+            res = count;
         }
 
+        System.out.print("Result: " + res + ", Range: [2 - " + rangeMax + "]" + " -> ");
+        printRange(rangeMax);
     }
 
-    private static void printRange(int k) {
-        for (int j = 2; j <= k; j++) {
-            System.out.print("" + j + ", ");
+    private static void printRange(int rangeMax) {
+
+        List<Integer> lstInt = new ArrayList<>();
+
+        for (int i = 2; i <= rangeMax; i++) {
+            lstInt.add(i);
         }
-        System.out.println("");
+
+        System.out.println(lstInt);
     }
 
     private static int findNumbers(int n) {
