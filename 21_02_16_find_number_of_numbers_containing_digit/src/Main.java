@@ -17,7 +17,7 @@ public class Main {
 
             int count = 0;
             for (int j = 2; j <= rangeMax; j++) {
-                count += findNumbers(j);
+                count += findTheNumberOfDigitsTwo(j);
             }
 
             res = count;
@@ -27,7 +27,7 @@ public class Main {
         printRange(rangeMax);
     }
 
-    private static int findNumbers(int n) {
+    private static int findTheNumberOfDigitsTwo(int n) {
 
         int count = 0;
 
