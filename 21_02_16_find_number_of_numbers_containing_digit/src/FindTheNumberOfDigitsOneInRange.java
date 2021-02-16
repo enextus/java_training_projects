@@ -5,10 +5,15 @@ public class FindTheNumberOfDigitsOneInRange {
 
     private final int leftRangeCorner;
     private final int rightRangeCorner;
+    private int result;
 
     public FindTheNumberOfDigitsOneInRange(int leftRangeCorner, int rightRangeCorner) {
         this.leftRangeCorner = leftRangeCorner;
         this.rightRangeCorner = rightRangeCorner;
+    }
+
+    public int getResult() {
+        return result;
     }
 
     private int getLeftRangeCorner() {
@@ -34,8 +39,6 @@ public class FindTheNumberOfDigitsOneInRange {
             result = count;
         }
 
-        System.out.print("Result: " + result + ", Range: [" + getLeftRangeCorner() + " - " + getRightRangeCorner() + "]" + " -> ");
-        printRange(rightRangeCorner);
 
         return result;
     }
@@ -56,11 +59,25 @@ public class FindTheNumberOfDigitsOneInRange {
         return count;
     }
 
+    void printVisual() {
+
+
+
+        System.out.print("Result: "
+                + getResult()
+                + ", Range: ["
+                + getLeftRangeCorner()
+                + " - " + getRightRangeCorner()
+                + "]"
+                + " -> ");
+        printRange(getRightRangeCorner());
+    }
+
     private void printRange(int rangeMax) {
 
         List<Integer> lstInt = new ArrayList<>();
 
-        for (int i = 2; i <= rangeMax; i++) {
+        for (int i = leftRangeCorner; i <= rightRangeCorner; i++) {
             lstInt.add(i);
         }
 

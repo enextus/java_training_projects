@@ -4,6 +4,7 @@ public class App {
         FindTheNumberOfDigitsOneInRange calculateNumber = new FindTheNumberOfDigitsOneInRange(0, 11);
 
         System.out.println(calculateNumber.calculateNumberOfNumbers());
+        calculateNumber.printVisual();
 
 
     }
