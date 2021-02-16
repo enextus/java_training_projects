@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
 
         int leftRangeCorner = 7;
-        int rightRangeCorner = 10;
+        int rightRangeCorner = 50;
         int result = 0;
 
         for (int i = leftRangeCorner; i <= rightRangeCorner; i++) {
