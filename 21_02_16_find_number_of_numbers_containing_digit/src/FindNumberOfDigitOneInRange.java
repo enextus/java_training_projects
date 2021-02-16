@@ -4,16 +4,20 @@ import java.util.List;
 public class FindNumberOfDigitOneInRange {
 
     private int leftRangeCorner;
-    private final int rightRangeCorner;
+    private int rightRangeCorner;
     private int result;
 
-    public FindNumberOfDigitOneInRange(int leftRangeCorner, int rightRangeCorner) {
-        this.leftRangeCorner = leftRangeCorner;
-        this.rightRangeCorner = rightRangeCorner;
+    public FindNumberOfDigitOneInRange() {
+        this.leftRangeCorner = 0;
+        this.rightRangeCorner = 0;
     }
 
     public void setLeftRangeCorner(int leftRangeCorner) {
         this.leftRangeCorner = leftRangeCorner;
+    }
+
+    public void setRightRangeCorner(int rightRangeCorner) {
+        this.rightRangeCorner = rightRangeCorner;
     }
 
     public int getResult() {
@@ -32,11 +36,43 @@ public class FindNumberOfDigitOneInRange {
         this.result = result;
     }
 
-    public int calculateNumberOfNumbers() {
+
+    public int startNumberOfNumbers(int leftCorner, int rightCorner) {
+
+        if (leftCorner < 0) {
+
+            int temp1 = leftCorner;
+            int temp2 = rightCorner;
+            int res2;
+
+            this.setLeftRangeCorner(0);
+            this.setRightRangeCorner(rightCorner);
+
+            this.setResult(calculateNumberOfNumbers(getLeftRangeCorner(), Math.abs(temp1)));
+
+
+            res2 = this.calculateNumberOfNumbers(getLeftRangeCorner(), getRightRangeCorner());
+
+            this.setResult(getResult() + res2);
+
+            System.out.println("here: " + getResult());
+
+        } else {
+
+            // this.setResult(calculateNumberOfNumbers(getLeftRangeCorner(), Math.abs(temp1)));
+
+        }
+
+        return getResult();
+    }
+
+
+    public int calculateNumberOfNumbers(int leftCorner, int rightCorner) {
+
 
         int count = 0;
 
-        for (int j = getLeftRangeCorner(); j <= getRightRangeCorner(); j++) {
+        for (int j = leftCorner; j <= rightCorner; j++) {
             count += findTheNumberOfDigitsOne(j);
         }
 
@@ -58,9 +94,10 @@ public class FindNumberOfDigitOneInRange {
         return count;
     }
 
+
     void printVisual() {
 
-        this.setResult(calculateNumberOfNumbers());
+        this.setResult(calculateNumberOfNumbers(getLeftRangeCorner(), getRightRangeCorner()));
 
         System.out.print("Result: " + getResult()
                 + ", Range: [" + getLeftRangeCorner()
