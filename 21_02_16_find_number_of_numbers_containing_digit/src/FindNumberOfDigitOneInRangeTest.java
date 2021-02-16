@@ -42,6 +42,11 @@ class FindNumberOfDigitOneInRangeTest {
     }
 
     @Test
+    void test_count_TheNumberOfDigitsOne_123414321_3_() {
+        assertEquals(3, calculateNumber.countTheNumberOfDigitsOne(123414321));
+    }
+
+    @Test
     void test_calc_NumberOfNumbers() {
     }
 
