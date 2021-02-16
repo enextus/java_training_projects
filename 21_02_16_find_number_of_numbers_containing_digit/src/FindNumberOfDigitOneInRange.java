@@ -37,13 +37,11 @@ public class FindNumberOfDigitOneInRange {
 
         if (leftCorner < 0) {
 
-            int tempValOne = leftCorner;
-            int tempValTwo = rightCorner;
             int negativeRes;
 
             this.setLeftRangeCorner(0);
             this.setRightRangeCorner(rightCorner);
-            this.setResult(calcNumberOfNumbers(getLeftRangeCorner(), Math.abs(tempValOne)));
+            this.setResult(calcNumberOfNumbers(getLeftRangeCorner(), Math.abs(leftCorner)));
 
             negativeRes = this.calcNumberOfNumbers(getLeftRangeCorner(), getRightRangeCorner());
 

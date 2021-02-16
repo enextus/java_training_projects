@@ -95,4 +95,5 @@ class FindNumberOfDigitOneInRangeTest {
     void test_getNumberOfNumbers_min11_11__2() {
         assertEquals(8, calculateNumber.getNumberOfNumbers(-11, 11));
     }
+
 }
