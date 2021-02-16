@@ -6,7 +6,7 @@ public class Main {
      */
     public static void main(String[] args) {
 
-        int rangeMax = 10; // 2, 12, 20, 22
+        int rangeMax = 20; // 2, 12, 20, 22
 
         for (int k = 2; k <= rangeMax; k++) {
 
