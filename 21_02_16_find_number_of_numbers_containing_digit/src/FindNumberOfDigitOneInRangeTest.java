@@ -17,17 +17,18 @@ class FindNumberOfDigitOneInRangeTest {
     }
 
     @Test
-    void test_count_TheNumberOfDigitsOne_2_min_0_() {
+    void test_count_TheNumberOfDigitsOne_2_0_() {
         assertEquals(0, calculateNumber.countTheNumberOfDigitsOne(2));
     }
 
     @Test
-    void test_count_TheNumberOfDigitsOne_10_min_1_() {
+    void test_count_TheNumberOfDigitsOne_10_1_() {
         assertEquals(1, calculateNumber.countTheNumberOfDigitsOne(10));
     }
 
     @Test
-    void test_get_NumberOfNumbers() {
+    void test_count_TheNumberOfDigitsOne_11_2_() {
+        assertEquals(2, calculateNumber.countTheNumberOfDigitsOne(11));
     }
 
     @Test
