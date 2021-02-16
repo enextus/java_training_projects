@@ -13,8 +13,20 @@ public class Main_dev {
         int leftRangeCorner;
         int rightRangeCorner;
 
-        leftRangeCorner = 0;
+        leftRangeCorner = -5;
         rightRangeCorner = 11;
+
+
+        if (leftRangeCorner < 0) {
+
+            List<Integer> negativePart = new ArrayList<>();
+
+            for (int i = 1; i <= Math.abs(leftRangeCorner); i++) {
+                negativePart.add(i);
+            }
+
+            System.out.println(negativePart);
+        }
 
 
         int result = 0;
