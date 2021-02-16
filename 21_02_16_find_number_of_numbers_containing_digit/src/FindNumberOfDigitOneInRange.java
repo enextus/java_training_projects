@@ -47,12 +47,11 @@ public class FindNumberOfDigitOneInRange {
 
             this.setLeftRangeCorner(0);
             this.setRightRangeCorner(rightCorner);
-
             this.setResult(calculateNumberOfNumbers(getLeftRangeCorner(), Math.abs(temp1)));
-            tempRes = this.calculateNumberOfNumbers(getLeftRangeCorner(), getRightRangeCorner());
-            this.setResult(getResult() + tempRes);
 
-            System.out.println("here: " + getResult());
+            tempRes = this.calculateNumberOfNumbers(getLeftRangeCorner(), getRightRangeCorner());
+
+            this.setResult(getResult() + tempRes);
 
         } else
             this.setResult(calculateNumberOfNumbers(leftCorner, rightCorner));
