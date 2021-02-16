@@ -24,6 +24,10 @@ public class FindTheNumberOfDigitsOneInRange {
         return rightRangeCorner;
     }
 
+    public void setResult(int result) {
+        this.result = result;
+    }
+
     public int calculateNumberOfNumbers() {
 
         int result;
@@ -61,15 +65,13 @@ public class FindTheNumberOfDigitsOneInRange {
 
     void printVisual() {
 
+        this.setResult(calculateNumberOfNumbers());
 
-
-        System.out.print("Result: "
-                + getResult()
-                + ", Range: ["
-                + getLeftRangeCorner()
+        System.out.print("Result: " + getResult()
+                + ", Range: [" + getLeftRangeCorner()
                 + " - " + getRightRangeCorner()
-                + "]"
-                + " -> ");
+                + "] -> ");
+
         printRange(getRightRangeCorner());
     }
 
@@ -77,7 +79,7 @@ public class FindTheNumberOfDigitsOneInRange {
 
         List<Integer> lstInt = new ArrayList<>();
 
-        for (int i = leftRangeCorner; i <= rightRangeCorner; i++) {
+        for (int i = getLeftRangeCorner(); i <= getRightRangeCorner(); i++) {
             lstInt.add(i);
         }
 
