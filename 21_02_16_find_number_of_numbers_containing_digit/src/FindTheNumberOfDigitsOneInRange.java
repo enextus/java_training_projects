@@ -3,44 +3,45 @@ import java.util.List;
 
 public class FindTheNumberOfDigitsOneInRange {
 
-    int leftRangeCorner;
-    int rightRangeCorner;
+    private final int leftRangeCorner;
+    private final int rightRangeCorner;
 
     public FindTheNumberOfDigitsOneInRange(int leftRangeCorner, int rightRangeCorner) {
         this.leftRangeCorner = leftRangeCorner;
         this.rightRangeCorner = rightRangeCorner;
     }
 
-    public int getLeftRangeCorner() {
+    private int getLeftRangeCorner() {
         return leftRangeCorner;
     }
 
-    public int getRightRangeCorner() {
+    private int getRightRangeCorner() {
         return rightRangeCorner;
     }
 
     public int calculateNumberOfNumbers() {
 
-        int result = 0;
+        int result;
+        result = 0;
 
         for (int i = getLeftRangeCorner(); i <= getRightRangeCorner(); i++) {
 
             int count = 0;
-            for (int j = 2; j <= getRightRangeCorner(); j++) {
+            for (int j = getLeftRangeCorner(); j <= getRightRangeCorner(); j++) {
                 count += findTheNumberOfDigitsOne(j);
             }
 
             result = count;
         }
 
-/*        System.out.print("Result: " + result + ", Range: [2 - " + rightRangeCorner + "]" + " -> ");
-        printRange(rightRangeCorner);*/
+        System.out.print("Result: " + result + ", Range: [" + getLeftRangeCorner() + " - " + getRightRangeCorner() + "]" + " -> ");
+        printRange(rightRangeCorner);
 
         return result;
     }
 
 
-    private int findTheNumberOfDigitsOne(int n) {
+    int findTheNumberOfDigitsOne(int n) {
 
         int count = 0;
 
