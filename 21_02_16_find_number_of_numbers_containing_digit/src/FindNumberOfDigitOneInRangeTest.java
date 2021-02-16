@@ -38,7 +38,7 @@ class FindNumberOfDigitOneInRangeTest {
 
     @Test
     void test_count_TheNumberOfDigitsOne_101010_3_() {
-        assertEquals(3, calculateNumber.countTheNumberOfDigitsOne(111));
+        assertEquals(3, calculateNumber.countTheNumberOfDigitsOne(101010));
     }
 
     @Test
