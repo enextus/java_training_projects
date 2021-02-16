@@ -29,11 +29,8 @@ public class App {
             System.out.println(i + " ->>>    A");
             System.out.println("");
         }
+
         // Thread MAIN
-
-
-
-
 
         System.out.println("\nMAIN done");
     }
