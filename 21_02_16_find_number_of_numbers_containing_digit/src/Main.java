@@ -6,7 +6,6 @@ public class Main {
      */
     public static void main(String[] args) {
 
-
         int rangeMax = 10; // 2, 12, 20, 22
 
         for (int k = 2; k <= rangeMax; k++) {
@@ -16,7 +15,7 @@ public class Main {
                 count += findNumbers(i);
             }
 
-            System.out.print(" --- Result: " + count + ", Range: ");
+            System.out.print("Result: " + count + ", Range: ");
             printRange(k);
         }
 
