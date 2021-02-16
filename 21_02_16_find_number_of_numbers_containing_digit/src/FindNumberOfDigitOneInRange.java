@@ -39,7 +39,6 @@ public class FindNumberOfDigitOneInRange {
         return count;
     }
 
-
     int findTheNumberOfDigitsOne(int n) {
 
         int count = 0;
