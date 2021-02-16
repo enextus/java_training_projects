@@ -47,8 +47,12 @@ class FindNumberOfDigitOneInRangeTest {
     }
 
     @Test
-    void test_calc_NumberOfNumbers___() {
+    void test_calc_NumberOfNumbers_0_0__0() {
         assertEquals(0, calculateNumber.calcNumberOfNumbers(0, 0));
     }
 
+    @Test
+    void test_calc_NumberOfNumbers___() {
+        assertEquals(0, calculateNumber.calcNumberOfNumbers(0, 0));
+    }
 }
