@@ -47,20 +47,20 @@ public class FindNumberOfDigitOneInRange {
 
             this.setLeftRangeCorner(0);
             this.setRightRangeCorner(rightCorner);
-            this.setResult(calculateNumberOfNumbers(getLeftRangeCorner(), Math.abs(tempValOne)));
+            this.setResult(calcNumberOfNumbers(getLeftRangeCorner(), Math.abs(tempValOne)));
 
-            negativeRes = this.calculateNumberOfNumbers(getLeftRangeCorner(), getRightRangeCorner());
+            negativeRes = this.calcNumberOfNumbers(getLeftRangeCorner(), getRightRangeCorner());
 
             this.setResult(getResult() + negativeRes);
 
         } else
-            this.setResult(calculateNumberOfNumbers(leftCorner, rightCorner));
+            this.setResult(calcNumberOfNumbers(leftCorner, rightCorner));
 
         return getResult();
     }
 
 
-    public int calculateNumberOfNumbers(int leftCorner, int rightCorner) {
+    public int calcNumberOfNumbers(int leftCorner, int rightCorner) {
 
 
         int count = 0;
@@ -90,7 +90,7 @@ public class FindNumberOfDigitOneInRange {
 
     void printVisual() {
 
-        this.setResult(calculateNumberOfNumbers(getLeftRangeCorner(), getRightRangeCorner()));
+        this.setResult(calcNumberOfNumbers(getLeftRangeCorner(), getRightRangeCorner()));
 
         System.out.print("Result: " + getResult()
                 + ", Range: [" + getLeftRangeCorner()
