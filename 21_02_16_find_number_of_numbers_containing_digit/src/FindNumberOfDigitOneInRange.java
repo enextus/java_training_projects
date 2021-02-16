@@ -62,7 +62,6 @@ public class FindNumberOfDigitOneInRange {
 
     public int calcNumberOfNumbers(int leftCorner, int rightCorner) {
 
-
         int count = 0;
 
         for (int j = leftCorner; j <= rightCorner; j++) {
