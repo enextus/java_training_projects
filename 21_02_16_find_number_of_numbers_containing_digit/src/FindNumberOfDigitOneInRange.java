@@ -3,13 +3,17 @@ import java.util.List;
 
 public class FindNumberOfDigitOneInRange {
 
-    private final int leftRangeCorner;
+    private int leftRangeCorner;
     private final int rightRangeCorner;
     private int result;
 
     public FindNumberOfDigitOneInRange(int leftRangeCorner, int rightRangeCorner) {
         this.leftRangeCorner = leftRangeCorner;
         this.rightRangeCorner = rightRangeCorner;
+    }
+
+    public void setLeftRangeCorner(int leftRangeCorner) {
+        this.leftRangeCorner = leftRangeCorner;
     }
 
     public int getResult() {
