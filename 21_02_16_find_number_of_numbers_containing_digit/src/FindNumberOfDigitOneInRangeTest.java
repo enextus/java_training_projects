@@ -1,8 +1,12 @@
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class FindNumberOfDigitOneInRangeTest {
+
+    FindNumberOfDigitOneInRange calculateNumber = new FindNumberOfDigitOneInRange();
+
+    @Test
+    void test_countTheNumberOfDigitsOne() {
+    }
 
     @Test
     void startNumberOfNumbers() {
@@ -12,7 +16,4 @@ class FindNumberOfDigitOneInRangeTest {
     void calculateNumberOfNumbers() {
     }
 
-    @Test
-    void findTheNumberOfDigitsOne() {
-    }
 }
