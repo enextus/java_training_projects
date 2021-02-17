@@ -7,63 +7,63 @@ class FindNumberOfDigitOneInRangeTest {
     FindNumberOfDigitOneInRange calculateNumber = new FindNumberOfDigitOneInRange();
 
     @Test
-    void test_count_TheNumberOfDigitsOne_0_0_() {
-        assertEquals(0, calculateNumber.countTheNumberOfDigitsOne(0));
+    void test_calcDigitsOne_0_0_() {
+        assertEquals(0, calculateNumber.calcDigitsOne(0));
     }
 
     @Test
-    void test_count_TheNumberOfDigitsOne_1_1_() {
-        assertEquals(1, calculateNumber.countTheNumberOfDigitsOne(1));
+    void test_calcDigitsOne_1_1_() {
+        assertEquals(1, calculateNumber.calcDigitsOne(1));
     }
 
     @Test
-    void test_count_TheNumberOfDigitsOne_2_0_() {
-        assertEquals(0, calculateNumber.countTheNumberOfDigitsOne(2));
+    void test_calcDigitsOne_2_0_() {
+        assertEquals(0, calculateNumber.calcDigitsOne(2));
     }
 
     @Test
-    void test_count_TheNumberOfDigitsOne_10_1_() {
-        assertEquals(1, calculateNumber.countTheNumberOfDigitsOne(10));
+    void test_calcDigitsOne_10_1_() {
+        assertEquals(1, calculateNumber.calcDigitsOne(10));
     }
 
     @Test
-    void test_count_TheNumberOfDigitsOne_11_2_() {
-        assertEquals(2, calculateNumber.countTheNumberOfDigitsOne(11));
+    void test_calcDigitsOne_11_2_() {
+        assertEquals(2, calculateNumber.calcDigitsOne(11));
     }
 
     @Test
-    void test_count_TheNumberOfDigitsOne_111_3_() {
-        assertEquals(3, calculateNumber.countTheNumberOfDigitsOne(111));
+    void test_count_calcDigitsOne_111_3_() {
+        assertEquals(3, calculateNumber.calcDigitsOne(111));
     }
 
     @Test
-    void test_count_TheNumberOfDigitsOne_101010_3_() {
-        assertEquals(3, calculateNumber.countTheNumberOfDigitsOne(101010));
+    void test_count_calcDigitsOne_101010_3_() {
+        assertEquals(3, calculateNumber.calcDigitsOne(101010));
     }
 
     @Test
-    void test_count_TheNumberOfDigitsOne_123414321_3_() {
-        assertEquals(3, calculateNumber.countTheNumberOfDigitsOne(123414321));
+    void test_count_calcDigitsOne_123414321_3_() {
+        assertEquals(3, calculateNumber.calcDigitsOne(123414321));
     }
 
     @Test
-    void test_calc_NumberOfNumbers_0_0__0() {
-        assertEquals(0, calculateNumber.calcNumberOfNumbers(0, 0));
+    void test_calcNumbers_0_0__0() {
+        assertEquals(0, calculateNumber.calcNumbers(0, 0));
     }
 
     @Test
-    void test_calc_NumberOfNumbers_0_1__1() {
-        assertEquals(1, calculateNumber.calcNumberOfNumbers(0, 1));
+    void test_calcNumbers_0_1__1() {
+        assertEquals(1, calculateNumber.calcNumbers(0, 1));
     }
 
     @Test
-    void test_calc_NumberOfNumbers_0_11__3() {
-        assertEquals(4, calculateNumber.calcNumberOfNumbers(0, 11));
+    void test_calcNumbers_0_11__3() {
+        assertEquals(4, calculateNumber.calcNumbers(0, 11));
     }
 
     @Test
-    void test_calc_NumberOfNumbers_0_111__3() {
-        assertEquals(36, calculateNumber.calcNumberOfNumbers(0, 111));
+    void test_calcNumbers_0_111__3() {
+        assertEquals(36, calculateNumber.calcNumbers(0, 111));
     }
 
     @Test
