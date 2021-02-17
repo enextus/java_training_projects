@@ -9,15 +9,15 @@ public class FindNumberOfDigitOneInRange {
         this.rightRangeCorner = 0;
     }
 
-    private void setRRC(int rightRangeCorner) {
+    private void setRrC(int rightRangeCorner) {
         this.rightRangeCorner = rightRangeCorner;
     }
 
-    private int getLRC() {
+    private int getLrC() {
         return leftRangeCorner;
     }
 
-    private int getRRC() {
+    private int getRrC() {
         return rightRangeCorner;
     }
 
@@ -34,22 +34,22 @@ public class FindNumberOfDigitOneInRange {
      * Find the number of numbers containing the digit 1.
      * The method receive the initial arguments those pict the both corners of the range.
      *
-     * @param iLC initial left range corner
-     * @param iRC initial right range corner
+     * @param iLc initial left range corner
+     * @param iRc initial right range corner
      * @return return a result
      */
-    public int calcNumberOfOne(int iLC, int iRC) {
-        if (iLC < 0) {
+    public int calcNumberOfOne(int iLc, int iRc) {
+        if (iLc < 0) {
             int resNegativeNumbers;
 
-            this.setRRC(iRC);
-            this.setRes(calcNumbers(getLRC(), Math.abs(iLC)));
+            this.setRrC(iRc);
+            this.setRes(calcNumbers(getLrC(), Math.abs(iLc)));
 
-            resNegativeNumbers = this.calcNumbers(getLRC(), getRRC());
+            resNegativeNumbers = this.calcNumbers(getLrC(), getRrC());
 
             this.setRes(getRes() + resNegativeNumbers);
         } else
-            this.setRes(calcNumbers(iLC, iRC));
+            this.setRes(calcNumbers(iLc, iRc));
 
         return getRes();
     }
@@ -76,9 +76,12 @@ public class FindNumberOfDigitOneInRange {
      * @return return a result
      */
     int calcDigitsOne(int n) {
+
+        int numberForSearch = 1;
+
         int count = 0;
         while (n > 0) {
-            if (n % 10 == 1)
+            if (n % 10 == numberForSearch)
                 count++;
 
             n = n / 10;
