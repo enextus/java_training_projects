@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main_dev {
+public class Dev {
 
     /**
      * There is a range of numbers from a to b inclusive.
