@@ -32,6 +32,7 @@ public class FindNumberOfDigitOneInRange {
     /**
      * There is a range of numbers from a to b inclusive.
      * Find the number of numbers containing the digit 1.
+     * The method receive the initial arguments those pict the both corners of the range.
      *
      * @param initLC initial left range corner
      * @param initRC initial right range corner
