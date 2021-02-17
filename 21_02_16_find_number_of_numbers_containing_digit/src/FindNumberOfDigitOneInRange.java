@@ -39,14 +39,14 @@ public class FindNumberOfDigitOneInRange {
      */
     public int calcNumberOfOne(int initLC, int initRC) {
         if (initLC < 0) {
-            int resOverNegativeNumbers;
+            int resNegativeNumbers;
 
             this.setRightRangeCorner(initRC);
             this.setResult(calcNumbers(getLeftRangeCorner(), Math.abs(initLC)));
 
-            resOverNegativeNumbers = this.calcNumbers(getLeftRangeCorner(), getRightRangeCorner());
+            resNegativeNumbers = this.calcNumbers(getLeftRangeCorner(), getRightRangeCorner());
 
-            this.setResult(getResult() + resOverNegativeNumbers);
+            this.setResult(getResult() + resNegativeNumbers);
         } else
             this.setResult(calcNumbers(initLC, initRC));
 
