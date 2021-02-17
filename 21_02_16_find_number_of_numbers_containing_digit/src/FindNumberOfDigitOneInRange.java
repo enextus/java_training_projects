@@ -33,22 +33,22 @@ public class FindNumberOfDigitOneInRange {
      * There is a range of numbers from a to b inclusive.
      * Find the number of numbers containing the digit 1.
      *
-     * @param initialLeftCorner
-     * @param initialRightCorner
+     * @param iLC
+     * @param iRC
      * @return
      */
-    public int calcNumberOfOne(int initialLeftCorner, int initialRightCorner) {
-        if (initialLeftCorner < 0) {
-            int resultOverNegativeNumbers;
+    public int calcNumberOfOne(int iLC, int iRC) {
+        if (iLC < 0) {
+            int resOverNegativeNumbers;
 
-            this.setRightRangeCorner(initialRightCorner);
-            this.setResult(calcNumbers(getLeftRangeCorner(), Math.abs(initialLeftCorner)));
+            this.setRightRangeCorner(iRC);
+            this.setResult(calcNumbers(getLeftRangeCorner(), Math.abs(iLC)));
 
-            resultOverNegativeNumbers = this.calcNumbers(getLeftRangeCorner(), getRightRangeCorner());
+            resOverNegativeNumbers = this.calcNumbers(getLeftRangeCorner(), getRightRangeCorner());
 
-            this.setResult(getResult() + resultOverNegativeNumbers);
+            this.setResult(getResult() + resOverNegativeNumbers);
         } else
-            this.setResult(calcNumbers(initialLeftCorner, initialRightCorner));
+            this.setResult(calcNumbers(iLC, iRC));
 
         return getResult();
     }
@@ -57,13 +57,13 @@ public class FindNumberOfDigitOneInRange {
      * There is a range of numbers from a to b inclusive.
      * Find the number of numbers containing the digit 1.
      *
-     * @param leftCorner
-     * @param rightCorner
+     * @param lC
+     * @param rC
      * @return
      */
-    public int calcNumbers(int leftCorner, int rightCorner) {
+    public int calcNumbers(int lC, int rC) {
         int count = 0;
-        for (int j = leftCorner; j <= rightCorner; j++) {
+        for (int j = lC; j <= rC; j++) {
             count += calcDigitsOne(j);
         }
 
