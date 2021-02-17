@@ -54,8 +54,7 @@ public class FindNumberOfDigitOneInRange {
     }
 
     /**
-     * There is a range of numbers from a to b inclusive.
-     * Find the number of numbers containing the digit 1.
+     * the method going the range over and count the number of digit "one" of each next range element
      *
      * @param lC
      * @param rC
