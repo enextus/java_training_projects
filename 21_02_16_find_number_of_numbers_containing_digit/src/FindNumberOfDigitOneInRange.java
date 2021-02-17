@@ -9,24 +9,24 @@ public class FindNumberOfDigitOneInRange {
         this.rightRangeCorner = 0;
     }
 
-    private void setRightRangeCorner(int rightRangeCorner) {
+    private void setRRC(int rightRangeCorner) {
         this.rightRangeCorner = rightRangeCorner;
     }
 
-    private int getResult() {
-        return result;
-    }
-
-    private int getLeftRangeCorner() {
+    private int getLRC() {
         return leftRangeCorner;
     }
 
-    private int getRightRangeCorner() {
+    private int getRRC() {
         return rightRangeCorner;
     }
 
-    public void setResult(int result) {
+    public void setRes(int result) {
         this.result = result;
+    }
+
+    private int getRes() {
+        return result;
     }
 
     /**
@@ -42,16 +42,16 @@ public class FindNumberOfDigitOneInRange {
         if (iLC < 0) {
             int resNegativeNumbers;
 
-            this.setRightRangeCorner(iRC);
-            this.setResult(calcNumbers(getLeftRangeCorner(), Math.abs(iLC)));
+            this.setRRC(iRC);
+            this.setRes(calcNumbers(getLRC(), Math.abs(iLC)));
 
-            resNegativeNumbers = this.calcNumbers(getLeftRangeCorner(), getRightRangeCorner());
+            resNegativeNumbers = this.calcNumbers(getLRC(), getRRC());
 
-            this.setResult(getResult() + resNegativeNumbers);
+            this.setRes(getRes() + resNegativeNumbers);
         } else
-            this.setResult(calcNumbers(iLC, iRC));
+            this.setRes(calcNumbers(iLC, iRC));
 
-        return getResult();
+        return getRes();
     }
 
     /**
