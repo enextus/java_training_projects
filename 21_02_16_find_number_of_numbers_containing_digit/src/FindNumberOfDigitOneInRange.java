@@ -33,22 +33,22 @@ public class FindNumberOfDigitOneInRange {
      * There is a range of numbers from a to b inclusive.
      * Find the number of numbers containing the digit 1.
      *
-     * @param iLC
-     * @param iRC
+     * @param initLC
+     * @param initRC
      * @return
      */
-    public int calcNumberOfOne(int iLC, int iRC) {
-        if (iLC < 0) {
+    public int calcNumberOfOne(int initLC, int initRC) {
+        if (initLC < 0) {
             int resOverNegativeNumbers;
 
-            this.setRightRangeCorner(iRC);
-            this.setResult(calcNumbers(getLeftRangeCorner(), Math.abs(iLC)));
+            this.setRightRangeCorner(initRC);
+            this.setResult(calcNumbers(getLeftRangeCorner(), Math.abs(initLC)));
 
             resOverNegativeNumbers = this.calcNumbers(getLeftRangeCorner(), getRightRangeCorner());
 
             this.setResult(getResult() + resOverNegativeNumbers);
         } else
-            this.setResult(calcNumbers(iLC, iRC));
+            this.setResult(calcNumbers(initLC, initRC));
 
         return getResult();
     }
