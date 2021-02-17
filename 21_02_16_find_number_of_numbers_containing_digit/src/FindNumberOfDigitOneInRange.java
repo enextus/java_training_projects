@@ -36,7 +36,7 @@ public class FindNumberOfDigitOneInRange {
      *
      * @param iLC initial left range corner
      * @param iRC initial right range corner
-     * @return
+     * @return return a result
      */
     public int calcNumberOfOne(int iLC, int iRC) {
         if (iLC < 0) {
@@ -59,7 +59,7 @@ public class FindNumberOfDigitOneInRange {
      *
      * @param lC left range corner
      * @param rC right range corner
-     * @return
+     * @return return a result
      */
     public int calcNumbers(int lC, int rC) {
         int count = 0;
@@ -73,7 +73,7 @@ public class FindNumberOfDigitOneInRange {
      * the method calculate the number of the digit "one" in the number who was passed in the method as argument
      *
      * @param n number to check
-     * @return
+     * @return return a result
      */
     int calcDigitsOne(int n) {
         int count = 0;
