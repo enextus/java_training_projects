@@ -68,32 +68,32 @@ class FindNumberOfDigitOneInRangeTest {
 
     @Test
     void test_findNumberOfNumbers_0_0__0() {
-        assertEquals(0, calculateNumber.findNumberOfNumbers(0, 0));
+        assertEquals(0, calculateNumber.calcNumberOfOne(0, 0));
     }
 
     @Test
     void test_findNumberOfNumbers_0_1__1() {
-        assertEquals(1, calculateNumber.findNumberOfNumbers(0, 1));
+        assertEquals(1, calculateNumber.calcNumberOfOne(0, 1));
     }
 
     @Test
     void test_findNumberOfNumbers_min1_0__1() {
-        assertEquals(1, calculateNumber.findNumberOfNumbers(-1, 0));
+        assertEquals(1, calculateNumber.calcNumberOfOne(-1, 0));
     }
 
     @Test
     void test_findNumberOfNumbers_min1_1__2() {
-        assertEquals(2, calculateNumber.findNumberOfNumbers(-1, 1));
+        assertEquals(2, calculateNumber.calcNumberOfOne(-1, 1));
     }
 
     @Test
     void test_findNumberOfNumbers_min11_1__2() {
-        assertEquals(5, calculateNumber.findNumberOfNumbers(-11, 1));
+        assertEquals(5, calculateNumber.calcNumberOfOne(-11, 1));
     }
 
     @Test
     void test_findNumberOfNumbers_min11_11__2() {
-        assertEquals(8, calculateNumber.findNumberOfNumbers(-11, 11));
+        assertEquals(8, calculateNumber.calcNumberOfOne(-11, 11));
     }
 
 }

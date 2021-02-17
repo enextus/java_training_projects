@@ -37,10 +37,8 @@ public class FindNumberOfDigitOneInRange {
      * @param initialRightCorner
      * @return
      */
-    public int findNumberOfNumbers(int initialLeftCorner, int initialRightCorner) {
-
+    public int calcNumberOfOne(int initialLeftCorner, int initialRightCorner) {
         if (initialLeftCorner < 0) {
-
             int resultOverNegativeNumbers;
 
             this.setRightRangeCorner(initialRightCorner);
@@ -49,7 +47,6 @@ public class FindNumberOfDigitOneInRange {
             resultOverNegativeNumbers = this.calcNumbers(getLeftRangeCorner(), getRightRangeCorner());
 
             this.setResult(getResult() + resultOverNegativeNumbers);
-
         } else
             this.setResult(calcNumbers(initialLeftCorner, initialRightCorner));
 
@@ -65,7 +62,6 @@ public class FindNumberOfDigitOneInRange {
      * @return
      */
     public int calcNumbers(int leftCorner, int rightCorner) {
-
         int count = 0;
         for (int j = leftCorner; j <= rightCorner; j++) {
             count += calcDigitsOne(j);
@@ -82,7 +78,6 @@ public class FindNumberOfDigitOneInRange {
      * @return
      */
     int calcDigitsOne(int n) {
-
         int count = 0;
         while (n > 0) {
             if (n % 10 == 1)
