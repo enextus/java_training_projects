@@ -33,8 +33,8 @@ public class FindNumberOfDigitOneInRange {
      * There is a range of numbers from a to b inclusive.
      * Find the number of numbers containing the digit 1.
      *
-     * @param initLC
-     * @param initRC
+     * @param initLC initial left range corner
+     * @param initRC initial right range corner
      * @return
      */
     public int calcNumberOfOne(int initLC, int initRC) {
