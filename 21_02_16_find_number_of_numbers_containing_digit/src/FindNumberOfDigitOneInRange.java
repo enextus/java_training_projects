@@ -70,8 +70,7 @@ public class FindNumberOfDigitOneInRange {
     }
 
     /**
-     * There is a range of numbers from a to b inclusive.
-     * Find the number of numbers containing the digit 1.
+     * the method calculate the number of the digit "one" in the number who was passed in the method as argument
      *
      * @param n number to check
      * @return
