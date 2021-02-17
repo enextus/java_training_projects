@@ -21,7 +21,7 @@ public class FindNumberOfDigitOneInRange {
         return rightRangeCorner;
     }
 
-    public void setRes(int result) {
+    private void setRes(int result) {
         this.result = result;
     }
 
