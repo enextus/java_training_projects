@@ -10,7 +10,7 @@ class CutTest {
     }
 
     @Test
-    void getRight() {
+    void test_getRight_min7_min7() {
         assertEquals(-7, new Cut(-10, -7).getRight());
     }
 
