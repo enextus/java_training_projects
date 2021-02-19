@@ -1,5 +1,4 @@
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 import java.util.function.Function;
 
 public class Main {
@@ -8,17 +7,16 @@ public class Main {
 
         List<String> lstStr = Arrays.asList("abc", "abc", "abc", "bcd", "bcd", "efg", "efg");
 
-        System.out.println(lstStr);
-
         Function<List<String>, List<String>> resLst = (List<String> lst) -> {
+            Set<String> resSet = new HashSet<String>(lst);
 
-            System.out.println("1.");
-            System.out.println("2.");
+            List<String> result = new ArrayList<String>();
+            result.addAll(resSet);
 
-            return lst;
+            return (List<String>) result;
         };
 
-        resLst.apply(lstStr);
+        System.out.println(resLst.apply(lstStr));
     }
 
 }
