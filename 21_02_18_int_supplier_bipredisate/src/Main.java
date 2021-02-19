@@ -12,7 +12,7 @@ public class Main {
         b = 5;
         c = 10;
 
-        Function<Integer, Integer> closureFunc = (x) -> a * (x * x) + (b * x) + c;
+        Function<Integer, Integer> closureFunc = (x) -> (a * (x * x)) + (b * x) + c;
 
         System.out.println(closureFunc.apply(666));
 
