@@ -1,7 +1,6 @@
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 class IsNUmberPrimeTest {
 
@@ -25,5 +24,15 @@ class IsNUmberPrimeTest {
     @Test
     void test_isNumberPrime_97_true() {
         assertTrue(isNUmberPrime.isNumberPrime(97));
+    }
+
+    @Test
+    void test_isNumberPrime_100_true() {
+        assertFalse(isNUmberPrime.isNumberPrime(100));
+    }
+
+    @Test
+    void test_isNumberPrime_1000_true() {
+        assertFalse(isNUmberPrime.isNumberPrime(1000));
     }
 }
