@@ -37,4 +37,5 @@ class CutTest {
     void test_lstCut_size() {
         assertEquals(3, lstCut.size());
     }
+
 }
