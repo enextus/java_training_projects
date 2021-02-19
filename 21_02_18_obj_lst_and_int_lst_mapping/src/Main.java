@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -11,6 +10,8 @@ public class Main {
                 new Cut(-5, 5),
                 new Cut(40, 80)
         );
+
+        System.out.println(lstCut);
 
     }
 
