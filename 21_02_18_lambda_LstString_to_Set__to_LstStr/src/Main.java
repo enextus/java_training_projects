@@ -5,7 +5,6 @@ import java.util.function.Function;
 public class Main {
 
     public static void main(String[] args) {
-        // write your code here
 
         List<String> lstStr = Arrays.asList("abc", "abc", "abc", "bcd", "bcd", "efg", "efg");
 
@@ -21,4 +20,5 @@ public class Main {
 
         resLst.apply(lstStr);
     }
+
 }
