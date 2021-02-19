@@ -14,6 +14,11 @@ public class Solve {
     public Map<Integer, Integer> solve(List<Cut> cuts, List<Integer> numbers){
 
 
+        for (int i = 0; i < numbers.size(); i++) {
+
+            System.out.println(numbers.get(1));
+
+        }
 
         return null;
     }

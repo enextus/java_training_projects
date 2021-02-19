@@ -11,7 +11,11 @@ public class Main {
                 new Cut(40, 80)
         );
 
-        System.out.println(lstCut);
+        System.out.println("lstCut: " + lstCut);
+
+        List<Integer> integers = Arrays.asList(-110, -4, -1, 0, 20, 45, 100);
+
+        System.out.println("integers: " + integers);
     }
 
 }
