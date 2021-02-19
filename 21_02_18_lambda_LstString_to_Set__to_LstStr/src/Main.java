@@ -13,7 +13,13 @@ public class Main {
             return new ArrayList<>(tmpSet);
         };
 
-        System.out.println(lambdaFunc.apply(initLstStr));
+        System.out.println("Initial list: " + initLstStr);
+        System.out.println("Resulted list: " + lambdaFunc.apply(initLstStr));
+
+        /*
+        Initial list:   [abc, abc, abc, bcd, bcd, efg, efg]
+        Resulted list:  [bcd, abc, efg]
+        */
     }
 
 }
