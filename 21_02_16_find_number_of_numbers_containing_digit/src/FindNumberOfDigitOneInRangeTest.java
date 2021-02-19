@@ -96,4 +96,9 @@ class FindNumberOfDigitOneInRangeTest {
         assertEquals(8, calculateNumber.calcNumberOfOne(-11, 11));
     }
 
+
+    @Test
+    void test_calcNumberOfOne_0_999__2() {
+        assertEquals(300, calculateNumber.calcNumberOfOne(0, 999));
+    }
 }

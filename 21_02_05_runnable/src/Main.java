@@ -7,7 +7,7 @@ public class Main {
         System.out.println("Start Main.");
 
         MyRunnable myr = new MyRunnable(new Date().getTime());
-
+z
         Thread thr1 = new Thread(myr);
         thr1.start();
 
