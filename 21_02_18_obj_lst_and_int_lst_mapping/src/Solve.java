@@ -11,12 +11,13 @@ public class Solve {
         this.numbers = numbers;
     }
 
-    public Map<Integer, Integer> solve(List<Cut> cuts, List<Integer> numbers){
+    public Map<Integer, Integer> solve() {
 
+        // cuts, numbers;
 
         for (int i = 0; i < numbers.size(); i++) {
 
-            System.out.println(numbers.get(1));
+            System.out.println(numbers.get(i));
 
         }
 
