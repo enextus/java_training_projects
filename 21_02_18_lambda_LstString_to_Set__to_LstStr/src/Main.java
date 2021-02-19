@@ -9,12 +9,12 @@ public class Main {
 
         Function<List<String>, List<String>> lambdaFunc = (List<String> lst) -> {
             Set<String> tmpSet = new HashSet<>(lst);
-            List<String> resLst = new ArrayList<>(tmpSet);
 
-            return resLst;
+            return new ArrayList<>(tmpSet);
         };
 
         System.out.println(lambdaFunc.apply(initLstStr));
     }
 
 }
+
