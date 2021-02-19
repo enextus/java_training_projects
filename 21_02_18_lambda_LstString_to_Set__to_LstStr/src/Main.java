@@ -8,9 +8,10 @@ public class Main {
         List<String> lstStr = Arrays.asList("abc", "abc", "abc", "bcd", "bcd", "efg", "efg");
 
         Function<List<String>, List<String>> resLst = (List<String> lst) -> {
-            Set<String> resSet = new HashSet<String>(lst);
 
+            Set<String> resSet = new HashSet<String>(lst);
             List<String> result = new ArrayList<String>();
+
             result.addAll(resSet);
 
             return (List<String>) result;
