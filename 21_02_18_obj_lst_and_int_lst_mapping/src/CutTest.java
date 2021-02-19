@@ -7,12 +7,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class CutTest {
 
-    List<Cut> lstCut = Arrays.asList(
-            new Cut(-100, -90),
-            new Cut(-5, 5),
-            new Cut(40, 80)
-    );
-
     @Test
     void test_getLeft_min10_min10() {
         assertEquals(-10, new Cut(-10, -7).getLeft());
@@ -35,6 +29,13 @@ class CutTest {
 
     @Test
     void test_lstCut_size() {
+
+        List<Cut> lstCut = Arrays.asList(
+                new Cut(-100, -90),
+                new Cut(-5, 5),
+                new Cut(40, 80)
+        );
+
         assertEquals(3, lstCut.size());
     }
 
