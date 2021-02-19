@@ -14,7 +14,10 @@ public class Main {
 
         Function<Integer, Integer> closureFunc = (x) -> (a * (x * x)) + (b * x) + c;
 
-        System.out.println(closureFunc.apply(666));
+        int argument;
+        argument = 666;
+
+        System.out.println(closureFunc.apply(argument));
 
         // 890452
     }
