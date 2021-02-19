@@ -4,6 +4,8 @@ public class Main {
 
         // ...
 
+        Factorial<Integer> factorial = new Factorial();
 
+        System.out.println(factorial.calcFact(5));
     }
 }

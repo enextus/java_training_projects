@@ -1,11 +1,12 @@
 import java.util.stream.IntStream;
 
-public class Factorial {
+public class Factorial<Integer> {
 
     public int calcFact(int num) {
-        IntStream.rangeClosed(2, num).reduce(1, (x, y) -> x * y);
+        int res;
+        res = IntStream.rangeClosed(2, num).reduce(1, (x, y) -> x * y);
 
-        return 0;
+        return res;
     }
 
 }
