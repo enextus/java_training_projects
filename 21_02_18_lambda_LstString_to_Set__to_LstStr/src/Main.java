@@ -9,10 +9,10 @@ public class Main {
 
         Function<List<String>, List<String>> lambdaFunc = (List<String> lst) -> {
 
-            Set<String> resSet = new HashSet<>(lst);
+            Set<String> tmpSet = new HashSet<>(lst);
             List<String> result = new ArrayList<>();
 
-            result.addAll(resSet);
+            result.addAll(tmpSet);
 
             return (List<String>) result;
         };
