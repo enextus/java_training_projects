@@ -14,4 +14,13 @@ class CutTest {
         assertEquals(-7, new Cut(-10, -7).getRight());
     }
 
+    @Test
+    void test_getLeft_0_0() {
+        assertEquals(0, new Cut(0, 0).getLeft());
+    }
+
+    @Test
+    void test_getRight_0_0() {
+        assertEquals(0, new Cut(0, 0).getLeft());
+    }
 }
