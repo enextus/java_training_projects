@@ -10,11 +10,11 @@ public class Main {
         Function<List<String>, List<String>> lambdaFunc = (List<String> lst) -> {
 
             Set<String> tmpSet = new HashSet<>(lst);
-            List<String> result = new ArrayList<>();
+            List<String> resLst = new ArrayList<>();
 
-            result.addAll(tmpSet);
+            resLst.addAll(tmpSet);
 
-            return (List<String>) result;
+            return (List<String>) resLst;
         };
 
         System.out.println(lambdaFunc.apply(initLstStr));
