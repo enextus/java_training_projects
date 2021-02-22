@@ -8,6 +8,11 @@ class IsNUmberPrimeTest {
     IsNUmberPrime isNUmberPrime = new IsNUmberPrime();
 
     @Test
+    void test_isNumberPrime_1_false() {
+        assertFalse(isNUmberPrime.isNumberPrime(1));
+    }
+
+    @Test
     void test_isNumberPrime_2_true() {
         assertTrue(isNUmberPrime.isNumberPrime(2));
     }
