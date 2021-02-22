@@ -31,5 +31,5 @@ class IntServiceTest {
         assertFalse(intService.isPrime(9));
         assertFalse(intService.isPrime(4));
     }
-}
 
+}
