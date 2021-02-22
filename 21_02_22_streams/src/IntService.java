@@ -12,6 +12,7 @@ public class IntService {
     public boolean isPrime(int number) {
         if (number == 1)
             return false;
+
         return IntStream.rangeClosed(2, (int) Math.sqrt(number))
                 .noneMatch(divisor -> number % divisor == 0);
     }
@@ -20,6 +21,7 @@ public class IntService {
         IntPredicate dividedBy3 = x -> x % 3 == 0;
         IntPredicate dividedBy5 = x -> x % 5 == 0;
         IntPredicate dividedBy5And3 = dividedBy5.and(dividedBy3);
+
 //        Predicate<Integer> dividedBy3 = x -> x % 3 == 0;
 //        Predicate<Integer> dividedBy5 = x -> x % 5 == 0;
 //        Predicate<Integer> dividedBy5And3 = dividedBy5.and(dividedBy3);
