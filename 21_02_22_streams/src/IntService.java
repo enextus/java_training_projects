@@ -17,6 +17,11 @@ public class IntService {
                 .noneMatch(divisor -> number % divisor == 0);
     }
 
+    @Override
+    public String toString() {
+        return "IntService{}";
+    }
+
     public IntStream compose(IntStream stream1, IntStream stream2) {
         IntPredicate dividedBy3 = x -> x % 3 == 0;
         IntPredicate dividedBy5 = x -> x % 5 == 0;
