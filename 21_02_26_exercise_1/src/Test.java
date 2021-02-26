@@ -5,18 +5,13 @@ import java.util.stream.Collectors;
 public class Test {
     public static void main(String[] args) {
 
-        List<Integer> integerList = Arrays.asList(1, 2, 3, 4, 5, 12, 34);
+        List<Integer> integerList = Arrays.asList(1, 2, 3);
 
-        Long res = (Long) integerList.stream()
-                .mapToLong(integer -> (long) integer * integer)
-                //   .reduce(0, Long::sum)
-                .collect(Collectors.summingInt(Long::intValue));
-        ;
-
-        //  .collect(Collectors.summingInt(Long::intValue));
+        Integer res =  integerList.stream()
+                .map(n -> n * n)
+                .collect(Collectors.summingInt(Integer::intValue));
 
         System.out.println(res);
-
     }
 
 }
