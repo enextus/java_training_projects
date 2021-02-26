@@ -1,7 +1,6 @@
 
 import java.util.NoSuchElementException;
 import java.util.function.IntPredicate;
-import java.util.function.Predicate;
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 
@@ -16,6 +15,7 @@ public class IntService {
     public boolean isPrime(int number) {
         if (number == 1)
             return false;
+
         return IntStream.rangeClosed(2, (int) Math.sqrt(number))
                 .noneMatch(divisor -> number % divisor == 0);
     }
@@ -50,4 +50,5 @@ public class IntService {
                 .reduce((res, num) -> res + num)
                 .orElseThrow(() -> new NoSuchElementException());
     }
+
 }

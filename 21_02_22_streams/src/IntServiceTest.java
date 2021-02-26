@@ -1,13 +1,13 @@
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class IntServiceTest {
     IntService intService = new IntService();
 
     @Test
     public void isPrime_true_test() {
-
         assertTrue(intService.isPrime(5));
         assertTrue(intService.isPrime(7));
         assertTrue(intService.isPrime(11));
@@ -20,7 +20,6 @@ class IntServiceTest {
 
     @Test
     public void isPrime_false_test() {
-
         assertFalse(intService.isPrime(6));
         assertFalse(intService.isPrime(8));
         assertFalse(intService.isPrime(40));
