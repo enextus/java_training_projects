@@ -13,6 +13,6 @@ public class ProductOfSquares {
         }
 
         System.out.println(res);
-
     }
+
 }
