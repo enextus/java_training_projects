@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class Account {
+
     private final String uuid;
     private long balance;
     private final List<Transaction> transactions;
