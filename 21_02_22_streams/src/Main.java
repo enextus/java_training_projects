@@ -26,8 +26,6 @@ public class Main {
         System.out.println("account_1.getBalance(): " + account_1.getBalance());
         System.out.println(accountService_1.getSumAllCancelledTransactions(accounts));
 
-
-
 /*        IntService intService = new IntService();
 
         System.out.println(intService.isPrime(1));
