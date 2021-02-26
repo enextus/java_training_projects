@@ -5,10 +5,10 @@ import java.util.stream.Collectors;
 public class Test {
     public static void main(String[] args) {
 
-        List<Integer> integerList = Arrays.asList(1, 2, 3);
+        List<Integer> integerList = Arrays.asList(1, 2, 3, 4, 5);
 
         Integer res =  integerList.stream()
-                .map(n -> n * n)
+                .map(integer -> integer * integer)
                 .collect(Collectors.summingInt(Integer::intValue));
 
         System.out.println(res);
