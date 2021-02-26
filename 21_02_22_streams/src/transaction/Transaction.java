@@ -4,10 +4,10 @@ import java.time.ZonedDateTime;
 
 public class Transaction {
 
-    private String uuid;
+    private final String uuid;
     private State state;
-    private long sum;
-    private ZonedDateTime time;
+    private final long sum;
+    private final ZonedDateTime time;
 
     public Transaction(String uuid, State state, long sum) {
         this.uuid = uuid;
