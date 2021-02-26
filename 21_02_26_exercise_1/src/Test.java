@@ -1,4 +1,3 @@
-
 import java.util.Arrays;
 import java.util.List;
 
@@ -7,9 +6,9 @@ public class Test {
 
         List<Integer> num = Arrays.asList(1, 2, 3, 4, 5, 12, 34);
 
-        Integer res = num.stream()
-                .map(n -> n * n)
-                .reduce(0, Integer::sum);
+        Long res = num.stream()
+                .mapToLong(n -> n * n)
+                .reduce(0, Long::sum);
 
         System.out.println(res);
     }
