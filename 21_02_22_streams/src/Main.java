@@ -11,23 +11,24 @@ public class Main {
     public static void main(String[] args) {
 
         AccountService accountService_1 = new AccountService();
-
         List<Account> accounts = new ArrayList<>();
-
-
         Transaction transaction_1 = new Transaction("uuid_1", State.CANCELLED, 10L);
+        Account account_1 = new Account("uuid_1", 1000L);
+
 
         System.out.println(transaction_1);
 
-        Account account_1 = new Account("uuid_1", 1000L);
-
         accounts.add(account_1);
+        account_1.addTransaction(transaction_1);
+
 
         System.out.println("accounts.size(): " + accounts.size());
-
         System.out.println("account_1.getBalance(): " + account_1.getBalance());
-
         System.out.println(accountService_1.getSumAllCancelledTransactions(accounts));
+
+
+
+
 
 /*        IntService intService = new IntService();
 
