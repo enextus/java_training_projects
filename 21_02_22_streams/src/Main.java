@@ -17,16 +17,16 @@ public class Main {
 
         Transaction transaction_1 = new Transaction("uuid_1", State.CANCELLED, 10L);
 
+        System.out.println(transaction_1);
+
         Account account_1 = new Account("uuid_1", 1000L);
 
         accounts.add(account_1);
 
-        System.out.println(accounts.size());
+        System.out.println("accounts.size(): " + accounts.size());
 
-        System.out.println(account_1.getBalance());
+        System.out.println("account_1.getBalance(): " + account_1.getBalance());
 
-
-        System.out.println(account_1.getTransactions());
         System.out.println(accountService_1.getSumAllCancelledTransactions(accounts));
 
 /*        IntService intService = new IntService();

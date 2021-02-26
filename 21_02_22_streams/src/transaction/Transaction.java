@@ -16,6 +16,16 @@ public class Transaction {
         this.time = ZonedDateTime.now();
     }
 
+    @Override
+    public String toString() {
+        return "Transaction{" +
+                "uuid='" + uuid + '\'' +
+                ", state=" + state +
+                ", sum=" + sum +
+                ", time=" + time +
+                '}';
+    }
+
     public void setState(State state) {
         this.state = state;
     }
