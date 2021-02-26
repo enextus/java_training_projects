@@ -7,9 +7,9 @@ public class SumOfSquares {
 
         List<Integer> integerList = Arrays.asList(1, 2, 3, 4, 5);
 
-        Integer res =  integerList.stream()
+        Long res = (Long) integerList.stream()
                 .map(integer -> integer * integer)
-                .collect(Collectors.summingInt(Integer::intValue));
+                .collect(Collectors.summingLong(Integer::longValue));
 
         System.out.println(res);
     }
