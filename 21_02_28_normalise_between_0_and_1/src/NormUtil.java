@@ -27,9 +27,19 @@ public class NormUtil {
      * @return The result of the normalization.
      */
     public double normalize(double x) {
-        return ((x - this.dataLow)
-                / (this.dataHigh - this.dataLow))
-                * (this.normalizedHigh - this.normalizedLow) + this.normalizedLow;
+        return ((x - dataLow)
+                / (dataHigh - dataLow))
+                * (normalizedHigh - normalizedLow) + normalizedLow;
+    }
+
+    @Override
+    public String toString() {
+        return "NormUtil{" +
+                "dataLow=" + dataLow +
+                ", normalizedHigh=" + normalizedHigh +
+                ", dataHigh=" + dataHigh +
+                ", normalizedLow=" + normalizedLow +
+                '}';
     }
 
 }
