@@ -6,10 +6,10 @@ import java.util.stream.Collectors;
 public class SumOfSquares {
     public static void main(String[] args) {
 
-        List<Integer> integerLst = Arrays.asList(1, 2, 3, 4, 5, 6, 700000);
+        List<Integer> integerLst = Arrays.asList(1, 2, 3, 4, 5, 6, 7);
 
         AtomicInteger count = new AtomicInteger();
-        Long res = (Long) integerLst.stream()
+        Long res = integerLst.stream()
                 .map((integer) -> {
 
                             count.getAndIncrement();
