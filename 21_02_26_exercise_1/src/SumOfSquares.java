@@ -6,19 +6,20 @@ import java.util.stream.Collectors;
 public class SumOfSquares {
     public static void main(String[] args) {
 
-        List<Integer> integerLst = Arrays.asList(1, 2, 3, 4, 5, 6, 7);
+        List<Integer> integerLst = Arrays.asList(1, 2, 3, 4, 5, 6, 700000);
 
         AtomicInteger count = new AtomicInteger();
-        Long res = integerLst.stream()
+        Long res = (Long) integerLst.stream()
                 .map((integer) -> {
 
                             count.getAndIncrement();
                             System.out.println("count: " + count + ", integer: " + integer + ", i*i: " + (integer * integer));
 
+
                             return integer * integer;
                         }
                 )
-                .collect(Collectors.summingLong(Integer::longValue));
+                .collect(   Collectors.summingLong(Integer::longValue)   );
 
         System.out.println(res);
     }
