@@ -21,10 +21,11 @@ public class SumOfSquares {
                             return multi.multiply(multi);
                         }
                 )
-                .collect(Collectors.summingLong(/* Integer::longValue  */ (integer) -> {
+                .collect(Collectors.summingLong(
 
-                    return integer.longValue();
-                }));
+                        (bigInteger) -> {   /* Integer::longValue  */
+                            return bigInteger.longValue();
+                        }));
 
         System.out.println(res);
     }
