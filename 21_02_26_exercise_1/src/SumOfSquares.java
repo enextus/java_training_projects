@@ -19,7 +19,10 @@ public class SumOfSquares {
                             return integer * integer;
                         }
                 )
-                .collect(   Collectors.summingLong(Integer::longValue)   );
+                .collect(Collectors.summingLong(/* Integer::longValue  */ (Integer) -> {
+
+                    return Integer.longValue();
+                } ));
 
         System.out.println(res);
     }
