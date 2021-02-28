@@ -7,7 +7,7 @@ public class SumOfSquares {
 
         List<Integer> integerLst = Arrays.asList(1, 2, 3, 4, 5, 6, 7);
 
-        Long res = (Long) integerLst.stream()
+        Long res = integerLst.stream()
                 .map((integer) -> {
 
                             return integer * integer;
