@@ -7,7 +7,9 @@ public class Main {
 
         NormUtil normUtil = new NormUtil(150., -10., 1, 0);
 
+        System.out.println(normUtil);
 
+        System.out.println(normUtil.normalize(-5.12));
 
     }
 /*
