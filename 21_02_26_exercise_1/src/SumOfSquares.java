@@ -11,21 +11,26 @@ public class SumOfSquares {
 
         AtomicInteger count = new AtomicInteger();
 
-        Long res = integerLst.stream()
+        BigInteger res = integerLst.stream()
                 .map((integer) -> {
 
                             count.getAndIncrement();
 
                             BigInteger multi = new BigInteger(String.valueOf(integer));
+
                             System.out.println("count: " + count + ", integer: " + multi + ", i*i: " + (multi.multiply(multi)));
                             return multi.multiply(multi);
                         }
                 )
-                .collect(Collectors.summingLong(
+/*                .collect(Collectors.summingLong(
 
-                        (bigInteger) -> {   /* Integer::longValue  */
+                        (bigInteger) -> {   *//* Integer::longValue  *//*
                             return bigInteger.longValue();
-                        }));
+                        })
+                )*/
+                .reduce(BigInteger::add)
+                .orElse(BigInteger.ZERO)
+                ;
 
         System.out.println(res);
     }
