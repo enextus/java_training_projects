@@ -26,12 +26,12 @@ public class NormCollector implements Collector<Double, ArrayList<Double>, Doubl
 
     @Override
     public Function<ArrayList<Double>, Double> finisher() {
-        return doubleStream -> { // our lambda function to calculate the result
+        return doubleArrayList -> { // our lambda function to calculate the result
 
-            Collections.sort(doubleStream);
+            Collections.sort(doubleArrayList);
 
-            double dataHigh = doubleStream.stream().max(Comparator.naturalOrder()).get();
-            double dataLow = doubleStream.stream().min(Comparator.naturalOrder()).get();
+            double dataHigh = doubleArrayList.stream().max(Comparator.naturalOrder()).get();
+            double dataLow = doubleArrayList.stream().min(Comparator.naturalOrder()).get();
             double normalizedHigh = 1.;
             double normalizedLow = 0.;
 
@@ -39,7 +39,7 @@ public class NormCollector implements Collector<Double, ArrayList<Double>, Doubl
                     / (dataHigh - dataLow))
                     * (normalizedHigh - normalizedLow) + normalizedLow;*/
 
-            return ((doubleStream
+            return ((doubleArrayList
                     .stream()
                     .reduce(doubleValue ->  (   (      doubleValue - dataLow) / (dataHigh - dataLow)) * (normalizedHigh - normalizedLow) + normalizedLow)    ));
 
