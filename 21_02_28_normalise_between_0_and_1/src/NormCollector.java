@@ -37,7 +37,7 @@ public class NormCollector implements Collector<Double, ArrayList<Double>, Doubl
 
             // doubleStream.stream().map(element -> ((element - dataLow) / (dataHigh - dataLow)) * (normalizedHigh - normalizedLow) + normalizedLow);
 
-            return ((x - dataLow)
+            return ((doubleStream.get(0) - dataLow)
                     / (dataHigh - dataLow))
                     * (normalizedHigh - normalizedLow) + normalizedLow;
 
