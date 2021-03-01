@@ -28,7 +28,7 @@ public class NormCollector implements Collector<Double, ArrayList<Double>, Doubl
 
     @Override
     public Function<ArrayList<Double>, Double> finisher() {
-        return doubleStream -> {
+        return doubleStream -> { // our lambda function to calculate the result
 
             long size = doubleStream.size();
 
