@@ -14,7 +14,6 @@ public class Main {
         Double res = doubleStream.collect(new NormCollector());
 
         System.out.println(res);
-
     }
 
 }
