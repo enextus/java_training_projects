@@ -37,11 +37,14 @@ public class NormCollector implements Collector<Double, ArrayList<Double>, Doubl
             double min = doubleStream.stream().min(Comparator.naturalOrder()).get();
 
 
-            return doubleStream
+            Double result = doubleStream
                     .stream()
                     .skip(size % 2 + 2)
                     .findFirst()
                     .orElse(null);
+
+
+            return result;
         };
 
     }
