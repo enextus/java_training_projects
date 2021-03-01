@@ -9,6 +9,7 @@ public class NormCollector implements Collector<Double, ArrayList<Double>, Doubl
 
     double normalizedHigh = 1.;
     double normalizedLow = 0.;
+    double identity = 0.;
 
     @Override
     public Supplier<ArrayList<Double>> supplier() {
@@ -39,8 +40,7 @@ public class NormCollector implements Collector<Double, ArrayList<Double>, Doubl
 
             return ((doubleArrayList
                     .stream()
-                    .reduce(  0.,(currentRes, currentNum )->  currentRes - dataLow) / (dataHigh - dataLow) * (normalizedHigh - normalizedLow) + normalizedLow));
-
+                    .reduce(identity, (currentRes, currentNum) -> currentRes - dataLow) / (dataHigh - dataLow) * (normalizedHigh - normalizedLow) + normalizedLow));
         };
     }
 
