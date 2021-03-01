@@ -10,39 +10,46 @@ import java.util.stream.Collector;
 public class MedianCollector implements Collector<Integer, TreeSet<Integer>, Integer> {
     @Override
     public Supplier<TreeSet<Integer>> supplier() {
-        return TreeSet<Integer>::new;
+        return TreeSet::new; // create a new TreeSet Object
     }
 
     @Override
     public BiConsumer<TreeSet<Integer>, Integer> accumulator() {
-        return TreeSet::add;
+        return TreeSet::add; // add an element to TreeSet
     }
 
     @Override
     public BinaryOperator<TreeSet<Integer>> combiner() {
-        return (l, r) -> { l.addAll(r); return l; };
+        return (l, r) -> {
+            l.addAll(r);
+            return l;
+        };
     }
 
     @Override
     public Function<TreeSet<Integer>, Integer> finisher() {
-        return s -> {
-            long size = s.size();
-            if (size%2==0) {
-                return new Double(s
+        return set -> {
+
+            long size = set.size();
+
+            if (size % 2 == 0) {
+
+                return (int) set
                         .stream()
-                        .skip(size % 2+2)
+                        .skip(size % 2 + 2)
                         .limit(2)
-                        .mapToInt(i->i)
+                        .mapToInt(i -> i)
                         .average()
-                        .getAsDouble())
-                        .intValue();
+                        .getAsDouble();
             }
-            return s
+
+            return set
                     .stream()
-                    .skip(size % 2+2)
+                    .skip(size % 2 + 2)
                     .findFirst()
-                    .get();
+                    .orElse(null);
         };
+
     }
 
     @Override
