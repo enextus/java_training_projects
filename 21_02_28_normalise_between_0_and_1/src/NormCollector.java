@@ -29,7 +29,7 @@ public class NormCollector implements Collector<Double, ArrayList<Double>, Doubl
 
     @Override
     public BinaryOperator<ArrayList<Double>> combiner() {
-        return (doubleArrayList, doubleArrayListOther) -> { // if we have a more as one thread
+        return (doubleArrayList, doubleArrayListOther) -> { // if we have more as one thread
             doubleArrayList.addAll(doubleArrayListOther);
             return doubleArrayList;
         };
