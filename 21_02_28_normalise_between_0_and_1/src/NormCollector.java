@@ -20,10 +20,7 @@ public class NormCollector implements Collector<Double, ArrayList<Double>, Doubl
 
     @Override
     public BinaryOperator<ArrayList<Double>> combiner() {
-        return (l, r) -> {
-            l.addAll(r);
-            return l;
-        };
+        return null; // we have had only one thread
     }
 
     @Override
