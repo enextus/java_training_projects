@@ -45,6 +45,15 @@ public class NormCollector implements Collector<Double, ArrayList<Double>, Doubl
     }
 
     @Override
+    public String toString() {
+        return "NormCollector{" +
+                "normalizedHigh=" + normalizedHigh +
+                ", normalizedLow=" + normalizedLow +
+                ", identity=" + identity +
+                '}';
+    }
+
+    @Override
     public Set<Characteristics> characteristics() {
         return EnumSet.of(Characteristics.CONCURRENT);
     }
