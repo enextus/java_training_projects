@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.EnumSet;
 import java.util.Set;
 import java.util.function.BiConsumer;
@@ -32,14 +33,9 @@ public class NormCollector implements Collector<Double, ArrayList<Double>, Doubl
 
             long size = doubleStream.size();
 
-            if (size % 2 == 0) {
+            double max = doubleStream.stream().max(Comparator.naturalOrder()).get();
+            double min = doubleStream.stream().min(Comparator.naturalOrder()).get();
 
-                return doubleStream
-                        .stream()
-                        .mapToDouble(i -> i)
-                        .average()
-                        .getAsDouble();
-            }
 
             return doubleStream
                     .stream()
