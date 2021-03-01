@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.EnumSet;
-import java.util.Set;
+import java.util.*;
 import java.util.function.BiConsumer;
 import java.util.function.BinaryOperator;
 import java.util.function.Function;
@@ -31,7 +28,7 @@ public class NormCollector implements Collector<Double, ArrayList<Double>, Doubl
     public Function<ArrayList<Double>, Double> finisher() {
         return doubleStream -> { // our lambda function to calculate the result
 
-            doubleStream.sort(Double::compareTo);
+            Collections.sort(doubleStream);
 
             double dataHigh = doubleStream.stream().max(Comparator.naturalOrder()).get();
             double dataLow = doubleStream.stream().min(Comparator.naturalOrder()).get();
