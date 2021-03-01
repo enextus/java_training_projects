@@ -49,7 +49,6 @@ public class NormCollector implements Collector<Double, ArrayList<Double>, Doubl
                     .reduce(identity,
                             (currentRes, currentNum) -> currentRes - dataLow) /
                     (dataHigh - dataLow) * (normalizedHigh - normalizedLow) + normalizedLow));
-            //  .collect(Collectors.toList());
         };
     }
 
