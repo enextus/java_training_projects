@@ -31,24 +31,14 @@ public class NormCollector implements Collector<Double, ArrayList<Double>, Doubl
     public Function<ArrayList<Double>, Double> finisher() {
         return doubleStream -> { // our lambda function to calculate the result
 
-            long size = doubleStream.size();
+            doubleStream.sort(Double::compareTo);
 
             double dataHigh = doubleStream.stream().max(Comparator.naturalOrder()).get();
             double dataLow = doubleStream.stream().min(Comparator.naturalOrder()).get();
             double normalizedHigh = 1.;
             double normalizedLow = 0.;
 
-            Double result = doubleStream
-                    .stream()
-                    .map(element -> {
-
-                        return ((element - dataLow) / (dataHigh - dataLow)) * (normalizedHigh - normalizedLow) + normalizedLow;
-                        ;
-                    })
-                    .orElse(null);
-
-
-            return result;
+            return doubleStream.stream().map(element -> ((element - dataLow) / (dataHigh - dataLow)) * (normalizedHigh - normalizedLow) + normalizedLow);
         };
 
     }
