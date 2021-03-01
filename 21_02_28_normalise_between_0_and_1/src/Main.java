@@ -9,7 +9,7 @@ public class Main {
         // System.out.println(normUtil);
         // System.out.println(normUtil.normalize(-5.12));
 
-        Stream<Double> doubleStream = Stream.of(150.23, -10.12, 1.45, 0.01);
+        Stream<Double> doubleStream = Stream.of(150.23, -10.12, 1.45, 0.01, 23.3);
 
         Double res = doubleStream.collect(new NormCollector());
 
