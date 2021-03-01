@@ -38,7 +38,7 @@ public class NormCollector implements Collector<Double, ArrayList<Double>, Doubl
             // (element -> ((element - dataLow) / (dataHigh - dataLow)) * (normalizedHigh - normalizedLow) + normalizedLow);
 
 
-/*            ((x - dataLow)
+/*            ((doubleValue - dataLow)
                     / (dataHigh - dataLow))
                     * (normalizedHigh - normalizedLow) + normalizedLow;*/
 
