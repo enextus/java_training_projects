@@ -33,14 +33,18 @@ public class NormCollector implements Collector<Double, ArrayList<Double>, Doubl
 
             long size = doubleStream.size();
 
-            double max = doubleStream.stream().max(Comparator.naturalOrder()).get();
-            double min = doubleStream.stream().min(Comparator.naturalOrder()).get();
-
+            double dataHigh = doubleStream.stream().max(Comparator.naturalOrder()).get();
+            double dataLow = doubleStream.stream().min(Comparator.naturalOrder()).get();
+            double normalizedHigh = 1.;
+            double normalizedLow = 0.;
 
             Double result = doubleStream
                     .stream()
-                    .skip(size % 2 + 2)
-                    .findFirst()
+                    .map(element -> {
+
+                        return ((element - dataLow) / (dataHigh - dataLow)) * (normalizedHigh - normalizedLow) + normalizedLow;
+                        ;
+                    })
                     .orElse(null);
 
 
