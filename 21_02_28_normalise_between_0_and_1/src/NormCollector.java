@@ -6,6 +6,10 @@ import java.util.function.Supplier;
 import java.util.stream.Collector;
 
 public class NormCollector implements Collector<Double, ArrayList<Double>, Double> {
+
+    double normalizedHigh = 1.;
+    double normalizedLow = 0.;
+
     @Override
     public Supplier<ArrayList<Double>> supplier() {
         return ArrayList::new; // create a new ArrayList Object, temporary container for data store
@@ -32,8 +36,7 @@ public class NormCollector implements Collector<Double, ArrayList<Double>, Doubl
 
             double dataHigh = doubleArrayList.stream().max(Comparator.naturalOrder()).get();
             double dataLow = doubleArrayList.stream().min(Comparator.naturalOrder()).get();
-            double normalizedHigh = 1.;
-            double normalizedLow = 0.;
+
 
 /*            ((doubleValue - dataLow)
                     / (dataHigh - dataLow))
