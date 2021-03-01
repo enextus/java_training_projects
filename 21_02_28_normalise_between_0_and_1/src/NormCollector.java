@@ -15,7 +15,7 @@ public class NormCollector implements Collector<Double, ArrayList<Double>, Doubl
 
     @Override
     public BiConsumer<ArrayList<Double>, Double> accumulator() {
-        return ArrayList::add; // add an element to our ArrayList
+        return ArrayList::add; // add an element to our ArrayList without any changes in this case
     }
 
     @Override
