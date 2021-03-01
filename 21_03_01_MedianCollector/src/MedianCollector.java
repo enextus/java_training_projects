@@ -36,8 +36,8 @@ public class MedianCollector implements Collector<Integer, TreeSet<Integer>, Int
 
                 return (int) set
                         .stream()
-                        .skip(size % 2 + 2)
-                        .limit(2)
+                        .skip(1)
+                        .limit(100)
                         .mapToInt(i -> i)
                         .average()
                         .getAsDouble();
