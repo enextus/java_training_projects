@@ -7,9 +7,15 @@ import java.util.stream.Collector;
 
 public class NormCollector implements Collector<Double, ArrayList<Double>, Double> {
 
-    double normalizedHigh = 1.;
-    double normalizedLow = 0.;
-    double identity = 0.;
+    double normalizedHigh;
+    double normalizedLow;
+    double identity;
+
+    public NormCollector(double normalizedHigh, double normalizedLow, double identity) {
+        this.normalizedHigh = normalizedHigh;
+        this.normalizedLow = normalizedLow;
+        this.identity = identity;
+    }
 
     @Override
     public Supplier<ArrayList<Double>> supplier() {
