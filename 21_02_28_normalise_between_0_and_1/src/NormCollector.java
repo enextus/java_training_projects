@@ -46,8 +46,10 @@ public class NormCollector implements Collector<Double, ArrayList<Double>, Doubl
 
             return ((doubleArrayList
                     .stream()
-                    .reduce(identity, (currentRes, currentNum) -> currentRes - dataLow) /
+                    .reduce(identity,
+                            (currentRes, currentNum) -> currentRes - dataLow) /
                     (dataHigh - dataLow) * (normalizedHigh - normalizedLow) + normalizedLow));
+            //  .collect(Collectors.toList());
         };
     }
 
