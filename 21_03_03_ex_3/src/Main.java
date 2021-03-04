@@ -11,13 +11,13 @@ public class Main {
 
 
         LocalTime officeOpeningTime_1 = LocalTime.of(6, 30);
-            System.out.println(officeOpeningTime_1.format(formatterOnlyHoursMinutes));
+            System.out.println("1. " + officeOpeningTime_1.format(formatterOnlyHoursMinutes));
         int hours_1 = 10;
         ZoneId zone_1 = ZoneId.of("Europe/Berlin");
 
 
         LocalTime officeOpeningTime_2 = LocalTime.of(10, 0);
-            System.out.println(officeOpeningTime_2.format(formatterOnlyHoursMinutes));
+            System.out.println("2. " + officeOpeningTime_2.format(formatterOnlyHoursMinutes));
 /*      int hours_2 = 20;
         ZoneId zone_2 = ZoneId.of("Asia/Seoul");*/
         int hours_2 = 8;
@@ -25,7 +25,7 @@ public class Main {
 
 
         int intersectTime = intersectionWorkingTime.intersectWorkingTime(officeOpeningTime_1, hours_1, zone_1, officeOpeningTime_2, hours_2, zone_2);
-            System.out.println("intersectTime: " + intersectTime);
+            System.out.println("3. " + "intersectTime: " + intersectTime);
     }
 
 }

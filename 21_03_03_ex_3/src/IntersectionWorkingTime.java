@@ -6,14 +6,14 @@ public class IntersectionWorkingTime {
     public int intersectWorkingTime(LocalTime start1, int hours, ZoneId zone1, LocalTime start2, int hours2, ZoneId zone2) {
 
         ZonedDateTime tempStart1 = convertGivenTimeToUTC(start1, zone1);
-            System.out.println("Current date and time in a particular office 1 : " + tempStart1);
+            System.out.println("4. " + "Current date and time in a particular office 1 : " + tempStart1);
 
         ZonedDateTime tempStart2 = convertGivenTimeToUTC(start2, zone2);
-            System.out.println("Current date and time in a particular office 2 : " + tempStart2);
+            System.out.println("5. " + "Current date and time in a particular office 2 : " + tempStart2);
 
         long hoursBetween = ChronoUnit.HOURS.between(tempStart1, tempStart2);  // first possibility
 
-            System.out.println("->>>>>>>> Duration: " + Duration.between(tempStart1, tempStart2).toHours()); // first possibility
+            System.out.println("6. " + "-> Duration: " + Duration.between(tempStart1, tempStart2).toHours()); // first possibility
 
         if (hoursBetween <= 0)
             return 0;
@@ -28,10 +28,10 @@ public class IntersectionWorkingTime {
         LocalDateTime localDateTime = localDate.atTime(start);  //Add time and Date information
 
         ZonedDateTime dateAndTimeInOffice = ZonedDateTime.of(localDateTime, zone);
-            System.out.println("Date and time in a particular office : " + dateAndTimeInOffice);
+            System.out.println("7. " + "Date and time in a particular office : " + dateAndTimeInOffice);
 
         ZonedDateTime dateAndTimeInOfficeUTC = dateAndTimeInOffice.withZoneSameInstant(ZoneOffset.UTC);
-            System.out.println("Date and time in office in UTC : " + dateAndTimeInOfficeUTC);
+            System.out.println("8. " + "Date and time in office in UTC : " + dateAndTimeInOfficeUTC);
 
         return dateAndTimeInOfficeUTC;
     }
