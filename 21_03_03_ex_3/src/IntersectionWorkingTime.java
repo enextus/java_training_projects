@@ -22,11 +22,10 @@ public class IntersectionWorkingTime {
 
     public ZonedDateTime convertGivenTimeToUTC(LocalTime start, ZoneId zone) {
 
-        String str = "2015-01-05 17:00";
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
-        LocalDateTime localDateAndTime = LocalDateTime.parse(str, formatter);
+        LocalDate localDate = LocalDate.now();  //local date
+        LocalDateTime localDateTime = localDate.atTime(start);  //Add time and Date information
 
-        ZonedDateTime dateAndTimeInSydney = ZonedDateTime.of(localDateAndTime, zone);
+        ZonedDateTime dateAndTimeInSydney = ZonedDateTime.of(localDateTime, zone);
         System.out.println("Current date and time in a particular timezone : " + dateAndTimeInSydney);
 
         ZonedDateTime utcDate = dateAndTimeInSydney.withZoneSameInstant(ZoneOffset.UTC);
@@ -34,4 +33,5 @@ public class IntersectionWorkingTime {
 
         return utcDate;
     }
+
 }
