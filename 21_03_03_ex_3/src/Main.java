@@ -33,18 +33,23 @@ public class Main {
 }
 
 
-/*      1. 06:00:00
-        2. 07:00:00
+/*
 
-        7. Date and time in a particular office : 2021-03-04T06:00+01:00[Europe/Berlin]
-        8. Date and time in office in UTC : 2021-03-04T05:00Z
-        4. Current date and time in a particular office 1 : 2021-03-04T05:00Z
-        7. Date and time in a particular office : 2021-03-04T07:00+01:00[Europe/Berlin]
-        8. Date and time in office in UTC : 2021-03-04T06:00Z
-        5. Current date and time in a particular office 2 : 2021-03-04T06:00Z
-        6-open. -> Duration between close time: 1
-        6-close. -> Duration between close time: -1
+1. 06:00:00
+2. 07:00:00
 
-        3. intersectTime: 1
+7. Date and time in a particular office : 2021-03-04T06:00+01:00[Europe/Berlin]
+8. Date and time in office in UTC : 2021-03-04T05:00Z
+4. Current date and time in a particular office 1 : 2021-03-04T05:00Z
+7. Date and time in a particular office : 2021-03-04T07:00+01:00[Europe/Berlin]
+8. Date and time in office in UTC : 2021-03-04T06:00Z
+5. Current date and time in a particular office 2 : 2021-03-04T06:00Z
+6-open. -> Duration between open time: 1
+6-close. -> Duration between close time: -1
+
+3. intersectTime: 1
+
+Process finished with exit code 0
+
 
         */
