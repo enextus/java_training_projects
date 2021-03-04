@@ -15,8 +15,8 @@ public class IntersectionWorkingTime {
 
             System.out.println("6. " + "-> Duration: " + Duration.between(tempStart1, tempStart2).toHours()); // first possibility
 
-        if (hoursBetween <= 0)
-            return 0;
+/*        if (hoursBetween <= 0)
+            return 0;*/
 
         return (int) hoursBetween;
     }
