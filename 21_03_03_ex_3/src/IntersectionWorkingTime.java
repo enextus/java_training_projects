@@ -15,9 +15,9 @@ public class IntersectionWorkingTime {
         ZonedDateTime   tempStart1Closed =   tempStart1.plusHours((long)hours1);  // plus hours
         ZonedDateTime   tempStart2Closed =   tempStart2.plusHours((long)hours2);  // plus hours
 
-        long hoursBetween = ChronoUnit.HOURS.between(tempStart1Closed, tempStart2);  // first possibility
+        long hoursBetween = ChronoUnit.HOURS.between(tempStart1Closed, tempStart2Closed);  // first possibility
 
-            System.out.println("6. " + "-> Duration: " + Duration.between(tempStart1, tempStart2).toHours()); // first possibility
+            System.out.println("6. " + "-> Duration: " + Duration.between(tempStart1Closed, tempStart2Closed).toHours()); // first possibility
 
 /*        if (hoursBetween <= 0)
             return 0;*/
