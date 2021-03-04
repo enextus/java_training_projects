@@ -8,8 +8,8 @@ public class IntersectionWorkingTime {
 
         ZonedDateTime tempStart1 = convertGivenTimeToUTC(start1, zone1);
 
-        ZonedDateTime dateAndTimeInSydney = ZonedDateTime.of(tempStart1, zone1);
-        System.out.println("Current date and time in a particular timezone : " + dateAndTimeInSydney);
+
+        System.out.println("Current date and time in a particular timezone : " + tempStart1);
 
         /*
 
