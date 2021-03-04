@@ -14,21 +14,23 @@ public class IntersectionWorkingTime {
 
         ZonedDateTime   tempStart1Open =   tempStart1;  // open time
         ZonedDateTime   tempStart2Open =   tempStart2;  // open time
+
         long hoursBetweenOpenTime = ChronoUnit.HOURS.between(tempStart1Open, tempStart2Open);  // first possibility
         System.out.println("6-open. " + "-> Duration between close time: " + hoursBetweenOpenTime);
 
 
-        ZonedDateTime   tempStart1Closed =   tempStart1.plusHours((long)hours1);  // closed time
-        ZonedDateTime   tempStart2Closed =   tempStart2.plusHours((long)hours2);  // closed time
+        ZonedDateTime   tempStart1Closed =   tempStart1Open.plusHours((long)hours1);  // closed time
+        ZonedDateTime   tempStart2Closed =   tempStart2Open.plusHours((long)hours2);  // closed time
+
         long durationBetweenCloseTime = Duration.between(tempStart1Closed, tempStart2Closed).toHours(); // second possibility
         System.out.println("6-close. " + "-> Duration between close time: " + durationBetweenCloseTime);
 
-        long tempTime = hoursBetweenOpenTime + durationBetweenCloseTime;
+        long resultTime = tempStart1Open.plusHours();
 
 /*        if (tempTime <= 0)
             return 0;*/
 
-        return (int) tempTime;
+        return (int) durationBetweenCloseTime;
     }
 
     ZonedDateTime convertGivenTimeToUTC(LocalTime start, ZoneId zone) {
