@@ -3,7 +3,11 @@ public class Main {
     public static void main(String[] args) {
 
 
-        convertGivenTimeToUTC
+        IntersectionWorkingTime intersectionWorkingTime = new IntersectionWorkingTime();
+
+
+        //intersectionWorkingTime.convertGivenTimeToUTC(8);
+
 
     }
 }
