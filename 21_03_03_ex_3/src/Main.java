@@ -21,7 +21,7 @@ public class Main {
         System.out.println();
 /*      int hours_2 = 20;
         ZoneId zone_2 = ZoneId.of("Asia/Seoul");*/
-        int hours_2 = 8;
+        int hours_2 = 6;
         ZoneId zone_2 = ZoneId.of("Europe/Berlin");
 
 
