@@ -21,9 +21,9 @@ public class Main {
         ZoneId zone_2 = ZoneId.of("Asia/Seoul");
 
 
-        intersectionWorkingTime.intersectWorkingTime(officeOpeningTime_1, hours_1, zone_1, officeOpeningTime_2, hours_2, zone_2);
+        int intersectTime = intersectionWorkingTime.intersectWorkingTime(officeOpeningTime_1, hours_1, zone_1, officeOpeningTime_2, hours_2, zone_2);
 
-
+        System.out.println("intersectTime: " + intersectTime);
 
     }
 }

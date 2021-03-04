@@ -11,24 +11,13 @@ public class IntersectionWorkingTime {
 
         System.out.println("Current date and time in a particular timezone : " + tempStart1);
 
-        /*
-
-        long hoursBetween = ChronoUnit.HOURS.between(now1, now2);
-        long minutesBetween = ChronoUnit.MINUTES.between(now1, now2);
-
-        System.out.println("HERE1");
-
-        System.out.println(hoursBetween);
-        System.out.println(minutesBetween);
-
-        System.out.println("HERE2");*/
 
         return 0;
     }
 
     public ZonedDateTime convertGivenTimeToUTC(LocalTime start, ZoneId zone) {
 
-        // https://zetcode.com/java/localtime/
+
 
         String str = "2015-01-05 17:00";
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
