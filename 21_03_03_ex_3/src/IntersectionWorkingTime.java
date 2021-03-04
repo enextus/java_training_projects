@@ -1,5 +1,4 @@
 import java.time.*;
-import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 
 public class IntersectionWorkingTime {
@@ -25,11 +24,11 @@ public class IntersectionWorkingTime {
         LocalDate localDate = LocalDate.now();  //local date
         LocalDateTime localDateTime = localDate.atTime(start);  //Add time and Date information
 
-        ZonedDateTime dateAndTimeInSydney = ZonedDateTime.of(localDateTime, zone);
-        System.out.println("Current date and time in a particular timezone : " + dateAndTimeInSydney);
+        ZonedDateTime dateAndTimeInOffice = ZonedDateTime.of(localDateTime, zone);
+        System.out.println("Current date and time in a particular office : " + dateAndTimeInOffice);
 
-        ZonedDateTime utcDate = dateAndTimeInSydney.withZoneSameInstant(ZoneOffset.UTC);
-        System.out.println("Current date and time in UTC : " + utcDate);
+        ZonedDateTime utcDate = dateAndTimeInOffice.withZoneSameInstant(ZoneOffset.UTC);
+        System.out.println("Current date and time in office in UTC : " + utcDate);
 
         return utcDate;
     }
