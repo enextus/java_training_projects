@@ -16,11 +16,14 @@ public class Main {
         int hours_1 = 12;
         ZoneId zone_1 = ZoneId.of("Europe/Berlin");
 
-        LocalTime officeOpeningTime_2 = LocalTime.of(6, 0);
+        LocalTime officeOpeningTime_2 = LocalTime.of(8, 0);
         System.out.println(officeOpeningTime_2.format(formatterOnlyHoursMinutes));
 
-        int hours_2 = 23;
-        ZoneId zone_2 = ZoneId.of("Asia/Seoul");
+/*        int hours_2 = 23;
+        ZoneId zone_2 = ZoneId.of("Asia/Seoul");*/
+
+        int hours_2 = 8;
+        ZoneId zone_2 = ZoneId.of("Europe/Berlin");
 
 
         int intersectTime = intersectionWorkingTime.intersectWorkingTime(
