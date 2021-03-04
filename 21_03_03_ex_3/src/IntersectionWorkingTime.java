@@ -34,7 +34,6 @@ public class IntersectionWorkingTime {
     ZonedDateTime convertGivenTimeToUTC(LocalTime start, ZoneId zone) {
 
         LocalDate localDate = LocalDate.now();  // local request date
-
         LocalDateTime localDateTime = localDate.atTime(start);  //Add time and Date information
 
         ZonedDateTime dateAndTimeInOffice = ZonedDateTime.of(localDateTime, zone);
