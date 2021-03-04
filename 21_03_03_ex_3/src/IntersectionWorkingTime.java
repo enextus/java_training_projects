@@ -7,10 +7,10 @@ public class IntersectionWorkingTime {
 
 
         ZonedDateTime tempStart1 = convertGivenTimeToUTC(start1, zone1);
+        System.out.println("Current date and time in a particular timezone 1 : " + tempStart1);
 
-
-        System.out.println("Current date and time in a particular timezone : " + tempStart1);
-
+        ZonedDateTime tempStart2 = convertGivenTimeToUTC(start2, zone2);
+        System.out.println("Current date and time in a particular timezone 2 : " + tempStart2);
 
         return 0;
     }
