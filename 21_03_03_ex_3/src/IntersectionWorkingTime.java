@@ -19,7 +19,7 @@ public class IntersectionWorkingTime {
         return (int) hoursBetween;
     }
 
-    public ZonedDateTime convertGivenTimeToUTC(LocalTime start, ZoneId zone) {
+    ZonedDateTime convertGivenTimeToUTC(LocalTime start, ZoneId zone) {
 
         LocalDate localDate = LocalDate.now();  //local date
         LocalDateTime localDateTime = localDate.atTime(start);  //Add time and Date information
