@@ -14,7 +14,7 @@ public class IntersectionWorkingTime {
 
         long hoursBetween = ChronoUnit.HOURS.between(tempStart1, tempStart2);
 
-        if (hoursBetween < 0)
+        if (hoursBetween <= 0)
             return 0;
 
         return (int) hoursBetween;
