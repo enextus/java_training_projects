@@ -32,7 +32,7 @@ public class IntersectionWorkingTime {
         System.out.println("Current date and time in a particular office : " + dateAndTimeInOffice);
 
         ZonedDateTime utcDate = dateAndTimeInOffice.withZoneSameInstant(ZoneOffset.UTC);
-        System.out.println("Current date and time in office in UTC : " + utcDate);
+        System.out.println("Date and time in office in UTC : " + utcDate);
 
         return utcDate;
     }
