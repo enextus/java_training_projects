@@ -8,7 +8,7 @@ public class Main {
 
         IntersectionWorkingTime intersectionWorkingTime = new IntersectionWorkingTime();
 
-        DateTimeFormatter formatterOnlyHoursMinutes = DateTimeFormatter.ofPattern("HH:mm");
+        DateTimeFormatter formatterOnlyHoursMinutes = DateTimeFormatter.ofPattern("HH:mm:ss");
 
         LocalTime officeOpeningTime_1 = LocalTime.of(6, 30);
         System.out.println(officeOpeningTime_1.format(formatterOnlyHoursMinutes));
