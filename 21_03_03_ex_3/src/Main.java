@@ -16,8 +16,9 @@ public class Main {
         ZoneId zone_1 = ZoneId.of("Europe/Berlin");
 
 
-        LocalTime officeOpeningTime_2 = LocalTime.of(10, 0);
+        LocalTime officeOpeningTime_2 = LocalTime.of(11, 00);
             System.out.println("2. " + officeOpeningTime_2.format(formatterOnlyHoursMinutes));
+        System.out.println();
 /*      int hours_2 = 20;
         ZoneId zone_2 = ZoneId.of("Asia/Seoul");*/
         int hours_2 = 8;
@@ -25,6 +26,7 @@ public class Main {
 
 
         int intersectTime = intersectionWorkingTime.intersectWorkingTime(officeOpeningTime_1, hours_1, zone_1, officeOpeningTime_2, hours_2, zone_2);
+            System.out.println();
             System.out.println("3. " + "intersectTime: " + intersectTime);
     }
 
