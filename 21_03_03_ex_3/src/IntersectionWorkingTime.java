@@ -7,10 +7,10 @@ public class IntersectionWorkingTime {
     public int intersectWorkingTime(LocalTime start1, int hours, ZoneId zone1, LocalTime start2, int hours2, ZoneId zone2) {
 
         ZonedDateTime tempStart1 = convertGivenTimeToUTC(start1, zone1);
-        System.out.println("Current date and time in a particular timezone 1 : " + tempStart1);
+        System.out.println("Current date and time in a particular office 1 : " + tempStart1);
 
         ZonedDateTime tempStart2 = convertGivenTimeToUTC(start2, zone2);
-        System.out.println("Current date and time in a particular timezone 2 : " + tempStart2);
+        System.out.println("Current date and time in a particular office 2 : " + tempStart2);
 
         long hoursBetween = ChronoUnit.HOURS.between(tempStart1, tempStart2);
 
