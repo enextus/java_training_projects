@@ -29,12 +29,12 @@ public class IntersectionWorkingTime {
         LocalDateTime localDateTime = localDate.atTime(start);  //Add time and Date information
 
         ZonedDateTime dateAndTimeInOffice = ZonedDateTime.of(localDateTime, zone);
-        System.out.println("Current date and time in a particular office : " + dateAndTimeInOffice);
+        System.out.println("Date and time in a particular office : " + dateAndTimeInOffice);
 
-        ZonedDateTime utcDate = dateAndTimeInOffice.withZoneSameInstant(ZoneOffset.UTC);
-        System.out.println("Date and time in office in UTC : " + utcDate);
+        ZonedDateTime dateAndTimeInOfficeUTC = dateAndTimeInOffice.withZoneSameInstant(ZoneOffset.UTC);
+        System.out.println("Date and time in office in UTC : " + dateAndTimeInOfficeUTC);
 
-        return utcDate;
+        return dateAndTimeInOfficeUTC;
     }
 
 }
