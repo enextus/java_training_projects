@@ -12,18 +12,21 @@ public class IntersectionWorkingTime {
             System.out.println("5. " + "Current date and time in a particular office 2 : " + tempStart2);
 
 
-        ZonedDateTime   tempStart1Closed =   tempStart1.plusHours((long)hours1);  // plus hours
-        ZonedDateTime   tempStart2Closed =   tempStart2.plusHours((long)hours2);  // plus hours
+        ZonedDateTime   tempStart1Open =   tempStart1;  // open time
+        ZonedDateTime   tempStart2Open =   tempStart2;  // open time
+        long hoursBetweenOpenTime = ChronoUnit.HOURS.between(tempStart1Open, tempStart2Open);  // first possibility
 
-        long hoursBetween = ChronoUnit.HOURS.between(tempStart1Closed, tempStart2Closed);  // first possibility
-        long durationBetween = Duration.between(tempStart1Closed, tempStart2Closed).toHours();
+        ZonedDateTime   tempStart1Closed =   tempStart1.plusHours((long)hours1);  // closed time
+        ZonedDateTime   tempStart2Closed =   tempStart2.plusHours((long)hours2);  // closed time
+        long durationBetweenCloseTime = Duration.between(tempStart1Closed, tempStart2Closed).toHours(); // second possibility
+        System.out.println("6. " + "-> Duration between close time: " + durationBetweenCloseTime);
 
-            System.out.println("6. " + "-> Duration: " + durationBetween); // first possibility
+        long tempTime = hoursBetweenOpenTime + durationBetweenCloseTime;
 
-        if (hoursBetween <= 0)
+        if (tempTime <= 0)
             return 0;
 
-        return (int) hoursBetween;
+        return (int) tempTime;
     }
 
     ZonedDateTime convertGivenTimeToUTC(LocalTime start, ZoneId zone) {

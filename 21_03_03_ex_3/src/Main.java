@@ -10,13 +10,13 @@ public class Main {
         DateTimeFormatter formatterOnlyHoursMinutes = DateTimeFormatter.ofPattern("HH:mm:ss");
 
 
-        LocalTime officeOpeningTime_1 = LocalTime.of(6, 30);
+        LocalTime officeOpeningTime_1 = LocalTime.of(6, 00);
             System.out.println("1. " + officeOpeningTime_1.format(formatterOnlyHoursMinutes));
-        int hours_1 = 10;
+        int hours_1 = 8;
         ZoneId zone_1 = ZoneId.of("Europe/Berlin");
 
 
-        LocalTime officeOpeningTime_2 = LocalTime.of(11, 00);
+        LocalTime officeOpeningTime_2 = LocalTime.of(7, 00);
             System.out.println("2. " + officeOpeningTime_2.format(formatterOnlyHoursMinutes));
         System.out.println();
 /*      int hours_2 = 20;
