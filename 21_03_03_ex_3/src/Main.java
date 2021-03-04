@@ -32,9 +32,7 @@ public class Main {
 
 }
 
-
 /*
-
 1. 06:00:00
 2. 07:00:00
 
@@ -50,6 +48,4 @@ public class Main {
 3. intersectTime: 1
 
 Process finished with exit code 0
-
-
-        */
+*/
