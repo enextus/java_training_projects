@@ -3,7 +3,8 @@ import java.time.temporal.ChronoUnit;
 
 public class IntersectionWorkingTime {
 
-    public int intersectWorkingTime(LocalTime start1, int hours, ZoneId zone1, LocalTime start2, int hours2, ZoneId zone2) {
+    public int intersectWorkingTime(
+            LocalTime start1, int hours, ZoneId zone1, LocalTime start2, int hours2, ZoneId zone2) {
 
         ZonedDateTime tempStart1 = convertGivenTimeToUTC(start1, zone1);
         System.out.println("Current date and time in a particular office 1 : " + tempStart1);
@@ -13,15 +14,16 @@ public class IntersectionWorkingTime {
 
         long hoursBetween = ChronoUnit.HOURS.between(tempStart1, tempStart2);
 
-        if (hoursBetween <= 0)
-            return 0;
+/*        if (hoursBetween <= 0)
+            return 0;*/
 
         return (int) hoursBetween;
     }
 
     ZonedDateTime convertGivenTimeToUTC(LocalTime start, ZoneId zone) {
 
-        LocalDate localDate = LocalDate.now();  //local date
+        LocalDate localDate = LocalDate.now();  // local request date
+
         LocalDateTime localDateTime = localDate.atTime(start);  //Add time and Date information
 
         ZonedDateTime dateAndTimeInOffice = ZonedDateTime.of(localDateTime, zone);
