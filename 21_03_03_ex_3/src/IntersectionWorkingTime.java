@@ -25,6 +25,7 @@ public class IntersectionWorkingTime {
         // pseudoCode:
         // resultTime = (openTimeOfOffice1 + closeTimeOfOffice2) - (durationBetweenOpenTimes + durationBetweenCloseTimes);
 
+
         if (resultTime <= 0)
             return 0;
 
