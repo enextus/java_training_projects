@@ -59,7 +59,7 @@ public class MultiThreadServer {
                 String line;
 
                 while ((line = in.readLine()) != null) {
-                    System.out.printf("Sent from client: %s\n", line);
+                    System.out.printf("Data sent from client: %s\n", line);
                     out.println(line);
                 }
             } catch (IOException e) {
