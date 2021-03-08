@@ -14,23 +14,23 @@ public class Main {
         // plus/minus
         // 1. way
         LocalDate tomorrow = now.plus(Period.ofDays(1));
-        System.out.println("1. way: " + tomorrow);
+        System.out.println("1. way: " + tomorrow + "\n");
 
         // 2. way
         tomorrow = now.plusDays(1);
-        System.out.println("2. way: " + tomorrow);
+        System.out.println("2. way: " + tomorrow + "\n");
 
         // 3. way
         tomorrow = now.plus(1, ChronoUnit.DAYS);
-        System.out.println("3. way: " + tomorrow);
+        System.out.println("3. way: " + tomorrow + "\n");
 
         // different getters
-        System.out.println("Today is: " + now.getDayOfWeek() + " day of week");
+        System.out.println("Today is: " + now.getDayOfWeek() + " day of week" + "\n");
 
         // isAfter/isBefore
-        System.out.println(now.isAfter(tomorrow));
-        System.out.println(System.currentTimeMillis());
-        System.out.println(now.toEpochSecond(LocalTime.now(), ZoneOffset.UTC));
+        System.out.println("true or false? -> " + now.isAfter(tomorrow) + "\n");
+        System.out.println("System.currentTimeMillis(): " + System.currentTimeMillis() + "\n");
+        System.out.println("now.toEpochSecond(LocalTime.now(), ZoneOffset.UTC): " + now.toEpochSecond(LocalTime.now(), ZoneOffset.UTC) + "\n");
 
         // LocalTime
         LocalTime currentTime = LocalTime.now();
