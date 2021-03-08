@@ -3,7 +3,7 @@ import org.testng.annotations.Test;
 import java.time.LocalTime;
 import java.time.ZoneId;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class IntersectionWorkingTimeTest {
     IntersectionWorkingTime meeting = new IntersectionWorkingTime();
@@ -77,3 +77,4 @@ class IntersectionWorkingTimeTest {
         int res = meeting.intersectWorkingTime(start1, 8, zone1, start2, 8, zone2);
         assertEquals(8, res);
     }
+}
