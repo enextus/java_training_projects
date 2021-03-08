@@ -19,9 +19,10 @@ public class MultiThreadServer {
                 System.out.println("New client connected " + socket.getInetAddress().getHostAddress());
 
                 ClientHandler clientSocket = new ClientHandler(socket);
+
+                // The background thread will handle each client separately
+                new Thread(clientSocket).start();
             }
-
-
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
