@@ -29,12 +29,11 @@ public class EchoClient {
 
             }
 
+            scanner.close();
 
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
     }
 
 }
