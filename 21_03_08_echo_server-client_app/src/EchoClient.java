@@ -18,11 +18,16 @@ public class EchoClient {
             BufferedReader inReader = new BufferedReader(new InputStreamReader(socket.getInputStream())); //  we build a PrintWriter
 
             Scanner scanner = new Scanner(System.in);
-
             String line = null;
 
+            while (!"exit".equalsIgnoreCase(line)) {
 
-            //
+                line = scanner.nextLine();
+                outWriter.println(line);
+                outWriter.flush();
+                System.out.println("Server replied " + inReader.readLine());
+
+            }
 
 
         } catch (IOException e) {
