@@ -27,9 +27,8 @@ public class Main {
         }
 
         // task 2
-
         int daysToSilvester = today.lengthOfYear() - today.getDayOfYear();
-        System.out.println(daysToSilvester + " days remain till New Year");
+        System.out.println("Here are " + daysToSilvester + " days remain till New Year");
     }
 
 }
