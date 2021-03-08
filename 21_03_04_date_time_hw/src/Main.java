@@ -31,4 +31,5 @@ public class Main {
         int daysToSilvester = today.lengthOfYear() - today.getDayOfYear();
         System.out.println(daysToSilvester + " days remain till New Year");
     }
+
 }

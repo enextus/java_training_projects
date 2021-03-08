@@ -34,7 +34,6 @@ public class MeetingTimeService {
         ZonedDateTime start2yesterday = start2today.minus(1, ChronoUnit.DAYS);
         ZonedDateTime end2yesterday = start2yesterday.plus(duration2);
 
-
         ZonedDateTime start2tomorrow = start2today.plus(1, ChronoUnit.DAYS);
         ZonedDateTime end2tomorrow = start2tomorrow.plus(duration2);
 
@@ -57,4 +56,5 @@ public class MeetingTimeService {
         Duration res = Duration.between(start, end);
         return res.isNegative() ? Duration.ZERO : res;
     }
+
 }

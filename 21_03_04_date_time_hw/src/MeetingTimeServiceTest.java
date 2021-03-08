@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 import java.time.*;
 import java.time.temporal.ChronoUnit;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class MeetingTimeServiceTest {
     MeetingTimeService meeting = new MeetingTimeService();
@@ -196,4 +196,5 @@ class MeetingTimeServiceTest {
         assertEquals(8, resRevert.toHours());
 
     }
+
 }
