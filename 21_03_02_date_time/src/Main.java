@@ -10,6 +10,7 @@ public class Main {
         // LocalDate
         LocalDate now = LocalDate.now();
         System.out.println(now);
+
         // plus/minus
         LocalDate tomorrow = now.plus(Period.ofDays(1));
         System.out.println(tomorrow);
@@ -17,8 +18,10 @@ public class Main {
         System.out.println(tomorrow);
         tomorrow = now.plus(1, ChronoUnit.DAYS);
         System.out.println(tomorrow);
+
         // different getters
         System.out.println("Today is: " + now.getDayOfWeek() + " day of week");
+
         // isAfter/isBefore
         System.out.println(now.isAfter(tomorrow));
         System.out.println(System.currentTimeMillis());
@@ -34,7 +37,6 @@ public class Main {
         System.out.println(nextHour);
         System.out.println(currentTime.isBefore(nextHour));
 
-
         // LocalDateTime
         LocalDateTime today = LocalDateTime.now();
         LocalDateTime fromDateAndTime = LocalDateTime.of(now, currentTime);
@@ -42,6 +44,7 @@ public class Main {
         System.out.println(today);
         System.out.println(parsed);
         System.out.println(parsed.get(ChronoField.DAY_OF_YEAR)); // CHRONO FIELD
+
         // with
         LocalDateTime yearAgo = today.with(ChronoField.YEAR, 2020);
         System.out.println("Year ago: " + yearAgo);
