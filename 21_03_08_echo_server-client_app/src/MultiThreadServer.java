@@ -1,4 +1,6 @@
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -37,6 +39,20 @@ public class MultiThreadServer {
     }
 
     public static class ClientHandler implements Runnable {
+
+        private final Socket clientSocket;
+
+        public ClientHandler(Socket socket) {
+            this.clientSocket = socket;
+        }
+
+        @Override
+        public void run() {
+            PrintWriter out = null;
+            BufferedReader in = null;
+
+
+        }
 
     }
 

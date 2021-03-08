@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class EchoClient {
 
-    private final static int TCP_PORT = 3000;
+    private final static int TCP_PORT = 32000;
     private final static String HOST = "localhost";
 
     public static void main(String[] args) {
