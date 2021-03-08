@@ -27,7 +27,7 @@ public class EchoClient {
                 outWriter.println(line);
                 // outWriter.flush();
 
-                System.out.println("Server replied " + inReader.readLine());
+                System.out.println("Server replied: " + inReader.readLine());
             }
 
             scanner.close();
