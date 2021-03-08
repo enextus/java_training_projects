@@ -12,12 +12,17 @@ public class Main {
         System.out.println(now);
 
         // plus/minus
+        // 1. way
         LocalDate tomorrow = now.plus(Period.ofDays(1));
-        System.out.println(tomorrow);
+        System.out.println("1. way: " + tomorrow);
+
+        // 2. way
         tomorrow = now.plusDays(1);
-        System.out.println(tomorrow);
+        System.out.println("2. way: " + tomorrow);
+
+        // 3. way
         tomorrow = now.plus(1, ChronoUnit.DAYS);
-        System.out.println(tomorrow);
+        System.out.println("3. way: " + tomorrow);
 
         // different getters
         System.out.println("Today is: " + now.getDayOfWeek() + " day of week");
