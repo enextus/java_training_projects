@@ -7,12 +7,13 @@ import java.util.Scanner;
 
 public class EchoClient {
 
+    public static int TCP_PORT = 3000;
+
     public static void main(String[] args) {
 
-        String host = "127.0.0.1";
-        int port = 32000;
+        String host = "localhost";
 
-        try (Socket socket = new Socket(host, port)) {
+        try (Socket socket = new Socket(host, TCP_PORT)) {
 
             PrintWriter outWriter = new PrintWriter(socket.getOutputStream(), true); // we build a PrintWriter
             BufferedReader inReader = new BufferedReader(new InputStreamReader(socket.getInputStream())); //  we build a PrintWriter
