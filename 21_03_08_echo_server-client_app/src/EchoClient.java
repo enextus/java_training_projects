@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class EchoClient {
 
-    private final static int TCP_PORT = 32000;
+    private final static int TCP_PORT = 3000;
     private final static String HOST = "localhost";
 
     public static void main(String[] args) {
@@ -27,7 +27,7 @@ public class EchoClient {
                 outWriter.println(line);
                 // outWriter.flush();
 
-                System.out.println("Server replied: " + inReader.readLine());
+                System.out.println("Reply from server: " + inReader.readLine());
             }
 
             scanner.close();

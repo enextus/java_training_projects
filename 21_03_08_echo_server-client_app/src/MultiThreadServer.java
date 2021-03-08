@@ -12,7 +12,7 @@ public class MultiThreadServer {
 
         try {
 
-            serverSocket = new ServerSocket(32000);
+            serverSocket = new ServerSocket(3000);
             serverSocket.setReuseAddress(true);
 
             // the main thread is just accepting new connections
