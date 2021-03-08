@@ -21,7 +21,8 @@ public class EchoClient {
             Scanner scanner = new Scanner(System.in);
             String line = null;
 
-            while (!"exit".equalsIgnoreCase(line)) {
+
+            while (!"exit".equalsIgnoreCase(line)) { // (line = fromConsole.readLine()) != null && !line.equals("exit")
 
                 line = scanner.nextLine();
                 outWriter.println(line);
