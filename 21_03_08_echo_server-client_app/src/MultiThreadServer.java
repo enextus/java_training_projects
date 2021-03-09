@@ -65,18 +65,18 @@ public class MultiThreadServer {
 
         @Override
         public void run() {
-            PrintWriter out = null;
-            BufferedReader in = null;
+            PrintWriter outStream = null;
+            BufferedReader inStream = null;
 
             try {
-                out = new PrintWriter(clientSocket.getOutputStream(), true);
-                in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+                outStream = new PrintWriter(clientSocket.getOutputStream(), true);
+                inStream = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 
                 String line;
 
-                while ((line = in.readLine()) != null) {
+                while ((line = inStream.readLine()) != null) {
                     System.out.printf("Data sent from client: %s\n", line);
-                    out.println(line);
+                    outStream.println(line);
                 }
 
             } catch (IOException e) {
@@ -84,12 +84,12 @@ public class MultiThreadServer {
             } finally {
 
                 try {
-                    if (out != null) {
-                        out.close();
+                    if (outStream != null) {
+                        outStream.close();
                     }
 
-                    if (in != null)
-                        in.close();
+                    if (inStream != null)
+                        inStream.close();
 
                     clientSocket.close();
                 } catch (IOException e) {
