@@ -14,6 +14,8 @@ public class MultiThreadServer {
 
             // we create the server socket here
             serverSocket = new ServerSocket(3000);
+
+            // 2× MSL (30/120s) turned on. SO_REUSEADDR allows your server to bind to an address that is in TIME_WAIT state.
             serverSocket.setReuseAddress(true);
 
             // the main thread is just accepting new connections
