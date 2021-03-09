@@ -25,11 +25,11 @@ public class EchoClient {
             String line = null;
 
             // the loop for the scanning the input stream from the console
-            while (!"exit".equalsIgnoreCase(line)) { // (line = fromConsole.readLine()) != null && !line.equals("exit")
+            while (!"exit".equalsIgnoreCase(line)) { // there is another way to realise the if-condition: (line = fromConsole.readLine()) != null && !line.equals("exit")
 
                 line = scanner.nextLine();
                 outWriter.println(line);
-                // outWriter.flush();
+                // for the case if the auto-flush is false: outWriter.flush();
 
                 System.out.println("Reply from server: " + inReader.readLine());
             }
