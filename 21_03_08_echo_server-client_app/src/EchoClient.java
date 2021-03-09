@@ -22,7 +22,7 @@ public class EchoClient {
             Scanner scanner = new Scanner(System.in);
             String line = null;
 
-
+            // the loop for the scanning the input stream from the console
             while (!"exit".equalsIgnoreCase(line)) { // (line = fromConsole.readLine()) != null && !line.equals("exit")
 
                 line = scanner.nextLine();
