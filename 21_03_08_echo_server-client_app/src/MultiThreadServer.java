@@ -69,6 +69,7 @@ public class MultiThreadServer {
             BufferedReader inStream = null;
 
             try {
+
                 outStream = new PrintWriter(clientSocket.getOutputStream(), true);
                 inStream = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 
