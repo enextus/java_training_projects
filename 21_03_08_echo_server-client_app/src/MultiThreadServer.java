@@ -105,7 +105,10 @@ public class MultiThreadServer {
 }
 
 /*
-/home/enextus/.jdks/openjdk-14.0.2/bin/java -agentlib:jdwp=transport=dt_socket,address=127.0.0.1:54753,suspend=y,server=n -Dfile.encoding=UTF-8 -classpath
-/home/enextus/IdeaProjects/java_training_projects/21_03_08_echo_server-client_app/out/production/21_03_08_echo_server-client_app:/snap/intellij-idea-ultimate/269/lib/idea_rt.jar MultiThreadServer
-        Connected to the target VM, address: '127.0.0.1:54753', transport: 'socket'
+
+/home/enextus/.jdks/openjdk-14.0.2/bin/java -agentlib:jdwp=transport=dt_socket,address=127.0.0.1:46533,suspend=y,server=n -Dfile.encoding=UTF-8 -classpath /home/enextus/IdeaProjects/java_training_projects/21_03_08_echo_server-client_app/out/production/21_03_08_echo_server-client_app:/snap/intellij-idea-ultimate/269/lib/idea_rt.jar MultiThreadServer
+Connected to the target VM, address: '127.0.0.1:46533', transport: 'socket'
+New client connected: 127.0.0.1
+Data sent from client: Client 1
+
 */
