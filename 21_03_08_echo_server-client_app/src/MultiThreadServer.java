@@ -31,7 +31,7 @@ public class MultiThreadServer {
 
                     // The background thread will handle each client separately
                     new Thread(clientSocket).start();
-                    
+
                 } catch (IOException e) {
                     System.err.println("Accept this connection failed");
 
@@ -39,11 +39,11 @@ public class MultiThreadServer {
                     System.exit(1);
                 }
 
-
             }
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
+
             if (serverSocket != null) {
                 try {
                     serverSocket.close();
@@ -51,6 +51,7 @@ public class MultiThreadServer {
                     e.printStackTrace();
                 }
             }
+
         }
     }
 
@@ -77,9 +78,11 @@ public class MultiThreadServer {
                     System.out.printf("Data sent from client: %s\n", line);
                     out.println(line);
                 }
+
             } catch (IOException e) {
                 e.printStackTrace();
             } finally {
+
                 try {
                     if (out != null) {
                         out.close();
@@ -92,9 +95,9 @@ public class MultiThreadServer {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+
             }
         }
 
     }
-
 }
