@@ -34,6 +34,7 @@ public class EchoClient {
                 System.out.println("Reply from server: " + inReader.readLine());
             }
 
+            // the scanner will here closed
             scanner.close();
 
         } catch (IOException e) {
