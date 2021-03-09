@@ -12,10 +12,10 @@ public class EchoClient {
 
     public static void main(String[] args) {
 
-        try (Socket socket = new Socket(HOST, TCP_PORT)) {
+        try (Socket ClientSocket = new Socket(HOST, TCP_PORT)) {
 
-            PrintWriter outWriter = new PrintWriter(socket.getOutputStream(), true); // we build a PrintWriter
-            BufferedReader inReader = new BufferedReader(new InputStreamReader(socket.getInputStream())); //  we build a PrintWriter
+            PrintWriter outWriter = new PrintWriter(ClientSocket.getOutputStream(), true); // we build a PrintWriter
+            BufferedReader inReader = new BufferedReader(new InputStreamReader(ClientSocket.getInputStream())); //  we build a PrintWriter
 
             Scanner scanner = new Scanner(System.in);
             String line = null;
