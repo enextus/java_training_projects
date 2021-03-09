@@ -12,6 +12,7 @@ public class MultiThreadServer {
 
         try {
 
+            // we create the server socket here
             serverSocket = new ServerSocket(3000);
             serverSocket.setReuseAddress(true);
 
