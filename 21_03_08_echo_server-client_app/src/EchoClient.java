@@ -48,9 +48,17 @@ public class EchoClient {
 /*
 
 /home/enextus/.jdks/openjdk-14.0.2/bin/java -javaagent:/snap/intellij-idea-ultimate/269/lib/idea_rt.jar=35621:/snap/intellij-idea-ultimate/269/bin -Dfile.encoding=UTF-8 -classpath /home/enextus/IdeaProjects/java_training_projects/21_03_08_echo_server-client_app/out/production/21_03_08_echo_server-client_app EchoClient
+
 Client 1
 Reply from server: Client 1
 
+Client 2
+Reply from server: Client 2
 
+Client 3
+Reply from server: Client 3
+
+Client 4
+Reply from server: Client 4
 
 */
