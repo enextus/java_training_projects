@@ -21,20 +21,25 @@ public class MultiThreadServer {
             // loop there the main thread is just accepting new connections
             while (true) {
 
-
                 try {
+
                     // we listening and accept here new connection for the creating a new socket
                     Socket socket = serverSocket.accept();
                     System.out.println("New client connected: " + socket.getInetAddress().getHostAddress());
+
+                    ClientHandler clientSocket = new ClientHandler(socket);
+
+                    // The background thread will handle each client separately
+                    new Thread(clientSocket).start();
+                    
                 } catch (IOException e) {
-                    System.err.println("Accept failed");
+                    System.err.println("Accept this connection failed");
+
+                    // terminates currently running JVM
                     System.exit(1);
                 }
 
-                ClientHandler clientSocket = new ClientHandler(socket);
 
-                // The background thread will handle each client separately
-                new Thread(clientSocket).start();
             }
         } catch (IOException e) {
             e.printStackTrace();
