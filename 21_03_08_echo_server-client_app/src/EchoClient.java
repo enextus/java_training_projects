@@ -16,8 +16,10 @@ public class EchoClient {
 
             // we build a PrintWriter with auto-flush
             PrintWriter outWriter = new PrintWriter(ClientSocket.getOutputStream(), true);
+
             //  we build a character based input stream with buffer
             BufferedReader inReader = new BufferedReader(new InputStreamReader(ClientSocket.getInputStream()));
+
             // we scan a data from specified input stream
             Scanner scanner = new Scanner(System.in);
             String line = null;
