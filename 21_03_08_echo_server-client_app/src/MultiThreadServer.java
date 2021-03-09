@@ -28,7 +28,7 @@ public class MultiThreadServer {
                     Socket socket = serverSocket.accept();
                     System.out.println("New client connected: " + socket.getInetAddress().getHostAddress());
 
-                    ClientHandler clientSocket = new ClientHandler(socket);
+                    ClientThreadsHandler clientSocket = new ClientThreadsHandler(socket);
 
                     // The background thread will handle each client separately
                     new Thread(clientSocket).start();
@@ -56,11 +56,11 @@ public class MultiThreadServer {
         }
     }
 
-    public static class ClientHandler implements Runnable {
+    public static class ClientThreadsHandler implements Runnable {
 
         private final Socket clientSocket;
 
-        public ClientHandler(Socket socket) {
+        public ClientThreadsHandler(Socket socket) {
             this.clientSocket = socket;
         }
 
