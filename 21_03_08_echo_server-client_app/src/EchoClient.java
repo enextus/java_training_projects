@@ -14,7 +14,7 @@ public class EchoClient {
 
         try (Socket ClientSocket = new Socket(HOST, TCP_PORT)) {
 
-            PrintWriter outWriter = new PrintWriter(ClientSocket.getOutputStream(), true); // we build a PrintWriter
+            PrintWriter outWriter = new PrintWriter(ClientSocket.getOutputStream(), true); // we build a PrintWriter with auto-flush
             BufferedReader inReader = new BufferedReader(new InputStreamReader(ClientSocket.getInputStream())); //  we build a PrintWriter
 
             Scanner scanner = new Scanner(System.in);
