@@ -8,6 +8,7 @@ import java.net.Socket;
 public class MultiThreadServer {
     public static void main(String[] args) {
 
+        // initialized with null for the begin of work
         ServerSocket serverSocket = null;
 
         try {
