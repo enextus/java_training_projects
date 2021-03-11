@@ -4,12 +4,15 @@ import java.io.IOException;
 
 public class Main {
 
-    private static final String DEFAULT_PROPS_PATH = "config/application.props";
+    private static final String DEFAULT_PROPS_PATH = " config/application.props";
     private static final String TCP_OUTER_PORT_KEY = "tcp.outer.port";
     private static final String UDP_FROM_BALANCER_PORT_KEY = "udp.balancer.port";
 
     public static void main(String[] args) throws IOException {
         String propsPath = args.length > 0 ? args[0] : DEFAULT_PROPS_PATH;
+
+        System.out.println(propsPath);
+
         ApplicationProperties properties = new ApplicationProperties(propsPath);
 
         int tcpOuterPort = Integer.parseInt(properties.getProperty(TCP_OUTER_PORT_KEY));
