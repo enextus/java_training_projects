@@ -26,7 +26,8 @@ public class ClientThreadsHandler implements Runnable {
 
             while ((line = inStream.readLine()) != null) {
                 System.out.printf("Data sent from client: %s\n", line);
-                outStream.println(line);
+                outStream.println(" here " + line);
+
             }
 
         } catch (IOException e) {
