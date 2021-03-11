@@ -1,5 +1,5 @@
 
-import de.telran.server.ServerSource;
+import server.ServerSource;
 
 import java.io.IOException;
 
