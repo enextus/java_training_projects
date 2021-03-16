@@ -24,6 +24,7 @@ public class ServerTask implements Runnable {
 
             // pipe from client to server
             while ((lineFromClient = fromClient.readLine()) != null) {
+
                 String response = "Response from server: " + lineFromClient;
                 toClient.println(response);
             }
@@ -31,6 +32,7 @@ public class ServerTask implements Runnable {
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
+            // decrement count of our conections
             connectionCounter.decrementAndGet();
         }
     }

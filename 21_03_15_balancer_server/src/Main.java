@@ -9,6 +9,8 @@ public class Main {
     private static final String LOAD_TIME_INTERVAL_KEY = "load.time.interval";
 
     public static void main(String[] args) throws IOException {
+
+        // we should write the port implicit in to IDEA file config
         int selfTcpPort = Integer.parseInt(args[0]);
 
         String propsPath = args.length > 1 ? args[1] : DEFAULT_PROPS_PATH;
