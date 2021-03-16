@@ -1,4 +1,7 @@
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintStream;
 import java.net.Socket;
 
 public class Main {
@@ -18,6 +21,7 @@ public class Main {
         // tool for receiving responses from the 3000 port program
         BufferedReader socketInput = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
+        // input data
         String line;
 
         while ((line = fromConsole.readLine()) != null && !line.equals("exit")) {
