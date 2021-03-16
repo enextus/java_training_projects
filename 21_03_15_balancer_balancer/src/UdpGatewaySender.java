@@ -20,8 +20,10 @@ public class UdpGatewaySender implements Runnable {
     @Override
     public void run() {
         try {
+
             InetAddress inetAddress = InetAddress.getByName(host);
             DatagramSocket udpSocket = new DatagramSocket();
+
             while (true) {
                 try {
                     Thread.sleep(periodMillis);
