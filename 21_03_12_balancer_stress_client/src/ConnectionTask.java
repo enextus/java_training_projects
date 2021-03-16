@@ -20,7 +20,9 @@ class ConnectionTask implements Runnable {
 
     @Override
     public void run() {
+
         Socket socket;
+
         try {
             System.out.println(gatewayHost + ":" + gatewayPort);
             socket = new Socket(gatewayHost, gatewayPort);
