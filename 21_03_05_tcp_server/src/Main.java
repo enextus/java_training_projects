@@ -1,4 +1,4 @@
-import java.io.*;
+import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.concurrent.ExecutorService;
@@ -13,7 +13,10 @@ public class Main {
         ServerSocket serverSocket = new ServerSocket(TCP_PORT);
         ExecutorService executor = Executors.newFixedThreadPool(3);
 
+
+
         while (true) {
+            System.out.println("I am here!");
             Socket socket = serverSocket.accept();
 
             System.out.println("Connected");
