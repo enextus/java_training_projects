@@ -6,7 +6,7 @@ import java.util.concurrent.Executors;
 
 public class Main {
 
-    static int TCP_PORT = 3000;
+    static int TCP_PORT = 30000;
 
     public static void main(String[] args) throws IOException {
 

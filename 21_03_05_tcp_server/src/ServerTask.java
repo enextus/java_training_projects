@@ -18,7 +18,11 @@ public class ServerTask implements Runnable {
         try (PrintStream socketOutput = new PrintStream(socket.getOutputStream());
              BufferedReader socketInput = new BufferedReader(new InputStreamReader(socket.getInputStream()))
         ) {
+
+            System.out.println("2. here");
+
             String line;
+
             while ((line = socketInput.readLine()) != null) {
                 String response = "Handled by server " + line;
                 socketOutput.println(response);
