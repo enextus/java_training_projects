@@ -1,3 +1,4 @@
 udp.balancer.port=4000
 udp.gateway.port=3001
 gateway.host=localhost
+load.time.interval=100
