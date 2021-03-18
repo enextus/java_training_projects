@@ -26,4 +26,5 @@ public class Main {
         UdpLoadSender loadSender = new UdpLoadSender(balancerHost, udpBalancerPort, connectionCounter, sendInterval, selfTcpPort);
         new Thread(loadSender).start();
     }
+
 }
