@@ -46,5 +46,4 @@ public class ServerData {
     public String toString() {
         return host + ":" + port;
     }
-
 }
