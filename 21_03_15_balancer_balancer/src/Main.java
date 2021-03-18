@@ -25,4 +25,5 @@ public class Main {
         Cleaner cleaner = new Cleaner(serverMap, 1000);
         new Thread(cleaner).start();
     }
+
 }
