@@ -21,6 +21,7 @@ public class UdpLoadSender implements Runnable {
 
     @Override
     public void run() {
+
         // where to to send the datagrams
         try {
             InetAddress inetAddress = InetAddress.getByName(balancerHost);
