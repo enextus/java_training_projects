@@ -31,6 +31,7 @@ public class TcpGatewayListener implements Runnable {
             }
         } catch (IOException e) {
             e.printStackTrace();
+            e.getLocalizedMessage();
         }
     }
 
