@@ -42,5 +42,5 @@ public class ShapesConfiguration {
     }
 
     @Bean
-    public
+    public Picture picture(@Qualifier () picture )
 }
