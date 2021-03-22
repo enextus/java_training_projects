@@ -23,7 +23,7 @@ class ShapeFlow implements ApplicationRunner {
     }
 
     @Override
-    public void run(ApplicationArguments args) throws Exception {
+    public void run(ApplicationArguments args) {
         picture.draw();
 
         picture2.draw();
