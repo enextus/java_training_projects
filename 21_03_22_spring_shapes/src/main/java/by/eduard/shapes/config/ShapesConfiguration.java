@@ -1,7 +1,9 @@
 package by.eduard.shapes.config;
 
 import by.eduard.shapes.entity.Line;
+import by.eduard.shapes.entity.Picture;
 import by.eduard.shapes.entity.Rectangle;
+import by.eduard.shapes.entity.Shape;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,36 +13,46 @@ import org.springframework.core.annotation.Order;
 public class ShapesConfiguration {
 
     @Bean
+    @Qualifier("q_picture2")
     public Line line1() {
         return new Line('x', 20);
     }
 
     @Bean
-    @Qualifier("picture")
+    @Qualifier("q_picture")
     @Order(1)
     public Line line2() {
         return new Line('-', 32);
     }
 
-    @Bean
-    @Qualifier("picture")
+    @Qualifier("q_picture")
     @Order(3)
+    @Bean
     public Line line3() {
         return new Line('+', 17);
     }
 
-    @Bean
-    @Qualifier("picture")
+    @Qualifier("q_picture")
     @Order(2)
+    @Bean
     public Rectangle rectangle1() {
-        return new Rectangle('*', 19, 30);
+        return new Rectangle('=', 20, 30);
     }
 
     @Bean
+    @Qualifier("q_picture2")
     public Rectangle rectangle2() {
-        return new Rectangle('*', 17, 10);
+        return new Rectangle('*', 30, 20);
     }
 
     @Bean
-    public Picture picture(@Qualifier () picture )
+    public Picture picture(@Qualifier("q_picture") Shape[] shapes) {
+        return new Picture('s', shapes);
+    }
+
+    @Bean
+    public Picture picture2(@Qualifier("q_picture2") Shape[] shapes) {
+        return new Picture('s', shapes);
+    }
+
 }
