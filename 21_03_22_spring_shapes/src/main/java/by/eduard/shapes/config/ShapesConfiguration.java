@@ -11,8 +11,6 @@ import org.springframework.core.annotation.Order;
 public class ShapesConfiguration {
 
     @Bean
-    @Qualifier("picture")
-    @Order(2)
     public Line line1() {
         return new Line('x', 20);
     }
@@ -32,6 +30,8 @@ public class ShapesConfiguration {
     }
 
     @Bean
+    @Qualifier("picture")
+    @Order(1)
     public Rectangle rectangle1() {
         return new Rectangle('*', 17, 10);
     }
