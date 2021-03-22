@@ -31,9 +31,16 @@ public class ShapesConfiguration {
 
     @Bean
     @Qualifier("picture")
-    @Order(1)
+    @Order(2)
     public Rectangle rectangle1() {
+        return new Rectangle('*', 19, 30);
+    }
+
+    @Bean
+    public Rectangle rectangle2() {
         return new Rectangle('*', 17, 10);
     }
 
+    @Bean
+    public
 }
