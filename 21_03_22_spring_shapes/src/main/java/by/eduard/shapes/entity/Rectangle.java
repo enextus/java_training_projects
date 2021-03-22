@@ -1,6 +1,5 @@
 package by.eduard.shapes.entity;
 
-
 public class Rectangle extends Shape {
 
     private int width;
@@ -33,4 +32,5 @@ public class Rectangle extends Shape {
     public int getHeight() {
         return height;
     }
+
 }
