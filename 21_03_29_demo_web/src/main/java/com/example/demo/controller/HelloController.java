@@ -13,6 +13,7 @@ public class HelloController {
 
         model.addAttribute(name);
         model.addAttribute("defaultName", "Peter Parker");
+        model.addAttribute("greetings", "Hello!");
 
 
 
