@@ -10,7 +10,7 @@ public class ListenerRunner implements ApplicationRunner {
     private final TcpOuterListener tcpOuterListener;
     private final UdpBalancerListener udpBalancerListener;
 
-    public ListenersRunner(TcpOuterListener tcpOuterListener, UdpBalancerListener udpBalancerListener) {
+    public ListenerRunner(TcpOuterListener tcpOuterListener, UdpBalancerListener udpBalancerListener) {
         this.tcpOuterListener = tcpOuterListener;
         this.udpBalancerListener = udpBalancerListener;
     }
