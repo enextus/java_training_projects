@@ -26,14 +26,6 @@ public class HelloController {
         return "Hello " + capitalName + "!";
     }
 
-    @RequestMapping(value = "/hello-json/{name}", method = RequestMethod.GET)
-    @ResponseBody
-    public Greetings helloJson(@PathVariable String name) {
-        String capitalName = name.toUpperCase();
-        Greetings response = new Greetings(capitalName, "Yo");
-        return response;
-    }
-
     @GetMapping("/hello-plain/{name}")
     @ResponseBody
     public String helloPlain(@PathVariable String name, Model model) {
@@ -45,10 +37,18 @@ public class HelloController {
         return name;
     }
 
-    @RequestMapping(value = "/auto", method = RequestMethod.GET)
+    @RequestMapping(value = "/hello-json/{name}", method = RequestMethod.GET)
+    @ResponseBody
+    public Greetings helloJson(@PathVariable String name) {
+        String capitalName = name.toUpperCase();
+        Greetings response = new Greetings(capitalName, "Yo");
+        return response;
+    }
+
+    @RequestMapping(value = "/auto/", method = RequestMethod.GET)
     @ResponseBody
     public String acceptAuto(@PathVariable Auto auto) {
-        Auto response = new Auto(make, "Yo");
+        Auto response = new Auto("Opel", "Yo");
         System.out.println(auto);
 
         // return "recieved-auto";
