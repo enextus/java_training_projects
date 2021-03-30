@@ -5,7 +5,7 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
 @Component
-class ListenersRunner implements ApplicationRunner {
+public class ListenerRunner implements ApplicationRunner {
 
     private final TcpOuterListener tcpOuterListener;
     private final UdpBalancerListener udpBalancerListener;
