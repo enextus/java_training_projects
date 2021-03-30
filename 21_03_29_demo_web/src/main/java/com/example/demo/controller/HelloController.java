@@ -45,9 +45,9 @@ public class HelloController {
         return name;
     }
 
-    @GetMapping("/auto")
+    @RequestMapping(value = "/auto", method = RequestMethod.GET)
     @ResponseBody
-    public String acceptAuto(@RequestBody Auto auto) {
+    public String acceptAuto(@PathVariable Auto auto) {
 
         System.out.println(auto);
 
