@@ -15,9 +15,6 @@ public class HelloController {
         model.addAttribute("defaultName", "Peter Parker");
         model.addAttribute("greetings", "Hello!");
 
-
-
-
         return "hello";
     }
 
