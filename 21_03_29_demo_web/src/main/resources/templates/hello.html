@@ -9,5 +9,9 @@
 </head>
 <body>
 <h1 th:text="'Hello ' + ${name} + '!'"></h1>
+<div class="container">
+    <label for="defaultName">1. Example with th:text="${...}"</label>
+    <input id="defaultName" style="..." type="text" name="userName" value="James Carrot" th:value="${defaultName}"/>
+</div>
 </body>
 </html>
