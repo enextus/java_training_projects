@@ -12,6 +12,10 @@ public class HelloController {
     public String hello(@PathVariable String name, Model model) {
 
         model.addAttribute(name);
+
+
+
+
         return "hello";
     }
 
