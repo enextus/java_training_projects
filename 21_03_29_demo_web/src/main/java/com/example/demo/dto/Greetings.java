@@ -2,8 +2,8 @@ package com.example.demo.dto;
 
 public class Greetings {
 
-    String name = "werwer";
-    String greetings = "YES!";
+    public String name = "werwer";
+    public String greetings = "YES!";
 
     public Greetings() {
     }
