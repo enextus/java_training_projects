@@ -2,8 +2,8 @@ package com.example.demo.dto;
 
 public class Auto {
 
-    public String make = "";
-    public String color = "";
+    public String make;
+    public String color;
 
     public Auto() {
     }

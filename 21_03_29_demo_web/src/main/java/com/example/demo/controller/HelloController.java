@@ -48,7 +48,7 @@ public class HelloController {
     @RequestMapping(value = "/auto", method = RequestMethod.GET)
     @ResponseBody
     public String acceptAuto(@PathVariable Auto auto) {
-
+        Auto response = new Auto(make, "Yo");
         System.out.println(auto);
 
         // return "recieved-auto";
