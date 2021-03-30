@@ -45,7 +45,7 @@ public class HelloController {
         return name;
     }
 
-    @PostMapping("/auto")
+    @GetMapping("/auto")
     @ResponseBody
     public String acceptAuto(@RequestBody Auto auto) {
 
