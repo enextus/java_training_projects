@@ -2,8 +2,7 @@ package com.example.demo.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class HelloController {
@@ -16,6 +15,32 @@ public class HelloController {
         model.addAttribute("greetings", "Hello!");
 
         return "hello";
+    }
+
+    @RequestMapping(value = "/hello-string/{name}", method = RequestMethod.GET)
+    @ResponseBody
+    public String helloString(@PathVariable String name) {
+        String capitalName = name.toUpperCase();
+        return "Hello " + capitalName + "!";
+    }
+
+    @RequestMapping(value = "/hello-json/{name}", method = RequestMethod.GET)
+    @ResponseBody
+    public Greetings helloJson(@PathVariable String name) {
+        String capitalName = name.toUpperCase();
+        Greetings response = new Greetings(capitalName, "Yo");
+        return response;
+    }
+
+    @GetMapping("/hello-plain/{name}")
+    @ResponseBody
+    public String helloPlain(@PathVariable String name, Model model) {
+
+        model.addAttribute(name);
+        model.addAttribute("defaultName", "Peter Parker");
+        model.addAttribute("greetings", "Hello!");
+
+        return name;
     }
 
 }
