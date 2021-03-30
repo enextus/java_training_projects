@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.dto.Auto;
 import com.example.demo.dto.Greetings;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -42,6 +43,16 @@ public class HelloController {
         model.addAttribute("greetings", "Hello!");
 
         return name;
+    }
+
+    @PostMapping("/auto")
+    @ResponseBody
+    public String acceptAuto(@RequestBody Auto auto) {
+
+        System.out.println(auto);
+
+        // return "recieved-auto";
+        return "The following auto was received: " + "make" + auto.make + ", color: " + auto.color;
     }
 
 }

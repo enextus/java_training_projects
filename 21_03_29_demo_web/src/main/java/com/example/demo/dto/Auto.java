@@ -2,15 +2,15 @@ package com.example.demo.dto;
 
 public class Auto {
 
-    String typ = "";
-    String win = "";
+    String make = "";
+    String color = "";
 
     public Auto() {
     }
 
-    public Auto(String typ, String win) {
-        this.typ = typ;
-        this.win = win;
+    public Auto(String make, String color) {
+        this.make = make;
+        this.color = color;
     }
-    
+
 }
