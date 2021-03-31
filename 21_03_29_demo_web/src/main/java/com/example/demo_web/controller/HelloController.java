@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class HelloController {
 
-    @GetMapping("/")
+/*    @GetMapping("/")
     public String hello() {
 
         return "start";
@@ -52,16 +52,12 @@ public class HelloController {
         String capitalName = name.toUpperCase();
         Greetings response = new Greetings(capitalName, "Yo");
         return response;
-    }
+    }*/
 
-    // @PostMapping(value = "/auto")
     @PostMapping("/auto")
     @ResponseBody
     public String acceptAuto(@RequestBody Auto auto) {
-
-        System.out.println(auto);
-
-        return "The following auto was received: " + "make" + auto.make + ", color: " + auto.color;
+        return "The following auto was received: " + "make: " + auto.make + ", color: " + auto.color;
     }
 
 }
