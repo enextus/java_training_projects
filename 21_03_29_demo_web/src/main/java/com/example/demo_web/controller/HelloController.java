@@ -43,7 +43,7 @@ public class HelloController {
 
         return name;
     }
-
+*/
     // JSON Mapping
 
     @RequestMapping(value = "/hello-json/{name}", method = RequestMethod.GET)
@@ -52,9 +52,10 @@ public class HelloController {
         String capitalName = name.toUpperCase();
         Greetings response = new Greetings(capitalName, "Yo");
         return response;
-    }*/
+    }
 
-    @PostMapping("/auto")
+    // @PostMapping("/auto")
+    @RequestMapping(value = "/auto", method = RequestMethod.POST)
     @ResponseBody
     public String acceptAuto(@RequestBody Auto auto) {
         return "The following auto was received: " + "make: " + auto.make + ", color: " + auto.color;
