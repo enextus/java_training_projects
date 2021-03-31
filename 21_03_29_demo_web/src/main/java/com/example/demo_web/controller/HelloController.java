@@ -54,10 +54,13 @@ public class HelloController {
         return response;
     }
 
-    @PostMapping(value = "/auto")
+    // @PostMapping(value = "/auto")
+    @PostMapping("/auto")
     @ResponseBody
-    public String acceptAuto(@PathVariable Auto auto) { ;
+    public String acceptAuto(@RequestBody Auto auto) {
+
         System.out.println(auto);
+
         return "The following auto was received: " + "make" + auto.make + ", color: " + auto.color;
     }
 
