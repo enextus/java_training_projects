@@ -1,4 +1,4 @@
-package com.example.demo.dto;
+package com.example.demo_web.dto;
 
 public class Greetings {
 

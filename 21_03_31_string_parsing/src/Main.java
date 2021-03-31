@@ -1,22 +1,22 @@
 public class Main {
 
     public static void main(String[] args) {
-        String s = "This is     different type   of file.";
-        String s1[] = s.split("[ ]+");
 
-        for (int i = 0; i < s1.length; i++) {
-            System.out.println(s1[i]);
+        String string = "This is     different type   of file.";
+        String stringArray_1[] = string.split("[ ]+");
+
+        for (int i = 0; i < stringArray_1.length; i++) {
+            System.out.println(stringArray_1[i]);
         }
 
-
+        System.out.println("\n");
 
         String spliter="\\s+";
-        String[] temp;
-        temp=s.split(spliter);
+        String[] stringArray_2;
+        stringArray_2=string.split(spliter);
 
-
-        for (int i = 0; i < temp.length; i++) {
-            System.out.println(temp[i]);
+        for (int i = 0; i < stringArray_2.length; i++) {
+            System.out.println(stringArray_2[i]);
         }
 
     }
