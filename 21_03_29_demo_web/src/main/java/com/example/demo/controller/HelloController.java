@@ -45,13 +45,10 @@ public class HelloController {
         return response;
     }
 
-    @RequestMapping(value = "/auto/", method = RequestMethod.GET)
+    @PostMapping(value = "/auto")
     @ResponseBody
-    public String acceptAuto(@PathVariable Auto auto) {
-        Auto response = new Auto("Opel", "Yo");
+    public String acceptAuto(@RequestBody Auto auto) { ;
         System.out.println(auto);
-
-        // return "recieved-auto";
         return "The following auto was received: " + "make" + auto.make + ", color: " + auto.color;
     }
 
