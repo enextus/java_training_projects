@@ -9,6 +9,12 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class HelloController {
 
+    @GetMapping("/")
+    public String hello() {
+
+        return "start";
+    }
+
     @GetMapping("/hello/{name}")
     public String hello(@PathVariable String name, Model model) {
 
@@ -19,6 +25,7 @@ public class HelloController {
         return "hello";
     }
 
+    //  @RequestMapping(value = "/hello-string/{name}", method = RequestMethod.GET)
     @RequestMapping(value = "/hello-string/{name}", method = RequestMethod.GET)
     @ResponseBody
     public String helloString(@PathVariable String name) {
@@ -36,6 +43,8 @@ public class HelloController {
 
         return name;
     }
+
+    // JSON Mapping
 
     @RequestMapping(value = "/hello-json/{name}", method = RequestMethod.GET)
     @ResponseBody
