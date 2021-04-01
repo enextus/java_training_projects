@@ -3,7 +3,6 @@ package com.example.demo_web.controller;
 import com.example.demo_web.dto.Auto;
 import com.example.demo_web.dto.Greetings;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
