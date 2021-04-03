@@ -24,6 +24,7 @@ public class HelloController {
         return "hello";
     }
 
+
     //  @RequestMapping(value = "/hello-string/{name}", method = RequestMethod.GET)
     @RequestMapping(value = "/hello-string/{name}", method = RequestMethod.GET)
     @ResponseBody
