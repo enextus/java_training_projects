@@ -53,8 +53,8 @@ public class HelloController {
     @ResponseBody
     public Greetings helloJson(@PathVariable String name) {
         String capitalName = name.toUpperCase() + " here is a ending";
-        Greetings response = new Greetings(capitalName, "Yo");
-        return response;
+        Greetings greetings = new Greetings(capitalName, "Yo");
+        return greetings;
     }
 
     // @PostMapping("/auto")
