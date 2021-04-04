@@ -51,7 +51,7 @@ public class HelloController {
     @RequestMapping(value = "/hello-json/{name}", method = RequestMethod.GET)
     @ResponseBody
     public Greetings helloJson(@PathVariable String name) {
-        String capitalName = name.toUpperCase();
+        String capitalName = name.toUpperCase() + " here is a ending";
         Greetings response = new Greetings(capitalName, "Yo");
         return response;
     }
