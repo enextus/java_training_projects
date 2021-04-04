@@ -25,13 +25,6 @@ public class HelloController {
     }
 
 
-    //  @RequestMapping(value = "/hello-string/{name}", method = RequestMethod.GET)
-    @RequestMapping(value = "/hello-string/{name}", method = RequestMethod.GET)
-    @ResponseBody
-    public String helloString(@PathVariable String name) {
-        String capitalName = name.toUpperCase();
-        return "Hello " + capitalName + "!";
-    }
 
     @GetMapping("/hello-plain/{name}")
     @ResponseBody
@@ -44,6 +37,15 @@ public class HelloController {
         return name;
     }
 */
+
+    @RequestMapping(value = "/hello-string/{name}", method = RequestMethod.GET)
+    @ResponseBody
+    public String helloString(@PathVariable String name) {
+        String capitalName = name.toUpperCase();
+        return "Hello " + capitalName + "!";
+    }
+
+
     // JSON Mapping
 
     @RequestMapping(value = "/hello-json/{name}", method = RequestMethod.GET)
