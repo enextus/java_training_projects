@@ -25,8 +25,6 @@ public class HelloController {
         return "hello";
     }
 
-
-
     @GetMapping("/hello-plain/{name}")
     @ResponseBody
     public String helloPlain(@PathVariable String name, Model model) {
@@ -37,7 +35,6 @@ public class HelloController {
 
         return name;
     }
-
 
     @RequestMapping(value = "/hello-string/{name}", method = RequestMethod.GET)
     @ResponseBody
