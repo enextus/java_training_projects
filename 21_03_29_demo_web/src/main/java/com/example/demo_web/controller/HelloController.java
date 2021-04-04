@@ -57,8 +57,9 @@ public class HelloController {
         return greetings;
     }
 
-    // @PostMapping("/auto")
+
     @RequestMapping(value = "/auto", method = RequestMethod.POST)
+    // @PostMapping("/auto")
     @ResponseBody
     public String acceptAuto(@RequestBody Auto auto) {
         Auto response = new Auto("red", "audi");
