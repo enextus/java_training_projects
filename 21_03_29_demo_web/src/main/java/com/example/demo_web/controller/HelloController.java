@@ -43,7 +43,6 @@ public class HelloController {
         return "Hello " + capitalName + "!";
     }
 
-
     // JSON Mapping
 
     @RequestMapping(value = "/hello-json/{name}", method = RequestMethod.GET)
@@ -54,13 +53,11 @@ public class HelloController {
         return greetings;
     }
 
-    // JSON Auto
+    // JSON PostMapping Auto
 
-    @RequestMapping(value = "/auto", method = RequestMethod.POST)
-    // @PostMapping("/auto")
+    @PostMapping("/auto")
     @ResponseBody
     public String acceptAuto(@RequestBody Auto auto) {
-        Auto response = new Auto("red", "audi");
         return "The following auto was received: " + "make: " + auto.make + ", color: " + auto.color;
     }
 
