@@ -54,6 +54,7 @@ public class HelloController {
         return greetings;
     }
 
+    // JSON Auto
 
     @RequestMapping(value = "/auto", method = RequestMethod.POST)
     // @PostMapping("/auto")
