@@ -3,12 +3,13 @@ package com.example.demo_web.controller;
 import com.example.demo_web.dto.Auto;
 import com.example.demo_web.dto.Greetings;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class HelloController {
 
-/*    @GetMapping("/")
+    @GetMapping("/")
     public String hello() {
 
         return "start";
@@ -36,7 +37,7 @@ public class HelloController {
 
         return name;
     }
-*/
+
 
     @RequestMapping(value = "/hello-string/{name}", method = RequestMethod.GET)
     @ResponseBody
@@ -60,7 +61,7 @@ public class HelloController {
     @RequestMapping(value = "/auto", method = RequestMethod.POST)
     @ResponseBody
     public String acceptAuto(@RequestBody Auto auto) {
-        // Auto response = new Auto("red", "audi");
+        Auto response = new Auto("red", "audi");
         return "The following auto was received: " + "make: " + auto.make + ", color: " + auto.color;
     }
 
