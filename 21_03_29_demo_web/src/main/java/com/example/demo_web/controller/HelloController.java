@@ -44,7 +44,6 @@ public class HelloController {
     }
 
     // JSON Mapping
-
     @RequestMapping(value = "/hello-json/{name}", method = RequestMethod.GET)
     @ResponseBody
     public Greetings helloJson(@PathVariable String name) {
@@ -54,7 +53,6 @@ public class HelloController {
     }
 
     // JSON PostMapping Auto
-
     @PostMapping("/auto")
     @ResponseBody
     public String acceptAuto(@RequestBody Auto auto) {
