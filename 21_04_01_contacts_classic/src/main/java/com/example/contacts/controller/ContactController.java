@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 @Controller
 public class ContactController {
@@ -63,7 +64,7 @@ public class ContactController {
         Contact contact = contacts.stream()
                 .filter(cont -> cont.getId() == id)
                 .findFirst()
-                .orElseThrow();
+                .orElseThrow(() -> new NoSuchElementException() );
 
         return "contact-form";
     }
