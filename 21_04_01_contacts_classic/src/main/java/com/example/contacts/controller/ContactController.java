@@ -67,6 +67,8 @@ public class ContactController {
                 // .orElseThrow(() -> new NoSuchElementException() );
                 .orElseThrow(NoSuchElementException::new);
 
+        model.addAttribute("contact", contact);
+
         return "contact-form";
     }
 
