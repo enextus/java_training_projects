@@ -55,7 +55,14 @@ public class ContactController {
      * @return
      */
     @GetMapping("/edit-contact/{id}")
-    public String editContact(@PathVariable int id) {
+    public String editContact(@PathVariable int id, Model model) {
+
+        Contact contact = contacts.stream()
+                .filter(cont -> cont.getId() == id)
+                .findFirst()
+                .orElse()
+                ,+
+                .
         return "contact-form";
     }
 
