@@ -3,7 +3,10 @@ package com.example.contacts.controller;
 import com.example.contacts.entity.Contact;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -60,9 +63,8 @@ public class ContactController {
         Contact contact = contacts.stream()
                 .filter(cont -> cont.getId() == id)
                 .findFirst()
-                .orElse()
-                ,+
-                .
+                .orElseThrow();
+
         return "contact-form";
     }
 
