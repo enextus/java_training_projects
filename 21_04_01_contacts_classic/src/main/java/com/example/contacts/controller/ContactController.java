@@ -64,7 +64,8 @@ public class ContactController {
         Contact contact = contacts.stream()
                 .filter(cont -> cont.getId() == id)
                 .findFirst()
-                .orElseThrow(() -> new NoSuchElementException() );
+                // .orElseThrow(() -> new NoSuchElementException() );
+                .orElseThrow(NoSuchElementException::new);
 
         return "contact-form";
     }
