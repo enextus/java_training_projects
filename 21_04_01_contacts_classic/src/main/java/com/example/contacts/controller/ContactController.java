@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -24,10 +25,13 @@ public class ContactController {
     @GetMapping("/contacts")
     public String contacts(Model model) {
 
-        List<Contact> contacts = Arrays.asList(
-                new Contact(1, "Vasya", "Vasin", 21),
-                new Contact(2, "Petya", "Peterson", 22)
-        );
+        List<Contact> contacts = new ArrayList<>();
+
+        { // initialisation block
+            contacts.add(new Contact(1, "Vasya", "Vasin", 21));
+            contacts.add(new Contact(2, "Petya", "Peterson", 22));
+        }
+
         model.addAttribute("contacts", contacts);
 
         return "contacts";
