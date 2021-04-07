@@ -21,6 +21,37 @@ public class ContactController {
     );
     static int lastUsedId = 2;
 
+
+
+    // REDIRECT START
+
+    /**
+     * @return
+     */
+    @GetMapping("/")
+    public String mainPage() {
+        return "forward:/contacts";
+    }
+
+/*
+    @GetMapping("/")
+    public String mainPage() {
+        return "redirect:/contacts";
+    }*/
+
+    /*    *//**
+     * @return
+     *//*
+    @GetMapping("/contacts", ""/")
+    public String contacts(Model model) {
+        model.addAttribute()
+        return "contacts";
+    }*/
+
+
+    // REDIRECT END
+
+
     /**
      * The endpoint should return the page containing the list of contacts
      *
@@ -79,7 +110,7 @@ public class ContactController {
      * @return
      */
     @GetMapping("/contacts/{id}")
-    public String contact(@PathVariable int id) {
+    public String contact(@PathVariable int id, Model model) { // Model model в рамках запроса живет !!
         return "user-details";
     }
 
