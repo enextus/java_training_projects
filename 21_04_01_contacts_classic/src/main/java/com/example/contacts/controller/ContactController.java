@@ -91,6 +91,18 @@ public class ContactController {
      */
     @PostMapping("/save-contact")
     public String saveContact(@ModelAttribute Contact contact) {
+        if(contact.getId() == 0 ) {
+             contact.setId(++lastUsedId);
+
+        }else {
+
+            Contact oldConatct = contacts.stream()
+                    .filter(cont -> cont.getId() == contact.getId())
+                    .findFirst()
+                    .orElseThrow(NoSuchElementException::new);
+
+
+        }
         return "redirect:/contacts";
     }
 
