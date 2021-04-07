@@ -22,6 +22,8 @@ public class ContactController {
     static int lastUsedId = 2;
 
 
+    // ##########################################################################
+
 
     // REDIRECT START
 
@@ -47,10 +49,7 @@ public class ContactController {
         model.addAttribute()
         return "contacts";
     }*/
-
-
     // REDIRECT END
-
 
     /**
      * The endpoint should return the page containing the list of contacts
@@ -131,7 +130,6 @@ public class ContactController {
                     .filter(cont -> cont.getId() == contact.getId())
                     .findFirst()
                     .orElseThrow(NoSuchElementException::new);
-
 
         }
         return "redirect:/contacts";
