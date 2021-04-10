@@ -8,7 +8,9 @@ import java.util.List;
 //TODO: implement this via List and via HashMap
 public interface IContactRepo {
 
-    void save(Contact contact);
+    void save(Contact contact){
+
+    };
 
     Contact find(int id);
 

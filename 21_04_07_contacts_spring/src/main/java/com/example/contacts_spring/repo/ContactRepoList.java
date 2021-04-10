@@ -28,4 +28,5 @@ public class ContactRepoList implements IContactRepo {
     public List<Contact> findAll() {
         return null;
     }
+
 }

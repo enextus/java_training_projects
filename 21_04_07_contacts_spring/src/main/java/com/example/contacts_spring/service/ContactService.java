@@ -6,10 +6,20 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+// самая важная тут лежит domain logic
+// логика бизнеса лежит здесь
+
 @Service
 public class ContactService {
 
     IContactRepo contactRepo;
+
+    ContactService() {
+
+        this.contactRepo = IContactRepo contactRepo;
+
+    }
+
 
     public ContactService(IContactRepo contactRepo) {
         this.contactRepo = contactRepo;
@@ -30,5 +40,5 @@ public class ContactService {
     public Contact remove(int id) {
         return contactRepo.remove(id);
     }
-}
 
+}
