@@ -8,18 +8,12 @@ import java.util.List;
 
 // самая важная тут лежит domain logic
 // логика бизнеса лежит здесь
+// the domain logic lies here.
 
 @Service
 public class ContactService {
 
     IContactRepo contactRepo;
-
-    ContactService() {
-
-        this.contactRepo = IContactRepo contactRepo;
-
-    }
-
 
     public ContactService(IContactRepo contactRepo) {
         this.contactRepo = contactRepo;

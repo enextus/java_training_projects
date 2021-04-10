@@ -1,6 +1,6 @@
 package com.example.contacts_spring.entity;
 
-
+// Entities are description of the business model
 public class Contact {
 
     private int id;
@@ -8,14 +8,14 @@ public class Contact {
     private String lastName;
     private int age;
 
+    public Contact() {
+    }
+
     public Contact(int id, String name, String lastName, int age) {
         this.id = id;
         this.name = name;
         this.lastName = lastName;
         this.age = age;
-    }
-
-    public Contact() {
     }
 
     public void setId(int id) {
@@ -49,4 +49,5 @@ public class Contact {
     public int getAge() {
         return age;
     }
+
 }
