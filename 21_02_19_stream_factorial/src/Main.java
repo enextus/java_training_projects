@@ -6,4 +6,5 @@ public class Main {
 
         System.out.println(factorial.calcFact(5));
     }
+
 }

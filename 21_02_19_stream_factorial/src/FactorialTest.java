@@ -20,4 +20,5 @@ class FactorialTest {
     void test_calcFact_100_() {
         assertEquals(3628800, factorial.calcFact(10));
     }
+
 }
