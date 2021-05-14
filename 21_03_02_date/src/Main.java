@@ -7,7 +7,6 @@ public class Main {
     public static void main(String[] args) {
         // write your code here
 
-
         LocalDate now = LocalDate.now();
 
         System.out.println(now);
@@ -42,7 +41,6 @@ public class Main {
         nextHour = currentTime.plusHours(1);
         System.out.println(nextHour);
 
-
         // LocalDateTime
         LocalDateTime today = LocalDateTime.now();
         LocalDateTime todayParsed = LocalDateTime.parse("2021-03-02T12:26:24");
@@ -51,7 +49,6 @@ public class Main {
         System.out.println(todayParsed);
 
         System.out.println(todayParsed.get(ChronoField.DAY_OF_YEAR));
-
     }
 
 }
