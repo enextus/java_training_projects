@@ -11,5 +11,7 @@ public class Main {
         System.out.println(integerList.getClass());
 
         System.out.println("maxCoveredPoints: " + ((Solution) sol).maxCoveredPoints(integerList, 55));
+
     }
+
 }
