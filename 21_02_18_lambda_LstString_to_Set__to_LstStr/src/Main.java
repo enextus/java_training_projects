@@ -20,6 +20,7 @@ public class Main {
         Initial list:   [abc, abc, abc, bcd, bcd, efg, efg]
         Resulted list:  [bcd, abc, efg]
         */
+
     }
 
 }
