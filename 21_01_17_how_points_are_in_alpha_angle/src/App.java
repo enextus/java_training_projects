@@ -38,5 +38,7 @@ public class App {
             System.out.println(pnt);
 
         System.out.println("\nmaxTrees: " + sol.maxTrees(pointsList, 359));
+
     }
+
 }
