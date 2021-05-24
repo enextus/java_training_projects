@@ -2,6 +2,7 @@ package transaction;
 
 import java.time.ZonedDateTime;
 
+
 public class Transaction {
 
     private final String uuid;
