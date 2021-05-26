@@ -3,6 +3,7 @@ import java.util.stream.IntStream;
 public class IsNUmberPrime {
 
     public boolean isNumberPrime(int num) {
+
         boolean res;
 
         if (num == 1)
