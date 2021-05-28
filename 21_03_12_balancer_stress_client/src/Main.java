@@ -5,7 +5,7 @@ import java.util.concurrent.Executors;
 public class Main {
 
     static final int SIMULTANEOUS_CONNECTION_NUMBER = 100;
-    static final int CONNECTION_NUMBER = 1000;
+    static final int CONNECTION_NUMBER = 550;
     static final int MESSAGES_PER_CONNECTION = 1000;
     static final String MESSAGE = "I love you";
 
