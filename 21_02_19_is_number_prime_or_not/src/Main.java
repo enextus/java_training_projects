@@ -9,6 +9,6 @@ public class Main {
         System.out.println("___________");
 
         System.out.println(isNUmberPrime.isNumberPrime(75));
-
     }
+
 }
