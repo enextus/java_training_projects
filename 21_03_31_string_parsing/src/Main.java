@@ -18,6 +18,7 @@ public class Main {
         for (int i = 0; i < stringArray_2.length; i++) {
             System.out.println(stringArray_2[i]);
         }
+
     }
 
 }
